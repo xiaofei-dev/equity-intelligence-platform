@@ -65,6 +65,7 @@ Performance tracking and strategy evaluation
 - [Product Vision](docs/product-vision.md)
 - [MVP Scope](docs/mvp-scope.md)
 - [System Architecture](docs/architecture.md)
+- [Local Development](docs/development.md)
 - [Investment Methodology](docs/investment-methodology.md)
 - [AI Analysis](docs/ai-analysis.md)
 - [Data and Backtesting](docs/data-and-backtesting.md)
@@ -73,4 +74,32 @@ Performance tracking and strategy evaluation
 
 ## Current Status
 
-The project is in the initial setup phase. Product boundaries and the first architecture decisions have been documented. Application frameworks have not yet been initialized.
+The project is in Phase 0. The Next.js frontend, Spring Boot backend, FastAPI
+analytics service, PostgreSQL migration structure, Dockerfiles, and local
+Compose topology have been initialized. Business features and external data
+providers have not yet been implemented.
+
+## Quick Start
+
+Prerequisites:
+
+- Node.js 20.9 or later
+- Java 21
+- Python 3.12 through 3.14
+- Docker Desktop with Docker Compose
+
+Start the complete local environment:
+
+```powershell
+Copy-Item .env.example .env
+docker compose up --build
+```
+
+Then open:
+
+- Frontend: `http://localhost:3000`
+- Backend health: `http://localhost:8080/actuator/health`
+- Analytics health: `http://localhost:8000/health`
+
+See [Local Development](docs/development.md) for service-specific commands,
+tests, configuration, and troubleshooting.

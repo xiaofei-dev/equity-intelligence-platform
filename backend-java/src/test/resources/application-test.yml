@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:equity_test;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE
+    username: sa
+    password:
+  flyway:
+    enabled: false
+  jpa:
+    hibernate:
+      ddl-auto: none
