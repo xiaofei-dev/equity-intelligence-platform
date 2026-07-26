@@ -1,0 +1,50 @@
+# Environment files and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local databases and application data
+*.db
+*.sqlite
+*.sqlite3
+data/
+storage/
+uploads/
+
+# Logs and reports
+*.log
+logs/
+coverage/
+htmlcov/
+
+# Frontend build output and dependencies
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.turbo/
+
+# Java build output and IDE files
+backend-java/target/
+backend-java/.gradle/
+*.class
+*.iml
+.idea/
+
+# Python environments, caches, and build output
+analysis-python/.venv/
+analysis-python/venv/
+analysis-python/__pycache__/
+analysis-python/.pytest_cache/
+analysis-python/.mypy_cache/
+analysis-python/.ruff_cache/
+analysis-python/dist/
+analysis-python/build/
+*.py[cod]
+
+# Operating system files
+.DS_Store
+Thumbs.db
