@@ -72,3 +72,20 @@ Reason:
 
 English repository content improves professional presentation, consistency, and collaboration.
 
+## 2026-07-25: Initial Market and Data Provider
+
+Decision:
+
+Use United States listed equities, daily data, and Twelve Data for the first
+end-to-end vertical slice. Isolate provider-specific behavior behind an
+analytics-service interface.
+
+Reason:
+
+United States equities provide a deep, well-documented initial market and align
+with the project's daily research scope. Twelve Data provides daily OHLCV,
+reference metadata, split adjustment controls, and a development quota suitable
+for the small initial universe. Its individual plans do not grant public or
+commercial redistribution rights, so a business license review is mandatory
+before public deployment. The provider boundary preserves the option to migrate
+if licensing, coverage, cost, or data quality requirements change.

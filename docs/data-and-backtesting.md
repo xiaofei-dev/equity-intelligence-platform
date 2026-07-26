@@ -29,7 +29,27 @@ The MVP may require:
 - Risk-free rate data when needed
 - Source documents for AI research
 
-The first providers remain open decisions.
+## Initial Market Data Source
+
+The Phase 1 vertical slice covers United States listed equities using daily
+data. Twelve Data is the initial provider because its time-series contract,
+reference metadata, and free development quota support a small internal
+universe without coupling the platform to a brokerage account.
+
+The first integration uses split-adjusted daily OHLCV data. Every stored row
+records the provider, adjustment mode, source timezone, trading date, and
+ingestion timestamp. Provider responses are normalized behind an internal
+interface so a licensed commercial source can replace Twelve Data without
+changing factor calculations or public APIs.
+
+The initial research universe contains `AAPL`, `MSFT`, `JPM`, `XOM`, and `JNJ`,
+with `SPY` reserved as a benchmark. This is an engineering validation set, not
+an investment recommendation or a production universe.
+
+Twelve Data individual plans permit personal or internal use only. Public or
+commercial display requires an appropriate business plan and any applicable
+exchange or redistribution permissions. Licensing must be reviewed again
+before a public deployment.
 
 ## Point-in-Time Correctness
 
@@ -119,4 +139,3 @@ Paper-trading results should be compared with:
 - The same strategy before AI adjustments, when applicable
 
 This allows the system to determine whether each added component produces incremental value.
-

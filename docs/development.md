@@ -29,6 +29,11 @@ passwords and provider keys in `.env`; never commit `.env` or real credentials.
 Variables prefixed with `NEXT_PUBLIC_` are embedded in browser-accessible
 frontend code. Never place secrets in those variables.
 
+Phase 1 market data ingestion uses `MARKET_DATA_PROVIDER=twelve_data` and reads
+the credential from `TWELVE_DATA_API_KEY`. Keep this key only in the local
+`.env` file or a deployment secret store. The analytics database URL is
+constructed automatically inside Docker Compose.
+
 ## Run the Complete Stack
 
 From the repository root:
@@ -130,6 +135,22 @@ the documented ownership boundary.
 
 Health responses communicate service availability only. They must not expose
 credentials, internal exception details, or private data.
+
+## Market Data Ingestion
+
+The bounded Phase 1 ingestion endpoint is internal to the analytics service:
+
+```text
+POST /internal/v1/market-data/daily-prices/ingest
+```
+
+It accepts up to 20 symbols and an inclusive date range. The operation is
+idempotent: a repeated provider, symbol, trading date, and adjustment mode
+updates the existing row rather than creating a duplicate.
+
+When `TWELVE_DATA_API_KEY` is not configured, the endpoint returns
+`MARKET_DATA_NOT_CONFIGURED` without contacting the provider. Do not expose
+this internal endpoint directly from a public deployment.
 
 ## Continuous Integration
 
