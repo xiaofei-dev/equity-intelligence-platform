@@ -130,3 +130,22 @@ the documented ownership boundary.
 
 Health responses communicate service availability only. They must not expose
 credentials, internal exception details, or private data.
+
+## Continuous Integration
+
+GitHub Actions validates every pull request targeting `main` and every push to
+`main`. The workflow performs these independent checks:
+
+- Frontend dependency installation, linting, and production build
+- Spring Boot tests with Java 21
+- FastAPI linting and tests with Python 3.14
+- Full-history secret scanning with Gitleaks
+
+The workflow can also be started manually from the GitHub Actions page. A
+failed secret scan must be investigated before merging. Removing a secret from
+the latest commit is not sufficient because the value can remain in Git
+history; revoke the credential first, then remove it from the affected history.
+
+CI secret scanning is a detection layer, not permission to store secrets in the
+repository. Keep credentials in local `.env` files or the deployment
+platform's encrypted secret store.

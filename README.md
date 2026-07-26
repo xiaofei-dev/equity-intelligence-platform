@@ -4,6 +4,8 @@ Equity Intelligence Platform is a decision-support system for systematic equity 
 
 The platform is not intended to guarantee returns, replace human judgment, or execute trades automatically. Its purpose is to improve research consistency, reduce emotional decision-making, and make every recommendation explainable and reproducible.
 
+[![CI](https://github.com/xiaofei-dev/equity-intelligence-platform/actions/workflows/ci.yml/badge.svg)](https://github.com/xiaofei-dev/equity-intelligence-platform/actions/workflows/ci.yml)
+
 ## Product Objectives
 
 1. Improve the user's existing investment process through measurable, risk-aware analysis.
@@ -76,8 +78,9 @@ Performance tracking and strategy evaluation
 
 The project is in Phase 0. The Next.js frontend, Spring Boot backend, FastAPI
 analytics service, PostgreSQL migration structure, Dockerfiles, and local
-Compose topology have been initialized. Business features and external data
-providers have not yet been implemented.
+Compose topology have been initialized. Continuous integration validates all
+three application modules and scans commits for secrets. Business features and
+external data providers have not yet been implemented.
 
 ## Quick Start
 
