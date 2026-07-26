@@ -89,3 +89,18 @@ for the small initial universe. Its individual plans do not grant public or
 commercial redistribution rights, so a business license review is mandatory
 before public deployment. The provider boundary preserves the option to migrate
 if licensing, coverage, cost, or data quality requirements change.
+
+## 2026-07-25: United States Security Ingestion Identity
+
+Decision:
+
+Use the normalized ticker symbol as the unique ingestion identity within the
+single-market MVP. Treat exchange labels as mutable provider metadata.
+
+Reason:
+
+Provider exchange labels can differ from seeded reference labels and can change
+after a listing transfer. Using `(symbol, exchange)` created duplicate security
+records for the same United States ticker. The single-market scope makes symbol
+identity sufficient for the MVP; a future multi-market expansion must introduce
+a durable global identifier before relaxing this constraint.

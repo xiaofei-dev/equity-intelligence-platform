@@ -23,7 +23,8 @@ class DailyPriceRepository:
                     currency
                 )
                 VALUES (%s, %s, %s, %s, %s)
-                ON CONFLICT (symbol, exchange) DO UPDATE SET
+                ON CONFLICT (symbol) DO UPDATE SET
+                    exchange = EXCLUDED.exchange,
                     name = CASE
                         WHEN EXCLUDED.name = EXCLUDED.symbol
                             THEN analytics.security.name

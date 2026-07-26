@@ -152,6 +152,17 @@ When `TWELVE_DATA_API_KEY` is not configured, the endpoint returns
 `MARKET_DATA_NOT_CONFIGURED` without contacting the provider. Do not expose
 this internal endpoint directly from a public deployment.
 
+The Java backend exposes the latest stored observation for every active
+security:
+
+```text
+GET /api/v1/market-data/latest
+```
+
+The `/market-data` frontend route calls this Java endpoint from the Next.js
+server. The browser never receives the provider credential and does not call
+the Python analytics service or PostgreSQL directly.
+
 ## Continuous Integration
 
 GitHub Actions validates every pull request targeting `main` and every push to

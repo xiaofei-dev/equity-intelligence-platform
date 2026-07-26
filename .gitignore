@@ -29,6 +29,7 @@ frontend/.turbo/
 
 # Java build output and IDE files
 backend-java/target/
+backend-java/bin/
 backend-java/.gradle/
 *.class
 *.iml

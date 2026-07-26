@@ -42,6 +42,11 @@ ingestion timestamp. Provider responses are normalized behind an internal
 interface so a licensed commercial source can replace Twelve Data without
 changing factor calculations or public APIs.
 
+Within the initial United States market scope, the normalized security master
+uses the ticker symbol as its stable ingestion key. Provider exchange labels
+are treated as mutable metadata because venue names may differ across sources
+or change after a listing transfer.
+
 The initial research universe contains `AAPL`, `MSFT`, `JPM`, `XOM`, and `JNJ`,
 with `SPY` reserved as a benchmark. This is an engineering validation set, not
 an investment recommendation or a production universe.
