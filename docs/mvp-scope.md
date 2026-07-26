@@ -23,7 +23,10 @@ Deliver a usable daily equity research workflow that can be demonstrated, evalua
 - Daily or end-of-day data
 - A clearly defined investable universe
 
-The first market and data vendor remain open decisions.
+The initial market is United States listed equities. Twelve Data is the
+development provider for the bounded Phase 1 slice; the provider interface
+must remain replaceable because broader coverage and commercial use require a
+separate data and licensing decision.
 
 ### Quantitative Screening
 
@@ -105,4 +108,3 @@ The first market and data vendor remain open decisions.
 - A recommendation snapshot cannot be silently altered after creation.
 - Backtests use point-in-time rules and include estimated trading costs.
 - The application contains no real-money execution path.
-

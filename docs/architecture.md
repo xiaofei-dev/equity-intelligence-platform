@@ -25,6 +25,30 @@ FastAPI analytics service
 
 This structure combines enterprise business-system practices in Java with the Python data and quantitative ecosystem.
 
+## Implemented Vertical Slice
+
+The current Phase 1 path is:
+
+```text
+Twelve Data
+    |
+    v
+FastAPI ingestion endpoint
+    |
+    v
+PostgreSQL analytics.security and analytics.daily_price
+    |
+    v
+Spring Boot GET /api/v1/market-data/latest
+    |
+    v
+Next.js /market-data
+```
+
+The browser receives normalized records from Spring Boot. It never receives
+the Twelve Data credential and does not call FastAPI or PostgreSQL directly.
+The quantitative candidate path remains the next unimplemented vertical slice.
+
 ## Component Responsibilities
 
 ### Frontend
@@ -73,7 +97,8 @@ The analytics service returns structured results through versioned contracts.
 
 ### Database
 
-The initial system uses one PostgreSQL instance with clear ownership boundaries. Separate schemas may be used:
+The initial system uses one PostgreSQL instance with clear ownership
+boundaries. Flyway creates separate schemas:
 
 ```text
 app.*
@@ -81,6 +106,10 @@ analytics.*
 ```
 
 The applications must not modify each other's tables without an explicit contract and migration.
+
+The initial United States security master treats normalized ticker symbols as
+unique ingestion identities and exchange labels as mutable metadata. A future
+multi-market expansion requires a durable global identity design.
 
 ## Initial Communication Pattern
 
@@ -162,4 +191,3 @@ Potential future additions include:
 - Kubernetes for multi-node container orchestration
 
 These additions require an observed problem and an architecture decision record.
-

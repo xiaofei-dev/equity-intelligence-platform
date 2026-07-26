@@ -2,8 +2,9 @@
 
 ## Purpose
 
-This guide explains how to run and verify the Phase 0 service foundation. It
-does not require real market data or third-party API credentials.
+This guide explains how to run and verify the Phase 0 foundation and the
+current Phase 1 market-data slice. Health checks do not require third-party
+credentials, but real Twelve Data ingestion requires a local API key.
 
 ## Prerequisites
 
@@ -123,8 +124,13 @@ Migration source files live in `database/migrations`. The backend packages and
 runs them with Flyway during startup. Migration files are append-only after
 they have been applied to a shared environment.
 
-The first migration creates separate `app` and `analytics` schemas to preserve
-the documented ownership boundary.
+Current migrations:
+
+- `V1` creates separate `app` and `analytics` schemas.
+- `V2` creates the security master and daily-price tables and seeds the
+  six-symbol engineering universe.
+- `V3` consolidates duplicate United States ticker identities and enforces a
+  unique normalized symbol.
 
 ## Health and Status Contracts
 
@@ -162,6 +168,15 @@ GET /api/v1/market-data/latest
 The `/market-data` frontend route calls this Java endpoint from the Next.js
 server. The browser never receives the provider credential and does not call
 the Python analytics service or PostgreSQL directly.
+
+After ingestion, verify the visible slice at:
+
+```text
+http://localhost:3000/market-data
+```
+
+The page should show `AAPL`, `MSFT`, `JPM`, `XOM`, `JNJ`, and benchmark `SPY`
+with a trading date, close, volume, provider, and ingestion timestamp.
 
 ## Continuous Integration
 

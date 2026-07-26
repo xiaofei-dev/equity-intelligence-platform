@@ -1,27 +1,37 @@
 # Roadmap
 
-## Phase 0: Foundation
+## Current Position
 
-- Initialize the monorepo structure
-- Create the Next.js frontend
-- Create the Spring Boot backend
-- Create the FastAPI analytics service
-- Configure PostgreSQL
-- Add Docker Compose
-- Add health checks
-- Establish formatting, testing, and CI conventions
+Phase 0 is complete. Phase 1 is in progress: the market-data path reaches the
+browser, while the minimal quantitative candidate path remains the next
+milestone.
+
+## Phase 0: Foundation — Complete
+
+- [x] Initialize the monorepo structure
+- [x] Create the Next.js frontend
+- [x] Create the Spring Boot backend
+- [x] Create the FastAPI analytics service
+- [x] Configure PostgreSQL
+- [x] Add Docker Compose
+- [x] Add health checks
+- [x] Establish formatting, testing, CI, and secret-scanning conventions
 
 Exit condition: all services build and start locally.
 
-## Phase 1: End-to-End Vertical Slice
+Exit status: achieved.
 
-- Select the first market and data provider
-- Ingest a small security universe
-- Store daily price data
-- Calculate a minimal factor set
-- Expose candidates through FastAPI
-- Call FastAPI from Spring Boot
-- Display candidates in Next.js
+## Phase 1: End-to-End Vertical Slice — In Progress
+
+- [x] Select United States equities and Twelve Data for the first slice
+- [x] Ingest the six-symbol engineering universe
+- [x] Store normalized daily price data
+- [x] Expose latest stored observations through Spring Boot
+- [x] Display latest observations in Next.js
+- [ ] Calculate a minimal, versioned factor set
+- [ ] Expose candidate rankings through FastAPI
+- [ ] Call the candidate contract from Spring Boot
+- [ ] Display candidate rankings and score explanations in Next.js
 
 Exit condition: one stock moves through the complete data-to-interface path.
 
@@ -72,7 +82,7 @@ Exit condition: a reviewer can access and understand the product without local s
 
 ## Phase 6: Production Learning
 
-- Add GitHub Actions
+- Extend the existing GitHub Actions baseline for deployment
 - Add stronger observability
 - Add backup and recovery procedures
 - Migrate a deployment to Amazon ECS Fargate and Amazon RDS
@@ -92,4 +102,3 @@ The following require separate approval and demonstrated need:
 - Brokerage connectivity
 - Automated execution
 - Commercial billing
-

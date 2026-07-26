@@ -73,14 +73,25 @@ Performance tracking and strategy evaluation
 - [Data and Backtesting](docs/data-and-backtesting.md)
 - [Roadmap](docs/roadmap.md)
 - [Decision Log](docs/decision-log.md)
+- [Development Log](docs/development-log/README.md)
 
 ## Current Status
 
-The project is in Phase 0. The Next.js frontend, Spring Boot backend, FastAPI
-analytics service, PostgreSQL migration structure, Dockerfiles, and local
-Compose topology have been initialized. Continuous integration validates all
-three application modules and scans commits for secrets. Business features and
-external data providers have not yet been implemented.
+Phase 0 is complete and Phase 1 is in progress. The complete local stack runs
+through Docker Compose, and GitHub Actions validates the frontend, backend,
+analytics service, and full Git history for secrets.
+
+The first real-data slice now:
+
+- Ingests split-adjusted daily OHLCV data from Twelve Data
+- Stores normalized securities and prices in PostgreSQL
+- Exposes the latest stored observation through Spring Boot
+- Displays six engineering-universe securities at `/market-data`
+- Preserves provider, trading-date, timezone, adjustment, and ingestion
+  metadata
+
+The next Phase 1 milestone is a minimal, versioned quantitative screen in
+Python, followed by Java orchestration and a visible candidate-ranking page.
 
 ## Quick Start
 
@@ -98,9 +109,14 @@ Copy-Item .env.example .env
 docker compose up --build
 ```
 
+Set `TWELVE_DATA_API_KEY` in the local `.env` file before running real market
+data ingestion. Never commit `.env` or place credentials in browser-exposed
+variables.
+
 Then open:
 
 - Frontend: `http://localhost:3000`
+- Market data page: `http://localhost:3000/market-data`
 - Backend health: `http://localhost:8080/actuator/health`
 - Analytics health: `http://localhost:8000/health`
 
