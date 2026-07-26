@@ -18,9 +18,11 @@ Spring Boot backend
    v
 FastAPI analytics service
    |
-   +-----------> Market, fundamental, news, and filing providers
+   +-----------> Replaceable market and fundamental providers
    |
-   +-----------> OpenAI API
+   +-----------> SEC filings and trusted evidence sources
+   |
+   +-----------> AI model API
 ```
 
 This structure combines enterprise business-system practices in Java with the Python data and quantitative ecosystem.
@@ -47,7 +49,8 @@ Next.js /market-data
 
 The browser receives normalized records from Spring Boot. It never receives
 the Twelve Data credential and does not call FastAPI or PostgreSQL directly.
-The quantitative candidate path remains the next unimplemented vertical slice.
+The provider-validation and quantitative candidate paths remain the next
+unimplemented analytics slices.
 
 ## Component Responsibilities
 
@@ -92,8 +95,11 @@ The FastAPI application owns:
 - Backtesting
 - Portfolio optimization calculations
 - AI evidence preparation and structured analysis
+- Coverage-state and data-lineage reporting
 
 The analytics service returns structured results through versioned contracts.
+Deterministic calculations and AI evidence assessments must remain separate in
+those contracts.
 
 ### Database
 
@@ -105,7 +111,25 @@ app.*
 analytics.*
 ```
 
+Public market observations and reusable company research belong in
+`analytics.*`. User identities, investment profiles, accounts, holdings,
+decisions, and portfolio-specific recommendation records belong in `app.*`.
+Python may write analytics-owned observations and results, but Java remains the
+only owner of user-facing account and decision state.
+
 The applications must not modify each other's tables without an explicit contract and migration.
+
+Analytics observations use append-only revisions with economic, availability,
+ingestion, and recording timestamps. Sealed data snapshots bind an analysis to
+an as-of cutoff, ingestion cutoff, source manifest, universe version, and
+normalization versions. Screening runs persist Python-owned coverage, factors,
+ratings, contributions, and lineage under those immutable inputs.
+
+Python writes these records through the `analytics_writer` role. Java does not
+query rating tables or reproduce formulas; it consumes screening status and
+rating pages through the versioned internal HTTP contract. Database read
+projections exist for analytics implementation and diagnostics, not as an
+additional Java rating contract.
 
 The initial United States security master treats normalized ticker symbols as
 unique ingestion identities and exchange labels as mutable metadata. A future

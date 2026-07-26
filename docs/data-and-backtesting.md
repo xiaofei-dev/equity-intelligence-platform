@@ -28,6 +28,9 @@ The MVP may require:
 - Benchmark data
 - Risk-free rate data when needed
 - Source documents for AI research
+- Basic and diluted historical shares outstanding
+- Historical market capitalization or reconstructable inputs
+- Listing, delisting, and symbol-change history
 
 ## Initial Market Data Source
 
@@ -51,10 +54,36 @@ The initial research universe contains `AAPL`, `MSFT`, `JPM`, `XOM`, and `JNJ`,
 with `SPY` reserved as a benchmark. This is an engineering validation set, not
 an investment recommendation or a production universe.
 
+This six-security set is not sufficient for sector certification, fundamental
+ranking, or strategy validation. It must not be used as a proxy for a sector.
+
 Twelve Data individual plans permit personal or internal use only. Public or
 commercial display requires an appropriate business plan and any applicable
 exchange or redistribution permissions. Licensing must be reviewed again
 before a public deployment.
+
+## Provider Validation
+
+The next data milestone is not an immediate full-universe import. It is a
+provider acceptance exercise using 20 representative securities, including:
+
+- Large-, mid-, and small-cap companies
+- Multiple sectors
+- A bank and a REIT that should require specialized handling
+- A loss-making or early-stage company
+- Split and dividend cases
+- A symbol-change case
+- A delisted case
+
+The exercise must verify point-in-time dates, adjustments, shares, units,
+currencies, null handling, identifier stability, SEC consistency, endpoint
+cost, and licensing. A 300-to-500-security stratified sample follows only after
+acceptance.
+
+Twelve Data remains the current development price provider. SEC EDGAR is the
+preferred primary-source filing and XBRL evidence provider. EODHD is the current
+leading paid candidate for a one-month personal research validation, not a
+final vendor commitment.
 
 ## Point-in-Time Correctness
 

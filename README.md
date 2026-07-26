@@ -41,19 +41,19 @@ equity-intelligence-platform/
 Market and fundamental data
             |
             v
-Deterministic eligibility filters
+Point-in-time data and eligibility filters
             |
             v
-Sector and stock ranking
+Strategy-specific stock rankings
             |
             v
 Evidence-based AI risk review
             |
             v
-Explicit composite scoring
+AI-reviewed candidate set
             |
             v
-Short-term and long-term portfolio rules
+User portfolio fit and constrained scenarios
             |
             v
 Human review and simulated execution
@@ -71,6 +71,12 @@ Performance tracking and strategy evaluation
 - [Investment Methodology](docs/investment-methodology.md)
 - [AI Analysis](docs/ai-analysis.md)
 - [Data and Backtesting](docs/data-and-backtesting.md)
+- [Quantitative Screening Design](docs/quantitative-screening.md)
+- [Quantitative Screening v1 Specification and Data Acceptance Plan](docs/quantitative-screening-v1-specification.md)
+- [Data Source Validation Matrix](docs/data-source-validation-matrix.md)
+- [Provider Acceptance Report: 2026-07-26](docs/provider-acceptance-report-2026-07-26.md)
+- [Screening Internal API Contract v1](docs/screening-api-contract.md)
+- [Objective Rating v1 Validation Report](docs/objective-rating-v1-validation.md)
 - [Roadmap](docs/roadmap.md)
 - [Decision Log](docs/decision-log.md)
 - [Development Log](docs/development-log/README.md)
@@ -90,8 +96,11 @@ The first real-data slice now:
 - Preserves provider, trading-date, timezone, adjustment, and ingestion
   metadata
 
-The next Phase 1 milestone is a minimal, versioned quantitative screen in
-Python, followed by Java orchestration and a visible candidate-ranking page.
+The next analytics milestone is a data-contract and provider-validation slice
+for two initial long-term screening paths: `Quality Compounder` and
+`Undervalued Quality`. Deterministic screening will precede source-backed AI
+evidence review. User portfolio fit and allocation scenarios remain later
+workstreams.
 
 ## Quick Start
 

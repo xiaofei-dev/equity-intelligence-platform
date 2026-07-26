@@ -37,3 +37,8 @@ The market-data page is dynamically rendered by the Next.js server and calls
 `GET /api/v1/market-data/latest` through `BACKEND_INTERNAL_URL`. Features that
 are not implemented must be presented as planned states rather than
 interactive controls.
+
+Future research views should favor concise natural-language assessments,
+supporting evidence, counterarguments, portfolio impact, and data freshness.
+Internal numeric factors may be available in an expanded research view, but the
+interface must not present a composite score as a probability of profit.
