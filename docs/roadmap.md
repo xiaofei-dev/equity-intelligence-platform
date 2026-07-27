@@ -36,14 +36,14 @@ Exit status: achieved.
 
 ## Phase 1B: Data and Methodology Validation - Next
 
-- [ ] Define the 20-security provider-validation universe
-- [ ] Define reference, price, corporate-action, and fundamental data contracts
+- [x] Define the 20-security provider-validation universe
+- [x] Define reference, price, corporate-action, and fundamental data contracts
 - [ ] Validate point-in-time dates, adjustments, identifiers, null handling,
   and SEC consistency
 - [ ] Validate sector and industry normalization
 - [ ] Add major sector ETF history for sector market-condition research
 - [ ] Approve or reject the leading paid provider candidate
-- [ ] Document the first factor definitions and exclusion rules
+- [x] Document the first factor definitions and exclusion rules
 
 Exit condition: required inputs for the first two strategy paths are available,
 traceable, and proven suitable for historical use.

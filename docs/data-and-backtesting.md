@@ -46,9 +46,10 @@ interface so a licensed commercial source can replace Twelve Data without
 changing factor calculations or public APIs.
 
 Within the initial United States market scope, the normalized security master
-uses the ticker symbol as its stable ingestion key. Provider exchange labels
-are treated as mutable metadata because venue names may differ across sources
-or change after a listing transfer.
+uses an internal immutable security identifier. SEC CIK and provider
+identifiers are versioned external mappings; ticker and exchange are dated,
+mutable attributes. Ticker alone is never a stable ingestion key because it
+can change, be reused, or collide with an unrelated issuer.
 
 The initial research universe contains `AAPL`, `MSFT`, `JPM`, `XOM`, and `JNJ`,
 with `SPY` reserved as a benchmark. This is an engineering validation set, not

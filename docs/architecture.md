@@ -125,6 +125,12 @@ an as-of cutoff, ingestion cutoff, source manifest, universe version, and
 normalization versions. Screening runs persist Python-owned coverage, factors,
 ratings, contributions, and lineage under those immutable inputs.
 
+The SEC normalization path resolves securities through immutable public IDs,
+creates idempotent provider, ingestion-batch, and source lineage, and inserts
+only observed or explicitly derived numeric facts. Its request identity
+includes the source content hash, so a changed provider response creates a new
+source revision instead of overwriting an earlier fact.
+
 Python writes these records through the `analytics_writer` role. Java does not
 query rating tables or reproduce formulas; it consumes screening status and
 rating pages through the versioned internal HTTP contract. Database read

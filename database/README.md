@@ -37,6 +37,8 @@ Cross-schema changes require an explicit contract and migration.
 - `V8`: add immutable coverage, factor, strategy-rating, contribution, and
   horizon results
 - `V9`: add analytics access roles and versioned screening read projections
+- `V10`: make fundamental-fact idempotency treat a null period start as part
+  of the same source observation
 
 Migration files are append-only after they have been applied to a shared
 environment. Corrections require a new migration rather than editing deployed

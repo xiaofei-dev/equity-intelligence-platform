@@ -127,14 +127,30 @@ All calculations use the latest PIT-eligible TTM and the prior available TTM
 unless stated otherwise. `Capex` is the absolute cash-flow value. Values with
 an invalid denominator are missing, not zero.
 
+For duration metrics reported as cumulative year-to-date values, v1 derives TTM
+with version `TTM-YTD-BRIDGE-v1.0.0`:
+
+`TTM = prior fiscal-year annual + current YTD - prior-year comparable YTD`
+
+The three inputs must have the same metric and unit, comparable YTD durations,
+chronologically compatible periods, and `availableAt <= asOfTime`. Every
+accession remains in lineage. Four reported 10-Q values must not be summed
+unless they are independently verified discrete quarters.
+
+Weighted-average duration metrics such as diluted shares use
+`TTM-WEIGHTED-YTD-BRIDGE-v1.0.0`. Each reported average is multiplied by its
+inclusive period days before applying the annual-plus-YTD bridge, then divided
+by the derived TTM day count. Per-share growth and dilution use these weighted
+TTM shares, not point-in-time shares outstanding.
+
 | Dimension | Formula and validity |
 | --- | --- |
 | Return on invested capital | `NOPAT / average(invested capital)` where `NOPAT = operating income x (1 - clamped effective tax rate)` and the tax rate is clamped to 0–35%; `invested capital = total equity + total debt - cash and equivalents`. Both current and prior invested capital must be positive. |
 | Free-cash-flow margin | `(CFO - Capex) / revenue`; revenue must be positive. |
 | Cash conversion | `(CFO - Capex) / net income`; valid only when net income is positive. |
-| Margin quality | TTM gross margin and operating margin, plus each margin's three-year change. |
+| Margin quality | Arithmetic mean of current TTM gross margin, current TTM operating margin, three-year gross-margin change, and three-year operating-margin change. All four components remain visible in lineage. |
 | Per-share growth | Three-year CAGR of diluted EPS and FCF per diluted share; valid only when both endpoint values are positive. |
-| Stability | Standard deviation of the last 12 quarterly operating margins and quarterly FCF margins, divided by the absolute mean. Lower is better; at least eight valid quarters are required. |
+| Stability | Arithmetic mean of the population coefficient of variation for quarterly operating margin and quarterly FCF margin. Each coefficient is population standard deviation divided by absolute mean. Lower is better; histories must be aligned and contain at least eight valid quarters. |
 | Debt service | `net debt / EBITDA` (lower is better) and `EBIT / absolute interest expense` (higher is better). Each requires a positive denominator. Net cash is retained as a value, not clipped to zero. |
 | Dilution | Three-year CAGR of diluted weighted-average shares. Lower or negative growth is better. Split-adjusted comparable shares are required. |
 | Earnings yield | `TTM EBIT / enterprise value`; enterprise value is market cap plus total debt plus minority interest minus cash and equivalents. Both numerator and EV must be positive. |

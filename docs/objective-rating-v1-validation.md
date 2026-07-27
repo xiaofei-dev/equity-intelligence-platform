@@ -26,6 +26,11 @@ full-market historical backtest. Production data acceptance remains
 - A six-security derived Twelve Data price fixture as of 2026-07-24 with
   request policy and SHA-256 row hashes.
 - A shared Python/Java JSON contract fixture that preserves decimal precision.
+- A hashed AAPL SEC fixture deriving five 2024-03-30 TTM duration metrics with
+  the versioned annual-plus-YTD bridge.
+- A bounded AAPL PIT factor reconstruction for ROIC, operating margin,
+  net-debt/EBITDA, earnings yield and FCF yield, with incomplete strategies
+  remaining unscored.
 
 ## Reasonableness Checks
 
@@ -49,11 +54,12 @@ The tests establish economic direction rather than a desired stock ordering:
 
 - The 100-observation cohort is deterministic test data, not a historical
   investable universe.
-- Only six live price histories and one SEC issuer/fact lineage were sampled.
+- Twenty provider cases, ten mature-company SEC lineages, and six historical
+  SEC filing cutoffs were sampled; this remains a bounded validation set.
 - Long-term historical factor values have not been backfilled across the
   20-security validation universe.
-- Delisting proceeds, historical ticker continuity, restatements and provider
-  licensing have not passed acceptance.
+- Delisting proceeds, complete historical ticker continuity, empirical
+  restatement coverage and provider licensing have not passed acceptance.
 - No CAGR, alpha, benchmark outperformance or profitability claim is made.
 
 ## Next Gate

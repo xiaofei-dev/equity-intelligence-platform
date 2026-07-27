@@ -134,6 +134,104 @@ $$;
 
 DO $$
 DECLARE
+    duplicate_count INTEGER;
+BEGIN
+    INSERT INTO analytics.fundamental_fact (
+        security_id,
+        metric_code,
+        numeric_value,
+        unit,
+        period_start,
+        period_end,
+        fiscal_period,
+        form_type,
+        accession_number,
+        filed_at,
+        available_at,
+        ingested_at,
+        mapping_version,
+        normalization_version,
+        revision_status,
+        quality_status,
+        source_record_id
+    )
+    SELECT
+        security.id,
+        'TEST_INSTANT_FACT',
+        1,
+        'shares',
+        NULL,
+        DATE '2025-03-31',
+        'Q1',
+        '10-Q',
+        'test-instant-accession',
+        source.available_at,
+        source.available_at,
+        source.ingested_at,
+        'test-v1',
+        'test-v1',
+        'AS_FILED',
+        'NOT_VERIFIED',
+        source.id
+    FROM analytics.security security
+    CROSS JOIN analytics.source_record source
+    LIMIT 1
+    ON CONFLICT ON CONSTRAINT uq_fundamental_fact_source DO NOTHING;
+
+    INSERT INTO analytics.fundamental_fact (
+        security_id,
+        metric_code,
+        numeric_value,
+        unit,
+        period_start,
+        period_end,
+        fiscal_period,
+        form_type,
+        accession_number,
+        filed_at,
+        available_at,
+        ingested_at,
+        mapping_version,
+        normalization_version,
+        revision_status,
+        quality_status,
+        source_record_id
+    )
+    SELECT
+        security.id,
+        'TEST_INSTANT_FACT',
+        2,
+        'shares',
+        NULL,
+        DATE '2025-03-31',
+        'Q1',
+        '10-Q',
+        'test-instant-accession',
+        source.available_at,
+        source.available_at,
+        source.ingested_at,
+        'test-v1',
+        'test-v1',
+        'AS_FILED',
+        'NOT_VERIFIED',
+        source.id
+    FROM analytics.security security
+    CROSS JOIN analytics.source_record source
+    LIMIT 1
+    ON CONFLICT ON CONSTRAINT uq_fundamental_fact_source DO NOTHING;
+
+    SELECT COUNT(*) INTO duplicate_count
+    FROM analytics.fundamental_fact
+    WHERE metric_code = 'TEST_INSTANT_FACT';
+
+    IF duplicate_count <> 1 THEN
+        RAISE EXCEPTION 'NULL period-start idempotency failed';
+    END IF;
+END;
+$$;
+
+DO $$
+DECLARE
     selected_value NUMERIC;
 BEGIN
     WITH revisions(available_at, ingested_at, numeric_value) AS (

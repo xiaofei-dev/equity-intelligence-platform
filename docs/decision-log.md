@@ -296,3 +296,84 @@ or current-universe leakage. Immutable source revisions and exact strategy,
 universe, normalization, and source versions make calculations reproducible.
 Keeping rating formulas and persistence Python-owned also prevents a second
 Java scoring implementation from drifting.
+
+## 2026-07-26: Historical Filing Availability and Durable Identity
+
+Decision:
+
+Select SEC filings by timezone-aware acceptance timestamp, not report period or
+filing date alone. Load SEC supplemental submission indexes for older cutoffs,
+apply amendments only after their own acceptance time, and delay facts until a
+complete trading session is available. Use an internal immutable security
+identifier with dated ticker mappings; never use ticker as the durable key.
+
+Reason:
+
+A period-end date predates public availability, a later amendment must not
+rewrite an earlier snapshot, and the current submissions index does not contain
+all older filings. The XOM acceptance test also demonstrated that ticker-only
+lookup can resolve to an unrelated CIK.
+
+## 2026-07-26: Versioned YTD-to-TTM Bridge
+
+Decision:
+
+For cumulative duration metrics, derive TTM as prior annual plus current YTD
+minus prior-year comparable YTD under `TTM-YTD-BRIDGE-v1.0.0`. Require matching
+metric and unit, comparable durations, valid chronology, PIT availability and
+preserved accession lineage. Do not blindly sum four 10-Q observations.
+
+Reason:
+
+SEC 10-Q company facts frequently contain cumulative year-to-date values.
+Summing them double-counts earlier quarters, while the explicit bridge produces
+a reproducible TTM value and makes restated comparative inputs auditable.
+
+## 2026-07-26: PIT Market Value Reconstruction
+
+Decision:
+
+For the validation slice, reconstruct market capitalization from the latest
+PIT-eligible reported common shares and the last available adjusted daily close
+at or before the cutoff. Preserve both lineages and report the share-period
+staleness. Do not emit a strategy score when any required history or factor is
+missing.
+
+Reason:
+
+A provider's current market-cap field can leak future shares into a historical
+cutoff. Explicit price-times-shares reconstruction is auditable, while keeping
+incomplete QC/UQ results unscored prevents partial data from appearing as a
+valid ranking.
+
+## 2026-07-26: Weighted-Average TTM Shares
+
+Decision:
+
+Reconstruct TTM diluted weighted-average shares with inclusive period-day
+weights under `TTM-WEIGHTED-YTD-BRIDGE-v1.0.0`. Use the result for per-share
+metrics and dilution; do not apply the additive monetary-value bridge directly
+to weighted averages.
+
+Reason:
+
+Weighted-average shares represent exposure over a duration, not an additive
+flow. Period weighting preserves the economic meaning when annual and
+cumulative YTD observations are bridged.
+
+## 2026-07-26: Discrete Quarters and Margin Stability
+
+Decision:
+
+Derive discrete quarters from cumulative SEC duration facts under
+`DISCRETE-FROM-CUMULATIVE-v1.0.0`. Subtract adjacent YTD observations sharing a
+fiscal-year start and derive Q4 as annual minus Q3 YTD. Define stability as the
+mean population coefficient of variation of aligned operating and FCF margins.
+Define margin quality as the mean of current gross margin, current operating
+margin, and their respective three-year changes.
+
+Reason:
+
+Cash-flow 10-Q facts are usually cumulative and cannot be treated as standalone
+quarters. Explicit differencing prevents double counting, while fixed composite
+formulas remove ambiguity from the single versioned factor values.
