@@ -103,6 +103,69 @@ END;
 $$;
 
 DO $$
+DECLARE
+    test_user UUID := gen_random_uuid();
+    test_profile UUID := gen_random_uuid();
+    test_goal UUID := gen_random_uuid();
+    test_policy UUID := gen_random_uuid();
+    test_sector UUID := gen_random_uuid();
+BEGIN
+    INSERT INTO app.user_account (id, display_name)
+    VALUES (test_user, 'Version Immutability Test');
+
+    INSERT INTO app.investment_profile_version (
+        id, user_id, version_number, investment_approach, primary_horizon,
+        risk_tolerance, idempotency_key, request_hash, effective_at
+    ) VALUES (
+        test_profile, test_user, 1, 'DEFENSIVE', 'LONG_TERM', 'MODERATE',
+        'profile-immutable', repeat('b', 64), CURRENT_TIMESTAMP
+    );
+
+    INSERT INTO app.investment_goal (
+        id, user_id, profile_version_id, goal_type, priority
+    ) VALUES (
+        test_goal, test_user, test_profile, 'CAPITAL_GROWTH', 1
+    );
+
+    INSERT INTO app.constraint_policy_version (
+        id, user_id, scope_type, version_number, maximum_position_count,
+        idempotency_key, request_hash, effective_at
+    ) VALUES (
+        test_policy, test_user, 'USER', 1, 20,
+        'policy-immutable', repeat('c', 64), CURRENT_TIMESTAMP
+    );
+
+    INSERT INTO app.sector_constraint (
+        id, user_id, policy_version_id, taxonomy_code, taxonomy_version,
+        sector_code, maximum_weight
+    ) VALUES (
+        test_sector, test_user, test_policy, 'TEST', 'v1',
+        'TECHNOLOGY', 0.25
+    );
+
+    BEGIN
+        UPDATE app.investment_goal SET priority = 2 WHERE id = test_goal;
+        RAISE EXCEPTION 'Immutable investment goal was updated';
+    EXCEPTION
+        WHEN raise_exception THEN
+            IF SQLERRM = 'Immutable investment goal was updated' THEN
+                RAISE;
+            END IF;
+    END;
+
+    BEGIN
+        DELETE FROM app.sector_constraint WHERE id = test_sector;
+        RAISE EXCEPTION 'Immutable sector constraint was deleted';
+    EXCEPTION
+        WHEN raise_exception THEN
+            IF SQLERRM = 'Immutable sector constraint was deleted' THEN
+                RAISE;
+            END IF;
+    END;
+END;
+$$;
+
+DO $$
 BEGIN
     IF NOT EXISTS (
         SELECT 1

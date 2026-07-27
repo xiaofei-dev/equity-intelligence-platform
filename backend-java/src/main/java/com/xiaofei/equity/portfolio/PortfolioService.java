@@ -267,6 +267,54 @@ public class PortfolioService {
 	}
 
 	@Transactional
+	public PortfolioLiabilityMembershipResponse replacePortfolioLiabilities(
+			CurrentUser user,
+			UUID portfolioId,
+			ReplacePortfolioLiabilitiesRequest request) {
+		requireOwnedPortfolio(user.userId(), portfolioId);
+		LinkedHashSet<UUID> liabilityIds = new LinkedHashSet<>(request.liabilityIds());
+		if (liabilityIds.size() != request.liabilityIds().size()) {
+			throw validation(
+					"DUPLICATE_PORTFOLIO_LIABILITY",
+					"Portfolio liabilities must be unique.");
+		}
+		for (UUID liabilityId : liabilityIds) {
+			boolean valid = jdbcClient.sql("""
+					SELECT COUNT(*)
+					FROM app.financial_liability
+					WHERE id = :liabilityId AND user_id = :userId
+					  AND account_id IS NULL AND status = 'ACTIVE'
+					""")
+				.params(Map.of("liabilityId", liabilityId, "userId", user.userId()))
+				.query(Integer.class).single() > 0;
+			if (!valid) {
+				throw notFound();
+			}
+		}
+		jdbcClient.sql("""
+				DELETE FROM app.portfolio_liability_membership
+				WHERE portfolio_id = :portfolioId AND user_id = :userId
+				""")
+			.params(Map.of("portfolioId", portfolioId, "userId", user.userId()))
+			.update();
+		for (UUID liabilityId : liabilityIds) {
+			jdbcClient.sql("""
+					INSERT INTO app.portfolio_liability_membership (
+					    portfolio_id, liability_id, user_id
+					) VALUES (:portfolioId, :liabilityId, :userId)
+					""")
+				.params(Map.of(
+						"portfolioId", portfolioId,
+						"liabilityId", liabilityId,
+						"userId", user.userId()))
+				.update();
+		}
+		audit(user, "PORTFOLIO_LIABILITIES_REPLACED", "portfolio", portfolioId, "SUCCEEDED");
+		return new PortfolioLiabilityMembershipResponse(
+				portfolioId, List.copyOf(liabilityIds));
+	}
+
+	@Transactional
 	public ScenarioAccepted createScenario(
 			CurrentUser user,
 			UUID portfolioId,
@@ -321,19 +369,44 @@ public class PortfolioService {
 			.update();
 
 		for (UUID snapshotId : snapshots) {
-			jdbcClient.sql("""
-					INSERT INTO app.portfolio_scenario_input (
-					    scenario_id, user_id, input_type, source_id, payload_hash
-					)
-					SELECT :scenarioId, :userId, 'ACCOUNT_SNAPSHOT', id, content_hash
-					FROM app.account_snapshot
-					WHERE id = :snapshotId AND user_id = :userId
-					""")
-				.params(Map.of(
-						"scenarioId", scenarioId,
-						"userId", user.userId(),
-						"snapshotId", snapshotId))
-				.update();
+			insertScenarioInputFromTable(
+					scenarioId, user.userId(), "ACCOUNT_SNAPSHOT",
+					"app.account_snapshot", snapshotId, "content_hash");
+		}
+
+		SourceReference profile = latestRequiredSource(
+				"""
+				SELECT id, request_hash
+				FROM app.investment_profile_version
+				WHERE user_id = :userId
+				ORDER BY version_number DESC
+				LIMIT 1
+				""",
+				Map.of("userId", user.userId()),
+				"INVESTMENT_PROFILE_REQUIRED",
+				"An investment profile is required before creating a scenario.");
+		insertScenarioInput(
+				scenarioId, user.userId(), "INVESTMENT_PROFILE",
+				profile.id(), profile.hash());
+
+		List<SourceReference> policies = applicableConstraintPolicies(
+				user.userId(), portfolioId);
+		if (policies.stream().noneMatch(reference -> reference.scopeType().equals("USER"))) {
+			throw validation(
+					"USER_CONSTRAINT_POLICY_REQUIRED",
+					"A user-level constraint policy is required before creating a scenario.");
+		}
+		for (SourceReference policy : policies) {
+			insertScenarioInput(
+					scenarioId, user.userId(), "CONSTRAINT_POLICY",
+					policy.id(), policy.hash());
+		}
+
+		for (SourceReference liability : latestIncludedLiabilityBalances(
+				user.userId(), portfolioId)) {
+			insertScenarioInput(
+					scenarioId, user.userId(), "LIABILITY_SNAPSHOT",
+					liability.id(), liability.hash());
 		}
 
 		if (request.scenarioType() == ScenarioType.NEW_MONEY) {
@@ -418,6 +491,154 @@ public class PortfolioService {
 				""")
 			.params(Map.of("portfolioId", portfolioId, "userId", userId))
 			.query(UUID.class).list();
+	}
+
+	private List<SourceReference> applicableConstraintPolicies(
+			UUID userId, UUID portfolioId) {
+		return jdbcClient.sql("""
+				WITH applicable AS (
+				    SELECT policy.*,
+				           ROW_NUMBER() OVER (
+				               PARTITION BY policy.scope_type,
+				                   COALESCE(policy.portfolio_id, policy.account_id)
+				               ORDER BY policy.version_number DESC
+				           ) AS version_rank
+				    FROM app.constraint_policy_version policy
+				    WHERE policy.user_id = :userId
+				      AND (
+				          policy.scope_type = 'USER'
+				          OR (policy.scope_type = 'PORTFOLIO'
+				              AND policy.portfolio_id = :portfolioId)
+				          OR (policy.scope_type = 'ACCOUNT' AND policy.account_id IN (
+				              SELECT membership.account_id
+				              FROM app.portfolio_account_membership membership
+				              WHERE membership.portfolio_id = :portfolioId
+				                AND membership.user_id = :userId
+				          ))
+				      )
+				)
+				SELECT id, request_hash, scope_type
+				FROM applicable
+				WHERE version_rank = 1
+				ORDER BY scope_type, id
+				""")
+			.params(Map.of("userId", userId, "portfolioId", portfolioId))
+			.query((rs, rowNumber) -> new SourceReference(
+					rs.getObject("id", UUID.class),
+					rs.getString("request_hash"),
+					rs.getString("scope_type")))
+			.list();
+	}
+
+	private List<SourceReference> latestIncludedLiabilityBalances(
+			UUID userId, UUID portfolioId) {
+		return jdbcClient.sql("""
+				WITH included_liability AS (
+				    SELECT liability.id
+				    FROM app.financial_liability liability
+				    JOIN app.portfolio_account_membership membership
+				      ON membership.account_id = liability.account_id
+				     AND membership.user_id = liability.user_id
+				    WHERE membership.portfolio_id = :portfolioId
+				      AND membership.user_id = :userId
+				      AND liability.status = 'ACTIVE'
+				    UNION
+				    SELECT liability.id
+				    FROM app.financial_liability liability
+				    JOIN app.portfolio_liability_membership membership
+				      ON membership.liability_id = liability.id
+				     AND membership.user_id = liability.user_id
+				    WHERE membership.portfolio_id = :portfolioId
+				      AND membership.user_id = :userId
+				      AND liability.account_id IS NULL
+				      AND liability.status = 'ACTIVE'
+				)
+				SELECT included.id AS liability_id, balance.id, balance.request_hash
+				FROM included_liability included
+				LEFT JOIN LATERAL (
+				    SELECT candidate.id, candidate.request_hash
+				    FROM app.liability_balance_snapshot candidate
+				    WHERE candidate.liability_id = included.id
+				      AND candidate.user_id = :userId
+				    ORDER BY candidate.as_of_time DESC, candidate.recorded_at DESC
+				    LIMIT 1
+				) balance ON TRUE
+				ORDER BY balance.id
+				""")
+			.params(Map.of("userId", userId, "portfolioId", portfolioId))
+			.query((rs, rowNumber) -> {
+				UUID balanceId = rs.getObject("id", UUID.class);
+				if (balanceId == null) {
+					throw validation(
+							"LIABILITY_BALANCE_REQUIRED",
+							"Every included liability requires a balance snapshot.");
+				}
+				return new SourceReference(
+						balanceId,
+						rs.getString("request_hash"),
+						"LIABILITY");
+			})
+			.list();
+	}
+
+	private SourceReference latestRequiredSource(
+			String sql,
+			Map<String, ?> params,
+			String errorCode,
+			String errorMessage) {
+		return jdbcClient.sql(sql)
+			.params(params)
+			.query((rs, rowNumber) -> new SourceReference(
+					rs.getObject("id", UUID.class),
+					rs.getString("request_hash"),
+					""))
+			.optional()
+			.orElseThrow(() -> validation(errorCode, errorMessage));
+	}
+
+	private void insertScenarioInputFromTable(
+			UUID scenarioId,
+			UUID userId,
+			String inputType,
+			String table,
+			UUID sourceId,
+			String hashColumn) {
+		jdbcClient.sql("""
+				INSERT INTO app.portfolio_scenario_input (
+				    scenario_id, user_id, input_type, source_id, payload_hash
+				)
+				SELECT :scenarioId, :userId, :inputType, id, %s
+				FROM %s
+				WHERE id = :sourceId AND user_id = :userId
+				""".formatted(hashColumn, table))
+			.params(Map.of(
+					"scenarioId", scenarioId,
+					"userId", userId,
+					"inputType", inputType,
+					"sourceId", sourceId))
+			.update();
+	}
+
+	private void insertScenarioInput(
+			UUID scenarioId,
+			UUID userId,
+			String inputType,
+			UUID sourceId,
+			String hash) {
+		jdbcClient.sql("""
+				INSERT INTO app.portfolio_scenario_input (
+				    scenario_id, user_id, input_type, source_id, payload_hash
+				) VALUES (
+				    :scenarioId, :userId, :inputType, :sourceId, :payloadHash
+				)
+				""")
+			.params(Map.of(
+					"scenarioId", scenarioId,
+					"userId", userId,
+					"inputType", inputType,
+					"sourceId", sourceId,
+					"payloadHash", hash))
+			.update();
 	}
 
 	private SnapshotAccepted findSnapshotByIdempotency(
@@ -534,5 +755,8 @@ public class PortfolioService {
 				"RESOURCE_NOT_FOUND",
 				"The requested resource was not found.",
 				404);
+	}
+
+	private record SourceReference(UUID id, String hash, String scopeType) {
 	}
 }

@@ -87,6 +87,15 @@ public class PortfolioController {
 				identityResolver.resolve(identity), portfolioId, request);
 	}
 
+	@PutMapping("/portfolios/{portfolioId}/liabilities")
+	PortfolioLiabilityMembershipResponse replacePortfolioLiabilities(
+			@RequestHeader(ClosedTestIdentityResolver.IDENTITY_HEADER) String identity,
+			@PathVariable UUID portfolioId,
+			@Valid @RequestBody ReplacePortfolioLiabilitiesRequest request) {
+		return portfolioService.replacePortfolioLiabilities(
+				identityResolver.resolve(identity), portfolioId, request);
+	}
+
 	@PostMapping("/portfolios/{portfolioId}/scenarios")
 	ResponseEntity<ScenarioAccepted> createScenario(
 			@RequestHeader(ClosedTestIdentityResolver.IDENTITY_HEADER) String identity,

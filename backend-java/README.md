@@ -19,15 +19,29 @@ must not call the Python analytics service directly.
   portfolio's explicit account set
 - `POST /api/v1/me/portfolios/{portfolioId}/scenarios`: freeze complete account
   snapshots for a new-money, constrained-rebalancing, or target scenario
+- `GET/POST /api/v1/me/investment-profile`: read the latest profile or append
+  an immutable version with goals and sector preferences
+- `GET/POST /api/v1/me/liabilities`: list or create account-level and
+  user-level liabilities
+- `POST /api/v1/me/liabilities/{liabilityId}/balances`: append an immutable
+  liability balance
+- `PUT /api/v1/me/portfolios/{portfolioId}/liabilities`: explicitly select
+  user-level liabilities for an aggregate portfolio
+- `POST /api/v1/me/constraints`: append a user, portfolio, or account policy
+  version
+- `GET /api/v1/me/constraints/resolved?portfolioId={id}`: resolve the strictest
+  inherited limits for the portfolio and each member account
 
 The `/api/v1/me` slice does not implement login. In an explicitly enabled
 closed-test environment, `X-Test-Identity` contains an opaque external subject
 that is resolved to an internal user and identity. It is not a user identifier
 and must not be enabled on a public deployment.
 
-Snapshot and scenario creation require `Idempotency-Key`. Scenario creation
-currently produces an immutable-input `DRAFT`; portfolio calculation and
-decision submission remain later slices.
+Snapshot, profile-version, liability-balance, constraint-policy, and scenario
+creation require `Idempotency-Key`. Scenario creation freezes complete account
+snapshots, the latest profile, every applicable policy, and included liability
+balances. It currently produces an immutable-input `DRAFT`; portfolio
+calculation and decision submission remain later slices.
 
 Flyway packages migrations from `../database/migrations` and runs them during
 startup.
@@ -58,11 +72,12 @@ analysis tasks and expose stable public candidate and coverage APIs. It must not
 own or duplicate the quantitative formulas.
 
 The user and portfolio foundation now includes the `app.*` schema, closed-test
-identity resolution, account snapshots, aggregate portfolio membership, and
-scenario input freezing. The next slice should expose investment-profile,
-liability, and versioned-constraint commands, resolve tightening constraint
-inheritance, and define the versioned portfolio-calculation contract before a
-scenario can leave `DRAFT`.
+identity resolution, account and liability snapshots, versioned profiles,
+aggregate portfolio membership, tightening constraint resolution, and complete
+scenario input freezing. The Java-side
+`portfolio-calculation-v1` contract and compatibility fixture are defined, but
+the internal Python endpoint is intentionally not active. Python must implement
+and parse the same contract before a scenario can leave `DRAFT`.
 
 Java must provide validated portfolio inputs to Python; Python must not modify
 user account or holding state.

@@ -17,6 +17,7 @@
 - [Data Source Validation Matrix](data-source-validation-matrix.md)
 - [Provider Acceptance Report: 2026-07-26](provider-acceptance-report-2026-07-26.md)
 - [Screening Internal API Contract v1](screening-api-contract.md)
+- [Portfolio Calculation Internal API Contract v1](portfolio-calculation-api-contract.md)
 - [Objective Rating v1 Validation Report](objective-rating-v1-validation.md)
 - [Forward Decision-Quality Validation v1](forward-decision-quality-validation-v1.md)
 - [Forward Validation Internal API Contract v1](forward-validation-api-contract.md)

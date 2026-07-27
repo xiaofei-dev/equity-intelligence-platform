@@ -95,6 +95,15 @@ public final class PortfolioContracts {
 			@NotEmpty List<@NotNull UUID> accountIds) {
 	}
 
+	public record ReplacePortfolioLiabilitiesRequest(
+			@NotNull List<@NotNull UUID> liabilityIds) {
+	}
+
+	public record PortfolioLiabilityMembershipResponse(
+			UUID portfolioId,
+			List<UUID> liabilityIds) {
+	}
+
 	public record CreateScenarioRequest(
 			@NotNull ScenarioType scenarioType,
 			@NotNull @DecimalMin("0") BigDecimal newMoneyAmount) {
