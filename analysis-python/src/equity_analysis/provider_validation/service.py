@@ -47,17 +47,14 @@ class ProviderAcceptanceService:
         if not securities:
             raise ValueError("No securities matched the requested validation symbols")
         results = tuple(
-            self._validate_security(security, start_date, end_date)
-            for security in securities
+            self._validate_security(security, start_date, end_date) for security in securities
         )
         checks = tuple(check for result in results for check in result.checks)
         summary = ValidationSummary(
             security_count=len(results),
             pass_count=sum(check.status == CheckStatus.PASS for check in checks),
             fail_count=sum(check.status == CheckStatus.FAIL for check in checks),
-            not_verified_count=sum(
-                check.status == CheckStatus.NOT_VERIFIED for check in checks
-            ),
+            not_verified_count=sum(check.status == CheckStatus.NOT_VERIFIED for check in checks),
             not_applicable_count=sum(
                 check.status == CheckStatus.NOT_APPLICABLE for check in checks
             ),
@@ -235,14 +232,10 @@ class ProviderAcceptanceService:
                 ),
             )
         lineage_status = (
-            CheckStatus.PASS
-            if facts.matching_accession_fact_count > 0
-            else CheckStatus.FAIL
+            CheckStatus.PASS if facts.matching_accession_fact_count > 0 else CheckStatus.FAIL
         )
         missing_groups = tuple(
-            group
-            for group, present in facts.required_tag_groups_present.items()
-            if not present
+            group for group, present in facts.required_tag_groups_present.items() if not present
         )
         field_status = CheckStatus.PASS if not missing_groups else CheckStatus.NOT_VERIFIED
         return (
@@ -260,9 +253,7 @@ class ProviderAcceptanceService:
                     "filingDate": filing.filing_date.isoformat(),
                     "acceptanceDatetime": filing.acceptance_datetime.isoformat(),
                     "accessionNumber": filing.accession_number,
-                    "reportDate": (
-                        filing.report_date.isoformat() if filing.report_date else None
-                    ),
+                    "reportDate": (filing.report_date.isoformat() if filing.report_date else None),
                     "matchingAccessionFactCount": facts.matching_accession_fact_count,
                 },
             ),

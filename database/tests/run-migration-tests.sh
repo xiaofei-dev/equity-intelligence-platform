@@ -6,6 +6,7 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 DATABASE_DIR="$(cd "${SCRIPT_DIR}/.." && pwd)"
 MIGRATION_DIR="${DATABASE_DIR}/migrations"
 ACCEPTANCE_SCRIPT="${SCRIPT_DIR}/analytics_schema_acceptance.sql"
+APP_ACCEPTANCE_SCRIPT="${SCRIPT_DIR}/app_schema_acceptance.sql"
 EMPTY_DATABASE="equity_schema_empty_test"
 UPGRADE_DATABASE="equity_schema_upgrade_test"
 
@@ -42,6 +43,10 @@ psql \
   --dbname="${EMPTY_DATABASE}" \
   --set=ON_ERROR_STOP=1 \
   --file="${ACCEPTANCE_SCRIPT}"
+psql \
+  --dbname="${EMPTY_DATABASE}" \
+  --set=ON_ERROR_STOP=1 \
+  --file="${APP_ACCEPTANCE_SCRIPT}"
 
 createdb "${UPGRADE_DATABASE}"
 apply_migrations "${UPGRADE_DATABASE}" 1 3
@@ -80,6 +85,10 @@ psql \
   --dbname="${UPGRADE_DATABASE}" \
   --set=ON_ERROR_STOP=1 \
   --file="${ACCEPTANCE_SCRIPT}"
+psql \
+  --dbname="${UPGRADE_DATABASE}" \
+  --set=ON_ERROR_STOP=1 \
+  --file="${APP_ACCEPTANCE_SCRIPT}"
 
 legacy_counts="$(
   psql \

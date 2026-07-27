@@ -8,9 +8,7 @@ FIXTURE_DIRECTORY = Path(__file__).parent / "fixtures"
 
 def test_expanded_provider_universe_has_unique_stratified_symbols() -> None:
     data = json.loads(
-        (FIXTURE_DIRECTORY / "provider_acceptance_universe_v2.json").read_text(
-            encoding="utf-8"
-        )
+        (FIXTURE_DIRECTORY / "provider_acceptance_universe_v2.json").read_text(encoding="utf-8")
     )
     securities = data["securities"]
     symbols = [security["symbol"] for security in securities]
@@ -25,9 +23,7 @@ def test_expanded_provider_universe_has_unique_stratified_symbols() -> None:
 
 def test_provider_acceptance_universe_covers_required_cases() -> None:
     data = json.loads(
-        (FIXTURE_DIRECTORY / "provider_acceptance_universe_v1.json").read_text(
-            encoding="utf-8"
-        )
+        (FIXTURE_DIRECTORY / "provider_acceptance_universe_v1.json").read_text(encoding="utf-8")
     )
     securities = data["securities"]
     test_tags = {tag for security in securities for tag in security["tests"]}
@@ -48,9 +44,7 @@ def test_provider_acceptance_universe_covers_required_cases() -> None:
 
 def test_derived_historical_price_fixture_is_integral_and_economically_coherent() -> None:
     data = json.loads(
-        (FIXTURE_DIRECTORY / "derived_price_cases_2026-07-24.json").read_text(
-            encoding="utf-8"
-        )
+        (FIXTURE_DIRECTORY / "derived_price_cases_2026-07-24.json").read_text(encoding="utf-8")
     )
     observations = {item["symbol"]: item for item in data["observations"]}
 
@@ -81,9 +75,7 @@ def test_derived_historical_price_fixture_is_integral_and_economically_coherent(
 
 def test_sec_pit_filing_fixture_is_hashed_and_never_uses_future_filings() -> None:
     data = json.loads(
-        (FIXTURE_DIRECTORY / "sec_pit_filing_cases_2026-07-26.json").read_text(
-            encoding="utf-8"
-        )
+        (FIXTURE_DIRECTORY / "sec_pit_filing_cases_2026-07-26.json").read_text(encoding="utf-8")
     )
     cases = data["cases"]
 

@@ -377,3 +377,104 @@ Reason:
 Cash-flow 10-Q facts are usually cumulative and cannot be treated as standalone
 quarters. Explicit differencing prevents double counting, while fixed composite
 formulas remove ambiguity from the single versioned factor values.
+
+## 2026-07-26: Historical FCF-Yield Percentile
+
+Decision:
+
+Calculate a security's historical FCF-yield percentile from PIT month-end
+observations using an ascending midrank. Target 60 months and require at least
+12. Reconstruct each market cap from that month's adjusted close and the latest
+reported shares available at the cutoff; pair it with only the TTM FCF then
+available.
+
+Reason:
+
+Using today's shares or latest TTM FCF across old prices creates look-ahead
+bias. A fixed midrank and explicit 12/60 coverage make the preliminary
+historical valuation signal deterministic without overstating its depth.
+
+## 2026-07-26: PostgreSQL-Backed Screening Pipeline
+
+Decision:
+
+Use PostgreSQL screening runs as the durable task queue for the first vertical
+slice. FastAPI creates idempotent runs, recovers pending or stale-running work,
+acquires advisory locks, builds observations from sealed snapshots, and writes
+coverage, factor, strategy, contribution, horizon, and lineage results before
+sealing the run. Spring Boot forwards only the versioned HTTP task and rating
+contract.
+
+Twenty-security acceptance is layered. Every security must appear in snapshot
+membership and coverage, while only mature operating companies with sufficient
+v1 data receive numeric ratings. Specialized companies, benchmarks, historical
+securities, and incomplete records retain explicit non-scored states.
+
+Reason:
+
+This preserves one owner for deterministic formulas and analytics persistence,
+supports safe request retries and process restarts without introducing an
+external queue, and prevents incomplete provider coverage from being presented
+as a neutral or fabricated score.
+
+## 2026-07-26: Objective Rating v1 Validation Closure
+
+Decision:
+
+Accept the deterministic Objective Rating v1 method, data contracts, PIT
+selection rules and bounded validation fixtures. Do not accept the free-source
+combination as a production full-market backtest dataset. Limit the next
+implementation slice to provider-neutral observations, pure calculations,
+bounded adapters and shared contracts until a separately authorized vendor
+trial closes the named data gaps.
+
+Reason:
+
+AAPL, MSFT and TGT prove that the formulas and core SEC bridge are executable,
+while AAPL interest expense and TGT gross profit prove that issuer-specific
+coverage cannot be assumed. Ticker history, delisting proceeds and revision
+semantics also remain insufficient for survivorship-safe production research.
+
+## 2026-07-26: Immutable Forward Decision-Quality Validation
+
+Decision:
+
+Evaluate objective ratings and paced entry rules through parallel, immutable
+shadow ledgers under `FORWARD-VALIDATION-v1.0.0`. Keep the near-term score a
+market condition rather than a recommendation. Only `FAVORABLE` permits the
+next fixed 25% state-gated tranche. Preserve paused, unfilled, expired, cash,
+cost, and missed-upside outcomes. Default to `DRY_RUN` until a 300-to-500
+security stratified PIT provider acceptance is recorded.
+
+Reason:
+
+Retrospective selection of successful waits would create outcome bias.
+Freezing each signal and all counterfactual arms before outcomes exist makes
+purchase-price, return, drawdown, and opportunity-cost comparisons auditable.
+One to two months can validate operations and provide preliminary direction,
+but cannot establish persistent excess return.
+
+## 2026-07-26: User and Portfolio System of Record
+
+Decision:
+
+Separate application users from authentication identities and resolve the
+initial closed-test identities to stable internal user identifiers. Model
+accounts, cash, positions, liabilities, aggregate portfolios, constraint
+policies, portfolio scenarios, and human decisions in `app.*`. Represent
+account history with immutable point-in-time snapshots. Use explicit account
+sets for aggregate portfolios and compare new-money-only, constrained
+rebalancing, and target-portfolio scenarios against the same complete context.
+
+User, portfolio, and account constraints form a tightening hierarchy. Scenario
+inputs, completed results, and human decisions preserve their resolved
+versions. Java owns and authorizes all user state. Python receives only a
+versioned calculation contract and cannot write `app.*`.
+
+Reason:
+
+Two closed-test identities still require real ownership boundaries if the
+model is to evolve safely toward multiple users. Immutable inputs and decisions
+make later evaluation reproducible, while explicit scenario permissions keep
+portfolio analysis separate from trade authority. The schema boundary prevents
+reusable analytics from becoming an accidental store of private account data.

@@ -117,9 +117,7 @@ class TwelveDataValidationClient:
                 f"Twelve Data {endpoint} rejected the request: {message}"
             ) from error
         except (OSError, TimeoutError, json.JSONDecodeError) as error:
-            raise TwelveDataValidationError(
-                f"Twelve Data {endpoint} request failed"
-            ) from error
+            raise TwelveDataValidationError(f"Twelve Data {endpoint} request failed") from error
         if not isinstance(payload, dict):
             raise TwelveDataValidationError(
                 f"Twelve Data {endpoint} returned a non-object response"

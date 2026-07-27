@@ -15,9 +15,7 @@ def test_screening_request_hash_is_order_independent_for_strategy_versions() -> 
         universe_version="universe-us-general-company-v1.0.0",
         strategy_versions=("UQ-v1.0.0", "QC-v1.0.0"),
     )
-    second = first.model_copy(
-        update={"strategy_versions": ("QC-v1.0.0", "UQ-v1.0.0", "QC-v1.0.0")}
-    )
+    second = first.model_copy(update={"strategy_versions": ("QC-v1.0.0", "UQ-v1.0.0", "QC-v1.0.0")})
 
     first_payload, first_hash = ScreeningRepository.canonical_request(first)
     second_payload, second_hash = ScreeningRepository.canonical_request(second)
@@ -49,6 +47,6 @@ def test_snapshot_manifest_is_deterministic_for_source_order() -> None:
         },
     ]
 
-    assert DataSnapshotRepository._identity(
-        request, sources
-    ) == DataSnapshotRepository._identity(request, list(reversed(sources)))
+    assert DataSnapshotRepository._identity(request, sources) == DataSnapshotRepository._identity(
+        request, list(reversed(sources))
+    )

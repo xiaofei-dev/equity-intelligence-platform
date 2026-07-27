@@ -77,9 +77,7 @@ def test_create_status_and_rating_routes_share_the_versioned_contract() -> None:
             assert status.status_code == 200
             assert status.json()["coverage"]["universeCount"] == 20
 
-            ratings = client.get(
-                f"/internal/v1/screening/runs/{RUN_ID}/ratings"
-            )
+            ratings = client.get(f"/internal/v1/screening/runs/{RUN_ID}/ratings")
             assert ratings.status_code == 200
             assert ratings.json()["items"] == []
     finally:

@@ -13,9 +13,7 @@ from equity_analysis.provider_validation.models import (
 )
 from equity_analysis.provider_validation.service import ProviderAcceptanceService
 
-FIXTURE_PATH = (
-    Path(__file__).parent / "fixtures" / "provider_acceptance_universe_v1.json"
-)
+FIXTURE_PATH = Path(__file__).parent / "fixtures" / "provider_acceptance_universe_v1.json"
 
 
 class FakeSecClient:
@@ -127,14 +125,12 @@ def test_acceptance_service_reports_explicit_gaps_without_false_failure() -> Non
     assert report.production_backtest_status == CheckStatus.NOT_VERIFIED
     meta = next(item for item in report.results if item.symbol == "META")
     assert any(
-        check.category == CheckCategory.SYMBOL_HISTORY
-        and check.status == CheckStatus.NOT_VERIFIED
+        check.category == CheckCategory.SYMBOL_HISTORY and check.status == CheckStatus.NOT_VERIFIED
         for check in meta.checks
     )
     twitter = next(item for item in report.results if item.symbol == "TWTR")
     assert any(
-        check.category == CheckCategory.COMPANY_TYPE_GATE
-        and check.status == CheckStatus.PASS
+        check.category == CheckCategory.COMPANY_TYPE_GATE and check.status == CheckStatus.PASS
         for check in twitter.checks
     )
 
@@ -163,9 +159,7 @@ def test_missing_twelve_data_configuration_is_not_silently_accepted() -> None:
     )
 
     price_check = next(
-        check
-        for check in report.results[0].checks
-        if check.category == CheckCategory.DAILY_PRICE
+        check for check in report.results[0].checks if check.category == CheckCategory.DAILY_PRICE
     )
     assert price_check.status == CheckStatus.NOT_VERIFIED
 
@@ -203,9 +197,7 @@ def test_missing_sec_identity_configuration_is_not_silently_accepted() -> None:
 
 
 def test_full_acceptance_universe_has_explicit_model_gates() -> None:
-    universe = AcceptanceUniverse.model_validate_json(
-        FIXTURE_PATH.read_text(encoding="utf-8")
-    )
+    universe = AcceptanceUniverse.model_validate_json(FIXTURE_PATH.read_text(encoding="utf-8"))
     service = ProviderAcceptanceService(
         sec_client=None,
         twelve_data_client=FakeTwelveDataClient(),
@@ -224,9 +216,7 @@ def test_full_acceptance_universe_has_explicit_model_gates() -> None:
     }
     for result in report.results:
         gate = next(
-            check
-            for check in result.checks
-            if check.category == CheckCategory.COMPANY_TYPE_GATE
+            check for check in result.checks if check.category == CheckCategory.COMPANY_TYPE_GATE
         )
         assert gate.status == CheckStatus.PASS
         if result.expected_company_type != "MATURE_OPERATING_COMPANY":
@@ -234,9 +224,7 @@ def test_full_acceptance_universe_has_explicit_model_gates() -> None:
 
 
 def test_requested_corporate_action_checks_are_never_omitted() -> None:
-    universe = AcceptanceUniverse.model_validate_json(
-        FIXTURE_PATH.read_text(encoding="utf-8")
-    )
+    universe = AcceptanceUniverse.model_validate_json(FIXTURE_PATH.read_text(encoding="utf-8"))
     service = ProviderAcceptanceService(
         sec_client=None,
         twelve_data_client=FakeTwelveDataClient(),

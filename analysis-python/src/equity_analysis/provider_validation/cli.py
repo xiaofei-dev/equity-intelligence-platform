@@ -62,18 +62,16 @@ def _arguments() -> argparse.Namespace:
 def main() -> None:
     arguments = _arguments()
     local_environment = _load_local_environment(Path(".env"))
-    api_key = os.getenv("TWELVE_DATA_API_KEY") or local_environment.get(
-        "TWELVE_DATA_API_KEY", ""
-    )
+    api_key = os.getenv("TWELVE_DATA_API_KEY") or local_environment.get("TWELVE_DATA_API_KEY", "")
     user_agent = os.getenv("SEC_USER_AGENT") or local_environment.get("SEC_USER_AGENT", "")
     selected_providers = set(arguments.providers)
-    universe = AcceptanceUniverse.model_validate_json(
-        arguments.fixture.read_text(encoding="utf-8")
-    )
+    universe = AcceptanceUniverse.model_validate_json(arguments.fixture.read_text(encoding="utf-8"))
     symbols = (
         DEFAULT_REPRESENTATIVE_SYMBOLS
         if arguments.representative
-        else tuple(arguments.symbols) if arguments.symbols else None
+        else tuple(arguments.symbols)
+        if arguments.symbols
+        else None
     )
     service = ProviderAcceptanceService(
         sec_client=(
@@ -84,9 +82,7 @@ def main() -> None:
         twelve_data_client=(
             TwelveDataValidationClient(
                 api_key=api_key,
-                minimum_request_interval_seconds=(
-                    arguments.twelve_data_request_interval_seconds
-                ),
+                minimum_request_interval_seconds=(arguments.twelve_data_request_interval_seconds),
             )
             if api_key and "twelve_data" in selected_providers
             else None

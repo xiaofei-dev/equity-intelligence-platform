@@ -10,11 +10,7 @@ from equity_analysis.screening.models import (
 
 
 def test_shared_rating_contract_fixture_is_valid() -> None:
-    fixture = (
-        Path(__file__).resolve().parents[2]
-        / "contracts"
-        / "screening-rating-v1.example.json"
-    )
+    fixture = Path(__file__).resolve().parents[2] / "contracts" / "screening-rating-v1.example.json"
 
     page = RatingPage.model_validate_json(fixture.read_text(encoding="utf-8"))
 

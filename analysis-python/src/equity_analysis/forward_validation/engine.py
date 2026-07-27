@@ -95,8 +95,7 @@ def missed_upside(
     if initial_budget <= ZERO:
         raise ValueError("Initial budget must be positive")
     return q(
-        max(ZERO, hypothetical_fully_invested_ending_value - actual_ending_value)
-        / initial_budget
+        max(ZERO, hypothetical_fully_invested_ending_value - actual_ending_value) / initial_budget
     )
 
 

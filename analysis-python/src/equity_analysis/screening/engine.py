@@ -160,9 +160,7 @@ def rate(request: RatingRequest) -> tuple[SecurityRating, ...]:
         uq = _score_strategy(UQ_VERSION, UQ_WEIGHTS, factor_map)
         near_term = _score_strategy(NEAR_TERM_VERSION, NEAR_TERM_WEIGHTS, factor_map)
         requested = tuple(
-            rating
-            for rating in (qc, uq)
-            if rating.strategy_version in request.strategy_versions
+            rating for rating in (qc, uq) if rating.strategy_version in request.strategy_versions
         )
         long_status = (
             AssessmentStatus.SCORED
@@ -275,9 +273,7 @@ def _assign_ranks(ratings: tuple[SecurityRating, ...]) -> tuple[SecurityRating, 
         for horizon in security.horizon_assessments:
             strategies = tuple(
                 strategy.model_copy(
-                    update={
-                        "rank": ranks.get((security.security_id, strategy.strategy_version))
-                    }
+                    update={"rank": ranks.get((security.security_id, strategy.strategy_version))}
                 )
                 for strategy in horizon.strategy_ratings
             )

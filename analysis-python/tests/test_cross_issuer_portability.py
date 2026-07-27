@@ -9,11 +9,7 @@ from equity_analysis.provider_validation.fundamentals import (
 )
 from equity_analysis.provider_validation.models import SecFactObservation
 
-FIXTURE_PATH = (
-    Path(__file__).parent
-    / "fixtures"
-    / "cross_issuer_ttm_portability_2024-06-30.json"
-)
+FIXTURE_PATH = Path(__file__).parent / "fixtures" / "cross_issuer_ttm_portability_2024-06-30.json"
 
 
 def _fact(metric: dict, period: dict, value_field: str, form: str):
@@ -29,12 +25,8 @@ def _fact(metric: dict, period: dict, value_field: str, form: str):
         form=form,
         filed_at=date.fromisoformat(period["availableAt"][:10]),
         accession_number=period["accession"],
-        acceptance_datetime=datetime.fromisoformat(
-            period["availableAt"].replace("Z", "+00:00")
-        ),
-        available_at=datetime.fromisoformat(
-            period["availableAt"].replace("Z", "+00:00")
-        ),
+        acceptance_datetime=datetime.fromisoformat(period["availableAt"].replace("Z", "+00:00")),
+        available_at=datetime.fromisoformat(period["availableAt"].replace("Z", "+00:00")),
     )
 
 
@@ -68,25 +60,19 @@ def test_cross_issuer_ttm_bridge_is_hashed_and_reproducible() -> None:
             assert result.value == Decimal(metric["expectedTtm"])
             assert result.available_at <= cutoff
 
-    assert (
-        hashlib.sha256("\n".join(rows).encode()).hexdigest()
-        == fixture["derivedRowsHash"]
-    )
+    assert hashlib.sha256("\n".join(rows).encode()).hexdigest() == fixture["derivedRowsHash"]
 
 
 def test_tgt_missing_gross_profit_remains_explicit() -> None:
     fixture = json.loads(FIXTURE_PATH.read_text(encoding="utf-8"))
     target = next(item for item in fixture["issuers"] if item["symbol"] == "TGT")
 
-    assert {item["metricCode"] for item in target["metrics"]}.isdisjoint(
-        {"gross_profit"}
-    )
+    assert {item["metricCode"] for item in target["metrics"]}.isdisjoint({"gross_profit"})
     assert target["missingFields"] == [
         {
             "field": "gross_profit",
             "reason": (
-                "No compatible standard GrossProfit fact was available for the "
-                "tested periods."
+                "No compatible standard GrossProfit fact was available for the tested periods."
             ),
         }
     ]

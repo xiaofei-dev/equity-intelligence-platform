@@ -3,6 +3,18 @@
 PostgreSQL migrations live in `migrations/` and are packaged into the Spring
 Boot application. Flyway applies them during backend startup.
 
+## Forward Validation
+
+`V11__create_forward_validation.sql` adds the prospective decision-quality
+experiment boundary. It references sealed screening runs and stores
+immutable provider acceptances, enrollments, signals, policy events, shadow
+orders and fills, cash flows, valuations, observations, metrics, and report
+snapshots. Signal and result tables are append-only; corrections create
+superseding versions.
+
+Formal experiments require a provider acceptance identifier. This schema does
+not authorize real trading or make a return claim.
+
 ## Schema Ownership
 
 - `app.*`: user-facing workflows and system-of-record state
@@ -16,6 +28,33 @@ coverage states, backtests, and reusable company evidence reviews.
 
 Python may write analytics-owned data and results. Java owns all user-facing
 account, holding, and decision state.
+
+`V12__create_user_and_portfolio_context.sql` adds future-safe application
+users and external identities, immutable account and liability snapshots,
+aggregate portfolios, versioned constraints, portfolio scenarios, immutable
+human decisions, and append-only audit events. Closed-test identity records are
+provisioned outside the migration so that private identity data never enters
+source control.
+
+For a trusted local environment, provision the two test identities by supplying
+opaque subjects at execution time:
+
+```powershell
+psql `
+  --set=first_subject='tester-one' `
+  --set=second_subject='tester-two' `
+  --set=issuer='equity-local' `
+  --file=database/dev/provision_closed_test_users.sql
+```
+
+The provisioning script is intentionally not a Flyway migration and must not
+contain real credentials or authentication tokens.
+
+New price ingestion writes an immutable `daily_price_observation` with
+provider, batch, source hash, availability, ingestion, and normalization
+lineage. The legacy `daily_price` projection remains temporarily populated for
+the Phase 1 market-data endpoint, but screening reads only immutable
+observations and snapshot-linked sources.
 
 Cross-schema changes require an explicit contract and migration.
 
@@ -70,6 +109,7 @@ Run all migrations against PostgreSQL 17, then execute:
 
 ```bash
 psql -v ON_ERROR_STOP=1 -f database/tests/analytics_schema_acceptance.sql
+psql -v ON_ERROR_STOP=1 -f database/tests/app_schema_acceptance.sql
 ```
 
 The acceptance script verifies required objects, strategy-weight totals,

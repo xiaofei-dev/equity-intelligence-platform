@@ -51,11 +51,7 @@ def _scheduled_fraction(arm: ShadowArm, index: int, label: NearTermLabel) -> Dec
     if arm == ShadowArm.B_FIXED_FOUR_TRANCHE:
         return TRANCHE_FRACTION if index in (0, 5, 10, 15) else ZERO
     if arm == ShadowArm.C_STATE_GATED_FOUR_TRANCHE:
-        return (
-            TRANCHE_FRACTION
-            if index % 5 == 0 and label == NearTermLabel.FAVORABLE
-            else ZERO
-        )
+        return TRANCHE_FRACTION if index % 5 == 0 and label == NearTermLabel.FAVORABLE else ZERO
     return ZERO
 
 
@@ -94,8 +90,11 @@ def simulate_shadow_ledger(
 
         shares = q(shares * day.split_ratio)
         paid = sum(
-            (amount for payment_date, amount in pending_dividends
-             if payment_date <= day.trading_date),
+            (
+                amount
+                for payment_date, amount in pending_dividends
+                if payment_date <= day.trading_date
+            ),
             ZERO,
         )
         cash = q(cash + paid)
@@ -156,10 +155,7 @@ def simulate_shadow_ledger(
         )
         if shares > ZERO:
             invested_cost = sum(
-                (
-                    fill.gross_value + fill.transaction_cost + fill.slippage_cost
-                    for fill in fills
-                ),
+                (fill.gross_value + fill.transaction_cost + fill.slippage_cost for fill in fills),
                 ZERO,
             )
             marked_position_returns.append(q((securities - invested_cost) / invested_cost))
@@ -175,8 +171,7 @@ def simulate_shadow_ledger(
                         liquidation_value, cash, receivable, initial_budget
                     ),
                     cash_return=q(
-                        (cash - max(ZERO, initial_budget - invested_cost))
-                        / initial_budget
+                        (cash - max(ZERO, initial_budget - invested_cost)) / initial_budget
                     )
                     if fills
                     else q((cash - initial_budget) / initial_budget),
@@ -201,9 +196,7 @@ def simulate_shadow_ledger(
         if horizon not in matured
     )
     status = (
-        ObservationStatus.INSUFFICIENT_DATA
-        if termination_reason
-        else ObservationStatus.COMPLETE
+        ObservationStatus.INSUFFICIENT_DATA if termination_reason else ObservationStatus.COMPLETE
     )
     return ShadowLedgerResult(
         arm=arm,

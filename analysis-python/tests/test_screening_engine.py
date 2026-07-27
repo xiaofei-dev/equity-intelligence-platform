@@ -63,11 +63,7 @@ def observation(
 
 
 def cohort() -> tuple[SecurityObservation, ...]:
-    return tuple(
-        observation(index, size=size)
-        for size in SIZE_COHORTS
-        for index in range(1, 26)
-    )
+    return tuple(observation(index, size=size) for size in SIZE_COHORTS for index in range(1, 26))
 
 
 def request(observations: tuple[SecurityObservation, ...]) -> RatingRequest:
@@ -132,8 +128,7 @@ def test_better_factor_values_do_not_receive_worse_normalized_scores() -> None:
 
     for factor_name in FACTOR_DEFINITIONS:
         assert (
-            high_factors[factor_name].normalized_score
-            >= low_factors[factor_name].normalized_score
+            high_factors[factor_name].normalized_score >= low_factors[factor_name].normalized_score
         )
 
 
@@ -146,9 +141,9 @@ def test_equal_economic_positions_are_comparable_across_size_cohorts() -> None:
 
     assert len({item.quality_score for item in same_position}) == 1
     assert len({item.valuation_score for item in same_position}) == 1
-    assert {
-        factor.cohort_level for item in same_position for factor in item.factor_results
-    } == {CohortLevel.SECTOR_SIZE_COMPANY_TYPE}
+    assert {factor.cohort_level for item in same_position for factor in item.factor_results} == {
+        CohortLevel.SECTOR_SIZE_COMPANY_TYPE
+    }
 
 
 def test_missing_required_factor_produces_insufficient_data_not_zero() -> None:
@@ -186,9 +181,7 @@ def test_missing_required_factor_produces_insufficient_data_not_zero() -> None:
 def test_specialized_company_types_never_enter_general_company_ranking(
     company_type: CompanyType,
 ) -> None:
-    observations = cohort() + (
-        observation(25, size=SizeCohort.MEGA, company_type=company_type),
-    )
+    observations = cohort() + (observation(25, size=SizeCohort.MEGA, company_type=company_type),)
 
     rating = rate(request(observations))[-1]
 
@@ -199,9 +192,7 @@ def test_specialized_company_types_never_enter_general_company_ranking(
 
 
 def test_unsupported_strategy_version_fails_explicitly() -> None:
-    rating_request = request(cohort()).model_copy(
-        update={"strategy_versions": ("UNKNOWN-v1.0.0",)}
-    )
+    rating_request = request(cohort()).model_copy(update={"strategy_versions": ("UNKNOWN-v1.0.0",)})
 
     with pytest.raises(ValueError, match="Unsupported strategy version"):
         rate(rating_request)

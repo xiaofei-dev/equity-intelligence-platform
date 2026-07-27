@@ -12,11 +12,7 @@ from equity_analysis.screening.factors import (
     market_capitalization,
 )
 
-FIXTURE_PATH = (
-    Path(__file__).parent
-    / "fixtures"
-    / "aapl_monthly_fcf_yield_2024-06-30.json"
-)
+FIXTURE_PATH = Path(__file__).parent / "fixtures" / "aapl_monthly_fcf_yield_2024-06-30.json"
 
 
 def test_aapl_monthly_fcf_yield_fixture_is_hashed_and_reproducible() -> None:
@@ -30,12 +26,10 @@ def test_aapl_monthly_fcf_yield_fixture_is_hashed_and_reproducible() -> None:
         "fundamentalAccession",
     )
     canonical_rows = [
-        "|".join(observation[key] for key in keys)
-        for observation in fixture["observations"]
+        "|".join(observation[key] for key in keys) for observation in fixture["observations"]
     ]
     assert (
-        hashlib.sha256("\n".join(canonical_rows).encode()).hexdigest()
-        == fixture["derivedRowsHash"]
+        hashlib.sha256("\n".join(canonical_rows).encode()).hexdigest() == fixture["derivedRowsHash"]
     )
 
     yields = []

@@ -31,9 +31,10 @@ def _percentile(sorted_values: tuple[Decimal, ...], probability: Decimal) -> Dec
     lower_index = int(position)
     upper_index = min(lower_index + 1, len(sorted_values) - 1)
     fraction = position - Decimal(lower_index)
-    return sorted_values[lower_index] + (
-        sorted_values[upper_index] - sorted_values[lower_index]
-    ) * fraction
+    return (
+        sorted_values[lower_index]
+        + (sorted_values[upper_index] - sorted_values[lower_index]) * fraction
+    )
 
 
 def _percentile_rank(sorted_values: tuple[Decimal, ...], value: Decimal) -> Decimal:
@@ -82,9 +83,7 @@ def _select_cohort(
         ),
         (
             CohortLevel.SECTOR_COMPANY_TYPE,
-            tuple(
-                candidate for candidate in eligible if candidate.sector == observation.sector
-            ),
+            tuple(candidate for candidate in eligible if candidate.sector == observation.sector),
             SECTOR_MINIMUM,
         ),
         (CohortLevel.GENERAL_COMPANY, eligible, GENERAL_MINIMUM),

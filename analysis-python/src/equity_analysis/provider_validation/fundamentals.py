@@ -52,9 +52,7 @@ def derive_ttm_from_annual_and_ytd(
     ):
         raise FundamentalDerivationError("TTM periods are not chronologically compatible")
 
-    accessions = tuple(
-        dict.fromkeys(item.accession_number for item in observations)
-    )
+    accessions = tuple(dict.fromkeys(item.accession_number for item in observations))
     return TtmObservation(
         metric_code=annual.metric_code,
         unit=annual.unit,
@@ -86,9 +84,7 @@ def derive_ttm_weighted_average_from_annual_and_ytd(
     prior_ytd_days = (prior_ytd.period_end - prior_ytd.period_start).days + 1
     ttm_days = annual_days + current_ytd_days - prior_ytd_days
     if ttm_days <= 0:
-        raise FundamentalDerivationError(
-            "Weighted-average TTM duration must be positive"
-        )
+        raise FundamentalDerivationError("Weighted-average TTM duration must be positive")
     weighted_value = (
         annual.value * annual_days
         + current_ytd.value * current_ytd_days
@@ -116,9 +112,7 @@ def derive_discrete_period_from_cumulative(
         raise FundamentalDerivationError("Cumulative input requires a period start")
     inputs = (current,) if previous is None else (current, previous)
     if any(item.available_at > as_of_time for item in inputs):
-        raise FundamentalDerivationError(
-            "Discrete-period inputs must be available by the cutoff"
-        )
+        raise FundamentalDerivationError("Discrete-period inputs must be available by the cutoff")
     if previous is None:
         period_start = current.period_start
         value = current.value
@@ -126,13 +120,9 @@ def derive_discrete_period_from_cumulative(
         if previous.period_start is None:
             raise FundamentalDerivationError("Cumulative input requires a period start")
         if current.metric_code != previous.metric_code:
-            raise FundamentalDerivationError(
-                "Discrete-period inputs must use the same metric"
-            )
+            raise FundamentalDerivationError("Discrete-period inputs must use the same metric")
         if current.unit != previous.unit:
-            raise FundamentalDerivationError(
-                "Discrete-period inputs must use the same unit"
-            )
+            raise FundamentalDerivationError("Discrete-period inputs must use the same unit")
         if (
             current.period_start != previous.period_start
             or current.period_end <= previous.period_end
@@ -150,7 +140,5 @@ def derive_discrete_period_from_cumulative(
         period_end=current.period_end,
         available_at=max(item.available_at for item in inputs),
         formula_version=DISCRETE_PERIOD_VERSION,
-        lineage_accessions=tuple(
-            dict.fromkeys(item.accession_number for item in inputs)
-        ),
+        lineage_accessions=tuple(dict.fromkeys(item.accession_number for item in inputs)),
     )

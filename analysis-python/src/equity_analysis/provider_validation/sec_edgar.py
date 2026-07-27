@@ -48,8 +48,7 @@ REQUIRED_TAG_GROUPS: dict[str, tuple[str, ...]] = {
 NEW_YORK = ZoneInfo("America/New_York")
 OPERATING_INCOME_DERIVATION_VERSION = "operating-income-issuer-v1.0.0"
 PRETAX_INCOME_TAG = (
-    "IncomeLossFromContinuingOperationsBeforeIncomeTaxes"
-    "ExtraordinaryItemsNoncontrollingInterest"
+    "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
 )
 OPERATING_INCOME_DERIVATIONS: dict[
     str,
@@ -107,9 +106,7 @@ def availability_after_full_trading_session(
                 tzinfo=NEW_YORK,
             ).astimezone(UTC)
 
-    raise SecEdgarError(
-        "No complete trading session is available after the filing acceptance"
-    )
+    raise SecEdgarError("No complete trading session is available after the filing acceptance")
 
 
 def select_point_in_time_facts(
@@ -158,16 +155,12 @@ def select_point_in_time_facts(
                     continue
                 try:
                     period_start = (
-                        date.fromisoformat(str(entry["start"]))
-                        if entry.get("start")
-                        else None
+                        date.fromisoformat(str(entry["start"])) if entry.get("start") else None
                     )
                     period_end = date.fromisoformat(str(entry["end"]))
                     filed_at = date.fromisoformat(str(entry["filed"]))
                     value = Decimal(str(entry["val"]))
-                    fiscal_year = (
-                        int(entry["fy"]) if entry.get("fy") is not None else None
-                    )
+                    fiscal_year = int(entry["fy"]) if entry.get("fy") is not None else None
                 except (InvalidOperation, KeyError, TypeError, ValueError) as error:
                     raise SecEdgarError(
                         f"SEC EDGAR returned a malformed {taxonomy_tag} fact"
@@ -181,9 +174,7 @@ def select_point_in_time_facts(
                     period_start=period_start,
                     period_end=period_end,
                     fiscal_year=fiscal_year,
-                    fiscal_period=(
-                        str(entry["fp"]) if entry.get("fp") is not None else None
-                    ),
+                    fiscal_period=(str(entry["fp"]) if entry.get("fp") is not None else None),
                     form=filing.form,
                     filed_at=filed_at,
                     accession_number=accession_number,
@@ -255,12 +246,9 @@ def derive_issuer_operating_income(
         period_end,
         unit,
     )
-    primary_value = sum(
-        primary_components[tag] * multiplier for tag, multiplier in primary_terms
-    )
+    primary_value = sum(primary_components[tag] * multiplier for tag, multiplier in primary_terms)
     crosscheck_value = sum(
-        crosscheck_components[tag] * multiplier
-        for tag, multiplier in crosscheck_terms
+        crosscheck_components[tag] * multiplier for tag, multiplier in crosscheck_terms
     )
     if primary_value != crosscheck_value:
         raise SecEdgarError(
@@ -303,8 +291,7 @@ def _same_period_components(
         ]
         if len(matches) != 1:
             raise SecEdgarError(
-                f"Expected one same-period {tag} fact for {accession_number}; "
-                f"found {len(matches)}"
+                f"Expected one same-period {tag} fact for {accession_number}; found {len(matches)}"
             )
         try:
             components[tag] = Decimal(str(matches[0]["val"]))
@@ -356,9 +343,7 @@ class SecEdgarClient:
         if as_of_time.tzinfo is None or as_of_time.utcoffset() is None:
             raise ValueError("SEC filing cutoff must include a timezone")
         normalized_cik = cik.zfill(10)
-        payload = self._fetch_json(
-            f"{SEC_DATA_BASE_URL}/submissions/CIK{normalized_cik}.json"
-        )
+        payload = self._fetch_json(f"{SEC_DATA_BASE_URL}/submissions/CIK{normalized_cik}.json")
         recent = payload.get("filings", {}).get("recent", {})
         eligible = self._eligible_filings(
             recent,
@@ -379,9 +364,7 @@ class SecEdgarClient:
                 reverse=True,
             )
             for item in dated_files:
-                historical = self._fetch_json(
-                    f"{SEC_DATA_BASE_URL}/submissions/{item['name']}"
-                )
+                historical = self._fetch_json(f"{SEC_DATA_BASE_URL}/submissions/{item['name']}")
                 eligible = self._eligible_filings(
                     historical,
                     normalized_cik,
@@ -393,8 +376,7 @@ class SecEdgarClient:
                     break
         if not eligible:
             raise SecEdgarError(
-                f"SEC EDGAR returned no supported filing available by the cutoff for "
-                f"{symbol}"
+                f"SEC EDGAR returned no supported filing available by the cutoff for {symbol}"
             )
         return max(eligible, key=lambda filing: filing.acceptance_datetime)
 
@@ -424,14 +406,10 @@ class SecEdgarClient:
                         entity_name=entity_name,
                         symbol=symbol.upper(),
                         form=str(form),
-                        filing_date=date.fromisoformat(
-                            str(records["filingDate"][index])
-                        ),
+                        filing_date=date.fromisoformat(str(records["filingDate"][index])),
                         acceptance_datetime=acceptance,
                         accession_number=str(records["accessionNumber"][index]),
-                        report_date=(
-                            date.fromisoformat(report_value) if report_value else None
-                        ),
+                        report_date=(date.fromisoformat(report_value) if report_value else None),
                     )
                 )
             except (IndexError, KeyError, TypeError, ValueError) as error:

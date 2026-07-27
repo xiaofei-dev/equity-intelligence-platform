@@ -67,9 +67,9 @@ def get_repository() -> ScreeningRepository:
 def create_snapshot(request: SnapshotCreateRequest) -> SnapshotAccepted:
     settings = Settings.from_environment()
     try:
-        snapshot_id = DataSnapshotRepository(
-            settings.analytics_database_url
-        ).create_and_seal(SnapshotRequest(**request.model_dump()))
+        snapshot_id = DataSnapshotRepository(settings.analytics_database_url).create_and_seal(
+            SnapshotRequest(**request.model_dump())
+        )
     except SnapshotConflictError as error:
         raise HTTPException(
             status_code=409,

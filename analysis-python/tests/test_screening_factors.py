@@ -67,10 +67,7 @@ def test_invalid_denominators_fail_instead_of_becoming_zero(function, arguments)
 
 def test_near_term_price_factors_have_expected_direction_and_bounds() -> None:
     rising_prices = tuple(Decimal("100") + Decimal(index) for index in range(121))
-    drawdown_prices = tuple(
-        Decimal(value)
-        for value in (100, 105, 110, 90, 95, 100)
-    )
+    drawdown_prices = tuple(Decimal(value) for value in (100, 105, 110, 90, 95, 100))
 
     assert total_return(rising_prices, 20) > 0
     assert realized_volatility(rising_prices, 60) >= 0

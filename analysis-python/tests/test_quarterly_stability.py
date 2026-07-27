@@ -13,11 +13,7 @@ from equity_analysis.provider_validation.fundamentals import (
 from equity_analysis.provider_validation.models import SecFactObservation
 from equity_analysis.screening.factors import margin_stability
 
-FIXTURE_PATH = (
-    Path(__file__).parent
-    / "fixtures"
-    / "aapl_quarterly_stability_2024-06-30.json"
-)
+FIXTURE_PATH = Path(__file__).parent / "fixtures" / "aapl_quarterly_stability_2024-06-30.json"
 
 
 def _fact(
@@ -115,16 +111,9 @@ def test_aapl_quarterly_fixture_is_hashed_and_produces_stability() -> None:
         for quarter in fixture["quarters"]
     ]
     assert (
-        hashlib.sha256("\n".join(canonical_rows).encode()).hexdigest()
-        == fixture["derivedRowsHash"]
+        hashlib.sha256("\n".join(canonical_rows).encode()).hexdigest() == fixture["derivedRowsHash"]
     )
-    operating_margins = tuple(
-        Decimal(item["operatingMargin"]) for item in fixture["quarters"]
-    )
-    fcf_margins = tuple(
-        Decimal(item["freeCashFlowMargin"]) for item in fixture["quarters"]
-    )
+    operating_margins = tuple(Decimal(item["operatingMargin"]) for item in fixture["quarters"])
+    fcf_margins = tuple(Decimal(item["freeCashFlowMargin"]) for item in fixture["quarters"])
 
-    assert margin_stability(operating_margins, fcf_margins) == Decimal(
-        fixture["expectedStability"]
-    )
+    assert margin_stability(operating_margins, fcf_margins) == Decimal(fixture["expectedStability"])

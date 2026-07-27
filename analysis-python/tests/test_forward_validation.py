@@ -55,8 +55,7 @@ def test_favorable_executes_exactly_one_quarter_tranche() -> None:
 
 @pytest.mark.parametrize(
     "label",
-    [NearTermLabel.NEUTRAL, NearTermLabel.UNFAVORABLE, NearTermLabel.MISSING,
-     NearTermLabel.STALE],
+    [NearTermLabel.NEUTRAL, NearTermLabel.UNFAVORABLE, NearTermLabel.MISSING, NearTermLabel.STALE],
 )
 def test_non_favorable_state_pauses_without_reallocating(label: NearTermLabel) -> None:
     decision = decide_state_gated_tranche(checkpoint(label))
@@ -66,26 +65,26 @@ def test_non_favorable_state_pauses_without_reallocating(label: NearTermLabel) -
 
 
 def test_expiry_and_untradable_are_terminal() -> None:
-    assert decide_state_gated_tranche(
-        checkpoint(NearTermLabel.FAVORABLE, index=60)
-    ).state == EntryPolicyState.EXPIRED
-    assert decide_state_gated_tranche(
-        checkpoint(NearTermLabel.FAVORABLE, tradable=False)
-    ).state == EntryPolicyState.TERMINATED
+    assert (
+        decide_state_gated_tranche(checkpoint(NearTermLabel.FAVORABLE, index=60)).state
+        == EntryPolicyState.EXPIRED
+    )
+    assert (
+        decide_state_gated_tranche(checkpoint(NearTermLabel.FAVORABLE, tradable=False)).state
+        == EntryPolicyState.TERMINATED
+    )
 
 
 def test_metrics_preserve_cash_costs_and_missed_upside() -> None:
     assert net_total_return(
         Decimal("9000"), Decimal("1200"), Decimal("50"), Decimal("10000")
     ) == Decimal("0.02500000")
-    price = average_acquisition_price(
-        Decimal("9800"), Decimal("10"), Decimal("10"), Decimal("100")
-    )
+    price = average_acquisition_price(Decimal("9800"), Decimal("10"), Decimal("10"), Decimal("100"))
     assert price == Decimal("98.20000000")
     assert purchase_price_improvement(Decimal("100"), price) == Decimal("0.01800000")
-    assert missed_upside(
-        Decimal("11000"), Decimal("10400"), Decimal("10000")
-    ) == Decimal("0.06000000")
+    assert missed_upside(Decimal("11000"), Decimal("10400"), Decimal("10000")) == Decimal(
+        "0.06000000"
+    )
 
 
 def test_drawdown_and_capture_use_daily_ledger() -> None:
@@ -112,9 +111,7 @@ def test_cash_risk_and_group_metrics_have_explicit_sample_rules() -> None:
         (Decimal("0.02"), Decimal("-0.04"), Decimal("-0.01"))
     ) == Decimal("-0.04000000")
     assert relative_return(Decimal("0.08"), Decimal("0.05")) == Decimal("0.03000000")
-    assert top_bottom_spread(
-        (Decimal("0.10"),), (Decimal("0.02"),)
-    ) is None
+    assert top_bottom_spread((Decimal("0.10"),), (Decimal("0.02"),)) is None
     assert top_bottom_spread(
         (Decimal("0.10"),) * 20,
         (Decimal("0.02"),) * 20,

@@ -13,9 +13,7 @@ from equity_analysis.provider_validation.sec_edgar import (
 )
 
 FIXTURE_PATH = (
-    Path(__file__).parent
-    / "fixtures"
-    / "sec_operating_income_derivations_2026-07-26.json"
+    Path(__file__).parent / "fixtures" / "sec_operating_income_derivations_2026-07-26.json"
 )
 
 

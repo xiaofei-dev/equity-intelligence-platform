@@ -17,9 +17,7 @@ FIXTURE_PATH = Path(__file__).parent / "fixtures" / "sec_pit_facts_v1.json"
 
 def _fixture() -> tuple[dict, tuple[SecFilingSummary, ...], tuple[date, ...]]:
     payload = json.loads(FIXTURE_PATH.read_text(encoding="utf-8"))
-    filings = tuple(
-        SecFilingSummary.model_validate(item) for item in payload["filings"]
-    )
+    filings = tuple(SecFilingSummary.model_validate(item) for item in payload["filings"])
     trading_dates = tuple(date.fromisoformat(item) for item in payload["tradingDates"])
     return payload["companyFacts"], filings, trading_dates
 
@@ -55,9 +53,7 @@ def test_point_in_time_selection_does_not_leak_later_amendment() -> None:
 
     assert len(before_amendment) == 1
     assert before_amendment[0].value == Decimal("100")
-    assert before_amendment[0].available_at == datetime.fromisoformat(
-        "2025-05-02T20:00:00+00:00"
-    )
+    assert before_amendment[0].available_at == datetime.fromisoformat("2025-05-02T20:00:00+00:00")
     assert len(after_amendment) == 1
     assert after_amendment[0].value == Decimal("110")
     assert after_amendment[0].accession_number == "0000000001-25-000002"

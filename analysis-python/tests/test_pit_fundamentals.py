@@ -27,9 +27,7 @@ from equity_analysis.screening.factors import (
     return_on_invested_capital,
 )
 
-FIXTURE_PATH = (
-    Path(__file__).parent / "fixtures" / "aapl_pit_ttm_2024-06-30.json"
-)
+FIXTURE_PATH = Path(__file__).parent / "fixtures" / "aapl_pit_ttm_2024-06-30.json"
 
 
 def _observation(
@@ -55,9 +53,7 @@ def _observation(
         acceptance_datetime=datetime.fromisoformat(
             period["acceptanceDatetime"].replace("Z", "+00:00")
         ),
-        available_at=datetime.fromisoformat(
-            period["availableAt"].replace("Z", "+00:00")
-        ),
+        available_at=datetime.fromisoformat(period["availableAt"].replace("Z", "+00:00")),
     )
 
 
@@ -78,12 +74,8 @@ def _weighted_share_observation(item: dict, form: str) -> SecFactObservation:
         form=form,
         filed_at=date.fromisoformat(item["availableAt"][:10]),
         accession_number=item["accessionNumber"],
-        acceptance_datetime=datetime.fromisoformat(
-            item["availableAt"].replace("Z", "+00:00")
-        ),
-        available_at=datetime.fromisoformat(
-            item["availableAt"].replace("Z", "+00:00")
-        ),
+        acceptance_datetime=datetime.fromisoformat(item["availableAt"].replace("Z", "+00:00")),
+        available_at=datetime.fromisoformat(item["availableAt"].replace("Z", "+00:00")),
     )
 
 
@@ -104,8 +96,7 @@ def test_aapl_pit_ttm_fixture_derives_expected_sec_values() -> None:
         for metric in fixture["metrics"]
     ]
     assert (
-        hashlib.sha256("\n".join(canonical_rows).encode()).hexdigest()
-        == fixture["derivedRowsHash"]
+        hashlib.sha256("\n".join(canonical_rows).encode()).hexdigest() == fixture["derivedRowsHash"]
     )
     cutoff = datetime.fromisoformat(fixture["asOfTime"].replace("Z", "+00:00"))
     derived = {}
@@ -162,10 +153,7 @@ def test_aapl_pit_ttm_fixture_derives_expected_sec_values() -> None:
         market["adjustmentMode"],
         market["adjustedClose"],
     ]
-    assert (
-        hashlib.sha256("|".join(snapshot_fields).encode()).hexdigest()
-        == fixture["snapshotHash"]
-    )
+    assert hashlib.sha256("|".join(snapshot_fields).encode()).hexdigest() == fixture["snapshotHash"]
     current_invested_capital = invested_capital(
         Decimal(current["stockholdersEquity"]),
         Decimal(current["totalDebt"]),
@@ -186,12 +174,8 @@ def test_aapl_pit_ttm_fixture_derives_expected_sec_values() -> None:
     ) == Decimal(expected["roic"])
 
     net_debt = Decimal(current["totalDebt"]) - Decimal(current["cashAndEquivalents"])
-    ebitda = (
-        derived["operating_income"] + derived["depreciation_and_amortization"]
-    )
-    assert net_debt_to_ebitda(net_debt, ebitda) == Decimal(
-        expected["netDebtToEbitda"]
-    )
+    ebitda = derived["operating_income"] + derived["depreciation_and_amortization"]
+    assert net_debt_to_ebitda(net_debt, ebitda) == Decimal(expected["netDebtToEbitda"])
 
     market_cap = market_capitalization(
         Decimal(market["adjustedClose"]),
@@ -207,17 +191,15 @@ def test_aapl_pit_ttm_fixture_derives_expected_sec_values() -> None:
         enterprise,
     ) == Decimal(expected["earningsYield"])
     assert fcf_yield(fcf, market_cap) == Decimal(expected["fcfYield"])
-    assert (
-        derived["operating_income"] / derived["revenue"]
-    ).quantize(Decimal("0.00000001")) == Decimal(expected["operatingMargin"])
+    assert (derived["operating_income"] / derived["revenue"]).quantize(
+        Decimal("0.00000001")
+    ) == Decimal(expected["operatingMargin"])
     baseline_values = fixture["growthBaseline"]
     assert margin_quality(
         derived["gross_profit"] / derived["revenue"],
         derived["operating_income"] / derived["revenue"],
-        Decimal(baseline_values["grossProfitTtm"])
-        / Decimal(baseline_values["revenueTtm"]),
-        Decimal(baseline_values["operatingIncomeTtm"])
-        / Decimal(baseline_values["revenueTtm"]),
+        Decimal(baseline_values["grossProfitTtm"]) / Decimal(baseline_values["revenueTtm"]),
+        Decimal(baseline_values["operatingIncomeTtm"]) / Decimal(baseline_values["revenueTtm"]),
     ) == Decimal(expected["marginQuality"])
     unavailable = {item["factor"] for item in fixture["unavailableFactors"]}
     assert {
@@ -244,9 +226,7 @@ def test_aapl_three_year_per_share_growth_uses_weighted_ttm_shares() -> None:
     )
     baseline = derive(
         diluted["baselineTtm"],
-        datetime.fromisoformat(
-            diluted["baselineTtm"]["asOfTime"].replace("Z", "+00:00")
-        ),
+        datetime.fromisoformat(diluted["baselineTtm"]["asOfTime"].replace("Z", "+00:00")),
     )
     assert current.value == Decimal(diluted["currentTtm"]["expected"])
     assert baseline.value == Decimal(diluted["baselineTtm"]["expected"])
@@ -254,9 +234,7 @@ def test_aapl_three_year_per_share_growth_uses_weighted_ttm_shares() -> None:
     baseline_values = fixture["growthBaseline"]
     current_net_income = Decimal(
         next(
-            item["expectedTtm"]
-            for item in fixture["metrics"]
-            if item["metricCode"] == "net_income"
+            item["expectedTtm"] for item in fixture["metrics"] if item["metricCode"] == "net_income"
         )
     )
     current_fcf = Decimal("101919000000")

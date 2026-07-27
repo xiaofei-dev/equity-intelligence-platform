@@ -104,8 +104,7 @@ class DailyPriceRepository:
             )
             content_hash = "sha256:" + hashlib.sha256(canonical.encode()).hexdigest()
             request_key = (
-                f"daily-price:{series.security.symbol}:{series.adjustment_mode}:"
-                f"{content_hash}"
+                f"daily-price:{series.security.symbol}:{series.adjustment_mode}:{content_hash}"
             )
             ingested_at = datetime.now(UTC)
             batch_row = connection.execute(

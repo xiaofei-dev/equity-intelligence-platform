@@ -271,20 +271,14 @@ class ScreeningRepository:
                 by_factor = {}
                 for fact in fact_rows:
                     by_factor.setdefault(fact[0], fact)
-                price_factors = self._price_factor_inputs(
-                    connection, run_id, public_id
-                )
+                price_factors = self._price_factor_inputs(connection, run_id, public_id)
                 factors = tuple(
                     price_factors[name]
                     if name in price_factors
                     else FactorInput(
                         name=name,
                         value=by_factor[name][1] if name in by_factor else None,
-                        status=(
-                            FactorStatus.VALID
-                            if name in by_factor
-                            else FactorStatus.MISSING
-                        ),
+                        status=(FactorStatus.VALID if name in by_factor else FactorStatus.MISSING),
                         reason=None if name in by_factor else "Snapshot input is unavailable",
                         lineage=(
                             (
@@ -297,9 +291,7 @@ class ScreeningRepository:
                                     ingested_at=by_factor[name][6],
                                     unit=by_factor[name][2],
                                     currency=(
-                                        by_factor[name][2]
-                                        if len(by_factor[name][2]) == 3
-                                        else None
+                                        by_factor[name][2] if len(by_factor[name][2]) == 3 else None
                                     ),
                                     revision_status=by_factor[name][7],
                                     quality_status=by_factor[name][8],
@@ -418,9 +410,7 @@ class ScreeningRepository:
                 Decimal(benchmark_by_date[key][0]) for key in sorted(benchmark_by_date)
             )
             try:
-                relative = total_return(prices, 60) - total_return(
-                    benchmark_prices, 60
-                )
+                relative = total_return(prices, 60) - total_return(benchmark_prices, 60)
                 inputs["relative_strength_60d"] = FactorInput(
                     name="relative_strength_60d",
                     value=relative,
@@ -462,9 +452,7 @@ class ScreeningRepository:
     def execute(self, run_id: UUID) -> None:
         lock_key = run_id.int & 0x7FFF_FFFF_FFFF_FFFF
         with psycopg.connect(self.database_url) as connection:
-            locked = connection.execute(
-                "SELECT pg_try_advisory_lock(%s)", (lock_key,)
-            ).fetchone()
+            locked = connection.execute("SELECT pg_try_advisory_lock(%s)", (lock_key,)).fetchone()
             if not locked or not locked[0]:
                 return
             try:
@@ -531,9 +519,14 @@ class ScreeningRepository:
                 ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
                 """,
                 (
-                    run_id, security_id, rating.coverage_state.value,
-                    rating.company_type.value, rating.size_cohort.value,
-                    rating.quality_score, rating.valuation_score, error_code,
+                    run_id,
+                    security_id,
+                    rating.coverage_state.value,
+                    rating.company_type.value,
+                    rating.size_cohort.value,
+                    rating.quality_score,
+                    rating.valuation_score,
+                    error_code,
                 ),
             )
             for order, reason in enumerate(rating.missing_reasons):
@@ -570,33 +563,19 @@ class ScreeningRepository:
                     RETURNING id
                     """,
                     (
-                        run_id, security_id, factor.name, factor.status.value,
-                        (
-                            factor.raw_value
-                            if factor.status == FactorStatus.VALID
-                            else None
-                        ),
-                        (
-                            factor.winsorized_value
-                            if factor.status == FactorStatus.VALID
-                            else None
-                        ),
-                        (
-                            factor.normalized_score
-                            if factor.status == FactorStatus.VALID
-                            else None
-                        ),
+                        run_id,
+                        security_id,
+                        factor.name,
+                        factor.status.value,
+                        (factor.raw_value if factor.status == FactorStatus.VALID else None),
+                        (factor.winsorized_value if factor.status == FactorStatus.VALID else None),
+                        (factor.normalized_score if factor.status == FactorStatus.VALID else None),
                         (
                             factor.cohort_level.value
-                            if factor.status == FactorStatus.VALID
-                            and factor.cohort_level
+                            if factor.status == FactorStatus.VALID and factor.cohort_level
                             else None
                         ),
-                        (
-                            factor.cohort_size
-                            if factor.status == FactorStatus.VALID
-                            else None
-                        ),
+                        (factor.cohort_size if factor.status == FactorStatus.VALID else None),
                         factor.reason,
                     ),
                 ).fetchone()
@@ -627,8 +606,12 @@ class ScreeningRepository:
                     ) VALUES (%s, %s, %s, %s, %s, %s)
                     """,
                     (
-                        run_id, security_id, horizon.horizon.value,
-                        horizon.status.value, horizon.score, horizon.label,
+                        run_id,
+                        security_id,
+                        horizon.horizon.value,
+                        horizon.status.value,
+                        horizon.score,
+                        horizon.label,
                     ),
                 )
                 for strategy in horizon.strategy_ratings:
@@ -641,8 +624,12 @@ class ScreeningRepository:
                         RETURNING id
                         """,
                         (
-                            run_id, security_id, strategy.strategy_version,
-                            strategy.status.value, strategy.score, strategy.rank,
+                            run_id,
+                            security_id,
+                            strategy.strategy_version,
+                            strategy.status.value,
+                            strategy.score,
+                            strategy.rank,
                             strategy.error_code.value if strategy.error_code else None,
                         ),
                     ).fetchone()
@@ -655,8 +642,10 @@ class ScreeningRepository:
                             ) VALUES (%s, %s, %s, %s, %s)
                             """,
                             (
-                                row[0], contribution.factor_name,
-                                contribution.normalized_score, contribution.weight,
+                                row[0],
+                                contribution.factor_name,
+                                contribution.normalized_score,
+                                contribution.weight,
                                 contribution.contribution,
                             ),
                         )
@@ -691,11 +680,7 @@ class ScreeningRepository:
             raise KeyError("Unknown screening run")
         if status.status != RunStatus.SUCCEEDED:
             raise ScreeningNotReadyError("Screening results are not ready")
-        after = (
-            UUID(base64.urlsafe_b64decode(cursor.encode()).decode())
-            if cursor
-            else UUID(int=0)
-        )
+        after = UUID(base64.urlsafe_b64decode(cursor.encode()).decode()) if cursor else UUID(int=0)
         with psycopg.connect(self.database_url) as connection:
             rows = connection.execute(
                 """
@@ -713,8 +698,7 @@ class ScreeningRepository:
             ).fetchall()
             ids = [row[0] for row in rows]
             items = tuple(
-                self._rating_from_results(connection, run_id, row)
-                for row in rows[:limit]
+                self._rating_from_results(connection, run_id, row) for row in rows[:limit]
             )
         next_cursor = (
             base64.urlsafe_b64encode(str(ids[limit - 1]).encode()).decode()
@@ -723,9 +707,7 @@ class ScreeningRepository:
         )
         return RatingPage(run_id=str(run_id), items=items, next_cursor=next_cursor)
 
-    def _rating_from_results(
-        self, connection, run_id: UUID, coverage_row
-    ) -> SecurityRating:
+    def _rating_from_results(self, connection, run_id: UUID, coverage_row) -> SecurityRating:
         public_id = coverage_row[0]
         security_id = connection.execute(
             "SELECT id FROM analytics.security WHERE public_id = %s",
@@ -789,11 +771,7 @@ class ScreeningRepository:
             ).fetchall()
             status = AssessmentStatus(row[3])
             missing = (
-                tuple(
-                    factor[0]
-                    for factor in required_rows
-                    if factor[0] not in valid_factor_names
-                )
+                tuple(factor[0] for factor in required_rows if factor[0] not in valid_factor_names)
                 if status == AssessmentStatus.INSUFFICIENT_DATA
                 else ()
             )
@@ -833,9 +811,7 @@ class ScreeningRepository:
                 status=AssessmentStatus(row[1]),
                 score=row[2],
                 label=row[3],
-                strategy_ratings=tuple(
-                    strategies_by_horizon.get(Horizon(row[0]), [])
-                ),
+                strategy_ratings=tuple(strategies_by_horizon.get(Horizon(row[0]), [])),
             )
             for row in horizon_rows
         )
@@ -848,12 +824,8 @@ class ScreeningRepository:
             """,
             (run_id, security_id),
         ).fetchall()
-        missing_reasons = tuple(
-            row[2] or row[1] for row in reason_rows if row[0] == "MISSING_DATA"
-        )
-        risk_flags = tuple(
-            RiskFlag(row[1]) for row in reason_rows if row[0] == "RISK_FLAG"
-        )
+        missing_reasons = tuple(row[2] or row[1] for row in reason_rows if row[0] == "MISSING_DATA")
+        risk_flags = tuple(RiskFlag(row[1]) for row in reason_rows if row[0] == "RISK_FLAG")
         lineage_rows = connection.execute(
             """
             SELECT DISTINCT provider.code, source.source_reference,

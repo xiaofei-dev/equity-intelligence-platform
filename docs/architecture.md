@@ -52,6 +52,20 @@ the Twelve Data credential and does not call FastAPI or PostgreSQL directly.
 The provider-validation and quantitative candidate paths remain the next
 unimplemented analytics slices.
 
+The screening integration adds a second backend slice:
+
+```text
+Immutable SEC and price observations
+    -> sealed analytics.data_snapshot
+    -> PostgreSQL-backed FastAPI screening task
+    -> immutable coverage, factors, and ratings
+    -> Spring Boot /api/v1/screening/*
+```
+
+FastAPI owns snapshot construction, point-in-time observation selection,
+rating execution, recovery, and result persistence. Spring Boot is an HTTP
+gateway for the versioned contract and does not query screening result tables.
+
 ## Component Responsibilities
 
 ### Frontend
@@ -161,6 +175,11 @@ Every task should have:
 - Failure details
 - Strategy and model versions
 - Result location or result payload
+
+Screening tasks use PostgreSQL as their queue. Workers acquire advisory locks,
+recover pending or stale-running tasks after restart, and seal results in one
+transaction. A security-level data failure is a coverage result; only a
+run-level failure changes the task to `FAILED`.
 
 Kafka may replace or supplement HTTP when event volume, multiple consumers, durable replay, or asynchronous reliability requirements justify it.
 

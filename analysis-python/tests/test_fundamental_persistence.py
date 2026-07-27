@@ -106,8 +106,7 @@ def test_repository_inserts_facts_once_for_the_same_source() -> None:
     ]
     assert len(fact_inserts) == 4
     assert all(
-        "ON CONFLICT ON CONSTRAINT uq_fundamental_fact_source" in sql
-        for sql in fact_inserts
+        "ON CONFLICT ON CONSTRAINT uq_fundamental_fact_source" in sql for sql in fact_inserts
     )
 
 

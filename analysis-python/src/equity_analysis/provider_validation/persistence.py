@@ -61,9 +61,7 @@ class FundamentalFactBatch(BaseModel):
         if any(fact.form_type == "" or fact.fiscal_period == "" for fact in self.facts):
             raise ValueError("Fundamental form and fiscal period are required")
         if self.source_content_hash not in self.request_key:
-            raise ValueError(
-                "Fundamental request key must include the source content hash"
-            )
+            raise ValueError("Fundamental request key must include the source content hash")
         return self
 
 
@@ -101,9 +99,7 @@ class FundamentalFactRepository:
                 (batch.security_public_id,),
             ).fetchone()
             if security_row is None:
-                raise ValueError(
-                    f"Unknown security public ID {batch.security_public_id}"
-                )
+                raise ValueError(f"Unknown security public ID {batch.security_public_id}")
             security_id = security_row[0]
 
             inserted = 0

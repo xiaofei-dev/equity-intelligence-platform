@@ -35,9 +35,7 @@ def invested_capital(
 
 def market_capitalization(price: Decimal, shares_outstanding: Decimal) -> Decimal:
     if price <= 0 or shares_outstanding <= 0:
-        raise InvalidFactorInput(
-            "market_capitalization requires positive price and shares"
-        )
+        raise InvalidFactorInput("market_capitalization requires positive price and shares")
     return price * shares_outstanding
 
 
@@ -66,9 +64,7 @@ def return_on_invested_capital(
     current_invested_capital: Decimal,
     prior_invested_capital: Decimal,
 ) -> Decimal:
-    average_invested_capital = (
-        current_invested_capital + prior_invested_capital
-    ) / Decimal("2")
+    average_invested_capital = (current_invested_capital + prior_invested_capital) / Decimal("2")
     nopat = operating_income * (Decimal("1") - effective_tax_rate(income_tax, pretax_income))
     return _ratio(nopat, average_invested_capital, "return_on_invested_capital")
 
@@ -172,19 +168,13 @@ def historical_percentile_rank(
     current_value: Decimal,
 ) -> Decimal:
     if len(values) < 12:
-        raise InvalidFactorInput(
-            "historical_percentile_rank requires at least 12 observations"
-        )
+        raise InvalidFactorInput("historical_percentile_rank requires at least 12 observations")
     if current_value not in values:
-        raise InvalidFactorInput(
-            "historical_percentile_rank requires the current value in history"
-        )
+        raise InvalidFactorInput("historical_percentile_rank requires the current value in history")
     less = sum(value < current_value for value in values)
     equal = sum(value == current_value for value in values)
     numerator = Decimal(less) + Decimal(equal - 1) / Decimal("2")
-    return _quantize(
-        Decimal("100") * numerator / Decimal(len(values) - 1)
-    )
+    return _quantize(Decimal("100") * numerator / Decimal(len(values) - 1))
 
 
 def total_return(prices: tuple[Decimal, ...], lookback: int) -> Decimal:
@@ -204,8 +194,7 @@ def realized_volatility(prices: tuple[Decimal, ...], lookback: int) -> Decimal:
     if any(price <= 0 for price in selected):
         raise InvalidFactorInput("realized_volatility requires positive prices")
     returns = tuple(
-        selected[index] / selected[index - 1] - Decimal("1")
-        for index in range(1, len(selected))
+        selected[index] / selected[index - 1] - Decimal("1") for index in range(1, len(selected))
     )
     mean = sum(returns) / Decimal(len(returns))
     variance = sum((item - mean) ** 2 for item in returns) / Decimal(len(returns) - 1)
@@ -248,7 +237,6 @@ def trend_stability(prices: tuple[Decimal, ...], lookback: int) -> Decimal:
     if total_variance == 0:
         return Decimal("1.00000000")
     residual_variance = sum(
-        (price - estimate) ** 2
-        for price, estimate in zip(selected, fitted, strict=True)
+        (price - estimate) ** 2 for price, estimate in zip(selected, fitted, strict=True)
     )
     return _quantize(Decimal("1") - residual_variance / total_variance)
