@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   const services = [
     {
@@ -46,18 +48,23 @@ export default function Home() {
               promise returns or execute real-money trades.
             </p>
 
-            <div className="mt-9 flex flex-wrap gap-3 text-sm text-slate-300">
+            <div className="mt-9 flex flex-wrap items-center gap-3 text-sm">
+              <Link
+                href="/market-data"
+                className="rounded-full border border-cyan-400/50 bg-cyan-400/10 px-4 py-2 font-medium text-cyan-200 transition hover:border-cyan-300 hover:bg-cyan-400/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300"
+              >
+                View daily data →
+              </Link>
               {[
-                "Daily data",
                 "Source citations",
                 "Versioned strategies",
                 "Simulated portfolios",
               ].map((item) => (
                 <span
                   key={item}
-                  className="rounded-full border border-slate-700 bg-slate-900 px-4 py-2"
+                  className="rounded-full border border-slate-800 px-4 py-2 text-slate-500"
                 >
-                  {item}
+                  {item} · Planned
                 </span>
               ))}
             </div>

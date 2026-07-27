@@ -1,0 +1,74 @@
+{
+  "fixtureVersion": "sec-pit-filings-v1.0.0",
+  "source": "SEC EDGAR submissions API",
+  "accessedAt": "2026-07-26",
+  "canonicalHashOrder": "symbol|cik|asOfTime|form|filingDate|acceptanceDatetime|accessionNumber|reportDate",
+  "cases": [
+    {
+      "symbol": "AAPL",
+      "cik": "0000320193",
+      "asOfTime": "2021-06-30T20:00:00Z",
+      "form": "10-Q",
+      "filingDate": "2021-04-29",
+      "acceptanceDatetime": "2021-04-28T22:02:54Z",
+      "accessionNumber": "0000320193-21-000056",
+      "reportDate": "2021-03-27",
+      "contentHash": "83ba2928f189156dfee00ca281a45706a547e3db0209e94666ee49da1332aadd"
+    },
+    {
+      "symbol": "AAPL",
+      "cik": "0000320193",
+      "asOfTime": "2022-06-30T20:00:00Z",
+      "form": "10-Q",
+      "filingDate": "2022-04-29",
+      "acceptanceDatetime": "2022-04-28T22:03:58Z",
+      "accessionNumber": "0000320193-22-000059",
+      "reportDate": "2022-03-26",
+      "contentHash": "0e10f33f7eb5fc91ffacfe4209681ea9086c14e3bee3157e795319df57fd3155"
+    },
+    {
+      "symbol": "AAPL",
+      "cik": "0000320193",
+      "asOfTime": "2024-06-30T20:00:00Z",
+      "form": "10-Q",
+      "filingDate": "2024-05-03",
+      "acceptanceDatetime": "2024-05-02T22:04:25Z",
+      "accessionNumber": "0000320193-24-000069",
+      "reportDate": "2024-03-30",
+      "contentHash": "bc41a9d090a40bad254006242aca9555fbe9f6a865f4a73eb3d67fcc00bc2b35"
+    },
+    {
+      "symbol": "MSFT",
+      "cik": "0000789019",
+      "asOfTime": "2022-06-30T20:00:00Z",
+      "form": "10-Q",
+      "filingDate": "2022-04-26",
+      "acceptanceDatetime": "2022-04-26T20:08:55Z",
+      "accessionNumber": "0001564590-22-015675",
+      "reportDate": "2022-03-31",
+      "contentHash": "9fb022d96efb7c34fe3757bd9aeda56b26c4502a25f206c911dc47dd8cddfd30"
+    },
+    {
+      "symbol": "META",
+      "cik": "0001326801",
+      "asOfTime": "2022-06-15T20:00:00Z",
+      "form": "10-Q",
+      "filingDate": "2022-04-28",
+      "acceptanceDatetime": "2022-04-28T00:42:59Z",
+      "accessionNumber": "0001326801-22-000057",
+      "reportDate": "2022-03-31",
+      "contentHash": "45fc52b4d5a4ec0b8a0d3d1228100cb4ab581fee5358d5e77453e4ceb4455d55"
+    },
+    {
+      "symbol": "META",
+      "cik": "0001326801",
+      "asOfTime": "2022-08-01T20:00:00Z",
+      "form": "10-Q",
+      "filingDate": "2022-07-28",
+      "acceptanceDatetime": "2022-07-28T00:44:34Z",
+      "accessionNumber": "0001326801-22-000082",
+      "reportDate": "2022-06-30",
+      "contentHash": "bf54504fc2f56db2e7dad1642eab670dc0835316d4ffa52ac19126d5d11ab19f"
+    }
+  ]
+}

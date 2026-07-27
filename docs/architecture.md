@@ -18,12 +18,53 @@ Spring Boot backend
    v
 FastAPI analytics service
    |
-   +-----------> Market, fundamental, news, and filing providers
+   +-----------> Replaceable market and fundamental providers
    |
-   +-----------> OpenAI API
+   +-----------> SEC filings and trusted evidence sources
+   |
+   +-----------> AI model API
 ```
 
 This structure combines enterprise business-system practices in Java with the Python data and quantitative ecosystem.
+
+## Implemented Vertical Slice
+
+The current Phase 1 path is:
+
+```text
+Twelve Data
+    |
+    v
+FastAPI ingestion endpoint
+    |
+    v
+PostgreSQL analytics.security and analytics.daily_price
+    |
+    v
+Spring Boot GET /api/v1/market-data/latest
+    |
+    v
+Next.js /market-data
+```
+
+The browser receives normalized records from Spring Boot. It never receives
+the Twelve Data credential and does not call FastAPI or PostgreSQL directly.
+The provider-validation and quantitative candidate paths remain the next
+unimplemented analytics slices.
+
+The screening integration adds a second backend slice:
+
+```text
+Immutable SEC and price observations
+    -> sealed analytics.data_snapshot
+    -> PostgreSQL-backed FastAPI screening task
+    -> immutable coverage, factors, and ratings
+    -> Spring Boot /api/v1/screening/*
+```
+
+FastAPI owns snapshot construction, point-in-time observation selection,
+rating execution, recovery, and result persistence. Spring Boot is an HTTP
+gateway for the versioned contract and does not query screening result tables.
 
 ## Component Responsibilities
 
@@ -68,19 +109,51 @@ The FastAPI application owns:
 - Backtesting
 - Portfolio optimization calculations
 - AI evidence preparation and structured analysis
+- Coverage-state and data-lineage reporting
 
 The analytics service returns structured results through versioned contracts.
+Deterministic calculations and AI evidence assessments must remain separate in
+those contracts.
 
 ### Database
 
-The initial system uses one PostgreSQL instance with clear ownership boundaries. Separate schemas may be used:
+The initial system uses one PostgreSQL instance with clear ownership
+boundaries. Flyway creates separate schemas:
 
 ```text
 app.*
 analytics.*
 ```
 
+Public market observations and reusable company research belong in
+`analytics.*`. User identities, investment profiles, accounts, holdings,
+decisions, and portfolio-specific recommendation records belong in `app.*`.
+Python may write analytics-owned observations and results, but Java remains the
+only owner of user-facing account and decision state.
+
 The applications must not modify each other's tables without an explicit contract and migration.
+
+Analytics observations use append-only revisions with economic, availability,
+ingestion, and recording timestamps. Sealed data snapshots bind an analysis to
+an as-of cutoff, ingestion cutoff, source manifest, universe version, and
+normalization versions. Screening runs persist Python-owned coverage, factors,
+ratings, contributions, and lineage under those immutable inputs.
+
+The SEC normalization path resolves securities through immutable public IDs,
+creates idempotent provider, ingestion-batch, and source lineage, and inserts
+only observed or explicitly derived numeric facts. Its request identity
+includes the source content hash, so a changed provider response creates a new
+source revision instead of overwriting an earlier fact.
+
+Python writes these records through the `analytics_writer` role. Java does not
+query rating tables or reproduce formulas; it consumes screening status and
+rating pages through the versioned internal HTTP contract. Database read
+projections exist for analytics implementation and diagnostics, not as an
+additional Java rating contract.
+
+The initial United States security master treats normalized ticker symbols as
+unique ingestion identities and exchange labels as mutable metadata. A future
+multi-market expansion requires a durable global identity design.
 
 ## Initial Communication Pattern
 
@@ -102,6 +175,11 @@ Every task should have:
 - Failure details
 - Strategy and model versions
 - Result location or result payload
+
+Screening tasks use PostgreSQL as their queue. Workers acquire advisory locks,
+recover pending or stale-running tasks after restart, and seal results in one
+transaction. A security-level data failure is a coverage result; only a
+run-level failure changes the task to `FAILED`.
 
 Kafka may replace or supplement HTTP when event volume, multiple consumers, durable replay, or asynchronous reliability requirements justify it.
 
@@ -162,4 +240,3 @@ Potential future additions include:
 - Kubernetes for multi-node container orchestration
 
 These additions require an observed problem and an architecture decision record.
-

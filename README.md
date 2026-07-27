@@ -41,19 +41,19 @@ equity-intelligence-platform/
 Market and fundamental data
             |
             v
-Deterministic eligibility filters
+Point-in-time data and eligibility filters
             |
             v
-Sector and stock ranking
+Strategy-specific stock rankings
             |
             v
 Evidence-based AI risk review
             |
             v
-Explicit composite scoring
+AI-reviewed candidate set
             |
             v
-Short-term and long-term portfolio rules
+User portfolio fit and constrained scenarios
             |
             v
 Human review and simulated execution
@@ -71,16 +71,36 @@ Performance tracking and strategy evaluation
 - [Investment Methodology](docs/investment-methodology.md)
 - [AI Analysis](docs/ai-analysis.md)
 - [Data and Backtesting](docs/data-and-backtesting.md)
+- [Quantitative Screening Design](docs/quantitative-screening.md)
+- [Quantitative Screening v1 Specification and Data Acceptance Plan](docs/quantitative-screening-v1-specification.md)
+- [Data Source Validation Matrix](docs/data-source-validation-matrix.md)
+- [Provider Acceptance Report: 2026-07-26](docs/provider-acceptance-report-2026-07-26.md)
+- [Screening Internal API Contract v1](docs/screening-api-contract.md)
+- [Objective Rating v1 Validation Report](docs/objective-rating-v1-validation.md)
 - [Roadmap](docs/roadmap.md)
 - [Decision Log](docs/decision-log.md)
+- [Development Log](docs/development-log/README.md)
 
 ## Current Status
 
-The project is in Phase 0. The Next.js frontend, Spring Boot backend, FastAPI
-analytics service, PostgreSQL migration structure, Dockerfiles, and local
-Compose topology have been initialized. Continuous integration validates all
-three application modules and scans commits for secrets. Business features and
-external data providers have not yet been implemented.
+Phase 0 is complete and Phase 1 is in progress. The complete local stack runs
+through Docker Compose, and GitHub Actions validates the frontend, backend,
+analytics service, and full Git history for secrets.
+
+The first real-data slice now:
+
+- Ingests split-adjusted daily OHLCV data from Twelve Data
+- Stores normalized securities and prices in PostgreSQL
+- Exposes the latest stored observation through Spring Boot
+- Displays six engineering-universe securities at `/market-data`
+- Preserves provider, trading-date, timezone, adjustment, and ingestion
+  metadata
+
+The next analytics milestone is a data-contract and provider-validation slice
+for two initial long-term screening paths: `Quality Compounder` and
+`Undervalued Quality`. Deterministic screening will precede source-backed AI
+evidence review. User portfolio fit and allocation scenarios remain later
+workstreams.
 
 ## Quick Start
 
@@ -98,9 +118,14 @@ Copy-Item .env.example .env
 docker compose up --build
 ```
 
+Set `TWELVE_DATA_API_KEY` in the local `.env` file before running real market
+data ingestion. Never commit `.env` or place credentials in browser-exposed
+variables.
+
 Then open:
 
 - Frontend: `http://localhost:3000`
+- Market data page: `http://localhost:3000/market-data`
 - Backend health: `http://localhost:8080/actuator/health`
 - Analytics health: `http://localhost:8000/health`
 

@@ -4,6 +4,10 @@
 
 AI accelerates qualitative research and challenges quantitative conclusions. It does not independently predict stock prices, make final trade decisions, or control portfolio allocation.
 
+AI review is a second-stage operation. Broad-universe eligibility and ranking
+must remain deterministic so that thousands of securities do not require an
+LLM call before screening can run.
+
 ## Supported Research Areas
 
 AI may assist with:
@@ -105,6 +109,34 @@ AI analysis should run only after deterministic screening has reduced the univer
 
 The system should avoid repeating identical analyses.
 
+Review priority is:
+
+1. Current user holdings
+2. Explicit user requests
+3. Watchlist securities
+4. New high-ranking quantitative candidates
+5. Material ranking changes
+6. New filings or material events
+7. Expired research snapshots
+
+The user may request review of a quantitatively covered stock that is not in
+the top candidate set. Completing that review does not bypass quantitative
+eligibility or automatically place the stock in a ranked candidate list.
+
+## Assessment Boundaries
+
+AI should return structured evidence classifications rather than an
+unrestricted numeric score. A validated evidence result may:
+
+- Support the quantitative thesis
+- Reduce confidence
+- Add a warning
+- Apply a documented limited adjustment
+- Block candidate eligibility after a material verified risk
+
+It must not turn a weak deterministic assessment into a strong assessment
+solely through persuasive narrative.
+
 ## Security
 
 - Treat retrieved documents as untrusted input.
@@ -124,4 +156,3 @@ AI quality should be evaluated independently from investment performance:
 - Consistency
 - Unsupported-claim rate
 - Cost and latency
-

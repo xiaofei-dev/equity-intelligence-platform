@@ -1,0 +1,28 @@
+{
+  "fixtureVersion": "aapl-monthly-fcf-yield-v1.0.0",
+  "source": "SEC EDGAR companyfacts and submissions APIs plus Twelve Data adjusted daily prices",
+  "accessedAt": "2026-07-26",
+  "symbol": "AAPL",
+  "cik": "0000320193",
+  "asOfTime": "2024-06-30T20:00:00Z",
+  "priceAdjustmentMode": "all",
+  "canonicalHashOrder": "priceDate|adjustedClose|ttmFreeCashFlow|reportedShares|fcfYield|fundamentalAccession",
+  "derivedRowsHash": "254946970ce7e41cc177a4c701bf06015925acae95b8f657d5b492a00fc8058f",
+  "observations": [
+    {"priceDate": "2023-07-31", "adjustedClose": "193.69830", "ttmFreeCashFlow": "97490000000", "reportedShares": "15723406000", "fcfYield": "0.03201014", "fundamentalAccession": "0000320193-23-000064"},
+    {"priceDate": "2023-08-31", "adjustedClose": "185.48828", "ttmFreeCashFlow": "100987000000", "reportedShares": "15647868000", "fcfYield": "0.03479316", "fundamentalAccession": "0000320193-23-000077"},
+    {"priceDate": "2023-09-29", "adjustedClose": "169.039495", "ttmFreeCashFlow": "100987000000", "reportedShares": "15647868000", "fcfYield": "0.03817879", "fundamentalAccession": "0000320193-23-000077"},
+    {"priceDate": "2023-10-31", "adjustedClose": "168.60507", "ttmFreeCashFlow": "100987000000", "reportedShares": "15647868000", "fcfYield": "0.03827716", "fundamentalAccession": "0000320193-23-000077"},
+    {"priceDate": "2023-11-30", "adjustedClose": "187.78866", "ttmFreeCashFlow": "99584000000", "reportedShares": "15550061000", "fcfYield": "0.03410265", "fundamentalAccession": "0000320193-23-000106"},
+    {"priceDate": "2023-12-29", "adjustedClose": "190.33931", "ttmFreeCashFlow": "99584000000", "reportedShares": "15550061000", "fcfYield": "0.03364565", "fundamentalAccession": "0000320193-23-000106"},
+    {"priceDate": "2024-01-31", "adjustedClose": "182.30181", "ttmFreeCashFlow": "99584000000", "reportedShares": "15550061000", "fcfYield": "0.03512906", "fundamentalAccession": "0000320193-23-000106"},
+    {"priceDate": "2024-02-29", "adjustedClose": "178.92108", "ttmFreeCashFlow": "106869000000", "reportedShares": "15460223000", "fcfYield": "0.03863443", "fundamentalAccession": "0000320193-24-000006"},
+    {"priceDate": "2024-03-28", "adjustedClose": "169.74487", "ttmFreeCashFlow": "106869000000", "reportedShares": "15460223000", "fcfYield": "0.04072296", "fundamentalAccession": "0000320193-24-000006"},
+    {"priceDate": "2024-04-30", "adjustedClose": "168.60651", "ttmFreeCashFlow": "106869000000", "reportedShares": "15460223000", "fcfYield": "0.04099790", "fundamentalAccession": "0000320193-24-000006"},
+    {"priceDate": "2024-05-31", "adjustedClose": "190.56248", "ttmFreeCashFlow": "101919000000", "reportedShares": "15337686000", "fcfYield": "0.03487048", "fundamentalAccession": "0000320193-24-000069"},
+    {"priceDate": "2024-06-28", "adjustedClose": "208.77123", "ttmFreeCashFlow": "101919000000", "reportedShares": "15337686000", "fcfYield": "0.03182912", "fundamentalAccession": "0000320193-24-000069"}
+  ],
+  "expectedCurrentPercentile": "0.00000000",
+  "coverageMonths": 12,
+  "targetWindowMonths": 60
+}

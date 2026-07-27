@@ -2,8 +2,9 @@
 
 ## Purpose
 
-This guide explains how to run and verify the Phase 0 service foundation. It
-does not require real market data or third-party API credentials.
+This guide explains how to run and verify the Phase 0 foundation and the
+current Phase 1 market-data slice. Health checks do not require third-party
+credentials, but real Twelve Data ingestion requires a local API key.
 
 ## Prerequisites
 
@@ -28,6 +29,11 @@ passwords and provider keys in `.env`; never commit `.env` or real credentials.
 
 Variables prefixed with `NEXT_PUBLIC_` are embedded in browser-accessible
 frontend code. Never place secrets in those variables.
+
+Phase 1 market data ingestion uses `MARKET_DATA_PROVIDER=twelve_data` and reads
+the credential from `TWELVE_DATA_API_KEY`. Keep this key only in the local
+`.env` file or a deployment secret store. The analytics database URL is
+constructed automatically inside Docker Compose.
 
 ## Run the Complete Stack
 
@@ -118,8 +124,13 @@ Migration source files live in `database/migrations`. The backend packages and
 runs them with Flyway during startup. Migration files are append-only after
 they have been applied to a shared environment.
 
-The first migration creates separate `app` and `analytics` schemas to preserve
-the documented ownership boundary.
+Current migrations:
+
+- `V1` creates separate `app` and `analytics` schemas.
+- `V2` creates the security master and daily-price tables and seeds the
+  six-symbol engineering universe.
+- `V3` consolidates duplicate United States ticker identities and enforces a
+  unique normalized symbol.
 
 ## Health and Status Contracts
 
@@ -130,6 +141,42 @@ the documented ownership boundary.
 
 Health responses communicate service availability only. They must not expose
 credentials, internal exception details, or private data.
+
+## Market Data Ingestion
+
+The bounded Phase 1 ingestion endpoint is internal to the analytics service:
+
+```text
+POST /internal/v1/market-data/daily-prices/ingest
+```
+
+It accepts up to 20 symbols and an inclusive date range. The operation is
+idempotent: a repeated provider, symbol, trading date, and adjustment mode
+updates the existing row rather than creating a duplicate.
+
+When `TWELVE_DATA_API_KEY` is not configured, the endpoint returns
+`MARKET_DATA_NOT_CONFIGURED` without contacting the provider. Do not expose
+this internal endpoint directly from a public deployment.
+
+The Java backend exposes the latest stored observation for every active
+security:
+
+```text
+GET /api/v1/market-data/latest
+```
+
+The `/market-data` frontend route calls this Java endpoint from the Next.js
+server. The browser never receives the provider credential and does not call
+the Python analytics service or PostgreSQL directly.
+
+After ingestion, verify the visible slice at:
+
+```text
+http://localhost:3000/market-data
+```
+
+The page should show `AAPL`, `MSFT`, `JPM`, `XOM`, `JNJ`, and benchmark `SPY`
+with a trading date, close, volume, provider, and ingestion timestamp.
 
 ## Continuous Integration
 

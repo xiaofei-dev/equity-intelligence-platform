@@ -1,0 +1,29 @@
+{
+  "fixtureVersion": "aapl-quarterly-stability-v1.0.0",
+  "source": "SEC EDGAR companyfacts and submissions APIs",
+  "accessedAt": "2026-07-26",
+  "symbol": "AAPL",
+  "cik": "0000320193",
+  "asOfTime": "2024-06-30T20:00:00Z",
+  "discreteFormulaVersion": "DISCRETE-FROM-CUMULATIVE-v1.0.0",
+  "stabilityFormulaVersion": "MARGIN-STABILITY-v1.0.0",
+  "canonicalHashOrder": "periodEnd|revenue|operatingIncome|operatingCashFlow|capitalExpenditure|operatingMargin|freeCashFlowMargin|sourceAccessions",
+  "derivedRowsHash": "1c3995d8a549157d09239440410e4f75081749af9ee85a467e5ad4ffc6c43007",
+  "quarters": [
+    {"periodEnd": "2021-06-26", "revenue": "81434000000", "operatingIncome": "24126000000", "operatingCashFlow": "21094000000", "capitalExpenditure": "2093000000", "operatingMargin": "0.29626446", "freeCashFlowMargin": "0.23333006", "sourceAccessions": ["0000320193-22-000059", "0000320193-22-000070"]},
+    {"periodEnd": "2021-09-25", "revenue": "83360000000", "operatingIncome": "23786000000", "operatingCashFlow": "20200000000", "capitalExpenditure": "3223000000", "operatingMargin": "0.28534069", "freeCashFlowMargin": "0.20365883", "sourceAccessions": ["0000320193-22-000070", "0000320193-23-000106"]},
+    {"periodEnd": "2021-12-25", "revenue": "123945000000", "operatingIncome": "41488000000", "operatingCashFlow": "46966000000", "capitalExpenditure": "2803000000", "operatingMargin": "0.33472911", "freeCashFlowMargin": "0.35631127", "sourceAccessions": ["0000320193-23-000006"]},
+    {"periodEnd": "2022-03-26", "revenue": "97278000000", "operatingIncome": "29979000000", "operatingCashFlow": "28166000000", "capitalExpenditure": "2514000000", "operatingMargin": "0.30817862", "freeCashFlowMargin": "0.26369786", "sourceAccessions": ["0000320193-23-000006", "0000320193-23-000064"]},
+    {"periodEnd": "2022-06-25", "revenue": "82959000000", "operatingIncome": "23076000000", "operatingCashFlow": "22892000000", "capitalExpenditure": "2102000000", "operatingMargin": "0.27816150", "freeCashFlowMargin": "0.25060572", "sourceAccessions": ["0000320193-23-000064", "0000320193-23-000077"]},
+    {"periodEnd": "2022-09-24", "revenue": "90146000000", "operatingIncome": "24894000000", "operatingCashFlow": "24127000000", "capitalExpenditure": "3289000000", "operatingMargin": "0.27615202", "freeCashFlowMargin": "0.23115834", "sourceAccessions": ["0000320193-23-000077", "0000320193-23-000106"]},
+    {"periodEnd": "2022-12-31", "revenue": "117154000000", "operatingIncome": "36016000000", "operatingCashFlow": "34005000000", "capitalExpenditure": "3787000000", "operatingMargin": "0.30742442", "freeCashFlowMargin": "0.25793400", "sourceAccessions": ["0000320193-24-000006"]},
+    {"periodEnd": "2023-04-01", "revenue": "94836000000", "operatingIncome": "28318000000", "operatingCashFlow": "28560000000", "capitalExpenditure": "2916000000", "operatingMargin": "0.29859969", "freeCashFlowMargin": "0.27040364", "sourceAccessions": ["0000320193-24-000006", "0000320193-24-000069"]},
+    {"periodEnd": "2023-07-01", "revenue": "81797000000", "operatingIncome": "22998000000", "operatingCashFlow": "26380000000", "capitalExpenditure": "2093000000", "operatingMargin": "0.28115946", "freeCashFlowMargin": "0.29691798", "sourceAccessions": ["0000320193-23-000064", "0000320193-23-000077"]},
+    {"periodEnd": "2023-09-30", "revenue": "89498000000", "operatingIncome": "26969000000", "operatingCashFlow": "21598000000", "capitalExpenditure": "2163000000", "operatingMargin": "0.30133634", "freeCashFlowMargin": "0.21715569", "sourceAccessions": ["0000320193-23-000077", "0000320193-23-000106"]},
+    {"periodEnd": "2023-12-30", "revenue": "119575000000", "operatingIncome": "40373000000", "operatingCashFlow": "39895000000", "capitalExpenditure": "2392000000", "operatingMargin": "0.33763747", "freeCashFlowMargin": "0.31363579", "sourceAccessions": ["0000320193-24-000006"]},
+    {"periodEnd": "2024-03-30", "revenue": "90753000000", "operatingIncome": "27900000000", "operatingCashFlow": "22690000000", "capitalExpenditure": "1996000000", "operatingMargin": "0.30742785", "freeCashFlowMargin": "0.22802552", "sourceAccessions": ["0000320193-24-000006", "0000320193-24-000069"]}
+  ],
+  "operatingMarginCoefficientOfVariation": "0.06375535",
+  "freeCashFlowMarginCoefficientOfVariation": "0.16191254",
+  "expectedStability": "0.11283395"
+}

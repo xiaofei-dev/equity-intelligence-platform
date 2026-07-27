@@ -1,0 +1,102 @@
+{
+  "runId": "screening-run-2026-07-26-001",
+  "items": [
+    {
+      "securityId": "sec-aapl",
+      "symbol": "AAPL",
+      "asOfTime": "2026-07-25T20:00:00Z",
+      "coverageState": "QUANT_ELIGIBLE",
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "sizeCohort": "MEGA",
+      "qualityScore": "82.5000",
+      "valuationScore": "41.2500",
+      "factorResults": [
+        {
+          "name": "roic",
+          "status": "VALID",
+          "rawValue": "0.3750",
+          "winsorizedValue": "0.3500",
+          "normalizedScore": "92.5000",
+          "cohortLevel": "SECTOR_SIZE_COMPANY_TYPE",
+          "cohortSize": 28,
+          "reason": null
+        }
+      ],
+      "horizonAssessments": [
+        {
+          "horizon": "NEAR_TERM",
+          "status": "SCORED",
+          "score": "61.2500",
+          "label": "NEUTRAL",
+          "strategyRatings": [
+            {
+              "strategyVersion": "NEAR_TERM-v1.0.0",
+              "status": "SCORED",
+              "score": "61.2500",
+              "rank": null,
+              "contributions": [
+                {
+                  "factorName": "return_20d",
+                  "normalizedScore": "75.0000",
+                  "weight": "0.1000",
+                  "contribution": "7.5000"
+                }
+              ],
+              "missingFactors": [],
+              "errorCode": null
+            }
+          ]
+        },
+        {
+          "horizon": "MEDIUM_TERM",
+          "status": "NOT_DEFINED",
+          "score": null,
+          "label": "NOT_DEFINED",
+          "strategyRatings": []
+        },
+        {
+          "horizon": "LONG_TERM",
+          "status": "SCORED",
+          "score": null,
+          "label": "SCORED",
+          "strategyRatings": [
+            {
+              "strategyVersion": "QC-v1.0.0",
+              "status": "SCORED",
+              "score": "80.1250",
+              "rank": 1,
+              "contributions": [
+                {
+                  "factorName": "roic",
+                  "normalizedScore": "92.5000",
+                  "weight": "0.2500",
+                  "contribution": "23.1250"
+                }
+              ],
+              "missingFactors": [],
+              "errorCode": null
+            }
+          ]
+        }
+      ],
+      "riskFlags": [],
+      "missingReasons": [],
+      "lineage": [
+        {
+          "provider": "sec_edgar",
+          "sourceReference": "0000320193-25-000079",
+          "periodEnd": "2025-06-28",
+          "filedAt": "2025-08-01T10:00:00Z",
+          "availableAt": "2025-08-04T20:00:00Z",
+          "ingestedAt": "2026-07-26T12:00:00Z",
+          "currency": "USD",
+          "unit": "USD",
+          "revisionStatus": "AS_FILED",
+          "qualityStatus": "VALIDATED",
+          "contentHash": "sha256:example-derived-fixture"
+        }
+      ]
+    }
+  ],
+  "nextCursor": null
+}

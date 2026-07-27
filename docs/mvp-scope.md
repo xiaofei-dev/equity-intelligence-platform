@@ -8,10 +8,13 @@ Deliver a usable daily equity research workflow that can be demonstrated, evalua
 
 1. The system updates daily market and fundamental data.
 2. Eligibility rules remove unsuitable or insufficiently liquid securities.
-3. Sector and stock factors rank the remaining universe.
-4. The system presents a small candidate list with score explanations.
+3. Strategy-specific factors rank companies within appropriate sector, size,
+   and company-type cohorts.
+4. The system presents a small quantitative candidate list with eligibility
+   and factor explanations.
 5. AI reviews source documents and identifies qualitative strengths, risks, and unresolved questions.
-6. The portfolio module proposes a simulated allocation under explicit constraints.
+6. The portfolio module evaluates candidate fit and compares new-money-only,
+   constrained-rebalancing, and target-portfolio simulations.
 7. The user reviews the evidence and records a decision.
 8. The platform tracks subsequent performance against a benchmark.
 
@@ -23,7 +26,10 @@ Deliver a usable daily equity research workflow that can be demonstrated, evalua
 - Daily or end-of-day data
 - A clearly defined investable universe
 
-The first market and data vendor remain open decisions.
+The initial market is United States listed equities. Twelve Data is the
+development provider for the bounded Phase 1 slice; the provider interface
+must remain replaceable because broader coverage and commercial use require a
+separate data and licensing decision.
 
 ### Quantitative Screening
 
@@ -34,6 +40,8 @@ The first market and data vendor remain open decisions.
 - Volatility and drawdown indicators
 - Sector-relative strength
 - Transparent factor contributions
+- Separate `Quality Compounder` and `Undervalued Quality` paths
+- Explicit coverage, exclusion, and specialized-model states
 
 ### Candidate Research
 
@@ -55,10 +63,12 @@ The first market and data vendor remain open decisions.
 
 ### Portfolio Support
 
-- Separate short-term and long-term strategy sleeves
+- Investment approach, horizon, risk profile, and sector preferences
+- Cash, liabilities, leverage limits, and current holdings
+- Defensive, enterprising, and explicitly limited speculative allocations
 - Maximum position limits
 - Maximum sector exposure
-- Volatility-aware position sizing
+- New-money-only and constrained-rebalancing comparisons
 - Cash allocation
 - Simulated transactions only
 
@@ -92,6 +102,8 @@ The first market and data vendor remain open decisions.
 - Billing and subscription management
 - Native mobile applications
 - Complex machine-learning prediction models
+- Specialized models for banks, insurers, REITs, resource companies,
+  biotechnology, and special situations
 - Kafka and Kubernetes
 - Full multi-tenant enterprise administration
 
@@ -101,8 +113,9 @@ The first market and data vendor remain open decisions.
 - A stock can move through the full data-to-display workflow.
 - Quantitative scores are reproducible and versioned.
 - AI output includes sources and can fail safely.
-- The two strategy sleeves are measured separately.
+- Quantitative-only and AI-reviewed states are visibly distinct.
+- Near-term market condition and long-term investment assessment remain
+  separate.
 - A recommendation snapshot cannot be silently altered after creation.
 - Backtests use point-in-time rules and include estimated trading costs.
 - The application contains no real-money execution path.
-

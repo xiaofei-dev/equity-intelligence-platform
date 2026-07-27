@@ -1,0 +1,46 @@
+{
+  "fixtureVersion": "cross-issuer-ttm-portability-v1.0.0",
+  "source": "SEC EDGAR companyfacts and submissions APIs",
+  "accessedAt": "2026-07-26",
+  "asOfTime": "2024-06-30T20:00:00Z",
+  "formulaVersion": "TTM-YTD-BRIDGE-v1.0.0",
+  "canonicalHashOrder": "symbol|metricCode|annual|currentYtd|priorYtd|expectedTtm|annualAccession|currentAccession",
+  "derivedRowsHash": "6bd745fdbfcc0b7a94ecae53e5f0503512db5911aaca613d5b151563fc121034",
+  "issuers": [
+    {
+      "symbol": "MSFT",
+      "cik": "0000789019",
+      "annualPeriod": {"start": "2022-07-01", "end": "2023-06-30", "accession": "0000950170-23-035122", "availableAt": "2023-07-28T20:00:00Z"},
+      "currentYtdPeriod": {"start": "2023-07-01", "end": "2024-03-31", "accession": "0000950170-24-048288", "availableAt": "2024-04-26T20:00:00Z"},
+      "priorYtdPeriod": {"start": "2022-07-01", "end": "2023-03-31", "accession": "0000950170-24-048288", "availableAt": "2024-04-26T20:00:00Z"},
+      "metrics": [
+        {"metricCode": "revenue", "annual": "211915000000", "currentYtd": "180395000000", "priorYtd": "155726000000", "expectedTtm": "236584000000"},
+        {"metricCode": "gross_profit", "annual": "146052000000", "currentYtd": "125965000000", "priorYtd": "106658000000", "expectedTtm": "165359000000"},
+        {"metricCode": "operating_income", "annual": "88523000000", "currentYtd": "81508000000", "priorYtd": "64269000000", "expectedTtm": "105762000000"},
+        {"metricCode": "net_income", "annual": "72361000000", "currentYtd": "66100000000", "priorYtd": "52280000000", "expectedTtm": "86181000000"},
+        {"metricCode": "operating_cash_flow", "annual": "87582000000", "currentYtd": "81353000000", "priorYtd": "58812000000", "expectedTtm": "110123000000"},
+        {"metricCode": "capital_expenditure", "annual": "28107000000", "currentYtd": "30604000000", "priorYtd": "19164000000", "expectedTtm": "39547000000"},
+        {"metricCode": "interest_expense", "annual": "1968000000", "currentYtd": "2234000000", "priorYtd": "1486000000", "expectedTtm": "2716000000"}
+      ],
+      "missingFields": []
+    },
+    {
+      "symbol": "TGT",
+      "cik": "0000027419",
+      "annualPeriod": {"start": "2023-01-29", "end": "2024-02-03", "accession": "0000027419-24-000032", "availableAt": "2024-03-14T20:00:00Z"},
+      "currentYtdPeriod": {"start": "2024-02-04", "end": "2024-05-04", "accession": "0000027419-24-000129", "availableAt": "2024-05-31T20:00:00Z"},
+      "priorYtdPeriod": {"start": "2023-01-29", "end": "2023-04-29", "accession": "0000027419-24-000129", "availableAt": "2024-05-31T20:00:00Z"},
+      "metrics": [
+        {"metricCode": "revenue", "annual": "107412000000", "currentYtd": "24531000000", "priorYtd": "25322000000", "expectedTtm": "106621000000"},
+        {"metricCode": "operating_income", "annual": "5707000000", "currentYtd": "1296000000", "priorYtd": "1328000000", "expectedTtm": "5675000000"},
+        {"metricCode": "net_income", "annual": "4138000000", "currentYtd": "942000000", "priorYtd": "950000000", "expectedTtm": "4130000000"},
+        {"metricCode": "operating_cash_flow", "annual": "8621000000", "currentYtd": "1101000000", "priorYtd": "1265000000", "expectedTtm": "8457000000"},
+        {"metricCode": "capital_expenditure", "annual": "4806000000", "currentYtd": "674000000", "priorYtd": "1605000000", "expectedTtm": "3875000000"},
+        {"metricCode": "interest_expense", "annual": "502000000", "currentYtd": "106000000", "priorYtd": "147000000", "expectedTtm": "461000000"}
+      ],
+      "missingFields": [
+        {"field": "gross_profit", "reason": "No compatible standard GrossProfit fact was available for the tested periods."}
+      ]
+    }
+  ]
+}

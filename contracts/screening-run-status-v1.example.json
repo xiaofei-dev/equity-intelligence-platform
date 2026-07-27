@@ -1,0 +1,20 @@
+{
+  "runId": "00000000-0000-0000-0000-000000000001",
+  "status": "SUCCEEDED",
+  "asOfTime": "2026-07-25T20:00:00Z",
+  "dataSnapshotId": "snapshot-2026-07-25",
+  "universeVersion": "universe-us-general-company-v1.0.0",
+  "strategyVersions": ["QC-v1.0.0", "UQ-v1.0.0"],
+  "submittedAt": "2026-07-26T20:00:00Z",
+  "startedAt": "2026-07-26T20:00:01Z",
+  "completedAt": "2026-07-26T20:00:02Z",
+  "coverage": {
+    "universeCount": 20,
+    "scoredCount": 5,
+    "ineligibleCount": 1,
+    "insufficientDataCount": 4,
+    "specializedModelCount": 10
+  },
+  "errorCode": null,
+  "errorMessage": null
+}

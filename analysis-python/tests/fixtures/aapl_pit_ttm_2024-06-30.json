@@ -1,0 +1,110 @@
+{
+  "fixtureVersion": "aapl-pit-ttm-v1.0.0",
+  "source": "SEC EDGAR companyfacts and submissions APIs",
+  "accessedAt": "2026-07-26",
+  "symbol": "AAPL",
+  "cik": "0000320193",
+  "asOfTime": "2024-06-30T20:00:00Z",
+  "periodEnd": "2024-03-30",
+  "unit": "USD",
+  "formulaVersion": "TTM-YTD-BRIDGE-v1.0.0",
+  "derivedRowsHash": "e632abd5a1d735e9771f7475ea5fd661082a7311df11bebac679accf52f6af70",
+  "snapshotHash": "d06fa90f5217e7871f1932c50159baad2f536a3c653367017adebf2b754b5f10",
+  "annual": {
+    "periodStart": "2022-09-25",
+    "periodEnd": "2023-09-30",
+    "accessionNumber": "0000320193-23-000106",
+    "acceptanceDatetime": "2023-11-02T22:08:27Z",
+    "availableAt": "2023-11-03T20:00:00Z"
+  },
+  "currentYtd": {
+    "periodStart": "2023-10-01",
+    "periodEnd": "2024-03-30",
+    "accessionNumber": "0000320193-24-000069",
+    "acceptanceDatetime": "2024-05-02T22:04:25Z",
+    "availableAt": "2024-05-03T20:00:00Z"
+  },
+  "priorYtd": {
+    "periodStart": "2022-09-25",
+    "periodEnd": "2023-04-01",
+    "accessionNumber": "0000320193-24-000069",
+    "acceptanceDatetime": "2024-05-02T22:04:25Z",
+    "availableAt": "2024-05-03T20:00:00Z"
+  },
+  "metrics": [
+    {"metricCode": "revenue", "taxonomyTag": "RevenueFromContractWithCustomerExcludingAssessedTax", "annual": "383285000000", "currentYtd": "210328000000", "priorYtd": "211990000000", "expectedTtm": "381623000000"},
+    {"metricCode": "gross_profit", "taxonomyTag": "GrossProfit", "annual": "169148000000", "currentYtd": "97126000000", "priorYtd": "92308000000", "expectedTtm": "173966000000"},
+    {"metricCode": "operating_income", "taxonomyTag": "OperatingIncomeLoss", "annual": "114301000000", "currentYtd": "68273000000", "priorYtd": "64334000000", "expectedTtm": "118240000000"},
+    {"metricCode": "net_income", "taxonomyTag": "NetIncomeLoss", "annual": "96995000000", "currentYtd": "57552000000", "priorYtd": "54158000000", "expectedTtm": "100389000000"},
+    {"metricCode": "operating_cash_flow", "taxonomyTag": "NetCashProvidedByUsedInOperatingActivities", "annual": "110543000000", "currentYtd": "62585000000", "priorYtd": "62565000000", "expectedTtm": "110563000000"},
+    {"metricCode": "capital_expenditure", "taxonomyTag": "PaymentsToAcquirePropertyPlantAndEquipment", "annual": "10959000000", "currentYtd": "4388000000", "priorYtd": "6703000000", "expectedTtm": "8644000000"},
+    {"metricCode": "pretax_income", "taxonomyTag": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest", "annual": "113736000000", "currentYtd": "68381000000", "priorYtd": "64005000000", "expectedTtm": "118112000000"},
+    {"metricCode": "income_tax", "taxonomyTag": "IncomeTaxExpenseBenefit", "annual": "16741000000", "currentYtd": "10829000000", "priorYtd": "9847000000", "expectedTtm": "17723000000"},
+    {"metricCode": "depreciation_and_amortization", "taxonomyTag": "DepreciationDepletionAndAmortization", "annual": "11519000000", "currentYtd": "5684000000", "priorYtd": "5814000000", "expectedTtm": "11389000000"}
+  ],
+  "balanceSheet": {
+    "current": {
+      "periodEnd": "2024-03-30",
+      "stockholdersEquity": "74194000000",
+      "totalDebt": "102600000000",
+      "cashAndEquivalents": "32695000000",
+      "commonSharesOutstanding": "15337686000",
+      "accessionNumber": "0000320193-24-000069",
+      "availableAt": "2024-05-03T20:00:00Z"
+    },
+    "prior": {
+      "periodEnd": "2023-04-01",
+      "stockholdersEquity": "62158000000",
+      "totalDebt": "107600000000",
+      "cashAndEquivalents": "24687000000",
+      "accessionNumber": "0000320193-23-000064",
+      "availableAt": "2023-05-05T20:00:00Z"
+    }
+  },
+  "market": {
+    "provider": "Twelve Data",
+    "priceDate": "2024-06-28",
+    "adjustmentMode": "all",
+    "adjustedClose": "208.77123"
+  },
+  "expectedFactors": {
+    "roic": "0.69507759",
+    "operatingMargin": "0.30983457",
+    "netDebtToEbitda": "0.53926976",
+    "earningsYield": "0.03613722",
+    "fcfYield": "0.03182912",
+    "marginQuality": "0.21484168",
+    "stability": "0.11283395",
+    "historicalFcfYieldPercentile": "0.00000000",
+    "epsGrowth3y": "0.13102646",
+    "fcfPerShareGrowth3y": "0.07403515",
+    "dilution3y": "-0.03121614"
+  },
+  "dilutedShares": {
+    "currentTtm": {
+      "annual": {"periodStart": "2022-09-25", "periodEnd": "2023-09-30", "value": "15812547000", "accessionNumber": "0000320193-23-000106", "availableAt": "2023-11-03T20:00:00Z"},
+      "currentYtd": {"periodStart": "2023-10-01", "periodEnd": "2024-03-30", "value": "15520675000", "accessionNumber": "0000320193-24-000069", "availableAt": "2024-05-03T20:00:00Z"},
+      "priorYtd": {"periodStart": "2022-09-25", "periodEnd": "2023-04-01", "value": "15901384000", "accessionNumber": "0000320193-24-000069", "availableAt": "2024-05-03T20:00:00Z"},
+      "expected": "15620484096.15384615"
+    },
+    "baselineTtm": {
+      "asOfTime": "2021-06-30T20:00:00Z",
+      "annual": {"periodStart": "2019-09-29", "periodEnd": "2020-09-26", "value": "17528214000", "accessionNumber": "0000320193-20-000096", "availableAt": "2020-10-30T20:00:00Z"},
+      "currentYtd": {"periodStart": "2020-09-27", "periodEnd": "2021-03-27", "value": "17021423000", "accessionNumber": "0000320193-21-000056", "availableAt": "2021-04-29T20:00:00Z"},
+      "priorYtd": {"periodStart": "2019-09-29", "periodEnd": "2020-03-28", "value": "17718591000", "accessionNumber": "0000320193-21-000056", "availableAt": "2021-04-29T20:00:00Z"},
+      "expected": "17179630000.00000000"
+    }
+  },
+  "growthBaseline": {
+    "asOfTime": "2021-06-30T20:00:00Z",
+    "revenueTtm": "325406000000",
+    "grossProfitTtm": "129776000000",
+    "operatingIncomeTtm": "88903000000",
+    "netIncomeTtm": "76311000000",
+    "freeCashFlowTtm": "90473000000"
+  },
+  "unavailableFactors": [
+    {"factor": "interest_coverage", "reason": "The 2024 Q2 filing does not expose a compatible TTM interest-expense bridge."},
+    {"factor": "valuation_guardrail", "reason": "The cohort-normalized valuation guardrail requires an eligible comparison universe."}
+  ]
+}

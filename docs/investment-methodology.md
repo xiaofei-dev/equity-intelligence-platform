@@ -23,11 +23,23 @@ Before evaluating a new strategy, the platform should reconstruct the user's his
 
 Historical performance must use the complete account where possible, not selected successful trades.
 
-## Strategy Separation
+## Investment Intent and Horizon
 
-Short-term and long-term positions must be treated as separate strategy sleeves.
+Investment intent and expected holding period are separate concepts. A
+long-held security can remain speculative, while a researched investment can
+have a shorter review horizon.
 
-### Long-Term Core Sleeve
+The platform should distinguish:
+
+- Defensive investing
+- Enterprising investing
+- Explicitly limited speculation
+
+It should separately record short, medium, or long expected horizons when the
+associated strategy defines a testable use case. A generic medium-term score is
+not part of the first methodology.
+
+### Long-Term Investment Assessment
 
 Typical inputs:
 
@@ -46,7 +58,7 @@ Expected behavior:
 - Thesis-driven review
 - Rebalancing based on fundamentals and risk
 
-### Short-Term Tactical Sleeve
+### Near-Term Market Condition
 
 Typical inputs:
 
@@ -64,7 +76,10 @@ Expected behavior:
 - Higher sensitivity to costs and slippage
 - Independent performance reporting
 
-Profits in one sleeve must not hide weaknesses in the other.
+Near-term market condition and long-term investment assessment must remain
+separate. Strong momentum must not conceal weak business quality or an
+insufficient margin of safety, and weak momentum must not automatically
+invalidate a long-term thesis.
 
 ## Screening Pipeline
 
@@ -77,10 +92,10 @@ Investable universe
 Eligibility and data-quality filters
       |
       v
-Sector ranking
+Sector, size, and company-type cohorts
       |
       v
-Quantitative stock ranking
+Strategy-specific quantitative rankings
       |
       v
 Small candidate set
@@ -118,28 +133,23 @@ Every factor requires:
 - Direction of preference
 - Version identifier
 
-## Composite Scoring
+## Strategy-Specific Assessment
 
-The final score must be explicit and versioned. An initial conceptual formula may be:
+The platform must not create one universal score for mature companies,
+early-stage growth companies, banks, insurers, REITs, and special situations.
+The first implementation supports:
 
-```text
-Final Score =
-    Quantitative Score
-  + Sector Score
-  + Fundamental Quality Score
-  + Valuation Score
-  + AI Risk Adjustment
-```
+- `Quality Compounder`
+- `Undervalued Quality`
 
-Weights are research hypotheses, not facts. They must be tested out of sample.
+Each path must preserve business quality, financial strength, earnings
+stability, growth quality, valuation, margin of safety, data confidence, and
+risk flags as separate components. Weights are research hypotheses and must be
+tested out of sample.
 
-AI should have limited influence and should primarily:
-
-- Apply documented risk adjustments
-- Flag missing or contradictory evidence
-- Require human review
-
-AI should not produce unrestricted scores or portfolio weights.
+AI must not produce unrestricted scores or portfolio weights. It supplies
+source-backed evidence that may support a result, reduce confidence, add a
+warning, or trigger a documented eligibility block.
 
 ## Portfolio Constraints
 
@@ -153,8 +163,19 @@ Initial constraints may include:
 - Volatility-aware sizing
 - Correlation awareness
 - Minimum cash reserve
+- Maximum leverage
+- Allowed rebalancing scope
 
 Initial values are configuration proposals and must not be treated as universally optimal.
+
+Portfolio analysis should compare:
+
+1. New-money-only allocation
+2. Constrained rebalancing of selected existing positions
+3. A target-portfolio simulation
+
+The system analyzes the complete portfolio even when the user permits changes
+only to new cash.
 
 ## Performance Objective
 
@@ -170,4 +191,3 @@ The platform should report:
 - Turnover and costs
 
 An aspirational compound annual return of 20% to 30% may guide research, but it must not drive overfitting, leverage, or misleading product claims.
-

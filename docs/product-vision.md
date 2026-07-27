@@ -44,8 +44,10 @@ The platform will:
 - Reduce a broad stock universe to a manageable candidate set
 - Explain why each candidate passed or failed
 - Collect and summarize source-backed qualitative evidence
-- Separate short-term and long-term strategies
+- Separate near-term market condition from long-term investment assessment
 - Apply explicit portfolio and risk constraints
+- Compare new-money-only, constrained-rebalancing, and target-portfolio
+  scenarios
 - Preserve every decision snapshot for later evaluation
 - Compare results with appropriate benchmarks
 
@@ -82,9 +84,23 @@ Initial product success means:
 - The system runs reliably on a daily schedule.
 - Candidate selection and scoring are explainable.
 - Data and source timestamps are preserved.
-- Short-term and long-term strategies are evaluated separately.
+- Quantitative screening and AI evidence review remain separately observable.
+- Candidate quality and user portfolio fit remain separate conclusions.
 - Simulated results are compared with an appropriate benchmark.
 - The user finds the workflow faster and more consistent than the existing manual process.
 
 Achieving a 20% to 30% compound annual return may be an experimental objective, but it is not an assumed product outcome or an MVP acceptance criterion.
 
+## Initial Differentiation Hypothesis
+
+The platform should not compete as another opaque AI stock score. Its proposed
+value is a traceable decision workflow that:
+
+1. Discovers candidates through reproducible, cohort-aware screening.
+2. Requires supporting and contradictory source evidence.
+3. Evaluates each idea against the user's complete portfolio.
+4. Compares use of new cash with constrained rebalancing.
+5. Preserves the thesis, invalidation conditions, and later outcome.
+
+These are hypotheses until validated through working software and repeated user
+use.

@@ -1,0 +1,52 @@
+{
+  "contractVersion": "portfolio-calculation-v1",
+  "scenarioId": "00000000-0000-0000-0000-000000000401",
+  "asOfTime": "2026-07-26T20:00:00Z",
+  "scenarioType": "CONSTRAINED_REBALANCING",
+  "baseCurrency": "USD",
+  "newMoneyAmount": "5000.00",
+  "investmentProfileVersionId": "00000000-0000-0000-0000-000000000501",
+  "accounts": [
+    {
+      "accountId": "00000000-0000-0000-0000-000000000301",
+      "accountType": "REAL",
+      "cashBalances": [
+        {
+          "currency": "USD",
+          "settledAmount": "2500.00",
+          "unsettledAmount": "0.00",
+          "restrictedAmount": "0.00"
+        }
+      ],
+      "positions": [
+        {
+          "securityId": "00000000-0000-0000-0000-000000000601",
+          "quantity": "10.00",
+          "averageCost": "175.00",
+          "costCurrency": "USD"
+        }
+      ],
+      "liabilities": []
+    }
+  ],
+  "userLiabilities": [],
+  "constraints": {
+    "maximumPositionCount": 20,
+    "maximumPositionWeight": "0.10",
+    "maximumSectorWeight": "0.25",
+    "minimumCashWeight": "0.05",
+    "maximumLeverageRatio": "0.00",
+    "maximumSpeculativeWeight": "0.05",
+    "sectorConstraints": []
+  },
+  "rebalancingPermissions": [
+    {
+      "securityId": "00000000-0000-0000-0000-000000000601",
+      "permission": "SELL_ONLY",
+      "maximumQuantityChange": "2.00",
+      "maximumWeightChange": null
+    }
+  ],
+  "screeningRunId": "00000000-0000-0000-0000-000000000701",
+  "marketDataSnapshotId": "snapshot-2026-07-26"
+}

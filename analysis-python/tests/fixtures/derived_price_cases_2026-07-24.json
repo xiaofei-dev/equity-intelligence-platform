@@ -1,0 +1,88 @@
+{
+  "fixtureVersion": "derived-price-cases-v1.0.0",
+  "provider": "twelve_data",
+  "accessedAt": "2026-07-26T13:20:00-07:00",
+  "requestPolicy": {
+    "interval": "1day",
+    "startDate": "2025-12-01",
+    "endDate": "2026-07-25",
+    "adjustmentMode": "all",
+    "rawResponsesStored": false
+  },
+  "derivation": {
+    "return20d": "close[t] / close[t-20] - 1",
+    "return60d": "close[t] / close[t-60] - 1",
+    "return120d": "close[t] / close[t-120] - 1",
+    "volatility60d": "sample standard deviation of 60 daily returns * sqrt(252)",
+    "maxDrawdown120d": "absolute minimum of close / running peak - 1 over 120 observations",
+    "canonicalHashOrder": "symbol|asOfDate|return20d|return60d|return120d|volatility60d|maxDrawdown120d"
+  },
+  "observations": [
+    {
+      "symbol": "AAPL",
+      "asOfDate": "2026-07-24",
+      "observationCount": 162,
+      "return20d": "0.21032165",
+      "return60d": "0.23134131",
+      "return120d": "0.28587169",
+      "volatility60d": "0.28787874",
+      "maxDrawdown120d": "0.12706224",
+      "derivedRowHash": "31afe896e86ab2ca0ff1528f7f61abdf3d5441320c6ea1e08e7fdb219e09321d"
+    },
+    {
+      "symbol": "MSFT",
+      "asOfDate": "2026-07-24",
+      "observationCount": 162,
+      "return20d": "0.08182417",
+      "return60d": "-0.10876095",
+      "return120d": "-0.10926684",
+      "volatility60d": "0.33748960",
+      "maxDrawdown120d": "0.23384435",
+      "derivedRowHash": "905a19217b34fd944f3696c92bc74b5be3c60396a9894f8f211c2b933868a808"
+    },
+    {
+      "symbol": "TGT",
+      "asOfDate": "2026-07-24",
+      "observationCount": 162,
+      "return20d": "-0.01999004",
+      "return60d": "0.08589123",
+      "return120d": "0.32217875",
+      "volatility60d": "0.34733426",
+      "maxDrawdown120d": "0.10694052",
+      "derivedRowHash": "94e071f18fa60612ccc2ae96e11d8cc664d3290031443698b7d17cbee6ab0a0c"
+    },
+    {
+      "symbol": "GE",
+      "asOfDate": "2026-07-24",
+      "observationCount": 162,
+      "return20d": "-0.04628822",
+      "return60d": "0.22465550",
+      "return120d": "0.15611840",
+      "volatility60d": "0.34060790",
+      "maxDrawdown120d": "0.20851656",
+      "derivedRowHash": "1fd2af451915fec26edf3068b6aa4cc6b49fd2f920e8d88ad0dba19a1011338d"
+    },
+    {
+      "symbol": "META",
+      "asOfDate": "2026-07-24",
+      "observationCount": 162,
+      "return20d": "0.09637666",
+      "return60d": "-0.11263478",
+      "return120d": "-0.16788186",
+      "volatility60d": "0.45682258",
+      "maxDrawdown120d": "0.25517560",
+      "derivedRowHash": "9cc93deb4fa8b197257f15848282ec5e5b95d918cd3c95ec3174774108bd7048"
+    },
+    {
+      "symbol": "SPY",
+      "asOfDate": "2026-07-24",
+      "observationCount": 162,
+      "return20d": "0.00630532",
+      "return60d": "0.04094307",
+      "return120d": "0.07352414",
+      "volatility60d": "0.13236447",
+      "maxDrawdown120d": "0.08875167",
+      "derivedRowHash": "b5850b66ae0c93b90512a40473a26707c83304596096b35af4ca932e5fb001a2"
+    }
+  ]
+}
