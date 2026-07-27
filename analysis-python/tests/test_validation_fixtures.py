@@ -60,3 +60,32 @@ def test_derived_historical_price_fixture_is_integral_and_economically_coherent(
     assert Decimal(observations["SPY"]["volatility60d"]) < Decimal(
         observations["META"]["volatility60d"]
     )
+
+
+def test_sec_pit_filing_fixture_is_hashed_and_never_uses_future_filings() -> None:
+    data = json.loads(
+        (FIXTURE_DIRECTORY / "sec_pit_filing_cases_2026-07-26.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    cases = data["cases"]
+
+    for item in cases:
+        canonical = "|".join(
+            [
+                item["symbol"],
+                item["cik"],
+                item["asOfTime"],
+                item["form"],
+                item["filingDate"],
+                item["acceptanceDatetime"],
+                item["accessionNumber"],
+                item["reportDate"],
+            ]
+        )
+        assert hashlib.sha256(canonical.encode()).hexdigest() == item["contentHash"]
+        assert item["acceptanceDatetime"] <= item["asOfTime"]
+
+    meta_cases = [item for item in cases if item["symbol"] == "META"]
+    assert meta_cases[0]["accessionNumber"] == "0001326801-22-000057"
+    assert meta_cases[1]["accessionNumber"] == "0001326801-22-000082"

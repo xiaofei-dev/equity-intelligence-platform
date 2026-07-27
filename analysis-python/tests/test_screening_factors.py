@@ -6,7 +6,10 @@ from equity_analysis.screening.factors import (
     InvalidFactorInput,
     cash_conversion,
     compound_annual_growth_rate,
+    enterprise_value,
     free_cash_flow_margin,
+    invested_capital,
+    market_capitalization,
     maximum_drawdown,
     realized_volatility,
     return_on_invested_capital,
@@ -73,3 +76,28 @@ def test_near_term_price_factors_have_expected_direction_and_bounds() -> None:
     assert realized_volatility(rising_prices, 60) >= 0
     assert trend_stability(rising_prices, 120) == Decimal("1.00000000")
     assert maximum_drawdown(drawdown_prices, 6) == Decimal("0.18181818")
+
+
+def test_snapshot_value_formulas_require_positive_economic_values() -> None:
+    capital = invested_capital(
+        stockholders_equity=Decimal("70"),
+        total_debt=Decimal("100"),
+        cash_and_equivalents=Decimal("30"),
+    )
+    market_cap = market_capitalization(
+        price=Decimal("200"),
+        shares_outstanding=Decimal("15"),
+    )
+
+    assert capital == Decimal("140")
+    assert market_cap == Decimal("3000")
+    assert enterprise_value(
+        market_cap=market_cap,
+        total_debt=Decimal("100"),
+        cash_and_equivalents=Decimal("30"),
+    ) == Decimal("3070")
+
+    with pytest.raises(InvalidFactorInput):
+        market_capitalization(Decimal("0"), Decimal("15"))
+    with pytest.raises(InvalidFactorInput):
+        enterprise_value(Decimal("10"), Decimal("0"), Decimal("20"))

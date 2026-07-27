@@ -92,7 +92,16 @@ class ProviderAcceptanceService:
     ) -> SecurityValidationResult:
         checks: list[ValidationCheck] = []
         cik = security.cik
-        if cik is None and self._sec_client is None:
+        if security.expected_company_type == "BENCHMARK" and cik is None:
+            checks.append(
+                self._check(
+                    "sec_edgar",
+                    CheckCategory.SECURITY_IDENTITY,
+                    CheckStatus.NOT_APPLICABLE,
+                    "An SEC operating-company CIK is not required for a benchmark.",
+                )
+            )
+        elif cik is None and self._sec_client is None:
             checks.append(
                 self._check(
                     "sec_edgar",

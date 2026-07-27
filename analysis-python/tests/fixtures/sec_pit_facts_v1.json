@@ -1,0 +1,68 @@
+{
+  "fixtureVersion": "sec-pit-facts-v1",
+  "cik": "0000000001",
+  "symbol": "TEST",
+  "tradingDates": [
+    "2025-05-01",
+    "2025-05-02",
+    "2025-06-02",
+    "2025-06-03"
+  ],
+  "filings": [
+    {
+      "cik": "0000000001",
+      "entityName": "Point In Time Test Company",
+      "symbol": "TEST",
+      "form": "10-Q",
+      "filingDate": "2025-05-01",
+      "acceptanceDatetime": "2025-05-01T17:30:00-04:00",
+      "accessionNumber": "0000000001-25-000001",
+      "reportDate": "2025-03-31"
+    },
+    {
+      "cik": "0000000001",
+      "entityName": "Point In Time Test Company",
+      "symbol": "TEST",
+      "form": "10-Q/A",
+      "filingDate": "2025-06-02",
+      "acceptanceDatetime": "2025-06-02T08:00:00-04:00",
+      "accessionNumber": "0000000001-25-000002",
+      "reportDate": "2025-03-31"
+    }
+  ],
+  "companyFacts": {
+    "entityName": "Point In Time Test Company",
+    "facts": {
+      "us-gaap": {
+        "RevenueFromContractWithCustomerExcludingAssessedTax": {
+          "units": {
+            "USD": [
+              {
+                "start": "2025-01-01",
+                "end": "2025-03-31",
+                "val": 100,
+                "accn": "0000000001-25-000001",
+                "fy": 2025,
+                "fp": "Q1",
+                "form": "10-Q",
+                "filed": "2025-05-01",
+                "frame": "CY2025Q1"
+              },
+              {
+                "start": "2025-01-01",
+                "end": "2025-03-31",
+                "val": 110,
+                "accn": "0000000001-25-000002",
+                "fy": 2025,
+                "fp": "Q1",
+                "form": "10-Q/A",
+                "filed": "2025-06-02",
+                "frame": "CY2025Q1"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

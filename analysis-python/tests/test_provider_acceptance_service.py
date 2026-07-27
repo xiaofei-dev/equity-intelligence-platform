@@ -259,3 +259,34 @@ def test_requested_corporate_action_checks_are_never_omitted() -> None:
             assert CheckCategory.SYMBOL_HISTORY in categories
         if "delisted" in security.tests:
             assert CheckCategory.DELISTING_HISTORY in categories
+
+
+def test_benchmark_without_cik_does_not_require_sec_issuer_identity() -> None:
+    universe = AcceptanceUniverse(
+        universe_version="test-v1",
+        securities=(
+            AcceptanceSecurity(
+                symbol="XLK",
+                expected_company_type="BENCHMARK",
+                tests=("sector_etf",),
+            ),
+        ),
+    )
+    service = ProviderAcceptanceService(
+        sec_client=FakeSecClient(),
+        twelve_data_client=FakeTwelveDataClient(),
+    )
+
+    report = service.validate(
+        universe,
+        start_date=date(2020, 1, 1),
+        end_date=date(2026, 7, 25),
+    )
+
+    identity = next(
+        check
+        for check in report.results[0].checks
+        if check.category == CheckCategory.SECURITY_IDENTITY
+    )
+    assert identity.status == CheckStatus.NOT_APPLICABLE
+    assert report.results[0].cik is None

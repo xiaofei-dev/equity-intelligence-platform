@@ -1,0 +1,109 @@
+{
+  "fixtureVersion": "sec-operating-income-issuer-v1.0.0",
+  "source": "SEC EDGAR filing and companyfacts APIs",
+  "accessedAt": "2026-07-26",
+  "cases": [
+    {
+      "symbol": "ADP",
+      "cik": "0000008670",
+      "accessionNumber": "0000008670-26-000022",
+      "periodStart": "2026-01-01",
+      "periodEnd": "2026-03-31",
+      "unit": "USD",
+      "expectedOperatingIncome": 1785500000,
+      "facts": {
+        "RevenueFromContractWithCustomerExcludingAssessedTax": 5939200000,
+        "CostOfGoodsAndServicesSold": 3072000000,
+        "SellingGeneralAndAdministrativeExpense": 1081700000,
+        "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest": 1781800000,
+        "InterestExpense": 78700000,
+        "NonoperatingIncomeExpense": 75000000
+      }
+    },
+    {
+      "symbol": "ADP",
+      "cik": "0000008670",
+      "accessionNumber": "0000008670-25-000037",
+      "periodStart": "2024-07-01",
+      "periodEnd": "2025-06-30",
+      "unit": "USD",
+      "expectedOperatingIncome": 5411900000,
+      "facts": {
+        "RevenueFromContractWithCustomerExcludingAssessedTax": 20560900000,
+        "CostOfGoodsAndServicesSold": 11097300000,
+        "SellingGeneralAndAdministrativeExpense": 4051700000,
+        "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest": 5310100000,
+        "InterestExpense": 455900000,
+        "NonoperatingIncomeExpense": 354100000
+      }
+    },
+    {
+      "symbol": "ADP",
+      "cik": "0000008670",
+      "accessionNumber": "0000008670-25-000037",
+      "periodStart": "2023-07-01",
+      "periodEnd": "2024-06-30",
+      "unit": "USD",
+      "expectedOperatingIncome": 4947000000,
+      "facts": {
+        "RevenueFromContractWithCustomerExcludingAssessedTax": 19202600000,
+        "CostOfGoodsAndServicesSold": 10476700000,
+        "SellingGeneralAndAdministrativeExpense": 3778900000,
+        "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest": 4872300000,
+        "InterestExpense": 361400000,
+        "NonoperatingIncomeExpense": 286700000
+      }
+    },
+    {
+      "symbol": "NKE",
+      "cik": "0000320187",
+      "accessionNumber": "0000320187-26-000088",
+      "periodStart": "2025-06-01",
+      "periodEnd": "2026-05-31",
+      "unit": "USD",
+      "expectedOperatingIncome": 3797000000,
+      "facts": {
+        "RevenueFromContractWithCustomerExcludingAssessedTax": 46398000000,
+        "CostOfGoodsAndServicesSold": 26487000000,
+        "SellingGeneralAndAdministrativeExpense": 16114000000,
+        "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest": 3900000000,
+        "InterestIncomeExpenseNonoperatingNet": 50000000,
+        "OtherNonoperatingIncomeExpense": 53000000
+      }
+    },
+    {
+      "symbol": "NKE",
+      "cik": "0000320187",
+      "accessionNumber": "0000320187-25-000047",
+      "periodStart": "2024-06-01",
+      "periodEnd": "2025-05-31",
+      "unit": "USD",
+      "expectedOperatingIncome": 3702000000,
+      "facts": {
+        "RevenueFromContractWithCustomerExcludingAssessedTax": 46309000000,
+        "CostOfGoodsAndServicesSold": 26519000000,
+        "SellingGeneralAndAdministrativeExpense": 16088000000,
+        "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest": 3885000000,
+        "InterestIncomeExpenseNonoperatingNet": 107000000,
+        "OtherNonoperatingIncomeExpense": 76000000
+      }
+    },
+    {
+      "symbol": "NKE",
+      "cik": "0000320187",
+      "accessionNumber": "0000320187-24-000044",
+      "periodStart": "2023-06-01",
+      "periodEnd": "2024-05-31",
+      "unit": "USD",
+      "expectedOperatingIncome": 6311000000,
+      "facts": {
+        "RevenueFromContractWithCustomerExcludingAssessedTax": 51362000000,
+        "CostOfGoodsAndServicesSold": 28475000000,
+        "SellingGeneralAndAdministrativeExpense": 16576000000,
+        "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest": 6700000000,
+        "InterestIncomeExpenseNonoperatingNet": 161000000,
+        "OtherNonoperatingIncomeExpense": 228000000
+      }
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 from datetime import date, datetime
+from decimal import Decimal
 from enum import StrEnum
 from typing import Any
 
@@ -99,6 +100,56 @@ class SecFactsSummary(ValidationModel):
     available_tags: tuple[str, ...]
     required_tag_groups_present: dict[str, bool]
     matching_accession_fact_count: int
+
+
+class SecFactObservation(ValidationModel):
+    metric_code: str
+    taxonomy_tag: str
+    unit: str
+    value: Decimal
+    period_start: date | None
+    period_end: date
+    fiscal_year: int | None
+    fiscal_period: str | None
+    form: str
+    filed_at: date
+    accession_number: str
+    acceptance_datetime: datetime
+    available_at: datetime
+    frame: str | None = None
+
+
+class SecDerivedFactObservation(ValidationModel):
+    metric_code: str
+    value: Decimal
+    unit: str
+    period_start: date
+    period_end: date
+    accession_number: str
+    derivation_version: str
+    primary_components: dict[str, Decimal]
+    crosscheck_components: dict[str, Decimal]
+
+
+class TtmObservation(ValidationModel):
+    metric_code: str
+    unit: str
+    value: Decimal
+    period_end: date
+    available_at: datetime
+    formula_version: str
+    lineage_accessions: tuple[str, ...] = Field(min_length=1)
+
+
+class DiscretePeriodObservation(ValidationModel):
+    metric_code: str
+    unit: str
+    value: Decimal
+    period_start: date
+    period_end: date
+    available_at: datetime
+    formula_version: str
+    lineage_accessions: tuple[str, ...] = Field(min_length=1)
 
 
 class PriceSummary(ValidationModel):

@@ -15,7 +15,7 @@
     {"symbol": "JPM", "cik": "0000019617", "expectedCompanyType": "FINANCIAL", "tests": ["bank_exclusion"]},
     {"symbol": "PGR", "expectedCompanyType": "FINANCIAL", "tests": ["insurer_exclusion"]},
     {"symbol": "O", "cik": "0000726728", "expectedCompanyType": "REIT", "tests": ["reit_exclusion"]},
-    {"symbol": "XOM", "expectedCompanyType": "RESOURCE", "tests": ["resource_exclusion"]},
+    {"symbol": "XOM", "cik": "0000034088", "expectedCompanyType": "RESOURCE", "tests": ["resource_exclusion"]},
     {"symbol": "MRNA", "expectedCompanyType": "BIOTECHNOLOGY", "tests": ["biotechnology_exclusion"]},
     {"symbol": "LCID", "expectedCompanyType": "EMERGING_GROWTH", "tests": ["loss_making", "short_history"]},
     {"symbol": "TWTR", "cik": "0001418091", "expectedCompanyType": "SPECIAL_SITUATION", "tests": ["delisted", "final_return"]},
