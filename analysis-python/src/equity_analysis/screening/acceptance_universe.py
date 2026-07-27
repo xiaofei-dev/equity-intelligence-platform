@@ -1,4 +1,5 @@
 import argparse
+import hashlib
 import json
 import os
 from pathlib import Path
@@ -78,7 +79,38 @@ EXCHANGE_BY_SYMBOL = {
 def load_acceptance_universe(database_url: str, fixture_path: Path) -> int:
     fixture = json.loads(fixture_path.read_text(encoding="utf-8"))
     securities = fixture["securities"]
+    configuration = {
+        "market": "US",
+        "purpose": "PROVIDER_ACCEPTANCE",
+        "securityCount": len(securities),
+        "symbols": sorted(item["symbol"] for item in securities),
+    }
+    canonical_configuration = json.dumps(configuration, sort_keys=True, separators=(",", ":"))
+    configuration_hash = "sha256:" + hashlib.sha256(canonical_configuration.encode()).hexdigest()
     with psycopg.connect(database_url) as connection:
+        connection.execute(
+            """
+            INSERT INTO analytics.universe_definition (
+                version, effective_at, configuration, configuration_hash
+            ) VALUES (%s, TIMESTAMPTZ '1970-01-01 00:00:00Z', %s::jsonb, %s)
+            ON CONFLICT (version) DO NOTHING
+            """,
+            (
+                fixture["universeVersion"],
+                canonical_configuration,
+                configuration_hash,
+            ),
+        )
+        stored_hash = connection.execute(
+            """
+            SELECT configuration_hash
+            FROM analytics.universe_definition
+            WHERE version = %s
+            """,
+            (fixture["universeVersion"],),
+        ).fetchone()
+        if stored_hash is None or stored_hash[0] != configuration_hash:
+            raise ValueError("Universe version is already associated with different configuration")
         for item in securities:
             symbol = item["symbol"]
             exchange, mic = EXCHANGE_BY_SYMBOL[symbol]
