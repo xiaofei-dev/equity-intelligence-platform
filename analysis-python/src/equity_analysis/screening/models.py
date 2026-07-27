@@ -218,6 +218,9 @@ class ScreeningRunStatus(ContractModel):
     data_snapshot_id: str
     universe_version: str
     strategy_versions: tuple[str, ...]
+    submitted_at: datetime | None = None
+    started_at: datetime | None = None
+    completed_at: datetime | None = None
     coverage: CoverageSummary | None = None
     error_code: ErrorCode | None = None
     error_message: str | None = None
@@ -227,3 +230,8 @@ class RatingPage(ContractModel):
     run_id: str
     items: tuple[SecurityRating, ...]
     next_cursor: str | None = None
+
+
+class ContractError(ContractModel):
+    code: str
+    message: str

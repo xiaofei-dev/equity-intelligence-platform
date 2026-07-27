@@ -126,6 +126,9 @@ public final class ScreeningRatingContract {
 			String dataSnapshotId,
 			String universeVersion,
 			List<String> strategyVersions,
+			Instant submittedAt,
+			Instant startedAt,
+			Instant completedAt,
 			CoverageSummary coverage,
 			ErrorCode errorCode,
 			String errorMessage) {

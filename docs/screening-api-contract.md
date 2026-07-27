@@ -8,8 +8,8 @@ consumes the result; it must not reproduce the formulas.
 
 The current implementation provides immutable Python Pydantic models, matching
 Java records, a pure scoring engine, and a shared JSON compatibility fixture.
-The HTTP task lifecycle below is a versioned contract draft. Scheduling,
-persistence, authentication, and public Java endpoints are deferred.
+The HTTP task lifecycle below is implemented with PostgreSQL-backed scheduling
+and persistence. Authentication remains deferred.
 
 The analytics database now provides the persistence boundary for that future
 HTTP lifecycle. A run references a sealed data snapshot, a versioned universe,
@@ -40,6 +40,24 @@ Success is `202 Accepted` with `runId`, `status: PENDING`, and `submittedAt`.
 The same idempotency key and canonical request return the original run. Reuse
 with a different request returns `409 Conflict`.
 
+Spring Boot exposes the same operation at `POST /api/v1/screening/runs` and
+forwards the caller's `Idempotency-Key`.
+
+## Build a Data Snapshot
+
+```http
+POST /internal/v1/screening/snapshots
+```
+
+The request supplies a snapshot key, as-of time, ingestion cutoff, universe
+version, and market, fundamental, and action normalization versions. Python
+selects source records satisfying both cutoffs, constructs dated universe
+membership, hashes the canonical manifest, and seals the snapshot. The same
+key and inputs are idempotent; changed inputs return `409 Conflict`.
+
+Snapshot creation remains an internal ingestion operation and is not exposed
+by Spring Boot.
+
 ## Read Status and Ratings
 
 ```http
@@ -50,6 +68,12 @@ GET /internal/v1/screening/runs/{runId}/ratings?cursor={cursor}
 Run states are `PENDING`, `RUNNING`, `SUCCEEDED`, and `FAILED`. Status includes
 the immutable input versions, coverage counts, and an optional stable error
 code. Results are cursor-paginated and available only for a succeeded run.
+Spring Boot mirrors these reads under `/api/v1/screening/runs/{runId}` and
+`/api/v1/screening/runs/{runId}/ratings`.
+
+Rating pages are reconstructed exclusively from the completed run's immutable
+coverage, factor, lineage, horizon, strategy, and contribution records. A GET
+request never reruns normalization or scoring.
 
 Each rating exposes:
 
@@ -83,3 +107,6 @@ An error code never substitutes a zero factor or neutral score.
 [`contracts/screening-rating-v1.example.json`](../contracts/screening-rating-v1.example.json)
 is parsed by both Python and Java tests. It is the minimum wire-compatibility
 fixture, not a recommendation or production response.
+
+The directory also contains shared run-request, accepted-task, status, and
+error fixtures parsed by both Python and Java tests.

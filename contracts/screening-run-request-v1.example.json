@@ -1,0 +1,7 @@
+{
+  "asOfTime": "2026-07-25T20:00:00Z",
+  "dataSnapshotId": "snapshot-2026-07-25",
+  "universeVersion": "universe-us-general-company-v1.0.0",
+  "strategyVersions": ["QC-v1.0.0", "UQ-v1.0.0"],
+  "includeNearTermMarketCondition": true
+}

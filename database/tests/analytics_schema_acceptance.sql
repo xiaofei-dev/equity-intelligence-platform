@@ -133,6 +133,44 @@ END;
 $$;
 
 DO $$
+BEGIN
+    IF to_regclass('analytics.forward_provider_acceptance') IS NULL
+       OR to_regclass('analytics.forward_experiment') IS NULL
+       OR to_regclass('analytics.forward_enrollment') IS NULL
+       OR to_regclass('analytics.forward_candidate_signal') IS NULL
+       OR to_regclass('analytics.forward_policy_event') IS NULL
+       OR to_regclass('analytics.forward_shadow_order') IS NULL
+       OR to_regclass('analytics.forward_shadow_fill') IS NULL
+       OR to_regclass('analytics.forward_cash_flow') IS NULL
+       OR to_regclass('analytics.forward_daily_valuation') IS NULL
+       OR to_regclass('analytics.forward_observation_result') IS NULL
+       OR to_regclass('analytics.forward_metric_result') IS NULL
+       OR to_regclass('analytics.forward_report_snapshot') IS NULL THEN
+        RAISE EXCEPTION 'Forward-validation V11 tables are incomplete';
+    END IF;
+
+    IF NOT EXISTS (
+        SELECT 1
+        FROM pg_trigger
+        WHERE tgname = 'tr_forward_signal_append_only'
+          AND NOT tgisinternal
+    ) OR NOT EXISTS (
+        SELECT 1
+        FROM pg_trigger
+        WHERE tgname = 'tr_forward_observation_append_only'
+          AND NOT tgisinternal
+    ) OR NOT EXISTS (
+        SELECT 1
+        FROM pg_trigger
+        WHERE tgname = 'tr_forward_report_append_only'
+          AND NOT tgisinternal
+    ) THEN
+        RAISE EXCEPTION 'Forward-validation append-only triggers are incomplete';
+    END IF;
+END;
+$$;
+
+DO $$
 DECLARE
     duplicate_count INTEGER;
 BEGIN

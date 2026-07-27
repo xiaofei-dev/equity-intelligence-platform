@@ -1,4 +1,5 @@
 import argparse
+import json
 import os
 from datetime import date
 from pathlib import Path
@@ -50,6 +51,11 @@ def _arguments() -> argparse.Namespace:
         default=8.0,
         help="Minimum interval between Twelve Data calls; 8 seconds respects 8 credits/minute.",
     )
+    parser.add_argument(
+        "--summary-only",
+        action="store_true",
+        help="Print compact per-security statuses instead of the full derived report.",
+    )
     return parser.parse_args()
 
 
@@ -92,7 +98,31 @@ def main() -> None:
         end_date=arguments.end_date,
         symbols=symbols,
     )
-    print(report.model_dump_json(indent=2))
+    if arguments.summary_only:
+        compact = {
+            "reportVersion": report.report_version,
+            "generatedAt": report.generated_at.isoformat(),
+            "universeVersion": report.universe_version,
+            "summary": report.summary.model_dump(mode="json", by_alias=True),
+            "productionBacktestStatus": report.production_backtest_status,
+            "securities": [
+                {
+                    "symbol": result.symbol,
+                    "dailyPrice": next(
+                        (
+                            check.status
+                            for check in result.checks
+                            if check.category == "DAILY_PRICE"
+                        ),
+                        "NOT_APPLICABLE",
+                    ),
+                }
+                for result in report.results
+            ],
+        }
+        print(json.dumps(compact, indent=2, default=str))
+    else:
+        print(report.model_dump_json(indent=2))
 
 
 if __name__ == "__main__":

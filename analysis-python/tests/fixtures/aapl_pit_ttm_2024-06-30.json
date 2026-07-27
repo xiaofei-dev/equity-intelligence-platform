@@ -75,6 +75,7 @@
     "fcfYield": "0.03182912",
     "marginQuality": "0.21484168",
     "stability": "0.11283395",
+    "historicalFcfYieldPercentile": "0.00000000",
     "epsGrowth3y": "0.13102646",
     "fcfPerShareGrowth3y": "0.07403515",
     "dilution3y": "-0.03121614"
@@ -104,7 +105,6 @@
   },
   "unavailableFactors": [
     {"factor": "interest_coverage", "reason": "The 2024 Q2 filing does not expose a compatible TTM interest-expense bridge."},
-    {"factor": "valuation_guardrail", "reason": "The strategy guardrail history has not been assembled."},
-    {"factor": "historical_fcf_yield_percentile", "reason": "Twelve PIT-eligible monthly observations have not been assembled."}
+    {"factor": "valuation_guardrail", "reason": "The cohort-normalized valuation guardrail requires an eligible comparison universe."}
   ]
 }

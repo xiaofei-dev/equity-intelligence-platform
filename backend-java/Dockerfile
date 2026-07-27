@@ -6,6 +6,7 @@ COPY backend-java/mvnw backend-java/pom.xml backend-java/
 RUN cd backend-java && ./mvnw dependency:go-offline
 
 COPY database/migrations database/migrations
+COPY contracts contracts
 COPY backend-java/src backend-java/src
 RUN cd backend-java && ./mvnw package -DskipTests
 

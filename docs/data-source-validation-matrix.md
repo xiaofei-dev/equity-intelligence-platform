@@ -53,12 +53,20 @@ SEC EDGAR live responses for Apple CIK `0000320193` connected the 2026-05-01
 form, filed date, accession, USD unit, and value. This proves the minimum
 lineage fields for the tested fact, not universal issuer/tag coverage.
 
-The automated acceptance harness then tested `AAPL`, `META`, `GE`, `JPM`, `O`,
-and `TWTR`. Five active symbols each returned 1,648 adjusted daily observations
-from 2020-01-02 through 2026-07-24. AAPL returned five split and 82 dividend
-events. The current entitlement did not establish GE split history, META's
-dated ticker change, or TWTR's delisting return. See the
+The automated acceptance harness then completed the 20-security fixture.
+Nineteen current securities returned usable adjusted history; delisted `TWTR`
+did not resolve through its former current-symbol route. AAPL returned five
+split and 82 dividend events. The current entitlement did not establish
+general corporate-action coverage, META's dated ticker change, or TWTR's
+delisting return. See the
 [derived acceptance report](provider-acceptance-report-2026-07-26.md).
+
+SEC validation completed all 20 identities/model gates and all ten
+mature-company filing lineages. Historical PIT fixtures cover AAPL, MSFT and
+META filing selection. AAPL now has bounded TTM, 12-quarter stability, three-
+year growth and 12-month valuation fixtures. The cross-issuer TTM bridge passed
+for MSFT and TGT. TGT did not expose a compatible standard gross-profit fact,
+and AAPL's tested quarterly filing did not expose compatible interest expense.
 
 Automated SEC requests require an explicitly configured `SEC_USER_AGENT`
 containing an application name and real contact address. The tool does not read
@@ -67,10 +75,23 @@ return `NOT_VERIFIED`.
 
 ## Acceptance Conclusion
 
-The rating calculation and limited price/SEC lineage checks are feasible
-without a new purchase. A survivorship-safe historical production backtest is
-`NOT_VERIFIED` because symbol history, final delisting returns, full historical
-fundamental availability, and restatement semantics remain incomplete.
+The rating calculation, PIT filing selection, core SEC TTM bridge and limited
+price reconstruction are feasible without a new purchase. A survivorship-safe
+historical production backtest is `NOT_VERIFIED` because symbol history, final
+delisting returns, issuer-specific statement gaps, complete revision history,
+and commercial licensing remain incomplete.
+
+Free-source acceptance is therefore:
+
+- `ACCEPTED` for the deterministic v1 calculation and contract prototype.
+- `ACCEPTED_LIMITED` for SEC primary-source lineage and issuer sampling.
+- `ACCEPTED_LIMITED` for current-security adjusted daily prices.
+- `NOT_ACCEPTED` for a production full-market PIT backtest dataset.
+
+The next paid trial, if separately authorized, must focus on dated ticker
+events, delisting proceeds, historical revisions, general corporate actions,
+AAPL interest expense and TGT gross profit. Broad endpoint availability alone
+is not a reason to subscribe.
 
 No provider may move from `DOCUMENTED_CANDIDATE` to approved until the
 20-security fixture passes field coverage, units, action dates, null behavior,
@@ -85,3 +106,11 @@ commercial license review.
 - [EODHD financial APIs](https://eodhd.com/financial-apis)
 - [Financial Modeling Prep stable API](https://site.financialmodelingprep.com/developer/docs/stable)
 - [Massive Stocks REST API](https://massive.com/docs/rest/stocks)
+
+## Expanded Development Universe
+
+`provider-acceptance-us-v2.0.0` contains 66 unique symbols. The paced
+2026-07-27 Twelve Data run returned adjusted daily history for 65 and left
+only delisted `TWTR` as `NOT_VERIFIED`; no daily-price check failed. This is a
+broader development-price validation, not production PIT acceptance or proof
+that the observations have been persisted to PostgreSQL.

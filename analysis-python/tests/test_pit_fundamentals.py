@@ -222,7 +222,7 @@ def test_aapl_pit_ttm_fixture_derives_expected_sec_values() -> None:
     unavailable = {item["factor"] for item in fixture["unavailableFactors"]}
     assert {
         "interest_coverage",
-        "historical_fcf_yield_percentile",
+        "valuation_guardrail",
     } <= unavailable
 
 

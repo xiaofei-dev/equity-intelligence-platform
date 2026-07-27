@@ -157,6 +157,12 @@ TTM shares, not point-in-time shares outstanding.
 | Free-cash-flow yield | `TTM FCF / market capitalization`; market capitalization must be positive. |
 | Valuation discount | The mean of available inverse valuation percentile scores: earnings yield, FCF yield, and the security's own five-year FCF-yield percentile. A historical comparator needs 12 PIT-eligible monthly observations. |
 
+The historical FCF-yield percentile uses an ascending midrank:
+`100 x (count below + (count equal - 1) / 2) / (n - 1)`. The target window is
+60 monthly observations and the v1 minimum is 12. Every month uses the last
+available adjusted close plus only the TTM FCF and reported shares available by
+that month-end.
+
 ## Strategy Formulas
 
 Factor scores are cohort percentiles. A missing required factor makes the

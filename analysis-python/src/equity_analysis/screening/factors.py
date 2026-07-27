@@ -167,6 +167,26 @@ def margin_quality(
     )
 
 
+def historical_percentile_rank(
+    values: tuple[Decimal, ...],
+    current_value: Decimal,
+) -> Decimal:
+    if len(values) < 12:
+        raise InvalidFactorInput(
+            "historical_percentile_rank requires at least 12 observations"
+        )
+    if current_value not in values:
+        raise InvalidFactorInput(
+            "historical_percentile_rank requires the current value in history"
+        )
+    less = sum(value < current_value for value in values)
+    equal = sum(value == current_value for value in values)
+    numerator = Decimal(less) + Decimal(equal - 1) / Decimal("2")
+    return _quantize(
+        Decimal("100") * numerator / Decimal(len(values) - 1)
+    )
+
+
 def total_return(prices: tuple[Decimal, ...], lookback: int) -> Decimal:
     if lookback <= 0 or len(prices) <= lookback:
         raise InvalidFactorInput("total_return requires lookback plus one positive prices")

@@ -11,6 +11,9 @@ import org.junit.jupiter.api.Test;
 import com.xiaofei.equity.screening.ScreeningRatingContract.AssessmentStatus;
 import com.xiaofei.equity.screening.ScreeningRatingContract.Horizon;
 import com.xiaofei.equity.screening.ScreeningRatingContract.RatingPage;
+import com.xiaofei.equity.screening.ScreeningRatingContract.ScreeningRunAccepted;
+import com.xiaofei.equity.screening.ScreeningRatingContract.ScreeningRunRequest;
+import com.xiaofei.equity.screening.ScreeningRatingContract.ScreeningRunStatus;
 
 import tools.jackson.databind.json.JsonMapper;
 
@@ -38,12 +41,35 @@ class ScreeningRatingContractTests {
 				});
 	}
 
+	@Test
+	void deserializesSharedRunLifecycleFixtures() throws Exception {
+		JsonMapper objectMapper = JsonMapper.builder().findAndAddModules().build();
+
+		ScreeningRunRequest request = objectMapper.readValue(
+				Files.readString(findFixture("screening-run-request-v1.example.json")),
+				ScreeningRunRequest.class);
+		ScreeningRunAccepted accepted = objectMapper.readValue(
+				Files.readString(findFixture("screening-run-accepted-v1.example.json")),
+				ScreeningRunAccepted.class);
+		ScreeningRunStatus status = objectMapper.readValue(
+				Files.readString(findFixture("screening-run-status-v1.example.json")),
+				ScreeningRunStatus.class);
+
+		assertThat(request.strategyVersions()).containsExactly("QC-v1.0.0", "UQ-v1.0.0");
+		assertThat(accepted.status()).isEqualTo(ScreeningRatingContract.RunStatus.PENDING);
+		assertThat(status.coverage().universeCount()).isEqualTo(20);
+	}
+
 	private Path findFixture() {
-		Path fromRepositoryRoot = Path.of("contracts", "screening-rating-v1.example.json");
+		return findFixture("screening-rating-v1.example.json");
+	}
+
+	private Path findFixture(String fileName) {
+		Path fromRepositoryRoot = Path.of("contracts", fileName);
 		if (Files.exists(fromRepositoryRoot)) {
 			return fromRepositoryRoot;
 		}
-		Path fromModuleRoot = Path.of("..", "contracts", "screening-rating-v1.example.json");
+		Path fromModuleRoot = Path.of("..", "contracts", fileName);
 		if (Files.exists(fromModuleRoot)) {
 			return fromModuleRoot;
 		}

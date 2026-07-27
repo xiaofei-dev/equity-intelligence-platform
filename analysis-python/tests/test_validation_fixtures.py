@@ -6,6 +6,23 @@ from pathlib import Path
 FIXTURE_DIRECTORY = Path(__file__).parent / "fixtures"
 
 
+def test_expanded_provider_universe_has_unique_stratified_symbols() -> None:
+    data = json.loads(
+        (FIXTURE_DIRECTORY / "provider_acceptance_universe_v2.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    securities = data["securities"]
+    symbols = [security["symbol"] for security in securities]
+
+    assert len(symbols) == 66
+    assert len(set(symbols)) == 66
+    assert {"NBN", "PLAB", "ELF", "AAPL", "TWTR", "SPY"} <= set(symbols)
+    nbn = next(security for security in securities if security["symbol"] == "NBN")
+    assert nbn["cik"] == "0000811831"
+    assert nbn["expectedCompanyType"] == "FINANCIAL"
+
+
 def test_provider_acceptance_universe_covers_required_cases() -> None:
     data = json.loads(
         (FIXTURE_DIRECTORY / "provider_acceptance_universe_v1.json").read_text(

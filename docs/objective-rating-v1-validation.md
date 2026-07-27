@@ -31,6 +31,10 @@ full-market historical backtest. Production data acceptance remains
 - A bounded AAPL PIT factor reconstruction for ROIC, operating margin,
   net-debt/EBITDA, earnings yield and FCF yield, with incomplete strategies
   remaining unscored.
+- Hashed AAPL 12-quarter stability, three-year per-share growth and 12-month
+  historical FCF-yield fixtures.
+- A hashed cross-issuer TTM portability fixture proving MSFT core-field and
+  interest coverage while preserving TGT gross profit as explicitly missing.
 
 ## Reasonableness Checks
 
@@ -64,7 +68,16 @@ The tests establish economic direction rather than a desired stock ordering:
 
 ## Next Gate
 
-Before full ranking or backtesting, populate the 20-security acceptance
-worksheet from an approved provider trial, cross-check at least 30 facts
-against SEC filings, verify at least 20 price/action events, and run the
-adversarial PIT tests defined in the v1 specification.
+The executable method-validation objective is complete. The approved immediate
+implementation scope is limited to:
+
+- immutable provider-neutral observations and lineage;
+- pure versioned factor and scoring functions;
+- bounded SEC/Twelve Data validation adapters;
+- shared Python/Java wire fixtures; and
+- derived acceptance fixtures that may be redistributed.
+
+Do not implement a production universe loader, full historical backfill,
+screening scheduler or performance backtest until a bounded paid-provider trial
+closes the remaining identity, delisting, revision, corporate-action and
+issuer-specific statement gaps.

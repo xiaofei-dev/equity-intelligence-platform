@@ -50,9 +50,11 @@ traceable, and proven suitable for historical use.
 
 ## Phase 2: Explainable Quantitative Screening
 
-- Implement general-company eligibility and data-quality filters
-- Implement `Quality Compounder`
-- Implement `Undervalued Quality`
+- [x] Implement the versioned screening task and immutable result pipeline
+- [x] Connect the Spring Boot public API to the FastAPI screening contract
+- [ ] Complete general-company raw-input derivation for the 20-security universe
+- [x] Implement `Quality Compounder`
+- [x] Implement `Undervalued Quality`
 - Compare within sector, size, company-type, and strategy cohorts
 - Preserve raw factors, normalized contributions, exclusions, and confidence
 - Version strategy configuration

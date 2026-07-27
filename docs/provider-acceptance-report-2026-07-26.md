@@ -163,6 +163,7 @@ adjusted close. The following additional raw factor values are reproducible:
 | Three-year dilution | `-0.03121614` |
 | Margin quality | `0.21484168` |
 | Stability | `0.11283395` |
+| Historical FCF-yield percentile | `0.00000000` |
 
 ROIC uses stockholders' equity plus total debt minus cash at 2024-03-30 and
 2023-04-01. Market capitalization uses 15,337,686,000 reported common shares
@@ -179,9 +180,46 @@ coefficient of variation is `0.06375535`; the FCF-margin coefficient is
 `0.16191254`.
 
 No QC/UQ score is emitted. Interest coverage lacks a compatible TTM interest
-expense observation, while the valuation guardrail and historical FCF-yield
-percentile still lack their required histories. Under v1 missing-factor rules,
-both strategies remain `INSUFFICIENT_DATA`.
+expense observation, while the valuation guardrail requires an eligible
+comparison cohort. Under v1 missing-factor rules, both strategies remain
+`INSUFFICIENT_DATA`.
+
+The historical percentile uses 12 monthly observations from July 2023 through
+June 2024. Each row combines the last adjusted close, the latest PIT TTM FCF,
+reported shares and the governing SEC accession. The target is 60 months, so
+the current result passes the v1 minimum but records 12/60 coverage.
+
+Apple's official 2024 Q2 inline XBRL contains no interest-expense fact or
+issuer-specific interest-expense tag. Annual 2023 interest expense must not be
+silently carried forward as a 2024 TTM value. Interest coverage therefore
+remains explicitly missing and becomes a paid-provider acceptance field.
+
+## Cross-Issuer Portability
+
+The same versioned TTM bridge was applied at 2024-06-30 to MSFT and TGT.
+
+| Issuer | Verified TTM fields | Explicit gap |
+| --- | --- | --- |
+| MSFT | Revenue, gross profit, operating income, net income, CFO, capex and interest expense | None in the bounded bridge |
+| TGT | Revenue, operating income, net income, CFO, capex and interest expense | No compatible standard gross-profit fact |
+
+MSFT produced TTM operating income of USD 105.762 billion, FCF of USD 70.576
+billion and interest expense of USD 2.716 billion. TGT produced TTM operating
+income of USD 5.675 billion, FCF of USD 4.582 billion and interest expense of
+USD 461 million. These values prove formula portability, not ranking
+eligibility. TGT margin quality remains missing rather than being inferred from
+an unapproved cost-of-sales mapping.
+
+## Final Acceptance Decision
+
+Objective Rating v1 method and contract validation is **accepted**. Free-source
+production data acceptance is **not accepted**.
+
+Implementation may proceed only for provider-neutral immutable observations,
+pure factors/scoring, bounded adapters and contract fixtures. Full-market
+backfill, production ranking and backtesting remain blocked on a separately
+authorized vendor trial for dated identity history, delisting returns,
+revisions, general corporate actions and issuer-specific statement fields.
 
 ## Decision
 
@@ -211,3 +249,32 @@ selector applies an explicit as-of cutoff, preserves accession and period
 metadata, and proves that a later amendment cannot change an earlier result.
 The production gate remains `NOT_VERIFIED` until real multi-period issuer
 fixtures and the remaining provider checks pass.
+
+## Expanded 66-Security Price Validation
+
+A second stratified development universe was validated on 2026-07-27 with the
+existing Twelve Data entitlement and the same eight-second request interval.
+It contains 66 unique symbols spanning general companies, capitalization
+bands, specialized-model exclusions, benchmarks, ticker changes, and a
+delisted case.
+
+| Adjusted daily price result | Count |
+| --- | ---: |
+| `PASS` | 65 |
+| `NOT_VERIFIED` | 1 |
+| `FAIL` | 0 |
+
+`TWTR` is the only `NOT_VERIFIED` price case because the current contract does
+not provide delisted-symbol history. All other symbols returned adjusted daily
+history for their available listing periods.
+
+For `NBN`, Twelve Data returned 1,648 observations from 2020-01-02 through
+2026-07-24. SEC ticker lookup did not resolve the issuer, so the fixture pins
+Northeast Bancorp to CIK `0000811831` from the official filing archive. Filing
+lineage then passed, while general-company revenue and operating-income tag
+groups remained unavailable. As a financial company, `NBN` remains
+`SPECIALIZED_MODEL_REQUIRED`.
+
+This validates broader development-price access. It does not establish
+PostgreSQL persistence, delisting returns, full PIT fundamentals, or
+production provider acceptance.

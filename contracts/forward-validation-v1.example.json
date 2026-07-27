@@ -1,0 +1,10 @@
+{
+  "experimentId": "018f1f4a-7b91-7e10-9ab1-0d4d10c7b001",
+  "reportType": "TWO_MONTH",
+  "asOfTime": "2026-10-02T21:00:00Z",
+  "preliminaryConclusion": "INSUFFICIENT_SAMPLE",
+  "statisticalEdgeProven": "NOT_ESTABLISHED",
+  "completedEpisodeCount": 12,
+  "operationalCompleteness": "0.97500000",
+  "resultHash": "sha256:forward-validation-v1-example"
+}
