@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "formula-ready-frozen-slice-v1.0.0",
+  "sourceManifestContentHash": "856CF4C3C1174D258CB69D758BBE7740EE04A92E398E7A0841BAB3EBD7652EBC",
+  "sliceId": "formula-ready-remaining-004",
+  "sequence": 4,
+  "symbols": [
+    "CMS",
+    "CNC",
+    "CNP",
+    "COHR",
+    "COO",
+    "COR",
+    "CPRT",
+    "CRH",
+    "CRL",
+    "CRM",
+    "CROX",
+    "CRWD",
+    "CSCO",
+    "CSX",
+    "CTSH",
+    "CTVA",
+    "CVNA",
+    "CVS",
+    "D",
+    "DAL"
+  ],
+  "automaticSelection": false,
+  "automaticReplacement": false,
+  "contentHash": "DE8638A620166A45B46BFC1CF5D7BF6598FCDD98224E8463CC1BAF0E54F49123"
+}

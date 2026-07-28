@@ -1,0 +1,42 @@
+{
+  "artifactType": "SEC_SCORING_SUPPLEMENT_GIT_SAFE_MANIFEST",
+  "runId": "20260727T201423Z-f94523bfc322",
+  "reportSha256": "439B44A1FD736601D4FA4E5E4BA34EED4A290CC1DA6DFC512F5813656E2A275C",
+  "diagnosticSha256": "8AEA6B6C5219BB7786406512169207E4C7560C99CCF85829DEA6E309CBC21D0A",
+  "licensedValuesIncluded": false,
+  "receipts": [
+    {
+      "symbol": "AAPL",
+      "contentHash": "83F478441CF8AA11A10E36633CB8815B5DA3737A6142BE1BDD564ED0E0F40A05",
+      "storageReference": "storage/provider-validation/scoring-inputs-v2/AAPL/83F478441CF8AA11A10E36633CB8815B5DA3737A6142BE1BDD564ED0E0F40A05.json",
+      "recordCount": 10404,
+      "datasetCoverage": {
+        "DAILY_PRICE": 9888,
+        "FINANCIAL": 254,
+        "HISTORICAL_MARKET_CAP": 262
+      }
+    },
+    {
+      "symbol": "CAT",
+      "contentHash": "E736F990F76D88F04FB871F0D02A80D853F7EC0C8F2F64934B3524E1432A86C2",
+      "storageReference": "storage/provider-validation/scoring-inputs-v2/CAT/E736F990F76D88F04FB871F0D02A80D853F7EC0C8F2F64934B3524E1432A86C2.json",
+      "recordCount": 10372,
+      "datasetCoverage": {
+        "DAILY_PRICE": 9888,
+        "FINANCIAL": 223,
+        "HISTORICAL_MARKET_CAP": 261
+      }
+    },
+    {
+      "symbol": "JNJ",
+      "contentHash": "41931F67FFAD86D46092D0A8727EFBC6CA80528A98336DDE963FB4EC67A3B191",
+      "storageReference": "storage/provider-validation/scoring-inputs-v2/JNJ/41931F67FFAD86D46092D0A8727EFBC6CA80528A98336DDE963FB4EC67A3B191.json",
+      "recordCount": 10398,
+      "datasetCoverage": {
+        "DAILY_PRICE": 9888,
+        "FINANCIAL": 249,
+        "HISTORICAL_MARKET_CAP": 261
+      }
+    }
+  ]
+}

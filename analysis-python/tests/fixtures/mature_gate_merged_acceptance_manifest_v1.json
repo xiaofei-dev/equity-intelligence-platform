@@ -1,0 +1,75 @@
+{
+  "manifestVersion": "mature-gate-merged-acceptance-manifest-v1.0.0",
+  "targetPassCount": 100,
+  "baseRun": {
+    "evidenceType": "LIVE_IMMUTABLE_REPORT",
+    "runId": "20260727T074150Z-50407538afa9",
+    "reportPath": "docs/generated/mature-company-data-gate-20260727T074150Z-50407538afa9.json",
+    "reportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+    "dashboardBefore": 11512,
+    "dashboardAfter": 14387,
+    "provisionalBilling": 3125,
+    "billingSafetyCeiling": 4688
+  },
+  "liveOverrides": [
+    {
+      "evidenceType": "LIVE_IMMUTABLE_REPORT",
+      "sequence": 1,
+      "runId": "20260727T173753Z-079c976fda3f",
+      "reportPath": "docs/generated/mature-company-data-gate-20260727T173753Z-079c976fda3f.json",
+      "reportSha256": "E2BA494C22EC480712221D8D948468E2E6A383CF2612D014052280FC41521EB7",
+      "diagnosticPath": "docs/generated/mature-company-data-gate-20260727T173753Z-079c976fda3f-diagnostics.json",
+      "diagnosticSha256": "75F4A97458890E73F3614BB7A57E037A171F29D229606B5F2F87CCA7677223DF",
+      "dashboardBefore": 14387,
+      "dashboardAfter": 14502,
+      "provisionalBilling": 125,
+      "billingSafetyCeiling": 188
+    },
+    {
+      "evidenceType": "LIVE_IMMUTABLE_REPORT",
+      "sequence": 2,
+      "runId": "20260727T174805Z-516116490045",
+      "reportPath": "docs/generated/mature-company-data-gate-20260727T174805Z-516116490045.json",
+      "reportSha256": "3081F6B1F9AEC51BF70A988B3BAE8895D71AC10894BB6F4D35D6242DCFE46CFC",
+      "diagnosticPath": "docs/generated/mature-company-data-gate-20260727T174805Z-516116490045-diagnostics.json",
+      "diagnosticSha256": "DF6C7B32624E627B187363B7960C529834678470195961FD6600D2819112E79E",
+      "dashboardBefore": 14502,
+      "dashboardAfter": 14571,
+      "provisionalBilling": 75,
+      "billingSafetyCeiling": 113
+    },
+    {
+      "evidenceType": "LIVE_IMMUTABLE_REPORT",
+      "sequence": 3,
+      "runId": "20260727T175355Z-be763adcfa24",
+      "reportPath": "docs/generated/mature-company-data-gate-20260727T175355Z-be763adcfa24.json",
+      "reportSha256": "E631B056BB023CAF7C7EA1D3CB5445872EE1BC297C3B8721ACC40C0CDCF097B5",
+      "diagnosticPath": "docs/generated/mature-company-data-gate-20260727T175355Z-be763adcfa24-diagnostics.json",
+      "diagnosticSha256": "23D99BC4CA0BC097B85B7336008CA387906E05168AE1F12E853D104CFAB46481",
+      "dashboardBefore": 14571,
+      "dashboardAfter": 14778,
+      "provisionalBilling": 225,
+      "billingSafetyCeiling": 338
+    },
+    {
+      "evidenceType": "LIVE_IMMUTABLE_REPORT",
+      "sequence": 4,
+      "runId": "20260727T175552Z-925cd46d35ff",
+      "reportPath": "docs/generated/mature-company-data-gate-20260727T175552Z-925cd46d35ff.json",
+      "reportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "diagnosticPath": "docs/generated/mature-company-data-gate-20260727T175552Z-925cd46d35ff-diagnostics.json",
+      "diagnosticSha256": "3C7CC8E935E68D887FC5BA7244A8A05E199DC648FBD41355D664098BC8E07C76",
+      "dashboardBefore": 14778,
+      "dashboardAfter": 15238,
+      "provisionalBilling": 500,
+      "billingSafetyCeiling": 750
+    }
+  ],
+  "offlineEvidence": [
+    {
+      "artifactPath": "docs/generated/mature-company-data-gate-20260727T175147Z-9f3b3532ca68-offline-reclassification.json",
+      "artifactSha256": "C04EDE2A733DA4D0BAD730A61E281140D2CC60EF19A362CD4F8594C8A980C124",
+      "eligibleForStatusOverride": false
+    }
+  ]
+}

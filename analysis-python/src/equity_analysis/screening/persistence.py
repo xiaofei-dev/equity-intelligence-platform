@@ -213,7 +213,7 @@ class ScreeningRepository:
                 SELECT security.public_id, member.symbol_at_snapshot,
                        COALESCE(member.normalized_sector_at_snapshot, 'UNCLASSIFIED'),
                        member.company_type_at_snapshot,
-                       COALESCE((
+                       (
                          SELECT numeric_value FROM analytics.market_value_observation value
                          JOIN analytics.data_snapshot_source snapshot_source
                            ON snapshot_source.snapshot_id = member.snapshot_id
@@ -229,7 +229,7 @@ class ScreeningRepository:
                            AND value.ingested_at <= snapshot.ingestion_cutoff
                          ORDER BY value.observation_date DESC, value.available_at DESC,
                                   value.revision_number DESC LIMIT 1
-                       ), 0) AS market_cap
+                       ) AS market_cap
                 FROM analytics.snapshot_universe_member member
                 JOIN analytics.security security ON security.id = member.security_id
                 JOIN analytics.screening_run run ON run.snapshot_id = member.snapshot_id
@@ -277,9 +277,23 @@ class ScreeningRepository:
                     if name in price_factors
                     else FactorInput(
                         name=name,
-                        value=by_factor[name][1] if name in by_factor else None,
-                        status=(FactorStatus.VALID if name in by_factor else FactorStatus.MISSING),
-                        reason=None if name in by_factor else "Snapshot input is unavailable",
+                        value=(
+                            by_factor[name][1]
+                            if market_cap is not None and name in by_factor
+                            else None
+                        ),
+                        status=(
+                            FactorStatus.VALID
+                            if market_cap is not None and name in by_factor
+                            else FactorStatus.MISSING
+                        ),
+                        reason=(
+                            "Point-in-time market capitalization is unavailable"
+                            if market_cap is None
+                            else None
+                            if name in by_factor
+                            else "Snapshot input is unavailable"
+                        ),
                         lineage=(
                             (
                                 DataLineage(
@@ -298,7 +312,7 @@ class ScreeningRepository:
                                     content_hash=by_factor[name][10],
                                 ),
                             )
-                            if name in by_factor
+                            if market_cap is not None and name in by_factor
                             else ()
                         ),
                     )
@@ -310,7 +324,13 @@ class ScreeningRepository:
                         symbol=symbol,
                         as_of_time=run[0],
                         sector=sector,
-                        size_cohort=self._size_cohort(Decimal(market_cap)),
+                        # The public v1 wire model requires a cohort enum. All factors
+                        # are forced missing above, so this placeholder is never ranked.
+                        size_cohort=(
+                            self._size_cohort(Decimal(market_cap))
+                            if market_cap is not None
+                            else SizeCohort.SMALL
+                        ),
                         company_type=CompanyType(company_type),
                         factors=factors,
                     )
@@ -351,7 +371,17 @@ class ScreeningRepository:
                   AND price.trading_date <= snapshot.as_of_time::date
                   AND price.available_at <= snapshot.as_of_time
                   AND price.ingested_at <= snapshot.ingestion_cutoff
-                ORDER BY price.trading_date, price.available_at, price.revision_number
+                  AND provider.code = snapshot.market_data_provider
+                  AND (
+                    CASE LOWER(price.adjustment_mode)
+                      WHEN 'none' THEN 'UNADJUSTED'
+                      WHEN 'splits' THEN 'SPLIT_ADJUSTED'
+                      WHEN 'all' THEN 'TOTAL_RETURN_ADJUSTED'
+                      ELSE UPPER(price.adjustment_mode)
+                    END
+                  ) = snapshot.market_adjustment_mode
+                ORDER BY price.trading_date, price.available_at,
+                         price.ingested_at, price.revision_number
                 """,
                 (run_id, target_public_id, target_public_id, symbol, symbol),
             ).fetchall()

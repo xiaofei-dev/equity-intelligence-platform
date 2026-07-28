@@ -1,0 +1,2906 @@
+{
+  "artifactType": "OBJECTIVE_RATING_ALGORITHM_GATE",
+  "schemaVersion": "objective-rating-algorithm-gate-v1.0.0",
+  "input": {
+    "mergedAcceptancePath": "mature-company-data-gate-20260727T180044Z-2f1f1849e3a3-merged-acceptance.json",
+    "mergedAcceptanceSha256": "5080DA05519C2F03B603BC499698A3298C1225A4BCF4EBFF8A6961697C730475",
+    "mergedAcceptanceContentHash": "BB4C5D940359354DF377D9C6375B756969352D6BE69AA3FC535EEEC7812599FF",
+    "providerGateStatus": "PASS",
+    "providerPassCount": 100,
+    "componentReports": [
+      {
+        "runId": "20260727T074150Z-50407538afa9",
+        "path": "mature-company-data-gate-20260727T074150Z-50407538afa9.json",
+        "sha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+        "rawProviderValuesIncluded": null
+      },
+      {
+        "runId": "20260727T173753Z-079c976fda3f",
+        "path": "mature-company-data-gate-20260727T173753Z-079c976fda3f.json",
+        "sha256": "E2BA494C22EC480712221D8D948468E2E6A383CF2612D014052280FC41521EB7",
+        "rawProviderValuesIncluded": null
+      },
+      {
+        "runId": "20260727T174805Z-516116490045",
+        "path": "mature-company-data-gate-20260727T174805Z-516116490045.json",
+        "sha256": "3081F6B1F9AEC51BF70A988B3BAE8895D71AC10894BB6F4D35D6242DCFE46CFC",
+        "rawProviderValuesIncluded": null
+      },
+      {
+        "runId": "20260727T175355Z-be763adcfa24",
+        "path": "mature-company-data-gate-20260727T175355Z-be763adcfa24.json",
+        "sha256": "E631B056BB023CAF7C7EA1D3CB5445872EE1BC297C3B8721ACC40C0CDCF097B5",
+        "rawProviderValuesIncluded": null
+      },
+      {
+        "runId": "20260727T175552Z-925cd46d35ff",
+        "path": "mature-company-data-gate-20260727T175552Z-925cd46d35ff.json",
+        "sha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+        "rawProviderValuesIncluded": null
+      }
+    ]
+  },
+  "versions": {
+    "qualityCompounder": "QC-v1.0.0",
+    "undervaluedQuality": "UQ-v1.0.0"
+  },
+  "formulaManifest": {
+    "qualityCompounderWeights": {
+      "roic": "0.25",
+      "fcf_margin": "0.10",
+      "cash_conversion": "0.10",
+      "margin_quality": "0.075",
+      "stability": "0.075",
+      "eps_growth": "0.075",
+      "fcf_per_share_growth": "0.075",
+      "net_debt_to_ebitda": "0.05",
+      "interest_coverage": "0.05",
+      "dilution": "0.10",
+      "valuation_guardrail": "0.05"
+    },
+    "undervaluedQualityWeights": {
+      "earnings_yield": "0.15",
+      "fcf_yield": "0.20",
+      "historical_fcf_yield_percentile": "0.10",
+      "roic": "0.15",
+      "operating_margin": "0.10",
+      "net_debt_to_ebitda": "0.075",
+      "interest_coverage": "0.075",
+      "cash_conversion": "0.05",
+      "stability": "0.05",
+      "dilution": "0.05"
+    },
+    "winsorizationPercentiles": [
+      "0.05",
+      "0.95"
+    ],
+    "cohortMinimums": {
+      "sectorSizeCompanyType": 20,
+      "sectorCompanyType": 30,
+      "generalCompany": 100
+    },
+    "missingDataRule": "NO_ZERO_NO_NEUTRAL_NO_WEIGHT_REDISTRIBUTION",
+    "specializedCompanyRule": "SPECIALIZED_MODEL_REQUIRED",
+    "numericType": "DECIMAL"
+  },
+  "snapshot": {
+    "status": "NOT_SEALED",
+    "pitStatus": "NOT_VERIFIABLE_FROM_REDISTRIBUTABLE_ARTIFACTS",
+    "rawNumericValuesAvailable": false,
+    "reason": "Hash-verified provider reports intentionally exclude raw provider values. They do not contain a factor-ready PIT observation snapshot."
+  },
+  "result": {
+    "algorithmGateStatus": "NOT_ACCEPTED",
+    "scoredCount": 0,
+    "insufficientDataCount": 100,
+    "notApplicableCount": 0,
+    "rankedCount": 0,
+    "determinismStatus": "PASS_FOR_GATE_DECISION",
+    "statisticalDistributionStatus": "NOT_EVALUABLE",
+    "providerPassDoesNotImplyAlgorithmEligibility": true
+  },
+  "securities": [
+    {
+      "symbol": "AAPL",
+      "sector": "Information Technology",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "ACN",
+      "sector": "Information Technology",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "ADI",
+      "sector": "Information Technology",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277"
+    },
+    {
+      "symbol": "ADP",
+      "sector": "Industrials",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T175355Z-be763adcfa24",
+      "sourceReportSha256": "E631B056BB023CAF7C7EA1D3CB5445872EE1BC297C3B8721ACC40C0CDCF097B5"
+    },
+    {
+      "symbol": "AEP",
+      "sector": "Utilities",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T175355Z-be763adcfa24",
+      "sourceReportSha256": "E631B056BB023CAF7C7EA1D3CB5445872EE1BC297C3B8721ACC40C0CDCF097B5"
+    },
+    {
+      "symbol": "AMAT",
+      "sector": "Information Technology",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277"
+    },
+    {
+      "symbol": "AMZN",
+      "sector": "Consumer Discretionary",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "APD",
+      "sector": "Materials",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "AVGO",
+      "sector": "Information Technology",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T175355Z-be763adcfa24",
+      "sourceReportSha256": "E631B056BB023CAF7C7EA1D3CB5445872EE1BC297C3B8721ACC40C0CDCF097B5"
+    },
+    {
+      "symbol": "AVY",
+      "sector": "Materials",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "BDX",
+      "sector": "Health Care",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "BMY",
+      "sector": "Health Care",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "BSX",
+      "sector": "Health Care",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "CALM",
+      "sector": "Consumer Staples",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277"
+    },
+    {
+      "symbol": "CAT",
+      "sector": "Industrials",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "CL",
+      "sector": "Consumer Staples",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "CMCSA",
+      "sector": "Communication Services",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T175355Z-be763adcfa24",
+      "sourceReportSha256": "E631B056BB023CAF7C7EA1D3CB5445872EE1BC297C3B8721ACC40C0CDCF097B5"
+    },
+    {
+      "symbol": "CMI",
+      "sector": "Industrials",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "CMS",
+      "sector": "Utilities",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "COR",
+      "sector": "Health Care",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "CROX",
+      "sector": "Consumer Discretionary",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277"
+    },
+    {
+      "symbol": "CSCO",
+      "sector": "Information Technology",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "DE",
+      "sector": "Industrials",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "DHI",
+      "sector": "Consumer Discretionary",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "DIS",
+      "sector": "Communication Services",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "DUK",
+      "sector": "Utilities",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "EA",
+      "sector": "Communication Services",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277"
+    },
+    {
+      "symbol": "ECL",
+      "sector": "Materials",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "ED",
+      "sector": "Utilities",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "ELF",
+      "sector": "Consumer Discretionary",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "EMR",
+      "sector": "Industrials",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "ETN",
+      "sector": "Industrials",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277"
+    },
+    {
+      "symbol": "EXC",
+      "sector": "Utilities",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277"
+    },
+    {
+      "symbol": "FAST",
+      "sector": "Industrials",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277"
+    },
+    {
+      "symbol": "FIX",
+      "sector": "Industrials",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "GD",
+      "sector": "Industrials",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "GIS",
+      "sector": "Consumer Staples",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "GOOGL",
+      "sector": "Communication Services",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "GWW",
+      "sector": "Industrials",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "HD",
+      "sector": "Consumer Discretionary",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "HON",
+      "sector": "Industrials",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277"
+    },
+    {
+      "symbol": "HSY",
+      "sector": "Consumer Staples",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "HWKN",
+      "sector": "Materials",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277"
+    },
+    {
+      "symbol": "IBM",
+      "sector": "Information Technology",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "ISRG",
+      "sector": "Health Care",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T175355Z-be763adcfa24",
+      "sourceReportSha256": "E631B056BB023CAF7C7EA1D3CB5445872EE1BC297C3B8721ACC40C0CDCF097B5"
+    },
+    {
+      "symbol": "ITW",
+      "sector": "Industrials",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "JNJ",
+      "sector": "Health Care",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "KMB",
+      "sector": "Consumer Staples",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "KO",
+      "sector": "Consumer Staples",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "LEN",
+      "sector": "Consumer Discretionary",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "LIN",
+      "sector": "Materials",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "LMT",
+      "sector": "Industrials",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "LOW",
+      "sector": "Consumer Discretionary",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "LRCX",
+      "sector": "Information Technology",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277"
+    },
+    {
+      "symbol": "MCD",
+      "sector": "Consumer Discretionary",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "MCK",
+      "sector": "Health Care",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "MDLZ",
+      "sector": "Consumer Staples",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T175355Z-be763adcfa24",
+      "sourceReportSha256": "E631B056BB023CAF7C7EA1D3CB5445872EE1BC297C3B8721ACC40C0CDCF097B5"
+    },
+    {
+      "symbol": "META",
+      "sector": "Communication Services",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "MLM",
+      "sector": "Materials",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "MRK",
+      "sector": "Health Care",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "MSFT",
+      "sector": "Information Technology",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "NFLX",
+      "sector": "Communication Services",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "NKE",
+      "sector": "Consumer Discretionary",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "NOC",
+      "sector": "Industrials",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "NVDA",
+      "sector": "Information Technology",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T174805Z-516116490045",
+      "sourceReportSha256": "3081F6B1F9AEC51BF70A988B3BAE8895D71AC10894BB6F4D35D6242DCFE46CFC"
+    },
+    {
+      "symbol": "OLED",
+      "sector": "Information Technology",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277"
+    },
+    {
+      "symbol": "OMC",
+      "sector": "Communication Services",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "ORCL",
+      "sector": "Information Technology",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "ORLY",
+      "sector": "Consumer Discretionary",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277"
+    },
+    {
+      "symbol": "PFE",
+      "sector": "Health Care",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "PG",
+      "sector": "Consumer Staples",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "PH",
+      "sector": "Industrials",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "PLAB",
+      "sector": "Information Technology",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277"
+    },
+    {
+      "symbol": "PPG",
+      "sector": "Materials",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "QCOM",
+      "sector": "Information Technology",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277"
+    },
+    {
+      "symbol": "ROK",
+      "sector": "Industrials",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "ROST",
+      "sector": "Consumer Discretionary",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277"
+    },
+    {
+      "symbol": "RTX",
+      "sector": "Industrials",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "SAIA",
+      "sector": "Industrials",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277"
+    },
+    {
+      "symbol": "SBUX",
+      "sector": "Consumer Discretionary",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T175355Z-be763adcfa24",
+      "sourceReportSha256": "E631B056BB023CAF7C7EA1D3CB5445872EE1BC297C3B8721ACC40C0CDCF097B5"
+    },
+    {
+      "symbol": "SHW",
+      "sector": "Materials",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "SO",
+      "sector": "Utilities",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "SRE",
+      "sector": "Utilities",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "SYK",
+      "sector": "Health Care",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "SYY",
+      "sector": "Consumer Staples",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "T",
+      "sector": "Communication Services",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "TGT",
+      "sector": "Consumer Discretionary",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "TJX",
+      "sector": "Consumer Discretionary",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "TMUS",
+      "sector": "Communication Services",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277"
+    },
+    {
+      "symbol": "TTC",
+      "sector": "Industrials",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "UFPI",
+      "sector": "Materials",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T175355Z-be763adcfa24",
+      "sourceReportSha256": "E631B056BB023CAF7C7EA1D3CB5445872EE1BC297C3B8721ACC40C0CDCF097B5"
+    },
+    {
+      "symbol": "UNP",
+      "sector": "Industrials",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "UPS",
+      "sector": "Industrials",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "VMC",
+      "sector": "Materials",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "WDFC",
+      "sector": "Materials",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277"
+    },
+    {
+      "symbol": "WM",
+      "sector": "Industrials",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "WMT",
+      "sector": "Consumer Staples",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "XEL",
+      "sector": "Utilities",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277"
+    },
+    {
+      "symbol": "YUM",
+      "sector": "Consumer Discretionary",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "symbol": "ZBH",
+      "sector": "Health Care",
+      "providerGateStatus": "PASS",
+      "providerEvidenceType": "LIVE_IMMUTABLE_REPORT",
+      "algorithmEligibility": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "missingEvidence": [
+        "COMPANY_TYPE_CLASSIFICATION",
+        "FACTOR_READY_HISTORICAL_SERIES",
+        "PER_OBSERVATION_AVAILABLE_AT",
+        "RAW_NUMERIC_VALUES",
+        "UNITS_AND_CURRENCY"
+      ],
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    }
+  ],
+  "aiParticipation": "NONE",
+  "artifactContentHash": "2646EF60AF6131149331B715E1080ECDAD65E7A70A8F745B43DB3388E6DF7D74"
+}

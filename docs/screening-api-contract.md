@@ -55,6 +55,11 @@ selects source records satisfying both cutoffs, constructs dated universe
 membership, hashes the canonical manifest, and seals the snapshot. The same
 key and inputs are idempotent; changed inputs return `409 Conflict`.
 
+The request may also specify `marketDataProvider` and
+`marketAdjustmentMode`; otherwise the configured provider and
+`SPLIT_ADJUSTED` are used. These values are sealed into the snapshot and do
+not change the rating response contract.
+
 Snapshot creation remains an internal ingestion operation and is not exposed
 by Spring Boot.
 

@@ -1,0 +1,2603 @@
+{
+  "artifactType": "FORMULA_READY_CONTROLLED_EVIDENCE",
+  "schemaVersion": "formula-ready-controlled-evidence-v1.0.0",
+  "symbols": [
+    "A",
+    "ACN",
+    "ADBE",
+    "ADI",
+    "ADM",
+    "ADP",
+    "ADSK",
+    "AEE",
+    "AEP",
+    "AES",
+    "AKAM",
+    "ALB",
+    "ALGN",
+    "ALLE",
+    "AMAT",
+    "AMCR",
+    "AMD",
+    "AME",
+    "AMZN",
+    "ANET",
+    "AOS",
+    "APD",
+    "APH",
+    "APP",
+    "APTV",
+    "ATO",
+    "AVGO",
+    "AVY",
+    "AWK",
+    "AXON",
+    "BA",
+    "BALL",
+    "BAX",
+    "BBY",
+    "BDX",
+    "BF-B",
+    "BG",
+    "BKNG",
+    "BLDR",
+    "BMY",
+    "BR",
+    "BSX",
+    "CALM",
+    "CARR",
+    "CASY",
+    "CCL",
+    "CDNS",
+    "CDW",
+    "CEG",
+    "CF",
+    "CHD",
+    "CHRW",
+    "CHTR",
+    "CI",
+    "CIEN",
+    "CL",
+    "CLX",
+    "CMCSA",
+    "CMG",
+    "CMI",
+    "CMS",
+    "CNC",
+    "CNP",
+    "COHR",
+    "COO",
+    "COR",
+    "CPRT",
+    "CRH",
+    "CRL",
+    "CRM",
+    "CROX",
+    "CRWD",
+    "CSCO",
+    "CSX",
+    "CTSH",
+    "CTVA",
+    "CVNA",
+    "CVS",
+    "D",
+    "DAL",
+    "DASH",
+    "DD",
+    "DDOG",
+    "DE",
+    "DELL",
+    "DG",
+    "DGX",
+    "DHI",
+    "DHR",
+    "DIS",
+    "DLTR",
+    "DOV",
+    "DTE",
+    "DUK",
+    "DVA",
+    "DXCM",
+    "EA",
+    "EBAY",
+    "ECL",
+    "ED",
+    "EFX",
+    "EIX",
+    "EL",
+    "ELF",
+    "ELV",
+    "EME",
+    "EMR",
+    "ES",
+    "ETN",
+    "ETR",
+    "EVRG",
+    "EXC",
+    "EXPD",
+    "EXPE",
+    "F",
+    "FAST",
+    "FDX",
+    "FE",
+    "FFIV",
+    "FICO",
+    "FIX",
+    "FLEX",
+    "FOX",
+    "FOXA",
+    "FSLR",
+    "FTV",
+    "GD",
+    "GEHC",
+    "GIS",
+    "GM",
+    "GOOG",
+    "GOOGL",
+    "GPC",
+    "GRMN",
+    "GWW",
+    "HD",
+    "HLT",
+    "HON",
+    "HRL",
+    "HSIC",
+    "HSY",
+    "HUM",
+    "HWKN",
+    "IBM",
+    "IDXX",
+    "IFF",
+    "INTU",
+    "IP",
+    "IQV",
+    "ISRG",
+    "ITW",
+    "KDP",
+    "KHC",
+    "KLAC",
+    "KMB",
+    "KO",
+    "KVUE",
+    "LEN",
+    "LH",
+    "LIN",
+    "LLY",
+    "LMT",
+    "LNT",
+    "LOW",
+    "LRCX",
+    "LULU",
+    "LYB",
+    "LYV",
+    "MCD",
+    "MCHP",
+    "MCK",
+    "MDLZ",
+    "META",
+    "MKC",
+    "MLM",
+    "MNST",
+    "MO",
+    "MOS",
+    "MRK",
+    "MSFT",
+    "NFLX",
+    "NI",
+    "NKE",
+    "NOC",
+    "NRG",
+    "NUE",
+    "NVDA",
+    "NWS",
+    "NWSA",
+    "OLED",
+    "OMC",
+    "ORCL",
+    "ORLY",
+    "PCAR",
+    "PCG",
+    "PEG",
+    "PFE",
+    "PG",
+    "PH",
+    "PLAB",
+    "PM",
+    "PNW",
+    "PPG",
+    "PPL",
+    "PSKY",
+    "QCOM",
+    "ROK",
+    "ROST",
+    "RTX",
+    "SAIA",
+    "SBUX",
+    "SHW",
+    "SJM",
+    "SO",
+    "SRE",
+    "STZ",
+    "SW",
+    "SYK",
+    "SYY",
+    "T",
+    "TGT",
+    "TJX",
+    "TKO",
+    "TMUS",
+    "TSN",
+    "TTC",
+    "TTD",
+    "TTWO",
+    "UFPI",
+    "UNP",
+    "UPS",
+    "VMC",
+    "WBD",
+    "WDFC",
+    "WM",
+    "WMT",
+    "XEL",
+    "YUM",
+    "ZBH"
+  ],
+  "records": {
+    "A": {
+      "symbol": "A",
+      "v2StorageExists": true,
+      "v2ContentHash": "13C49AF26B141FD547A8B89B8CE6A13DBEB8E32D6207F5E08445613265EEF730",
+      "v2PayloadPath": "storage/provider-validation/scoring-inputs-v2/A/13C49AF26B141FD547A8B89B8CE6A13DBEB8E32D6207F5E08445613265EEF730.json",
+      "v2Receipt": {
+        "symbol": "A",
+        "contentHash": "13C49AF26B141FD547A8B89B8CE6A13DBEB8E32D6207F5E08445613265EEF730",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/A/13C49AF26B141FD547A8B89B8CE6A13DBEB8E32D6207F5E08445613265EEF730.json",
+        "recordCount": 10412,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 256,
+          "HISTORICAL_MARKET_CAP": 262
+        }
+      },
+      "selectedLatestIngestedAt": "2026-07-27T20:25:27.954611+00:00",
+      "candidatePayloadCount": 1,
+      "formulaCoverageComplete": true,
+      "eodhdCoverageComplete": true,
+      "secSupplementCoverageComplete": true,
+      "formulaCoverage": {
+        "requiredFormulaFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "market_capitalization",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "stockholders_equity",
+          "total_debt"
+        ],
+        "presentFinancialFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "long_term_debt",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "shares_outstanding",
+          "stockholders_equity",
+          "total_assets",
+          "total_debt",
+          "total_liabilities"
+        ],
+        "presentPriceFields": [
+          "adjusted_close",
+          "close",
+          "high",
+          "low",
+          "open",
+          "volume"
+        ],
+        "presentMarketCapFields": [
+          "market_capitalization"
+        ],
+        "missingFormulaFields": [],
+        "dilutedShareQuarterlyPeriods": 32,
+        "interestExpenseQuarterlyPeriods": 34,
+        "historicalMarketCapObservations": 262,
+        "dailyPriceObservationDates": 1649,
+        "minimumDailyPriceObservationDates": 1,
+        "historyRequirements": {
+          "quarterlyFinancialPeriods": 8,
+          "historicalValuationObservations": 12
+        },
+        "historyComplete": true,
+        "complete": true
+      },
+      "eodhdCoverage": {
+        "requiredFields": [
+          "adjusted_close",
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "close",
+          "ebitda",
+          "gross_profit",
+          "high",
+          "income_tax",
+          "low",
+          "market_capitalization",
+          "net_income",
+          "open",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "stockholders_equity",
+          "total_debt",
+          "volume"
+        ],
+        "missingFields": [],
+        "historyComplete": true,
+        "complete": true
+      },
+      "secSupplementCoverage": {
+        "requiredQuarterlyPeriods": 8,
+        "quarterlyPeriodCounts": {
+          "diluted_weighted_average_shares": 32,
+          "interest_expense": 32
+        },
+        "complete": true
+      }
+    },
+    "ACN": {
+      "symbol": "ACN",
+      "v2StorageExists": true,
+      "v2ContentHash": "840B429B0750091D1055EC766E3E468474862C6C85FCC81733A670C9D6CCFD82",
+      "v2PayloadPath": "storage/provider-validation/scoring-inputs-v2/ACN/840B429B0750091D1055EC766E3E468474862C6C85FCC81733A670C9D6CCFD82.json",
+      "v2Receipt": {
+        "symbol": "ACN",
+        "contentHash": "840B429B0750091D1055EC766E3E468474862C6C85FCC81733A670C9D6CCFD82",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/ACN/840B429B0750091D1055EC766E3E468474862C6C85FCC81733A670C9D6CCFD82.json",
+        "recordCount": 10376,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 220,
+          "HISTORICAL_MARKET_CAP": 262
+        }
+      },
+      "selectedLatestIngestedAt": "2026-07-27T20:26:22.116395+00:00",
+      "candidatePayloadCount": 1,
+      "formulaCoverageComplete": true,
+      "eodhdCoverageComplete": true,
+      "secSupplementCoverageComplete": true,
+      "formulaCoverage": {
+        "requiredFormulaFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "market_capitalization",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "stockholders_equity",
+          "total_debt"
+        ],
+        "presentFinancialFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "long_term_debt",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "shares_outstanding",
+          "stockholders_equity",
+          "total_assets",
+          "total_debt",
+          "total_liabilities"
+        ],
+        "presentPriceFields": [
+          "adjusted_close",
+          "close",
+          "high",
+          "low",
+          "open",
+          "volume"
+        ],
+        "presentMarketCapFields": [
+          "market_capitalization"
+        ],
+        "missingFormulaFields": [],
+        "dilutedShareQuarterlyPeriods": 14,
+        "interestExpenseQuarterlyPeriods": 16,
+        "historicalMarketCapObservations": 262,
+        "dailyPriceObservationDates": 1649,
+        "minimumDailyPriceObservationDates": 1,
+        "historyRequirements": {
+          "quarterlyFinancialPeriods": 8,
+          "historicalValuationObservations": 12
+        },
+        "historyComplete": true,
+        "complete": true
+      },
+      "eodhdCoverage": {
+        "requiredFields": [
+          "adjusted_close",
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "close",
+          "ebitda",
+          "gross_profit",
+          "high",
+          "income_tax",
+          "low",
+          "market_capitalization",
+          "net_income",
+          "open",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "stockholders_equity",
+          "total_debt",
+          "volume"
+        ],
+        "missingFields": [],
+        "historyComplete": true,
+        "complete": true
+      },
+      "secSupplementCoverage": {
+        "requiredQuarterlyPeriods": 8,
+        "quarterlyPeriodCounts": {
+          "diluted_weighted_average_shares": 14,
+          "interest_expense": 14
+        },
+        "complete": true
+      }
+    },
+    "ADBE": {
+      "symbol": "ADBE",
+      "v2StorageExists": true,
+      "v2ContentHash": "17C96D4FB5555C3EB22B7FAE44DD8FF915867E6DA12E8A38670AE85CA977B700",
+      "v2PayloadPath": "storage/provider-validation/scoring-inputs-v2/ADBE/17C96D4FB5555C3EB22B7FAE44DD8FF915867E6DA12E8A38670AE85CA977B700.json",
+      "v2Receipt": {
+        "symbol": "ADBE",
+        "contentHash": "17C96D4FB5555C3EB22B7FAE44DD8FF915867E6DA12E8A38670AE85CA977B700",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/ADBE/17C96D4FB5555C3EB22B7FAE44DD8FF915867E6DA12E8A38670AE85CA977B700.json",
+        "recordCount": 10406,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 250,
+          "HISTORICAL_MARKET_CAP": 262
+        }
+      },
+      "selectedLatestIngestedAt": "2026-07-27T20:26:53.257918+00:00",
+      "candidatePayloadCount": 1,
+      "formulaCoverageComplete": true,
+      "eodhdCoverageComplete": true,
+      "secSupplementCoverageComplete": true,
+      "formulaCoverage": {
+        "requiredFormulaFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "market_capitalization",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "stockholders_equity",
+          "total_debt"
+        ],
+        "presentFinancialFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "long_term_debt",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "shares_outstanding",
+          "stockholders_equity",
+          "total_assets",
+          "total_debt",
+          "total_liabilities"
+        ],
+        "presentPriceFields": [
+          "adjusted_close",
+          "close",
+          "high",
+          "low",
+          "open",
+          "volume"
+        ],
+        "presentMarketCapFields": [
+          "market_capitalization"
+        ],
+        "missingFormulaFields": [],
+        "dilutedShareQuarterlyPeriods": 29,
+        "interestExpenseQuarterlyPeriods": 31,
+        "historicalMarketCapObservations": 262,
+        "dailyPriceObservationDates": 1649,
+        "minimumDailyPriceObservationDates": 1,
+        "historyRequirements": {
+          "quarterlyFinancialPeriods": 8,
+          "historicalValuationObservations": 12
+        },
+        "historyComplete": true,
+        "complete": true
+      },
+      "eodhdCoverage": {
+        "requiredFields": [
+          "adjusted_close",
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "close",
+          "ebitda",
+          "gross_profit",
+          "high",
+          "income_tax",
+          "low",
+          "market_capitalization",
+          "net_income",
+          "open",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "stockholders_equity",
+          "total_debt",
+          "volume"
+        ],
+        "missingFields": [],
+        "historyComplete": true,
+        "complete": true
+      },
+      "secSupplementCoverage": {
+        "requiredQuarterlyPeriods": 8,
+        "quarterlyPeriodCounts": {
+          "diluted_weighted_average_shares": 29,
+          "interest_expense": 23
+        },
+        "complete": true
+      }
+    },
+    "ADI": {
+      "symbol": "ADI",
+      "v2StorageExists": true,
+      "v2ContentHash": "31BCCA8BF14F19FECF506C57B496DFBB473219F6A5F7BA13586A1E01F20EF215",
+      "v2PayloadPath": "storage/provider-validation/scoring-inputs-v2/ADI/31BCCA8BF14F19FECF506C57B496DFBB473219F6A5F7BA13586A1E01F20EF215.json",
+      "v2Receipt": {
+        "symbol": "ADI",
+        "contentHash": "31BCCA8BF14F19FECF506C57B496DFBB473219F6A5F7BA13586A1E01F20EF215",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/ADI/31BCCA8BF14F19FECF506C57B496DFBB473219F6A5F7BA13586A1E01F20EF215.json",
+        "recordCount": 10402,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 246,
+          "HISTORICAL_MARKET_CAP": 262
+        }
+      },
+      "selectedLatestIngestedAt": "2026-07-27T20:27:24.226064+00:00",
+      "candidatePayloadCount": 1,
+      "formulaCoverageComplete": true,
+      "eodhdCoverageComplete": true,
+      "secSupplementCoverageComplete": true,
+      "formulaCoverage": {
+        "requiredFormulaFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "market_capitalization",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "stockholders_equity",
+          "total_debt"
+        ],
+        "presentFinancialFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "long_term_debt",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "shares_outstanding",
+          "stockholders_equity",
+          "total_assets",
+          "total_debt",
+          "total_liabilities"
+        ],
+        "presentPriceFields": [
+          "adjusted_close",
+          "close",
+          "high",
+          "low",
+          "open",
+          "volume"
+        ],
+        "presentMarketCapFields": [
+          "market_capitalization"
+        ],
+        "missingFormulaFields": [],
+        "dilutedShareQuarterlyPeriods": 27,
+        "interestExpenseQuarterlyPeriods": 29,
+        "historicalMarketCapObservations": 262,
+        "dailyPriceObservationDates": 1649,
+        "minimumDailyPriceObservationDates": 1,
+        "historyRequirements": {
+          "quarterlyFinancialPeriods": 8,
+          "historicalValuationObservations": 12
+        },
+        "historyComplete": true,
+        "complete": true
+      },
+      "eodhdCoverage": {
+        "requiredFields": [
+          "adjusted_close",
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "close",
+          "ebitda",
+          "gross_profit",
+          "high",
+          "income_tax",
+          "low",
+          "market_capitalization",
+          "net_income",
+          "open",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "stockholders_equity",
+          "total_debt",
+          "volume"
+        ],
+        "missingFields": [],
+        "historyComplete": true,
+        "complete": true
+      },
+      "secSupplementCoverage": {
+        "requiredQuarterlyPeriods": 8,
+        "quarterlyPeriodCounts": {
+          "diluted_weighted_average_shares": 27,
+          "interest_expense": 21
+        },
+        "complete": true
+      }
+    },
+    "ADM": {
+      "symbol": "ADM",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "ADP": {
+      "symbol": "ADP",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "ADSK": {
+      "symbol": "ADSK",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "AEE": {
+      "symbol": "AEE",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "AEP": {
+      "symbol": "AEP",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "AES": {
+      "symbol": "AES",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "AKAM": {
+      "symbol": "AKAM",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "ALB": {
+      "symbol": "ALB",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "ALGN": {
+      "symbol": "ALGN",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "ALLE": {
+      "symbol": "ALLE",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "AMAT": {
+      "symbol": "AMAT",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "AMCR": {
+      "symbol": "AMCR",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "AMD": {
+      "symbol": "AMD",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "AME": {
+      "symbol": "AME",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "AMZN": {
+      "symbol": "AMZN",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "ANET": {
+      "symbol": "ANET",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "AOS": {
+      "symbol": "AOS",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "APD": {
+      "symbol": "APD",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "APH": {
+      "symbol": "APH",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "APP": {
+      "symbol": "APP",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "APTV": {
+      "symbol": "APTV",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "ATO": {
+      "symbol": "ATO",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "AVGO": {
+      "symbol": "AVGO",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "AVY": {
+      "symbol": "AVY",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "AWK": {
+      "symbol": "AWK",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "AXON": {
+      "symbol": "AXON",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "BA": {
+      "symbol": "BA",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "BALL": {
+      "symbol": "BALL",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "BAX": {
+      "symbol": "BAX",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "BBY": {
+      "symbol": "BBY",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "BDX": {
+      "symbol": "BDX",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "BF-B": {
+      "symbol": "BF-B",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "BG": {
+      "symbol": "BG",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "BKNG": {
+      "symbol": "BKNG",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "BLDR": {
+      "symbol": "BLDR",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "BMY": {
+      "symbol": "BMY",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "BR": {
+      "symbol": "BR",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "BSX": {
+      "symbol": "BSX",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "CALM": {
+      "symbol": "CALM",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "CARR": {
+      "symbol": "CARR",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "CASY": {
+      "symbol": "CASY",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "CCL": {
+      "symbol": "CCL",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "CDNS": {
+      "symbol": "CDNS",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "CDW": {
+      "symbol": "CDW",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "CEG": {
+      "symbol": "CEG",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "CF": {
+      "symbol": "CF",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "CHD": {
+      "symbol": "CHD",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "CHRW": {
+      "symbol": "CHRW",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "CHTR": {
+      "symbol": "CHTR",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "CI": {
+      "symbol": "CI",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "CIEN": {
+      "symbol": "CIEN",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "CL": {
+      "symbol": "CL",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "CLX": {
+      "symbol": "CLX",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "CMCSA": {
+      "symbol": "CMCSA",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "CMG": {
+      "symbol": "CMG",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "CMI": {
+      "symbol": "CMI",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "CMS": {
+      "symbol": "CMS",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "CNC": {
+      "symbol": "CNC",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "CNP": {
+      "symbol": "CNP",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "COHR": {
+      "symbol": "COHR",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "COO": {
+      "symbol": "COO",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "COR": {
+      "symbol": "COR",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "CPRT": {
+      "symbol": "CPRT",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "CRH": {
+      "symbol": "CRH",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "CRL": {
+      "symbol": "CRL",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "CRM": {
+      "symbol": "CRM",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "CROX": {
+      "symbol": "CROX",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "CRWD": {
+      "symbol": "CRWD",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "CSCO": {
+      "symbol": "CSCO",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "CSX": {
+      "symbol": "CSX",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "CTSH": {
+      "symbol": "CTSH",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "CTVA": {
+      "symbol": "CTVA",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "CVNA": {
+      "symbol": "CVNA",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "CVS": {
+      "symbol": "CVS",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "D": {
+      "symbol": "D",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "DAL": {
+      "symbol": "DAL",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "DASH": {
+      "symbol": "DASH",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "DD": {
+      "symbol": "DD",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "DDOG": {
+      "symbol": "DDOG",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "DE": {
+      "symbol": "DE",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "DELL": {
+      "symbol": "DELL",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "DG": {
+      "symbol": "DG",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "DGX": {
+      "symbol": "DGX",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "DHI": {
+      "symbol": "DHI",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "DHR": {
+      "symbol": "DHR",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "DIS": {
+      "symbol": "DIS",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "DLTR": {
+      "symbol": "DLTR",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "DOV": {
+      "symbol": "DOV",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "DTE": {
+      "symbol": "DTE",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "DUK": {
+      "symbol": "DUK",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "DVA": {
+      "symbol": "DVA",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "DXCM": {
+      "symbol": "DXCM",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "EA": {
+      "symbol": "EA",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "EBAY": {
+      "symbol": "EBAY",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "ECL": {
+      "symbol": "ECL",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "ED": {
+      "symbol": "ED",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "EFX": {
+      "symbol": "EFX",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "EIX": {
+      "symbol": "EIX",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "EL": {
+      "symbol": "EL",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "ELF": {
+      "symbol": "ELF",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "ELV": {
+      "symbol": "ELV",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "EME": {
+      "symbol": "EME",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "EMR": {
+      "symbol": "EMR",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "ES": {
+      "symbol": "ES",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "ETN": {
+      "symbol": "ETN",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "ETR": {
+      "symbol": "ETR",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "EVRG": {
+      "symbol": "EVRG",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "EXC": {
+      "symbol": "EXC",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "EXPD": {
+      "symbol": "EXPD",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "EXPE": {
+      "symbol": "EXPE",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "F": {
+      "symbol": "F",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "FAST": {
+      "symbol": "FAST",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "FDX": {
+      "symbol": "FDX",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "FE": {
+      "symbol": "FE",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "FFIV": {
+      "symbol": "FFIV",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "FICO": {
+      "symbol": "FICO",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "FIX": {
+      "symbol": "FIX",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "FLEX": {
+      "symbol": "FLEX",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "FOX": {
+      "symbol": "FOX",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "FOXA": {
+      "symbol": "FOXA",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "FSLR": {
+      "symbol": "FSLR",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "FTV": {
+      "symbol": "FTV",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "GD": {
+      "symbol": "GD",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "GEHC": {
+      "symbol": "GEHC",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "GIS": {
+      "symbol": "GIS",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "GM": {
+      "symbol": "GM",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "GOOG": {
+      "symbol": "GOOG",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "GOOGL": {
+      "symbol": "GOOGL",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "GPC": {
+      "symbol": "GPC",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "GRMN": {
+      "symbol": "GRMN",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "GWW": {
+      "symbol": "GWW",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "HD": {
+      "symbol": "HD",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "HLT": {
+      "symbol": "HLT",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "HON": {
+      "symbol": "HON",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "HRL": {
+      "symbol": "HRL",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "HSIC": {
+      "symbol": "HSIC",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "HSY": {
+      "symbol": "HSY",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "HUM": {
+      "symbol": "HUM",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "HWKN": {
+      "symbol": "HWKN",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "IBM": {
+      "symbol": "IBM",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "IDXX": {
+      "symbol": "IDXX",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "IFF": {
+      "symbol": "IFF",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "INTU": {
+      "symbol": "INTU",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "IP": {
+      "symbol": "IP",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "IQV": {
+      "symbol": "IQV",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "ISRG": {
+      "symbol": "ISRG",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "ITW": {
+      "symbol": "ITW",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "KDP": {
+      "symbol": "KDP",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "KHC": {
+      "symbol": "KHC",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "KLAC": {
+      "symbol": "KLAC",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "KMB": {
+      "symbol": "KMB",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "KO": {
+      "symbol": "KO",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "KVUE": {
+      "symbol": "KVUE",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "LEN": {
+      "symbol": "LEN",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "LH": {
+      "symbol": "LH",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "LIN": {
+      "symbol": "LIN",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "LLY": {
+      "symbol": "LLY",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "LMT": {
+      "symbol": "LMT",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "LNT": {
+      "symbol": "LNT",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "LOW": {
+      "symbol": "LOW",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "LRCX": {
+      "symbol": "LRCX",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "LULU": {
+      "symbol": "LULU",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "LYB": {
+      "symbol": "LYB",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "LYV": {
+      "symbol": "LYV",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "MCD": {
+      "symbol": "MCD",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "MCHP": {
+      "symbol": "MCHP",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "MCK": {
+      "symbol": "MCK",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "MDLZ": {
+      "symbol": "MDLZ",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "META": {
+      "symbol": "META",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "MKC": {
+      "symbol": "MKC",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "MLM": {
+      "symbol": "MLM",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "MNST": {
+      "symbol": "MNST",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "MO": {
+      "symbol": "MO",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "MOS": {
+      "symbol": "MOS",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "MRK": {
+      "symbol": "MRK",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "MSFT": {
+      "symbol": "MSFT",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "NFLX": {
+      "symbol": "NFLX",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "NI": {
+      "symbol": "NI",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "NKE": {
+      "symbol": "NKE",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "NOC": {
+      "symbol": "NOC",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "NRG": {
+      "symbol": "NRG",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "NUE": {
+      "symbol": "NUE",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "NVDA": {
+      "symbol": "NVDA",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "NWS": {
+      "symbol": "NWS",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "NWSA": {
+      "symbol": "NWSA",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "OLED": {
+      "symbol": "OLED",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "OMC": {
+      "symbol": "OMC",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "ORCL": {
+      "symbol": "ORCL",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "ORLY": {
+      "symbol": "ORLY",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "PCAR": {
+      "symbol": "PCAR",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "PCG": {
+      "symbol": "PCG",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "PEG": {
+      "symbol": "PEG",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "PFE": {
+      "symbol": "PFE",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "PG": {
+      "symbol": "PG",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "PH": {
+      "symbol": "PH",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "PLAB": {
+      "symbol": "PLAB",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "PM": {
+      "symbol": "PM",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "PNW": {
+      "symbol": "PNW",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "PPG": {
+      "symbol": "PPG",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "PPL": {
+      "symbol": "PPL",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "PSKY": {
+      "symbol": "PSKY",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "QCOM": {
+      "symbol": "QCOM",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "ROK": {
+      "symbol": "ROK",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "ROST": {
+      "symbol": "ROST",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "RTX": {
+      "symbol": "RTX",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "SAIA": {
+      "symbol": "SAIA",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "SBUX": {
+      "symbol": "SBUX",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "SHW": {
+      "symbol": "SHW",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "SJM": {
+      "symbol": "SJM",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "SO": {
+      "symbol": "SO",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "SRE": {
+      "symbol": "SRE",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "STZ": {
+      "symbol": "STZ",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "SW": {
+      "symbol": "SW",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "SYK": {
+      "symbol": "SYK",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "SYY": {
+      "symbol": "SYY",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "T": {
+      "symbol": "T",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "TGT": {
+      "symbol": "TGT",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "TJX": {
+      "symbol": "TJX",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "TKO": {
+      "symbol": "TKO",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "TMUS": {
+      "symbol": "TMUS",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "TSN": {
+      "symbol": "TSN",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "TTC": {
+      "symbol": "TTC",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "TTD": {
+      "symbol": "TTD",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "TTWO": {
+      "symbol": "TTWO",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "UFPI": {
+      "symbol": "UFPI",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "UNP": {
+      "symbol": "UNP",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "UPS": {
+      "symbol": "UPS",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "VMC": {
+      "symbol": "VMC",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "WBD": {
+      "symbol": "WBD",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "WDFC": {
+      "symbol": "WDFC",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "WM": {
+      "symbol": "WM",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "WMT": {
+      "symbol": "WMT",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "XEL": {
+      "symbol": "XEL",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "YUM": {
+      "symbol": "YUM",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    },
+    "ZBH": {
+      "symbol": "ZBH",
+      "v2StorageExists": false,
+      "formulaCoverageComplete": false,
+      "eodhdCoverageComplete": false,
+      "secSupplementCoverageComplete": false,
+      "candidatePayloadCount": 0
+    }
+  },
+  "selectionRule": "MAX_RECORD_INGESTED_AT_THEN_CONTENT_HASH",
+  "networkRequestsExecuted": false,
+  "objectiveRatingExecuted": false,
+  "artifactContentHash": "F176E94251274B2A26EDFBDFA99783895F9B04890DD157399CCABABE059FCABF"
+}

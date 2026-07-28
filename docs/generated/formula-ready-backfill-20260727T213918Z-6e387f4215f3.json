@@ -1,0 +1,1560 @@
+{
+  "reportVersion": "formula-ready-combined-backfill-v1.1.0",
+  "runId": "20260727T213918Z-6e387f4215f3",
+  "sliceId": "formula-ready-remaining-003",
+  "status": "COMPLETE_WITH_INSUFFICIENT_DATA",
+  "results": [
+    {
+      "symbol": "BR",
+      "status": "FORMULA_READY",
+      "receipt": {
+        "symbol": "BR",
+        "contentHash": "A4D83A5E10CF1179129CAF2FF96F2F26AFC34F92553C66CE0916A9E175D57217",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/BR/A4D83A5E10CF1179129CAF2FF96F2F26AFC34F92553C66CE0916A9E175D57217.json",
+        "recordCount": 10376,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 220,
+          "HISTORICAL_MARKET_CAP": 262
+        }
+      },
+      "formulaCoverage": {
+        "requiredFormulaFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "market_capitalization",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "stockholders_equity",
+          "total_debt"
+        ],
+        "presentFinancialFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "long_term_debt",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "shares_outstanding",
+          "stockholders_equity",
+          "total_assets",
+          "total_debt",
+          "total_liabilities"
+        ],
+        "presentPriceFields": [
+          "adjusted_close",
+          "close",
+          "high",
+          "low",
+          "open",
+          "volume"
+        ],
+        "presentMarketCapFields": [
+          "market_capitalization"
+        ],
+        "missingFormulaFields": [],
+        "dilutedShareQuarterlyPeriods": 22,
+        "interestExpenseQuarterlyPeriods": 8,
+        "historicalMarketCapObservations": 262,
+        "dailyPriceObservationDates": 1649,
+        "minimumDailyPriceObservationDates": 1,
+        "historyRequirements": {
+          "quarterlyFinancialPeriods": 8,
+          "historicalValuationObservations": 12
+        },
+        "historyComplete": true,
+        "complete": true
+      }
+    },
+    {
+      "symbol": "BSX",
+      "status": "FORMULA_READY",
+      "receipt": {
+        "symbol": "BSX",
+        "contentHash": "61317A2BEA018961EDD7709BDEE59331489C93A25360EDCEAE3B020D9BE99F2B",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/BSX/61317A2BEA018961EDD7709BDEE59331489C93A25360EDCEAE3B020D9BE99F2B.json",
+        "recordCount": 10389,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 234,
+          "HISTORICAL_MARKET_CAP": 261
+        }
+      },
+      "formulaCoverage": {
+        "requiredFormulaFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "market_capitalization",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "stockholders_equity",
+          "total_debt"
+        ],
+        "presentFinancialFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "long_term_debt",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "shares_outstanding",
+          "stockholders_equity",
+          "total_assets",
+          "total_debt",
+          "total_liabilities"
+        ],
+        "presentPriceFields": [
+          "adjusted_close",
+          "close",
+          "high",
+          "low",
+          "open",
+          "volume"
+        ],
+        "presentMarketCapFields": [
+          "market_capitalization"
+        ],
+        "missingFormulaFields": [],
+        "dilutedShareQuarterlyPeriods": 21,
+        "interestExpenseQuarterlyPeriods": 23,
+        "historicalMarketCapObservations": 261,
+        "dailyPriceObservationDates": 1649,
+        "minimumDailyPriceObservationDates": 1,
+        "historyRequirements": {
+          "quarterlyFinancialPeriods": 8,
+          "historicalValuationObservations": 12
+        },
+        "historyComplete": true,
+        "complete": true
+      }
+    },
+    {
+      "symbol": "CALM",
+      "status": "SECURITY_INSUFFICIENT_DATA",
+      "reasonCodes": [
+        "MISSING_FORMULA_FIELD_TOTAL_DEBT"
+      ],
+      "formulaCoverage": {
+        "requiredFormulaFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "market_capitalization",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "stockholders_equity",
+          "total_debt"
+        ],
+        "presentFinancialFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "shares_outstanding",
+          "stockholders_equity",
+          "total_assets",
+          "total_liabilities"
+        ],
+        "presentPriceFields": [
+          "adjusted_close",
+          "close",
+          "high",
+          "low",
+          "open",
+          "volume"
+        ],
+        "presentMarketCapFields": [
+          "market_capitalization"
+        ],
+        "missingFormulaFields": [
+          "total_debt"
+        ],
+        "dilutedShareQuarterlyPeriods": 48,
+        "interestExpenseQuarterlyPeriods": 13,
+        "historicalMarketCapObservations": 263,
+        "dailyPriceObservationDates": 1649,
+        "minimumDailyPriceObservationDates": 1,
+        "historyRequirements": {
+          "quarterlyFinancialPeriods": 8,
+          "historicalValuationObservations": 12
+        },
+        "historyComplete": true,
+        "complete": false
+      }
+    },
+    {
+      "symbol": "CARR",
+      "status": "FORMULA_READY",
+      "receipt": {
+        "symbol": "CARR",
+        "contentHash": "51FA32E4760CE3FA933A1B56E156435E566524F930EA9D7BDF8D04442233E54C",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/CARR/51FA32E4760CE3FA933A1B56E156435E566524F930EA9D7BDF8D04442233E54C.json",
+        "recordCount": 10058,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9576,
+          "FINANCIAL": 220,
+          "HISTORICAL_MARKET_CAP": 262
+        }
+      },
+      "formulaCoverage": {
+        "requiredFormulaFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "market_capitalization",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "stockholders_equity",
+          "total_debt"
+        ],
+        "presentFinancialFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "long_term_debt",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "shares_outstanding",
+          "stockholders_equity",
+          "total_assets",
+          "total_debt",
+          "total_liabilities"
+        ],
+        "presentPriceFields": [
+          "adjusted_close",
+          "close",
+          "high",
+          "low",
+          "open",
+          "volume"
+        ],
+        "presentMarketCapFields": [
+          "market_capitalization"
+        ],
+        "missingFormulaFields": [],
+        "dilutedShareQuarterlyPeriods": 22,
+        "interestExpenseQuarterlyPeriods": 8,
+        "historicalMarketCapObservations": 262,
+        "dailyPriceObservationDates": 1596,
+        "minimumDailyPriceObservationDates": 1,
+        "historyRequirements": {
+          "quarterlyFinancialPeriods": 8,
+          "historicalValuationObservations": 12
+        },
+        "historyComplete": true,
+        "complete": true
+      }
+    },
+    {
+      "symbol": "CASY",
+      "status": "FORMULA_READY",
+      "receipt": {
+        "symbol": "CASY",
+        "contentHash": "45BFF929599E620BA2C441598BC0C925861A6445C79C273ECD923DCB327CF5D3",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/CASY/45BFF929599E620BA2C441598BC0C925861A6445C79C273ECD923DCB327CF5D3.json",
+        "recordCount": 10443,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 287,
+          "HISTORICAL_MARKET_CAP": 262
+        }
+      },
+      "formulaCoverage": {
+        "requiredFormulaFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "market_capitalization",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "stockholders_equity",
+          "total_debt"
+        ],
+        "presentFinancialFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "long_term_debt",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "shares_outstanding",
+          "stockholders_equity",
+          "total_assets",
+          "total_debt",
+          "total_liabilities"
+        ],
+        "presentPriceFields": [
+          "adjusted_close",
+          "close",
+          "high",
+          "low",
+          "open",
+          "volume"
+        ],
+        "presentMarketCapFields": [
+          "market_capitalization"
+        ],
+        "missingFormulaFields": [],
+        "dilutedShareQuarterlyPeriods": 48,
+        "interestExpenseQuarterlyPeriods": 50,
+        "historicalMarketCapObservations": 262,
+        "dailyPriceObservationDates": 1649,
+        "minimumDailyPriceObservationDates": 1,
+        "historyRequirements": {
+          "quarterlyFinancialPeriods": 8,
+          "historicalValuationObservations": 12
+        },
+        "historyComplete": true,
+        "complete": true
+      }
+    },
+    {
+      "symbol": "CCL",
+      "status": "FORMULA_READY",
+      "receipt": {
+        "symbol": "CCL",
+        "contentHash": "0B8A147209638108BB1459F06AFB7088704E0FBB2D22672B2530B85CBBBC79EF",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/CCL/0B8A147209638108BB1459F06AFB7088704E0FBB2D22672B2530B85CBBBC79EF.json",
+        "recordCount": 10442,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 287,
+          "HISTORICAL_MARKET_CAP": 261
+        }
+      },
+      "formulaCoverage": {
+        "requiredFormulaFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "market_capitalization",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "stockholders_equity",
+          "total_debt"
+        ],
+        "presentFinancialFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "long_term_debt",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "shares_outstanding",
+          "stockholders_equity",
+          "total_assets",
+          "total_debt",
+          "total_liabilities"
+        ],
+        "presentPriceFields": [
+          "adjusted_close",
+          "close",
+          "high",
+          "low",
+          "open",
+          "volume"
+        ],
+        "presentMarketCapFields": [
+          "market_capitalization"
+        ],
+        "missingFormulaFields": [],
+        "dilutedShareQuarterlyPeriods": 48,
+        "interestExpenseQuarterlyPeriods": 49,
+        "historicalMarketCapObservations": 261,
+        "dailyPriceObservationDates": 1649,
+        "minimumDailyPriceObservationDates": 1,
+        "historyRequirements": {
+          "quarterlyFinancialPeriods": 8,
+          "historicalValuationObservations": 12
+        },
+        "historyComplete": true,
+        "complete": true
+      }
+    },
+    {
+      "symbol": "CDNS",
+      "status": "FORMULA_READY",
+      "receipt": {
+        "symbol": "CDNS",
+        "contentHash": "D5541243369420B67E5DAA3D2BCAC5813CDE618A0B0BE8A2B794170E00B4F9A5",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/CDNS/D5541243369420B67E5DAA3D2BCAC5813CDE618A0B0BE8A2B794170E00B4F9A5.json",
+        "recordCount": 10394,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 238,
+          "HISTORICAL_MARKET_CAP": 262
+        }
+      },
+      "formulaCoverage": {
+        "requiredFormulaFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "market_capitalization",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "stockholders_equity",
+          "total_debt"
+        ],
+        "presentFinancialFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "long_term_debt",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "shares_outstanding",
+          "stockholders_equity",
+          "total_assets",
+          "total_debt",
+          "total_liabilities"
+        ],
+        "presentPriceFields": [
+          "adjusted_close",
+          "close",
+          "high",
+          "low",
+          "open",
+          "volume"
+        ],
+        "presentMarketCapFields": [
+          "market_capitalization"
+        ],
+        "missingFormulaFields": [],
+        "dilutedShareQuarterlyPeriods": 23,
+        "interestExpenseQuarterlyPeriods": 25,
+        "historicalMarketCapObservations": 262,
+        "dailyPriceObservationDates": 1649,
+        "minimumDailyPriceObservationDates": 1,
+        "historyRequirements": {
+          "quarterlyFinancialPeriods": 8,
+          "historicalValuationObservations": 12
+        },
+        "historyComplete": true,
+        "complete": true
+      }
+    },
+    {
+      "symbol": "CDW",
+      "status": "FORMULA_READY",
+      "receipt": {
+        "symbol": "CDW",
+        "contentHash": "7E81BD188F82AAA5CE6D2D1EC6DA8F9E37418C2176694947225A8C3B0926A3A5",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/CDW/7E81BD188F82AAA5CE6D2D1EC6DA8F9E37418C2176694947225A8C3B0926A3A5.json",
+        "recordCount": 10380,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 225,
+          "HISTORICAL_MARKET_CAP": 261
+        }
+      },
+      "formulaCoverage": {
+        "requiredFormulaFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "market_capitalization",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "stockholders_equity",
+          "total_debt"
+        ],
+        "presentFinancialFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "long_term_debt",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "shares_outstanding",
+          "stockholders_equity",
+          "total_assets",
+          "total_debt",
+          "total_liabilities"
+        ],
+        "presentPriceFields": [
+          "adjusted_close",
+          "close",
+          "high",
+          "low",
+          "open",
+          "volume"
+        ],
+        "presentMarketCapFields": [
+          "market_capitalization"
+        ],
+        "missingFormulaFields": [],
+        "dilutedShareQuarterlyPeriods": 27,
+        "interestExpenseQuarterlyPeriods": 8,
+        "historicalMarketCapObservations": 261,
+        "dailyPriceObservationDates": 1649,
+        "minimumDailyPriceObservationDates": 1,
+        "historyRequirements": {
+          "quarterlyFinancialPeriods": 8,
+          "historicalValuationObservations": 12
+        },
+        "historyComplete": true,
+        "complete": true
+      }
+    },
+    {
+      "symbol": "CEG",
+      "status": "FORMULA_READY",
+      "receipt": {
+        "symbol": "CEG",
+        "contentHash": "DB9FC7B3BA79E86D2442139A4A92283776D9778AD198E291AABA62D52F89042B",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/CEG/DB9FC7B3BA79E86D2442139A4A92283776D9778AD198E291AABA62D52F89042B.json",
+        "recordCount": 7259,
+        "datasetCoverage": {
+          "DAILY_PRICE": 6798,
+          "FINANCIAL": 224,
+          "HISTORICAL_MARKET_CAP": 237
+        }
+      },
+      "formulaCoverage": {
+        "requiredFormulaFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "market_capitalization",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "stockholders_equity",
+          "total_debt"
+        ],
+        "presentFinancialFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "long_term_debt",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "shares_outstanding",
+          "stockholders_equity",
+          "total_assets",
+          "total_debt",
+          "total_liabilities"
+        ],
+        "presentPriceFields": [
+          "adjusted_close",
+          "close",
+          "high",
+          "low",
+          "open",
+          "volume"
+        ],
+        "presentMarketCapFields": [
+          "market_capitalization"
+        ],
+        "missingFormulaFields": [],
+        "dilutedShareQuarterlyPeriods": 16,
+        "interestExpenseQuarterlyPeriods": 18,
+        "historicalMarketCapObservations": 237,
+        "dailyPriceObservationDates": 1133,
+        "minimumDailyPriceObservationDates": 1,
+        "historyRequirements": {
+          "quarterlyFinancialPeriods": 8,
+          "historicalValuationObservations": 12
+        },
+        "historyComplete": true,
+        "complete": true
+      }
+    },
+    {
+      "symbol": "CF",
+      "status": "FORMULA_READY",
+      "receipt": {
+        "symbol": "CF",
+        "contentHash": "92F6121649AC63CBD4209A856424BB5C391354C66C769ADE50F19ACF4DA6429F",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/CF/92F6121649AC63CBD4209A856424BB5C391354C66C769ADE50F19ACF4DA6429F.json",
+        "recordCount": 10421,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 266,
+          "HISTORICAL_MARKET_CAP": 261
+        }
+      },
+      "formulaCoverage": {
+        "requiredFormulaFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "market_capitalization",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "stockholders_equity",
+          "total_debt"
+        ],
+        "presentFinancialFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "long_term_debt",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "shares_outstanding",
+          "stockholders_equity",
+          "total_assets",
+          "total_debt",
+          "total_liabilities"
+        ],
+        "presentPriceFields": [
+          "adjusted_close",
+          "close",
+          "high",
+          "low",
+          "open",
+          "volume"
+        ],
+        "presentMarketCapFields": [
+          "market_capitalization"
+        ],
+        "missingFormulaFields": [],
+        "dilutedShareQuarterlyPeriods": 37,
+        "interestExpenseQuarterlyPeriods": 39,
+        "historicalMarketCapObservations": 261,
+        "dailyPriceObservationDates": 1649,
+        "minimumDailyPriceObservationDates": 1,
+        "historyRequirements": {
+          "quarterlyFinancialPeriods": 8,
+          "historicalValuationObservations": 12
+        },
+        "historyComplete": true,
+        "complete": true
+      }
+    },
+    {
+      "symbol": "CHD",
+      "status": "FORMULA_READY",
+      "receipt": {
+        "symbol": "CHD",
+        "contentHash": "2A3E5810B58486189B8B2C3B74F2D0DE1ECE9B4671431EC6EEF2D02CBC6724DE",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/CHD/2A3E5810B58486189B8B2C3B74F2D0DE1ECE9B4671431EC6EEF2D02CBC6724DE.json",
+        "recordCount": 10374,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 218,
+          "HISTORICAL_MARKET_CAP": 262
+        }
+      },
+      "formulaCoverage": {
+        "requiredFormulaFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "market_capitalization",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "stockholders_equity",
+          "total_debt"
+        ],
+        "presentFinancialFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "long_term_debt",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "shares_outstanding",
+          "stockholders_equity",
+          "total_assets",
+          "total_debt",
+          "total_liabilities"
+        ],
+        "presentPriceFields": [
+          "adjusted_close",
+          "close",
+          "high",
+          "low",
+          "open",
+          "volume"
+        ],
+        "presentMarketCapFields": [
+          "market_capitalization"
+        ],
+        "missingFormulaFields": [],
+        "dilutedShareQuarterlyPeriods": 13,
+        "interestExpenseQuarterlyPeriods": 15,
+        "historicalMarketCapObservations": 262,
+        "dailyPriceObservationDates": 1649,
+        "minimumDailyPriceObservationDates": 1,
+        "historyRequirements": {
+          "quarterlyFinancialPeriods": 8,
+          "historicalValuationObservations": 12
+        },
+        "historyComplete": true,
+        "complete": true
+      }
+    },
+    {
+      "symbol": "CHRW",
+      "status": "FORMULA_READY",
+      "receipt": {
+        "symbol": "CHRW",
+        "contentHash": "8A9DBD108248B9DEAEB50B4E3503E7D666B10C1A530CDC0D028C48D308C69E1F",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/CHRW/8A9DBD108248B9DEAEB50B4E3503E7D666B10C1A530CDC0D028C48D308C69E1F.json",
+        "recordCount": 10386,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 230,
+          "HISTORICAL_MARKET_CAP": 262
+        }
+      },
+      "formulaCoverage": {
+        "requiredFormulaFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "market_capitalization",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "stockholders_equity",
+          "total_debt"
+        ],
+        "presentFinancialFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "long_term_debt",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "shares_outstanding",
+          "stockholders_equity",
+          "total_assets",
+          "total_debt",
+          "total_liabilities"
+        ],
+        "presentPriceFields": [
+          "adjusted_close",
+          "close",
+          "high",
+          "low",
+          "open",
+          "volume"
+        ],
+        "presentMarketCapFields": [
+          "market_capitalization"
+        ],
+        "missingFormulaFields": [],
+        "dilutedShareQuarterlyPeriods": 32,
+        "interestExpenseQuarterlyPeriods": 8,
+        "historicalMarketCapObservations": 262,
+        "dailyPriceObservationDates": 1649,
+        "minimumDailyPriceObservationDates": 1,
+        "historyRequirements": {
+          "quarterlyFinancialPeriods": 8,
+          "historicalValuationObservations": 12
+        },
+        "historyComplete": true,
+        "complete": true
+      }
+    },
+    {
+      "symbol": "CHTR",
+      "status": "FORMULA_READY",
+      "receipt": {
+        "symbol": "CHTR",
+        "contentHash": "54ECDF5F6A107A6A761532FCB5EB3D0588770CDD82F854537214AC0CD7D7F915",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/CHTR/54ECDF5F6A107A6A761532FCB5EB3D0588770CDD82F854537214AC0CD7D7F915.json",
+        "recordCount": 10381,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 226,
+          "HISTORICAL_MARKET_CAP": 261
+        }
+      },
+      "formulaCoverage": {
+        "requiredFormulaFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "market_capitalization",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "stockholders_equity",
+          "total_debt"
+        ],
+        "presentFinancialFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "long_term_debt",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "shares_outstanding",
+          "stockholders_equity",
+          "total_assets",
+          "total_debt",
+          "total_liabilities"
+        ],
+        "presentPriceFields": [
+          "adjusted_close",
+          "close",
+          "high",
+          "low",
+          "open",
+          "volume"
+        ],
+        "presentMarketCapFields": [
+          "market_capitalization"
+        ],
+        "missingFormulaFields": [],
+        "dilutedShareQuarterlyPeriods": 29,
+        "interestExpenseQuarterlyPeriods": 8,
+        "historicalMarketCapObservations": 261,
+        "dailyPriceObservationDates": 1649,
+        "minimumDailyPriceObservationDates": 1,
+        "historyRequirements": {
+          "quarterlyFinancialPeriods": 8,
+          "historicalValuationObservations": 12
+        },
+        "historyComplete": true,
+        "complete": true
+      }
+    },
+    {
+      "symbol": "CI",
+      "status": "FORMULA_READY",
+      "receipt": {
+        "symbol": "CI",
+        "contentHash": "17588FB265FC4FA7A88286F846448909411964308F5AB286F86DE2127C3C7F63",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/CI/17588FB265FC4FA7A88286F846448909411964308F5AB286F86DE2127C3C7F63.json",
+        "recordCount": 10378,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 223,
+          "HISTORICAL_MARKET_CAP": 261
+        }
+      },
+      "formulaCoverage": {
+        "requiredFormulaFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "market_capitalization",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "stockholders_equity",
+          "total_debt"
+        ],
+        "presentFinancialFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "long_term_debt",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "shares_outstanding",
+          "stockholders_equity",
+          "total_assets",
+          "total_debt",
+          "total_liabilities"
+        ],
+        "presentPriceFields": [
+          "adjusted_close",
+          "close",
+          "high",
+          "low",
+          "open",
+          "volume"
+        ],
+        "presentMarketCapFields": [
+          "market_capitalization"
+        ],
+        "missingFormulaFields": [],
+        "dilutedShareQuarterlyPeriods": 25,
+        "interestExpenseQuarterlyPeriods": 8,
+        "historicalMarketCapObservations": 261,
+        "dailyPriceObservationDates": 1649,
+        "minimumDailyPriceObservationDates": 1,
+        "historyRequirements": {
+          "quarterlyFinancialPeriods": 8,
+          "historicalValuationObservations": 12
+        },
+        "historyComplete": true,
+        "complete": true
+      }
+    },
+    {
+      "symbol": "CIEN",
+      "status": "FORMULA_READY",
+      "receipt": {
+        "symbol": "CIEN",
+        "contentHash": "F4EC61701C2A7F030884785B7D08AD4255B8D2E2286A409CE9B60BA5BD21B882",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/CIEN/F4EC61701C2A7F030884785B7D08AD4255B8D2E2286A409CE9B60BA5BD21B882.json",
+        "recordCount": 10387,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 232,
+          "HISTORICAL_MARKET_CAP": 261
+        }
+      },
+      "formulaCoverage": {
+        "requiredFormulaFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "market_capitalization",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "stockholders_equity",
+          "total_debt"
+        ],
+        "presentFinancialFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "long_term_debt",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "shares_outstanding",
+          "stockholders_equity",
+          "total_assets",
+          "total_debt",
+          "total_liabilities"
+        ],
+        "presentPriceFields": [
+          "adjusted_close",
+          "close",
+          "high",
+          "low",
+          "open",
+          "volume"
+        ],
+        "presentMarketCapFields": [
+          "market_capitalization"
+        ],
+        "missingFormulaFields": [],
+        "dilutedShareQuarterlyPeriods": 20,
+        "interestExpenseQuarterlyPeriods": 22,
+        "historicalMarketCapObservations": 261,
+        "dailyPriceObservationDates": 1649,
+        "minimumDailyPriceObservationDates": 1,
+        "historyRequirements": {
+          "quarterlyFinancialPeriods": 8,
+          "historicalValuationObservations": 12
+        },
+        "historyComplete": true,
+        "complete": true
+      }
+    },
+    {
+      "symbol": "CL",
+      "status": "FORMULA_READY",
+      "receipt": {
+        "symbol": "CL",
+        "contentHash": "514AD8ADFE6DD035DE837589A848B84F1FD051493DD6C5958D5B72DC3CEF1051",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/CL/514AD8ADFE6DD035DE837589A848B84F1FD051493DD6C5958D5B72DC3CEF1051.json",
+        "recordCount": 10382,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 227,
+          "HISTORICAL_MARKET_CAP": 261
+        }
+      },
+      "formulaCoverage": {
+        "requiredFormulaFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "market_capitalization",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "stockholders_equity",
+          "total_debt"
+        ],
+        "presentFinancialFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "long_term_debt",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "shares_outstanding",
+          "stockholders_equity",
+          "total_assets",
+          "total_debt",
+          "total_liabilities"
+        ],
+        "presentPriceFields": [
+          "adjusted_close",
+          "close",
+          "high",
+          "low",
+          "open",
+          "volume"
+        ],
+        "presentMarketCapFields": [
+          "market_capitalization"
+        ],
+        "missingFormulaFields": [],
+        "dilutedShareQuarterlyPeriods": 29,
+        "interestExpenseQuarterlyPeriods": 8,
+        "historicalMarketCapObservations": 261,
+        "dailyPriceObservationDates": 1649,
+        "minimumDailyPriceObservationDates": 1,
+        "historyRequirements": {
+          "quarterlyFinancialPeriods": 8,
+          "historicalValuationObservations": 12
+        },
+        "historyComplete": true,
+        "complete": true
+      }
+    },
+    {
+      "symbol": "CLX",
+      "status": "FORMULA_READY",
+      "receipt": {
+        "symbol": "CLX",
+        "contentHash": "54358C60048C9C15407E745660291A5E95B94C30A41A0E4181222D3DD38EB48C",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/CLX/54358C60048C9C15407E745660291A5E95B94C30A41A0E4181222D3DD38EB48C.json",
+        "recordCount": 10413,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 258,
+          "HISTORICAL_MARKET_CAP": 261
+        }
+      },
+      "formulaCoverage": {
+        "requiredFormulaFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "market_capitalization",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "stockholders_equity",
+          "total_debt"
+        ],
+        "presentFinancialFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "long_term_debt",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "shares_outstanding",
+          "stockholders_equity",
+          "total_assets",
+          "total_debt",
+          "total_liabilities"
+        ],
+        "presentPriceFields": [
+          "adjusted_close",
+          "close",
+          "high",
+          "low",
+          "open",
+          "volume"
+        ],
+        "presentMarketCapFields": [
+          "market_capitalization"
+        ],
+        "missingFormulaFields": [],
+        "dilutedShareQuarterlyPeriods": 33,
+        "interestExpenseQuarterlyPeriods": 35,
+        "historicalMarketCapObservations": 261,
+        "dailyPriceObservationDates": 1649,
+        "minimumDailyPriceObservationDates": 1,
+        "historyRequirements": {
+          "quarterlyFinancialPeriods": 8,
+          "historicalValuationObservations": 12
+        },
+        "historyComplete": true,
+        "complete": true
+      }
+    },
+    {
+      "symbol": "CMCSA",
+      "status": "FORMULA_READY",
+      "receipt": {
+        "symbol": "CMCSA",
+        "contentHash": "6983C5495B06C0A5B02D360A71D08C84B328617149695A48C1E92357F0D808A2",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/CMCSA/6983C5495B06C0A5B02D360A71D08C84B328617149695A48C1E92357F0D808A2.json",
+        "recordCount": 10405,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 249,
+          "HISTORICAL_MARKET_CAP": 262
+        }
+      },
+      "formulaCoverage": {
+        "requiredFormulaFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "market_capitalization",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "stockholders_equity",
+          "total_debt"
+        ],
+        "presentFinancialFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "long_term_debt",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "shares_outstanding",
+          "stockholders_equity",
+          "total_assets",
+          "total_debt",
+          "total_liabilities"
+        ],
+        "presentPriceFields": [
+          "adjusted_close",
+          "close",
+          "high",
+          "low",
+          "open",
+          "volume"
+        ],
+        "presentMarketCapFields": [
+          "market_capitalization"
+        ],
+        "missingFormulaFields": [],
+        "dilutedShareQuarterlyPeriods": 29,
+        "interestExpenseQuarterlyPeriods": 30,
+        "historicalMarketCapObservations": 262,
+        "dailyPriceObservationDates": 1649,
+        "minimumDailyPriceObservationDates": 1,
+        "historyRequirements": {
+          "quarterlyFinancialPeriods": 8,
+          "historicalValuationObservations": 12
+        },
+        "historyComplete": true,
+        "complete": true
+      }
+    },
+    {
+      "symbol": "CMG",
+      "status": "SECURITY_INSUFFICIENT_DATA",
+      "reasonCodes": [
+        "INTEREST_EXPENSE_QUARTERS_0_OF_8",
+        "MISSING_FORMULA_FIELD_INTEREST_EXPENSE"
+      ],
+      "formulaCoverage": {
+        "requiredFormulaFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "market_capitalization",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "stockholders_equity",
+          "total_debt"
+        ],
+        "presentFinancialFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "shares_outstanding",
+          "stockholders_equity",
+          "total_assets",
+          "total_debt",
+          "total_liabilities"
+        ],
+        "presentPriceFields": [
+          "adjusted_close",
+          "close",
+          "high",
+          "low",
+          "open",
+          "volume"
+        ],
+        "presentMarketCapFields": [
+          "market_capitalization"
+        ],
+        "missingFormulaFields": [
+          "interest_expense"
+        ],
+        "dilutedShareQuarterlyPeriods": 41,
+        "interestExpenseQuarterlyPeriods": 0,
+        "historicalMarketCapObservations": 262,
+        "dailyPriceObservationDates": 1649,
+        "minimumDailyPriceObservationDates": 1,
+        "historyRequirements": {
+          "quarterlyFinancialPeriods": 8,
+          "historicalValuationObservations": 12
+        },
+        "historyComplete": false,
+        "complete": false
+      }
+    },
+    {
+      "symbol": "CMI",
+      "status": "FORMULA_READY",
+      "receipt": {
+        "symbol": "CMI",
+        "contentHash": "86C27127178A5DCC49C7DA0D63F309F049EB303F0BF30B22A5DD92063DBB2769",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/CMI/86C27127178A5DCC49C7DA0D63F309F049EB303F0BF30B22A5DD92063DBB2769.json",
+        "recordCount": 10410,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 254,
+          "HISTORICAL_MARKET_CAP": 262
+        }
+      },
+      "formulaCoverage": {
+        "requiredFormulaFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "market_capitalization",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "stockholders_equity",
+          "total_debt"
+        ],
+        "presentFinancialFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "long_term_debt",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "shares_outstanding",
+          "stockholders_equity",
+          "total_assets",
+          "total_debt",
+          "total_liabilities"
+        ],
+        "presentPriceFields": [
+          "adjusted_close",
+          "close",
+          "high",
+          "low",
+          "open",
+          "volume"
+        ],
+        "presentMarketCapFields": [
+          "market_capitalization"
+        ],
+        "missingFormulaFields": [],
+        "dilutedShareQuarterlyPeriods": 31,
+        "interestExpenseQuarterlyPeriods": 33,
+        "historicalMarketCapObservations": 262,
+        "dailyPriceObservationDates": 1649,
+        "minimumDailyPriceObservationDates": 1,
+        "historyRequirements": {
+          "quarterlyFinancialPeriods": 8,
+          "historicalValuationObservations": 12
+        },
+        "historyComplete": true,
+        "complete": true
+      }
+    }
+  ],
+  "logicalEndpointEvaluations": {
+    "company-facts": 20,
+    "eod": 20,
+    "fundamentals": 20,
+    "historical-market-cap": 20,
+    "submissions": 20,
+    "ticker-mapping": 20
+  },
+  "replayedCompletedEndpoints": {},
+  "formulaExecuted": false,
+  "networkRetries": 0,
+  "newPhysicalAttempts": {
+    "eodhd": {
+      "eod": 20,
+      "fundamentals": 20,
+      "historical-market-cap": 20
+    },
+    "sec": {
+      "company-facts": 20,
+      "submissions": 20,
+      "ticker-mapping": 1
+    },
+    "eodhdTotal": 60,
+    "secTotal": 41,
+    "total": 101
+  },
+  "artifactContentHash": "42B447087394CAD780D5326020742EB8836BDA1E790BF40C9E157F800A1E33D9"
+}

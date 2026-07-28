@@ -1,0 +1,45 @@
+{
+  "cases": [
+    {
+      "normalizedField": "gross_profit",
+      "record": {
+        "grossProfit": "410.5"
+      },
+      "expected": "410.5"
+    },
+    {
+      "normalizedField": "ebitda",
+      "record": {
+        "ebitda": null,
+        "EBITDA": "275"
+      },
+      "expected": "275"
+    },
+    {
+      "normalizedField": "interest_expense",
+      "record": {
+        "interestExpense": "",
+        "interestExpenseNonOperating": "-12"
+      },
+      "expected": "-12"
+    },
+    {
+      "normalizedField": "diluted_weighted_average_shares",
+      "record": {
+        "weightedAverageShsOutDil": "95",
+        "dilutedWeightedAverageShares": "96",
+        "weightedAverageSharesDiluted": null
+      },
+      "expected": "95"
+    },
+    {
+      "normalizedField": "diluted_weighted_average_shares",
+      "record": {
+        "weightedAverageShsOutDil": null,
+        "dilutedWeightedAverageShares": null,
+        "weightedAverageSharesDiluted": null
+      },
+      "expected": null
+    }
+  ]
+}

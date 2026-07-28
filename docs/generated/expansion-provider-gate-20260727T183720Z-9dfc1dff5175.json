@@ -1,0 +1,1766 @@
+{
+  "reportVersion": "mature-company-data-gate-v1.0.0",
+  "artifactType": "EXPANSION_PROVIDER_GATE_SLICE",
+  "runId": "20260727T183720Z-9dfc1dff5175",
+  "sliceId": "slice-007",
+  "universeVersion": "provider-expansion-us-v1.0.0",
+  "startedAt": "2026-07-27T18:37:20.376083+00:00",
+  "completedAt": "2026-07-27T18:38:14.154547+00:00",
+  "dashboardBefore": 18730,
+  "dashboardAfter": null,
+  "providerBillingReconciliation": "NOT_RECONCILED",
+  "networkRerunSample": 0,
+  "results": [
+    {
+      "symbol": "FOXA",
+      "sector": "Communication Services",
+      "candidateRole": "PRIMARY",
+      "status": "PASS",
+      "reasonCodes": [],
+      "fieldCoverage": {
+        "identity": true,
+        "activeStatus": true,
+        "dailyPrice": true,
+        "adjustedPrice": true,
+        "dividends": true,
+        "splits": true,
+        "idempotentRerun": true,
+        "annualFinancials": true,
+        "quarterlyFinancials": true,
+        "pitAvailability": true,
+        "requiredRatingFields": true,
+        "historicalMarketValue": true,
+        "lineage": true
+      },
+      "marketCapitalization": "23273435800",
+      "marketCapBand": "LARGE",
+      "scoringInputReady": true,
+      "scoringInputReasonCodes": [],
+      "scoringInputPayloadHash": "20613657B9077EE9A20C6907A46F7B628778C854787A80D9FEBB53A5AF8A2E3C",
+      "scoringInputStorageReference": "storage/provider-validation/scoring-inputs/FOXA/20613657B9077EE9A20C6907A46F7B628778C854787A80D9FEBB53A5AF8A2E3C.json"
+    },
+    {
+      "symbol": "ABNB",
+      "sector": "Consumer Discretionary",
+      "candidateRole": "PRIMARY",
+      "status": "PASS",
+      "reasonCodes": [],
+      "fieldCoverage": {
+        "identity": true,
+        "activeStatus": true,
+        "dailyPrice": true,
+        "adjustedPrice": true,
+        "dividends": true,
+        "splits": true,
+        "idempotentRerun": true,
+        "annualFinancials": true,
+        "quarterlyFinancials": true,
+        "pitAvailability": true,
+        "requiredRatingFields": true,
+        "historicalMarketValue": true,
+        "lineage": true
+      },
+      "marketCapitalization": "86858100000",
+      "marketCapBand": "LARGE",
+      "scoringInputReady": true,
+      "scoringInputReasonCodes": [],
+      "scoringInputPayloadHash": "37536001F7EE43F3A667DA507C4B4508E8707FFA22A8BCB1F901EF479C4315A6",
+      "scoringInputStorageReference": "storage/provider-validation/scoring-inputs/ABNB/37536001F7EE43F3A667DA507C4B4508E8707FFA22A8BCB1F901EF479C4315A6.json"
+    },
+    {
+      "symbol": "GM",
+      "sector": "Consumer Discretionary",
+      "candidateRole": "PRIMARY",
+      "status": "PASS",
+      "reasonCodes": [],
+      "fieldCoverage": {
+        "identity": true,
+        "activeStatus": true,
+        "dailyPrice": true,
+        "adjustedPrice": true,
+        "dividends": true,
+        "splits": true,
+        "idempotentRerun": true,
+        "annualFinancials": true,
+        "quarterlyFinancials": true,
+        "pitAvailability": true,
+        "requiredRatingFields": true,
+        "historicalMarketValue": true,
+        "lineage": true
+      },
+      "marketCapitalization": "74513595600",
+      "marketCapBand": "LARGE",
+      "scoringInputReady": true,
+      "scoringInputReasonCodes": [],
+      "scoringInputPayloadHash": "29289D5977DA14B9FFC51EDBC1815A32FC384FE9C7DE5A63C3BD2B8A6707AB1C",
+      "scoringInputStorageReference": "storage/provider-validation/scoring-inputs/GM/29289D5977DA14B9FFC51EDBC1815A32FC384FE9C7DE5A63C3BD2B8A6707AB1C.json"
+    },
+    {
+      "symbol": "HD",
+      "sector": "Consumer Discretionary",
+      "candidateRole": "PRIMARY",
+      "status": "PASS",
+      "reasonCodes": [],
+      "fieldCoverage": {
+        "identity": true,
+        "activeStatus": true,
+        "dailyPrice": true,
+        "adjustedPrice": true,
+        "dividends": true,
+        "splits": true,
+        "idempotentRerun": true,
+        "annualFinancials": true,
+        "quarterlyFinancials": true,
+        "pitAvailability": true,
+        "requiredRatingFields": true,
+        "historicalMarketValue": true,
+        "lineage": true
+      },
+      "marketCapitalization": "331981060000",
+      "marketCapBand": "MEGA",
+      "scoringInputReady": true,
+      "scoringInputReasonCodes": [],
+      "scoringInputPayloadHash": "A06D5E408C56EDF684B23F0B3B71E14A5E24901C9A9C2A98945F3DD296F8E4A7",
+      "scoringInputStorageReference": "storage/provider-validation/scoring-inputs/HD/A06D5E408C56EDF684B23F0B3B71E14A5E24901C9A9C2A98945F3DD296F8E4A7.json"
+    },
+    {
+      "symbol": "KDP",
+      "sector": "Consumer Staples",
+      "candidateRole": "PRIMARY",
+      "status": "PASS",
+      "reasonCodes": [],
+      "fieldCoverage": {
+        "identity": true,
+        "activeStatus": true,
+        "dailyPrice": true,
+        "adjustedPrice": true,
+        "dividends": true,
+        "splits": true,
+        "idempotentRerun": true,
+        "annualFinancials": true,
+        "quarterlyFinancials": true,
+        "pitAvailability": true,
+        "requiredRatingFields": true,
+        "historicalMarketValue": true,
+        "lineage": true
+      },
+      "marketCapitalization": "40377704900",
+      "marketCapBand": "LARGE",
+      "scoringInputReady": true,
+      "scoringInputReasonCodes": [],
+      "scoringInputPayloadHash": "3058CB6D06786EE51E2FF514A8858F3157F5C9AAE447EDB331FD158BB81C0639",
+      "scoringInputStorageReference": "storage/provider-validation/scoring-inputs/KDP/3058CB6D06786EE51E2FF514A8858F3157F5C9AAE447EDB331FD158BB81C0639.json"
+    },
+    {
+      "symbol": "KO",
+      "sector": "Consumer Staples",
+      "candidateRole": "PRIMARY",
+      "status": "PASS",
+      "reasonCodes": [],
+      "fieldCoverage": {
+        "identity": true,
+        "activeStatus": true,
+        "dailyPrice": true,
+        "adjustedPrice": true,
+        "dividends": true,
+        "splits": true,
+        "idempotentRerun": true,
+        "annualFinancials": true,
+        "quarterlyFinancials": true,
+        "pitAvailability": true,
+        "requiredRatingFields": true,
+        "historicalMarketValue": true,
+        "lineage": true
+      },
+      "marketCapitalization": "353921750000",
+      "marketCapBand": "MEGA",
+      "scoringInputReady": true,
+      "scoringInputReasonCodes": [],
+      "scoringInputPayloadHash": "DB576C22C0B7C2A8CC6CA28599DABA028C1C2432AD708D657365A78E6C1659F5",
+      "scoringInputStorageReference": "storage/provider-validation/scoring-inputs/KO/DB576C22C0B7C2A8CC6CA28599DABA028C1C2432AD708D657365A78E6C1659F5.json"
+    },
+    {
+      "symbol": "CRL",
+      "sector": "Health Care",
+      "candidateRole": "PRIMARY",
+      "status": "PASS",
+      "reasonCodes": [],
+      "fieldCoverage": {
+        "identity": true,
+        "activeStatus": true,
+        "dailyPrice": true,
+        "adjustedPrice": true,
+        "dividends": true,
+        "splits": true,
+        "idempotentRerun": true,
+        "annualFinancials": true,
+        "quarterlyFinancials": true,
+        "pitAvailability": true,
+        "requiredRatingFields": true,
+        "historicalMarketValue": true,
+        "lineage": true
+      },
+      "marketCapitalization": "10913678900",
+      "marketCapBand": "LARGE",
+      "scoringInputReady": true,
+      "scoringInputReasonCodes": [],
+      "scoringInputPayloadHash": "50F3DB8EC058F275015AC7EEAA2C7704A86AE5E344B500DED7FCC1EEFDC346D4",
+      "scoringInputStorageReference": "storage/provider-validation/scoring-inputs/CRL/50F3DB8EC058F275015AC7EEAA2C7704A86AE5E344B500DED7FCC1EEFDC346D4.json"
+    },
+    {
+      "symbol": "MCK",
+      "sector": "Health Care",
+      "candidateRole": "PRIMARY",
+      "status": "PASS",
+      "reasonCodes": [],
+      "fieldCoverage": {
+        "identity": true,
+        "activeStatus": true,
+        "dailyPrice": true,
+        "adjustedPrice": true,
+        "dividends": true,
+        "splits": true,
+        "idempotentRerun": true,
+        "annualFinancials": true,
+        "quarterlyFinancials": true,
+        "pitAvailability": true,
+        "requiredRatingFields": true,
+        "historicalMarketValue": true,
+        "lineage": true
+      },
+      "marketCapitalization": "100908000000",
+      "marketCapBand": "LARGE",
+      "scoringInputReady": true,
+      "scoringInputReasonCodes": [],
+      "scoringInputPayloadHash": "B71431A0E805866BE0F1B3C647D46A752C3027AF77202E89F2EC8F8316C37610",
+      "scoringInputStorageReference": "storage/provider-validation/scoring-inputs/MCK/B71431A0E805866BE0F1B3C647D46A752C3027AF77202E89F2EC8F8316C37610.json"
+    },
+    {
+      "symbol": "BR",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "status": "PASS",
+      "reasonCodes": [],
+      "fieldCoverage": {
+        "identity": true,
+        "activeStatus": true,
+        "dailyPrice": true,
+        "adjustedPrice": true,
+        "dividends": true,
+        "splits": true,
+        "idempotentRerun": true,
+        "annualFinancials": true,
+        "quarterlyFinancials": true,
+        "pitAvailability": true,
+        "requiredRatingFields": true,
+        "historicalMarketValue": true,
+        "lineage": true
+      },
+      "marketCapitalization": "17230044000",
+      "marketCapBand": "LARGE",
+      "scoringInputReady": true,
+      "scoringInputReasonCodes": [],
+      "scoringInputPayloadHash": "1913A6713CFD0D6D648B2D983EC36871517AC4B79CA0F47E41E8C8CECF9C2135",
+      "scoringInputStorageReference": "storage/provider-validation/scoring-inputs/BR/1913A6713CFD0D6D648B2D983EC36871517AC4B79CA0F47E41E8C8CECF9C2135.json"
+    },
+    {
+      "symbol": "FAST",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "status": "PASS",
+      "reasonCodes": [],
+      "fieldCoverage": {
+        "identity": true,
+        "activeStatus": true,
+        "dailyPrice": true,
+        "adjustedPrice": true,
+        "dividends": true,
+        "splits": true,
+        "idempotentRerun": true,
+        "annualFinancials": true,
+        "quarterlyFinancials": true,
+        "pitAvailability": true,
+        "requiredRatingFields": true,
+        "historicalMarketValue": true,
+        "lineage": true
+      },
+      "marketCapitalization": "53955186700",
+      "marketCapBand": "LARGE",
+      "scoringInputReady": true,
+      "scoringInputReasonCodes": [],
+      "scoringInputPayloadHash": "F07318BC7EF529547CAEDBF3F6AA555FED0BE4C8B99660546681DB5BAF658CBC",
+      "scoringInputStorageReference": "storage/provider-validation/scoring-inputs/FAST/F07318BC7EF529547CAEDBF3F6AA555FED0BE4C8B99660546681DB5BAF658CBC.json"
+    },
+    {
+      "symbol": "TTC",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "status": "PASS",
+      "reasonCodes": [],
+      "fieldCoverage": {
+        "identity": true,
+        "activeStatus": true,
+        "dailyPrice": true,
+        "adjustedPrice": true,
+        "dividends": true,
+        "splits": true,
+        "idempotentRerun": true,
+        "annualFinancials": true,
+        "quarterlyFinancials": true,
+        "pitAvailability": true,
+        "requiredRatingFields": true,
+        "historicalMarketValue": true,
+        "lineage": true
+      },
+      "marketCapitalization": "8943166300",
+      "marketCapBand": "MID",
+      "scoringInputReady": true,
+      "scoringInputReasonCodes": [],
+      "scoringInputPayloadHash": "B3DF36A99F428EF10C1AE6B1FB623A1097C9C71F01F4DA29BF0A1EE44652ED8C",
+      "scoringInputStorageReference": "storage/provider-validation/scoring-inputs/TTC/B3DF36A99F428EF10C1AE6B1FB623A1097C9C71F01F4DA29BF0A1EE44652ED8C.json"
+    },
+    {
+      "symbol": "CRWD",
+      "sector": "Information Technology",
+      "candidateRole": "PRIMARY",
+      "status": "PASS",
+      "reasonCodes": [],
+      "fieldCoverage": {
+        "identity": true,
+        "activeStatus": true,
+        "dailyPrice": true,
+        "adjustedPrice": true,
+        "dividends": true,
+        "splits": true,
+        "idempotentRerun": true,
+        "annualFinancials": true,
+        "quarterlyFinancials": true,
+        "pitAvailability": true,
+        "requiredRatingFields": true,
+        "historicalMarketValue": true,
+        "lineage": true
+      },
+      "marketCapitalization": "186606165400",
+      "marketCapBand": "LARGE",
+      "scoringInputReady": true,
+      "scoringInputReasonCodes": [],
+      "scoringInputPayloadHash": "250D5A0DF8C18228A360EAB5A5AF9061A34C6005D21F45D88E21DF2F1176A8D5",
+      "scoringInputStorageReference": "storage/provider-validation/scoring-inputs/CRWD/250D5A0DF8C18228A360EAB5A5AF9061A34C6005D21F45D88E21DF2F1176A8D5.json"
+    },
+    {
+      "symbol": "ORCL",
+      "sector": "Information Technology",
+      "candidateRole": "PRIMARY",
+      "status": "PASS",
+      "reasonCodes": [],
+      "fieldCoverage": {
+        "identity": true,
+        "activeStatus": true,
+        "dailyPrice": true,
+        "adjustedPrice": true,
+        "dividends": true,
+        "splits": true,
+        "idempotentRerun": true,
+        "annualFinancials": true,
+        "quarterlyFinancials": true,
+        "pitAvailability": true,
+        "requiredRatingFields": true,
+        "historicalMarketValue": true,
+        "lineage": true
+      },
+      "marketCapitalization": "331171200000",
+      "marketCapBand": "MEGA",
+      "scoringInputReady": true,
+      "scoringInputReasonCodes": [],
+      "scoringInputPayloadHash": "042BEF4591844FAF903EEB67DCFC1834EA086687701097C65A424F51C44A1FE9",
+      "scoringInputStorageReference": "storage/provider-validation/scoring-inputs/ORCL/042BEF4591844FAF903EEB67DCFC1834EA086687701097C65A424F51C44A1FE9.json"
+    },
+    {
+      "symbol": "IP",
+      "sector": "Materials",
+      "candidateRole": "PRIMARY",
+      "status": "PASS",
+      "reasonCodes": [],
+      "fieldCoverage": {
+        "identity": true,
+        "activeStatus": true,
+        "dailyPrice": true,
+        "adjustedPrice": true,
+        "dividends": true,
+        "splits": true,
+        "idempotentRerun": true,
+        "annualFinancials": true,
+        "quarterlyFinancials": true,
+        "pitAvailability": true,
+        "requiredRatingFields": true,
+        "historicalMarketValue": true,
+        "lineage": true
+      },
+      "marketCapitalization": "22319504000",
+      "marketCapBand": "LARGE",
+      "scoringInputReady": true,
+      "scoringInputReasonCodes": [],
+      "scoringInputPayloadHash": "E0ED4A8D78E6CDA3C9AF5778D1A81A53064239B7C1C312335317771F1AAF4AD9",
+      "scoringInputStorageReference": "storage/provider-validation/scoring-inputs/IP/E0ED4A8D78E6CDA3C9AF5778D1A81A53064239B7C1C312335317771F1AAF4AD9.json"
+    },
+    {
+      "symbol": "AES",
+      "sector": "Utilities",
+      "candidateRole": "PRIMARY",
+      "status": "PASS",
+      "reasonCodes": [],
+      "fieldCoverage": {
+        "identity": true,
+        "activeStatus": true,
+        "dailyPrice": true,
+        "adjustedPrice": true,
+        "dividends": true,
+        "splits": true,
+        "idempotentRerun": true,
+        "annualFinancials": true,
+        "quarterlyFinancials": true,
+        "pitAvailability": true,
+        "requiredRatingFields": true,
+        "historicalMarketValue": true,
+        "lineage": true
+      },
+      "marketCapitalization": "10582966400",
+      "marketCapBand": "LARGE",
+      "scoringInputReady": true,
+      "scoringInputReasonCodes": [],
+      "scoringInputPayloadHash": "2481F3EF422CBC455A94490AA0E8F931C4117265726CC52DF9A85500986E16E4",
+      "scoringInputStorageReference": "storage/provider-validation/scoring-inputs/AES/2481F3EF422CBC455A94490AA0E8F931C4117265726CC52DF9A85500986E16E4.json"
+    },
+    {
+      "symbol": "LNT",
+      "sector": "Utilities",
+      "candidateRole": "PRIMARY",
+      "status": "PASS",
+      "reasonCodes": [],
+      "fieldCoverage": {
+        "identity": true,
+        "activeStatus": true,
+        "dailyPrice": true,
+        "adjustedPrice": true,
+        "dividends": true,
+        "splits": true,
+        "idempotentRerun": true,
+        "annualFinancials": true,
+        "quarterlyFinancials": true,
+        "pitAvailability": true,
+        "requiredRatingFields": true,
+        "historicalMarketValue": true,
+        "lineage": true
+      },
+      "marketCapitalization": "19329529000",
+      "marketCapBand": "LARGE",
+      "scoringInputReady": true,
+      "scoringInputReasonCodes": [],
+      "scoringInputPayloadHash": "491C877848EBFC5A381D83AE3C41B1819168DA93E103FFF638613BA3FAD03EB2",
+      "scoringInputStorageReference": "storage/provider-validation/scoring-inputs/LNT/491C877848EBFC5A381D83AE3C41B1819168DA93E103FFF638613BA3FAD03EB2.json"
+    },
+    {
+      "symbol": "EQT",
+      "sector": "Energy",
+      "candidateRole": "REFERENCE_ONLY",
+      "status": "EXCLUDED",
+      "reasonCodes": [
+        "Sector or sub-industry requires a specialized model or reference-only treatment under the frozen expansion rules."
+      ],
+      "fieldCoverage": {},
+      "marketCapitalization": null,
+      "marketCapBand": null,
+      "scoringInputReady": false,
+      "scoringInputReasonCodes": [
+        "REFERENCE_ONLY_NOT_SCORING_ELIGIBLE"
+      ]
+    },
+    {
+      "symbol": "FCX",
+      "sector": "Materials",
+      "candidateRole": "REFERENCE_ONLY",
+      "status": "EXCLUDED",
+      "reasonCodes": [
+        "Sector or sub-industry requires a specialized model or reference-only treatment under the frozen expansion rules."
+      ],
+      "fieldCoverage": {},
+      "marketCapitalization": null,
+      "marketCapBand": null,
+      "scoringInputReady": false,
+      "scoringInputReasonCodes": [
+        "REFERENCE_ONLY_NOT_SCORING_ELIGIBLE"
+      ]
+    },
+    {
+      "symbol": "HSY",
+      "sector": "Consumer Staples",
+      "candidateRole": "RESERVE",
+      "status": "PASS",
+      "reasonCodes": [],
+      "fieldCoverage": {
+        "identity": true,
+        "activeStatus": true,
+        "dailyPrice": true,
+        "adjustedPrice": true,
+        "dividends": true,
+        "splits": true,
+        "idempotentRerun": true,
+        "annualFinancials": true,
+        "quarterlyFinancials": true,
+        "pitAvailability": true,
+        "requiredRatingFields": true,
+        "historicalMarketValue": true,
+        "lineage": true
+      },
+      "marketCapitalization": "35354628500",
+      "marketCapBand": "LARGE",
+      "scoringInputReady": true,
+      "scoringInputReasonCodes": [],
+      "scoringInputPayloadHash": "DF2119C2A0E38FADA8BF8C3E71CDC5103016B8D75F0F837571ACE5395AF784D6",
+      "scoringInputStorageReference": "storage/provider-validation/scoring-inputs/HSY/DF2119C2A0E38FADA8BF8C3E71CDC5103016B8D75F0F837571ACE5395AF784D6.json"
+    },
+    {
+      "symbol": "INTU",
+      "sector": "Information Technology",
+      "candidateRole": "RESERVE",
+      "status": "PASS",
+      "reasonCodes": [],
+      "fieldCoverage": {
+        "identity": true,
+        "activeStatus": true,
+        "dailyPrice": true,
+        "adjustedPrice": true,
+        "dividends": true,
+        "splits": true,
+        "idempotentRerun": true,
+        "annualFinancials": true,
+        "quarterlyFinancials": true,
+        "pitAvailability": true,
+        "requiredRatingFields": true,
+        "historicalMarketValue": true,
+        "lineage": true
+      },
+      "marketCapitalization": "81273836400",
+      "marketCapBand": "LARGE",
+      "scoringInputReady": true,
+      "scoringInputReasonCodes": [],
+      "scoringInputPayloadHash": "74D157566E1A2734BB54986433D4B76DFC280DBBCB51A189A9BBFD0A201F8763",
+      "scoringInputStorageReference": "storage/provider-validation/scoring-inputs/INTU/74D157566E1A2734BB54986433D4B76DFC280DBBCB51A189A9BBFD0A201F8763.json"
+    }
+  ],
+  "requestMetrics": [
+    {
+      "provider": "eodhd",
+      "endpointCategory": "fundamentals",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 363,
+      "weightedCalls": 10,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "eod",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 227,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "div",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 111,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "splits",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 118,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "historical-market-cap",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 103,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "fundamentals",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 180,
+      "weightedCalls": 10,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "eod",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 210,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "div",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 95,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "splits",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 98,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "historical-market-cap",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 126,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "fundamentals",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 321,
+      "weightedCalls": 10,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "eod",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 208,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "div",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 118,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "splits",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 128,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "historical-market-cap",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 109,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "fundamentals",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 443,
+      "weightedCalls": 10,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "eod",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 201,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "div",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 113,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "splits",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 104,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "historical-market-cap",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 107,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "fundamentals",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 347,
+      "weightedCalls": 10,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "eod",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 203,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "div",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 114,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "splits",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 115,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "historical-market-cap",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 102,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "fundamentals",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 460,
+      "weightedCalls": 10,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "eod",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 209,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "div",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 128,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "splits",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 129,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "historical-market-cap",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 130,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "fundamentals",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 349,
+      "weightedCalls": 10,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "eod",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 242,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "div",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 127,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "splits",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 133,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "historical-market-cap",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 138,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "fundamentals",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 364,
+      "weightedCalls": 10,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "eod",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 238,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "div",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 119,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "splits",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 116,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "historical-market-cap",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 110,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "fundamentals",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 340,
+      "weightedCalls": 10,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "eod",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 197,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "div",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 98,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "splits",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 96,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "historical-market-cap",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 103,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "fundamentals",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 418,
+      "weightedCalls": 10,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "eod",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 212,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "div",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 74,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "splits",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 81,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "historical-market-cap",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 105,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "fundamentals",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 458,
+      "weightedCalls": 10,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "eod",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 233,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "div",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 100,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "splits",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 93,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "historical-market-cap",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 111,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "fundamentals",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 226,
+      "weightedCalls": 10,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "eod",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 243,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "div",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 101,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "splits",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 110,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "historical-market-cap",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 116,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "fundamentals",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 450,
+      "weightedCalls": 10,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "eod",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 232,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "div",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 120,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "splits",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 115,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "historical-market-cap",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 113,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "fundamentals",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 419,
+      "weightedCalls": 10,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "eod",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 216,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "div",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 111,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "splits",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 101,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "historical-market-cap",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 140,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "fundamentals",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 429,
+      "weightedCalls": 10,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "eod",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 262,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "div",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 106,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "splits",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 104,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "historical-market-cap",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 99,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "fundamentals",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 563,
+      "weightedCalls": 10,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "eod",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 214,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "div",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 95,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "splits",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 117,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "historical-market-cap",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 128,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "fundamentals",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 429,
+      "weightedCalls": 10,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "eod",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 227,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "div",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 134,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "splits",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 95,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "historical-market-cap",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 119,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "fundamentals",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 359,
+      "weightedCalls": 10,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "eod",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 223,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "div",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 110,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "splits",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 124,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "historical-market-cap",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 94,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "submissions",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 95,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "company_facts",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 294,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "submissions",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 112,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "company_facts",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 149,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "submissions",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 134,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "company_facts",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 425,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "ticker_mapping",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 170,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "submissions",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 109,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "company_facts",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 373,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "submissions",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 227,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "company_facts",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 496,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "ticker_mapping",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 149,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "submissions",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 142,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "company_facts",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 223,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "submissions",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 114,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "company_facts",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 678,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "ticker_mapping",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 138,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "submissions",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 332,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "company_facts",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 552,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "submissions",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 144,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "company_facts",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 390,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "ticker_mapping",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 110,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "submissions",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 241,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "company_facts",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 339,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "ticker_mapping",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 196,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "submissions",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 145,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "company_facts",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 379,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "submissions",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 81,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "company_facts",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 372,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "ticker_mapping",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 123,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "submissions",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 81,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "company_facts",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 386,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "submissions",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 128,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "company_facts",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 522,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "submissions",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 138,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "company_facts",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 780,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "submissions",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 286,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "company_facts",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 417,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "ticker_mapping",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 113,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "submissions",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 139,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "company_facts",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 395,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "ticker_mapping",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 151,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "submissions",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 194,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "company_facts",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 217,
+      "weightedCalls": 1,
+      "errorCode": null
+    }
+  ],
+  "physicalHttpAttemptCount": 134,
+  "eodhdPhysicalAttemptCount": 90,
+  "secPhysicalAttemptCount": 44,
+  "configuredLocalWeightedCalls": 252,
+  "scoringInputReadyCount": 18,
+  "objectiveRatingExecuted": false,
+  "licensedRawProviderPayloadIncluded": false
+}

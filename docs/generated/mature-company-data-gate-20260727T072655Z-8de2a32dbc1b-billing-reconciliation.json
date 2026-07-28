@@ -1,0 +1,19 @@
+{
+  "runId": "20260727T072655Z-8de2a32dbc1b",
+  "reportReference": "mature-company-data-gate-20260727T072655Z-8de2a32dbc1b.json",
+  "physicalHttpAttempts": {
+    "eodhd": 10,
+    "secEdgar": 3,
+    "total": 13
+  },
+  "configuredLocalWeightedCalls": 28,
+  "providerDashboard": {
+    "before": 11324,
+    "after": 11374,
+    "observedDelta": 50
+  },
+  "configuredToObservedDifference": 22,
+  "observedToConfiguredRatio": "1.7857142857142857",
+  "providerBillingReconciliation": "NOT_RECONCILED",
+  "conclusion": "The observed provider-billed delta does not match the configured local endpoint weights. No endpoint-level cause is established."
+}

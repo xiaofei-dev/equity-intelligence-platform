@@ -1,0 +1,1389 @@
+{
+  "artifactType": "SEC_ISSUER_INTEREST_EVIDENCE_OFFLINE_REPLAY",
+  "schemaVersion": "sec-issuer-interest-evidence-offline-replay-v1.0.0",
+  "runId": "20260728T052922Z-0b0de73b0bb0",
+  "sourceLiveRunId": "20260728T051809Z-ff6c07bd66ff",
+  "sourceReportPath": "docs/generated/sec-issuer-interest-evidence-20260728T051809Z-ff6c07bd66ff.json",
+  "sourceReportSha256": "F58839D369945E348DA010EF78AC4AE076AC6A964AA7B2EBB5D3338DDAF151ED",
+  "sourceReportContentHash": "3EB296CA4392723B18E5E4A41483FAA03865CF1316D6769642D9E0D94964ADFD",
+  "sourcePreflightPath": "docs/generated/sec-issuer-interest-evidence-20260728T051809Z-ff6c07bd66ff-preflight.json",
+  "sourcePreflightSha256": "5FBECAA66590E1D8E1B528BBAF8B3841B542CD40D4D380917EBF4678DEBC2E62",
+  "symbols": [
+    "AMAT",
+    "CSCO",
+    "FIX"
+  ],
+  "accessionCount": 18,
+  "parserVersion": "sec-inline-xbrl-parser-v1.1.0",
+  "evidenceSchemaVersion": "sec-filing-evidence-v1.1.0",
+  "records": [
+    {
+      "symbol": "AMAT",
+      "accession": "0000006951-25-000011",
+      "sourceEvidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/AMAT/17F47F42A54DB7B92258A41CE9CBCA5AE72C0724258C884C57BE308B8997C86C.json",
+      "sourceEvidenceContentHash": "17F47F42A54DB7B92258A41CE9CBCA5AE72C0724258C884C57BE308B8997C86C",
+      "rebuiltEvidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/AMAT/0DA514BB3FF9BF1C39188772D143072007720F92A2D322A479D82408762BC674.json",
+      "rebuiltEvidenceContentHash": "0DA514BB3FF9BF1C39188772D143072007720F92A2D322A479D82408762BC674",
+      "interestConcepts": [
+        "us-gaap:InterestExpenseNonoperating"
+      ],
+      "interestEvidenceCount": 2,
+      "interestEvidence": [
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-1",
+          "periodStart": "2024-10-28",
+          "periodEnd": "2025-01-26",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.appliedmaterials.com/role/ConsolidatedCondensedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-3",
+          "periodStart": "2023-10-30",
+          "periodEnd": "2024-01-28",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.appliedmaterials.com/role/ConsolidatedCondensedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        }
+      ],
+      "sourceResponseHashes": {
+        "filingIndex": "0BD6B63C66BC7E58403C366FEAF5AD2BE66070A39F4F3BC696CC7ADBAF408239",
+        "filing": "AC8AA7DA30458265C4BF288D21C2BDD62A14CE861C692B61EEB0863A090279A9",
+        "presentation": "EE713CBBB6D8D5CBF6A4089A06E29AF54EBF5BBDB9B872A3C8A40840619FFEA4",
+        "labels": "A243699BCB6706C21B06D469864422F556ADFA9B9D1D1FFC4C8A995803AC19DF"
+      },
+      "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+    },
+    {
+      "symbol": "AMAT",
+      "accession": "0000006951-25-000024",
+      "sourceEvidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/AMAT/2E62717604FDA824B455B0FA19166FF476AA272B617611571E1D7276D14E82B8.json",
+      "sourceEvidenceContentHash": "2E62717604FDA824B455B0FA19166FF476AA272B617611571E1D7276D14E82B8",
+      "rebuiltEvidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/AMAT/39B591CC791D46C6C49BE2E22D1922DCA61E261A676987108108D3DFB2C1E156.json",
+      "rebuiltEvidenceContentHash": "39B591CC791D46C6C49BE2E22D1922DCA61E261A676987108108D3DFB2C1E156",
+      "interestConcepts": [
+        "us-gaap:InterestExpenseNonoperating"
+      ],
+      "interestEvidenceCount": 4,
+      "interestEvidence": [
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-3",
+          "periodStart": "2025-01-27",
+          "periodEnd": "2025-04-27",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.appliedmaterials.com/role/ConsolidatedCondensedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-4",
+          "periodStart": "2024-01-29",
+          "periodEnd": "2024-04-28",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.appliedmaterials.com/role/ConsolidatedCondensedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-1",
+          "periodStart": "2024-10-28",
+          "periodEnd": "2025-04-27",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.appliedmaterials.com/role/ConsolidatedCondensedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-5",
+          "periodStart": "2023-10-30",
+          "periodEnd": "2024-04-28",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.appliedmaterials.com/role/ConsolidatedCondensedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        }
+      ],
+      "sourceResponseHashes": {
+        "filingIndex": "51D6E7EAAF7BBFCE107BE6938D39563E5D3E67469A2CA4FF4D8BE92CED112425",
+        "filing": "A02072AE8C06295DC265A021D1C39710A6BEF7C38036930A5601A11337DBDB5B",
+        "presentation": "6EF3A04AB4E99AAE80D148049D6EB1D8D88FC7B2F6B6085430C394BEE5EB5824",
+        "labels": "45FA756BBBB3C2D46A00BA535551B5C46A171CE626F989F0C807F3B0A2C78E68"
+      },
+      "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+    },
+    {
+      "symbol": "AMAT",
+      "accession": "0000006951-25-000037",
+      "sourceEvidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/AMAT/04D1012F0048AE46413C5F73C70570DF9E4BE8BE9782B33D06608D2132F7BABC.json",
+      "sourceEvidenceContentHash": "04D1012F0048AE46413C5F73C70570DF9E4BE8BE9782B33D06608D2132F7BABC",
+      "rebuiltEvidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/AMAT/A9E7D30FFFB83EB6AB8591991A3A28133FC07612D3196C2FF5FFA0404D81867E.json",
+      "rebuiltEvidenceContentHash": "A9E7D30FFFB83EB6AB8591991A3A28133FC07612D3196C2FF5FFA0404D81867E",
+      "interestConcepts": [
+        "us-gaap:InterestExpenseNonoperating"
+      ],
+      "interestEvidenceCount": 4,
+      "interestEvidence": [
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-3",
+          "periodStart": "2025-04-28",
+          "periodEnd": "2025-07-27",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.appliedmaterials.com/role/ConsolidatedCondensedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-4",
+          "periodStart": "2024-04-29",
+          "periodEnd": "2024-07-28",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.appliedmaterials.com/role/ConsolidatedCondensedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-1",
+          "periodStart": "2024-10-28",
+          "periodEnd": "2025-07-27",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.appliedmaterials.com/role/ConsolidatedCondensedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-5",
+          "periodStart": "2023-10-30",
+          "periodEnd": "2024-07-28",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.appliedmaterials.com/role/ConsolidatedCondensedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        }
+      ],
+      "sourceResponseHashes": {
+        "filingIndex": "392D0F3C910686FFF998C211D52EB6570291E69AFF37EF1B5B8CAFD49387653F",
+        "filing": "3A17BBE4A25A3C87132FEC9C5F594D8052CD6F78B3FB1FB4301B1B94748C3534",
+        "presentation": "83C41DC85F4162D3C80E37CDC76AE2C3C202A9912862BEB26F4167EFEDFE048C",
+        "labels": "03C7EC28D43ECCE9054064E3831BE4C78FF47084B414074D61405480F7D585C9"
+      },
+      "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+    },
+    {
+      "symbol": "AMAT",
+      "accession": "0001628280-25-056742",
+      "sourceEvidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/AMAT/969C200B29CB84A2223CC67DA658F59B54779B36AF927D24803C48B12B7BB923.json",
+      "sourceEvidenceContentHash": "969C200B29CB84A2223CC67DA658F59B54779B36AF927D24803C48B12B7BB923",
+      "rebuiltEvidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/AMAT/147173282D749B7B47060150F97AAF6016C2691FC9C1047A143B51897AFD854D.json",
+      "rebuiltEvidenceContentHash": "147173282D749B7B47060150F97AAF6016C2691FC9C1047A143B51897AFD854D",
+      "interestConcepts": [
+        "us-gaap:InterestExpenseNonoperating"
+      ],
+      "interestEvidenceCount": 3,
+      "interestEvidence": [
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-1",
+          "periodStart": "2024-10-28",
+          "periodEnd": "2025-10-26",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.appliedmaterials.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-5",
+          "periodStart": "2023-10-30",
+          "periodEnd": "2024-10-27",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.appliedmaterials.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-6",
+          "periodStart": "2022-10-31",
+          "periodEnd": "2023-10-29",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.appliedmaterials.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        }
+      ],
+      "sourceResponseHashes": {
+        "filingIndex": "2E337ACCB450FA7E62F7B2AD82A620D6538707C6D11FA07C1671D8D990467D7A",
+        "filing": "293E7090A8A8FD6DC0BCD664E35C4DD6A8F9E65006D8BBDBD92042CB3D6F9139",
+        "presentation": "C98396B1FE42F2B14F8F1A8C2DBF59036229E8BC2D69C80E2D417D0C9CDBA7D3",
+        "labels": "A6F573D41D351CA05C2C6AEEFADFF2996D1420BA90A753A5CF007F1C37067DEA"
+      },
+      "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+    },
+    {
+      "symbol": "AMAT",
+      "accession": "0001628280-26-009694",
+      "sourceEvidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/AMAT/B9290B0E50F89AC3D53C24691FF3BDCFECAB2B4E1F554AD9FBDAFAC1B592888C.json",
+      "sourceEvidenceContentHash": "B9290B0E50F89AC3D53C24691FF3BDCFECAB2B4E1F554AD9FBDAFAC1B592888C",
+      "rebuiltEvidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/AMAT/F2B1F09FCFB0D1F7C6903987C9ECA7992EF5A0C9A8FDD4A1C8C3B9FE5918900B.json",
+      "rebuiltEvidenceContentHash": "F2B1F09FCFB0D1F7C6903987C9ECA7992EF5A0C9A8FDD4A1C8C3B9FE5918900B",
+      "interestConcepts": [
+        "us-gaap:InterestExpenseNonoperating"
+      ],
+      "interestEvidenceCount": 2,
+      "interestEvidence": [
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-1",
+          "periodStart": "2025-10-27",
+          "periodEnd": "2026-01-25",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.appliedmaterials.com/role/ConsolidatedCondensedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-3",
+          "periodStart": "2024-10-28",
+          "periodEnd": "2025-01-26",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.appliedmaterials.com/role/ConsolidatedCondensedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        }
+      ],
+      "sourceResponseHashes": {
+        "filingIndex": "A90D00AF587ACA9B00CCCE0E4345E4F13479E1E4BB50117B5276C6E154648ECB",
+        "filing": "C4FA7DFDB730E66BC3005F703F038D3420A74D0E38C0E98ADDCC1916FD9D6DCB",
+        "presentation": "172570A0F5BEF894570AC1FAD0B7307296E5FC5C8C994B73A1B82068BAB9D080",
+        "labels": "E42671C6A6F7D2610A05C2A26F13BA2851A60DEB7ECFDFB7911FE57FA91AC5E6"
+      },
+      "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+    },
+    {
+      "symbol": "AMAT",
+      "accession": "0001628280-26-037227",
+      "sourceEvidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/AMAT/FF31B04009DA0829397B31155ABB7BF8E63FD00E8CD172B36D6D067EE1F7B075.json",
+      "sourceEvidenceContentHash": "FF31B04009DA0829397B31155ABB7BF8E63FD00E8CD172B36D6D067EE1F7B075",
+      "rebuiltEvidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/AMAT/1284BED51420B7F6E63658B7ECBAAE5E220B1AB34C652DC41D2CD6945B51011A.json",
+      "rebuiltEvidenceContentHash": "1284BED51420B7F6E63658B7ECBAAE5E220B1AB34C652DC41D2CD6945B51011A",
+      "interestConcepts": [
+        "us-gaap:InterestExpenseNonoperating"
+      ],
+      "interestEvidenceCount": 4,
+      "interestEvidence": [
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-3",
+          "periodStart": "2026-01-26",
+          "periodEnd": "2026-04-26",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.appliedmaterials.com/role/ConsolidatedCondensedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-4",
+          "periodStart": "2025-01-27",
+          "periodEnd": "2025-04-27",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.appliedmaterials.com/role/ConsolidatedCondensedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-1",
+          "periodStart": "2025-10-27",
+          "periodEnd": "2026-04-26",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.appliedmaterials.com/role/ConsolidatedCondensedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-5",
+          "periodStart": "2024-10-28",
+          "periodEnd": "2025-04-27",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.appliedmaterials.com/role/ConsolidatedCondensedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        }
+      ],
+      "sourceResponseHashes": {
+        "filingIndex": "A9BA722336F3ADB985B8B9B74AAF2B159131313E156EEC6A54574FCF456054B8",
+        "filing": "37ADD482E2B9894DFD552D94A2791C4F2E47DC176E18FB4F4A0A9F8D16D27BE1",
+        "presentation": "0DB129BD91E07DF9DD1341541D595F70B5F41534C33B84FF9B4003FD43FB34A0",
+        "labels": "325652EBFA44E3CD558666C0BC6457A16303F0A1CE8FECC64F79225153AFB0AE"
+      },
+      "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+    },
+    {
+      "symbol": "CSCO",
+      "accession": "0000858877-25-000007",
+      "sourceEvidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/CSCO/C9AD856B6C10647663BCAE4ED12B14F72896CFB0EA3D7DBB7A39FB3F57B2E52B.json",
+      "sourceEvidenceContentHash": "C9AD856B6C10647663BCAE4ED12B14F72896CFB0EA3D7DBB7A39FB3F57B2E52B",
+      "rebuiltEvidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/CSCO/D3055791E2825BB0BB4C72D06CD19CA2EF8100A6D33F887F8D62F9B266A2BEC8.json",
+      "rebuiltEvidenceContentHash": "D3055791E2825BB0BB4C72D06CD19CA2EF8100A6D33F887F8D62F9B266A2BEC8",
+      "interestConcepts": [
+        "us-gaap:InterestExpenseNonoperating"
+      ],
+      "interestEvidenceCount": 4,
+      "interestEvidence": [
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-13",
+          "periodStart": "2024-10-27",
+          "periodEnd": "2025-01-25",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-14",
+          "periodStart": "2023-10-29",
+          "periodEnd": "2024-01-27",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-1",
+          "periodStart": "2024-07-28",
+          "periodEnd": "2025-01-25",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-15",
+          "periodStart": "2023-07-30",
+          "periodEnd": "2024-01-27",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        }
+      ],
+      "sourceResponseHashes": {
+        "filingIndex": "78984A0092A84769BB07D7E583A24F6784740D121562C8029196D31BA53832C9",
+        "filing": "EFC1F1246DAD81F0955D2156DC55973E923EBB7376F17EDDB9A599F2DE9A4544",
+        "presentation": "0599BAB6C6B63F61586FC97E7DA4D2946116783FF45430F2E2B379F6C21B6542",
+        "labels": "7810E2FE9A380876A2355A66C0788FDB0029DD0DABE91BD6AB8B872655CF3B4E"
+      },
+      "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+    },
+    {
+      "symbol": "CSCO",
+      "accession": "0000858877-25-000033",
+      "sourceEvidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/CSCO/BEC07AA0C895CF1E6EB59E63B39A24873500DE9CC2B77DC1402075B68EEB2516.json",
+      "sourceEvidenceContentHash": "BEC07AA0C895CF1E6EB59E63B39A24873500DE9CC2B77DC1402075B68EEB2516",
+      "rebuiltEvidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/CSCO/F7569A9705EDA47255FA33D37B4DC594AAABB709F08DD9C8D28496CAEDEBBCC6.json",
+      "rebuiltEvidenceContentHash": "F7569A9705EDA47255FA33D37B4DC594AAABB709F08DD9C8D28496CAEDEBBCC6",
+      "interestConcepts": [
+        "us-gaap:InterestExpenseNonoperating"
+      ],
+      "interestEvidenceCount": 4,
+      "interestEvidence": [
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-13",
+          "periodStart": "2025-01-26",
+          "periodEnd": "2025-04-26",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-14",
+          "periodStart": "2024-01-28",
+          "periodEnd": "2024-04-27",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-1",
+          "periodStart": "2024-07-28",
+          "periodEnd": "2025-04-26",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-15",
+          "periodStart": "2023-07-30",
+          "periodEnd": "2024-04-27",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        }
+      ],
+      "sourceResponseHashes": {
+        "filingIndex": "C19FBED0BB5B28EFDB1C62C8BE5614F7DA9B67944DAD882F94B65C2AEBDB0247",
+        "filing": "6E07BB8F3EEAF04033C5B07201C8BFC2523A119B5E01929146AECB90F7829930",
+        "presentation": "23022D3132CF0B4630188F614C5E61FAD68E2BB498D8EBDD42ECF016A785BE9B",
+        "labels": "18C4C3D781357F42CBB9BA59FF6D917F8C23F18D69EEF9B7FC2A4500AFC14C33"
+      },
+      "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+    },
+    {
+      "symbol": "CSCO",
+      "accession": "0000858877-25-000111",
+      "sourceEvidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/CSCO/413CA82CBE8F5408C92BC2F55668216DB80C0501F842D66695BCDB1290FF61B8.json",
+      "sourceEvidenceContentHash": "413CA82CBE8F5408C92BC2F55668216DB80C0501F842D66695BCDB1290FF61B8",
+      "rebuiltEvidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/CSCO/8061F0F92A5F83E8553F09355B6641B155144A5C487E4F933AAE9A9658C8E6E8.json",
+      "rebuiltEvidenceContentHash": "8061F0F92A5F83E8553F09355B6641B155144A5C487E4F933AAE9A9658C8E6E8",
+      "interestConcepts": [
+        "us-gaap:InterestExpense",
+        "us-gaap:InterestExpenseNonoperating"
+      ],
+      "interestEvidenceCount": 5,
+      "interestEvidence": [
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-1",
+          "periodStart": "2024-07-28",
+          "periodEnd": "2025-07-26",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-12",
+          "periodStart": "2023-07-30",
+          "periodEnd": "2024-07-27",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-13",
+          "periodStart": "2022-07-31",
+          "periodEnd": "2023-07-29",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpense",
+          "contextRef": "c-515",
+          "periodStart": "2022-07-31",
+          "periodEnd": "2023-07-29",
+          "dimensions": [
+            {
+              "dimension": "us-gaap:IncomeTaxAuthorityNameAxis",
+              "member": "us-gaap:InternalRevenueServiceIRSMember"
+            },
+            {
+              "dimension": "us-gaap:LitigationStatusAxis",
+              "member": "us-gaap:SettledLitigationMember"
+            }
+          ],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.cisco.com/role/IncomeTaxesAdditionalInformationDetails"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "PREFERRED_TOTAL_GROSS_INTEREST_CANDIDATE",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpense",
+          "contextRef": "c-516",
+          "periodStart": "2023-07-30",
+          "periodEnd": "2024-07-27",
+          "dimensions": [
+            {
+              "dimension": "us-gaap:IncomeTaxAuthorityNameAxis",
+              "member": "us-gaap:InternalRevenueServiceIRSMember"
+            },
+            {
+              "dimension": "us-gaap:LitigationStatusAxis",
+              "member": "us-gaap:SettledLitigationMember"
+            }
+          ],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.cisco.com/role/IncomeTaxesAdditionalInformationDetails"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "PREFERRED_TOTAL_GROSS_INTEREST_CANDIDATE",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        }
+      ],
+      "sourceResponseHashes": {
+        "filingIndex": "D31651B70BCEA078FEAE80A5CCE9696B723397149C5D395EF8021B548E4CC898",
+        "filing": "C63D07C5CECA03B9854BB42270DC157B707EE8983EA31DE2668974495301DA1A",
+        "presentation": "BE55BDA6B46668518E1CFDF4E44FD01157070682C1A4C8CBBF653BE75FA81683",
+        "labels": "431D869BEA83E5BBA6B7421FC4DCCE5AA856FE6A961615CBD7ACDAE89738BAFD"
+      },
+      "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+    },
+    {
+      "symbol": "CSCO",
+      "accession": "0000858877-25-000171",
+      "sourceEvidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/CSCO/2BC300C5B076638C041B5D331CBDBB91EFA6BC22094E6307282FB456B99C1F86.json",
+      "sourceEvidenceContentHash": "2BC300C5B076638C041B5D331CBDBB91EFA6BC22094E6307282FB456B99C1F86",
+      "rebuiltEvidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/CSCO/D4153A945AB36D710B9B1DAA0AAD59AEC087C0C538BCDEFA38F11CC0D12FC979.json",
+      "rebuiltEvidenceContentHash": "D4153A945AB36D710B9B1DAA0AAD59AEC087C0C538BCDEFA38F11CC0D12FC979",
+      "interestConcepts": [
+        "us-gaap:InterestExpenseNonoperating"
+      ],
+      "interestEvidenceCount": 2,
+      "interestEvidence": [
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-1",
+          "periodStart": "2025-07-27",
+          "periodEnd": "2025-10-25",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-9",
+          "periodStart": "2024-07-28",
+          "periodEnd": "2024-10-26",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        }
+      ],
+      "sourceResponseHashes": {
+        "filingIndex": "F1EE639D3FDCEB84345F0DC6397E17BDC02177B0BAF2EA991C21DACC56B6BA4E",
+        "filing": "5EB88A2CFC54C18074EDF37869C4631FB7DCB9C4A96D010237C60E20637FCD18",
+        "presentation": "F92F6855CA51C7F43E38C9C1D7DE979F7D662AF536E91A4B68DC240126DDE3E4",
+        "labels": "AD4B569BD4BA878DD7B18F5B4FA072FE83D82AB2DD7342E07E2BC150C7651BD2"
+      },
+      "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+    },
+    {
+      "symbol": "CSCO",
+      "accession": "0000858877-26-000021",
+      "sourceEvidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/CSCO/C70466BCB9AB6E1D98A269C441C6EA17AD347AAE4608396AE87E2AFF01872A39.json",
+      "sourceEvidenceContentHash": "C70466BCB9AB6E1D98A269C441C6EA17AD347AAE4608396AE87E2AFF01872A39",
+      "rebuiltEvidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/CSCO/1C1F6CF8CC14C7E43D5531AC932840892AD4D0DA8D8683A58834DE6BE5DDBCBB.json",
+      "rebuiltEvidenceContentHash": "1C1F6CF8CC14C7E43D5531AC932840892AD4D0DA8D8683A58834DE6BE5DDBCBB",
+      "interestConcepts": [
+        "us-gaap:InterestExpenseNonoperating"
+      ],
+      "interestEvidenceCount": 4,
+      "interestEvidence": [
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-13",
+          "periodStart": "2025-10-26",
+          "periodEnd": "2026-01-24",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-14",
+          "periodStart": "2024-10-27",
+          "periodEnd": "2025-01-25",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-1",
+          "periodStart": "2025-07-27",
+          "periodEnd": "2026-01-24",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-15",
+          "periodStart": "2024-07-28",
+          "periodEnd": "2025-01-25",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        }
+      ],
+      "sourceResponseHashes": {
+        "filingIndex": "1942458FDE4CA3C8D29B47F9A3BB133E59D9A5BD1BE2C1E76946C007EA4655C8",
+        "filing": "2BDE05DBE3EDDEDE4CCA297E5ACABA290E9F8685BFAC38EB6B37B2F5C344AB38",
+        "presentation": "BA3AD3C1ECA9E229AA98B7822290CAB1B23DE074A21ACCA5BD1D0D3E0DE038EA",
+        "labels": "4B9038B6248C0C4FB5DED9217401BDDB08B0AFAF3702BFDAD8EEE3DBBBEC0E99"
+      },
+      "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+    },
+    {
+      "symbol": "CSCO",
+      "accession": "0000858877-26-000078",
+      "sourceEvidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/CSCO/B13FE4A0850A850FD475C75F2AB82B4944BE843F5180F880281A8E47CDDE2C2E.json",
+      "sourceEvidenceContentHash": "B13FE4A0850A850FD475C75F2AB82B4944BE843F5180F880281A8E47CDDE2C2E",
+      "rebuiltEvidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/CSCO/83A456794F81E23A64C3307712C978477CCEC4ECC0B253B617B6A7F765D941A1.json",
+      "rebuiltEvidenceContentHash": "83A456794F81E23A64C3307712C978477CCEC4ECC0B253B617B6A7F765D941A1",
+      "interestConcepts": [
+        "us-gaap:InterestExpenseNonoperating"
+      ],
+      "interestEvidenceCount": 4,
+      "interestEvidence": [
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-13",
+          "periodStart": "2026-01-25",
+          "periodEnd": "2026-04-25",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-14",
+          "periodStart": "2025-01-26",
+          "periodEnd": "2025-04-26",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-1",
+          "periodStart": "2025-07-27",
+          "periodEnd": "2026-04-25",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "c-15",
+          "periodStart": "2024-07-28",
+          "periodEnd": "2025-04-26",
+          "dimensions": [],
+          "unitRef": "usd",
+          "nil": false,
+          "statementRoles": [
+            "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        }
+      ],
+      "sourceResponseHashes": {
+        "filingIndex": "765349835F4167DFF35E16409C8EA4FFEAEF11ECC4E8C73076C335FAFCF4D8A4",
+        "filing": "016BE1731042FDE0B5C89E794BC4E60E1AF8FD3DC6F358EDBCC59436814EF50F",
+        "presentation": "705E463E3AB0CC93E8998B5E78F6D5AFE2CA217323E7D24557CE58BCDFDE6751",
+        "labels": "5EAB86A2B3D069B57B1C46F99B46AEFE6AE54FE2C240778CF4E63E7D9B7AF2F0"
+      },
+      "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+    },
+    {
+      "symbol": "FIX",
+      "accession": "0001104659-25-101821",
+      "sourceEvidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/FIX/4EA9A35D5D7C872F9269009D111AA9D8DE3F1B5F7E68C6F79DDEB77A025A8E65.json",
+      "sourceEvidenceContentHash": "4EA9A35D5D7C872F9269009D111AA9D8DE3F1B5F7E68C6F79DDEB77A025A8E65",
+      "rebuiltEvidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/FIX/B51FA321B739A5F9BE3F8F030B66F5F06A4E4FFFCB5BBAB5AFEB723063BDB3F6.json",
+      "rebuiltEvidenceContentHash": "B51FA321B739A5F9BE3F8F030B66F5F06A4E4FFFCB5BBAB5AFEB723063BDB3F6",
+      "interestConcepts": [
+        "us-gaap:InterestExpenseNonoperating"
+      ],
+      "interestEvidenceCount": 4,
+      "interestEvidence": [
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "Duration_7_1_2025_To_9_30_2025_fGagO_6gXEWpUbKX8kjYUQ",
+          "periodStart": "2025-07-01",
+          "periodEnd": "2025-09-30",
+          "dimensions": [],
+          "unitRef": "Unit_Standard_USD_Hp8KdHYI_UWJDI-vL9lt-g",
+          "nil": false,
+          "statementRoles": [
+            "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "Duration_7_1_2024_To_9_30_2024_MFAnKtWao0aMSdMq3HnXPQ",
+          "periodStart": "2024-07-01",
+          "periodEnd": "2024-09-30",
+          "dimensions": [],
+          "unitRef": "Unit_Standard_USD_Hp8KdHYI_UWJDI-vL9lt-g",
+          "nil": false,
+          "statementRoles": [
+            "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "Duration_1_1_2025_To_9_30_2025_2k316ZHo506oI1GFfDGOIA",
+          "periodStart": "2025-01-01",
+          "periodEnd": "2025-09-30",
+          "dimensions": [],
+          "unitRef": "Unit_Standard_USD_Hp8KdHYI_UWJDI-vL9lt-g",
+          "nil": false,
+          "statementRoles": [
+            "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "Duration_1_1_2024_To_9_30_2024_4dSAwMN8HU6jYYwFQjBwbQ",
+          "periodStart": "2024-01-01",
+          "periodEnd": "2024-09-30",
+          "dimensions": [],
+          "unitRef": "Unit_Standard_USD_Hp8KdHYI_UWJDI-vL9lt-g",
+          "nil": false,
+          "statementRoles": [
+            "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        }
+      ],
+      "sourceResponseHashes": {
+        "filingIndex": "FFD919D7A1E043EEA91979226093DE7512289E52D9B0D38715DD7927C1A90603",
+        "filing": "E45CD5AEBCF54891909A0C58303AF4A71CB0C8F51CB7074FDF5AFE22751F8F32",
+        "presentation": "E3F56571822D6B5D4F69A8C87E97003A1A5BB013CE00EDF9D3B7BE56847A0C50",
+        "labels": "C722F863D29BCAEF969A965D91188407803A7648C43BE5BD19F79238D3F294EC"
+      },
+      "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+    },
+    {
+      "symbol": "FIX",
+      "accession": "0001104659-26-017530",
+      "sourceEvidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/FIX/B80F630DDAEBB90FCEACC60A1FA380DABE8A7116370F646FCB56DBF07F1E6765.json",
+      "sourceEvidenceContentHash": "B80F630DDAEBB90FCEACC60A1FA380DABE8A7116370F646FCB56DBF07F1E6765",
+      "rebuiltEvidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/FIX/C9ABD3A9D9ABC499D00099CD28402051A54FC719348B50F928D6495F1723DB69.json",
+      "rebuiltEvidenceContentHash": "C9ABD3A9D9ABC499D00099CD28402051A54FC719348B50F928D6495F1723DB69",
+      "interestConcepts": [
+        "us-gaap:InterestExpense",
+        "us-gaap:InterestExpenseNonoperating"
+      ],
+      "interestEvidenceCount": 6,
+      "interestEvidence": [
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "Duration_1_1_2025_To_12_31_2025_iRcRbidoh0-AvPUH5g4aeQ",
+          "periodStart": "2025-01-01",
+          "periodEnd": "2025-12-31",
+          "dimensions": [],
+          "unitRef": "Unit_Standard_USD_p1lbA4ZWPUKjEPOCBZU4jQ",
+          "nil": false,
+          "statementRoles": [
+            "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "Duration_1_1_2024_To_12_31_2024_JeL1SO-PyUOTB2_odDafBQ",
+          "periodStart": "2024-01-01",
+          "periodEnd": "2024-12-31",
+          "dimensions": [],
+          "unitRef": "Unit_Standard_USD_p1lbA4ZWPUKjEPOCBZU4jQ",
+          "nil": false,
+          "statementRoles": [
+            "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "Duration_1_1_2023_To_12_31_2023_Kglwx6TnlkWKjsER8HK9kw",
+          "periodStart": "2023-01-01",
+          "periodEnd": "2023-12-31",
+          "dimensions": [],
+          "unitRef": "Unit_Standard_USD_p1lbA4ZWPUKjEPOCBZU4jQ",
+          "nil": false,
+          "statementRoles": [
+            "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpense",
+          "contextRef": "Duration_1_1_2025_To_12_31_2025_iRcRbidoh0-AvPUH5g4aeQ",
+          "periodStart": "2025-01-01",
+          "periodEnd": "2025-12-31",
+          "dimensions": [],
+          "unitRef": "Unit_Standard_USD_p1lbA4ZWPUKjEPOCBZU4jQ",
+          "nil": false,
+          "statementRoles": [
+            "http://www.comfortsystemsusa.com/role/DisclosureDebtObligationsFuturePaymentsAndInterestExpenseDetails"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "PREFERRED_TOTAL_GROSS_INTEREST_CANDIDATE",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpense",
+          "contextRef": "Duration_1_1_2024_To_12_31_2024_JeL1SO-PyUOTB2_odDafBQ",
+          "periodStart": "2024-01-01",
+          "periodEnd": "2024-12-31",
+          "dimensions": [],
+          "unitRef": "Unit_Standard_USD_p1lbA4ZWPUKjEPOCBZU4jQ",
+          "nil": false,
+          "statementRoles": [
+            "http://www.comfortsystemsusa.com/role/DisclosureDebtObligationsFuturePaymentsAndInterestExpenseDetails"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "PREFERRED_TOTAL_GROSS_INTEREST_CANDIDATE",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpense",
+          "contextRef": "Duration_1_1_2023_To_12_31_2023_Kglwx6TnlkWKjsER8HK9kw",
+          "periodStart": "2023-01-01",
+          "periodEnd": "2023-12-31",
+          "dimensions": [],
+          "unitRef": "Unit_Standard_USD_p1lbA4ZWPUKjEPOCBZU4jQ",
+          "nil": false,
+          "statementRoles": [
+            "http://www.comfortsystemsusa.com/role/DisclosureDebtObligationsFuturePaymentsAndInterestExpenseDetails"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "PREFERRED_TOTAL_GROSS_INTEREST_CANDIDATE",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        }
+      ],
+      "sourceResponseHashes": {
+        "filingIndex": "0B0C7457B865B49663E89BCF9FE446B6F456EF58BEDF1F9BF68E606EA1D5A87C",
+        "filing": "F84F17CBFD67D38CA36363F3213524DC62FD1106E8BBDEBBB8160CB6AC6CFB8A",
+        "presentation": "F8D76BDEFFA126A6F3FFFC189D45D9D90FCB75815B8751803F743BDE420744FE",
+        "labels": "176EC2B32DF702E5AE574579A338E13A2130182794F778F246AB69525E40D455"
+      },
+      "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+    },
+    {
+      "symbol": "FIX",
+      "accession": "0001104659-26-047689",
+      "sourceEvidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/FIX/84163C7E15CB017E0BD7DC8102FA506D856CF202CC858E62D0886CE66134BAF0.json",
+      "sourceEvidenceContentHash": "84163C7E15CB017E0BD7DC8102FA506D856CF202CC858E62D0886CE66134BAF0",
+      "rebuiltEvidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/FIX/931AA69DF769A07E10ED3B091EB218AA1DBE8515FED6096B2EF16EC22CD29E2F.json",
+      "rebuiltEvidenceContentHash": "931AA69DF769A07E10ED3B091EB218AA1DBE8515FED6096B2EF16EC22CD29E2F",
+      "interestConcepts": [
+        "us-gaap:InterestExpenseNonoperating"
+      ],
+      "interestEvidenceCount": 2,
+      "interestEvidence": [
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "Duration_1_1_2026_To_3_31_2026_MEBAtFK-xku5G_tndZklWg",
+          "periodStart": "2026-01-01",
+          "periodEnd": "2026-03-31",
+          "dimensions": [],
+          "unitRef": "Unit_Standard_USD_w71D4LENHEmp3WIPOMhV5Q",
+          "nil": false,
+          "statementRoles": [
+            "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "Duration_1_1_2025_To_3_31_2025_T9447C81C0S1lt4JPLhtiA",
+          "periodStart": "2025-01-01",
+          "periodEnd": "2025-03-31",
+          "dimensions": [],
+          "unitRef": "Unit_Standard_USD_w71D4LENHEmp3WIPOMhV5Q",
+          "nil": false,
+          "statementRoles": [
+            "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        }
+      ],
+      "sourceResponseHashes": {
+        "filingIndex": "EABA9AA48A92B99C3EAD7744D245C259C3AE39A6BDFA8F73913565952E110608",
+        "filing": "E228FCF3ACD9E63FCC021F328DF1050859CECCA93755B39A3F1D5101EFCDA473",
+        "presentation": "2ABBEF0EEE0D33347A232351761D77AEC72FEBF273ED1A6483EFFA90732ED316",
+        "labels": "CF7E104913CF6BFB214F6E1B2BE899B443DEE4A05E650BC9091B19E97FC709A6"
+      },
+      "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+    },
+    {
+      "symbol": "FIX",
+      "accession": "0001104659-26-086258",
+      "sourceEvidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/FIX/7CD90C78B7FA92BD3D52A91A48729C3B767A604779696FF7EFFB09397E2C7EF6.json",
+      "sourceEvidenceContentHash": "7CD90C78B7FA92BD3D52A91A48729C3B767A604779696FF7EFFB09397E2C7EF6",
+      "rebuiltEvidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/FIX/7A7074E99CEEB8A6F77D9E5BC0104DEAA5AE119E6EFBCBECA335055190221018.json",
+      "rebuiltEvidenceContentHash": "7A7074E99CEEB8A6F77D9E5BC0104DEAA5AE119E6EFBCBECA335055190221018",
+      "interestConcepts": [
+        "us-gaap:InterestExpenseNonoperating"
+      ],
+      "interestEvidenceCount": 4,
+      "interestEvidence": [
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "Duration_4_1_2026_To_6_30_2026_az8B7LtdoEuvyon2wNub9A",
+          "periodStart": "2026-04-01",
+          "periodEnd": "2026-06-30",
+          "dimensions": [],
+          "unitRef": "Unit_Standard_USD_-hxNRaM88kWEFEDaMXo39A",
+          "nil": false,
+          "statementRoles": [
+            "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "Duration_4_1_2025_To_6_30_2025_v_yLa3d9z0m7LaoFJTUlbw",
+          "periodStart": "2025-04-01",
+          "periodEnd": "2025-06-30",
+          "dimensions": [],
+          "unitRef": "Unit_Standard_USD_-hxNRaM88kWEFEDaMXo39A",
+          "nil": false,
+          "statementRoles": [
+            "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "Duration_1_1_2026_To_6_30_2026_qLeUArMIpUWVv_OTgCNx0Q",
+          "periodStart": "2026-01-01",
+          "periodEnd": "2026-06-30",
+          "dimensions": [],
+          "unitRef": "Unit_Standard_USD_-hxNRaM88kWEFEDaMXo39A",
+          "nil": false,
+          "statementRoles": [
+            "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "Duration_1_1_2025_To_6_30_2025_SHcESUqLHEeNER1RSA1IiQ",
+          "periodStart": "2025-01-01",
+          "periodEnd": "2025-06-30",
+          "dimensions": [],
+          "unitRef": "Unit_Standard_USD_-hxNRaM88kWEFEDaMXo39A",
+          "nil": false,
+          "statementRoles": [
+            "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        }
+      ],
+      "sourceResponseHashes": {
+        "filingIndex": "2631AEE88E7E5A4179B8AAFC89A35BFEBC29C72CB73E0FF35016F9EB633DCFFB",
+        "filing": "98B847279E2C1F7753634FB50ADB9032057569C4D39E876AE557DAEF9517DB66",
+        "presentation": "68CB9B1CD1FED91B53925D61598E43CC379CA34801D2662C21F10EC230904C5C",
+        "labels": "0A884FA512AB2639D7C79D6124B672242DD0EBA22B70FF4C81F09621C499F22F"
+      },
+      "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+    },
+    {
+      "symbol": "FIX",
+      "accession": "0001558370-25-005411",
+      "sourceEvidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/FIX/F47EF19FEFFAC31C50260A9CEA7817061426E05E1051D301F59FEC4B7530142C.json",
+      "sourceEvidenceContentHash": "F47EF19FEFFAC31C50260A9CEA7817061426E05E1051D301F59FEC4B7530142C",
+      "rebuiltEvidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/FIX/0996287D735F8FFEE43B51EF99316FD38FE5CDB874AFF08C0424A5AF8F349489.json",
+      "rebuiltEvidenceContentHash": "0996287D735F8FFEE43B51EF99316FD38FE5CDB874AFF08C0424A5AF8F349489",
+      "interestConcepts": [
+        "us-gaap:InterestExpenseNonoperating"
+      ],
+      "interestEvidenceCount": 2,
+      "interestEvidence": [
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "Duration_1_1_2025_To_3_31_2025_oO-jBR_fqEOMRk47ctWaxw",
+          "periodStart": "2025-01-01",
+          "periodEnd": "2025-03-31",
+          "dimensions": [],
+          "unitRef": "Unit_Standard_USD_XawK4GI7u0SkhA7zsBFyBA",
+          "nil": false,
+          "statementRoles": [
+            "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "Duration_1_1_2024_To_3_31_2024_56NZ94vd6kaQz494ibB0EQ",
+          "periodStart": "2024-01-01",
+          "periodEnd": "2024-03-31",
+          "dimensions": [],
+          "unitRef": "Unit_Standard_USD_XawK4GI7u0SkhA7zsBFyBA",
+          "nil": false,
+          "statementRoles": [
+            "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        }
+      ],
+      "sourceResponseHashes": {
+        "filingIndex": "E0AFEDCF8D79CD531B1BF3769DA0CDE5EF19CBDA7C286212829BDCA0B0F6D61A",
+        "filing": "BDB7880DFF768CFA8E3CAFCD5287BB203D05D54D18288D165FE04256C1137F62",
+        "presentation": "DCB6D4881C912126EE2DD546256C211F875FF7CC0CE7A94A6C17656C72D5B600",
+        "labels": "F1F7B4DA358653C16D23297A2D982BD9C9EF91185C583D612B2B03D43CB251BA"
+      },
+      "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+    },
+    {
+      "symbol": "FIX",
+      "accession": "0001558370-25-009536",
+      "sourceEvidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/FIX/E2B7C3054F70A610D9500924832E427110B7226316A4261BDDAFCDC6BE0269C8.json",
+      "sourceEvidenceContentHash": "E2B7C3054F70A610D9500924832E427110B7226316A4261BDDAFCDC6BE0269C8",
+      "rebuiltEvidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/FIX/27F49D034B251A350270CC953A36421F2EDC22503A81DF5364AB9FBCED90C75C.json",
+      "rebuiltEvidenceContentHash": "27F49D034B251A350270CC953A36421F2EDC22503A81DF5364AB9FBCED90C75C",
+      "interestConcepts": [
+        "us-gaap:InterestExpenseNonoperating"
+      ],
+      "interestEvidenceCount": 4,
+      "interestEvidence": [
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "Duration_4_1_2025_To_6_30_2025_1DrH1cxNtEW1WwA5DsMiqw",
+          "periodStart": "2025-04-01",
+          "periodEnd": "2025-06-30",
+          "dimensions": [],
+          "unitRef": "Unit_Standard_USD_G2tEmlQYAEaHOu65Uchyuw",
+          "nil": false,
+          "statementRoles": [
+            "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "Duration_4_1_2024_To_6_30_2024_TaMR1ZuFB0GIr0YCDgy85w",
+          "periodStart": "2024-04-01",
+          "periodEnd": "2024-06-30",
+          "dimensions": [],
+          "unitRef": "Unit_Standard_USD_G2tEmlQYAEaHOu65Uchyuw",
+          "nil": false,
+          "statementRoles": [
+            "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "Duration_1_1_2025_To_6_30_2025_rAQRy7RmrEumC7ydySyUSg",
+          "periodStart": "2025-01-01",
+          "periodEnd": "2025-06-30",
+          "dimensions": [],
+          "unitRef": "Unit_Standard_USD_G2tEmlQYAEaHOu65Uchyuw",
+          "nil": false,
+          "statementRoles": [
+            "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        },
+        {
+          "concept": "us-gaap:InterestExpenseNonoperating",
+          "contextRef": "Duration_1_1_2024_To_6_30_2024_FwH-gH0xiky0rd7d7PwNbw",
+          "periodStart": "2024-01-01",
+          "periodEnd": "2024-06-30",
+          "dimensions": [],
+          "unitRef": "Unit_Standard_USD_G2tEmlQYAEaHOu65Uchyuw",
+          "nil": false,
+          "statementRoles": [
+            "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+          ],
+          "presentationLabels": [],
+          "scopeStatus": "CONDITIONAL_NONOPERATING_INTEREST",
+          "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+        }
+      ],
+      "sourceResponseHashes": {
+        "filingIndex": "E32B99E67585AA9365AF398523D4BD1468F51DCE3E5263EE1E24034E9DB1FAA3",
+        "filing": "7A407B724A3A08D5FC61CE09FEC1AD57C45C84B069BCD4217ABECB443E011880",
+        "presentation": "F14FD37170C27819BBF37D351A7D7C4CAFB5D4230D9BB01BD0623B1073ACD142",
+        "labels": "74B3937AB0A79B3AD0CEF0F055C2590E4F21741B814A0D7EC662844B0B08BE44"
+      },
+      "calculationEvidenceStatus": "NOT_COLLECTED_NOT_IN_APPROVED_ENDPOINT_SET"
+    }
+  ],
+  "interestConceptAccessionCounts": {
+    "us-gaap:InterestExpense": 2,
+    "us-gaap:InterestExpenseNonoperating": 18
+  },
+  "physicalHttpAttempts": 0,
+  "eodhdRequests": 0,
+  "secRequests": 0,
+  "rawSecValuesIncluded": false,
+  "scoresOrRanksIncluded": false,
+  "artifactContentHash": "01EAAF3FA4877EA513882CDF638F60C5F966AE18E9155759F3A4AF51784095C3"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "formula-ready-frozen-slice-v1.0.0",
+  "sourceManifestContentHash": "856CF4C3C1174D258CB69D758BBE7740EE04A92E398E7A0841BAB3EBD7652EBC",
+  "sliceId": "formula-ready-remaining-002",
+  "sequence": 2,
+  "symbols": [
+    "AOS",
+    "APD",
+    "APH",
+    "APP",
+    "APTV",
+    "ATO",
+    "AVGO",
+    "AVY",
+    "AWK",
+    "AXON",
+    "BA",
+    "BALL",
+    "BAX",
+    "BBY",
+    "BDX",
+    "BF-B",
+    "BG",
+    "BKNG",
+    "BLDR",
+    "BMY"
+  ],
+  "automaticSelection": false,
+  "automaticReplacement": false,
+  "contentHash": "97543091A474957F454956DF99FBA6AD5C388EE2A1A01B2118AC7303DC7E06D2"
+}

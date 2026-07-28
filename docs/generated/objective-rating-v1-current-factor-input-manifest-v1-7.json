@@ -1,0 +1,1303 @@
+{
+  "artifactType": "OBJECTIVE_RATING_CURRENT_FACTOR_INPUT_MANIFEST",
+  "schemaVersion": "objective-rating-current-factor-input-manifest-v1.7.0",
+  "snapshotContractVersion": "objective-rating-current-factor-input-v1.5.0",
+  "windowPolicyVersion": "objective-rating-current-factor-window-v1.5.0",
+  "cutoff": "2026-07-28T07:55:16.812055Z",
+  "sourceManifest": {
+    "path": "docs/generated/objective-rating-v1-current-factor-input-manifest-v1-5.json",
+    "fileSha256": "B0DD6AB79629E348A6A26297DD08FF4DBA859235F48818FD556D9CEEDCE46399",
+    "artifactContentHash": "FDB6554260A08FB83D36C13E880B004AB81B2D80653F679DC11BEF144A7B3C32"
+  },
+  "machinePolicy": {
+    "path": "docs/generated/objective-rating-v1-qc-current-input-policy-v1.json",
+    "fileSha256": "FFFF26EB8FEA82B76BDAFBCFFD96F19BD1FEC668B902B5C04AD530E25C334FD7",
+    "artifactContentHash": "997F37C2BE1DBBD8A05F7AF49AD60B0928D56F012FB8F5FD6531AFCD68F74BBA"
+  },
+  "windowRules": {
+    "currentWindowMaximumAgeDays": 150,
+    "acceptedCurrentOnlyProviderFields": [
+      "Highlights.DilutedEpsTTM",
+      "Highlights.RevenueTTM",
+      "Highlights.GrossProfitTTM"
+    ],
+    "rejectedFormulaSubstitutes": [
+      "Highlights.OperatingMarginTTM"
+    ]
+  },
+  "securityCount": 55,
+  "currentQcInputReadyCount": 6,
+  "currentQcInputReadySymbols": [
+    "AMAT",
+    "CIEN",
+    "COO",
+    "DHR",
+    "FAST",
+    "TSN"
+  ],
+  "currentQcMinimum": 20,
+  "additionalRequiredToReachMinimum": 14,
+  "factorStatusCounts": {
+    "cash_conversion": {
+      "MISSING": 43,
+      "VALID": 12
+    },
+    "dilution": {
+      "MISSING": 38,
+      "VALID": 17
+    },
+    "eps_growth": {
+      "MISSING": 9,
+      "VALID": 46
+    },
+    "fcf_margin": {
+      "MISSING": 11,
+      "VALID": 44
+    },
+    "fcf_per_share_growth": {
+      "MISSING": 42,
+      "VALID": 13
+    },
+    "interest_coverage": {
+      "MISSING": 49,
+      "VALID": 6
+    },
+    "margin_quality": {
+      "MISSING": 43,
+      "VALID": 12
+    },
+    "net_debt_to_ebitda": {
+      "VALID": 55
+    },
+    "roic": {
+      "MISSING": 41,
+      "VALID": 14
+    },
+    "stability": {
+      "MISSING": 12,
+      "VALID": 43
+    },
+    "valuation_guardrail": {
+      "MISSING": 43,
+      "VALID": 12
+    }
+  },
+  "securities": [
+    {
+      "symbol": "ADSK",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/ADSK/AD5CAA4B68CDF41071AAADAE30FBC74746AA9ED3254E5E60B4B596236960A096.json",
+      "payloadContentHash": "AD5CAA4B68CDF41071AAADAE30FBC74746AA9ED3254E5E60B4B596236960A096",
+      "sourceSnapshotContentHash": "3FD9B1514C6F15C209010EA818E48E5563B984855643C31DEB9867BD29BA2815",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "VALID",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "AMAT",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": true,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/AMAT/707CA5927CF473307FB8CD6C4D72942704A79A0169A06CF9877AECF775372D15.json",
+      "payloadContentHash": "707CA5927CF473307FB8CD6C4D72942704A79A0169A06CF9877AECF775372D15",
+      "sourceSnapshotContentHash": "8156DE8D1C5B1F88BBC502AEB20B741B94675062F6EB30243243D2D9AFE13D89",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      }
+    },
+    {
+      "symbol": "AMCR",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/AMCR/9830FCBBD35FBF45410FD08596180EF6E5203D7FA3029C6E5603CABA976F47A6.json",
+      "payloadContentHash": "9830FCBBD35FBF45410FD08596180EF6E5203D7FA3029C6E5603CABA976F47A6",
+      "sourceSnapshotContentHash": "836C6C7EF04AB248814913DEAA534851088427C9A71C99F0EDA3E7DB38AB4581",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "AMD",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/AMD/EB91F67DA7B3ABBA7C1A496B7B535CB9ADB5651DA2C00ABBAD870B21C5B0B9A3.json",
+      "payloadContentHash": "EB91F67DA7B3ABBA7C1A496B7B535CB9ADB5651DA2C00ABBAD870B21C5B0B9A3",
+      "sourceSnapshotContentHash": "8EB166BEFB2B329D805F913886AE4F6C43AFEFA66111BDF0408B970BA502FACD",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "VALID",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "APD",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/APD/4D405D3B6DEBA90C15AFA9D291B196399AE2A054E38566DB7A856EFAE60C4730.json",
+      "payloadContentHash": "4D405D3B6DEBA90C15AFA9D291B196399AE2A054E38566DB7A856EFAE60C4730",
+      "sourceSnapshotContentHash": "004108DE52C98917BC5AF1124D2D736E8B8B4180C4F23414423CA405D21B10CC",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "VALID",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "APH",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/APH/13304E95C820A0615F3E16E2432B14CDE55E7C638BF5DF5574C3C56C68A0C348.json",
+      "payloadContentHash": "13304E95C820A0615F3E16E2432B14CDE55E7C638BF5DF5574C3C56C68A0C348",
+      "sourceSnapshotContentHash": "47F06E6EE05151EC4D9B0BA0780F60C1B0CE7A574E2423591D5CE791C4EDF508",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "VALID",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "APTV",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/APTV/ACABD26F576040252DE67E98F1C47EB0EA551DCAF07D34302C75DA106AFC6FC1.json",
+      "payloadContentHash": "ACABD26F576040252DE67E98F1C47EB0EA551DCAF07D34302C75DA106AFC6FC1",
+      "sourceSnapshotContentHash": "58A7876D17A97D2462B666A73E971CF930FB081B192B2C61E6D3CA7A50D233C5",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "AVGO",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/AVGO/C4370C81884A9C60A0D8C1B1231EF816A814DC22AC877741D054A5A71C10FA5F.json",
+      "payloadContentHash": "C4370C81884A9C60A0D8C1B1231EF816A814DC22AC877741D054A5A71C10FA5F",
+      "sourceSnapshotContentHash": "7883CD45D2AEB545EEFE828DFB876F27255BEBA328915034F76841130D73E6B7",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "MISSING",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      }
+    },
+    {
+      "symbol": "BDX",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/BDX/DED59315AFD409F4CAD94E2B5FA3CBDA92051D5AE4D924AAC9616DC82400826C.json",
+      "payloadContentHash": "DED59315AFD409F4CAD94E2B5FA3CBDA92051D5AE4D924AAC9616DC82400826C",
+      "sourceSnapshotContentHash": "F39A405E82BA9EC7A2F63B11C95F7E1E954069176BEDDB0A08181DC8000F923B",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "VALID",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "BF-B",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/BF-B/D722C9B6A45C32F0E380C2AEE0237975699C6423E39CD210C1530C5356766937.json",
+      "payloadContentHash": "D722C9B6A45C32F0E380C2AEE0237975699C6423E39CD210C1530C5356766937",
+      "sourceSnapshotContentHash": "68A7FABA1A0AF0A29752A2CFD930CC6B82195571AC13E01D7F36B9B4C8378D03",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "VALID",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "BLDR",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/BLDR/4BA8B2190DE80E9249D6105B2B5697B72C608BC8C56573E5F398150A8153BABB.json",
+      "payloadContentHash": "4BA8B2190DE80E9249D6105B2B5697B72C608BC8C56573E5F398150A8153BABB",
+      "sourceSnapshotContentHash": "A2B6866496B7AE1F104447878AFB73F9DDCA245CC6004E2D7F53E0104718A397",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "VALID",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "CHD",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/CHD/EE43AD124504FDA9B430A182B053B3B9B409C20F7D1B358B340BF089C73C0C72.json",
+      "payloadContentHash": "EE43AD124504FDA9B430A182B053B3B9B409C20F7D1B358B340BF089C73C0C72",
+      "sourceSnapshotContentHash": "537DA7FBF7A93B82940F32DBC517EC4075FE3CDDA4F1E9B8C26D8B72B3B6F99C",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "CIEN",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": true,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/CIEN/93BC6CD4ACF8244775824722B5C0071026030B777552E884DB7E548555143B8E.json",
+      "payloadContentHash": "93BC6CD4ACF8244775824722B5C0071026030B777552E884DB7E548555143B8E",
+      "sourceSnapshotContentHash": "03871FCBAD2A8812DCD00CC56B64D6F2E7FA7DAEE912857900C1FCAC3964B745",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      }
+    },
+    {
+      "symbol": "CNC",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/CNC/D3E8B3A294CD3F99BCEA67576270C88140093AEA5CFD719601908FCEFE028CFA.json",
+      "payloadContentHash": "D3E8B3A294CD3F99BCEA67576270C88140093AEA5CFD719601908FCEFE028CFA",
+      "sourceSnapshotContentHash": "A0DF7D06D3BCC086E62ECE1F4A971B34F3A03DAEF37E90A485EF0BF9FE01B7EB",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "VALID",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "COO",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": true,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/COO/83206DD2F5A897694B13E27C9A34DF8EB9F9F4E4548A11DAF60C3D1C1CA50506.json",
+      "payloadContentHash": "83206DD2F5A897694B13E27C9A34DF8EB9F9F4E4548A11DAF60C3D1C1CA50506",
+      "sourceSnapshotContentHash": "0F05E57056BC70DC993CB4D4165089B64529E28A375244F8898EF04A37247964",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      }
+    },
+    {
+      "symbol": "CRH",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/CRH/205D7BF2966F6E31A7D8EF2F5023C1F536B9F6E835161E13E9BE736E810BB453.json",
+      "payloadContentHash": "205D7BF2966F6E31A7D8EF2F5023C1F536B9F6E835161E13E9BE736E810BB453",
+      "sourceSnapshotContentHash": "A9D9E1FF6F36C1BBF654DDFE2F094257EE095A60C3BBBCF271F6A1973E471B97",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "CROX",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/CROX/6AF8B2BEA58C2ED42752074F8FECBCA22767686898303695470773AB05084719.json",
+      "payloadContentHash": "6AF8B2BEA58C2ED42752074F8FECBCA22767686898303695470773AB05084719",
+      "sourceSnapshotContentHash": "5F198AC411AE92806EA67AA7653544E25AC2A2C3158F5CAFD7D8396069BE5326",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "VALID",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "CSCO",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/CSCO/BD1DA58E6030B01B89125657BBE78D952CFA803FFA542FC5243C13A5E9E17E35.json",
+      "payloadContentHash": "BD1DA58E6030B01B89125657BBE78D952CFA803FFA542FC5243C13A5E9E17E35",
+      "sourceSnapshotContentHash": "BC1738F2F5363BDDA7A7BDE48A2ABEE03006208664E799A69803BFE500A04AD1",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "VALID",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "CVS",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/CVS/66F6FF2435062EC5F325AFF0A84F21B8C590D59164CCE057688C8CAB0C792D1D.json",
+      "payloadContentHash": "66F6FF2435062EC5F325AFF0A84F21B8C590D59164CCE057688C8CAB0C792D1D",
+      "sourceSnapshotContentHash": "446723155E0CE60ED6EE91188555817EADB867619A40636FE8A4E40A61D63061",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "VALID",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "DDOG",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/DDOG/3277698C0F80D67D70A02D92C0F1E4C18226C014C65A3A8B96D14A310643B225.json",
+      "payloadContentHash": "3277698C0F80D67D70A02D92C0F1E4C18226C014C65A3A8B96D14A310643B225",
+      "sourceSnapshotContentHash": "56AA00F5A63843D1276CA6297D76BC1D045013EB3EEB93D63DAA0533579E3BFC",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "VALID",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "VALID",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "DELL",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/DELL/07F7E77D12978E52FFB31ECCA571C5B0D94A0C0F0B148B3E9BD75D76C25D570B.json",
+      "payloadContentHash": "07F7E77D12978E52FFB31ECCA571C5B0D94A0C0F0B148B3E9BD75D76C25D570B",
+      "sourceSnapshotContentHash": "40FB0236FCA89277B7F3B0B0EB75EC2FB130734CFC010A4948ECE1A41167F466",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "VALID",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "DHR",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": true,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/DHR/FBD6A0A70A6F9D49E7EF0CEAE6488EBB75031E0F5B28497B8EF6142CA943FE6F.json",
+      "payloadContentHash": "FBD6A0A70A6F9D49E7EF0CEAE6488EBB75031E0F5B28497B8EF6142CA943FE6F",
+      "sourceSnapshotContentHash": "6C9142669B85E93D67FD9CC9120BC2848E51AADAFC4659E5590BFDFD3EBBD8B8",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      }
+    },
+    {
+      "symbol": "DOV",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/DOV/4C2AE18C90BDCCABF658FD8469F92F207A377DBB121C04AEA7674A7DDB1032A6.json",
+      "payloadContentHash": "4C2AE18C90BDCCABF658FD8469F92F207A377DBB121C04AEA7674A7DDB1032A6",
+      "sourceSnapshotContentHash": "8177C93FF27A20D75F3DDFF33B8CB4F8E3A21BB4446E80AD27FFAE17987AA2B4",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "VALID",
+        "stability": "MISSING",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "VALID",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "DXCM",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/DXCM/2D61256BE5BF1A2F9C4E2F2EF35D7A41E62746F43B7D845B332893ACCA85DFA6.json",
+      "payloadContentHash": "2D61256BE5BF1A2F9C4E2F2EF35D7A41E62746F43B7D845B332893ACCA85DFA6",
+      "sourceSnapshotContentHash": "183BDC13670514672677BF4CA5005A7A1CCEF5468554F5D991B96822CE112F1F",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "VALID",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "EBAY",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/EBAY/0A9F7E0EA93FE77E5AB37A8DF4E961DE8674441F55519DF5E4BA68EEC75D3C7A.json",
+      "payloadContentHash": "0A9F7E0EA93FE77E5AB37A8DF4E961DE8674441F55519DF5E4BA68EEC75D3C7A",
+      "sourceSnapshotContentHash": "50512C6935BFFFF86A9BA5A18CDCC11023CC7C1940856E5020A840A178B9C1B6",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "FAST",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": true,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/FAST/E1BC8FDC0E672E287F2AA96BDAE37FAFBDDACACB401C9490ED8896A88240F18F.json",
+      "payloadContentHash": "E1BC8FDC0E672E287F2AA96BDAE37FAFBDDACACB401C9490ED8896A88240F18F",
+      "sourceSnapshotContentHash": "F6021896071CDE3B82AC412CA9A4299C146B2A5C0317DB850CD269ED1F3E045D",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      }
+    },
+    {
+      "symbol": "FIX",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/FIX/0A15CD7A24D3A3097BAFB1F1F18DD5B5198F45E44457636AE3203E3BCC93B99F.json",
+      "payloadContentHash": "0A15CD7A24D3A3097BAFB1F1F18DD5B5198F45E44457636AE3203E3BCC93B99F",
+      "sourceSnapshotContentHash": "181E9CD16BEE899CC5346851CB61DEE60560E4E6F23EA7D919EA3D0008BDAF29",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      }
+    },
+    {
+      "symbol": "FLEX",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/FLEX/503A09DB06E4A9A536570B3527485934FCEA52124F2BB6738C2D3746B7795405.json",
+      "payloadContentHash": "503A09DB06E4A9A536570B3527485934FCEA52124F2BB6738C2D3746B7795405",
+      "sourceSnapshotContentHash": "5AB9964D14E318602B40C308C607E08A6EDAA6B478D58081B48ABB28146B3173",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "VALID",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "FSLR",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/FSLR/AE0D91ED5B4AE6F1178A8DC0F28F6B6AA5AD8867333F965B9234F03144F1F4C2.json",
+      "payloadContentHash": "AE0D91ED5B4AE6F1178A8DC0F28F6B6AA5AD8867333F965B9234F03144F1F4C2",
+      "sourceSnapshotContentHash": "F152E33639D303AB27235AEBB561890B0D51D5E547B4A8866E83EF7646A1B1AE",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "VALID",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "FTV",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/FTV/BC3BAF12BCC3965624A8913C160DBA3963618B3197D9600CE1D25A61AEDBFFE7.json",
+      "payloadContentHash": "BC3BAF12BCC3965624A8913C160DBA3963618B3197D9600CE1D25A61AEDBFFE7",
+      "sourceSnapshotContentHash": "06ACD253349989DC18854B545D418E9475093553578A7308E504FC6626EEBD85",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "VALID",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "VALID",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "GPC",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/GPC/DA5ACB872CC343BD24F8A31A23EC9852D994C6DA1AB2FB8A68799AF3700A5306.json",
+      "payloadContentHash": "DA5ACB872CC343BD24F8A31A23EC9852D994C6DA1AB2FB8A68799AF3700A5306",
+      "sourceSnapshotContentHash": "3E0AEBB2AFC62225C182EB6F374A867A0B7D459C18EDF3B650E990D007FB04E4",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "VALID",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "GWW",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/GWW/D85B8F83EADCA3E935132D483B9FC62390B5F6917EA4C04F3C8AF2D2891C9E94.json",
+      "payloadContentHash": "D85B8F83EADCA3E935132D483B9FC62390B5F6917EA4C04F3C8AF2D2891C9E94",
+      "sourceSnapshotContentHash": "2D1FB5E8282565089912948EDDD0AD8705B190F9B333104518272B10D0B13FF5",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "VALID",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "HRL",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/HRL/A74222570E9CD5519CBE17CD12F5B03615EA5B7E06BDF5FB34B0DAA690C7FD7B.json",
+      "payloadContentHash": "A74222570E9CD5519CBE17CD12F5B03615EA5B7E06BDF5FB34B0DAA690C7FD7B",
+      "sourceSnapshotContentHash": "6E2FA4F88981494BBFE6A28627993A7BEC78D3DF6D023015D30089ED0D358195",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      }
+    },
+    {
+      "symbol": "IDXX",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/IDXX/431095CA051214F19F20BD211D923BFCF12530BD33A97A273314CA1A7742AFBD.json",
+      "payloadContentHash": "431095CA051214F19F20BD211D923BFCF12530BD33A97A273314CA1A7742AFBD",
+      "sourceSnapshotContentHash": "3F45F5876E84A874C773B3A9E7E97860613E77E8F19F91B81E8BBC75D261AB77",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "VALID",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "IFF",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/IFF/005B322147A388754A512C5F73AFBEE0BB8817E01DA38ADDA60217BCFB5AA214.json",
+      "payloadContentHash": "005B322147A388754A512C5F73AFBEE0BB8817E01DA38ADDA60217BCFB5AA214",
+      "sourceSnapshotContentHash": "BE7136C41D846D391353A30352A064D0C4DF4E0AB6776DEDF64D45721C879893",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "VALID",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "VALID",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "KDP",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/KDP/C5D3F8FF591611D810113B1D7E9CAAB9335AEC8B47FE9474AFA3641BE2EF4A6E.json",
+      "payloadContentHash": "C5D3F8FF591611D810113B1D7E9CAAB9335AEC8B47FE9474AFA3641BE2EF4A6E",
+      "sourceSnapshotContentHash": "F6C433CCAD3A73D213DAC62DFC473119AEB31DA4D989DB1B8EF1F64D703A9299",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "VALID",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "KO",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/KO/51D1BFA7383815A38F2FD2E89B3ADF4907FB4A0EC5B643C8D47A601CA6535DF3.json",
+      "payloadContentHash": "51D1BFA7383815A38F2FD2E89B3ADF4907FB4A0EC5B643C8D47A601CA6535DF3",
+      "sourceSnapshotContentHash": "8A88D5D487AD31BD91300361E49A0195CE3C8D9CB720F91A55D668A77DCE7A6E",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "VALID",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "KVUE",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/KVUE/8926A82E9C0A3E4FB50AA2532FC5B22112BA4DA83D4030EF8A2F0174627BFB73.json",
+      "payloadContentHash": "8926A82E9C0A3E4FB50AA2532FC5B22112BA4DA83D4030EF8A2F0174627BFB73",
+      "sourceSnapshotContentHash": "50CCDF40FE25D9BFEA51A5F8FAC47D2D88CA604604348F9353A1F297577C2007",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "VALID",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "VALID",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "MCHP",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/MCHP/D7161501E9464C8D4C7B4A2DB6F940C8DBCB02ACC9AF1ABBC251FCD40B1E9F8E.json",
+      "payloadContentHash": "D7161501E9464C8D4C7B4A2DB6F940C8DBCB02ACC9AF1ABBC251FCD40B1E9F8E",
+      "sourceSnapshotContentHash": "65D46EB5375BB4F9DF4D243F0523E8C5B6E5030A2AF310015CCA2D34557F4F44",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "VALID",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "MCK",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/MCK/F5EBED83173790FFFF11B4F6B9AF18E54A47E2577321C238837085C34445463F.json",
+      "payloadContentHash": "F5EBED83173790FFFF11B4F6B9AF18E54A47E2577321C238837085C34445463F",
+      "sourceSnapshotContentHash": "D0461239854FABE976E4F0456532A3E58E3C4AB0D42737B4D846DECFE345D682",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "VALID",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "MLM",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/MLM/1990ACDC80D20496101D3D58226AF30E9FAB4B454783361742F83746739A8FD4.json",
+      "payloadContentHash": "1990ACDC80D20496101D3D58226AF30E9FAB4B454783361742F83746739A8FD4",
+      "sourceSnapshotContentHash": "A1F556630B0D5FFF743D9C6887CA30F864B5F4E550C9A6E437C03CB3DEAEB2F3",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "VALID",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "MO",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/MO/4B6A8BAB0568BAD21F46086A5748739F0BFAC56C8500E1A64AAF9EB7F0F63A03.json",
+      "payloadContentHash": "4B6A8BAB0568BAD21F46086A5748739F0BFAC56C8500E1A64AAF9EB7F0F63A03",
+      "sourceSnapshotContentHash": "EBF62046DDDD9E1F89011C982A8F59CE898FE50AFA921B69C47105F3ED4839B0",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "VALID",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "MOS",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/MOS/99D90ADD9C3F73BEFCCC4B09573AE29288212F68E380F07C767B1E609E68F639.json",
+      "payloadContentHash": "99D90ADD9C3F73BEFCCC4B09573AE29288212F68E380F07C767B1E609E68F639",
+      "sourceSnapshotContentHash": "2FD35FC12BBA9FC35D31005DE8ED31E1FD5546004948159C991DB2CB2C47EC77",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "VALID",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "MSFT",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/MSFT/328C8902A660930CB2398B53FDF40B331BA9310A81ACBEC25E2A431237944599.json",
+      "payloadContentHash": "328C8902A660930CB2398B53FDF40B331BA9310A81ACBEC25E2A431237944599",
+      "sourceSnapshotContentHash": "7B198F2530C6C5D0C385B4E886EFE897780AF663BBBFA55AD6276990FDCCE13E",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "NVDA",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/NVDA/C75DAC1AA550584EFAB1E609BDFB890C5B1B3A6930CFCDC8BB8363809788CA0B.json",
+      "payloadContentHash": "C75DAC1AA550584EFAB1E609BDFB890C5B1B3A6930CFCDC8BB8363809788CA0B",
+      "sourceSnapshotContentHash": "47348058482115E51BB3B03313FC12AC1CB0A9F6C9A75A6CE4A4E11C89F8A78E",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "OLED",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/OLED/DA43B7A5E35530F26B442212A17DAEE76C8FF1EC1B30B08E0381D4F223D50F20.json",
+      "payloadContentHash": "DA43B7A5E35530F26B442212A17DAEE76C8FF1EC1B30B08E0381D4F223D50F20",
+      "sourceSnapshotContentHash": "F5FC72339095C48DA751F121E625676A1F324E8F3C54FFF126E713DF409A8747",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "VALID",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "ORCL",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/ORCL/AF4F9957BF4F7CFBF513871D92465B1C53518F8D14F9D7C5039B97B8C52865DB.json",
+      "payloadContentHash": "AF4F9957BF4F7CFBF513871D92465B1C53518F8D14F9D7C5039B97B8C52865DB",
+      "sourceSnapshotContentHash": "47489356B207C9F35B6A3101A621B4C4181E48809580F540C1D2252677590675",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "VALID",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "PH",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/PH/8F82A74EF5A419EFC37309A17A744B6236709F2A9F43ED443528D7669486A07E.json",
+      "payloadContentHash": "8F82A74EF5A419EFC37309A17A744B6236709F2A9F43ED443528D7669486A07E",
+      "sourceSnapshotContentHash": "E4D328D42120786D970C711963164547501972169C66E783FEA5E350823942CE",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "VALID",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "VALID",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "PLAB",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/PLAB/1A2DCFDB146F4024D74DDF358E94297DF4CEC6ECC601EE9D82F782D7BEE1FB2F.json",
+      "payloadContentHash": "1A2DCFDB146F4024D74DDF358E94297DF4CEC6ECC601EE9D82F782D7BEE1FB2F",
+      "sourceSnapshotContentHash": "776A59F7D534B8A592E3B6CF0E2F191A6F9908967CBA358B052B781BEC9F734F",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      }
+    },
+    {
+      "symbol": "ROK",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/ROK/8FC84ACD7F4F0F3121A01D744E0A8D178902F81823A2E4EC5D97EDB0AF9A7581.json",
+      "payloadContentHash": "8FC84ACD7F4F0F3121A01D744E0A8D178902F81823A2E4EC5D97EDB0AF9A7581",
+      "sourceSnapshotContentHash": "8BA4919A9F80AE0E40411A952ED557C3ABD21993904130E85BF2026EFAFF65F8",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "VALID",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "TGT",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/TGT/E2FA22DC75901EF336BE51E67E40E153A6282128E9768A906787D61B7449E06E.json",
+      "payloadContentHash": "E2FA22DC75901EF336BE51E67E40E153A6282128E9768A906787D61B7449E06E",
+      "sourceSnapshotContentHash": "76DEF95DF44CC8B0B4EAF3B7B5BF5D04F9556EAEDC946ADF59C9BC1279DA19C1",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "VALID",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "TSN",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": true,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/TSN/2A73EB2033F5791DBA0A9659E146C760D952E76524FCDAECB83352D7359EC72F.json",
+      "payloadContentHash": "2A73EB2033F5791DBA0A9659E146C760D952E76524FCDAECB83352D7359EC72F",
+      "sourceSnapshotContentHash": "3618238D7B0C5DDC17D5BE02ED71BD29E3D7558116413089E0F39A8A47D9706F",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      }
+    },
+    {
+      "symbol": "TTC",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/TTC/555C27578A49C570B1983979BFEF47728BF6DEF2B9E15A6E9A8F313BFD7701F4.json",
+      "payloadContentHash": "555C27578A49C570B1983979BFEF47728BF6DEF2B9E15A6E9A8F313BFD7701F4",
+      "sourceSnapshotContentHash": "2A9A1717BCF15A685074E4F418F91C53933C0D0F4213EB136AA0D45EDF865920",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      }
+    },
+    {
+      "symbol": "VMC",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/VMC/6072462369AD6440EAA09EE0F5D03AFA543E6A8069838D9D020713A2FAC85F5A.json",
+      "payloadContentHash": "6072462369AD6440EAA09EE0F5D03AFA543E6A8069838D9D020713A2FAC85F5A",
+      "sourceSnapshotContentHash": "EA90BC6F1B48A795EEDB8DEA12D24002FDBFDF5A8F64A15979388237D7690FBE",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "VALID",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      }
+    },
+    {
+      "symbol": "WDFC",
+      "status": "FACTOR_INPUT_SNAPSHOT_REASSEMBLED",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/WDFC/1AE2692A512746F7F9C11DF7E33FF86E7EC2B25EE840B22D576259B9F838FDDF.json",
+      "payloadContentHash": "1AE2692A512746F7F9C11DF7E33FF86E7EC2B25EE840B22D576259B9F838FDDF",
+      "sourceSnapshotContentHash": "A207CCFBED595C9EC5D17EBC31B1C23E55AC04403CBDEC4F8BC8DF0EE9B8D497",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      }
+    }
+  ],
+  "licensedValuesIncluded": false,
+  "networkRequestsExecuted": false,
+  "scoresOrRanksIncluded": false,
+  "forwardValidationExecuted": false,
+  "formulaOrThresholdChanges": false,
+  "artifactContentHash": "84541167D9E45C966538388E3CF82C1B3D31A466E098626FADE9504A88C8B6F1"
+}

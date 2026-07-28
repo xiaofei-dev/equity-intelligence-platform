@@ -1,0 +1,3483 @@
+{
+  "artifactType": "FORMULA_READY_REMAINING_MANIFEST",
+  "schemaVersion": "formula-ready-remaining-manifest-v1.0.0",
+  "sourceManifestContentHash": "82697EF70BD9E50A22814B2A7EFEB64822CEBB3261AE6935ABF84A3A96FDD970",
+  "sourceEligibleSymbolCount": 243,
+  "completedTerminalSymbols": [
+    {
+      "symbol": "AAPL",
+      "status": "FORMULA_READY",
+      "sourceRunId": "20260727T201423Z-f94523bfc322",
+      "sourceReportSha256": "7A4F049541721C4022AD9FAFC142332486BCBEFD77A20619C2CDC9D836856934"
+    },
+    {
+      "symbol": "ABNB",
+      "status": "SECURITY_INSUFFICIENT_DATA",
+      "sourceRunId": "20260727T204539Z-5dd84ab67acf",
+      "sourceReportSha256": "1B43BB65AE98394F764CD8C15A05E3268D9C02355CCAB77C4B536C376ED64BAC"
+    },
+    {
+      "symbol": "CAT",
+      "status": "FORMULA_READY",
+      "sourceRunId": "20260727T201423Z-f94523bfc322",
+      "sourceReportSha256": "7A4F049541721C4022AD9FAFC142332486BCBEFD77A20619C2CDC9D836856934"
+    },
+    {
+      "symbol": "JNJ",
+      "status": "FORMULA_READY",
+      "sourceRunId": "20260727T201423Z-f94523bfc322",
+      "sourceReportSha256": "7A4F049541721C4022AD9FAFC142332486BCBEFD77A20619C2CDC9D836856934"
+    }
+  ],
+  "remainingSymbolCount": 239,
+  "sliceSize": 20,
+  "sliceCount": 12,
+  "slices": [
+    {
+      "sliceId": "formula-ready-remaining-001",
+      "sequence": 1,
+      "symbols": [
+        "A",
+        "ACN",
+        "ADBE",
+        "ADI",
+        "ADM",
+        "ADP",
+        "ADSK",
+        "AEE",
+        "AEP",
+        "AES",
+        "AKAM",
+        "ALB",
+        "ALGN",
+        "ALLE",
+        "AMAT",
+        "AMCR",
+        "AMD",
+        "AME",
+        "AMZN",
+        "ANET"
+      ],
+      "records": [
+        {
+          "symbol": "A",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "ACN",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "ADBE",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "ADI",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "ADM",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "ADP",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "ADSK",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "AEE",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "AEP",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "AES",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "AKAM",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "ALB",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "ALGN",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "ALLE",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "AMAT",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "AMCR",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "AMD",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "AME",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "AMZN",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "ANET",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        }
+      ]
+    },
+    {
+      "sliceId": "formula-ready-remaining-002",
+      "sequence": 2,
+      "symbols": [
+        "AOS",
+        "APD",
+        "APH",
+        "APP",
+        "APTV",
+        "ATO",
+        "AVGO",
+        "AVY",
+        "AWK",
+        "AXON",
+        "BA",
+        "BALL",
+        "BAX",
+        "BBY",
+        "BDX",
+        "BF-B",
+        "BG",
+        "BKNG",
+        "BLDR",
+        "BMY"
+      ],
+      "records": [
+        {
+          "symbol": "AOS",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "APD",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "APH",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "APP",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "APTV",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "ATO",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "AVGO",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "AVY",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "AWK",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "AXON",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "BA",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "BALL",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "BAX",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "BBY",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "BDX",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "BF-B",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "BG",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "BKNG",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "BLDR",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "BMY",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        }
+      ]
+    },
+    {
+      "sliceId": "formula-ready-remaining-003",
+      "sequence": 3,
+      "symbols": [
+        "BR",
+        "BSX",
+        "CALM",
+        "CARR",
+        "CASY",
+        "CCL",
+        "CDNS",
+        "CDW",
+        "CEG",
+        "CF",
+        "CHD",
+        "CHRW",
+        "CHTR",
+        "CI",
+        "CIEN",
+        "CL",
+        "CLX",
+        "CMCSA",
+        "CMG",
+        "CMI"
+      ],
+      "records": [
+        {
+          "symbol": "BR",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "BSX",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "CALM",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "CARR",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "CASY",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "CCL",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "CDNS",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "CDW",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "CEG",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "CF",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "CHD",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "CHRW",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "CHTR",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "CI",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "CIEN",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "CL",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "CLX",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "CMCSA",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "CMG",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "CMI",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        }
+      ]
+    },
+    {
+      "sliceId": "formula-ready-remaining-004",
+      "sequence": 4,
+      "symbols": [
+        "CMS",
+        "CNC",
+        "CNP",
+        "COHR",
+        "COO",
+        "COR",
+        "CPRT",
+        "CRH",
+        "CRL",
+        "CRM",
+        "CROX",
+        "CRWD",
+        "CSCO",
+        "CSX",
+        "CTSH",
+        "CTVA",
+        "CVNA",
+        "CVS",
+        "D",
+        "DAL"
+      ],
+      "records": [
+        {
+          "symbol": "CMS",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "CNC",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "CNP",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "COHR",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "COO",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "COR",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "CPRT",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "CRH",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "CRL",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "CRM",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "CROX",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "CRWD",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "CSCO",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "CSX",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "CTSH",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "CTVA",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "CVNA",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "CVS",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "D",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "DAL",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        }
+      ]
+    },
+    {
+      "sliceId": "formula-ready-remaining-005",
+      "sequence": 5,
+      "symbols": [
+        "DASH",
+        "DD",
+        "DDOG",
+        "DE",
+        "DELL",
+        "DG",
+        "DGX",
+        "DHI",
+        "DHR",
+        "DIS",
+        "DLTR",
+        "DOV",
+        "DTE",
+        "DUK",
+        "DVA",
+        "DXCM",
+        "EA",
+        "EBAY",
+        "ECL",
+        "ED"
+      ],
+      "records": [
+        {
+          "symbol": "DASH",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "DD",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "DDOG",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "DE",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "DELL",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "DG",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "DGX",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "DHI",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "DHR",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "DIS",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "DLTR",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "DOV",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "DTE",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "DUK",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "DVA",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "DXCM",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "EA",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "EBAY",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "ECL",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "ED",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        }
+      ]
+    },
+    {
+      "sliceId": "formula-ready-remaining-006",
+      "sequence": 6,
+      "symbols": [
+        "EFX",
+        "EIX",
+        "EL",
+        "ELF",
+        "ELV",
+        "EME",
+        "EMR",
+        "ES",
+        "ETN",
+        "ETR",
+        "EVRG",
+        "EXC",
+        "EXPD",
+        "EXPE",
+        "F",
+        "FAST",
+        "FDX",
+        "FE",
+        "FFIV",
+        "FICO"
+      ],
+      "records": [
+        {
+          "symbol": "EFX",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "EIX",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "EL",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "ELF",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "ELV",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "EME",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "EMR",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "ES",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "ETN",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "ETR",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "EVRG",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "EXC",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "EXPD",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "EXPE",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "F",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "FAST",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "FDX",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "FE",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "FFIV",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "FICO",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        }
+      ]
+    },
+    {
+      "sliceId": "formula-ready-remaining-007",
+      "sequence": 7,
+      "symbols": [
+        "FIX",
+        "FLEX",
+        "FOX",
+        "FOXA",
+        "FSLR",
+        "FTV",
+        "GD",
+        "GEHC",
+        "GIS",
+        "GM",
+        "GOOG",
+        "GOOGL",
+        "GPC",
+        "GRMN",
+        "GWW",
+        "HD",
+        "HLT",
+        "HON",
+        "HRL",
+        "HSIC"
+      ],
+      "records": [
+        {
+          "symbol": "FIX",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "FLEX",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "FOX",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "FOXA",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "FSLR",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "FTV",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "GD",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "GEHC",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "GIS",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "GM",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "GOOG",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "GOOGL",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "GPC",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "GRMN",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "GWW",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "HD",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "HLT",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "HON",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "HRL",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "HSIC",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        }
+      ]
+    },
+    {
+      "sliceId": "formula-ready-remaining-008",
+      "sequence": 8,
+      "symbols": [
+        "HSY",
+        "HUM",
+        "HWKN",
+        "IBM",
+        "IDXX",
+        "IFF",
+        "INTU",
+        "IP",
+        "IQV",
+        "ISRG",
+        "ITW",
+        "KDP",
+        "KHC",
+        "KLAC",
+        "KMB",
+        "KO",
+        "KVUE",
+        "LEN",
+        "LH",
+        "LIN"
+      ],
+      "records": [
+        {
+          "symbol": "HSY",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "HUM",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "HWKN",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "IBM",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "IDXX",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "IFF",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "INTU",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "IP",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "IQV",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "ISRG",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "ITW",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "KDP",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "KHC",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "KLAC",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "KMB",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "KO",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "KVUE",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "LEN",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "LH",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "LIN",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        }
+      ]
+    },
+    {
+      "sliceId": "formula-ready-remaining-009",
+      "sequence": 9,
+      "symbols": [
+        "LLY",
+        "LMT",
+        "LNT",
+        "LOW",
+        "LRCX",
+        "LULU",
+        "LYB",
+        "LYV",
+        "MCD",
+        "MCHP",
+        "MCK",
+        "MDLZ",
+        "META",
+        "MKC",
+        "MLM",
+        "MNST",
+        "MO",
+        "MOS",
+        "MRK",
+        "MSFT"
+      ],
+      "records": [
+        {
+          "symbol": "LLY",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "LMT",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "LNT",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "LOW",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "LRCX",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "LULU",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "LYB",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "LYV",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "MCD",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "MCHP",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "MCK",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "MDLZ",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "META",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "MKC",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "MLM",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "MNST",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "MO",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "MOS",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "MRK",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "MSFT",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        }
+      ]
+    },
+    {
+      "sliceId": "formula-ready-remaining-010",
+      "sequence": 10,
+      "symbols": [
+        "NFLX",
+        "NI",
+        "NKE",
+        "NOC",
+        "NRG",
+        "NUE",
+        "NVDA",
+        "NWS",
+        "NWSA",
+        "OLED",
+        "OMC",
+        "ORCL",
+        "ORLY",
+        "PCAR",
+        "PCG",
+        "PEG",
+        "PFE",
+        "PG",
+        "PH",
+        "PLAB"
+      ],
+      "records": [
+        {
+          "symbol": "NFLX",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "NI",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "NKE",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "NOC",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "NRG",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "NUE",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "NVDA",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "NWS",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "NWSA",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "OLED",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "OMC",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "ORCL",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "ORLY",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "PCAR",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "PCG",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "PEG",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "PFE",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "PG",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "PH",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "PLAB",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        }
+      ]
+    },
+    {
+      "sliceId": "formula-ready-remaining-011",
+      "sequence": 11,
+      "symbols": [
+        "PM",
+        "PNW",
+        "PPG",
+        "PPL",
+        "PSKY",
+        "QCOM",
+        "ROK",
+        "ROST",
+        "RTX",
+        "SAIA",
+        "SBUX",
+        "SHW",
+        "SJM",
+        "SO",
+        "SRE",
+        "STZ",
+        "SW",
+        "SYK",
+        "SYY",
+        "T"
+      ],
+      "records": [
+        {
+          "symbol": "PM",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "PNW",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "PPG",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "PPL",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "PSKY",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "QCOM",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "ROK",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "ROST",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "RTX",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "SAIA",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "SBUX",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "SHW",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "SJM",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "SO",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "SRE",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "STZ",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "SW",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "SYK",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "SYY",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "T",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        }
+      ]
+    },
+    {
+      "sliceId": "formula-ready-remaining-012",
+      "sequence": 12,
+      "symbols": [
+        "TGT",
+        "TJX",
+        "TKO",
+        "TMUS",
+        "TSN",
+        "TTC",
+        "TTD",
+        "TTWO",
+        "UFPI",
+        "UNP",
+        "UPS",
+        "VMC",
+        "WBD",
+        "WDFC",
+        "WM",
+        "WMT",
+        "XEL",
+        "YUM",
+        "ZBH"
+      ],
+      "records": [
+        {
+          "symbol": "TGT",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "TJX",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "TKO",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "TMUS",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "TSN",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "TTC",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "TTD",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "TTWO",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "UFPI",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "UNP",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "UPS",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "VMC",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "WBD",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "WDFC",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "WM",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "WMT",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "XEL",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "YUM",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        },
+        {
+          "symbol": "ZBH",
+          "action": "NEEDS_EODHD_AND_SEC",
+          "existingV2PayloadHash": null,
+          "requiredEndpoints": [
+            "fundamentals",
+            "eod",
+            "historical-market-cap",
+            "ticker_mapping",
+            "submissions",
+            "company_facts"
+          ]
+        }
+      ]
+    }
+  ],
+  "selectionApplied": false,
+  "replacementApplied": false,
+  "networkRequestsExecuted": false,
+  "artifactContentHash": "856CF4C3C1174D258CB69D758BBE7740EE04A92E398E7A0841BAB3EBD7652EBC"
+}

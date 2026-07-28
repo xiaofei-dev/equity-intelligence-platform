@@ -1,0 +1,115 @@
+{
+  "reportVersion": "mature-company-data-gate-v1.0.0",
+  "artifactType": "EXPANSION_PROVIDER_GATE_SLICE",
+  "runId": "20260727T185058Z-161ca626a511",
+  "sliceId": "repair-focused-001",
+  "universeVersion": "provider-expansion-us-v2.0.0",
+  "startedAt": "2026-07-27T18:50:58.601275+00:00",
+  "completedAt": "2026-07-27T18:51:01.995582+00:00",
+  "dashboardBefore": 22480,
+  "dashboardAfter": null,
+  "providerBillingReconciliation": "NOT_RECONCILED",
+  "networkRerunSample": 0,
+  "results": [
+    {
+      "symbol": "TSN",
+      "sector": "Consumer Staples",
+      "candidateRole": "PRIMARY",
+      "status": "PASS",
+      "reasonCodes": [],
+      "fieldCoverage": {
+        "identity": true,
+        "activeStatus": true,
+        "dailyPrice": true,
+        "adjustedPrice": true,
+        "dividends": true,
+        "splits": true,
+        "idempotentRerun": true,
+        "annualFinancials": true,
+        "quarterlyFinancials": true,
+        "pitAvailability": true,
+        "requiredRatingFields": true,
+        "historicalMarketValue": true,
+        "lineage": true
+      },
+      "marketCapitalization": "19827632300",
+      "marketCapBand": "LARGE",
+      "scoringInputReady": true,
+      "scoringInputReasonCodes": [],
+      "scoringInputPayloadHash": "6FFF7E4E9B58875F5A2C8B5A90393F4E0AD924E60BCDC3D55E08F9FDF8F7F5E4",
+      "scoringInputStorageReference": "storage/provider-validation/scoring-inputs/TSN/6FFF7E4E9B58875F5A2C8B5A90393F4E0AD924E60BCDC3D55E08F9FDF8F7F5E4.json"
+    }
+  ],
+  "requestMetrics": [
+    {
+      "provider": "eodhd",
+      "endpointCategory": "fundamentals",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 413,
+      "weightedCalls": 10,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "eod",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 217,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "div",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 130,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "splits",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 123,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "eodhd",
+      "endpointCategory": "historical-market-cap",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 108,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "submissions",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 187,
+      "weightedCalls": 1,
+      "errorCode": null
+    },
+    {
+      "provider": "sec_edgar",
+      "endpointCategory": "company_facts",
+      "attempt": 1,
+      "status": "SUCCESS",
+      "durationMs": 448,
+      "weightedCalls": 1,
+      "errorCode": null
+    }
+  ],
+  "physicalHttpAttemptCount": 7,
+  "eodhdPhysicalAttemptCount": 5,
+  "secPhysicalAttemptCount": 2,
+  "configuredLocalWeightedCalls": 14,
+  "scoringInputReadyCount": 1,
+  "objectiveRatingExecuted": false,
+  "licensedRawProviderPayloadIncluded": false
+}

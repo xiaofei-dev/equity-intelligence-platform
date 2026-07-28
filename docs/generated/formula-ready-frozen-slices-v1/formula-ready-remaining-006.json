@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "formula-ready-frozen-slice-v1.0.0",
+  "sourceManifestContentHash": "856CF4C3C1174D258CB69D758BBE7740EE04A92E398E7A0841BAB3EBD7652EBC",
+  "sliceId": "formula-ready-remaining-006",
+  "sequence": 6,
+  "symbols": [
+    "EFX",
+    "EIX",
+    "EL",
+    "ELF",
+    "ELV",
+    "EME",
+    "EMR",
+    "ES",
+    "ETN",
+    "ETR",
+    "EVRG",
+    "EXC",
+    "EXPD",
+    "EXPE",
+    "F",
+    "FAST",
+    "FDX",
+    "FE",
+    "FFIV",
+    "FICO"
+  ],
+  "automaticSelection": false,
+  "automaticReplacement": false,
+  "contentHash": "4174261DF1326C64B2099D98E4E77224B9FA262496835F36CE5C662858F9A5C6"
+}

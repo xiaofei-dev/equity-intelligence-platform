@@ -39,6 +39,8 @@ class SnapshotCreateRequest(BaseModel):
     market_normalization_version: str
     fundamental_normalization_version: str
     action_normalization_version: str
+    market_data_provider: str | None = None
+    market_adjustment_mode: str = "SPLIT_ADJUSTED"
 
 
 class SnapshotAccepted(BaseModel):
@@ -68,7 +70,14 @@ def create_snapshot(request: SnapshotCreateRequest) -> SnapshotAccepted:
     settings = Settings.from_environment()
     try:
         snapshot_id = DataSnapshotRepository(settings.analytics_database_url).create_and_seal(
-            SnapshotRequest(**request.model_dump())
+            SnapshotRequest(
+                **{
+                    **request.model_dump(exclude={"market_data_provider"}),
+                    "market_data_provider": (
+                        request.market_data_provider or settings.market_data_provider
+                    ),
+                }
+            )
         )
     except SnapshotConflictError as error:
         raise HTTPException(

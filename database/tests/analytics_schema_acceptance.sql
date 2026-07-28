@@ -34,6 +34,22 @@ BEGIN
         RAISE EXCEPTION 'Every security must have a public UUID';
     END IF;
 
+    IF NOT EXISTS (
+        SELECT 1
+        FROM information_schema.columns
+        WHERE table_schema = 'analytics'
+          AND table_name = 'data_snapshot'
+          AND column_name = 'market_data_provider'
+    ) OR NOT EXISTS (
+        SELECT 1
+        FROM information_schema.columns
+        WHERE table_schema = 'analytics'
+          AND table_name = 'data_snapshot'
+          AND column_name = 'market_adjustment_mode'
+    ) THEN
+        RAISE EXCEPTION 'Snapshots must seal market provider and adjustment mode';
+    END IF;
+
     SELECT COUNT(*) INTO invalid_weight_count
     FROM (
         SELECT strategy_version, SUM(weight) AS total_weight

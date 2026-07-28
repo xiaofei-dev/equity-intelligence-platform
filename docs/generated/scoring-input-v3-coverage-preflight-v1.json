@@ -1,0 +1,2702 @@
+{
+  "artifactType": "SCORING_INPUT_V3_COVERAGE_PREFLIGHT",
+  "schemaVersion": "scoring-input-v3-coverage-preflight-v1.0.0",
+  "migrationManifestPath": "docs/generated/scoring-input-v3-offline-migration-manifest-v1.json",
+  "migrationManifestContentHash": "F66B8DA2801C6C35856C7810D3BEE4B2CC208BDD8B110076F7443A62D086D6AD",
+  "inputContractVersion": "provider-neutral-scoring-input-v3.0.0",
+  "universeVersion": "provider-expansion-us-v2.0.0",
+  "asOfCutoff": "2026-07-27T23:22:46.247878+00:00",
+  "migratedPayloadCount": 223,
+  "currentRankingEligibleCount": 0,
+  "historicalPitEligibleCount": 0,
+  "blockedCurrentRankingCount": 223,
+  "blockedHistoricalPitCount": 223,
+  "blockerCounts": {
+    "DURATION_SEMANTIC_UNPROVEN": 223,
+    "HISTORICAL_VALUATION_PIT_UNPROVEN": 223,
+    "PERIOD_START_NOT_RETAINED": 223
+  },
+  "securities": [
+    {
+      "symbol": "A",
+      "v3Hash": "5A5909B9403D58C5EDE4802DE4D32F71C601A69C12AE0A3E963D4423308E1586",
+      "classificationSnapshotHash": "9CA72907D25FE0C012BDCF381DA7C79DA90EEA8BDA1CFEEE9AEC951AD0134E0A",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "v3Hash": "378F82C17D93A949A00ACAE78CAE9FE40613EADEFDA44F74F941A93CE0F00C10",
+      "classificationSnapshotHash": "4FA09B7A58259E58BADF5F3815F3A8EBB9B965769EC9B322B2A6C2552FCFCE2E",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "ACN",
+      "v3Hash": "5AE7CFEB1690DFFFE844327EA796F6A325B0C6DC16DC762B6F7A476E3DBDE48A",
+      "classificationSnapshotHash": "100D3DC23533F3D8A6F0B1EF48339F559CA565000A7825FC321DE87904FB8A6C",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "ADBE",
+      "v3Hash": "9FB97372BA2644156E06ED19F6002E1EE04051928CBBC87BEACD9DA8BA9D2E5E",
+      "classificationSnapshotHash": "CD7FEFD01FA246396EE1ABB30C805A860661B837D6184D2D4C9BE1603DF7FEFE",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "ADI",
+      "v3Hash": "BCADF9C557745DF45D8429EFACEF9A46DD868E41D1523B52E7051B64DA51A428",
+      "classificationSnapshotHash": "97442804423B391A0A9EA6BE253D672AA233C198248D98175580CCA2A7EAA799",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "ADM",
+      "v3Hash": "34EA61B00426BA8B05EF0DA765288A4CA5A86F02271C3A0670CA13045A826FBB",
+      "classificationSnapshotHash": "C8C201E8AFF17C0A4FABC2939D2162F5F2BDD9CDDBFEE8F93599147C521395DC",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "ADP",
+      "v3Hash": "A98F1F8A7024EDF9F2524DF7DBA8D19CDEA7FB7D1FE3864355A908DC1CFA560E",
+      "classificationSnapshotHash": "A2C303EA01C722441F135AF0374F8C49F9336EF88EBBA19ACEBA6F87F8033EC3",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "ADSK",
+      "v3Hash": "E92340EB8A09C1D49AE8B14BBEBCCCE35FB2B7D0318F45FBB886BC367DB32D90",
+      "classificationSnapshotHash": "D730B46D4A7C57043F8CA5038F72E62204CAB6B8CF426E314E650E184F1E38A9",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "AEE",
+      "v3Hash": "513A5CCD3CF610D0718D37BFE3638D5A3CA0DD5D596CF3FB8EB73A8AF1F82FD8",
+      "classificationSnapshotHash": "F561EDE72C9A1F305D1295B23760C5B265BA304E8CA55C6248AAF8EAC5F7D05D",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "AEP",
+      "v3Hash": "F41D146B2D7E05C2224B7CDDAF149285AEF76FD47B1A4086DD978CE4514F5836",
+      "classificationSnapshotHash": "0D96EF5D2D53891315107D6CEB4825D1B4FBC17232926022DB086C061495F734",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "AES",
+      "v3Hash": "813DB7FF6BE74F5B4C6F3BF88FF91336EAB546453ED9A1F8EE1952C50901512E",
+      "classificationSnapshotHash": "C12AFFC5F137065358A52DC9E097A5C26F95B52DA0D93EDB2B9CEC02F930B27B",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "AKAM",
+      "v3Hash": "1090B37CCACFD6AEB91FF7048971FDFF140009418DABB04CDB491E3F67506100",
+      "classificationSnapshotHash": "9E1847C059952D5B7CB2339A80FC7834E48F7E1C9B1030021E44F73B6A59190D",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "ALB",
+      "v3Hash": "52569907E9DB045ED0DE41D8180AF401520893E147E5C27D821A52D42798943D",
+      "classificationSnapshotHash": "0B2AA1F1AB5B1CB7498F4BCA2B46A8C0229D81F3202AF2B35C26E4817D71A647",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "ALLE",
+      "v3Hash": "3B231D892C6C05B266F5607CC8E67091DA695BA9B9886E951A9CDB1DAEAC5E4A",
+      "classificationSnapshotHash": "35CDB2342ABD9290294E43E2B7190C5F2EFEAF60A0030F6E42EC9EFCCB523E52",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "AMAT",
+      "v3Hash": "4CDF03BD050E565B8F1AC2DF0134D873FD85404B43BB810EED3508F263C0B73D",
+      "classificationSnapshotHash": "BEC01F442AF58A432BCB87593F79545FE3F2636615C9C3566223CA4F200F167F",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "AMCR",
+      "v3Hash": "FAB504868E1F29E1A6A900EFFB9025AE0A4D118CBB87C8C1202CD495A9B90CDD",
+      "classificationSnapshotHash": "BDE3A291CD8A98B00A7F8B1F899BBEE4E490FA4B64D0DF3D07B44C07E7C71E82",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "AMD",
+      "v3Hash": "5ACBE4B2AE9D77D3135D645A5173CF5CB58121D5CB40790A5F8E7348A3212BDD",
+      "classificationSnapshotHash": "472CBB091C316B65553590BE4223FCAB88DACE85A15CCB7225BE27A3FD005CCD",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "AME",
+      "v3Hash": "5BADC6DC0847E5F4A147562D028F1EBD86B1200DD0950263B6B9252D81EDE1B5",
+      "classificationSnapshotHash": "624BA191009DBD978AF8E420B3D062178477376FBA7E58A6453F6D320F64878C",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "AMZN",
+      "v3Hash": "D4467A709E4271C57EC86065A217223B9DB89A7003207A08F8D95E2669E559AB",
+      "classificationSnapshotHash": "0311B915848CD9082A27FEBAF2BD1F2B7D1913F4DFB3FC16EE6C66AA8E24F2C7",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "AOS",
+      "v3Hash": "8E1B98DAB5A9C648C0326877F2D957AAAE7342DC0BE7478D9E818A4132741E93",
+      "classificationSnapshotHash": "67191CC7EB710C0DD95A2B5820A8D8EDEDF02608D7FC8F647AA2978034BA35F9",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "APD",
+      "v3Hash": "460226405001F79263D66574267126E982E78788A174FE31BA193E7B57432664",
+      "classificationSnapshotHash": "C13527BD11AC3FD79846B32E33BE4EA8F092C927BFAB0EA0861E96FBF2B6B330",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "APH",
+      "v3Hash": "5499E257DDF029077148F7A54B44F310DB7222E144EE6CB0DCB68D7D83024D45",
+      "classificationSnapshotHash": "C19B8C08D37155E0012F10CB11CD7FFA07EF927FF8674FE57820D225618866CF",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "APP",
+      "v3Hash": "2CD1E98FCA109D84FC35CA665029D9682984D1758AC6376CC8F3EEA137F8A8CC",
+      "classificationSnapshotHash": "432EEEFE360EFAEA2E6E31C8A5D5601D9E5FDB2059E276EE0C5D636E94747743",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "APTV",
+      "v3Hash": "87B83BD020EFA3D28639BF1FA960244FDBA9950B9EC47DE3B454CFC2B2AB7591",
+      "classificationSnapshotHash": "11B43E98E6E03F7C91AFA85CF70E798236494874D8D0932365ADC929C017F3BE",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "ATO",
+      "v3Hash": "32E2684358E5E880E40669744AD5CFE44596D06B1F3CD865FE8BB588C487B97C",
+      "classificationSnapshotHash": "31B5BD328EB21FDEABBE4A702C5A869E8EECC443F684B3E839777CDBD8731358",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "AVGO",
+      "v3Hash": "DA0E39120B5804559F89F3D0D3C496F9BB8856AC7EB63508E3883E11107B085E",
+      "classificationSnapshotHash": "FF234978418403EE5D1DD6D04FF0779BD2061358AAEC923EBCA33B95E993706D",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "AVY",
+      "v3Hash": "F4C97DCD46783C0BB6902719FE27FB7AF8CFA3355E24F68344F83E6EF0DECFC1",
+      "classificationSnapshotHash": "5F20BC5F8DE66B4CF16F945DBF48D631A771B77FD870FA6ED2BBE690E14D698D",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "AWK",
+      "v3Hash": "8B9704060DE6B6D6AC3610817ADBE6124E4A5DDE522D3E7E8502AC47DAFE60FE",
+      "classificationSnapshotHash": "8C255252CC8ADB3B57A89C4D3601BBAA8378D1BFFEC346D5693A7609E369681C",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "AXON",
+      "v3Hash": "F808760E13D8B0D2166BBCB4896B74CA0557C0D83BE38B054B55707AD9B021D2",
+      "classificationSnapshotHash": "DDD8F8F77815E7C47FF03A8E0D2F9D91EE6BBFFAA3671985BF41313E58FB756F",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "BA",
+      "v3Hash": "AA13C9D6B4B5076FA07FC7624EA9AD5A7DD3D026CFD6901C75AE7AB8545EF398",
+      "classificationSnapshotHash": "95562D0D981314ADD301263403E2FE2E40E5D84B9B1557BCAEEA79EC7EC6FDD7",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "BALL",
+      "v3Hash": "BC111B7D136BC32169889A0F71142BB5F8EF0626442FAF138E75958474CF26E4",
+      "classificationSnapshotHash": "7532653FCA0CBCD0A7809FAD33B2EC79F6F2BB82B3B9218E71C8EB19967155AC",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "BAX",
+      "v3Hash": "398B52100C6AF7AC1B0892650B0C1AF48138314074CC1B81200C73E14A80A745",
+      "classificationSnapshotHash": "1548346E3DD57769DF494DDE39B3518790FB787BC970A915D17E0A619694904F",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "BBY",
+      "v3Hash": "7DD0C3A475BE3CE260A4D739A269860E3D5C21EB545B1C65380EB7BE4E31DA98",
+      "classificationSnapshotHash": "C355B3D5F0576709F12279592F3B8F89A516BF28FAF1D217424553A79CB748EE",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "BDX",
+      "v3Hash": "F45B2664C3B5AEB028F10705887B8EA5E2A991E660FA9EB151A199EA20D48ADD",
+      "classificationSnapshotHash": "A2FFF198E3D866690EF9CD8D4C9324D9BB6DF4977A97B38BFF90EF599BFBFEB3",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "BF-B",
+      "v3Hash": "1071F03F55085D80B06AE4463E95D807250D83A6CA6BDEB3D0FD0634D979A95B",
+      "classificationSnapshotHash": "50E2F25DF91C197ED7F4D87FD64DF9963712A15B2621061C54910DBDB674CBF4",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "BG",
+      "v3Hash": "A3D0B9A0A21B8B0709D4FD76B3EE078E301D78D09756BBE4A3D8FC6D432FE19F",
+      "classificationSnapshotHash": "E13C7304FAE82AEA3B7670687899555DE37C9B914DB6D7B2A37E6D13CFD2A26E",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "BKNG",
+      "v3Hash": "5800E74D32068D6B290A14236F2397989CB87FEDF4505E27907F92A10F1124E3",
+      "classificationSnapshotHash": "89D0E1DAB4727F26E0D40E3DD2004FBBC2C0C1A7BB63FC14B819D7C263FF1C02",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "BLDR",
+      "v3Hash": "4986258525848D6A9015C9F073694EA26B31F5E72295BD0E4E0F9F098CCB4B5E",
+      "classificationSnapshotHash": "08F8586A906529E3F49C0CEC69DBCD29F3F717B91B02189A012EBC2BC834A72D",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "BMY",
+      "v3Hash": "830EB3B062C75DEF6A8D35260746196F90383E3A1D8A4A1F4AFB1F2F413EF249",
+      "classificationSnapshotHash": "0580A5458A65A1F4120345FFA9CA3E16D41779EFE61C6247FB752A20D5B899CA",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "BR",
+      "v3Hash": "D139425A07AF748FC834AC95845FEFAF088BF8B4AFD0923B209D5676D652F784",
+      "classificationSnapshotHash": "763BF9AAD0F9ADF27979DABCC01CC348BB9AB03150946EFD74161CE3B29FB512",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "BSX",
+      "v3Hash": "1E21EB7F7E322BAB3E281644CA114CF576A0A3E994DEC6E79F374D3A27BC30F8",
+      "classificationSnapshotHash": "B8D7329DB70F7EC1C23EA8B1177563DAD55DB182F9837A452BE01AB03E8916CA",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "CARR",
+      "v3Hash": "F98C643C9D5CC3A8C18020CA3513BBC38D31C7404E0A43DE48C4E869F5A8E435",
+      "classificationSnapshotHash": "B67CFD36FE44D28CB54B63F30F4147A2F99E1F7BF5B39E0C33FAF75D4CE7C74D",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "CASY",
+      "v3Hash": "CFAB40556AAE1E34892ACBEF05D65AF904AA528B29EF2551627FFFFC1126F8DB",
+      "classificationSnapshotHash": "62CEF59762767533877EADAF2E74C30D7B55651BD036C0D2A7381EB6DD865AB7",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "CAT",
+      "v3Hash": "C73612C5511ECC740242FCAD1B9EF1A69B2C653BD3139F47FFBEDC32E50D61F8",
+      "classificationSnapshotHash": "BD869554B6089443406E50CA73591E7E92D8E6DA32748583B7274C2B64DE2232",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "CCL",
+      "v3Hash": "0AD2D5C4232C18C2E9818792406DA97E2D7CF07867754CE3010ADCAEA86DB0E5",
+      "classificationSnapshotHash": "0F17881E1C2DF6BA82C6B1CA91DB03CA0C44AB40FC22E159CF04E77478FDF93B",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "CDNS",
+      "v3Hash": "00DD4CD57FBED8A77ED8BB2D96FEAD646D5E0A68221A961C78FB555FC35A2A91",
+      "classificationSnapshotHash": "9C05AE67E2806D60475D0140F305E440C48A178D228E101566F32270E048145A",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "CDW",
+      "v3Hash": "036A1C097A7C4D32C0595F116FF914FDA65BBE0A30AE0B63B90DB5D527509E88",
+      "classificationSnapshotHash": "34ADB44700979B302BD1AEBAE6F0B899BD4DB080D6C49AE691E8983E606FC02B",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "CEG",
+      "v3Hash": "BECA6141243F709681406CDEDCADA92835EE33F2A123A4B088BF5D2ED5444E04",
+      "classificationSnapshotHash": "36536546CB5C72F51959EE4C43A9663B3207664C3B275624851762F5CAADB459",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "CF",
+      "v3Hash": "C714A51F2C2C4C5784888D60F6CB1D9671AE9B2A03446C23E8D96889B20F2D44",
+      "classificationSnapshotHash": "017B240CD06CF6518A350A63EF3F463F8B148024938F7AB2087F2688F2CCA6AB",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "CHD",
+      "v3Hash": "611A82787CD3ECAF75521150E44A2B5BE9AF6D8DFB0491D18A2CC8AC674F4672",
+      "classificationSnapshotHash": "31F99102C33F903FBCA7CFF2EDFAC1B04ACB95D6E98B0B0607FB8D6C1F5C0B8A",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "CHRW",
+      "v3Hash": "C98947FD5496F8B1B36DFBE8316F7E546D1EECFFBDA3F8F19BA5EA927FF4FDBD",
+      "classificationSnapshotHash": "223E63A216B07D78D9188A7694EC49770343F5C563B389CD4CF89E3763EFFBCD",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "CHTR",
+      "v3Hash": "3B71DD83CAB8F21266D7035CFFB19871DFDF71B5F200A81D58A50D2029FB1DD8",
+      "classificationSnapshotHash": "926AF364440215CA80B5D40F7CE86160CF01F41184F1F64C21098C32BE9A94E5",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "CI",
+      "v3Hash": "E8620ECE40B5784F15793AF121A5CD244008571E4B968598625D495F49706F59",
+      "classificationSnapshotHash": "C98E913EA164191459F56C9025DB9EF50E80AFE7DD137669BAC0E6B3AED936A6",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "CIEN",
+      "v3Hash": "BF9FB9F80B723E14D69E22BA4FE31D3556190C94234457158FC737EB1F6B8933",
+      "classificationSnapshotHash": "5CC06317FD5C647E073494A1E191C953EC76882CA8601ACA64FF98799EDF8660",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "CL",
+      "v3Hash": "EA9E9E72E8A6734A833F58B1EF07E90F143E7AFBC592081656E3CB743258986E",
+      "classificationSnapshotHash": "9657B7C1C81D288070E1D5FEF62E8C5682BFCF1225D482EBB9410E1998AE45DE",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "CLX",
+      "v3Hash": "3E4894F342EE0D9A020A072E080675C43F0E497BB32DE2140CD64058B42DB3C3",
+      "classificationSnapshotHash": "35E67A7851694127A456A09C32062F4C2C987C1E943FB682E4E484AD51CB95E3",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "CMCSA",
+      "v3Hash": "54A6296BDAB41406F0B4403F3465511E2DBBE5C09406C2799E8C5E5729389199",
+      "classificationSnapshotHash": "F077B301578B8087896EC2D076B0DB1105A0D46576F4B1F4EBB4B9204C660B3B",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "CMI",
+      "v3Hash": "93ECC621E14BC5234A038052E798E28F5087BF5F4172A38709A5F7D016843296",
+      "classificationSnapshotHash": "227708F645C32495F5A3F6D76C036FD243FCBB87883CE8CD52B86D6C1F83BE96",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "CMS",
+      "v3Hash": "5BB2ED39D08B99ABE07EAE0A7A2C3CE0C2B742BD8AC25E6716E9B6388184CDDE",
+      "classificationSnapshotHash": "9516BC3AB0A1A52BB299798EFDAC644F6CB605932A573A31239A4F5EFAF5D347",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "CNC",
+      "v3Hash": "94C1081D9643E6B2D3A72DA3EBC7E48B7DFE40F0B86D41855737B7F563E1F0E7",
+      "classificationSnapshotHash": "2626F320F7688764D6093CD5BE91148D6F30874DB837A1F5C500D2FB23336B66",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "CNP",
+      "v3Hash": "B31B8C36A92F6AB3AD07F0649DC761C043BD7D83AB02FEF0EE0143E4E65C24D5",
+      "classificationSnapshotHash": "4445BF342092DED1158FCB0049BB8B84753ABCC780E17D4EF77663AD8DF8B97E",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "COHR",
+      "v3Hash": "46EB985D79F81AAC64254B60A020A90E774D769A3F28D246D2932FAFFC891CB5",
+      "classificationSnapshotHash": "7EC84D87025721FEECDDF1E83E5D14924A2DE7D17986AFDDD1B90B0B59CC87F9",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "COO",
+      "v3Hash": "8E5AD683D2A8F8EC3FFD4E2933B23222CE60EB31624C04B29500F482FFDA2EA0",
+      "classificationSnapshotHash": "08CF243B8EEBFF018F861F88AD91D6DCEF6D615D51D3DAA35BD47758D039E0A4",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "COR",
+      "v3Hash": "256BE4A3AABAF6C1F0A26AC978464EC0330178EA41C249371D1F6A6EDA0B0206",
+      "classificationSnapshotHash": "28E338BF904A4127232BD9E503E85B1C2A5BF8AB73B8A9CF85D0107A46C6F6D1",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "CPRT",
+      "v3Hash": "98D521ABC3251D51856AE2DE8D2149ED3AC2962B8AB8E3745F73715D57F2E0A3",
+      "classificationSnapshotHash": "DB6CB86AC3BD10E7FECFEF80F53DEA7826333D0F8A719DDF9F48CFDC3F75BD24",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "CRH",
+      "v3Hash": "A85E698CC60006E23F5C4950D8D6291D0E97CF2BFA9CC1FF958F783B54D84DA1",
+      "classificationSnapshotHash": "321BE25A8ED931D0FE9C4D2DF79A7226A33CEB657D2EFF00243A1A0A609F30E5",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "CRL",
+      "v3Hash": "2DDDDB60E0C3087C2FD121F2B411622BC7DBDB25D520D29E55DA2FF6FBC85DE9",
+      "classificationSnapshotHash": "49FD4797E143485D7DB152E6F70532D5CAEE7914F87007E898E938F2CFF7A8C5",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "CROX",
+      "v3Hash": "3196CCC33B4C2EB6CCA8239F193ED9F08D5522EDC4C414E90F938DB2609D3360",
+      "classificationSnapshotHash": "7F097FD9D506BCA6F0B16CFF6DE6BE247D012A2A69E2A83F079DE27520065087",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "CRWD",
+      "v3Hash": "9F1252CA3E42515F036B832462AE9B631EB8F4B5F9D9D7D57FF35BB9264B8C16",
+      "classificationSnapshotHash": "A77B00FD0BDC8E352164D141870BEF1A68F927434C3A4145E27E98C8C3977507",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "CSCO",
+      "v3Hash": "2EDFFD4C7572C1FD3C2F6DB403B8E2ED7EF1560028E190FD4F5ECA5BC55FE618",
+      "classificationSnapshotHash": "83B01C290D75F7BE32A969AA6C168707F2B4F1669A2059F7CCC1264C2B075350",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "CSX",
+      "v3Hash": "8540C9E4D32F79C173CCF4F2EC007388D1BDEF08DCC3F4A283F2580ECF653850",
+      "classificationSnapshotHash": "B6A57462E2D96844EB238729FFD1B87771890FC075302E619AB1124B630CFA84",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "CTSH",
+      "v3Hash": "7D5FC868074B227FA1970E10F5D9B439FC3BD3957F640F18383A02CB599AA06F",
+      "classificationSnapshotHash": "B0625F4232D668F0B0086D423574AF305C45D9B94AC0DA00C6929BE710FE7A16",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "CTVA",
+      "v3Hash": "015C95C89643491AA545DA5E198E77052B835C4DE9F1CF882FD645B001535AFB",
+      "classificationSnapshotHash": "EE36A9078277FE09A95E44E7C29CB3FF004622778364B7A6799BD0F6962E6521",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "CVS",
+      "v3Hash": "E9B695DA8E8128D0094D2F57C42D04B64EB0611104FC18568BBF35129F05711B",
+      "classificationSnapshotHash": "2FFABDDAB1E130C6E5A2E977C5BF24096D0E699ECEEA9DB7C40DE4CD3DDB5E8B",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "D",
+      "v3Hash": "84EA525D80461CC7325F7E3477760A7D53DB18659A7DD16572AA6DB770F2070F",
+      "classificationSnapshotHash": "4C1F3D1E375B14A0E60DD1DC894739F95FBE771FF8C04071469ECF193AAD231B",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "DAL",
+      "v3Hash": "5F3A9DF143E48BEED090BFA1097AF10F10BDEEAB27E689499D1745E18B11DC60",
+      "classificationSnapshotHash": "2971F2C443E14394384F115D924729A7C797AB168CDA008EAFC839B1EAED3E74",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "DD",
+      "v3Hash": "D3B7B5C61614DE218B659D274C7279EA0C57F522A341A58DB4CA48DF1B573F99",
+      "classificationSnapshotHash": "64174A53507920DCA03489272E4B708982BB975DA59A6949B726EB720F9E692B",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "DDOG",
+      "v3Hash": "75ABD210675839FF21B9EBAE0A3E296E5447901F423B824563196693E17D8452",
+      "classificationSnapshotHash": "5991D4258A421F7512D9B6CC8343BEFB712EFE338DA6FD68CB6580DA5797FFF3",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "DE",
+      "v3Hash": "3225A0B41E32FBB3ADA5F47E2D3467E2221C7D16C401F46AD0320B98936A2A0F",
+      "classificationSnapshotHash": "0F00E88F2E948F23B2EA1F385880A502208D90C7745EC20D145F2528EE3D1B0C",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "DELL",
+      "v3Hash": "96CF7C8248A86B4043BE7428D474CBD81D901E758EDD0B650AC97AB7E8A7514D",
+      "classificationSnapshotHash": "F41D9A9BAF652B1813C8912E303DACCDC8E526A0F67D54F1A469171542F8DB5E",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "DG",
+      "v3Hash": "A31BD35EE9E2990E150E6330B085329E8ABDCF8F7D9DB61429A45E6986E3C27D",
+      "classificationSnapshotHash": "FDCCCE89194079DD44344DD219AEE4DA9A8637DA69DFA5333E3BFBF4701F6DD2",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "DGX",
+      "v3Hash": "FFD134C8DCC5E8F1F8AB7B42ADF005E67142CAC31269BA121B8CC181EF4478B4",
+      "classificationSnapshotHash": "8FC6BBA48DA05DA44746B8E5DA8708C43E29D60693E008969CF73806E7209BB9",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "DHR",
+      "v3Hash": "24C7723E23A4198A2B2FDFE2EB0A8A6D5DC48E4D259010D47459EDB802DF07E6",
+      "classificationSnapshotHash": "43C2E7A6BFA1B81FA96F4235B17969BD0C05096AB40F12D00297077F98649BEF",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "DIS",
+      "v3Hash": "1E166A30BE5F149E8D64B32675BB3196071330F8120C5AE8B643CFD84A0DC966",
+      "classificationSnapshotHash": "B8F9EA64ED24A7734080B7058B6C306DC5DF2A52A8E6C9D86D60FDF177319B7D",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "DLTR",
+      "v3Hash": "6FFFDE4C77568B09EEAEED57FF025EB17D2891F6F078E610AE694ED02FB0C7CD",
+      "classificationSnapshotHash": "D916E2CD5F73659260A3F2FDDD437B5405D89A9BE3BC7DEAB286D61A3DFF6532",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "DOV",
+      "v3Hash": "3C13AE053C450AD5B224F0C86A4FEB5C7680EF07AB8566FDB4C387CAA4E86C04",
+      "classificationSnapshotHash": "A25C6DDFDB1BDB7FFF302781AA925C93FA9CCD4C3E4CDCAC0BA1A3E3CA00118E",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "DTE",
+      "v3Hash": "55A307D6B212FE498974758598650CAB929AF272308533B796BBAF6664488F5A",
+      "classificationSnapshotHash": "AACE955F0D5F20FCFC8B0CE90E9C55E6F0830A5F4665BC24ACB78018B04801D1",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "DUK",
+      "v3Hash": "4335053677F8815B3C87DA5E9A349B636838EABDFABA5EF54320DED02CC1060A",
+      "classificationSnapshotHash": "4E1E841AA28AC01CF72D4AF5C48EC72CB6035EFE279C80508CDB97581FBF4691",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "DVA",
+      "v3Hash": "1FA04733E1AECE5750D6D1F6777C20C504A0235B642C0488AED28909A40953BE",
+      "classificationSnapshotHash": "D760449401128A6BB5463E9C492934E09D1DDF69BCB7AB3C953AE6ED8A0C04D0",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "DXCM",
+      "v3Hash": "A5353592E94D6C4AD0C794CC9ABE934E8B88D4E3FBD20E8656E1E3D9072992A2",
+      "classificationSnapshotHash": "DB67CCCB6CA081437B63DFC7B7CCE2976FA5D3727B1D8DAED44F7E5B97B57178",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "EA",
+      "v3Hash": "7D32CD2D95696F98D0869D7C8F5AA3FEE42F4322772C60CDB0B78678693465D0",
+      "classificationSnapshotHash": "FB3E11655833EE8EE536FAD6F7FB6B60D4C78AB545F0001DF19A908DC7906859",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "EBAY",
+      "v3Hash": "BE11EFC8F83D30600150780FF7592739AB4AB608B81BB9CECC5A1EE2413F1E04",
+      "classificationSnapshotHash": "ECF23EF82BEAB45960EC448A4C0FE160B1FEFAC9694EB26541C8636D262F247F",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "ECL",
+      "v3Hash": "7DC20A0928D5562862FF166187399BFA06DFF02832590FE151D26435A255CD33",
+      "classificationSnapshotHash": "88306FB7E9F8EFF31F5FE26F61EEA1FA72007F6F90A29F6D81813916E5430F1E",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "ED",
+      "v3Hash": "2DCE153A16281A8C3C0235C202293024E77D33A771CAEE6047F18BED4AFEB8A4",
+      "classificationSnapshotHash": "A3F68097C48C66E7248E30982F69E1061221DB85B0FCB8C3768454C40D22DD75",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "EFX",
+      "v3Hash": "901B4DF0688629898C076EA2F1764E1E5741752450569AA97A92041E80B4B77D",
+      "classificationSnapshotHash": "DD0127A284527E6FA6472873949E2BC1CD3818DDD675D8F6C6A64558C72E2B7F",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "EIX",
+      "v3Hash": "76423B6F704923A0B73AF5861118E453131DB570064D5159B36A7DD3A02A1DA3",
+      "classificationSnapshotHash": "5D7CE32D5DE1EBE0CD1B03ACD08043667178CF305B1C208A7383EA28B6A53ED2",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "EL",
+      "v3Hash": "DFF36FCB31A947F8262D6F2AD848DBFE5E9191BB3F5DA65060098F41376C97A7",
+      "classificationSnapshotHash": "848FCEA236B1887B0F3212AAE6F461C757B93FD6DD07519351CA5E89455AF7FC",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "ELF",
+      "v3Hash": "AC78F05486306E2F045F9A7E0033442E17FFF15940FFFCCC4F9706878DC2E951",
+      "classificationSnapshotHash": "7E0DFE3229E96D4C059002CB8CFAEA229CD5DF1B454DD7C76D53ABE94B76D7A9",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "ELV",
+      "v3Hash": "D61557C55E823D4B7F055C92715A5683AF9AAD066D613B9A5096CDF81A06E967",
+      "classificationSnapshotHash": "594B57E8AE3DF9CEC3559232609556F4189579B40CDBB77393B755CBC4C193DC",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "EME",
+      "v3Hash": "F5853EB46FC194FB09A0749CF5B4B4D666B3042AA473E5E7AA136C688CEB92CB",
+      "classificationSnapshotHash": "8E31E9C7EEB523CD5D982E7D894A8771CDCC5BFD3CBA31538F22E695603E107A",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "EMR",
+      "v3Hash": "1A1A9E975D0A245500EA39FC4401F965763B766B5B201B733EF17EB7ED3AE134",
+      "classificationSnapshotHash": "F6B2BA13E41AEB8009855B186A02310540B63A4CAE38FD27D07663D5198F9F3D",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "ES",
+      "v3Hash": "E9286DEE8C8F2938ED963CC8D7DCCF077A1EC24AC6CC98C986FA8FF86F50D641",
+      "classificationSnapshotHash": "EBA3E25FAC27CB2C971977657738DFD050CB4AC7E3AF72BD1F95C01643CDBCE3",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "ETN",
+      "v3Hash": "C643AF9F7AC1F41B07486D0558BC678CD5DDDCC9B5D416A9CBE0EE81BB6E64C2",
+      "classificationSnapshotHash": "0C20FC3BB5E0BAB3AE88154D70A57793D937F3FCB2EC625FEB0863CF13058AD8",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "ETR",
+      "v3Hash": "6885EDBF1B23F25D01F32E45C3622F972FF43377C7EEC7162EA720EE434C3342",
+      "classificationSnapshotHash": "803BFC669EF356C7FA07C0EBA0B47F9A84141443EE6D483CA7EF6D4A3692B0A4",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "EVRG",
+      "v3Hash": "66FA14176B589C116AD1211C6F2A05ECDF6F95E18A3D8816A98DEC0EC5A9AECF",
+      "classificationSnapshotHash": "6DF2E27852CB1BE77092FA6369BBA7967176E27FA4ABDF0BF5EE4AC80F63FFB9",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "EXC",
+      "v3Hash": "83C496BA789378BDE86319862D0A8D70553EC591467DBFDD8B965B228AF004C6",
+      "classificationSnapshotHash": "5617653AB0E8DBBF4D8EC90C6FAAA8C87EA9E5A320C68F568C83F1EB5D1E42A9",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "EXPE",
+      "v3Hash": "59D7B4736690EA23ABF6A41763DB1316764F6FAE43162D5A58577A0426B7D685",
+      "classificationSnapshotHash": "BE52984F2709BE06EF9F6ACFFBEC0A882441520616DBE731FEB961A8BEAA247F",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "F",
+      "v3Hash": "04586782BCAE728F7D00ECBE40458A433A2DBE9209BA6EA47D3A0855ED5F0C7E",
+      "classificationSnapshotHash": "E14207FF97A35E5A833501012A3EC76D765207C6E01524A54FB24FFA80EBFE68",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "FAST",
+      "v3Hash": "1C668C6CF2DDA548111C326F275F1B5A3A3336332E3454503D2813AC15F082A0",
+      "classificationSnapshotHash": "A1025DB7B5C0240E9BDD4F444BAB1224107478F4D6CC11560A58A7BBF87DA194",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "FDX",
+      "v3Hash": "DF11434581B4DEC5F63D274E29FD7DE1446D2778702001B88BCC61087BAC947F",
+      "classificationSnapshotHash": "0296D5C6F34AA0A2E45D01EBCFC2F2020556CD82E1EBBA09C342A62CDC891645",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "FE",
+      "v3Hash": "A906158938BA20E84A52F9D45D6613EA9C63810559403DA35AAE9A268BB75B1D",
+      "classificationSnapshotHash": "963F84C0E82A4D7AD5EE1D048D25429A175F0D3B7204FFAD41DF37455BF6E903",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "FICO",
+      "v3Hash": "4405EB1EAC8EAD879A70A9FC2FF36769E4A30EA025157D92E7D4D87B428C756E",
+      "classificationSnapshotHash": "8EB889E442CC934E77F4EFF1EBEC7DE31982153AC01547211972F2CD61BC98C3",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "FIX",
+      "v3Hash": "2F900EF949B4EA178B8E385D2A8410DD35904DAEA59DB1E312878D0C5DEFAEA0",
+      "classificationSnapshotHash": "1B1F3881414F3371AC66136E54215123EAD4FACB264D0E568661D1B9077543AB",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "FLEX",
+      "v3Hash": "3B815D9738E3EEFBE35B2D98F22E6290E7CD1B710A174B1ABD97CF5AE5634FB4",
+      "classificationSnapshotHash": "05ABE71B2A38083F533D5B925CE2280D3B4FE2F1ED7E31ABFF44DEA115586CDA",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "FOX",
+      "v3Hash": "6B55B93472D343A6928A92D75C7E556FAA36C5B52FF6014FDCA271BE67670DBB",
+      "classificationSnapshotHash": "A7716B4F4E9A74D1EAC7C71152F45E0893759621E374E40818FE7C9C2B972514",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "FOXA",
+      "v3Hash": "CFDC0099BB3735D6A0510DE587693910FD1EEF5FA07B42AE4D30F4C091B6F4B6",
+      "classificationSnapshotHash": "EBA8F03D85F0618771268DCE4D35D440D7DE046834AE914AEA51AD072BACFC6A",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "FSLR",
+      "v3Hash": "EEDB50623E8610E817710E9D4C88F9C75BEF423340E10F801223DAEFB4E46CCE",
+      "classificationSnapshotHash": "E6EE9A2A7A45E9F1BEF1B86281EA362A87EDE9F1780282722785B2E2A331816E",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "FTV",
+      "v3Hash": "BFD2413CF4B277CFD2C020A13EE9443FBA6B3B53BC96C51915E5210B161AAD96",
+      "classificationSnapshotHash": "520AF9C0641DA48C6F2B01AB5C87C9030089940DC1EE9D815CD9035867747A26",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "GD",
+      "v3Hash": "03B53B4A02E6B64A085095BF6DBB18A244E098EFDF28278A5106E64B483AD125",
+      "classificationSnapshotHash": "7D95E1D0A578DE53BBDA7FF7FE673BFD73D96FA1795338742E0D439D3FA24A64",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "GEHC",
+      "v3Hash": "3EB1A9BC1C68BE48BBA9DC9CB74CC9CE8DFBB84AA7AD0049614D226FE35942F7",
+      "classificationSnapshotHash": "13B58CFA050D1189ED5E77ABC9996D5D75961E5C11AC3B95B1B90F62DEAE11E9",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "GIS",
+      "v3Hash": "E1871A54DFFC5C0DA197F4BBB72F880004A777ECCB106C304BB7C07FB7E42AE6",
+      "classificationSnapshotHash": "CFE0839B4BF90103F38EAC0557D4523EFA06C2E066CD77432851CB6B0152DEC1",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "GM",
+      "v3Hash": "1A5D640E173413A48FE31F418A977AEFFFEAD52D46D336D6FB30E9F5515A871B",
+      "classificationSnapshotHash": "98BE18C762C5F21962D85DE29065F24A6EFD239A3B754279602D5BE02D75816F",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "GOOG",
+      "v3Hash": "ED77ECF6928E89F796B9EDB6529F55086691C2C5A1326AB79221278FA9A00425",
+      "classificationSnapshotHash": "C408B94594EA64B68E27868AB51F172FA7242C4A3413131E46666B30BB76002A",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "v3Hash": "82B7FF7770B25CD9235C5885386AAF307992CF282F934166469AAA3E82767877",
+      "classificationSnapshotHash": "76BC34F80FF262548433CDFAEDD1A19CAF9C1C4A71C7D00E3568134C06A8BD3E",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "GPC",
+      "v3Hash": "9A0938ADE1EA92B7169CBDD4B3A677206C1181C1579A27F01FF18745007F6C69",
+      "classificationSnapshotHash": "9557954FDD10EFB593FE8E42291EBE6906BEAC9B0A1ECD6E0ABBD6EAED1BDC41",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "GWW",
+      "v3Hash": "15BD4B3D36446D9DDB7CA056C494EC1B793216839B6FF52E0C05219C81701261",
+      "classificationSnapshotHash": "C669645B45B4A6BAF74A954CCF4DB4D6B83239CDE12ABC5817046DEDFA897E53",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "HD",
+      "v3Hash": "74A84908E94A39B6B2731E58ABDC63CD0F6017D0CD37A928D8AA28B9D4C215B5",
+      "classificationSnapshotHash": "4E0A32A689689998CD0EC3C4B66EECDF4CE571F365E01C5C218151144023D23B",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "HLT",
+      "v3Hash": "674A8444968BBADE796E1C394D8AEAF5D948A11A448A6EA96424429ABC084057",
+      "classificationSnapshotHash": "CC3615591EAFD985446B86578E24D1FE6F0F99B536BB7878DA05F493EDCD9782",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "HON",
+      "v3Hash": "B9002ADEDACC9A2240E451208AD8D8FDC4EE36DB2558B82AF6EEE87C2A3A654A",
+      "classificationSnapshotHash": "8CC0D6E604568EBB054BB5BFCC1FEC316D290E2ACD7ACFEFB8AF443DDED0B3AC",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "HRL",
+      "v3Hash": "6DE6A7D1F4527249CDD58BCDAF1CA9131EDFE34E77B556B5646CE8FCAE81E0A0",
+      "classificationSnapshotHash": "E00E474952A27120AFAE9BC48DE97C405DE1053AEF0ACCC20096F31DEDC75AE4",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "HSIC",
+      "v3Hash": "B155B62AD3D98FF1B080B655C9AA2D06402716AE9B09C0DBB48DF3F54DC241BB",
+      "classificationSnapshotHash": "8247CB0E2900D6BE0AF9DAC72D941239F9FD6E63C0B8B9E63AA4856E61C30700",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "HUM",
+      "v3Hash": "38F82EE8D519E21DDECE472E314AA5A4E1D91A70F08757834E92A9564C390D6C",
+      "classificationSnapshotHash": "0694526307D46F8FFE985FF7367FE12D2CA3760035F36517DC75CBFBC876BD12",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "HWKN",
+      "v3Hash": "0484A2A3FB5376A9689CF90336466858EA17B56627358158AC862AC2ADDA6D69",
+      "classificationSnapshotHash": "14455DAC97CE588BCDE40C9AD32199BCF583D567227ADFB5E155EEA9F337A417",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "IBM",
+      "v3Hash": "5885977C77D53E5D72523EE5330C109EF7FCC84C405351ED24A637D374DDC1D6",
+      "classificationSnapshotHash": "A65D46F61EDA84A78E5C4BFE33D7DDECAA389B0311B36BDF864E9ABDC7EE09EE",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "IDXX",
+      "v3Hash": "083741920BCBBF3360E39C4A17D0C044E903AFE50ECC85D98064D6F1618B809D",
+      "classificationSnapshotHash": "252E2CAA818A379F73E55242F19DFFF95AD7339728FA0DE883711CAE670D96EB",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "IFF",
+      "v3Hash": "4D1736808146E30511D68C28ED4B103571E66B7A1F965E3B8A682E7884FA84BB",
+      "classificationSnapshotHash": "84DF75E5E560883F1F4FBEDF98447BAFC74F59B03F958F43ADBC51DA98E15CAE",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "INTU",
+      "v3Hash": "F5C968CAEAC4A7DAE3489EAF83CBA0AAB003C58E1E8A1026097E5299B094E3F3",
+      "classificationSnapshotHash": "AB6A0C1D23D31F2227CA4673DB0A6C05B2ED15D48C3A29474610F945AFD5B904",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "IP",
+      "v3Hash": "211F5D3A4D4D07154011D715AC2CC4FD8AB3A2CC17B48633E878DA47C6AC2C86",
+      "classificationSnapshotHash": "0560724132BACB2D7461C75069507968BBF155E05191963E4E6634200FE137DD",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "IQV",
+      "v3Hash": "41238A59EFC6E3361A6FCB4CF0117ACA025741E63FD83E00EBFEF4CC56410148",
+      "classificationSnapshotHash": "AAFFE3C01F6EEB4778F9C8FF8E1E194360C4791351122D21E8E6B1B02DCC2DE8",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "ITW",
+      "v3Hash": "B63A646F7F3477EC1903784E975E9C52B8EBE7FB5A993A3F6D42C67C674E6DD6",
+      "classificationSnapshotHash": "0D2487BD2D391C7F9134EC9052910202E9B5BF21EE5DC41BB0C79957CCF40A09",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "JNJ",
+      "v3Hash": "8D230B58E18550351160E7CFD52D33FF649A66AF61DA953E4F39DB843D512B61",
+      "classificationSnapshotHash": "B592FAD71E8C07AE5D1836931F4B95434FB4A16BCBCD8372580BF9E2252FB444",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "KDP",
+      "v3Hash": "B693EE6D2CD07B908CF8DD5D7E57FFF41CD50DCD863B0A60F3380002205FD62F",
+      "classificationSnapshotHash": "7AD9E6C406EEF4F042ED1B11413907D81989205D4D0E3FFFC367311F3553F977",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "KHC",
+      "v3Hash": "78FC30713DAED7A2071A11C334F29C25FF717C55FA9E2DC735BACEAEC37BB114",
+      "classificationSnapshotHash": "B392367CB1F9474123F74569D4A8482906DE5B3A3FE7E4CF66E04A826CB33700",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "KLAC",
+      "v3Hash": "38B074757A7FBDBC36A75AC3A9DD3E978C86903EF2B383FE939F20261EAF3273",
+      "classificationSnapshotHash": "F0C527967888CF26EE076973BC0287FB5127FDDEB6B034E7BDB163E012C00356",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "KMB",
+      "v3Hash": "C40ADF97F5EF7602382A565D2279C27D47C58008F92AEE1682B185E9291506EE",
+      "classificationSnapshotHash": "027DCDA4F47F77DA6E5A00EE3C2A60EA373E0A4125360D36D5448171254DDE47",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "KO",
+      "v3Hash": "EEA619CEA5123BFF35B5F3FD4A0676275049FFD9632D0FFD7DE0CE531474A33B",
+      "classificationSnapshotHash": "62ACA2FE14DE60A15D3E9D1DCE62A64A1EEFADAACBAF17457B2898569FA3BD96",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "KVUE",
+      "v3Hash": "CE6A37D8ADDC842A0F866607B2A21F6037E8731FEAAEDFD7A8626420211881CB",
+      "classificationSnapshotHash": "560DDF373F96FFF093BE24C25A36CE1DCF56F3E3EE3B4AE0CFB1F4CFF947DB7F",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "LEN",
+      "v3Hash": "FB80E2EA2A921CD2610F2F46B4AD6B4A574F53E797251ECAA8EB9FF9310EEA55",
+      "classificationSnapshotHash": "64C615C2496B2263CDB4D8A7EC4DEFB2D8586977524160E2AFFF32958EC2B661",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "LH",
+      "v3Hash": "6D862100471A2F816D0A2B8AE98B303A249F10AF5F10470DA274ED2A72DB45C1",
+      "classificationSnapshotHash": "DB74A742E88D52735347445962D79A92F9305E27C22B4691E9397E6A58B9DDC5",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "LIN",
+      "v3Hash": "ADC81554C7A7B8832C2D8923AD3BA3761635039AB195E716F6792F4EBA67198A",
+      "classificationSnapshotHash": "875906263F6E9C114952DF48EAA8DC84BEFC2EB7423CFD9BE235B833D676F553",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "LLY",
+      "v3Hash": "038BF54C805A18BBD46C092FA15B542E05B7CDC9DC9088BF876D16955C9276D9",
+      "classificationSnapshotHash": "72E47799368C2BAB0D3E167571CBC2AF3EB861D02AA8908A0FF89491592FBF45",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "LMT",
+      "v3Hash": "257B8809934FE7CD16923BBCDA9D20B9C7C390076E69091475B13CE1DA281EA5",
+      "classificationSnapshotHash": "9E528010B8AEFBCD9AB9185F220D156CFED7F81465D77FD1AD53CDCCB30E0053",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "LNT",
+      "v3Hash": "F0CC52D06007B48652EB6113D9D641ADC32AB444A371359FFC641E7C9B0AAEAF",
+      "classificationSnapshotHash": "631879D6C6D1EB5B92F52D86F8FB0C0EC897CAC5417148107F730310553A0412",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "LOW",
+      "v3Hash": "0D867CF774CAD9AEF7D697450350560E7718DBE820F014133D94293B25731DB4",
+      "classificationSnapshotHash": "7CA9D02F852BD50DC310EE6CC87E4FF19761B94D7BAC0F5DBDAA1218EE46FD83",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "LRCX",
+      "v3Hash": "326A87531DA092997B0B45E25293356B5F4738347B6088623429D79026866BC7",
+      "classificationSnapshotHash": "A0AF79B30766A1EB9FDEA373D36BB59F36F2617B51AB0118840DF6A2874D7201",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "LYV",
+      "v3Hash": "EEE9A2EFDB0832D4B3FE4D180F73BF0ECA44CF4C6C7D8078B8757859CDCFD194",
+      "classificationSnapshotHash": "CFF9D04C23A3F8B6E3712FB34ED02D50D715418132575B99780FD741BC901B7D",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "MCD",
+      "v3Hash": "DA47748F1CE67D6A6FF02320093FD39F039156196BDA195A76E16F2EDD97AE89",
+      "classificationSnapshotHash": "4C2969C5CB1A6EB3A35A36B0BC5C6061725A58EE9C97CB8118426EAA921C7855",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "MCHP",
+      "v3Hash": "84A0A79F8EC8B4ADE0F4D4D8D27DD16767B3AAD9C2D0CF88C3392D248AA7AD90",
+      "classificationSnapshotHash": "E4EC20B2F6F34E50580437C2406173C6E9DE7455605F9FA5E02EEB8177C7945C",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "MCK",
+      "v3Hash": "279E68AFF1CCEBCA16EEB1A1B8FFC2F33359E451CDF3D10D0AFC3E73E4304BF7",
+      "classificationSnapshotHash": "BB38C9B3DBB0FF2C3D04976BF3386794AC2CAE490F8E6BC3475547100C06E834",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "MDLZ",
+      "v3Hash": "40B6493AB6765D4A8D5FE9F2E5BAB830C41C59BB39A44E8A9CA81AC7E4EEFE28",
+      "classificationSnapshotHash": "B21FB3BCE0F6938F0DB5C8B42C3A74635B4F44C9327BA1C6E7CB2C44AE5AB387",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "META",
+      "v3Hash": "F580395F08CC8D2C42719D77F342D25C8F8036359FFA18A8FBC015DAA019713B",
+      "classificationSnapshotHash": "C1597521F65A056A8B0B70ACD669F7AFEAFEC3304F993496E61F86287E0E4479",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "MKC",
+      "v3Hash": "F5865C387F2AF718440C7F17E7F7778FC4114394ADB8B11FA9EF31D46423BC75",
+      "classificationSnapshotHash": "6ED6617DA430CA25E3DA3A2D4D9CDDCB24427DCD04FF1DA1AF985AFA912303CF",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "MLM",
+      "v3Hash": "C260ECD036FF9F9D29BDDC9A774DAC9FACECA9811534C4C379559C82679DBBE8",
+      "classificationSnapshotHash": "7EFCA0606A276913B6930EF7671A68D1B6376CC839FFA13F2B0DF9C778D24CF1",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "MNST",
+      "v3Hash": "C27E9D46FBAE9AB2E506F47365829648392B71CF2E26FEC4B326B4DE56D48BB0",
+      "classificationSnapshotHash": "CB10B40ED41269BA2031177704FE41F36D82D4CE8B7651DA1382671041FF0922",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "MO",
+      "v3Hash": "55E57758115CB78CA25FC28B3C0F526B5CBD43F3C60F729F054A8949AB752AE7",
+      "classificationSnapshotHash": "5E9FB0700F65BC5C4D209FCD8716CF284A5FCDBF313404FA0BD7A38E16CC7028",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "MOS",
+      "v3Hash": "661C15D605E264DF4BB0C089E33928F91FFA50F1B3DED09ABBBCFC84671B157C",
+      "classificationSnapshotHash": "7701959BA9FF025B67B3734FF9E4ABA28B9DC169337E87B45301BC98250D2CFB",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "MRK",
+      "v3Hash": "80B70B6382727A2AB7A9F53560EFE38F87B5BB5675695B2317157DFA1C5B9149",
+      "classificationSnapshotHash": "8DBA5D338DE1D74823EDCC88F0A3B204BFB8554B3D000226F481E9A6F443FCB1",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "v3Hash": "A6863189ED19AF67E695B1C89A6DCDB5BB3ADB2CB014FDA1BB69D9DD9C92FC94",
+      "classificationSnapshotHash": "B00F1249EBC4E72FF693BF7396E1D9D3AED1C7EB9A84D9D0EA9AD37F0DED7074",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "NFLX",
+      "v3Hash": "A7EDD4F0991DE394A32D35AF53B8E79AE4B86E7900525D701145AF13DE0FBE00",
+      "classificationSnapshotHash": "7755B454090A10887ED0638DA9A2899AF03F0061EA913594D3D0C5D6A4C68AE9",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "NI",
+      "v3Hash": "51B0B688E4BE8224F6D9D80BA0AD87B12D0B72D7B02ACD63A1D268539D38E338",
+      "classificationSnapshotHash": "FC0A41E620E0BC58D91C30C07C96D6903A9A3E59B641AED3F313B1E250C52A05",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "NKE",
+      "v3Hash": "A27D5F2FD586B686DCD0647D421F2BB7443E9D3AD3FE3DF0F969E077B6DBCB0E",
+      "classificationSnapshotHash": "0213EC7CB5C08EE22BFA1F2368CBB253ADCC5858F3E1E2CB0A73BCBEFF126ACF",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "NOC",
+      "v3Hash": "914C0548E77640FF3AA44C5E4259E8562CDFCE8E3D17C70C90E828367B655358",
+      "classificationSnapshotHash": "7446032F43DFD5439F7FAF85B92EF514FE87F2FE3899BD2C13D5A4BA638F0080",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "NRG",
+      "v3Hash": "0D4DD09A196BB146C5776A929E9C83FFCA1CA48DAF1E000343A8BACFF7D5F88F",
+      "classificationSnapshotHash": "E0496998C462B4B66D419E44C742B3FD67FBD289653B39E9D21930FA01538C63",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "NUE",
+      "v3Hash": "801DE237D0E09C0738FB131BBF532FB2F802065BA4D3355478B29B938A2D2FD4",
+      "classificationSnapshotHash": "8573C702B3D51BC6C94020D435216E0D8929CFE395FA91576A43EED0275D429A",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "v3Hash": "6E9AF366366F681EA8F62D16B1CF6B7F80A3FC32BF54F887D130100CD667141F",
+      "classificationSnapshotHash": "565E90B22721442F48A9FF49A17135D58F372FBE65E202CF9A3CCC89D1FBB4D9",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "NWSA",
+      "v3Hash": "BA644D45A3EB46A94D5391BF8FC68B2E3F910C659ACBA1AAAC734C5423D3ECB5",
+      "classificationSnapshotHash": "BC90CA66C6E6478CD97C1688EF563515A2872634073BEA01EF684941175BD17F",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "OLED",
+      "v3Hash": "AA88E57185BF92917D99DAC794A1B6334843B8BDFAED1D9C71376E88DE6147A5",
+      "classificationSnapshotHash": "30DF54CEDB80AEF54F544B9A5D4DC648248FC2179992D1C7C115557A6CD7D2B3",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "OMC",
+      "v3Hash": "F9B5188467E51982C32211CFA3DF756879586A0486B0BC096762984106674176",
+      "classificationSnapshotHash": "D3FBBF06DA3368DE4E1F3B7C03ED4F9086C270592F268C0EA392B70BF7D1FE83",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "ORCL",
+      "v3Hash": "5CBC6828696C89BD6356516C5F22B420976C2BFA73F4F63A8DC1B1505CE321EA",
+      "classificationSnapshotHash": "7FE5B5A64AFCA8361629CDB1325FF9C4902556551922D92933B4E02F98902719",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "ORLY",
+      "v3Hash": "2D721BD34BD5ACB1CB9FEB67265F59E16DE486A4B9766EA60D4513DB62E2E200",
+      "classificationSnapshotHash": "3F1CF12E0C5628A5AC77206A07F37AA3B10678EEC566909F00F760DF46280605",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "PCAR",
+      "v3Hash": "281E691B607BDAF736E5356D340ABDF38632647D88709D6CB2DAA84E19BAB7A2",
+      "classificationSnapshotHash": "3C7DF3F9D10556F552F1B0B5A6688E02888FCCF5A94D1339837702E314ED475F",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "PCG",
+      "v3Hash": "A4418756E76E87172C7772531FE0729FB997E0DCA17B19F7A88E99335A85F6C8",
+      "classificationSnapshotHash": "9AB1BD27FCA55488741FB3B6E9109608DDCD8978D5A9C933B7A692E8DA643282",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "PEG",
+      "v3Hash": "9A9E07ADAC4B76ECDE7F14A34F37572BD392FE9D007A7A32BE565927AB63FC50",
+      "classificationSnapshotHash": "09CF6D3FA6BB105BEE98771968FFD6E992F32BEEE07E6418442E06C020BCC251",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "PFE",
+      "v3Hash": "ED8F8FFC6E5285F7FED7E4974B498416244E442BBE7DA753186185128D1770ED",
+      "classificationSnapshotHash": "42D2A0C55B59FB61C90607CBC2E80B88CB5CC246E6972AEA88B92BC9986080C8",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "PG",
+      "v3Hash": "9D9E29851D99F3BC336431CD8C133458A74B55B56E02EBA10BB31A89EBD4B1EF",
+      "classificationSnapshotHash": "0170018593F4A76CA167139DC76DAE6D269133E4AB9C9BB454774A1D36440D89",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "PH",
+      "v3Hash": "EEECEC926EB1C548187FECDDCC312031A0E6091BAD439DAAF1F8F9AD9619A7E4",
+      "classificationSnapshotHash": "70A7EE4D1754FA8D90F2ED7810CE625ABF2C91DD7DAA9A8689A25DAF54CCF59F",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "PLAB",
+      "v3Hash": "4580F95684DF1FDA32C015F1968981C128FF18EC99D69BA723E81C0DB964255C",
+      "classificationSnapshotHash": "75726F15F8D5E1C82E341FF94AC39936EB22CAE7C8E7D320CDB70AEC4BE04DC6",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "PM",
+      "v3Hash": "703E2A59B45DD557810FFB1448C02D1AAF71DB5FF503EA67A89F87CB91FB72EE",
+      "classificationSnapshotHash": "7998F9024E934529D020F1CEC15C208C37B793CC4CBAEC6A28BEEB29C115E1EA",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "PNW",
+      "v3Hash": "318EC558F0E1A3BFC75C3B9DBB499E47AF4C8F08F4C06B1B2305764A51CCB3E3",
+      "classificationSnapshotHash": "DB39F56AC845FAC49137395D169BCB7E731BFA24CE651F8CA8503DCCB9F2E031",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "PPG",
+      "v3Hash": "C7A45C8537B68B0925CBF6C09598CD0627C24410190D888DB22CA914C06CF897",
+      "classificationSnapshotHash": "64EA25C573E96C1FB1E985464FF130172668DE8060856D9DB4882E6A7FE76234",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "PPL",
+      "v3Hash": "5DD4D2B376EAE8005C5BB1D16AF4E629DF6A9627B9BC5C2793068FFCCCADB2D1",
+      "classificationSnapshotHash": "935BAEBA609B5479C2BB90D1A95506F12295E912977C14B6E78017E9071DED3B",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "QCOM",
+      "v3Hash": "00B52EC9D7AD5B08A09337108249F4F0BACE41D84569AC9EA5BE6381A324CB8E",
+      "classificationSnapshotHash": "57151267507649DFF139006EA3473A42D09B2DD2E168307B2939ECE8A0A0BDFE",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "ROK",
+      "v3Hash": "618799927549D8C9BC6B919C0D67EAEF443182C62965E5315285046176C36ACF",
+      "classificationSnapshotHash": "082D68BAFEEF3CC9B2496306CDB2DCD3892ECE51736E747B7C51FCD6F9BD2409",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "ROST",
+      "v3Hash": "EA660B24435499729CE5684456DA1930E7FE4B4D8BD9A01FB673D260B0C6B542",
+      "classificationSnapshotHash": "356ABFB7D442CEB892AFFDE88377E1FD737CC7A0C10C1D1B7B0824DA75B8E3D5",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "RTX",
+      "v3Hash": "1CED0103656B8A7E7EC8F7B9449A9C72586183AC5AC116AD76DDCF774D279650",
+      "classificationSnapshotHash": "55A2D994ACC08128915DB3182A52D402D4A1D86F4CD3E3AB870DE1FF7C1D5233",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "SAIA",
+      "v3Hash": "C1E03D68044BBAC832AB27E19EC5603FC5180495C3A3E219040C0FBEC651FC9D",
+      "classificationSnapshotHash": "1D0AB3910A5EE21BE0416D1C90B655D9D27508D2963614EED2F01B37813475D4",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "SBUX",
+      "v3Hash": "80E3F1CF89C3174F529D2C39D53356E648E5DA56508F381D312325182FBB5CCC",
+      "classificationSnapshotHash": "DCC17BD40FBE0758834B60103DDFDDACC0B068ADEE8499F8B8120FF3F07248E8",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "SHW",
+      "v3Hash": "554227C9EFB6B78A3B048DD9528C9EBF36DFF1731458F95167443BAB2E943305",
+      "classificationSnapshotHash": "AD23069B03DBD736CDB8998DE84B37E0BE18AC974A3D0EF7D043A1AAC22AA740",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "SJM",
+      "v3Hash": "AB34F31A31F73E99B64BEDFBCAB67AE61B9C78F804BEDFBA6F790F88BB54EB24",
+      "classificationSnapshotHash": "F7AAF17C265EE41DF0F96A3AE1395B0DD6022342DEECA7C0611E711A0F8FA3DB",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "SO",
+      "v3Hash": "06F102BBEBEB719AC1763EC9ECDC55EE2E292C1E5E91B27F44A379DE1B6B4E55",
+      "classificationSnapshotHash": "9D024EFCA442429093784DCE60C84846B830BDAD6DE4A85CCD25EE1CEEB9211B",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "SRE",
+      "v3Hash": "5B20548D48CEF04EEBF66189E19C3F0B8A29E738FED5F04D50CF48B22C4F3045",
+      "classificationSnapshotHash": "12B3E9269912E858086135151E213376DF338B6CBC998C40D64E0ECBF1F6D0E5",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "SW",
+      "v3Hash": "B3F6CDD5980036E35E9A35FE696F2671B1860A6A7B52ACC8368D50DFBE6DF46E",
+      "classificationSnapshotHash": "54A272200A3E468F58E1542777FE3198DF08D2B37B52872828233F8B982450C0",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "SYY",
+      "v3Hash": "EA55F954686FCD4E6DB47689CDF4B0B16EB092B876220254EF4D9699586C95A2",
+      "classificationSnapshotHash": "F25CE59EB46FE10350FCDB957C6358C4A8D27A388C812F8F1409440A20B06CC4",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "T",
+      "v3Hash": "7D4509E00D4E1CF1627C55E6DAEB395B9338BA131A4A86B5BCEAA10962030916",
+      "classificationSnapshotHash": "FFA3100C3BDE8BB5866799C589B5810EA00CD06B32EF07BD5023142F7756EDC5",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "TGT",
+      "v3Hash": "91A2EFADFC1F142C6F2150B7EE83FAAE323D453A64A286EE1EEE004AA93A27AF",
+      "classificationSnapshotHash": "F097C89F6E9CD09A6906AEB0236275AC2CF42FEABF4E805333D597584F440A98",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "TJX",
+      "v3Hash": "399C624BC3C28BFCF3728C9FF16C30BAE7411CC0652D8121820B04FFB5803B9E",
+      "classificationSnapshotHash": "C3D53DB85D255FE25FF916659E63B841CE57008C5C2C9B62D67F781FDFD39647",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "TKO",
+      "v3Hash": "47DB27DAB187C60805CEA4A9ABDDFCF6CF3AF0AAA53E168E5D68AEEB5C139BC6",
+      "classificationSnapshotHash": "AD90785A2133C68EC5F23FDF50A0BA89F4D82F5D46B9BDA056A0860B008FB274",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "TMUS",
+      "v3Hash": "030BC77EC82366D0A0D23F7A39624177E70C4FB84C55718236B08701527F2160",
+      "classificationSnapshotHash": "4FE49E5B7FA8528A7D41DDF3C659CB049A6DFEDED6151E32931E01E7C034FB9B",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "TSN",
+      "v3Hash": "59D444B60AAB1E8C68E550DF9EEB44111CC4200599071579BC19C38F55346287",
+      "classificationSnapshotHash": "EC4DFED4FA043BC5554A399E980056DDC082CA931199816DBA7392E99B54BE3F",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "TTC",
+      "v3Hash": "64121486DD0E0FE5442C7C42E1E4739760CFE8A975E296FD83F6045606145E76",
+      "classificationSnapshotHash": "F46F31349B3E891B2B017D9513FB3E6C2540D34CEDFC737E2FF43AD5D3D425D8",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "TTD",
+      "v3Hash": "C5A7DC3D941669B0A6287BB6020883F01EFF07F1DEB4FF2C9ABADEA92AE104C9",
+      "classificationSnapshotHash": "EAB93EE20F536756DBC437DEFCD430B59CF40672C8A0DE1B5319D1B56F71D858",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "TTWO",
+      "v3Hash": "F0DC8A93BE915E255C609F8808C7AD80AC550ACB819519F5A4F9114E1DD443CD",
+      "classificationSnapshotHash": "42FD71BBBB260A3593C24282380790BF20B7454EF4A10B6F7F80F86A974B1C54",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "UFPI",
+      "v3Hash": "CE2A4C7E59829E0CBC697D1CD403C780BE95B52FE3FC28F245A8FAC599252676",
+      "classificationSnapshotHash": "EB7801E0E8C84EB12FF884EB641A27DE6A93C948DED791B463B35C79E9C936F6",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "UNP",
+      "v3Hash": "63DD39CD07AA7E71B2C62AD2C796B17CDA055B11BBCC72D41C90B85E068CFA05",
+      "classificationSnapshotHash": "819809799AF93A0D50C027499235435613FBE28D040491D14AD9A2281A2FC376",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "UPS",
+      "v3Hash": "1ADD38F8728B08AB6E05F9E669B55AB3B08F185506A4FF86A5EEC2FF893F6B74",
+      "classificationSnapshotHash": "C1DD2767177879F9FD1DB6F837CF8AC2991AE68510B72043A92A21EABE48CF4C",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "VMC",
+      "v3Hash": "231C132A62EAFC7323EE12A88627CDE7F7D15D58EE1803BA269ADA241A05D08E",
+      "classificationSnapshotHash": "2344C2F9A0850892230882D1239A0133F2281D84FC8607E3FCF33604D3D4E357",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "WBD",
+      "v3Hash": "584222D62B79371B8F57636D388A701B5EFEF659D89B36CA0826AB5989F6E4C3",
+      "classificationSnapshotHash": "352066197C5B3E65A107E4ED6C79A230D30AA91F192D294102217949D843239D",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "WDFC",
+      "v3Hash": "172D955C164C7D90FF72F6242C3BA979C7557C67A9E56AC3037497459A2C258E",
+      "classificationSnapshotHash": "21A718F4280D171069CE437CD563CCF21C06EF456593D23F1B99AD829AC4BAAE",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "WM",
+      "v3Hash": "D7DBE6EF7541CF6078C1AA235882FFBB550730DC56C40812D96E7BE1C33C00F7",
+      "classificationSnapshotHash": "0B9E124381A6A524B036DD5904479A2DB8C3E32035F403E5F9BB5DA8872EA743",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "WMT",
+      "v3Hash": "07C52F629C877C969B7042A45BC80DE5F518A08AF5748A06B1E8B0C652D122CF",
+      "classificationSnapshotHash": "10B2338600A91E35EE8B7CF60D842F9B6F332EBCC75F836448C7BFF237FDADFB",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "XEL",
+      "v3Hash": "73945D9F8C3BDCD051289E76A89582E5DAD930EE87B149A70C5092BFDEE14FC4",
+      "classificationSnapshotHash": "1F8FFC090F24761A478C3ECF436DB8DB1F743B0B963C4A80EDD04C2FE9D52C41",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "YUM",
+      "v3Hash": "45F0FF640BABCD127FA053F3F68F924B46FD2164F2BDFA71C13FA821C01AA155",
+      "classificationSnapshotHash": "6728E73F11C9ADDABFA55FD23FF8DD73EA3F733BE4FF1EA81CDEC2295FA7A7C4",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    },
+    {
+      "symbol": "ZBH",
+      "v3Hash": "8D79160862619961FBC8B2933459E28C2D1B4DBD71D2C695589A968212B4D059",
+      "classificationSnapshotHash": "F779DE1C75FE2EFF5BEADD33B5B4776279BDACCE6F5EA31843F007C6E821DB2B",
+      "currentRankingEligible": false,
+      "historicalPitEligible": false,
+      "blockers": [
+        "DURATION_SEMANTIC_UNPROVEN",
+        "HISTORICAL_VALUATION_PIT_UNPROVEN",
+        "PERIOD_START_NOT_RETAINED"
+      ]
+    }
+  ],
+  "preflightStatus": "BLOCKED",
+  "objectiveRatingExecuted": false,
+  "networkRequestsExecuted": false,
+  "rawProviderValuesIncluded": false,
+  "artifactContentHash": "68F095D00A576D878EBA0B72216E5CF4E8A57664BFC2425603AAC171DB72EAA7"
+}

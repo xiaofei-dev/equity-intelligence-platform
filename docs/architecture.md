@@ -32,7 +32,8 @@ This structure combines enterprise business-system practices in Java with the Py
 The current Phase 1 path is:
 
 ```text
-Twelve Data
+Configured market-data provider
+(Twelve Data, yfinance, or EODHD)
     |
     v
 FastAPI ingestion endpoint
@@ -48,7 +49,7 @@ Next.js /market-data
 ```
 
 The browser receives normalized records from Spring Boot. It never receives
-the Twelve Data credential and does not call FastAPI or PostgreSQL directly.
+provider credentials and does not call FastAPI or PostgreSQL directly.
 The provider-validation and quantitative candidate paths remain the next
 unimplemented analytics slices.
 
@@ -150,6 +151,13 @@ query rating tables or reproduce formulas; it consumes screening status and
 rating pages through the versioned internal HTTP contract. Database read
 projections exist for analytics implementation and diagnostics, not as an
 additional Java rating contract.
+
+Every provider adapter emits the same normalized daily-price,
+corporate-action, security-metadata, and lineage models. Provider-native field
+names are removed before persistence or scoring. A sealed snapshot records one
+market-data provider and one normalized adjustment mode, so price selection
+cannot silently mix configured market providers. SEC EDGAR remains the primary
+financial filing and revision-lineage authority.
 
 The initial United States security master treats normalized ticker symbols as
 unique ingestion identities and exchange labels as mutable metadata. A future

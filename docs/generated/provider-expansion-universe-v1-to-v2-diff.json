@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "provider-expansion-universe-diff-v1.0.0",
+  "baseUniverseVersion": "provider-expansion-us-v1.0.0",
+  "baseUniverseContentHash": "F9971B774FB3D9A673687075F615B7F01CB691A68F04DCBA5510E617084B2F7D",
+  "repairedUniverseVersion": "provider-expansion-us-v2.0.0",
+  "repairedUniverseContentHash": "858A1482F94F6D36D2AA5C892C497C653EC2009E1357298FF20AEEA9C3D66B58",
+  "removed": [
+    {
+      "symbol": "Symbol",
+      "candidateRole": "PRIMARY",
+      "sourceOrdinal": 1,
+      "reason": "INVALID_SOURCE_TABLE_PSEUDO_SECURITY"
+    }
+  ],
+  "added": [
+    {
+      "symbol": "TSN",
+      "candidateRole": "PRIMARY",
+      "sector": "Consumer Staples",
+      "cik": "0000100493",
+      "sourceOrdinal": 454,
+      "reason": "NEXT_ELIGIBLE_BY_FROZEN_SELECTION_ORDER"
+    }
+  ],
+  "proof": {
+    "candidateCountBefore": 300,
+    "candidateCountAfter": 300,
+    "unchangedCandidateRecords": 299,
+    "changedSlots": [
+      123
+    ],
+    "uniqueSymbolsAfter": 300,
+    "allCandidatesValidAfter": true
+  },
+  "baseUniversePath": "analysis-python/tests/fixtures/provider_expansion_universe_v1.json",
+  "baseUniverseFileSha256": "BAA04E155B1EA3DB1EE348177D7E2B02DC7621EB4999C91B3A229FD8FA83D501",
+  "baseSliceManifestPath": "docs/generated/provider-expansion-slice-manifest-v1.json",
+  "baseSliceManifestFileSha256": "81BB788AE4B74D7412164145F16B8B815215912F45CE4D5E93786BEA8E0B0C8A",
+  "sourceSnapshotSha256": "A28E4F228A2E27B35E522BA4C5E9145D4A19D7EDAFD5C1982E75918ADF774EC4",
+  "deterministicSuccessorProof": {
+    "orderingRule": "original sector round robin over cleaned eligible source rows",
+    "replacementSymbol": "TSN",
+    "replacementSourceOrdinal": 454,
+    "verificationStatus": "PASS"
+  },
+  "minimalRepairProof": {
+    "removedSymbol": "Symbol",
+    "addedSymbol": "TSN",
+    "unchangedCandidateRecords": 299,
+    "unchangedSliceAssignments": 299,
+    "replacementSlice": "slice-011",
+    "replacementPosition": 5,
+    "uniqueValidSecurities": 300,
+    "verificationStatus": "PASS"
+  },
+  "repairedSliceManifestVersion": "provider-gate-expansion-v2.0.0",
+  "repairedSliceManifestContentHash": "280CED07155A1B6AB06F6B2E949B131EA94C465C774D8F67A0F8A3E3ABBD511F",
+  "diffContentHash": "C509ACA75383ECC17DB7DD43FB9D63447531DD78F58C9678236DBE4976425A38"
+}

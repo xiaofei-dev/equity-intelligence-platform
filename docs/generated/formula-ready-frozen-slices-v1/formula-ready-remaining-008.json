@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "formula-ready-frozen-slice-v1.0.0",
+  "sourceManifestContentHash": "856CF4C3C1174D258CB69D758BBE7740EE04A92E398E7A0841BAB3EBD7652EBC",
+  "sliceId": "formula-ready-remaining-008",
+  "sequence": 8,
+  "symbols": [
+    "HSY",
+    "HUM",
+    "HWKN",
+    "IBM",
+    "IDXX",
+    "IFF",
+    "INTU",
+    "IP",
+    "IQV",
+    "ISRG",
+    "ITW",
+    "KDP",
+    "KHC",
+    "KLAC",
+    "KMB",
+    "KO",
+    "KVUE",
+    "LEN",
+    "LH",
+    "LIN"
+  ],
+  "automaticSelection": false,
+  "automaticReplacement": false,
+  "contentHash": "579BA1F8721546E312A119F90FD6A9CB257915A78307D72BE240211CA72F85F3"
+}

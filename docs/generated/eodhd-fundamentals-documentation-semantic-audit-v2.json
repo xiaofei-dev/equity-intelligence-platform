@@ -1,0 +1,261 @@
+{
+  "artifactType": "EODHD_FUNDAMENTALS_DOCUMENTATION_SEMANTIC_AUDIT",
+  "schemaVersion": "eodhd-documentation-semantic-audit-v2.0.0",
+  "providerSemanticContractVersion": "eodhd-fundamentals-semantics-v2.0.0",
+  "scope": "DOCUMENTATION_ONLY",
+  "sources": [
+    {
+      "sourceId": "EODHD_FUNDAMENTALS_GLOSSARY_COMMON_STOCK",
+      "url": "https://eodhd.com/financial-academy/financial-faq/fundamentals-glossary-common-stock",
+      "accessedAt": "2026-07-28T04:12:26.490969Z",
+      "sha256": "7F8A55C99D2A694D1A39BE6A07530936988F2D5E85F69E832383E7AC5DF5AC0F"
+    },
+    {
+      "sourceId": "EODHD_DEBT_FIELDS_EXPLAINED",
+      "url": "https://eodhd.com/financial-academy/financial-faq/debt-fields-explained",
+      "accessedAt": "2026-07-28T04:12:26.750806Z",
+      "sha256": "C3A1B40CF40F71B424F4F58622421CA10B3512F7A0A2E5CE507489B577BD351A"
+    },
+    {
+      "sourceId": "EODHD_FUNDAMENTALS_API_DOCUMENTATION",
+      "url": "https://eodhd.com/financial-apis/stock-etfs-fundamental-data-feeds",
+      "accessedAt": "2026-07-28T04:12:27.160383Z",
+      "sha256": "D66343528610E6571F9D9A7BC4A33E3FADEBBAE5953E2C0F47FFD2130A4451DB"
+    },
+    {
+      "sourceId": "EODHD_OFFICIAL_OPENAPI_FUNDAMENTALS_PATH",
+      "url": "https://raw.githubusercontent.com/EodHistoricalData/EODHD-openapi/main/paths/fundamentals_ticker.yaml",
+      "accessedAt": "2026-07-28T04:12:27.369827Z",
+      "sha256": "0D1D1D5EF6C99CC75E240489F2D091F39E2BA87D01A8D4EC05C97C4FAE6729FA"
+    },
+    {
+      "sourceId": "EODHD_US_FUNDAMENTALS_RECALCULATION_NOTICE",
+      "url": "https://eodhd.com/financial-apis-blog/big-update-for-usa-fundamentals-new-fields",
+      "accessedAt": "2026-07-28T04:12:27.670904Z",
+      "sha256": "FCC8691CCD658432680FC1402608D57614B940A2F15335B7923DA0C4B031B899"
+    }
+  ],
+  "shortLongTermDebtTotal": {
+    "fieldIdentity": {
+      "decision": "PROVEN",
+      "reasonCode": "OFFICIAL_GLOSSARY_NAMES_FIELD_TOTAL_DEBT",
+      "sourceIds": [
+        "EODHD_FUNDAMENTALS_GLOSSARY_COMMON_STOCK",
+        "EODHD_DEBT_FIELDS_EXPLAINED"
+      ],
+      "evidenceSummary": "Official EODHD documentation calls shortLongTermDebtTotal total debt and locates it in Financials.Balance_Sheet."
+    },
+    "inclusionsAndExclusions": {
+      "decision": "NOT_DOCUMENTED",
+      "reasonCode": "COMPONENTS_VARY_BY_COMPANY_AND_EXCLUSIONS_UNSPECIFIED",
+      "sourceIds": [
+        "EODHD_FUNDAMENTALS_GLOSSARY_COMMON_STOCK",
+        "EODHD_DEBT_FIELDS_EXPLAINED"
+      ],
+      "evidenceSummary": "The glossary says composition may differ by company and does not exhaustively define leases, notes, overdrafts, convertible debt, or other interest-bearing obligations."
+    },
+    "unitAndCurrency": {
+      "decision": "PROVEN",
+      "reasonCode": "FINANCIAL_STATEMENT_CURRENCY_SYMBOL_DOCUMENTED",
+      "sourceIds": [
+        "EODHD_FUNDAMENTALS_GLOSSARY_COMMON_STOCK",
+        "EODHD_FUNDAMENTALS_API_DOCUMENTATION"
+      ],
+      "evidenceSummary": "The Financials balance-sheet section carries currency_symbol for report figures."
+    },
+    "consolidationScope": {
+      "decision": "NOT_DOCUMENTED",
+      "reasonCode": "CONSOLIDATED_ENTITY_SCOPE_NOT_SPECIFIED",
+      "sourceIds": [
+        "EODHD_FUNDAMENTALS_GLOSSARY_COMMON_STOCK",
+        "EODHD_FUNDAMENTALS_API_DOCUMENTATION",
+        "EODHD_OFFICIAL_OPENAPI_FUNDAMENTALS_PATH"
+      ],
+      "evidenceSummary": "No reviewed public field definition establishes consolidated, parent-only, or segment scope for shortLongTermDebtTotal."
+    },
+    "instantPeriodSemantics": {
+      "decision": "NOT_DOCUMENTED",
+      "reasonCode": "BALANCE_SHEET_DATE_NOT_EXPLICITLY_DEFINED_AS_INSTANT",
+      "sourceIds": [
+        "EODHD_FUNDAMENTALS_GLOSSARY_COMMON_STOCK",
+        "EODHD_FUNDAMENTALS_API_DOCUMENTATION",
+        "EODHD_OFFICIAL_OPENAPI_FUNDAMENTALS_PATH"
+      ],
+      "evidenceSummary": "The field is under Balance_Sheet and records have date and filing_date, but the documentation does not explicitly define the value as an instant at period end."
+    },
+    "revisionAndUpdatePolicy": {
+      "decision": "CONTRADICTED",
+      "reasonCode": "HISTORICAL_VALUES_CAN_BE_RECALCULATED_WITHOUT_REVISION_IDENTITY",
+      "sourceIds": [
+        "EODHD_FUNDAMENTALS_GLOSSARY_COMMON_STOCK",
+        "EODHD_US_FUNDAMENTALS_RECALCULATION_NOTICE",
+        "EODHD_FUNDAMENTALS_API_DOCUMENTATION"
+      ],
+      "evidenceSummary": "UpdatedAt describes file refreshes, while EODHD has announced historical field recalculation and full redownload guidance; no immutable revision stream is documented."
+    },
+    "frozenV1TotalDebtEquivalence": {
+      "decision": "PROVEN",
+      "reasonCode": "FROZEN_V1_ACCEPTS_PROVIDER_NORMALIZED_TOTAL_DEBT",
+      "sourceIds": [
+        "EODHD_FUNDAMENTALS_GLOSSARY_COMMON_STOCK",
+        "EODHD_DEBT_FIELDS_EXPLAINED",
+        "EODHD_FUNDAMENTALS_API_DOCUMENTATION",
+        "EODHD_OFFICIAL_OPENAPI_FUNDAMENTALS_PATH"
+      ],
+      "evidenceSummary": "The frozen v1 formula accepts normalized total debt where supplied, and the official provider documentation names shortLongTermDebtTotal total debt. Issuer composition variation is retained as a provider-normalization limitation."
+    }
+  },
+  "ebitda": {
+    "highlightsTtmIdentity": {
+      "decision": "PROVEN",
+      "reasonCode": "OFFICIAL_HIGHLIGHTS_EBITDA_IS_TTM",
+      "sourceIds": [
+        "EODHD_FUNDAMENTALS_GLOSSARY_COMMON_STOCK",
+        "EODHD_FUNDAMENTALS_API_DOCUMENTATION"
+      ],
+      "evidenceSummary": "Official documentation defines Highlights.EBITDA as earnings before interest, taxes, depreciation, and amortization (TTM)."
+    },
+    "fieldIdentity": {
+      "decision": "PROVEN",
+      "reasonCode": "OFFICIAL_GLOSSARY_DEFINES_EBITDA",
+      "sourceIds": [
+        "EODHD_FUNDAMENTALS_GLOSSARY_COMMON_STOCK",
+        "EODHD_FUNDAMENTALS_API_DOCUMENTATION"
+      ],
+      "evidenceSummary": "Official documentation lists ebitda in Income_Statement and defines it as EBIT plus depreciationAndAmortization."
+    },
+    "reportedOrProviderDerived": {
+      "decision": "PROVEN",
+      "reasonCode": "DOCUMENTED_PROVIDER_FORMULA",
+      "sourceIds": [
+        "EODHD_FUNDAMENTALS_GLOSSARY_COMMON_STOCK"
+      ],
+      "evidenceSummary": "The published formula shows this field is a provider-calculated financial-statement value rather than proof of issuer-reported EBITDA."
+    },
+    "formulaAndComponents": {
+      "decision": "PROVEN",
+      "reasonCode": "EBIT_PLUS_DEPRECIATION_AND_AMORTIZATION",
+      "sourceIds": [
+        "EODHD_FUNDAMENTALS_GLOSSARY_COMMON_STOCK"
+      ],
+      "evidenceSummary": "The glossary documents ebit + depreciationAndAmortization."
+    },
+    "quarterlyDurationSemantics": {
+      "decision": "NOT_DOCUMENTED",
+      "reasonCode": "QUARTERLY_DISCRETE_YTD_TTM_SEMANTIC_UNSPECIFIED",
+      "sourceIds": [
+        "EODHD_FUNDAMENTALS_GLOSSARY_COMMON_STOCK",
+        "EODHD_FUNDAMENTALS_API_DOCUMENTATION",
+        "EODHD_OFFICIAL_OPENAPI_FUNDAMENTALS_PATH"
+      ],
+      "evidenceSummary": "The sources label records quarterly but do not state whether each EBITDA value is a discrete quarter, YTD duration, or TTM."
+    },
+    "annualDurationSemantics": {
+      "decision": "NOT_DOCUMENTED",
+      "reasonCode": "YEARLY_FULL_FISCAL_DURATION_NOT_EXPLICIT",
+      "sourceIds": [
+        "EODHD_FUNDAMENTALS_GLOSSARY_COMMON_STOCK",
+        "EODHD_FUNDAMENTALS_API_DOCUMENTATION",
+        "EODHD_OFFICIAL_OPENAPI_FUNDAMENTALS_PATH"
+      ],
+      "evidenceSummary": "The sources label records yearly and provide an end date, but do not explicitly define the duration start or full-fiscal-year semantics."
+    },
+    "unitAndCurrency": {
+      "decision": "PROVEN",
+      "reasonCode": "FINANCIAL_STATEMENT_CURRENCY_SYMBOL_DOCUMENTED",
+      "sourceIds": [
+        "EODHD_FUNDAMENTALS_GLOSSARY_COMMON_STOCK",
+        "EODHD_FUNDAMENTALS_API_DOCUMENTATION"
+      ],
+      "evidenceSummary": "The Income_Statement section carries currency_symbol for report figures."
+    },
+    "filingAvailability": {
+      "decision": "PROVEN",
+      "reasonCode": "FINANCIAL_RECORD_FILING_DATE_DOCUMENTED",
+      "sourceIds": [
+        "EODHD_FUNDAMENTALS_GLOSSARY_COMMON_STOCK",
+        "EODHD_FUNDAMENTALS_API_DOCUMENTATION"
+      ],
+      "evidenceSummary": "Each yearly and quarterly Financials record is documented with date and filing_date."
+    },
+    "acceptanceTimestamp": {
+      "decision": "NOT_DOCUMENTED",
+      "reasonCode": "FILING_ACCEPTANCE_TIMESTAMP_NOT_SUPPLIED",
+      "sourceIds": [
+        "EODHD_FUNDAMENTALS_GLOSSARY_COMMON_STOCK",
+        "EODHD_FUNDAMENTALS_API_DOCUMENTATION",
+        "EODHD_OFFICIAL_OPENAPI_FUNDAMENTALS_PATH"
+      ],
+      "evidenceSummary": "The reviewed schema documents filing_date, not an acceptance timestamp or intraday public-availability time."
+    },
+    "revisionAndUpdatePolicy": {
+      "decision": "CONTRADICTED",
+      "reasonCode": "HISTORICAL_VALUES_CAN_BE_RECALCULATED_WITHOUT_REVISION_IDENTITY",
+      "sourceIds": [
+        "EODHD_FUNDAMENTALS_GLOSSARY_COMMON_STOCK",
+        "EODHD_US_FUNDAMENTALS_RECALCULATION_NOTICE",
+        "EODHD_FUNDAMENTALS_API_DOCUMENTATION"
+      ],
+      "evidenceSummary": "Historical fundamentals can be recalculated and redownloaded, while no field-level revision identity or restatement lineage is documented."
+    },
+    "frozenV1TtmConstruction": {
+      "decision": "NOT_DOCUMENTED",
+      "reasonCode": "TTM_EBITDA_CANNOT_BE_CONSTRUCTED_WITHOUT_QUARTER_DURATION_SEMANTICS",
+      "sourceIds": [
+        "EODHD_FUNDAMENTALS_GLOSSARY_COMMON_STOCK",
+        "EODHD_FUNDAMENTALS_API_DOCUMENTATION",
+        "EODHD_OFFICIAL_OPENAPI_FUNDAMENTALS_PATH"
+      ],
+      "evidenceSummary": "The provider formula is known, but frozen TTM construction is not authorized because quarterly duration semantics are absent."
+    },
+    "frozenV1CurrentSnapshotEquivalence": {
+      "decision": "PROVEN",
+      "reasonCode": "FROZEN_V1_ACCEPTS_NORMALIZED_TTM_EBITDA",
+      "sourceIds": [
+        "EODHD_FUNDAMENTALS_GLOSSARY_COMMON_STOCK",
+        "EODHD_FUNDAMENTALS_API_DOCUMENTATION"
+      ],
+      "evidenceSummary": "The frozen net-debt-to-EBITDA factor accepts a normalized EBITDA input. Highlights.EBITDA supplies the documented TTM value without requiring quarterly reconstruction."
+    }
+  },
+  "officialDataDictionary": {
+    "decision": "PROVEN",
+    "reasonCode": "OFFICIAL_GLOSSARY_AND_OPENAPI_EXIST",
+    "sourceIds": [
+      "EODHD_FUNDAMENTALS_GLOSSARY_COMMON_STOCK",
+      "EODHD_FUNDAMENTALS_API_DOCUMENTATION",
+      "EODHD_OFFICIAL_OPENAPI_FUNDAMENTALS_PATH"
+    ],
+    "scope": "The glossary defines many field names and the OpenAPI defines the endpoint and broad response structure.",
+    "limitation": "The OpenAPI models Financials yearly and quarterly collections without field-level schemas, so it does not close the disputed period, scope, or revision semantics."
+  },
+  "providerSemanticContractUpdateAllowed": true,
+  "providerSemanticContractScope": "CURRENT_SNAPSHOT_ONLY",
+  "eligibilityDecision": {
+    "currentQc": "SOURCE_ROUTE_ACCEPTED_ALGORITHM_WINDOW_ASSEMBLY_PENDING",
+    "currentQcBlockingReasons": [
+      "CURRENT_FACTOR_WINDOW_ASSEMBLY_NOT_EXECUTED"
+    ],
+    "currentUq": "BLOCKED",
+    "currentUqAdditionalBlockingReasons": [
+      "MONTHLY_PIT_FCF_YIELD_HISTORY_NOT_AVAILABLE"
+    ],
+    "historicalPit": "BLOCKED",
+    "supportConfirmationRequired": false
+  },
+  "requests": {
+    "documentationHttpRequests": 5,
+    "eodhdFinancialDataApiRequests": 0,
+    "secFinancialDataApiRequests": 0
+  },
+  "repositoryEvidence": {
+    "normalizedCoverage": {
+      "shortLongTermDebtTotalAsTotalDebt": "223_OF_223",
+      "ebitda": "223_OF_223"
+    },
+    "interpretation": "The documented fields may be used only in a sealed current snapshot. They do not prove historical publication or revision lineage."
+  },
+  "algorithmScoringExecuted": false,
+  "forwardValidationExecuted": false,
+  "artifactContentHash": "7FBA90F4FDD89BC89DF5D93DA058E4B78F6930E6CDB7F1FFA1C3434017B233AF"
+}

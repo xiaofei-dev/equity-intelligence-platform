@@ -1,0 +1,320 @@
+{
+  "artifactType": "FORMULA_READY_BACKFILL_GIT_SAFE_MANIFEST",
+  "runId": "20260727T222133Z-0013d26412cf",
+  "sliceId": "formula-ready-remaining-007",
+  "reportContentHash": "AC70FF91ECD1913F13654650836073BCDE2375C7143FDE8DB6FB7D2D502D318D",
+  "licensedValuesIncluded": false,
+  "results": [
+    {
+      "symbol": "FIX",
+      "status": "FORMULA_READY",
+      "receipt": {
+        "symbol": "FIX",
+        "contentHash": "4DCCFDDE38213EDC0140F118025CCC3D769A1DA39356551CF442EBC5DD4EBD70",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/FIX/4DCCFDDE38213EDC0140F118025CCC3D769A1DA39356551CF442EBC5DD4EBD70.json",
+        "recordCount": 10436,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 280,
+          "HISTORICAL_MARKET_CAP": 262
+        }
+      },
+      "formulaCoverageComplete": true
+    },
+    {
+      "symbol": "FLEX",
+      "status": "FORMULA_READY",
+      "receipt": {
+        "symbol": "FLEX",
+        "contentHash": "6EB5B37632DCA092CFA25BEF7409A59BDD2CD1B34CF3BC85CE34CF3505C2EA16",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/FLEX/6EB5B37632DCA092CFA25BEF7409A59BDD2CD1B34CF3BC85CE34CF3505C2EA16.json",
+        "recordCount": 10394,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 239,
+          "HISTORICAL_MARKET_CAP": 261
+        }
+      },
+      "formulaCoverageComplete": true
+    },
+    {
+      "symbol": "FOX",
+      "status": "FORMULA_READY",
+      "receipt": {
+        "symbol": "FOX",
+        "contentHash": "FF83B25B29577B4EE60968AE94AE47D57ABB51CA6D6F17441A2AF54C62E191EF",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/FOX/FF83B25B29577B4EE60968AE94AE47D57ABB51CA6D6F17441A2AF54C62E191EF.json",
+        "recordCount": 10398,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 243,
+          "HISTORICAL_MARKET_CAP": 261
+        }
+      },
+      "formulaCoverageComplete": true
+    },
+    {
+      "symbol": "FOXA",
+      "status": "FORMULA_READY",
+      "receipt": {
+        "symbol": "FOXA",
+        "contentHash": "6D8329BDC377598C6BE428E30491136D46FF52AA9CEC23D006C61E045BA7AB74",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/FOXA/6D8329BDC377598C6BE428E30491136D46FF52AA9CEC23D006C61E045BA7AB74.json",
+        "recordCount": 10398,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 243,
+          "HISTORICAL_MARKET_CAP": 261
+        }
+      },
+      "formulaCoverageComplete": true
+    },
+    {
+      "symbol": "FSLR",
+      "status": "FORMULA_READY",
+      "receipt": {
+        "symbol": "FSLR",
+        "contentHash": "172CA06A3005A07EC0AF3DBC8101FCBC73775C34BEF76EE605306DC375CBDBFC",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/FSLR/172CA06A3005A07EC0AF3DBC8101FCBC73775C34BEF76EE605306DC375CBDBFC.json",
+        "recordCount": 10392,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 236,
+          "HISTORICAL_MARKET_CAP": 262
+        }
+      },
+      "formulaCoverageComplete": true
+    },
+    {
+      "symbol": "FTV",
+      "status": "FORMULA_READY",
+      "receipt": {
+        "symbol": "FTV",
+        "contentHash": "1537FA380DAFBD4D0A5A2A5DA22FC275E2F4E0DBAFD8C2D0AD9294400C019EA0",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/FTV/1537FA380DAFBD4D0A5A2A5DA22FC275E2F4E0DBAFD8C2D0AD9294400C019EA0.json",
+        "recordCount": 10403,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 248,
+          "HISTORICAL_MARKET_CAP": 261
+        }
+      },
+      "formulaCoverageComplete": true
+    },
+    {
+      "symbol": "GD",
+      "status": "FORMULA_READY",
+      "receipt": {
+        "symbol": "GD",
+        "contentHash": "C0A79F9C976899E14BB7F0D4E645ADF15FAF0FB26427E126AA2162004033707A",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/GD/C0A79F9C976899E14BB7F0D4E645ADF15FAF0FB26427E126AA2162004033707A.json",
+        "recordCount": 10378,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 222,
+          "HISTORICAL_MARKET_CAP": 262
+        }
+      },
+      "formulaCoverageComplete": true
+    },
+    {
+      "symbol": "GEHC",
+      "status": "FORMULA_READY",
+      "receipt": {
+        "symbol": "GEHC",
+        "contentHash": "886B94100C1AC4369DF23258903A840DAD19B4A9FA76C2A005FDE6E092A4FDAC",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/GEHC/886B94100C1AC4369DF23258903A840DAD19B4A9FA76C2A005FDE6E092A4FDAC.json",
+        "recordCount": 5832,
+        "datasetCoverage": {
+          "DAILY_PRICE": 5424,
+          "FINANCIAL": 218,
+          "HISTORICAL_MARKET_CAP": 190
+        }
+      },
+      "formulaCoverageComplete": true
+    },
+    {
+      "symbol": "GIS",
+      "status": "FORMULA_READY",
+      "receipt": {
+        "symbol": "GIS",
+        "contentHash": "540EA283FC3242D38E834AE3DE818C8A0A57C2579E924A6D332F5ED703A44A8B",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/GIS/540EA283FC3242D38E834AE3DE818C8A0A57C2579E924A6D332F5ED703A44A8B.json",
+        "recordCount": 10407,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 250,
+          "HISTORICAL_MARKET_CAP": 263
+        }
+      },
+      "formulaCoverageComplete": true
+    },
+    {
+      "symbol": "GM",
+      "status": "FORMULA_READY",
+      "receipt": {
+        "symbol": "GM",
+        "contentHash": "55C020E6247068050B185E3EDCCD64888738047AE64E10A075B168F413834923",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/GM/55C020E6247068050B185E3EDCCD64888738047AE64E10A075B168F413834923.json",
+        "recordCount": 10389,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 232,
+          "HISTORICAL_MARKET_CAP": 263
+        }
+      },
+      "formulaCoverageComplete": true
+    },
+    {
+      "symbol": "GOOG",
+      "status": "FORMULA_READY",
+      "receipt": {
+        "symbol": "GOOG",
+        "contentHash": "E0DC7207E4E00E8AC501170D642CA10FE0A2C0B47359DD3F77292D14D14FC947",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/GOOG/E0DC7207E4E00E8AC501170D642CA10FE0A2C0B47359DD3F77292D14D14FC947.json",
+        "recordCount": 10370,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 214,
+          "HISTORICAL_MARKET_CAP": 262
+        }
+      },
+      "formulaCoverageComplete": true
+    },
+    {
+      "symbol": "GOOGL",
+      "status": "FORMULA_READY",
+      "receipt": {
+        "symbol": "GOOGL",
+        "contentHash": "790C05E06D0FB10B41F194B2BE65290E8F425643470F75A48E54C884A9BA3D00",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/GOOGL/790C05E06D0FB10B41F194B2BE65290E8F425643470F75A48E54C884A9BA3D00.json",
+        "recordCount": 10370,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 214,
+          "HISTORICAL_MARKET_CAP": 262
+        }
+      },
+      "formulaCoverageComplete": true
+    },
+    {
+      "symbol": "GPC",
+      "status": "FORMULA_READY",
+      "receipt": {
+        "symbol": "GPC",
+        "contentHash": "CDCF8B92EC3AB379FA48EB2434130CCD4179A0B8988D2F3DF0E7A97B2791A0D5",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/GPC/CDCF8B92EC3AB379FA48EB2434130CCD4179A0B8988D2F3DF0E7A97B2791A0D5.json",
+        "recordCount": 10404,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 249,
+          "HISTORICAL_MARKET_CAP": 261
+        }
+      },
+      "formulaCoverageComplete": true
+    },
+    {
+      "symbol": "GRMN",
+      "status": "SECURITY_INSUFFICIENT_DATA",
+      "receipt": null,
+      "formulaCoverageComplete": false
+    },
+    {
+      "symbol": "GWW",
+      "status": "FORMULA_READY",
+      "receipt": {
+        "symbol": "GWW",
+        "contentHash": "08EF17310D517628ABCA764D79E8B3E7A1B4E88A9BC3D6BF862AB02C811AC3B5",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/GWW/08EF17310D517628ABCA764D79E8B3E7A1B4E88A9BC3D6BF862AB02C811AC3B5.json",
+        "recordCount": 10401,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 245,
+          "HISTORICAL_MARKET_CAP": 262
+        }
+      },
+      "formulaCoverageComplete": true
+    },
+    {
+      "symbol": "HD",
+      "status": "FORMULA_READY",
+      "receipt": {
+        "symbol": "HD",
+        "contentHash": "FD8EB5CD5648AB49F5F79B5F26F5A0AA1D47E423EA11C9E6D779EE5835562282",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/HD/FD8EB5CD5648AB49F5F79B5F26F5A0AA1D47E423EA11C9E6D779EE5835562282.json",
+        "recordCount": 10404,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 248,
+          "HISTORICAL_MARKET_CAP": 262
+        }
+      },
+      "formulaCoverageComplete": true
+    },
+    {
+      "symbol": "HLT",
+      "status": "FORMULA_READY",
+      "receipt": {
+        "symbol": "HLT",
+        "contentHash": "EC02473AC44EA7F06397466CC867E0884519EA961A802AED766F6209955A18FC",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/HLT/EC02473AC44EA7F06397466CC867E0884519EA961A802AED766F6209955A18FC.json",
+        "recordCount": 10422,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 266,
+          "HISTORICAL_MARKET_CAP": 262
+        }
+      },
+      "formulaCoverageComplete": true
+    },
+    {
+      "symbol": "HON",
+      "status": "FORMULA_READY",
+      "receipt": {
+        "symbol": "HON",
+        "contentHash": "2A2471B428ECA26FD5296BDD3DB9B45EC92E825FDEE7FA956078032855C1378E",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/HON/2A2471B428ECA26FD5296BDD3DB9B45EC92E825FDEE7FA956078032855C1378E.json",
+        "recordCount": 10398,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 242,
+          "HISTORICAL_MARKET_CAP": 262
+        }
+      },
+      "formulaCoverageComplete": true
+    },
+    {
+      "symbol": "HRL",
+      "status": "FORMULA_READY",
+      "receipt": {
+        "symbol": "HRL",
+        "contentHash": "E1DB620901FBBD6E7B1F060683E3D50F446FE88360EB8122B3D69CBC54C034A7",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/HRL/E1DB620901FBBD6E7B1F060683E3D50F446FE88360EB8122B3D69CBC54C034A7.json",
+        "recordCount": 10415,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 260,
+          "HISTORICAL_MARKET_CAP": 261
+        }
+      },
+      "formulaCoverageComplete": true
+    },
+    {
+      "symbol": "HSIC",
+      "status": "FORMULA_READY",
+      "receipt": {
+        "symbol": "HSIC",
+        "contentHash": "B95AEA9E2A0DA3F22E6657896A94F56ABACFA2313C962FF77F965D0A4833FA61",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/HSIC/B95AEA9E2A0DA3F22E6657896A94F56ABACFA2313C962FF77F965D0A4833FA61.json",
+        "recordCount": 10423,
+        "datasetCoverage": {
+          "DAILY_PRICE": 9894,
+          "FINANCIAL": 266,
+          "HISTORICAL_MARKET_CAP": 263
+        }
+      },
+      "formulaCoverageComplete": true
+    }
+  ],
+  "artifactContentHash": "8245402D543975118D4BF2645F45435FA8086CCCE746478F3A2CB7B9A98C159A"
+}

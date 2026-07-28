@@ -30,8 +30,9 @@ passwords and provider keys in `.env`; never commit `.env` or real credentials.
 Variables prefixed with `NEXT_PUBLIC_` are embedded in browser-accessible
 frontend code. Never place secrets in those variables.
 
-Phase 1 market data ingestion uses `MARKET_DATA_PROVIDER=twelve_data` and reads
-the credential from `TWELVE_DATA_API_KEY`. Keep this key only in the local
+Market data ingestion selects `twelve_data`, `yfinance`, or `eodhd` through
+`MARKET_DATA_PROVIDER`. Twelve Data reads `TWELVE_DATA_API_KEY`; EODHD reads
+`EODHD_API_KEY`; yfinance uses no API key. Keep credentials only in the local
 `.env` file or a deployment secret store. The analytics database URL is
 constructed automatically inside Docker Compose.
 
@@ -154,7 +155,7 @@ It accepts up to 20 symbols and an inclusive date range. The operation is
 idempotent: a repeated provider, symbol, trading date, and adjustment mode
 updates the existing row rather than creating a duplicate.
 
-When `TWELVE_DATA_API_KEY` is not configured, the endpoint returns
+When the selected provider credential is not configured, the endpoint returns
 `MARKET_DATA_NOT_CONFIGURED` without contacting the provider. Do not expose
 this internal endpoint directly from a public deployment.
 

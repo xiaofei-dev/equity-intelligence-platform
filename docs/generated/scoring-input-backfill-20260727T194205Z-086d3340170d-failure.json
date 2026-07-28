@@ -1,0 +1,25 @@
+{
+  "artifactType": "SCORING_INPUT_BACKFILL_FAILURE_EVIDENCE",
+  "schemaVersion": "formula-scoring-backfill-failure-v1.0.0",
+  "runId": "20260727T194205Z-086d3340170d",
+  "sliceId": "formula-canary-001",
+  "symbolsAuthorized": ["AAPL", "CAT", "JNJ"],
+  "symbolsReached": ["AAPL"],
+  "failureCode": "V2_FINANCIAL_PERIOD_LACKS_CONTROLLED_V1_PIT_EVIDENCE",
+  "failurePhase": "LOCAL_NORMALIZATION",
+  "rootCause": "The provider returned periods outside the frozen v1 PIT window and the first v2 adapter incorrectly required legacy accession evidence for every additional period.",
+  "resolution": "Filter provider financial observations to the frozen controlled PIT keys and still require every frozen key to be present.",
+  "eodhdPhysicalAttempts": {
+    "status": "NOT_PERSISTED_BY_FAILED_PROCESS",
+    "maximumFromCompletedControlFlow": 3
+  },
+  "configuredLocalWeight": {
+    "status": "NOT_PERSISTED_BY_FAILED_PROCESS",
+    "maximumFromCompletedControlFlow": 12
+  },
+  "billingStatus": "NOT_RECONCILED",
+  "reportWritten": false,
+  "licensedValuesIncluded": false,
+  "credentialsIncluded": false,
+  "automaticRerunPerformed": false
+}

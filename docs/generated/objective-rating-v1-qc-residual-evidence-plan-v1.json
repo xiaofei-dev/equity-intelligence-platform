@@ -1,0 +1,3406 @@
+{
+  "artifactType": "OBJECTIVE_RATING_QC_RESIDUAL_EVIDENCE_PLAN",
+  "schemaVersion": "objective-rating-qc-residual-evidence-plan-v1.0.0",
+  "sourceManifest": {
+    "path": "docs/generated/objective-rating-v1-current-factor-input-manifest-v1-7.json",
+    "fileSha256": "AA70CECE3A24C4E127F20BA063A4AD9FC704394E94124064F482A933A7A38F5B",
+    "artifactContentHash": "84541167D9E45C966538388E3CF82C1B3D31A466E098626FADE9504A88C8B6F1"
+  },
+  "targetSymbols": [
+    "TTC",
+    "AVGO",
+    "HRL",
+    "GPC",
+    "DOV",
+    "BDX",
+    "APD",
+    "ROK",
+    "ADSK",
+    "AMD",
+    "APH",
+    "BF-B",
+    "BLDR",
+    "CNC"
+  ],
+  "targetCount": 14,
+  "currentQcInputReadyCount": 6,
+  "additionalRequiredToReachMinimum": 14,
+  "residualMatrix": [
+    {
+      "symbol": "TTC",
+      "snapshotStorageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/TTC/555C27578A49C570B1983979BFEF47728BF6DEF2B9E15A6E9A8F313BFD7701F4.json",
+      "snapshotContentHash": "555C27578A49C570B1983979BFEF47728BF6DEF2B9E15A6E9A8F313BFD7701F4",
+      "currentQcInputReady": false,
+      "residualFactors": [
+        {
+          "factor": "eps_growth",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "diluted_eps_current",
+            "diluted_eps_three_year_prior"
+          ],
+          "blockers": [
+            {
+              "operand": "diluted_eps_three_year_prior",
+              "status": "MISSING",
+              "reasonCode": "THREE_YEAR_PRIOR_DILUTED_EPS_INPUT_WINDOW_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "BOUNDED_YAHOO_COMPARABLE_DATED_TTM_EVIDENCE",
+                "authorizedTypes": [
+                  "quarterlyDilutedEps",
+                  "trailingDilutedEps"
+                ],
+                "bestCaseResolvable": true,
+                "reasonCode": "FOUR_EXPLICIT_3M_RECORDS_MAY_FORM_APPROVED_COMPARABLE_TTM_WINDOW"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "interest_coverage",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "ebit_ttm",
+            "interest_expense_ttm"
+          ],
+          "blockers": [
+            {
+              "operand": "interest_expense_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "BOUNDED_YAHOO_CURRENT_CONFIRMATION",
+                "authorizedTypes": [
+                  "quarterlyInterestExpense",
+                  "trailingInterestExpense"
+                ],
+                "bestCaseResolvable": true,
+                "reasonCode": "CURRENT_INTEREST_TTM_CONFIRMATION_AUTHORIZED"
+              }
+            }
+          ]
+        }
+      ],
+      "allResidualInputsYahooResolvableInBestCase": true
+    },
+    {
+      "symbol": "AVGO",
+      "snapshotStorageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/AVGO/C4370C81884A9C60A0D8C1B1231EF816A814DC22AC877741D054A5A71C10FA5F.json",
+      "snapshotContentHash": "C4370C81884A9C60A0D8C1B1231EF816A814DC22AC877741D054A5A71C10FA5F",
+      "currentQcInputReady": false,
+      "residualFactors": [
+        {
+          "factor": "cash_conversion",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "operating_cash_flow_ttm",
+            "capital_expenditure_ttm",
+            "net_income_ttm"
+          ],
+          "blockers": [
+            {
+              "operand": "net_income_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "eps_growth",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "diluted_eps_current",
+            "diluted_eps_three_year_prior"
+          ],
+          "blockers": [
+            {
+              "operand": "diluted_eps_three_year_prior",
+              "status": "MISSING",
+              "reasonCode": "THREE_YEAR_PRIOR_DILUTED_EPS_INPUT_WINDOW_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "BOUNDED_YAHOO_COMPARABLE_DATED_TTM_EVIDENCE",
+                "authorizedTypes": [
+                  "quarterlyDilutedEps",
+                  "trailingDilutedEps"
+                ],
+                "bestCaseResolvable": true,
+                "reasonCode": "FOUR_EXPLICIT_3M_RECORDS_MAY_FORM_APPROVED_COMPARABLE_TTM_WINDOW"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "interest_coverage",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "ebit_ttm",
+            "interest_expense_ttm"
+          ],
+          "blockers": [
+            {
+              "operand": "interest_expense_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "BOUNDED_YAHOO_CURRENT_CONFIRMATION",
+                "authorizedTypes": [
+                  "quarterlyInterestExpense",
+                  "trailingInterestExpense"
+                ],
+                "bestCaseResolvable": true,
+                "reasonCode": "CURRENT_INTEREST_TTM_CONFIRMATION_AUTHORIZED"
+              }
+            }
+          ]
+        }
+      ],
+      "allResidualInputsYahooResolvableInBestCase": false
+    },
+    {
+      "symbol": "HRL",
+      "snapshotStorageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/HRL/A74222570E9CD5519CBE17CD12F5B03615EA5B7E06BDF5FB34B0DAA690C7FD7B.json",
+      "snapshotContentHash": "A74222570E9CD5519CBE17CD12F5B03615EA5B7E06BDF5FB34B0DAA690C7FD7B",
+      "currentQcInputReady": false,
+      "residualFactors": [
+        {
+          "factor": "margin_quality",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "gross_margin_ttm",
+            "operating_margin_ttm",
+            "gross_margin_three_year_change",
+            "operating_margin_three_year_change"
+          ],
+          "blockers": [
+            {
+              "operand": "gross_margin_three_year_change",
+              "status": "MISSING",
+              "reasonCode": "GROSS_MARGIN_THREE_YEAR_ENDPOINT_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "operating_margin_three_year_change",
+              "status": "MISSING",
+              "reasonCode": "OPERATING_MARGIN_THREE_YEAR_ENDPOINT_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "stability",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "eight_aligned_discrete_operating_margins",
+            "eight_aligned_discrete_fcf_margins"
+          ],
+          "blockers": [
+            {
+              "operand": "eight_aligned_discrete_operating_margins",
+              "status": "MISSING",
+              "reasonCode": "EIGHT_ALIGNED_DISCRETE_QUARTERS_NOT_AVAILABLE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "eight_aligned_discrete_fcf_margins",
+              "status": "MISSING",
+              "reasonCode": "EIGHT_ALIGNED_DISCRETE_QUARTERS_NOT_AVAILABLE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "interest_coverage",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "ebit_ttm",
+            "interest_expense_ttm"
+          ],
+          "blockers": [
+            {
+              "operand": "interest_expense_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "BOUNDED_YAHOO_CURRENT_CONFIRMATION",
+                "authorizedTypes": [
+                  "quarterlyInterestExpense",
+                  "trailingInterestExpense"
+                ],
+                "bestCaseResolvable": true,
+                "reasonCode": "CURRENT_INTEREST_TTM_CONFIRMATION_AUTHORIZED"
+              }
+            }
+          ]
+        }
+      ],
+      "allResidualInputsYahooResolvableInBestCase": false
+    },
+    {
+      "symbol": "GPC",
+      "snapshotStorageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/GPC/DA5ACB872CC343BD24F8A31A23EC9852D994C6DA1AB2FB8A68799AF3700A5306.json",
+      "snapshotContentHash": "DA5ACB872CC343BD24F8A31A23EC9852D994C6DA1AB2FB8A68799AF3700A5306",
+      "currentQcInputReady": false,
+      "residualFactors": [
+        {
+          "factor": "roic",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "operating_income_ttm",
+            "income_tax_ttm",
+            "pretax_income_ttm",
+            "current_invested_capital",
+            "prior_invested_capital"
+          ],
+          "blockers": [
+            {
+              "operand": "operating_income_ttm",
+              "status": "MISSING",
+              "reasonCode": "FOUR_CONSECUTIVE_DISCRETE_QUARTERS_NOT_AVAILABLE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "margin_quality",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "gross_margin_ttm",
+            "operating_margin_ttm",
+            "gross_margin_three_year_change",
+            "operating_margin_three_year_change"
+          ],
+          "blockers": [
+            {
+              "operand": "operating_margin_ttm",
+              "status": "MISSING",
+              "reasonCode": "OPERATING_MARGIN_TTM_INPUT_WINDOW_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "operating_margin_three_year_change",
+              "status": "MISSING",
+              "reasonCode": "OPERATING_MARGIN_THREE_YEAR_ENDPOINT_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "stability",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "eight_aligned_discrete_operating_margins",
+            "eight_aligned_discrete_fcf_margins"
+          ],
+          "blockers": [
+            {
+              "operand": "eight_aligned_discrete_operating_margins",
+              "status": "MISSING",
+              "reasonCode": "EIGHT_ALIGNED_DISCRETE_QUARTERS_NOT_AVAILABLE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "eight_aligned_discrete_fcf_margins",
+              "status": "MISSING",
+              "reasonCode": "EIGHT_ALIGNED_DISCRETE_QUARTERS_NOT_AVAILABLE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "interest_coverage",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "ebit_ttm",
+            "interest_expense_ttm"
+          ],
+          "blockers": [
+            {
+              "operand": "ebit_ttm",
+              "status": "MISSING",
+              "reasonCode": "FOUR_CONSECUTIVE_DISCRETE_QUARTERS_NOT_AVAILABLE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "interest_expense_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "BOUNDED_YAHOO_CURRENT_CONFIRMATION",
+                "authorizedTypes": [
+                  "quarterlyInterestExpense",
+                  "trailingInterestExpense"
+                ],
+                "bestCaseResolvable": true,
+                "reasonCode": "CURRENT_INTEREST_TTM_CONFIRMATION_AUTHORIZED"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "valuation_guardrail",
+          "status": "MISSING",
+          "reasonCode": "RAW_VALUATION_INPUTS_MISSING",
+          "requiredOperands": [
+            "earnings_yield_cohort_percentile",
+            "fcf_yield_cohort_percentile"
+          ],
+          "blockers": [
+            {
+              "operand": "ebit_ttm",
+              "status": "MISSING",
+              "reasonCode": "FOUR_CONSECUTIVE_DISCRETE_QUARTERS_NOT_AVAILABLE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        }
+      ],
+      "allResidualInputsYahooResolvableInBestCase": false
+    },
+    {
+      "symbol": "DOV",
+      "snapshotStorageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/DOV/4C2AE18C90BDCCABF658FD8469F92F207A377DBB121C04AEA7674A7DDB1032A6.json",
+      "snapshotContentHash": "4C2AE18C90BDCCABF658FD8469F92F207A377DBB121C04AEA7674A7DDB1032A6",
+      "currentQcInputReady": false,
+      "residualFactors": [
+        {
+          "factor": "roic",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "operating_income_ttm",
+            "income_tax_ttm",
+            "pretax_income_ttm",
+            "current_invested_capital",
+            "prior_invested_capital"
+          ],
+          "blockers": [
+            {
+              "operand": "pretax_income_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "fcf_margin",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "operating_cash_flow_ttm",
+            "capital_expenditure_ttm",
+            "revenue_ttm"
+          ],
+          "blockers": [
+            {
+              "operand": "operating_cash_flow_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "cash_conversion",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "operating_cash_flow_ttm",
+            "capital_expenditure_ttm",
+            "net_income_ttm"
+          ],
+          "blockers": [
+            {
+              "operand": "operating_cash_flow_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "stability",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "eight_aligned_discrete_operating_margins",
+            "eight_aligned_discrete_fcf_margins"
+          ],
+          "blockers": [
+            {
+              "operand": "eight_aligned_discrete_operating_margins",
+              "status": "MISSING",
+              "reasonCode": "EIGHT_ALIGNED_DISCRETE_QUARTERS_NOT_AVAILABLE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "eight_aligned_discrete_fcf_margins",
+              "status": "MISSING",
+              "reasonCode": "EIGHT_ALIGNED_DISCRETE_QUARTERS_NOT_AVAILABLE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "fcf_per_share_growth",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "fcf_per_diluted_share_current",
+            "fcf_per_diluted_share_three_year_prior"
+          ],
+          "blockers": [
+            {
+              "operand": "fcf_per_diluted_share_current",
+              "status": "MISSING",
+              "reasonCode": "CURRENT_FCF_PER_SHARE_INPUT_WINDOW_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "interest_coverage",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "ebit_ttm",
+            "interest_expense_ttm"
+          ],
+          "blockers": [
+            {
+              "operand": "interest_expense_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "BOUNDED_YAHOO_CURRENT_CONFIRMATION",
+                "authorizedTypes": [
+                  "quarterlyInterestExpense",
+                  "trailingInterestExpense"
+                ],
+                "bestCaseResolvable": true,
+                "reasonCode": "CURRENT_INTEREST_TTM_CONFIRMATION_AUTHORIZED"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "valuation_guardrail",
+          "status": "MISSING",
+          "reasonCode": "RAW_VALUATION_INPUTS_MISSING",
+          "requiredOperands": [
+            "earnings_yield_cohort_percentile",
+            "fcf_yield_cohort_percentile"
+          ],
+          "blockers": [
+            {
+              "operand": "fcf_ttm",
+              "status": "MISSING",
+              "reasonCode": "FCF_TTM_INPUT_WINDOW_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        }
+      ],
+      "allResidualInputsYahooResolvableInBestCase": false
+    },
+    {
+      "symbol": "BDX",
+      "snapshotStorageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/BDX/DED59315AFD409F4CAD94E2B5FA3CBDA92051D5AE4D924AAC9616DC82400826C.json",
+      "snapshotContentHash": "DED59315AFD409F4CAD94E2B5FA3CBDA92051D5AE4D924AAC9616DC82400826C",
+      "currentQcInputReady": false,
+      "residualFactors": [
+        {
+          "factor": "fcf_margin",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "operating_cash_flow_ttm",
+            "capital_expenditure_ttm",
+            "revenue_ttm"
+          ],
+          "blockers": [
+            {
+              "operand": "operating_cash_flow_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "cash_conversion",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "operating_cash_flow_ttm",
+            "capital_expenditure_ttm",
+            "net_income_ttm"
+          ],
+          "blockers": [
+            {
+              "operand": "operating_cash_flow_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "margin_quality",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "gross_margin_ttm",
+            "operating_margin_ttm",
+            "gross_margin_three_year_change",
+            "operating_margin_three_year_change"
+          ],
+          "blockers": [
+            {
+              "operand": "gross_margin_three_year_change",
+              "status": "MISSING",
+              "reasonCode": "GROSS_MARGIN_THREE_YEAR_ENDPOINT_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "stability",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "eight_aligned_discrete_operating_margins",
+            "eight_aligned_discrete_fcf_margins"
+          ],
+          "blockers": [
+            {
+              "operand": "eight_aligned_discrete_operating_margins",
+              "status": "MISSING",
+              "reasonCode": "EIGHT_ALIGNED_DISCRETE_QUARTERS_NOT_AVAILABLE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "eight_aligned_discrete_fcf_margins",
+              "status": "MISSING",
+              "reasonCode": "EIGHT_ALIGNED_DISCRETE_QUARTERS_NOT_AVAILABLE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "fcf_per_share_growth",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "fcf_per_diluted_share_current",
+            "fcf_per_diluted_share_three_year_prior"
+          ],
+          "blockers": [
+            {
+              "operand": "fcf_per_diluted_share_current",
+              "status": "MISSING",
+              "reasonCode": "CURRENT_FCF_PER_SHARE_INPUT_WINDOW_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "interest_coverage",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "ebit_ttm",
+            "interest_expense_ttm"
+          ],
+          "blockers": [
+            {
+              "operand": "interest_expense_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "BOUNDED_YAHOO_CURRENT_CONFIRMATION",
+                "authorizedTypes": [
+                  "quarterlyInterestExpense",
+                  "trailingInterestExpense"
+                ],
+                "bestCaseResolvable": true,
+                "reasonCode": "CURRENT_INTEREST_TTM_CONFIRMATION_AUTHORIZED"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "valuation_guardrail",
+          "status": "MISSING",
+          "reasonCode": "RAW_VALUATION_INPUTS_MISSING",
+          "requiredOperands": [
+            "earnings_yield_cohort_percentile",
+            "fcf_yield_cohort_percentile"
+          ],
+          "blockers": [
+            {
+              "operand": "fcf_ttm",
+              "status": "MISSING",
+              "reasonCode": "FCF_TTM_INPUT_WINDOW_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        }
+      ],
+      "allResidualInputsYahooResolvableInBestCase": false
+    },
+    {
+      "symbol": "APD",
+      "snapshotStorageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/APD/4D405D3B6DEBA90C15AFA9D291B196399AE2A054E38566DB7A856EFAE60C4730.json",
+      "snapshotContentHash": "4D405D3B6DEBA90C15AFA9D291B196399AE2A054E38566DB7A856EFAE60C4730",
+      "currentQcInputReady": false,
+      "residualFactors": [
+        {
+          "factor": "fcf_margin",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "operating_cash_flow_ttm",
+            "capital_expenditure_ttm",
+            "revenue_ttm"
+          ],
+          "blockers": [
+            {
+              "operand": "operating_cash_flow_ttm",
+              "status": "MISSING",
+              "reasonCode": "FOUR_CONSECUTIVE_DISCRETE_QUARTERS_NOT_AVAILABLE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "cash_conversion",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "operating_cash_flow_ttm",
+            "capital_expenditure_ttm",
+            "net_income_ttm"
+          ],
+          "blockers": [
+            {
+              "operand": "operating_cash_flow_ttm",
+              "status": "MISSING",
+              "reasonCode": "FOUR_CONSECUTIVE_DISCRETE_QUARTERS_NOT_AVAILABLE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "margin_quality",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "gross_margin_ttm",
+            "operating_margin_ttm",
+            "gross_margin_three_year_change",
+            "operating_margin_three_year_change"
+          ],
+          "blockers": [
+            {
+              "operand": "gross_margin_three_year_change",
+              "status": "MISSING",
+              "reasonCode": "GROSS_MARGIN_THREE_YEAR_ENDPOINT_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "stability",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "eight_aligned_discrete_operating_margins",
+            "eight_aligned_discrete_fcf_margins"
+          ],
+          "blockers": [
+            {
+              "operand": "eight_aligned_discrete_operating_margins",
+              "status": "MISSING",
+              "reasonCode": "EIGHT_ALIGNED_DISCRETE_QUARTERS_NOT_AVAILABLE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "eight_aligned_discrete_fcf_margins",
+              "status": "MISSING",
+              "reasonCode": "EIGHT_ALIGNED_DISCRETE_QUARTERS_NOT_AVAILABLE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "fcf_per_share_growth",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "fcf_per_diluted_share_current",
+            "fcf_per_diluted_share_three_year_prior"
+          ],
+          "blockers": [
+            {
+              "operand": "fcf_per_diluted_share_current",
+              "status": "MISSING",
+              "reasonCode": "CURRENT_FCF_PER_SHARE_INPUT_WINDOW_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "fcf_per_diluted_share_three_year_prior",
+              "status": "MISSING",
+              "reasonCode": "THREE_YEAR_PRIOR_FCF_PER_SHARE_INPUT_WINDOW_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "interest_coverage",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "ebit_ttm",
+            "interest_expense_ttm"
+          ],
+          "blockers": [
+            {
+              "operand": "interest_expense_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "BOUNDED_YAHOO_CURRENT_CONFIRMATION",
+                "authorizedTypes": [
+                  "quarterlyInterestExpense",
+                  "trailingInterestExpense"
+                ],
+                "bestCaseResolvable": true,
+                "reasonCode": "CURRENT_INTEREST_TTM_CONFIRMATION_AUTHORIZED"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "valuation_guardrail",
+          "status": "MISSING",
+          "reasonCode": "RAW_VALUATION_INPUTS_MISSING",
+          "requiredOperands": [
+            "earnings_yield_cohort_percentile",
+            "fcf_yield_cohort_percentile"
+          ],
+          "blockers": [
+            {
+              "operand": "fcf_ttm",
+              "status": "MISSING",
+              "reasonCode": "FCF_TTM_INPUT_WINDOW_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        }
+      ],
+      "allResidualInputsYahooResolvableInBestCase": false
+    },
+    {
+      "symbol": "ROK",
+      "snapshotStorageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/ROK/8FC84ACD7F4F0F3121A01D744E0A8D178902F81823A2E4EC5D97EDB0AF9A7581.json",
+      "snapshotContentHash": "8FC84ACD7F4F0F3121A01D744E0A8D178902F81823A2E4EC5D97EDB0AF9A7581",
+      "currentQcInputReady": false,
+      "residualFactors": [
+        {
+          "factor": "roic",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "operating_income_ttm",
+            "income_tax_ttm",
+            "pretax_income_ttm",
+            "current_invested_capital",
+            "prior_invested_capital"
+          ],
+          "blockers": [
+            {
+              "operand": "operating_income_ttm",
+              "status": "MISSING",
+              "reasonCode": "FOUR_CONSECUTIVE_DISCRETE_QUARTERS_NOT_AVAILABLE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "fcf_margin",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "operating_cash_flow_ttm",
+            "capital_expenditure_ttm",
+            "revenue_ttm"
+          ],
+          "blockers": [
+            {
+              "operand": "capital_expenditure_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "cash_conversion",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "operating_cash_flow_ttm",
+            "capital_expenditure_ttm",
+            "net_income_ttm"
+          ],
+          "blockers": [
+            {
+              "operand": "capital_expenditure_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "margin_quality",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "gross_margin_ttm",
+            "operating_margin_ttm",
+            "gross_margin_three_year_change",
+            "operating_margin_three_year_change"
+          ],
+          "blockers": [
+            {
+              "operand": "operating_margin_ttm",
+              "status": "MISSING",
+              "reasonCode": "OPERATING_MARGIN_TTM_INPUT_WINDOW_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "operating_margin_three_year_change",
+              "status": "MISSING",
+              "reasonCode": "OPERATING_MARGIN_THREE_YEAR_ENDPOINT_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "stability",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "eight_aligned_discrete_operating_margins",
+            "eight_aligned_discrete_fcf_margins"
+          ],
+          "blockers": [
+            {
+              "operand": "eight_aligned_discrete_operating_margins",
+              "status": "MISSING",
+              "reasonCode": "EIGHT_ALIGNED_DISCRETE_QUARTERS_NOT_AVAILABLE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "eight_aligned_discrete_fcf_margins",
+              "status": "MISSING",
+              "reasonCode": "EIGHT_ALIGNED_DISCRETE_QUARTERS_NOT_AVAILABLE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "fcf_per_share_growth",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "fcf_per_diluted_share_current",
+            "fcf_per_diluted_share_three_year_prior"
+          ],
+          "blockers": [
+            {
+              "operand": "fcf_per_diluted_share_current",
+              "status": "MISSING",
+              "reasonCode": "CURRENT_FCF_PER_SHARE_INPUT_WINDOW_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "interest_coverage",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "ebit_ttm",
+            "interest_expense_ttm"
+          ],
+          "blockers": [
+            {
+              "operand": "ebit_ttm",
+              "status": "MISSING",
+              "reasonCode": "FOUR_CONSECUTIVE_DISCRETE_QUARTERS_NOT_AVAILABLE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "interest_expense_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "BOUNDED_YAHOO_CURRENT_CONFIRMATION",
+                "authorizedTypes": [
+                  "quarterlyInterestExpense",
+                  "trailingInterestExpense"
+                ],
+                "bestCaseResolvable": true,
+                "reasonCode": "CURRENT_INTEREST_TTM_CONFIRMATION_AUTHORIZED"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "valuation_guardrail",
+          "status": "MISSING",
+          "reasonCode": "RAW_VALUATION_INPUTS_MISSING",
+          "requiredOperands": [
+            "earnings_yield_cohort_percentile",
+            "fcf_yield_cohort_percentile"
+          ],
+          "blockers": [
+            {
+              "operand": "ebit_ttm",
+              "status": "MISSING",
+              "reasonCode": "FOUR_CONSECUTIVE_DISCRETE_QUARTERS_NOT_AVAILABLE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "fcf_ttm",
+              "status": "MISSING",
+              "reasonCode": "FCF_TTM_INPUT_WINDOW_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        }
+      ],
+      "allResidualInputsYahooResolvableInBestCase": false
+    },
+    {
+      "symbol": "ADSK",
+      "snapshotStorageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/ADSK/AD5CAA4B68CDF41071AAADAE30FBC74746AA9ED3254E5E60B4B596236960A096.json",
+      "snapshotContentHash": "AD5CAA4B68CDF41071AAADAE30FBC74746AA9ED3254E5E60B4B596236960A096",
+      "currentQcInputReady": false,
+      "residualFactors": [
+        {
+          "factor": "roic",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "operating_income_ttm",
+            "income_tax_ttm",
+            "pretax_income_ttm",
+            "current_invested_capital",
+            "prior_invested_capital"
+          ],
+          "blockers": [
+            {
+              "operand": "operating_income_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "income_tax_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "pretax_income_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "cash_conversion",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "operating_cash_flow_ttm",
+            "capital_expenditure_ttm",
+            "net_income_ttm"
+          ],
+          "blockers": [
+            {
+              "operand": "net_income_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "margin_quality",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "gross_margin_ttm",
+            "operating_margin_ttm",
+            "gross_margin_three_year_change",
+            "operating_margin_three_year_change"
+          ],
+          "blockers": [
+            {
+              "operand": "operating_margin_ttm",
+              "status": "MISSING",
+              "reasonCode": "OPERATING_MARGIN_TTM_INPUT_WINDOW_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "gross_margin_three_year_change",
+              "status": "MISSING",
+              "reasonCode": "GROSS_MARGIN_THREE_YEAR_ENDPOINT_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "operating_margin_three_year_change",
+              "status": "MISSING",
+              "reasonCode": "OPERATING_MARGIN_THREE_YEAR_ENDPOINT_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "fcf_per_share_growth",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "fcf_per_diluted_share_current",
+            "fcf_per_diluted_share_three_year_prior"
+          ],
+          "blockers": [
+            {
+              "operand": "fcf_per_diluted_share_current",
+              "status": "MISSING",
+              "reasonCode": "CURRENT_FCF_PER_SHARE_INPUT_WINDOW_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "interest_coverage",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "ebit_ttm",
+            "interest_expense_ttm"
+          ],
+          "blockers": [
+            {
+              "operand": "ebit_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "interest_expense_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "BOUNDED_YAHOO_CURRENT_CONFIRMATION",
+                "authorizedTypes": [
+                  "quarterlyInterestExpense",
+                  "trailingInterestExpense"
+                ],
+                "bestCaseResolvable": true,
+                "reasonCode": "CURRENT_INTEREST_TTM_CONFIRMATION_AUTHORIZED"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "dilution",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "diluted_weighted_average_shares_current",
+            "diluted_weighted_average_shares_three_year_prior"
+          ],
+          "blockers": [
+            {
+              "operand": "diluted_weighted_average_shares_current",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "valuation_guardrail",
+          "status": "MISSING",
+          "reasonCode": "RAW_VALUATION_INPUTS_MISSING",
+          "requiredOperands": [
+            "earnings_yield_cohort_percentile",
+            "fcf_yield_cohort_percentile"
+          ],
+          "blockers": [
+            {
+              "operand": "ebit_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        }
+      ],
+      "allResidualInputsYahooResolvableInBestCase": false
+    },
+    {
+      "symbol": "AMD",
+      "snapshotStorageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/AMD/EB91F67DA7B3ABBA7C1A496B7B535CB9ADB5651DA2C00ABBAD870B21C5B0B9A3.json",
+      "snapshotContentHash": "EB91F67DA7B3ABBA7C1A496B7B535CB9ADB5651DA2C00ABBAD870B21C5B0B9A3",
+      "currentQcInputReady": false,
+      "residualFactors": [
+        {
+          "factor": "roic",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "operating_income_ttm",
+            "income_tax_ttm",
+            "pretax_income_ttm",
+            "current_invested_capital",
+            "prior_invested_capital"
+          ],
+          "blockers": [
+            {
+              "operand": "operating_income_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "income_tax_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "pretax_income_ttm",
+              "status": "MISSING",
+              "reasonCode": "FOUR_CONSECUTIVE_DISCRETE_QUARTERS_NOT_AVAILABLE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "cash_conversion",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "operating_cash_flow_ttm",
+            "capital_expenditure_ttm",
+            "net_income_ttm"
+          ],
+          "blockers": [
+            {
+              "operand": "net_income_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "margin_quality",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "gross_margin_ttm",
+            "operating_margin_ttm",
+            "gross_margin_three_year_change",
+            "operating_margin_three_year_change"
+          ],
+          "blockers": [
+            {
+              "operand": "operating_margin_ttm",
+              "status": "MISSING",
+              "reasonCode": "OPERATING_MARGIN_TTM_INPUT_WINDOW_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "gross_margin_three_year_change",
+              "status": "MISSING",
+              "reasonCode": "GROSS_MARGIN_THREE_YEAR_ENDPOINT_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "operating_margin_three_year_change",
+              "status": "MISSING",
+              "reasonCode": "OPERATING_MARGIN_THREE_YEAR_ENDPOINT_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "fcf_per_share_growth",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "fcf_per_diluted_share_current",
+            "fcf_per_diluted_share_three_year_prior"
+          ],
+          "blockers": [
+            {
+              "operand": "fcf_per_diluted_share_current",
+              "status": "MISSING",
+              "reasonCode": "CURRENT_FCF_PER_SHARE_INPUT_WINDOW_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "interest_coverage",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "ebit_ttm",
+            "interest_expense_ttm"
+          ],
+          "blockers": [
+            {
+              "operand": "ebit_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "interest_expense_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "BOUNDED_YAHOO_CURRENT_CONFIRMATION",
+                "authorizedTypes": [
+                  "quarterlyInterestExpense",
+                  "trailingInterestExpense"
+                ],
+                "bestCaseResolvable": true,
+                "reasonCode": "CURRENT_INTEREST_TTM_CONFIRMATION_AUTHORIZED"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "dilution",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "diluted_weighted_average_shares_current",
+            "diluted_weighted_average_shares_three_year_prior"
+          ],
+          "blockers": [
+            {
+              "operand": "diluted_weighted_average_shares_current",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "valuation_guardrail",
+          "status": "MISSING",
+          "reasonCode": "RAW_VALUATION_INPUTS_MISSING",
+          "requiredOperands": [
+            "earnings_yield_cohort_percentile",
+            "fcf_yield_cohort_percentile"
+          ],
+          "blockers": [
+            {
+              "operand": "ebit_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        }
+      ],
+      "allResidualInputsYahooResolvableInBestCase": false
+    },
+    {
+      "symbol": "APH",
+      "snapshotStorageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/APH/13304E95C820A0615F3E16E2432B14CDE55E7C638BF5DF5574C3C56C68A0C348.json",
+      "snapshotContentHash": "13304E95C820A0615F3E16E2432B14CDE55E7C638BF5DF5574C3C56C68A0C348",
+      "currentQcInputReady": false,
+      "residualFactors": [
+        {
+          "factor": "roic",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "operating_income_ttm",
+            "income_tax_ttm",
+            "pretax_income_ttm",
+            "current_invested_capital",
+            "prior_invested_capital"
+          ],
+          "blockers": [
+            {
+              "operand": "operating_income_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "income_tax_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "pretax_income_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "cash_conversion",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "operating_cash_flow_ttm",
+            "capital_expenditure_ttm",
+            "net_income_ttm"
+          ],
+          "blockers": [
+            {
+              "operand": "net_income_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "margin_quality",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "gross_margin_ttm",
+            "operating_margin_ttm",
+            "gross_margin_three_year_change",
+            "operating_margin_three_year_change"
+          ],
+          "blockers": [
+            {
+              "operand": "operating_margin_ttm",
+              "status": "MISSING",
+              "reasonCode": "OPERATING_MARGIN_TTM_INPUT_WINDOW_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "gross_margin_three_year_change",
+              "status": "MISSING",
+              "reasonCode": "GROSS_MARGIN_THREE_YEAR_ENDPOINT_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "operating_margin_three_year_change",
+              "status": "MISSING",
+              "reasonCode": "OPERATING_MARGIN_THREE_YEAR_ENDPOINT_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "fcf_per_share_growth",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "fcf_per_diluted_share_current",
+            "fcf_per_diluted_share_three_year_prior"
+          ],
+          "blockers": [
+            {
+              "operand": "fcf_per_diluted_share_current",
+              "status": "MISSING",
+              "reasonCode": "CURRENT_FCF_PER_SHARE_INPUT_WINDOW_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "interest_coverage",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "ebit_ttm",
+            "interest_expense_ttm"
+          ],
+          "blockers": [
+            {
+              "operand": "ebit_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "interest_expense_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "BOUNDED_YAHOO_CURRENT_CONFIRMATION",
+                "authorizedTypes": [
+                  "quarterlyInterestExpense",
+                  "trailingInterestExpense"
+                ],
+                "bestCaseResolvable": true,
+                "reasonCode": "CURRENT_INTEREST_TTM_CONFIRMATION_AUTHORIZED"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "dilution",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "diluted_weighted_average_shares_current",
+            "diluted_weighted_average_shares_three_year_prior"
+          ],
+          "blockers": [
+            {
+              "operand": "diluted_weighted_average_shares_current",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "valuation_guardrail",
+          "status": "MISSING",
+          "reasonCode": "RAW_VALUATION_INPUTS_MISSING",
+          "requiredOperands": [
+            "earnings_yield_cohort_percentile",
+            "fcf_yield_cohort_percentile"
+          ],
+          "blockers": [
+            {
+              "operand": "ebit_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        }
+      ],
+      "allResidualInputsYahooResolvableInBestCase": false
+    },
+    {
+      "symbol": "BF-B",
+      "snapshotStorageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/BF-B/D722C9B6A45C32F0E380C2AEE0237975699C6423E39CD210C1530C5356766937.json",
+      "snapshotContentHash": "D722C9B6A45C32F0E380C2AEE0237975699C6423E39CD210C1530C5356766937",
+      "currentQcInputReady": false,
+      "residualFactors": [
+        {
+          "factor": "roic",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "operating_income_ttm",
+            "income_tax_ttm",
+            "pretax_income_ttm",
+            "current_invested_capital",
+            "prior_invested_capital"
+          ],
+          "blockers": [
+            {
+              "operand": "operating_income_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "income_tax_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "pretax_income_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "cash_conversion",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "operating_cash_flow_ttm",
+            "capital_expenditure_ttm",
+            "net_income_ttm"
+          ],
+          "blockers": [
+            {
+              "operand": "net_income_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "margin_quality",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "gross_margin_ttm",
+            "operating_margin_ttm",
+            "gross_margin_three_year_change",
+            "operating_margin_three_year_change"
+          ],
+          "blockers": [
+            {
+              "operand": "operating_margin_ttm",
+              "status": "MISSING",
+              "reasonCode": "OPERATING_MARGIN_TTM_INPUT_WINDOW_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "gross_margin_three_year_change",
+              "status": "MISSING",
+              "reasonCode": "GROSS_MARGIN_THREE_YEAR_ENDPOINT_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "operating_margin_three_year_change",
+              "status": "MISSING",
+              "reasonCode": "OPERATING_MARGIN_THREE_YEAR_ENDPOINT_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "fcf_per_share_growth",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "fcf_per_diluted_share_current",
+            "fcf_per_diluted_share_three_year_prior"
+          ],
+          "blockers": [
+            {
+              "operand": "fcf_per_diluted_share_current",
+              "status": "MISSING",
+              "reasonCode": "CURRENT_FCF_PER_SHARE_INPUT_WINDOW_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "interest_coverage",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "ebit_ttm",
+            "interest_expense_ttm"
+          ],
+          "blockers": [
+            {
+              "operand": "ebit_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "interest_expense_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "BOUNDED_YAHOO_CURRENT_CONFIRMATION",
+                "authorizedTypes": [
+                  "quarterlyInterestExpense",
+                  "trailingInterestExpense"
+                ],
+                "bestCaseResolvable": true,
+                "reasonCode": "CURRENT_INTEREST_TTM_CONFIRMATION_AUTHORIZED"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "dilution",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "diluted_weighted_average_shares_current",
+            "diluted_weighted_average_shares_three_year_prior"
+          ],
+          "blockers": [
+            {
+              "operand": "diluted_weighted_average_shares_current",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "valuation_guardrail",
+          "status": "MISSING",
+          "reasonCode": "RAW_VALUATION_INPUTS_MISSING",
+          "requiredOperands": [
+            "earnings_yield_cohort_percentile",
+            "fcf_yield_cohort_percentile"
+          ],
+          "blockers": [
+            {
+              "operand": "ebit_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        }
+      ],
+      "allResidualInputsYahooResolvableInBestCase": false
+    },
+    {
+      "symbol": "BLDR",
+      "snapshotStorageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/BLDR/4BA8B2190DE80E9249D6105B2B5697B72C608BC8C56573E5F398150A8153BABB.json",
+      "snapshotContentHash": "4BA8B2190DE80E9249D6105B2B5697B72C608BC8C56573E5F398150A8153BABB",
+      "currentQcInputReady": false,
+      "residualFactors": [
+        {
+          "factor": "roic",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "operating_income_ttm",
+            "income_tax_ttm",
+            "pretax_income_ttm",
+            "current_invested_capital",
+            "prior_invested_capital"
+          ],
+          "blockers": [
+            {
+              "operand": "operating_income_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "income_tax_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "pretax_income_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "cash_conversion",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "operating_cash_flow_ttm",
+            "capital_expenditure_ttm",
+            "net_income_ttm"
+          ],
+          "blockers": [
+            {
+              "operand": "net_income_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "margin_quality",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "gross_margin_ttm",
+            "operating_margin_ttm",
+            "gross_margin_three_year_change",
+            "operating_margin_three_year_change"
+          ],
+          "blockers": [
+            {
+              "operand": "operating_margin_ttm",
+              "status": "MISSING",
+              "reasonCode": "OPERATING_MARGIN_TTM_INPUT_WINDOW_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "gross_margin_three_year_change",
+              "status": "MISSING",
+              "reasonCode": "GROSS_MARGIN_THREE_YEAR_ENDPOINT_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "operating_margin_three_year_change",
+              "status": "MISSING",
+              "reasonCode": "OPERATING_MARGIN_THREE_YEAR_ENDPOINT_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "fcf_per_share_growth",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "fcf_per_diluted_share_current",
+            "fcf_per_diluted_share_three_year_prior"
+          ],
+          "blockers": [
+            {
+              "operand": "fcf_per_diluted_share_current",
+              "status": "MISSING",
+              "reasonCode": "CURRENT_FCF_PER_SHARE_INPUT_WINDOW_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "interest_coverage",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "ebit_ttm",
+            "interest_expense_ttm"
+          ],
+          "blockers": [
+            {
+              "operand": "ebit_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "interest_expense_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "BOUNDED_YAHOO_CURRENT_CONFIRMATION",
+                "authorizedTypes": [
+                  "quarterlyInterestExpense",
+                  "trailingInterestExpense"
+                ],
+                "bestCaseResolvable": true,
+                "reasonCode": "CURRENT_INTEREST_TTM_CONFIRMATION_AUTHORIZED"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "dilution",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "diluted_weighted_average_shares_current",
+            "diluted_weighted_average_shares_three_year_prior"
+          ],
+          "blockers": [
+            {
+              "operand": "diluted_weighted_average_shares_current",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "valuation_guardrail",
+          "status": "MISSING",
+          "reasonCode": "RAW_VALUATION_INPUTS_MISSING",
+          "requiredOperands": [
+            "earnings_yield_cohort_percentile",
+            "fcf_yield_cohort_percentile"
+          ],
+          "blockers": [
+            {
+              "operand": "ebit_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        }
+      ],
+      "allResidualInputsYahooResolvableInBestCase": false
+    },
+    {
+      "symbol": "CNC",
+      "snapshotStorageReference": "storage/provider-validation/current-factor-input-snapshots-v1-7/CNC/D3E8B3A294CD3F99BCEA67576270C88140093AEA5CFD719601908FCEFE028CFA.json",
+      "snapshotContentHash": "D3E8B3A294CD3F99BCEA67576270C88140093AEA5CFD719601908FCEFE028CFA",
+      "currentQcInputReady": false,
+      "residualFactors": [
+        {
+          "factor": "roic",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "operating_income_ttm",
+            "income_tax_ttm",
+            "pretax_income_ttm",
+            "current_invested_capital",
+            "prior_invested_capital"
+          ],
+          "blockers": [
+            {
+              "operand": "operating_income_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "income_tax_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "pretax_income_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "cash_conversion",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "operating_cash_flow_ttm",
+            "capital_expenditure_ttm",
+            "net_income_ttm"
+          ],
+          "blockers": [
+            {
+              "operand": "net_income_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "margin_quality",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "gross_margin_ttm",
+            "operating_margin_ttm",
+            "gross_margin_three_year_change",
+            "operating_margin_three_year_change"
+          ],
+          "blockers": [
+            {
+              "operand": "operating_margin_ttm",
+              "status": "MISSING",
+              "reasonCode": "OPERATING_MARGIN_TTM_INPUT_WINDOW_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "gross_margin_three_year_change",
+              "status": "MISSING",
+              "reasonCode": "GROSS_MARGIN_THREE_YEAR_ENDPOINT_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "operating_margin_three_year_change",
+              "status": "MISSING",
+              "reasonCode": "OPERATING_MARGIN_THREE_YEAR_ENDPOINT_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "fcf_per_share_growth",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "fcf_per_diluted_share_current",
+            "fcf_per_diluted_share_three_year_prior"
+          ],
+          "blockers": [
+            {
+              "operand": "fcf_per_diluted_share_current",
+              "status": "MISSING",
+              "reasonCode": "CURRENT_FCF_PER_SHARE_INPUT_WINDOW_MISSING",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "interest_coverage",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "ebit_ttm",
+            "interest_expense_ttm"
+          ],
+          "blockers": [
+            {
+              "operand": "ebit_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            },
+            {
+              "operand": "interest_expense_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "BOUNDED_YAHOO_CURRENT_CONFIRMATION",
+                "authorizedTypes": [
+                  "quarterlyInterestExpense",
+                  "trailingInterestExpense"
+                ],
+                "bestCaseResolvable": true,
+                "reasonCode": "CURRENT_INTEREST_TTM_CONFIRMATION_AUTHORIZED"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "dilution",
+          "status": "MISSING",
+          "reasonCode": "MISSING_REQUIRED_OPERANDS",
+          "requiredOperands": [
+            "diluted_weighted_average_shares_current",
+            "diluted_weighted_average_shares_three_year_prior"
+          ],
+          "blockers": [
+            {
+              "operand": "diluted_weighted_average_shares_current",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        },
+        {
+          "factor": "valuation_guardrail",
+          "status": "MISSING",
+          "reasonCode": "RAW_VALUATION_INPUTS_MISSING",
+          "requiredOperands": [
+            "earnings_yield_cohort_percentile",
+            "fcf_yield_cohort_percentile"
+          ],
+          "blockers": [
+            {
+              "operand": "ebit_ttm",
+              "status": "MISSING",
+              "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+              "periodIds": [],
+              "availableAt": null,
+              "sourceAccessions": [],
+              "sourceContentHashes": [],
+              "orderedEvidenceIds": [],
+              "derivationLineage": null,
+              "evidenceRoute": {
+                "category": "YAHOO_NOT_AUTHORIZED_OR_NOT_SEMANTICALLY_CAPABLE",
+                "authorizedTypes": [],
+                "bestCaseResolvable": false,
+                "reasonCode": "RESIDUAL_OPERAND_REQUIRES_NON_YAHOO_EVIDENCE"
+              }
+            }
+          ]
+        }
+      ],
+      "allResidualInputsYahooResolvableInBestCase": false
+    }
+  ],
+  "irreducibleOperandCounts": {
+    "capital_expenditure_ttm": 2,
+    "diluted_weighted_average_shares_current": 6,
+    "ebit_ttm": 16,
+    "eight_aligned_discrete_fcf_margins": 6,
+    "eight_aligned_discrete_operating_margins": 6,
+    "fcf_per_diluted_share_current": 10,
+    "fcf_per_diluted_share_three_year_prior": 1,
+    "fcf_ttm": 4,
+    "gross_margin_three_year_change": 9,
+    "income_tax_ttm": 6,
+    "net_income_ttm": 7,
+    "operating_cash_flow_ttm": 6,
+    "operating_income_ttm": 8,
+    "operating_margin_three_year_change": 9,
+    "operating_margin_ttm": 8,
+    "pretax_income_ttm": 7
+  },
+  "boundedYahooPreflight": {
+    "status": "DO_NOT_EXECUTE_COHORT_COMPLETION_PRECHECK_FAIL",
+    "symbols": [
+      "TTC"
+    ],
+    "provider": "yahoo_public_fundamentals_timeseries",
+    "endpointTypes": [
+      "quarterlyDilutedEps",
+      "quarterlyInterestExpense",
+      "trailingDilutedEps",
+      "trailingInterestExpense"
+    ],
+    "physicalHttpAttemptCeiling": 1,
+    "maxRetries": 0,
+    "networkRequestsExecuted": 0,
+    "singleRunCrossProcessLockRequired": true,
+    "intentCompletedJournalRequired": true,
+    "uniqueImmutableOutputRequired": true,
+    "controlledRawResponseStorage": "storage/provider-validation/yahoo-qc-residual-evidence-v1",
+    "gitSafeArtifactValuesIncluded": false,
+    "predictedBestCaseNewReadySymbols": [
+      "TTC"
+    ],
+    "predictedBestCaseCurrentQcInputReadyCount": 7,
+    "minimumRequired": 20
+  },
+  "methodologyConstraints": {
+    "annualDilutedEpsMayReplaceTtmEndpoint": false,
+    "operatingMarginTtmMayReplaceRawInputs": false,
+    "missingValuesRemainMissing": true,
+    "uqHistoricalPitExcludedFromCurrentQcAudit": true
+  },
+  "scoresOrRanksGenerated": false,
+  "supplementsGenerated": false,
+  "networkRequestsExecuted": false,
+  "forwardValidationExecuted": false,
+  "artifactContentHash": "AE2D097570E78BBEBBF8D1DE13837AA1C03626002D886032C84AA05701622A20"
+}

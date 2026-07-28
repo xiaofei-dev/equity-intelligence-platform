@@ -1,0 +1,74 @@
+{
+  "reportVersion": "formula-scoring-backfill-v1.0.0",
+  "inputContractVersion": "provider-neutral-scoring-input-v2.0.0",
+  "priorInputContractVersion": "provider-neutral-scoring-input-v1.0.0",
+  "runId": "20260727T200022Z-190272fd2019",
+  "sliceId": "formula-canary-001",
+  "sliceManifestPath": "docs\\generated\\formula-scoring-input-backfill-slice-manifest-v1.json",
+  "symbols": [
+    "AAPL",
+    "CAT",
+    "JNJ"
+  ],
+  "symbolCount": 3,
+  "endpoints": [
+    "fundamentals",
+    "eod",
+    "historical-market-cap"
+  ],
+  "physicalHttpAttemptCeiling": 9,
+  "configuredLocalWeightCeiling": 36,
+  "provisionalProviderBilling": 75,
+  "providerBilledSafetyCeiling": 113,
+  "retryCeiling": 0,
+  "dashboardBefore": 21502,
+  "minimumProviderReserve": 20000,
+  "maximumSafeObservedDelta": 58498,
+  "safeToExecute": true,
+  "reportPath": "docs\\generated\\scoring-input-backfill-20260727T200022Z-190272fd2019.json",
+  "manifestPath": "docs\\generated\\scoring-input-backfill-20260727T200022Z-190272fd2019-manifest.json",
+  "checkpointDirectory": "storage\\provider-validation\\scoring-inputs-v2\\checkpoints\\20260727T200022Z-190272fd2019",
+  "storageRoot": "storage\\provider-validation\\scoring-inputs-v2",
+  "immutableOutputs": true,
+  "singleRunLockRequired": true,
+  "explicitConfirmationRequired": true,
+  "networkRequestsExecuted": true,
+  "completedSymbols": 3,
+  "physicalHttpAttempts": 9,
+  "configuredLocalWeights": 36,
+  "receipts": [
+    {
+      "symbol": "AAPL",
+      "contentHash": "6BD99A3CCBE40E0E20CEB7D2050C2638A726B8160F2D45E9279DA9FBE5652ED2",
+      "storageReference": "storage/provider-validation/scoring-inputs-v2/AAPL/6BD99A3CCBE40E0E20CEB7D2050C2638A726B8160F2D45E9279DA9FBE5652ED2.json",
+      "recordCount": 10340,
+      "datasetCoverage": {
+        "DAILY_PRICE": 9888,
+        "FINANCIAL": 190,
+        "HISTORICAL_MARKET_CAP": 262
+      }
+    },
+    {
+      "symbol": "CAT",
+      "contentHash": "FCF108256A724E55DA9CB6B11657EB28BA56A098A9850D749871CFD7578299D9",
+      "storageReference": "storage/provider-validation/scoring-inputs-v2/CAT/FCF108256A724E55DA9CB6B11657EB28BA56A098A9850D749871CFD7578299D9.json",
+      "recordCount": 10347,
+      "datasetCoverage": {
+        "DAILY_PRICE": 9888,
+        "FINANCIAL": 198,
+        "HISTORICAL_MARKET_CAP": 261
+      }
+    },
+    {
+      "symbol": "JNJ",
+      "contentHash": "03C899E0E1E45465288DDCEAB10A189DDE202BC1539AEC53D8C59B4C4B529675",
+      "storageReference": "storage/provider-validation/scoring-inputs-v2/JNJ/03C899E0E1E45465288DDCEAB10A189DDE202BC1539AEC53D8C59B4C4B529675.json",
+      "recordCount": 10347,
+      "datasetCoverage": {
+        "DAILY_PRICE": 9888,
+        "FINANCIAL": 198,
+        "HISTORICAL_MARKET_CAP": 261
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "runId": "20260727T074150Z-50407538afa9",
+  "reportReference": "mature-company-data-gate-20260727T074150Z-50407538afa9.json",
+  "physicalHttpAttempts": {
+    "eodhd": 625,
+    "secEdgar": 358,
+    "total": 983
+  },
+  "eodhdCompletePasses": 125,
+  "configuredLocalWeightedCalls": 1750,
+  "provisionalProviderBillingEstimate": 3125,
+  "providerBillingSafetyCeiling": 4688,
+  "providerDashboard": {
+    "before": 11512,
+    "after": 14387,
+    "observedDelta": 2875
+  },
+  "observedCallsPerCompletePass": "23",
+  "configuredToObservedDifference": 1125,
+  "observedToConfiguredRatio": "1.6428571428571429",
+  "provisionalToObservedDifference": -250,
+  "safetyCeilingHeadroom": 1813,
+  "providerBillingReconciliation": "NOT_RECONCILED",
+  "conclusion": "The aggregate dashboard delta equals 23 calls for each of 125 complete EODHD passes and matches the cross-sector canary rate. Endpoint-level billing remains unidentified, and the AAPL canary observed a different 25-call pass rate."
+}

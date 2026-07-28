@@ -1,0 +1,4707 @@
+{
+  "artifactType": "OBJECTIVE_RATING_CURRENT_DECISION_INPUT_MANIFEST",
+  "schemaVersion": "objective-rating-current-decision-input-manifest-v1.0.0",
+  "policyVersion": "eodhd-current-snapshot-qc-v1.0.0",
+  "scope": "CURRENT_DECISION_ONLY",
+  "cutoff": "2026-07-28T23:59:59Z",
+  "targetFormulaReadyCount": 223,
+  "evaluatedSecurityCount": 216,
+  "currentQcInputReadyCount": 190,
+  "algorithmQcEligibleCount": 136,
+  "algorithmQcEligibleSymbols": [
+    "ADM",
+    "ADP",
+    "AKAM",
+    "ALLE",
+    "AMAT",
+    "AME",
+    "AOS",
+    "APH",
+    "APP",
+    "APTV",
+    "AVGO",
+    "AVY",
+    "AXON",
+    "BBY",
+    "BDX",
+    "BF-B",
+    "BLDR",
+    "BMY",
+    "BR",
+    "BSX",
+    "CARR",
+    "CDNS",
+    "CDW",
+    "CF",
+    "CHD",
+    "CHRW",
+    "CHTR",
+    "CI",
+    "CL",
+    "CLX",
+    "CMCSA",
+    "CMI",
+    "COO",
+    "COR",
+    "CSCO",
+    "CSX",
+    "CTSH",
+    "CVS",
+    "DAL",
+    "DE",
+    "DELL",
+    "DG",
+    "DGX",
+    "DHR",
+    "DIS",
+    "DLTR",
+    "DOV",
+    "DVA",
+    "DXCM",
+    "EA",
+    "EBAY",
+    "ECL",
+    "EFX",
+    "ELF",
+    "ELV",
+    "EMR",
+    "ETN",
+    "FAST",
+    "FDX",
+    "FICO",
+    "FIX",
+    "FLEX",
+    "FOX",
+    "FOXA",
+    "FTV",
+    "GD",
+    "GEHC",
+    "GPC",
+    "GWW",
+    "HD",
+    "HLT",
+    "HON",
+    "HRL",
+    "HSIC",
+    "HUM",
+    "HWKN",
+    "IBM",
+    "IDXX",
+    "INTU",
+    "IQV",
+    "ITW",
+    "KDP",
+    "KLAC",
+    "KMB",
+    "KO",
+    "KVUE",
+    "LH",
+    "LIN",
+    "LLY",
+    "LMT",
+    "LOW",
+    "LRCX",
+    "MCHP",
+    "MCK",
+    "MDLZ",
+    "MKC",
+    "MLM",
+    "MNST",
+    "MO",
+    "MRK",
+    "MSFT",
+    "NFLX",
+    "NKE",
+    "NOC",
+    "NUE",
+    "NVDA",
+    "NWSA",
+    "ORLY",
+    "PCAR",
+    "PFE",
+    "PG",
+    "PH",
+    "PLAB",
+    "PM",
+    "PPG",
+    "QCOM",
+    "ROK",
+    "ROST",
+    "RTX",
+    "SAIA",
+    "SBUX",
+    "SHW",
+    "SYY",
+    "TGT",
+    "TMUS",
+    "TSN",
+    "TTC",
+    "UFPI",
+    "UNP",
+    "UPS",
+    "VMC",
+    "WDFC",
+    "WM",
+    "WMT",
+    "YUM",
+    "ZBH"
+  ],
+  "currentQcMinimum": 20,
+  "gateStatus": "READY_FOR_OFFLINE_QC_SCORING",
+  "factorStatusCounts": {
+    "cash_conversion": {
+      "VALID": 216
+    },
+    "dilution": {
+      "MISSING": 11,
+      "VALID": 205
+    },
+    "eps_growth": {
+      "MISSING": 9,
+      "VALID": 207
+    },
+    "fcf_margin": {
+      "VALID": 216
+    },
+    "fcf_per_share_growth": {
+      "MISSING": 12,
+      "VALID": 204
+    },
+    "interest_coverage": {
+      "MISSING": 6,
+      "VALID": 210
+    },
+    "margin_quality": {
+      "MISSING": 2,
+      "VALID": 214
+    },
+    "net_debt_to_ebitda": {
+      "VALID": 216
+    },
+    "roic": {
+      "MISSING": 1,
+      "VALID": 215
+    },
+    "stability": {
+      "VALID": 216
+    },
+    "valuation_guardrail": {
+      "MISSING": 8,
+      "VALID": 208
+    }
+  },
+  "blockingOperandCounts": {
+    "diluted_eps_three_year_prior": 9,
+    "diluted_weighted_average_shares_current": 3,
+    "diluted_weighted_average_shares_three_year_prior": 8,
+    "ebit_ttm": 8,
+    "fcf_per_diluted_share_current": 3,
+    "fcf_per_diluted_share_three_year_prior": 9,
+    "gross_margin_three_year_change": 2,
+    "income_tax_ttm": 1,
+    "interest_expense_ttm": 6,
+    "operating_margin_three_year_change": 2
+  },
+  "sourcePaths": {
+    "aggregate": "docs/generated/formula-ready-243-final-aggregate-v1.json",
+    "secManifest": "docs/generated/scoring-input-v4-sec-offline-manifest-v2.json",
+    "supplementManifest": "docs/generated/objective-rating-v1-current-snapshot-supplements-v3.json"
+  },
+  "methodologyBoundaries": {
+    "formulaChanges": false,
+    "quarterlyDurationBasis": "EODHD support confirmed quarterly values are not cumulative.",
+    "periodStart": "Inferred from adjacent quarter boundaries.",
+    "dilutedShares": "Only positive explicit SEC DISCRETE_QUARTER observations.",
+    "historicalPitClaim": false,
+    "historicalBacktestAuthorized": false,
+    "forwardObservationAuthorizedAfterScoring": true
+  },
+  "securities": [
+    {
+      "symbol": "ADM",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/ADM/4C347FF84E8B632714B05AFA2D92B5704C69CBABECCF5546BCF04414258C0B28.json",
+      "payloadContentHash": "4C347FF84E8B632714B05AFA2D92B5704C69CBABECCF5546BCF04414258C0B28",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "ADP",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/ADP/DBF2405EC0F477CF632ABCAA035ECB4012BF14DD3DC9F9E7B36AD15E52B13D7B.json",
+      "payloadContentHash": "DBF2405EC0F477CF632ABCAA035ECB4012BF14DD3DC9F9E7B36AD15E52B13D7B",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "ADSK",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/ADSK/FEFE86209AA3B7562006A827EF7599EF7F0B80C483E0AF92A2942398819FFFBA.json",
+      "payloadContentHash": "FEFE86209AA3B7562006A827EF7599EF7F0B80C483E0AF92A2942398819FFFBA",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS"
+      ]
+    },
+    {
+      "symbol": "AEE",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/AEE/7C76E2EEBBF674633C5FCBE8ACF582B0E64139B10DB54EC1A9A3D5F6D4661CC3.json",
+      "payloadContentHash": "7C76E2EEBBF674633C5FCBE8ACF582B0E64139B10DB54EC1A9A3D5F6D4661CC3",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "AEP",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/AEP/514C9663890E602AC90B3E4EA2C90E7ECC0D3C42BFF8C84AB9B8AC3196CE8DC1.json",
+      "payloadContentHash": "514C9663890E602AC90B3E4EA2C90E7ECC0D3C42BFF8C84AB9B8AC3196CE8DC1",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "AES",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/AES/06D3DDC6AF8DF6A610DA5895B9E9D705F99BA4B8A302AC85B4450E621C4165B9.json",
+      "payloadContentHash": "06D3DDC6AF8DF6A610DA5895B9E9D705F99BA4B8A302AC85B4450E621C4165B9",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "AKAM",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/AKAM/A50FB7D677D137BC8B5D4C91B378544E785A316FF02044FDF6215EF66FE441FD.json",
+      "payloadContentHash": "A50FB7D677D137BC8B5D4C91B378544E785A316FF02044FDF6215EF66FE441FD",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "ALB",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/ALB/AEB5BAF79DE01EA9966BAC7FC7DE3D75252A8660687B0BD228487C703BB2CBE9.json",
+      "payloadContentHash": "AEB5BAF79DE01EA9966BAC7FC7DE3D75252A8660687B0BD228487C703BB2CBE9",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "effective_tax_rate requires positive pretax income"
+      ]
+    },
+    {
+      "symbol": "ALLE",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/ALLE/7D30F3A58910E5872B9CD710DACCEB288D00D6F70C04C94795A6355B149DD402.json",
+      "payloadContentHash": "7D30F3A58910E5872B9CD710DACCEB288D00D6F70C04C94795A6355B149DD402",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "AMAT",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/AMAT/0E8992CCADDB23405272CD2E68F9AF0AD1345123E49DE9DCA5519F20E8F76FFB.json",
+      "payloadContentHash": "0E8992CCADDB23405272CD2E68F9AF0AD1345123E49DE9DCA5519F20E8F76FFB",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "AMCR",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/AMCR/0802F7D5A0B6544620FCB7D7A7720F7D0303AAF1F87755FE2ED6CAAF7732F880.json",
+      "payloadContentHash": "0802F7D5A0B6544620FCB7D7A7720F7D0303AAF1F87755FE2ED6CAAF7732F880",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS"
+      ]
+    },
+    {
+      "symbol": "AMD",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/AMD/6E1FD68D8BCE91A66A9E02869ACF8C6144F655C83955F72121A422452FE2B617.json",
+      "payloadContentHash": "6E1FD68D8BCE91A66A9E02869ACF8C6144F655C83955F72121A422452FE2B617",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "AME",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/AME/B1A20EA9203F895EBCD5E94B1E54EC19025AED20FF21B917D7FA2091681F1FB8.json",
+      "payloadContentHash": "B1A20EA9203F895EBCD5E94B1E54EC19025AED20FF21B917D7FA2091681F1FB8",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "AMZN",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/AMZN/FA6F5338258D334E2EF796D3CA85F1EF30AC14B388AC91DB84EDCEB67C45BDCC.json",
+      "payloadContentHash": "FA6F5338258D334E2EF796D3CA85F1EF30AC14B388AC91DB84EDCEB67C45BDCC",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "AOS",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/AOS/25596CF327CEB883D4915CB051FA5AAC9BBC4FAD4A3E330B7FB1539DFAB36BA5.json",
+      "payloadContentHash": "25596CF327CEB883D4915CB051FA5AAC9BBC4FAD4A3E330B7FB1539DFAB36BA5",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "APD",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/APD/33558B146699CC459F5A0D916D9134DFE22DF754CE49CEC9F492E3AE76CA0FC6.json",
+      "payloadContentHash": "33558B146699CC459F5A0D916D9134DFE22DF754CE49CEC9F492E3AE76CA0FC6",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "APH",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/APH/E4FC927EAAD30A1299210A1C54DCA35817665978C23CE4749FA90C3E4911C1A3.json",
+      "payloadContentHash": "E4FC927EAAD30A1299210A1C54DCA35817665978C23CE4749FA90C3E4911C1A3",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "APP",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/APP/0C924CBB5CF932D34BA6EF74BD43BFD764FEC6D509C62DC357BD55F0827A90C8.json",
+      "payloadContentHash": "0C924CBB5CF932D34BA6EF74BD43BFD764FEC6D509C62DC357BD55F0827A90C8",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "APTV",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/APTV/E289C03EDCE4AB4697B81EF023AD97B50BF9F361791209F3467199CE8B1E11F5.json",
+      "payloadContentHash": "E289C03EDCE4AB4697B81EF023AD97B50BF9F361791209F3467199CE8B1E11F5",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "ATO",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/ATO/D70DA326A627EE889AFB19CACCAB10EF066610B1FC3CD9B580E8A10D1CF556DD.json",
+      "payloadContentHash": "D70DA326A627EE889AFB19CACCAB10EF066610B1FC3CD9B580E8A10D1CF556DD",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "AVGO",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/AVGO/293CB5731292562B4D492D79D31427827220176CB77231F88CDA186BB2A93C75.json",
+      "payloadContentHash": "293CB5731292562B4D492D79D31427827220176CB77231F88CDA186BB2A93C75",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "AVY",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/AVY/D6D32BD6B985D256B4F10F09ED8D5A86BF136FD170629069E15CEFCCB9ADA075.json",
+      "payloadContentHash": "D6D32BD6B985D256B4F10F09ED8D5A86BF136FD170629069E15CEFCCB9ADA075",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "AWK",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/AWK/50EDC88C2395F1272EC2D2377C1B4817EC5177492264F70FC724CE5354224D72.json",
+      "payloadContentHash": "50EDC88C2395F1272EC2D2377C1B4817EC5177492264F70FC724CE5354224D72",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "AXON",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/AXON/BE4C911C941E11650636F062F6F0EE6CB5FBF52AD98AC3598138B1EC4E05EC63.json",
+      "payloadContentHash": "BE4C911C941E11650636F062F6F0EE6CB5FBF52AD98AC3598138B1EC4E05EC63",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "BA",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/BA/5135C5768547EB6F2427FBD087C1E5E4B60B7A337CFD534E35540258FF146919.json",
+      "payloadContentHash": "5135C5768547EB6F2427FBD087C1E5E4B60B7A337CFD534E35540258FF146919",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "MISSING"
+      },
+      "reasonCodes": [
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "BALL",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/BALL/635B62A0BDD1BFF47FA41D833822FCF10E2CD44E52762EBA79AE717F77BA0A74.json",
+      "payloadContentHash": "635B62A0BDD1BFF47FA41D833822FCF10E2CD44E52762EBA79AE717F77BA0A74",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "BAX",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/BAX/DD35C8E2FA412D9A60C402918C9CCE4CAFDF26ECD832FE8E39B89AA837132B5F.json",
+      "payloadContentHash": "DD35C8E2FA412D9A60C402918C9CCE4CAFDF26ECD832FE8E39B89AA837132B5F",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "MISSING"
+      },
+      "reasonCodes": [
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "BBY",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/BBY/49E3B47CDCAFEA24F30F97427DCF2B25499271E7E029B10DDC192CF7C09FFF74.json",
+      "payloadContentHash": "49E3B47CDCAFEA24F30F97427DCF2B25499271E7E029B10DDC192CF7C09FFF74",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "BDX",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/BDX/EF90BA9F4A2D999750FB85F1747E029F182DCDF35CC728CEDB4CDFD3EE6B47D4.json",
+      "payloadContentHash": "EF90BA9F4A2D999750FB85F1747E029F182DCDF35CC728CEDB4CDFD3EE6B47D4",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "BF-B",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/BF-B/D1D3984D4BB83AC83A7F6A00530BD5620DEC472C3201AF53CC54F2BEFEE89CDE.json",
+      "payloadContentHash": "D1D3984D4BB83AC83A7F6A00530BD5620DEC472C3201AF53CC54F2BEFEE89CDE",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "BG",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/BG/8E99B6C3969A4DE275EBE7918E62610BC8C949D8567465281D174E645AFCEF3A.json",
+      "payloadContentHash": "8E99B6C3969A4DE275EBE7918E62610BC8C949D8567465281D174E645AFCEF3A",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "MISSING",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS"
+      ]
+    },
+    {
+      "symbol": "BKNG",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/BKNG/8A8F746BCFFA250D730A1493797242B67B854E38437A6ACE7AA8C71FA5DFB6AD.json",
+      "payloadContentHash": "8A8F746BCFFA250D730A1493797242B67B854E38437A6ACE7AA8C71FA5DFB6AD",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "return_on_invested_capital requires a positive denominator"
+      ]
+    },
+    {
+      "symbol": "BLDR",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/BLDR/E3AFCBFF0C9EFC2DA09FA993A4133F8506F188553E6CBA00484F51A41A0C9072.json",
+      "payloadContentHash": "E3AFCBFF0C9EFC2DA09FA993A4133F8506F188553E6CBA00484F51A41A0C9072",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "BMY",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/BMY/41AE58B80A6C3F0AB1E49990B95850DEC2EF728D5D4EB753A2A9D9016608A484.json",
+      "payloadContentHash": "41AE58B80A6C3F0AB1E49990B95850DEC2EF728D5D4EB753A2A9D9016608A484",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "BR",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/BR/D51F67B52B40D8F4A371A9D1016B1AB04A7969539B0A2CCD4EF7E277D84A6EBC.json",
+      "payloadContentHash": "D51F67B52B40D8F4A371A9D1016B1AB04A7969539B0A2CCD4EF7E277D84A6EBC",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "BSX",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/BSX/954E9693F5E9C21CADA34A6DDD9A1D09030070CECE01BAAADF82B364418D870F.json",
+      "payloadContentHash": "954E9693F5E9C21CADA34A6DDD9A1D09030070CECE01BAAADF82B364418D870F",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "CARR",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/CARR/16BF9965696DB24B0C5B47D67225349F83C9113FB3D9CE2280AFB0457EC86C38.json",
+      "payloadContentHash": "16BF9965696DB24B0C5B47D67225349F83C9113FB3D9CE2280AFB0457EC86C38",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "CASY",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/CASY/7743602E8719AAA1BCD475712B2251204D6BC85CF4C273298753F8A6D7CCA119.json",
+      "payloadContentHash": "7743602E8719AAA1BCD475712B2251204D6BC85CF4C273298753F8A6D7CCA119",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS"
+      ]
+    },
+    {
+      "symbol": "CCL",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/CCL/DBAE247EB900E6112B74D6E18C24210CCAF2C6986906E09B4F960CD38CFCF559.json",
+      "payloadContentHash": "DBAE247EB900E6112B74D6E18C24210CCAF2C6986906E09B4F960CD38CFCF559",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "CDNS",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/CDNS/A4079FDC0B4A4C702CFAC57A5DF6CC3B48E014F82F2F2CE77C048528809A9CD6.json",
+      "payloadContentHash": "A4079FDC0B4A4C702CFAC57A5DF6CC3B48E014F82F2F2CE77C048528809A9CD6",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "CDW",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/CDW/DE091C128DF50CCB4AC4BA91178CCB52B51332BB7A3116A22D73ECD909A68191.json",
+      "payloadContentHash": "DE091C128DF50CCB4AC4BA91178CCB52B51332BB7A3116A22D73ECD909A68191",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "CEG",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/CEG/7E3AA17BDFD92C5664F94EC79207922F629E747890140B0EC6B25703A7F3BE17.json",
+      "payloadContentHash": "7E3AA17BDFD92C5664F94EC79207922F629E747890140B0EC6B25703A7F3BE17",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "CF",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/CF/5420B084CDBB070B242E8FDC4126149A4530EC554F7D6506226F297111B4BF32.json",
+      "payloadContentHash": "5420B084CDBB070B242E8FDC4126149A4530EC554F7D6506226F297111B4BF32",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "CHD",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/CHD/84D2AD4E188056785E66D1B3C59283C91A21D69B8EFB3CE03AF94B34F4B8DAA7.json",
+      "payloadContentHash": "84D2AD4E188056785E66D1B3C59283C91A21D69B8EFB3CE03AF94B34F4B8DAA7",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "CHRW",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/CHRW/C076D8C94AC33CCF3AF9F835970D2C37CECBC055BD2765178994301B4EE966D4.json",
+      "payloadContentHash": "C076D8C94AC33CCF3AF9F835970D2C37CECBC055BD2765178994301B4EE966D4",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "CHTR",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/CHTR/82F29481224E9070A6CE3F534DFA520F8F2A97B8B821E1CC5AE61BA1E07E2378.json",
+      "payloadContentHash": "82F29481224E9070A6CE3F534DFA520F8F2A97B8B821E1CC5AE61BA1E07E2378",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "CI",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/CI/F77FF83FCA1B72827ECBA2835FB7F8045ECBBC02321A0B4CD55F1BDB643D3AB9.json",
+      "payloadContentHash": "F77FF83FCA1B72827ECBA2835FB7F8045ECBBC02321A0B4CD55F1BDB643D3AB9",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "CIEN",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/CIEN/FC42505F819D69F2E17AB2921AD4180D06F82F82482EA624531EE4E1097A1FD6.json",
+      "payloadContentHash": "FC42505F819D69F2E17AB2921AD4180D06F82F82482EA624531EE4E1097A1FD6",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "CL",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/CL/D580188A26D559BD9EECC58BB94BC0323B11EB3643D972B98E63B962DFC779D1.json",
+      "payloadContentHash": "D580188A26D559BD9EECC58BB94BC0323B11EB3643D972B98E63B962DFC779D1",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "CLX",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/CLX/509F2321F55C035A4DEC4573B56B88EEFB9D8C4D55CE1361D1A673E73937C4C0.json",
+      "payloadContentHash": "509F2321F55C035A4DEC4573B56B88EEFB9D8C4D55CE1361D1A673E73937C4C0",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "CMCSA",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/CMCSA/3A5FE15ADABA78BDB21C58095D6CF6838C9FE0ED7BD565E398008544924FE8A1.json",
+      "payloadContentHash": "3A5FE15ADABA78BDB21C58095D6CF6838C9FE0ED7BD565E398008544924FE8A1",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "CMI",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/CMI/4740AEA222849CF8C2D17DFDECD630F5B1A63A1497AD596419090053A88DD637.json",
+      "payloadContentHash": "4740AEA222849CF8C2D17DFDECD630F5B1A63A1497AD596419090053A88DD637",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "CMS",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/CMS/2B69F36DF4CFD0A12241516D89758CC7224EFCA927E4EB14AD541A7E75665B73.json",
+      "payloadContentHash": "2B69F36DF4CFD0A12241516D89758CC7224EFCA927E4EB14AD541A7E75665B73",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "CNC",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/CNC/F1FEB6A07D73C54F25C7DF3093835B6D355C78BFD2AB93D44CB3A9C14AE2BA0A.json",
+      "payloadContentHash": "F1FEB6A07D73C54F25C7DF3093835B6D355C78BFD2AB93D44CB3A9C14AE2BA0A",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "MISSING"
+      },
+      "reasonCodes": [
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "CNP",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/CNP/A8689BE3946B1ED103A2842B729F98C7B8581DAD9BE8037C1C2EAF931D061945.json",
+      "payloadContentHash": "A8689BE3946B1ED103A2842B729F98C7B8581DAD9BE8037C1C2EAF931D061945",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "COHR",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/COHR/CE06444109A4ADDF5B37350574C60F2174E214C0D74C403CC2C42A584A8A6975.json",
+      "payloadContentHash": "CE06444109A4ADDF5B37350574C60F2174E214C0D74C403CC2C42A584A8A6975",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "COO",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/COO/E8136DEA5CD5A61F6393A2EC85CAD00C49FAA95D3D1657309202FAE801BA091C.json",
+      "payloadContentHash": "E8136DEA5CD5A61F6393A2EC85CAD00C49FAA95D3D1657309202FAE801BA091C",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "COR",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/COR/726F8EEDA4B05D32EB827D77BFD05516F6B6AB3D3F996F43F237AFC7C3D70289.json",
+      "payloadContentHash": "726F8EEDA4B05D32EB827D77BFD05516F6B6AB3D3F996F43F237AFC7C3D70289",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "CPRT",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/CPRT/5EC9CAE22F4A3D11D15F85D9D58C27B978BE578812DD72E90BFF92AE3718D0F1.json",
+      "payloadContentHash": "5EC9CAE22F4A3D11D15F85D9D58C27B978BE578812DD72E90BFF92AE3718D0F1",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS"
+      ]
+    },
+    {
+      "symbol": "CRH",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/CRH/9FCFF3CAEC2E837D4215978B8A43A8AF07E5DEBC7616A24D6F43B73D5ED2D2C5.json",
+      "payloadContentHash": "9FCFF3CAEC2E837D4215978B8A43A8AF07E5DEBC7616A24D6F43B73D5ED2D2C5",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "MISSING",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS"
+      ]
+    },
+    {
+      "symbol": "CRL",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/CRL/1F9425F16437517CFF8CA985DCA5AD47563BDC8C1722AC821B61CC611918238C.json",
+      "payloadContentHash": "1F9425F16437517CFF8CA985DCA5AD47563BDC8C1722AC821B61CC611918238C",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "effective_tax_rate requires positive pretax income"
+      ]
+    },
+    {
+      "symbol": "CROX",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/CROX/7E256295D15E2BC411447220BC31E84A18EADA4378283D0F6F6EA7E0CE31FFE5.json",
+      "payloadContentHash": "7E256295D15E2BC411447220BC31E84A18EADA4378283D0F6F6EA7E0CE31FFE5",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "cash_conversion requires a positive denominator"
+      ]
+    },
+    {
+      "symbol": "CRWD",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/CRWD/395D522CACFFCF398CF1848141A853AEE466EA0FEE8CD62086F75B13071C5CE5.json",
+      "payloadContentHash": "395D522CACFFCF398CF1848141A853AEE466EA0FEE8CD62086F75B13071C5CE5",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "MISSING"
+      },
+      "reasonCodes": [
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "CSCO",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/CSCO/2AB268E3422486427E70E6CE92889E0CE47B2302EE53E88CB94737BC4686C86B.json",
+      "payloadContentHash": "2AB268E3422486427E70E6CE92889E0CE47B2302EE53E88CB94737BC4686C86B",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "CSX",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/CSX/1A983B51833626B989153E199C51660A51AE4F53D18765693FD5C1B4556A246A.json",
+      "payloadContentHash": "1A983B51833626B989153E199C51660A51AE4F53D18765693FD5C1B4556A246A",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "CTSH",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/CTSH/C11F5109A434D48383D2300151E89C0B4679BBC56C089616684FA9C86D2BF2A2.json",
+      "payloadContentHash": "C11F5109A434D48383D2300151E89C0B4679BBC56C089616684FA9C86D2BF2A2",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "CTVA",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/CTVA/C306FCD8C88487E7BFBB2728362D624C935053F880089E4C1110A7CEA78B83AE.json",
+      "payloadContentHash": "C306FCD8C88487E7BFBB2728362D624C935053F880089E4C1110A7CEA78B83AE",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "CVS",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/CVS/0E059FF05999687CDD267264C9CBECCCDC05BA79E215C388DBB7865C4D39F2F8.json",
+      "payloadContentHash": "0E059FF05999687CDD267264C9CBECCCDC05BA79E215C388DBB7865C4D39F2F8",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "D",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/D/11BE7F33ABD29CAA961D84D3830D68DEF94662DDE853D8076CBF333660F1F68E.json",
+      "payloadContentHash": "11BE7F33ABD29CAA961D84D3830D68DEF94662DDE853D8076CBF333660F1F68E",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "DAL",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/DAL/C44AD67CFC001A9E174C4DD313C32D6BA0C334B9C6D9D44B486B9CCB74336804.json",
+      "payloadContentHash": "C44AD67CFC001A9E174C4DD313C32D6BA0C334B9C6D9D44B486B9CCB74336804",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "DD",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/DD/882BDE2CABFC84B912895F062A9F36128C4A4BBF3CE02362C0805DB901FBF5D0.json",
+      "payloadContentHash": "882BDE2CABFC84B912895F062A9F36128C4A4BBF3CE02362C0805DB901FBF5D0",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "cash_conversion requires a positive denominator"
+      ]
+    },
+    {
+      "symbol": "DDOG",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/DDOG/3A0837C8E842DB67BAF62E7187E26DFF1497D84B0457FE5033818E251088A3A4.json",
+      "payloadContentHash": "3A0837C8E842DB67BAF62E7187E26DFF1497D84B0457FE5033818E251088A3A4",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "MISSING"
+      },
+      "reasonCodes": [
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "DE",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/DE/A7BED0BE5279B0D7590CB86921559A112B2BAF7D86BF069155D3F55A96039596.json",
+      "payloadContentHash": "A7BED0BE5279B0D7590CB86921559A112B2BAF7D86BF069155D3F55A96039596",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "DELL",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/DELL/5A275D807854E1C760CB21A2A7716C322BA99CC2D40C271FF2349C7C2A9A47D2.json",
+      "payloadContentHash": "5A275D807854E1C760CB21A2A7716C322BA99CC2D40C271FF2349C7C2A9A47D2",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "DG",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/DG/56DBC651A933FD779495C4CA76DEC02DDE4F889C64BF84DBC98DC3CAFA7060B8.json",
+      "payloadContentHash": "56DBC651A933FD779495C4CA76DEC02DDE4F889C64BF84DBC98DC3CAFA7060B8",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "DGX",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/DGX/948EC31BF4191EAFE75A4EEBDA8F5D92216B2B145971157D705A57F374C4F669.json",
+      "payloadContentHash": "948EC31BF4191EAFE75A4EEBDA8F5D92216B2B145971157D705A57F374C4F669",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "DHR",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/DHR/CC7F372AF9FEC02CF6F666BD750D07EB3B4F375BFDE160522F87812B1A78A96E.json",
+      "payloadContentHash": "CC7F372AF9FEC02CF6F666BD750D07EB3B4F375BFDE160522F87812B1A78A96E",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "DIS",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/DIS/230B7ED9DA4F037F6F187B5DCB9D81EF33249679FAFA75E4CE70D4899259CFCB.json",
+      "payloadContentHash": "230B7ED9DA4F037F6F187B5DCB9D81EF33249679FAFA75E4CE70D4899259CFCB",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "DLTR",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/DLTR/3A1E76E9428CB9066426CFE66392FF56CBC33D252E6FE4DC2BEF5FA06DF7BB53.json",
+      "payloadContentHash": "3A1E76E9428CB9066426CFE66392FF56CBC33D252E6FE4DC2BEF5FA06DF7BB53",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "DOV",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/DOV/0B5ABE175414549DAD5F46730D19CAAA3AA708115CDF181A35076256FAB2D530.json",
+      "payloadContentHash": "0B5ABE175414549DAD5F46730D19CAAA3AA708115CDF181A35076256FAB2D530",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "DTE",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/DTE/3627283EC7B408CBFBD7D3A5C24FE53F76CCF9A8223C74BFBC455DB7C9AA05AF.json",
+      "payloadContentHash": "3627283EC7B408CBFBD7D3A5C24FE53F76CCF9A8223C74BFBC455DB7C9AA05AF",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "DUK",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/DUK/1A7169A54E18599D4D78E0A515786E441E74F607D4CD242173233D52F29188E8.json",
+      "payloadContentHash": "1A7169A54E18599D4D78E0A515786E441E74F607D4CD242173233D52F29188E8",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "DVA",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/DVA/B33FF7054350486293DCA23C2350A1F7FC868E72268FD36390CC27D9E015B269.json",
+      "payloadContentHash": "B33FF7054350486293DCA23C2350A1F7FC868E72268FD36390CC27D9E015B269",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "DXCM",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/DXCM/4BE0E343ED96E524B3DE29CCE722F780BC4385CD28990AE6B1036EF035102A9B.json",
+      "payloadContentHash": "4BE0E343ED96E524B3DE29CCE722F780BC4385CD28990AE6B1036EF035102A9B",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "EA",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/EA/6A633AE5DFCA2167EF1B00170CCC3CB9C10BD1C942FC68F77A9F437E025614CD.json",
+      "payloadContentHash": "6A633AE5DFCA2167EF1B00170CCC3CB9C10BD1C942FC68F77A9F437E025614CD",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "EBAY",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/EBAY/7D58A3450A2BC3A8414862AED373643953373A3503042F2DE8B0596D20741E5F.json",
+      "payloadContentHash": "7D58A3450A2BC3A8414862AED373643953373A3503042F2DE8B0596D20741E5F",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "ECL",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/ECL/1965813CE663B1FE3ABAD72A980792691319129E6A0E45E04DAF12D89AD05F05.json",
+      "payloadContentHash": "1965813CE663B1FE3ABAD72A980792691319129E6A0E45E04DAF12D89AD05F05",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "ED",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/ED/46A2AE895AE6561CF5F548D9A3B8892A230C2F661FB98B99A734F9D8753A04FA.json",
+      "payloadContentHash": "46A2AE895AE6561CF5F548D9A3B8892A230C2F661FB98B99A734F9D8753A04FA",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "EFX",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/EFX/0C6DB7BE456012E89F7A165D6579913ABB5EB5B456BB23052A582EC0EBFFB2C8.json",
+      "payloadContentHash": "0C6DB7BE456012E89F7A165D6579913ABB5EB5B456BB23052A582EC0EBFFB2C8",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "EIX",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/EIX/98875629D3740F6EFCBE4EBE81C0F87CDC0CB783F8B524033F50FDC24813D28A.json",
+      "payloadContentHash": "98875629D3740F6EFCBE4EBE81C0F87CDC0CB783F8B524033F50FDC24813D28A",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "EL",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/EL/8D8FC165DE6969C9FB7EDC0A164CD128FFE4333C69861946B213705096CCB90F.json",
+      "payloadContentHash": "8D8FC165DE6969C9FB7EDC0A164CD128FFE4333C69861946B213705096CCB90F",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "cash_conversion requires a positive denominator"
+      ]
+    },
+    {
+      "symbol": "ELF",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/ELF/92AC5F331C3005E5A4E097125D59796DD1C36DBC6ED11BF8919FF1C871056A9B.json",
+      "payloadContentHash": "92AC5F331C3005E5A4E097125D59796DD1C36DBC6ED11BF8919FF1C871056A9B",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "ELV",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/ELV/7A47FA84C360C1D628C3D0D13A6447B64AEF6E3696E3415A65E4232F4B8E7ACC.json",
+      "payloadContentHash": "7A47FA84C360C1D628C3D0D13A6447B64AEF6E3696E3415A65E4232F4B8E7ACC",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "EME",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/EME/BA96AC911AB68D3D5BFAD3528CC87BEC87E7CB065EAE6A49E93FA74774F62E04.json",
+      "payloadContentHash": "BA96AC911AB68D3D5BFAD3528CC87BEC87E7CB065EAE6A49E93FA74774F62E04",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS"
+      ]
+    },
+    {
+      "symbol": "EMR",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/EMR/2BD6F13C735B7D3364AA4ACD948F678C8ABB454F7A71323265CB9F8F4A7D46F2.json",
+      "payloadContentHash": "2BD6F13C735B7D3364AA4ACD948F678C8ABB454F7A71323265CB9F8F4A7D46F2",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "ES",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/ES/A0519B5442D853CFCBFD360D71403FDC40940A65C01DDD89650F5C908A5B88E4.json",
+      "payloadContentHash": "A0519B5442D853CFCBFD360D71403FDC40940A65C01DDD89650F5C908A5B88E4",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "ETN",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/ETN/3DB0E9F46C1BBED2A77C0DA21B56187539E7C4B874B798AEC17250869D48290E.json",
+      "payloadContentHash": "3DB0E9F46C1BBED2A77C0DA21B56187539E7C4B874B798AEC17250869D48290E",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "ETR",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/ETR/7E02092675625A950EE28A9BB202A5BB8AB1E4E58B919586408919A1DF8227CD.json",
+      "payloadContentHash": "7E02092675625A950EE28A9BB202A5BB8AB1E4E58B919586408919A1DF8227CD",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "EVRG",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/EVRG/EC625AEC539C0C75881094E3BAF007F4A4C6A71D985FFE65EDA3479FA4F8B702.json",
+      "payloadContentHash": "EC625AEC539C0C75881094E3BAF007F4A4C6A71D985FFE65EDA3479FA4F8B702",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "EXC",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/EXC/7C3212A051738C3F2FC4F4C1FDB7F29601914BF560683A72E5F53B2349130B20.json",
+      "payloadContentHash": "7C3212A051738C3F2FC4F4C1FDB7F29601914BF560683A72E5F53B2349130B20",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "EXPE",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/EXPE/565B57BF83826D53E2A13A8903E2CF6423715C86B97E61F07C16ABBA84E3A5A9.json",
+      "payloadContentHash": "565B57BF83826D53E2A13A8903E2CF6423715C86B97E61F07C16ABBA84E3A5A9",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "return_on_invested_capital requires a positive denominator"
+      ]
+    },
+    {
+      "symbol": "F",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/F/B4AAEF837B6385CF56BB476618015AF6C37B3E8C9A91E25727574CB5D29DD879.json",
+      "payloadContentHash": "B4AAEF837B6385CF56BB476618015AF6C37B3E8C9A91E25727574CB5D29DD879",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "effective_tax_rate requires positive pretax income"
+      ]
+    },
+    {
+      "symbol": "FAST",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/FAST/05434358FD463FD4F385FB408C425828747530C5B6753A484996C7AD63B319E0.json",
+      "payloadContentHash": "05434358FD463FD4F385FB408C425828747530C5B6753A484996C7AD63B319E0",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "FDX",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/FDX/B56B8AF29C4BD12EC77D52E6707ACBB4155B7B476ECDDB7679E485C72B8AD529.json",
+      "payloadContentHash": "B56B8AF29C4BD12EC77D52E6707ACBB4155B7B476ECDDB7679E485C72B8AD529",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "FE",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/FE/D386640FF81561ED9DC8A0D8C6AEE2D914AD1E1C419D0C541C8383D75A622F59.json",
+      "payloadContentHash": "D386640FF81561ED9DC8A0D8C6AEE2D914AD1E1C419D0C541C8383D75A622F59",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "FICO",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/FICO/9FF97B0F0E14A8E4EF88463F126FE2DF26265BAE0DDD1E12DA3983ED999E8FFF.json",
+      "payloadContentHash": "9FF97B0F0E14A8E4EF88463F126FE2DF26265BAE0DDD1E12DA3983ED999E8FFF",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "FIX",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/FIX/15E93AF692C56AC6A1BB9579F9BE4487CC305C456A2C25A124EA3BC4B9B9AAAF.json",
+      "payloadContentHash": "15E93AF692C56AC6A1BB9579F9BE4487CC305C456A2C25A124EA3BC4B9B9AAAF",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "FLEX",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/FLEX/1E135544CB34F4B321FA23C14560C392EE68CD64230DE4928E29106C21260C3B.json",
+      "payloadContentHash": "1E135544CB34F4B321FA23C14560C392EE68CD64230DE4928E29106C21260C3B",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "FOX",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/FOX/024D62530512A772F8C6D89AF4EAA45CBDCB8F7A8D1D0AB445851C6AD626A5B1.json",
+      "payloadContentHash": "024D62530512A772F8C6D89AF4EAA45CBDCB8F7A8D1D0AB445851C6AD626A5B1",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "FOXA",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/FOXA/8AE7E029DF7043B55CD6CD69FCF503C55201E60A7A0F73A18D1D7394DFAE1FC6.json",
+      "payloadContentHash": "8AE7E029DF7043B55CD6CD69FCF503C55201E60A7A0F73A18D1D7394DFAE1FC6",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "FSLR",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/FSLR/04BCA5AACE27A46BB29EAB4D0A9C67AA181DDF492B91DEFAD6D8710825ABE1B5.json",
+      "payloadContentHash": "04BCA5AACE27A46BB29EAB4D0A9C67AA181DDF492B91DEFAD6D8710825ABE1B5",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "FTV",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/FTV/F050D633D5469490E2535E752C035D613D1EB5F44AF8737BA2373048EB71F491.json",
+      "payloadContentHash": "F050D633D5469490E2535E752C035D613D1EB5F44AF8737BA2373048EB71F491",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "GD",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/GD/561E3ECED6F37514FDCE886C3D5342C46AA15869855C37F143FE8F3C5B8E590A.json",
+      "payloadContentHash": "561E3ECED6F37514FDCE886C3D5342C46AA15869855C37F143FE8F3C5B8E590A",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "GEHC",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/GEHC/7C1ABFB349A89649550229595DD558872C9EBC5B0CD1F23F0218C8986B7AAD52.json",
+      "payloadContentHash": "7C1ABFB349A89649550229595DD558872C9EBC5B0CD1F23F0218C8986B7AAD52",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "GIS",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/GIS/9143E49DE3058620F7C673F5F29825F964853735603F7A681DB7C8214C46E7AE.json",
+      "payloadContentHash": "9143E49DE3058620F7C673F5F29825F964853735603F7A681DB7C8214C46E7AE",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "cash_conversion requires a positive denominator"
+      ]
+    },
+    {
+      "symbol": "GM",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/GM/08274E0B7E3C5C4E594C391DD56AAF50F1E1CE4FDDAFDE1B7C9BA81AE1C7D964.json",
+      "payloadContentHash": "08274E0B7E3C5C4E594C391DD56AAF50F1E1CE4FDDAFDE1B7C9BA81AE1C7D964",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "GOOG",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/GOOG/2E27DFE7605FDCC70EBB178BD16EA104695EA1F2F4EFCC5A6115BC5A013D38B0.json",
+      "payloadContentHash": "2E27DFE7605FDCC70EBB178BD16EA104695EA1F2F4EFCC5A6115BC5A013D38B0",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "MISSING",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS"
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/GOOGL/47D0408796FA903F3BA011B1914AA471DD7900F66B4683CE037B041B30A1212B.json",
+      "payloadContentHash": "47D0408796FA903F3BA011B1914AA471DD7900F66B4683CE037B041B30A1212B",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "MISSING",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS"
+      ]
+    },
+    {
+      "symbol": "GPC",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/GPC/D96D5AB3BEA20950841314D8A90F8FF36FBDE59DAFDC6D240DFBE1050BC06A09.json",
+      "payloadContentHash": "D96D5AB3BEA20950841314D8A90F8FF36FBDE59DAFDC6D240DFBE1050BC06A09",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "GWW",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/GWW/4C099C1C27F76B3A2AA0596E59BF17882171D9F49B34E0FED2DDD0011911A39C.json",
+      "payloadContentHash": "4C099C1C27F76B3A2AA0596E59BF17882171D9F49B34E0FED2DDD0011911A39C",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "HD",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/HD/5B3533FC62EA6F613D9EF6AF29F2C46A745AF4FB40AA37D8A2AA353D3E92F794.json",
+      "payloadContentHash": "5B3533FC62EA6F613D9EF6AF29F2C46A745AF4FB40AA37D8A2AA353D3E92F794",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "HLT",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/HLT/815628BDC1F697309F8DC314EBD8357D515C839A7F2A05901302C65B2FEB37A8.json",
+      "payloadContentHash": "815628BDC1F697309F8DC314EBD8357D515C839A7F2A05901302C65B2FEB37A8",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "HON",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/HON/CB81FD8463115876129A288B2E7474BF827659B3463B9B55EF906F7166A58032.json",
+      "payloadContentHash": "CB81FD8463115876129A288B2E7474BF827659B3463B9B55EF906F7166A58032",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "HRL",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/HRL/3EF92D66E1AF4BD97E92315ED2508E36D12B6840F065A20362BF29E57E087136.json",
+      "payloadContentHash": "3EF92D66E1AF4BD97E92315ED2508E36D12B6840F065A20362BF29E57E087136",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "HSIC",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/HSIC/4231CF1EA22642F6B7E8DB5C491ACECE265EE88BDD1779CB86D6213585C62175.json",
+      "payloadContentHash": "4231CF1EA22642F6B7E8DB5C491ACECE265EE88BDD1779CB86D6213585C62175",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "HUM",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/HUM/0E5C515EBE87EB3C6272F30043AECA116E28EB67AFADBEFBFCC85A6A343D558B.json",
+      "payloadContentHash": "0E5C515EBE87EB3C6272F30043AECA116E28EB67AFADBEFBFCC85A6A343D558B",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "HWKN",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/HWKN/736B186BC0BEFB0C05375362E597DAC357B53814A0E9AF707B0402A09443B347.json",
+      "payloadContentHash": "736B186BC0BEFB0C05375362E597DAC357B53814A0E9AF707B0402A09443B347",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "IBM",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/IBM/A694434C8E47085BF2F6688580F484F01F6D0D3A54389BA29A0BB0FF53B31B3C.json",
+      "payloadContentHash": "A694434C8E47085BF2F6688580F484F01F6D0D3A54389BA29A0BB0FF53B31B3C",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "IDXX",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/IDXX/412B5C41C9137CD00305925EF0D5F7F8127B762F5D9ABD6E7CED4CC70A45D4B0.json",
+      "payloadContentHash": "412B5C41C9137CD00305925EF0D5F7F8127B762F5D9ABD6E7CED4CC70A45D4B0",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "IFF",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/IFF/4C7DE25DCD100EA177B4F9927A8071B4958760B5569589349A9987819F7F1F59.json",
+      "payloadContentHash": "4C7DE25DCD100EA177B4F9927A8071B4958760B5569589349A9987819F7F1F59",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "INTU",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/INTU/C4974BC6E5C1954A2C75222EDB23FDF291C7A97C3C4C572A32C6B2707885DF1A.json",
+      "payloadContentHash": "C4974BC6E5C1954A2C75222EDB23FDF291C7A97C3C4C572A32C6B2707885DF1A",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "IP",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/IP/32A7F55A6E32ADCBEBCB165840DBF38BA770D8425E8D3CCD4697B68A4F99C2E9.json",
+      "payloadContentHash": "32A7F55A6E32ADCBEBCB165840DBF38BA770D8425E8D3CCD4697B68A4F99C2E9",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "MISSING"
+      },
+      "reasonCodes": [
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "IQV",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/IQV/FAADE7AB0B8CF0465F92D47014CBEF9F360FC58C9840788C1920EDB4F5BB4E1F.json",
+      "payloadContentHash": "FAADE7AB0B8CF0465F92D47014CBEF9F360FC58C9840788C1920EDB4F5BB4E1F",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "ITW",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/ITW/AEB83AE2739FE70702DDF25238CADC06AE31B3B79FF0029E38E4D72F7B235352.json",
+      "payloadContentHash": "AEB83AE2739FE70702DDF25238CADC06AE31B3B79FF0029E38E4D72F7B235352",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "KDP",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/KDP/6A7C38CE8609BB3CCF1B1DFDF03BE7555E788E5C235F3531998E0520285FCC84.json",
+      "payloadContentHash": "6A7C38CE8609BB3CCF1B1DFDF03BE7555E788E5C235F3531998E0520285FCC84",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "KHC",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/KHC/0CBEDBC9EF9679D48BC8D0AE82791672FBEB9418969376CF3E33C4894F8181A5.json",
+      "payloadContentHash": "0CBEDBC9EF9679D48BC8D0AE82791672FBEB9418969376CF3E33C4894F8181A5",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "MISSING"
+      },
+      "reasonCodes": [
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "KLAC",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/KLAC/0292E01C783B271D0ACCD5EA3D6FEDA48449670AD72182CFB5D193FABC236E06.json",
+      "payloadContentHash": "0292E01C783B271D0ACCD5EA3D6FEDA48449670AD72182CFB5D193FABC236E06",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "KMB",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/KMB/00B2E3805C45766964CC7F412EB4E3444CA82D1FB89E0C645A451812E684FD11.json",
+      "payloadContentHash": "00B2E3805C45766964CC7F412EB4E3444CA82D1FB89E0C645A451812E684FD11",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "KO",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/KO/5637D5E0ADF2EE926B5EC6EC74C03179B40F2F91570BBA4DBAEA13136D8F646A.json",
+      "payloadContentHash": "5637D5E0ADF2EE926B5EC6EC74C03179B40F2F91570BBA4DBAEA13136D8F646A",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "KVUE",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/KVUE/004CED7B051F47447242A63290B608AF3C3B3ABA2D686ED10F76182C2746D75D.json",
+      "payloadContentHash": "004CED7B051F47447242A63290B608AF3C3B3ABA2D686ED10F76182C2746D75D",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "LEN",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/LEN/24F811D708F8A9C4FAD1536558DF2E8A891B4C7043FDF9A9728983A3EE197BE4.json",
+      "payloadContentHash": "24F811D708F8A9C4FAD1536558DF2E8A891B4C7043FDF9A9728983A3EE197BE4",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "MISSING",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS"
+      ]
+    },
+    {
+      "symbol": "LH",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/LH/26FDD327E0D91A8B5666FC38C246E48DC70B369510EFF6E81F929D8485C93F79.json",
+      "payloadContentHash": "26FDD327E0D91A8B5666FC38C246E48DC70B369510EFF6E81F929D8485C93F79",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "LIN",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/LIN/97E522D078738A17A5E52B03C211A6F4884037361711A5D4A36A3D450F58D375.json",
+      "payloadContentHash": "97E522D078738A17A5E52B03C211A6F4884037361711A5D4A36A3D450F58D375",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "LLY",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/LLY/AA0547DE89A32E91AAB4F4700DEE462CAC0C19C817484DCAD0704022C664F354.json",
+      "payloadContentHash": "AA0547DE89A32E91AAB4F4700DEE462CAC0C19C817484DCAD0704022C664F354",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "LMT",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/LMT/2837D9EE4BAF7209A7C3C00F8FFDE309189656A4C8E6992CB48763B4EC341A7B.json",
+      "payloadContentHash": "2837D9EE4BAF7209A7C3C00F8FFDE309189656A4C8E6992CB48763B4EC341A7B",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "LNT",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/LNT/BD1980AA49C466938942F8489D06C6DA4FAF0E201E3EA8CDB59BAF1884AB5053.json",
+      "payloadContentHash": "BD1980AA49C466938942F8489D06C6DA4FAF0E201E3EA8CDB59BAF1884AB5053",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "LOW",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/LOW/6B27810434E17119DEB89990FC8005909F8561999356953D2702026BD156D004.json",
+      "payloadContentHash": "6B27810434E17119DEB89990FC8005909F8561999356953D2702026BD156D004",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "LRCX",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/LRCX/57E9C407891D505D58E2B840A1DD71BE628D8939C2933368F4D2D17B4EAD49CF.json",
+      "payloadContentHash": "57E9C407891D505D58E2B840A1DD71BE628D8939C2933368F4D2D17B4EAD49CF",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "LYV",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/LYV/4A896C502652C1F612F6AB4C8249C2BECCD4E506BDDDEB0B06BC799E562F74A9.json",
+      "payloadContentHash": "4A896C502652C1F612F6AB4C8249C2BECCD4E506BDDDEB0B06BC799E562F74A9",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "MCD",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/MCD/6947A55659C29BB39545DD555E5B45AFF468F3A385170A6E2AF66A0BBE70A1B3.json",
+      "payloadContentHash": "6947A55659C29BB39545DD555E5B45AFF468F3A385170A6E2AF66A0BBE70A1B3",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "MISSING",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS"
+      ]
+    },
+    {
+      "symbol": "MCHP",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/MCHP/B4DFB80E0567CA6AC1907F4F6A6D11B4941E9F01C039FD39E2E177AB068F7C65.json",
+      "payloadContentHash": "B4DFB80E0567CA6AC1907F4F6A6D11B4941E9F01C039FD39E2E177AB068F7C65",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "MCK",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/MCK/173FD973A3DC51DF26D8EA1635770AB869983821B2A72B73071EADE87D48225C.json",
+      "payloadContentHash": "173FD973A3DC51DF26D8EA1635770AB869983821B2A72B73071EADE87D48225C",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "MDLZ",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/MDLZ/1898AA1A88355DE02EFE725EFFB673F4E7E9C2C72CB6BDC33CD8F7BE68305143.json",
+      "payloadContentHash": "1898AA1A88355DE02EFE725EFFB673F4E7E9C2C72CB6BDC33CD8F7BE68305143",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "META",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/META/EA9DF605E9E200669A89BE743C2BC8FC1DDE7C1D08F2C48B83930754FB29FA16.json",
+      "payloadContentHash": "EA9DF605E9E200669A89BE743C2BC8FC1DDE7C1D08F2C48B83930754FB29FA16",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "MISSING",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS"
+      ]
+    },
+    {
+      "symbol": "MKC",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/MKC/8A195A14EC77B0E900115DBE579C25567BF74BD6410E4A0EB927AF496FB44634.json",
+      "payloadContentHash": "8A195A14EC77B0E900115DBE579C25567BF74BD6410E4A0EB927AF496FB44634",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "MLM",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/MLM/130543EBD7797A8BA385E14097BE3FD13FA24191D6141AFADEDC8D0E22B1B761.json",
+      "payloadContentHash": "130543EBD7797A8BA385E14097BE3FD13FA24191D6141AFADEDC8D0E22B1B761",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "MNST",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/MNST/B43EADAD55BE0F7553B434E660DE371B6C72C6E481498EABFA9C88D2084AEFD1.json",
+      "payloadContentHash": "B43EADAD55BE0F7553B434E660DE371B6C72C6E481498EABFA9C88D2084AEFD1",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "MO",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/MO/96F429B12B4D5A81AC648AC146B9F65D033721B15024DC958E8B9A14FCA36DF0.json",
+      "payloadContentHash": "96F429B12B4D5A81AC648AC146B9F65D033721B15024DC958E8B9A14FCA36DF0",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "MOS",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/MOS/31D745C14567A0E96D945BC14A085A2D8262F39DB429D841BD9A9C8812D0BA8A.json",
+      "payloadContentHash": "31D745C14567A0E96D945BC14A085A2D8262F39DB429D841BD9A9C8812D0BA8A",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "MRK",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/MRK/0E8940BE2B82884751242C5B30C71540111102F8F9A17CDD81588629CCE34CAD.json",
+      "payloadContentHash": "0E8940BE2B82884751242C5B30C71540111102F8F9A17CDD81588629CCE34CAD",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "MSFT",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/MSFT/55854BB778A9C87D7488AA64F470B0DD1FD48FCD65CB693ED72C47FBABD7009C.json",
+      "payloadContentHash": "55854BB778A9C87D7488AA64F470B0DD1FD48FCD65CB693ED72C47FBABD7009C",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "NFLX",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/NFLX/8A17666D90F2E3C36FDCE6B1EBA57ED6732768AD0CFF4618622B1FC7D3F9C81F.json",
+      "payloadContentHash": "8A17666D90F2E3C36FDCE6B1EBA57ED6732768AD0CFF4618622B1FC7D3F9C81F",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "NI",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/NI/CE66B49F4BC43C0298E75AF3B166D23C2A4909C5A6AAC04C58669C41638BA78A.json",
+      "payloadContentHash": "CE66B49F4BC43C0298E75AF3B166D23C2A4909C5A6AAC04C58669C41638BA78A",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "NKE",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/NKE/2E8D204C0F78E263B268BA900C1069D508C75F77A2230930253CBE161456AA84.json",
+      "payloadContentHash": "2E8D204C0F78E263B268BA900C1069D508C75F77A2230930253CBE161456AA84",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "NOC",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/NOC/75A467B3DD53BD824B5D29E5518C27F02A9600C3B488749F4E1F8734A96B68E3.json",
+      "payloadContentHash": "75A467B3DD53BD824B5D29E5518C27F02A9600C3B488749F4E1F8734A96B68E3",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "NRG",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/NRG/2505649932B72F5599A1270568D883B4710A4FFAB654A3380F3F1DDA661CB6F0.json",
+      "payloadContentHash": "2505649932B72F5599A1270568D883B4710A4FFAB654A3380F3F1DDA661CB6F0",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "NUE",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/NUE/0DA24103A38E1FD6BCA468DFDDA8B7174CFD93A7E69E89F314EEE11C87225F72.json",
+      "payloadContentHash": "0DA24103A38E1FD6BCA468DFDDA8B7174CFD93A7E69E89F314EEE11C87225F72",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "NVDA",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/NVDA/D807DB8AAC16EB7C3D9D13AEC40287E448253744A949F5CCD5FEFD0C44E8FEB5.json",
+      "payloadContentHash": "D807DB8AAC16EB7C3D9D13AEC40287E448253744A949F5CCD5FEFD0C44E8FEB5",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "NWSA",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/NWSA/C718D4229B829A85A2250363EFAB2FA67A3BE0DA8F344446B8DCC2F9DBE40E5E.json",
+      "payloadContentHash": "C718D4229B829A85A2250363EFAB2FA67A3BE0DA8F344446B8DCC2F9DBE40E5E",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "OLED",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/OLED/9965B0B2BBAB44297AF2F034175BA639D43410894CE180A802E0CA4667ECE56B.json",
+      "payloadContentHash": "9965B0B2BBAB44297AF2F034175BA639D43410894CE180A802E0CA4667ECE56B",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS"
+      ]
+    },
+    {
+      "symbol": "OMC",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/OMC/1BC82761CDE06EAFC7E5F0C8F2170A16221EB8EE41635A5F6A059F338CD3AD57.json",
+      "payloadContentHash": "1BC82761CDE06EAFC7E5F0C8F2170A16221EB8EE41635A5F6A059F338CD3AD57",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "ORCL",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/ORCL/90E300D7689EC954B0890194C6DB43DB3E75479171C89F9EEA5502EB3640283B.json",
+      "payloadContentHash": "90E300D7689EC954B0890194C6DB43DB3E75479171C89F9EEA5502EB3640283B",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "ORLY",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/ORLY/13096C1DE7510F24DFAAEDD1788FFC015358730145F4CB0BFD2EDB1AF7D3F019.json",
+      "payloadContentHash": "13096C1DE7510F24DFAAEDD1788FFC015358730145F4CB0BFD2EDB1AF7D3F019",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "PCAR",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/PCAR/4EA0A9C7C7EECBCF32D8600971B1D7A2A9B87DFE47A6F63D6C49A5A42BD2F42A.json",
+      "payloadContentHash": "4EA0A9C7C7EECBCF32D8600971B1D7A2A9B87DFE47A6F63D6C49A5A42BD2F42A",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "PCG",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/PCG/E50B5E0F80A3C279E32969DCD2EA4A67587E8C117E62F8C0D423B9E9A488BA64.json",
+      "payloadContentHash": "E50B5E0F80A3C279E32969DCD2EA4A67587E8C117E62F8C0D423B9E9A488BA64",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "PEG",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/PEG/475B01CA38810119E883A6F900FE8E3C0CDA03150C7A7D4254E158E4A9E36B54.json",
+      "payloadContentHash": "475B01CA38810119E883A6F900FE8E3C0CDA03150C7A7D4254E158E4A9E36B54",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "PFE",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/PFE/BF11C10345774962C19FB44C317053A30E01BC0232FEE9BA65310A0A052A8D53.json",
+      "payloadContentHash": "BF11C10345774962C19FB44C317053A30E01BC0232FEE9BA65310A0A052A8D53",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "PG",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/PG/B81F08C58BD7ADE98A60B1345A6C0E719D270D4434AD0B8974D553AAF742ECE8.json",
+      "payloadContentHash": "B81F08C58BD7ADE98A60B1345A6C0E719D270D4434AD0B8974D553AAF742ECE8",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "PH",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/PH/3A52DB35990A9A9F20E863CAD8F0CBDD1F6F7473F16C5FD936C9C763E54F897A.json",
+      "payloadContentHash": "3A52DB35990A9A9F20E863CAD8F0CBDD1F6F7473F16C5FD936C9C763E54F897A",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "PLAB",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/PLAB/6914034AEFA7B8A0A0BD37E2309F4FD91066735A98B6B3A47A16E1BF906DE73F.json",
+      "payloadContentHash": "6914034AEFA7B8A0A0BD37E2309F4FD91066735A98B6B3A47A16E1BF906DE73F",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "PM",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/PM/341D07E9D5CDEF9C3972626079D82C62A8F843288930BBFD3E77EAE85FFCEA32.json",
+      "payloadContentHash": "341D07E9D5CDEF9C3972626079D82C62A8F843288930BBFD3E77EAE85FFCEA32",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "PNW",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/PNW/6D3044658FFA6F0C925B525194EAC4CA652C59B1DB3513797202B0DA7F34588E.json",
+      "payloadContentHash": "6D3044658FFA6F0C925B525194EAC4CA652C59B1DB3513797202B0DA7F34588E",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "PPG",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/PPG/EE38819E19EA376DFFD39AB5BACE19D8154E50CF830F0B225931317478373AFC.json",
+      "payloadContentHash": "EE38819E19EA376DFFD39AB5BACE19D8154E50CF830F0B225931317478373AFC",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "PPL",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/PPL/4483815C6B1E0F8663C213A94B32A00DDCF50D8D6ED67B67F6A5D43086F9108C.json",
+      "payloadContentHash": "4483815C6B1E0F8663C213A94B32A00DDCF50D8D6ED67B67F6A5D43086F9108C",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "QCOM",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/QCOM/189C3E7E6D5F475F869B867D3C518038BE325DAA92F68D857393F7C3120CE3D1.json",
+      "payloadContentHash": "189C3E7E6D5F475F869B867D3C518038BE325DAA92F68D857393F7C3120CE3D1",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "ROK",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/ROK/50349961C478636B19FEE94E4F5A434F842B76FE52DFC1C8D41971FE6451D9D2.json",
+      "payloadContentHash": "50349961C478636B19FEE94E4F5A434F842B76FE52DFC1C8D41971FE6451D9D2",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "ROST",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/ROST/88732CEFABF0DFAEE33F7E00697B03DFE4F51B48F87F0CB515CF9B2DF5D2D9B3.json",
+      "payloadContentHash": "88732CEFABF0DFAEE33F7E00697B03DFE4F51B48F87F0CB515CF9B2DF5D2D9B3",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "RTX",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/RTX/087C65CCF6540AC64257CAC844B55EA7B74933D01046FEA85D159BEA100FAF88.json",
+      "payloadContentHash": "087C65CCF6540AC64257CAC844B55EA7B74933D01046FEA85D159BEA100FAF88",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "SAIA",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/SAIA/2C6D43695FB08E9CD28F6EDC70835FA803DCDE1E8957242036F08740F2FC0DBC.json",
+      "payloadContentHash": "2C6D43695FB08E9CD28F6EDC70835FA803DCDE1E8957242036F08740F2FC0DBC",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "SBUX",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/SBUX/6F1DB80B9FF6D73CE30F092284946FA5CB748CAB86280A5E9B4FB09FF030DEC4.json",
+      "payloadContentHash": "6F1DB80B9FF6D73CE30F092284946FA5CB748CAB86280A5E9B4FB09FF030DEC4",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "SHW",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/SHW/2368E4AB4BE176B30F093BF26ADD49422B3A791BE63038EC99783B49FEFC635A.json",
+      "payloadContentHash": "2368E4AB4BE176B30F093BF26ADD49422B3A791BE63038EC99783B49FEFC635A",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "SJM",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/SJM/ED72D6203D462D4FBEEBFCF16ECC6626B3F8D7FFFD81D3AC6E91E94D0F176A71.json",
+      "payloadContentHash": "ED72D6203D462D4FBEEBFCF16ECC6626B3F8D7FFFD81D3AC6E91E94D0F176A71",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "MISSING",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS"
+      ]
+    },
+    {
+      "symbol": "SO",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/SO/C70A1594E2E5F6907A152964232B027BAD884CB2CAB5EDEA9795FBEB8AEE3C4E.json",
+      "payloadContentHash": "C70A1594E2E5F6907A152964232B027BAD884CB2CAB5EDEA9795FBEB8AEE3C4E",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "SRE",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/SRE/492DF3CF6528EC4DDB962341FBF20A8A0F884764FF0796C37CE149A4C1FF36AC.json",
+      "payloadContentHash": "492DF3CF6528EC4DDB962341FBF20A8A0F884764FF0796C37CE149A4C1FF36AC",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "SW",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/SW/882A0217E9585F509628DCDA2BBF45EED7104D30E781A608DF558CD918BC1730.json",
+      "payloadContentHash": "882A0217E9585F509628DCDA2BBF45EED7104D30E781A608DF558CD918BC1730",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "MISSING",
+        "stability": "VALID",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "MISSING",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS"
+      ]
+    },
+    {
+      "symbol": "SYY",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/SYY/85E9392AD6DC1EF201C7CFB5866EDFEC3EC01B2993F108284A778DF320393F29.json",
+      "payloadContentHash": "85E9392AD6DC1EF201C7CFB5866EDFEC3EC01B2993F108284A778DF320393F29",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "T",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/T/1C5B3C03BB8F00A0092B8337F177F62B9068D5FE604CAB7BF6ADF04F8E66168C.json",
+      "payloadContentHash": "1C5B3C03BB8F00A0092B8337F177F62B9068D5FE604CAB7BF6ADF04F8E66168C",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "TGT",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/TGT/E9031FA0FC9378ABCB1191A93273662F43E36B8D8F5E94613D14609BD05F0F8F.json",
+      "payloadContentHash": "E9031FA0FC9378ABCB1191A93273662F43E36B8D8F5E94613D14609BD05F0F8F",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "TJX",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/TJX/CF481421DA57A08C394DC52DEA54541AE22EC138256ADC10891A94713E91E246.json",
+      "payloadContentHash": "CF481421DA57A08C394DC52DEA54541AE22EC138256ADC10891A94713E91E246",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "MISSING",
+        "stability": "VALID",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS"
+      ]
+    },
+    {
+      "symbol": "TKO",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/TKO/4C729FA2D45139395630841A21CB888F5BFDD644EC6D5758DFE9F9D2B8993EC4.json",
+      "payloadContentHash": "4C729FA2D45139395630841A21CB888F5BFDD644EC6D5758DFE9F9D2B8993EC4",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "MISSING",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS"
+      ]
+    },
+    {
+      "symbol": "TMUS",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/TMUS/B2721C00D1C5DAAF17AFE86117479FA0322B2948FFCC9CFF162C2D8BDCF3C3F6.json",
+      "payloadContentHash": "B2721C00D1C5DAAF17AFE86117479FA0322B2948FFCC9CFF162C2D8BDCF3C3F6",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "TSN",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/TSN/9C54B7B98ABA93E8CD71FFC3926C33C23811202553BCC5044068E04EF810B634.json",
+      "payloadContentHash": "9C54B7B98ABA93E8CD71FFC3926C33C23811202553BCC5044068E04EF810B634",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "TTC",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/TTC/FA16480B99903FF82962C862018394AF93A98E76B863F6243B46E64B114B6C49.json",
+      "payloadContentHash": "FA16480B99903FF82962C862018394AF93A98E76B863F6243B46E64B114B6C49",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "TTD",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/TTD/B331C1006F17EBA2DE4D49A0F4F8D25F40DB5B63DBC774020599D7D4ED97DA91.json",
+      "payloadContentHash": "B331C1006F17EBA2DE4D49A0F4F8D25F40DB5B63DBC774020599D7D4ED97DA91",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS"
+      ]
+    },
+    {
+      "symbol": "TTWO",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/TTWO/65A30337BCADE1D08DB5A16CFF393E4F71CDD7B678983EA502D01FD7FCF6DB96.json",
+      "payloadContentHash": "65A30337BCADE1D08DB5A16CFF393E4F71CDD7B678983EA502D01FD7FCF6DB96",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "UFPI",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/UFPI/E1765ED02333D8738A956CC1CFB63F0280E0BDD4E0FEE99A46840EF042F231DF.json",
+      "payloadContentHash": "E1765ED02333D8738A956CC1CFB63F0280E0BDD4E0FEE99A46840EF042F231DF",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "UNP",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/UNP/C609BF5D6402B1329DC36CBE1710F353E00C09CDC2081BC95DB2366D912589C9.json",
+      "payloadContentHash": "C609BF5D6402B1329DC36CBE1710F353E00C09CDC2081BC95DB2366D912589C9",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "UPS",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/UPS/5FAB061A5386051FC8717AA3C07AC7425D1ABE70E240339F5C7B8854B723839C.json",
+      "payloadContentHash": "5FAB061A5386051FC8717AA3C07AC7425D1ABE70E240339F5C7B8854B723839C",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "VMC",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/VMC/C734313F9EB1AFBEEA7771DD9D2121F763A8F3E9A58622F51680440FA6951E52.json",
+      "payloadContentHash": "C734313F9EB1AFBEEA7771DD9D2121F763A8F3E9A58622F51680440FA6951E52",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "WBD",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/WBD/2675DC3EE524D07C7CC974A472D9F959506AB80BF9ED6037AA7ED1AF59E0EFB5.json",
+      "payloadContentHash": "2675DC3EE524D07C7CC974A472D9F959506AB80BF9ED6037AA7ED1AF59E0EFB5",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "effective_tax_rate requires positive pretax income"
+      ]
+    },
+    {
+      "symbol": "WDFC",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/WDFC/98DC98A7486D3C06355D9FAFCB51E806332A51547E612B55A0B00464F8F82AA3.json",
+      "payloadContentHash": "98DC98A7486D3C06355D9FAFCB51E806332A51547E612B55A0B00464F8F82AA3",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "WM",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/WM/F309BCE759A7B69F2D152DC122F2F422648001D5AE9A431CB0FA2CDCC450C5CF.json",
+      "payloadContentHash": "F309BCE759A7B69F2D152DC122F2F422648001D5AE9A431CB0FA2CDCC450C5CF",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "WMT",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/WMT/51CB206377F249F3A146F5DD56B04B6EED33B8D525F92F82AD1C661AD85814A1.json",
+      "payloadContentHash": "51CB206377F249F3A146F5DD56B04B6EED33B8D525F92F82AD1C661AD85814A1",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "XEL",
+      "status": "INSUFFICIENT_DATA",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/XEL/047680D0999924E1A108F67ADA37642EB25A6827D6E60EA7DAC921944B5102F9.json",
+      "payloadContentHash": "047680D0999924E1A108F67ADA37642EB25A6827D6E60EA7DAC921944B5102F9",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": [
+        "CAGR requires positive endpoints and years"
+      ]
+    },
+    {
+      "symbol": "YUM",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/YUM/779FA7DCBF10F8611E57CB3DFD33F725FDAD9A0ADA19B73906D4C0F0D604C08B.json",
+      "payloadContentHash": "779FA7DCBF10F8611E57CB3DFD33F725FDAD9A0ADA19B73906D4C0F0D604C08B",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    },
+    {
+      "symbol": "ZBH",
+      "status": "CURRENT_QC_INPUT_READY",
+      "storageReference": "storage/provider-validation/current-decision-inputs-v1/ZBH/5C64FDADC1EF23EAF063431850BA801184D5F4DAFCEE1D5D878C7D96AD7DA1A3.json",
+      "payloadContentHash": "5C64FDADC1EF23EAF063431850BA801184D5F4DAFCEE1D5D878C7D96AD7DA1A3",
+      "qcFactorStatuses": {
+        "roic": "VALID",
+        "fcf_margin": "VALID",
+        "cash_conversion": "VALID",
+        "margin_quality": "VALID",
+        "stability": "VALID",
+        "eps_growth": "VALID",
+        "fcf_per_share_growth": "VALID",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "VALID",
+        "dilution": "VALID",
+        "valuation_guardrail": "VALID"
+      },
+      "reasonCodes": []
+    }
+  ],
+  "licensedValuesIncluded": false,
+  "networkRequestsExecuted": false,
+  "scoresOrRanksIncluded": false,
+  "forwardValidationExecuted": false,
+  "artifactContentHash": "19ED019C6B36E9DE0CA0C2A17A053851851C5044F6BC6FF2FEEA90E774FA6D1E"
+}

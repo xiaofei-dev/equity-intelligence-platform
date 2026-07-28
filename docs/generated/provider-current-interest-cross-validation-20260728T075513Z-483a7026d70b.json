@@ -1,0 +1,476 @@
+{
+  "artifactType": "PROVIDER_CURRENT_INTEREST_CROSS_VALIDATION",
+  "schemaVersion": "provider-current-interest-cross-validation-v1.0.0",
+  "transportSchemaVersion": "yahoo-fundamentals-timeseries-transport-v1.0.0",
+  "normalizationContractVersion": "yahoo-interest-normalization-v1.0.0",
+  "comparisonPolicyVersion": "provider-current-interest-comparison-v1.0.0",
+  "runId": "20260728T075513Z-483a7026d70b",
+  "generatedAt": "2026-07-28T07:55:16.812055Z",
+  "scope": "BOUNDED_YAHOO_EODHD_CURRENT_INTEREST_CROSS_VALIDATION",
+  "symbols": [
+    "AMAT",
+    "CIEN",
+    "COO",
+    "CSCO",
+    "DHR",
+    "FAST",
+    "FIX",
+    "PLAB",
+    "TSN",
+    "WDFC"
+  ],
+  "requestTelemetry": {
+    "yahooPhysicalHttpAttempts": 9,
+    "hashVerifiedYahooResponseReplays": 1,
+    "eodhdPhysicalHttpAttempts": 0,
+    "secPhysicalHttpAttempts": 0,
+    "retries": 0,
+    "structureProbeAttemptsBeforeRun": 1
+  },
+  "classificationCounts": {
+    "CROSS_PROVIDER_TTM_CONFIRMED": 6,
+    "PROVIDER_VALUE_CONFLICT": 3,
+    "YAHOO_INTERNAL_REVISION_INCONSISTENCY": 1
+  },
+  "results": [
+    {
+      "symbol": "AMAT",
+      "classification": "CROSS_PROVIDER_TTM_CONFIRMED",
+      "reasonCodes": [],
+      "periodTypeValidation": {
+        "quarterly": "3M",
+        "annual": "12M",
+        "trailing": "TTM"
+      },
+      "currencyConsistency": "PASS",
+      "latestFourQuarterPeriodEnds": [
+        "2025-07-31",
+        "2025-10-31",
+        "2026-01-31",
+        "2026-04-30"
+      ],
+      "yahooTtmPeriodEnd": "2026-04-30",
+      "yahooInternalComparison": {
+        "matches": true,
+        "differenceEvidenceHash": "51CA46769BB295698DA544C490C6A4F84D70D5C11B69177240AEB9159F723D95"
+      },
+      "crossProviderComparison": {
+        "matches": true,
+        "differenceEvidenceHash": "C177059A68EA0069004D9BD3050A355F49E808150AAD6598B077EEE4D5DCADAA"
+      },
+      "rawYahooResponseHash": "F85A40B0DCA58B5399F100106F46556B239E1268942CC9523362C0E19E76B6F2",
+      "rawYahooEnvelopeFileHash": "E8372AC165770FA216FC536DC97C3844C006E92A590C61CECB830D3C01DB2E99",
+      "rawYahooStorageReference": "storage/provider-validation/yahoo-interest-cross-validation-v1/raw/AMAT/F85A40B0DCA58B5399F100106F46556B239E1268942CC9523362C0E19E76B6F2.json",
+      "controlledComparisonHash": "71A5622A19ED8B903F2CA680D9A187F3EA7BCA3031987047A587BC63CE871EFD",
+      "controlledComparisonStorageReference": "storage/provider-validation/yahoo-interest-cross-validation-v1/controlled/AMAT/71A5622A19ED8B903F2CA680D9A187F3EA7BCA3031987047A587BC63CE871EFD.json",
+      "localSecEvidence": null,
+      "rawProviderValuesIncluded": false
+    },
+    {
+      "symbol": "CIEN",
+      "classification": "YAHOO_INTERNAL_REVISION_INCONSISTENCY",
+      "reasonCodes": [
+        "YAHOO_FOUR_QUARTER_SUM_DIFFERS_FROM_YAHOO_TTM",
+        "EODHD_FOUR_QUARTER_SUM_MATCHES_YAHOO_TTM"
+      ],
+      "periodTypeValidation": {
+        "quarterly": "3M",
+        "annual": "12M",
+        "trailing": "TTM"
+      },
+      "currencyConsistency": "PASS",
+      "latestFourQuarterPeriodEnds": [
+        "2025-07-31",
+        "2025-10-31",
+        "2026-01-31",
+        "2026-04-30"
+      ],
+      "yahooTtmPeriodEnd": "2026-04-30",
+      "yahooInternalComparison": {
+        "matches": false,
+        "differenceEvidenceHash": "447D871777E2D3EDD85E5D4B4511F66575A478BB673A2C0A069F61A32DBFE97E"
+      },
+      "crossProviderComparison": {
+        "matches": true,
+        "differenceEvidenceHash": "C177059A68EA0069004D9BD3050A355F49E808150AAD6598B077EEE4D5DCADAA"
+      },
+      "rawYahooResponseHash": "F2688028DB36EB309387845814FFB75F3DAF36D47181ADBF2EE9D708655A1821",
+      "rawYahooEnvelopeFileHash": "434237B94A533F67C2221CBBAD9E2BE3767A0973122448C640FD90218342D078",
+      "rawYahooStorageReference": "storage/provider-validation/yahoo-interest-cross-validation-v1/raw/CIEN/F2688028DB36EB309387845814FFB75F3DAF36D47181ADBF2EE9D708655A1821.json",
+      "controlledComparisonHash": "CEA78A91418E60AD13C861CA6DE99C5F087EA9EFFFDC5E64DFE6F5223517B174",
+      "controlledComparisonStorageReference": "storage/provider-validation/yahoo-interest-cross-validation-v1/controlled/CIEN/CEA78A91418E60AD13C861CA6DE99C5F087EA9EFFFDC5E64DFE6F5223517B174.json",
+      "localSecEvidence": {
+        "auditPath": "docs/generated/sec-issuer-interest-consistency-audit-v1-3.json",
+        "auditContentHash": "DDF74A1DCCDD67CF74F85C08B007A1333DF6809E6A6E2345A6ECE134F7357C2B",
+        "status": "PARTIAL",
+        "reasonCodes": [
+          "CURRENT_CONDITIONAL_INTEREST_FACTS_PRESENT",
+          "ISSUER_CONCEPT_EQUIVALENCE_NOT_PROVEN"
+        ],
+        "strictTtmStatus": "MISSING",
+        "strictTtmReasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+        "selectedPeriodEnds": [
+          "2025-02-01",
+          "2025-05-03",
+          "2025-08-02",
+          "2025-11-01",
+          "2026-01-31",
+          "2026-05-02"
+        ],
+        "companyFactsSourceContentHash": "C21D892DF2BFF856F6FB965AAAB615CFF705FD0993895C3CD7E4120D9CB53DC3",
+        "submissionsSourceContentHash": "0F4B4E6446DFB8BA182021F89540C2F0886FC92ABB30C432D37F97E20F422406",
+        "differenceExplanation": "NOT_EXPLAINED_BY_LOCAL_SEC_EVIDENCE",
+        "explanationReason": "Cached SEC evidence does not prove provider revision timing or complete economic-scope equivalence."
+      },
+      "rawProviderValuesIncluded": false,
+      "cienRequiredObservation": {
+        "eodhdFourQuarterSumMatchesYahooTtm": true,
+        "yahooDisplayedFourQuarterSumMatchesYahooTtm": false,
+        "decisionDelegatedToMainAlgorithm": true,
+        "statement": "The EODHD same-date four-quarter sum matches Yahoo TTM while Yahoo displayed quarterly observations do not reconcile to that TTM."
+      }
+    },
+    {
+      "symbol": "COO",
+      "classification": "CROSS_PROVIDER_TTM_CONFIRMED",
+      "reasonCodes": [],
+      "periodTypeValidation": {
+        "quarterly": "3M",
+        "annual": "12M",
+        "trailing": "TTM"
+      },
+      "currencyConsistency": "PASS",
+      "latestFourQuarterPeriodEnds": [
+        "2025-07-31",
+        "2025-10-31",
+        "2026-01-31",
+        "2026-04-30"
+      ],
+      "yahooTtmPeriodEnd": "2026-04-30",
+      "yahooInternalComparison": {
+        "matches": true,
+        "differenceEvidenceHash": "51CA46769BB295698DA544C490C6A4F84D70D5C11B69177240AEB9159F723D95"
+      },
+      "crossProviderComparison": {
+        "matches": true,
+        "differenceEvidenceHash": "C177059A68EA0069004D9BD3050A355F49E808150AAD6598B077EEE4D5DCADAA"
+      },
+      "rawYahooResponseHash": "ACDC85D73565A51AD17958D78298C6F801E3F30CBC130190EBF1DF181CBA9105",
+      "rawYahooEnvelopeFileHash": "743087EFCCE65106C18048F5E61B9DAF80EE8029F61A25DEACB3B56355308707",
+      "rawYahooStorageReference": "storage/provider-validation/yahoo-interest-cross-validation-v1/raw/COO/ACDC85D73565A51AD17958D78298C6F801E3F30CBC130190EBF1DF181CBA9105.json",
+      "controlledComparisonHash": "312D8CE3771B21CCFCD215D6386288FDD0590C52723A02785D2454DF67429282",
+      "controlledComparisonStorageReference": "storage/provider-validation/yahoo-interest-cross-validation-v1/controlled/COO/312D8CE3771B21CCFCD215D6386288FDD0590C52723A02785D2454DF67429282.json",
+      "localSecEvidence": null,
+      "rawProviderValuesIncluded": false
+    },
+    {
+      "symbol": "CSCO",
+      "classification": "CROSS_PROVIDER_TTM_CONFIRMED",
+      "reasonCodes": [],
+      "periodTypeValidation": {
+        "quarterly": "3M",
+        "annual": "12M",
+        "trailing": "TTM"
+      },
+      "currencyConsistency": "PASS",
+      "latestFourQuarterPeriodEnds": [
+        "2025-07-31",
+        "2025-10-31",
+        "2026-01-31",
+        "2026-04-30"
+      ],
+      "yahooTtmPeriodEnd": "2026-04-30",
+      "yahooInternalComparison": {
+        "matches": true,
+        "differenceEvidenceHash": "51CA46769BB295698DA544C490C6A4F84D70D5C11B69177240AEB9159F723D95"
+      },
+      "crossProviderComparison": {
+        "matches": true,
+        "differenceEvidenceHash": "C177059A68EA0069004D9BD3050A355F49E808150AAD6598B077EEE4D5DCADAA"
+      },
+      "rawYahooResponseHash": "4A3ED53D2806569AB68976F1E7AD6FAE47E1FF00B49A7EC68F35D41B42D8607B",
+      "rawYahooEnvelopeFileHash": "FAE23A175EE4EC98F4A3D576D1264EC5EF06D4F554AC1EF5E5194AA339FB2EB5",
+      "rawYahooStorageReference": "storage/provider-validation/yahoo-interest-cross-validation-v1/raw/CSCO/4A3ED53D2806569AB68976F1E7AD6FAE47E1FF00B49A7EC68F35D41B42D8607B.json",
+      "controlledComparisonHash": "422BF4BAAF9960A8C73E26448A78E6CDF5A14CF7AE28A73FE867A0C662DAFDE1",
+      "controlledComparisonStorageReference": "storage/provider-validation/yahoo-interest-cross-validation-v1/controlled/CSCO/422BF4BAAF9960A8C73E26448A78E6CDF5A14CF7AE28A73FE867A0C662DAFDE1.json",
+      "localSecEvidence": null,
+      "rawProviderValuesIncluded": false
+    },
+    {
+      "symbol": "DHR",
+      "classification": "CROSS_PROVIDER_TTM_CONFIRMED",
+      "reasonCodes": [],
+      "periodTypeValidation": {
+        "quarterly": "3M",
+        "annual": "12M",
+        "trailing": "TTM"
+      },
+      "currencyConsistency": "PASS",
+      "latestFourQuarterPeriodEnds": [
+        "2025-09-30",
+        "2025-12-31",
+        "2026-03-31",
+        "2026-06-30"
+      ],
+      "yahooTtmPeriodEnd": "2026-06-30",
+      "yahooInternalComparison": {
+        "matches": true,
+        "differenceEvidenceHash": "51CA46769BB295698DA544C490C6A4F84D70D5C11B69177240AEB9159F723D95"
+      },
+      "crossProviderComparison": {
+        "matches": true,
+        "differenceEvidenceHash": "C177059A68EA0069004D9BD3050A355F49E808150AAD6598B077EEE4D5DCADAA"
+      },
+      "rawYahooResponseHash": "2A63D3E88CF75DC68BCFCDEEA7198CACCBE22466A05906F50B28CF4A55E6399E",
+      "rawYahooEnvelopeFileHash": "29786BE8F891E2392AAC6855F59F3AB4DFD3839B536AFC30A7440337AD9AEE8E",
+      "rawYahooStorageReference": "storage/provider-validation/yahoo-interest-cross-validation-v1/raw/DHR/2A63D3E88CF75DC68BCFCDEEA7198CACCBE22466A05906F50B28CF4A55E6399E.json",
+      "controlledComparisonHash": "517A532FA685BE66C8CB24E9626903C12E8DB4B1478218D9B1714DA891CCD398",
+      "controlledComparisonStorageReference": "storage/provider-validation/yahoo-interest-cross-validation-v1/controlled/DHR/517A532FA685BE66C8CB24E9626903C12E8DB4B1478218D9B1714DA891CCD398.json",
+      "localSecEvidence": null,
+      "rawProviderValuesIncluded": false
+    },
+    {
+      "symbol": "FAST",
+      "classification": "CROSS_PROVIDER_TTM_CONFIRMED",
+      "reasonCodes": [],
+      "periodTypeValidation": {
+        "quarterly": "3M",
+        "annual": "12M",
+        "trailing": "TTM"
+      },
+      "currencyConsistency": "PASS",
+      "latestFourQuarterPeriodEnds": [
+        "2025-09-30",
+        "2025-12-31",
+        "2026-03-31",
+        "2026-06-30"
+      ],
+      "yahooTtmPeriodEnd": "2026-06-30",
+      "yahooInternalComparison": {
+        "matches": true,
+        "differenceEvidenceHash": "51CA46769BB295698DA544C490C6A4F84D70D5C11B69177240AEB9159F723D95"
+      },
+      "crossProviderComparison": {
+        "matches": true,
+        "differenceEvidenceHash": "C177059A68EA0069004D9BD3050A355F49E808150AAD6598B077EEE4D5DCADAA"
+      },
+      "rawYahooResponseHash": "74728DA3606982FA551ECA72439BA5175E0ED7152D77FEB415BB505F08EDAFA7",
+      "rawYahooEnvelopeFileHash": "4901BA4BE86F7071E33F9C247B82EEC465DDFBCAB5139F7758176D5F3538041A",
+      "rawYahooStorageReference": "storage/provider-validation/yahoo-interest-cross-validation-v1/raw/FAST/74728DA3606982FA551ECA72439BA5175E0ED7152D77FEB415BB505F08EDAFA7.json",
+      "controlledComparisonHash": "F59FF82BAFFB4607BA3AC7EFF6F89F06A69FBB4913842AA3D5A2797A887EF406",
+      "controlledComparisonStorageReference": "storage/provider-validation/yahoo-interest-cross-validation-v1/controlled/FAST/F59FF82BAFFB4607BA3AC7EFF6F89F06A69FBB4913842AA3D5A2797A887EF406.json",
+      "localSecEvidence": null,
+      "rawProviderValuesIncluded": false
+    },
+    {
+      "symbol": "FIX",
+      "classification": "PROVIDER_VALUE_CONFLICT",
+      "reasonCodes": [
+        "EODHD_FOUR_QUARTER_SUM_DIFFERS_FROM_YAHOO_TTM"
+      ],
+      "periodTypeValidation": {
+        "quarterly": "3M",
+        "annual": "12M",
+        "trailing": "TTM"
+      },
+      "currencyConsistency": "PASS",
+      "latestFourQuarterPeriodEnds": [
+        "2025-09-30",
+        "2025-12-31",
+        "2026-03-31",
+        "2026-06-30"
+      ],
+      "yahooTtmPeriodEnd": "2026-06-30",
+      "yahooInternalComparison": {
+        "matches": true,
+        "differenceEvidenceHash": "51CA46769BB295698DA544C490C6A4F84D70D5C11B69177240AEB9159F723D95"
+      },
+      "crossProviderComparison": {
+        "matches": false,
+        "differenceEvidenceHash": "86FECA43C32AD7D665BEB4577408DB7703024E8D142D850387D624DEA166E169"
+      },
+      "rawYahooResponseHash": "EC024B6B7AAAF8EE0A2F6F01F735A88EE8839931D1C4D0D76513C07DE9BEEA9D",
+      "rawYahooEnvelopeFileHash": "4294C5372FC36F555EF1D3299C503CE5995E48B5A494D9D046017E1C784068CA",
+      "rawYahooStorageReference": "storage/provider-validation/yahoo-interest-cross-validation-v1/raw/FIX/EC024B6B7AAAF8EE0A2F6F01F735A88EE8839931D1C4D0D76513C07DE9BEEA9D.json",
+      "controlledComparisonHash": "8A0B19F26130CA34D399DEDE0BF0F3716B33284748357A2911265299E2E692F5",
+      "controlledComparisonStorageReference": "storage/provider-validation/yahoo-interest-cross-validation-v1/controlled/FIX/8A0B19F26130CA34D399DEDE0BF0F3716B33284748357A2911265299E2E692F5.json",
+      "localSecEvidence": {
+        "auditPath": "docs/generated/sec-issuer-interest-consistency-audit-v1-3.json",
+        "auditContentHash": "DDF74A1DCCDD67CF74F85C08B007A1333DF6809E6A6E2345A6ECE134F7357C2B",
+        "status": "PARTIAL",
+        "reasonCodes": [
+          "CURRENT_CONDITIONAL_INTEREST_FACTS_PRESENT",
+          "ISSUER_CONCEPT_EQUIVALENCE_NOT_PROVEN"
+        ],
+        "strictTtmStatus": "MISSING",
+        "strictTtmReasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+        "selectedPeriodEnds": [
+          "2025-03-31",
+          "2025-06-30",
+          "2025-09-30",
+          "2025-12-31",
+          "2026-03-31",
+          "2026-06-30"
+        ],
+        "companyFactsSourceContentHash": "459A05644D4DE59FD312162263E301AC48CC23B6E4C3EDC03017862576BD4BFF",
+        "submissionsSourceContentHash": "BB7B9D507B78EF32C74F465AAF3C5E28C6D269A2B26B06579E9814F33932E723",
+        "differenceExplanation": "NOT_EXPLAINED_BY_LOCAL_SEC_EVIDENCE",
+        "explanationReason": "Cached SEC evidence does not prove provider revision timing or complete economic-scope equivalence."
+      },
+      "rawProviderValuesIncluded": false
+    },
+    {
+      "symbol": "PLAB",
+      "classification": "PROVIDER_VALUE_CONFLICT",
+      "reasonCodes": [
+        "EODHD_FOUR_QUARTER_SUM_DIFFERS_FROM_YAHOO_TTM"
+      ],
+      "periodTypeValidation": {
+        "quarterly": "3M",
+        "annual": "12M",
+        "trailing": "TTM"
+      },
+      "currencyConsistency": "PASS",
+      "latestFourQuarterPeriodEnds": [
+        "2025-07-31",
+        "2025-10-31",
+        "2026-01-31",
+        "2026-04-30"
+      ],
+      "yahooTtmPeriodEnd": "2026-04-30",
+      "yahooInternalComparison": {
+        "matches": true,
+        "differenceEvidenceHash": "51CA46769BB295698DA544C490C6A4F84D70D5C11B69177240AEB9159F723D95"
+      },
+      "crossProviderComparison": {
+        "matches": false,
+        "differenceEvidenceHash": "93E8BB12F3082ED63BDECE6FCFC01984AAACFF12074805C29C1DBA2BDEC491C1"
+      },
+      "rawYahooResponseHash": "4DBE2C4A11D66A630A708056C50B6F2BE5D4EA9C036CADF86D68A8EBAB7DBF0F",
+      "rawYahooEnvelopeFileHash": "D2898D46204B803449D4F13E9A01420012AF323404F9EB47441FA3B5C2CEA9C0",
+      "rawYahooStorageReference": "storage/provider-validation/yahoo-interest-cross-validation-v1/raw/PLAB/4DBE2C4A11D66A630A708056C50B6F2BE5D4EA9C036CADF86D68A8EBAB7DBF0F.json",
+      "controlledComparisonHash": "5A5F4D38F3650162A9E189CA35D84A5FC06CB8729C29D547708C72D7BCC8530E",
+      "controlledComparisonStorageReference": "storage/provider-validation/yahoo-interest-cross-validation-v1/controlled/PLAB/5A5F4D38F3650162A9E189CA35D84A5FC06CB8729C29D547708C72D7BCC8530E.json",
+      "localSecEvidence": {
+        "auditPath": "docs/generated/sec-issuer-interest-consistency-audit-v1-3.json",
+        "auditContentHash": "DDF74A1DCCDD67CF74F85C08B007A1333DF6809E6A6E2345A6ECE134F7357C2B",
+        "status": "MISSING",
+        "reasonCodes": [
+          "NO_CURRENT_ACCEPTABLE_GROSS_INTEREST_TTM"
+        ],
+        "strictTtmStatus": "MISSING",
+        "strictTtmReasonCode": "FOUR_CONSECUTIVE_DISCRETE_QUARTERS_NOT_AVAILABLE",
+        "selectedPeriodEnds": [
+          "2019-04-28",
+          "2019-07-28",
+          "2019-10-31",
+          "2020-02-02",
+          "2022-01-30",
+          "2023-01-29"
+        ],
+        "companyFactsSourceContentHash": "A72CAFF5E2C65632DBBCE8E3F9455D6CBF68869F7F1BF25F5D7764407009A69B",
+        "submissionsSourceContentHash": "54BAE26661DD088BDFB9A0699D1EDC24C90F36B570A210702DAF8840791AA5EC",
+        "differenceExplanation": "NOT_EXPLAINED_BY_LOCAL_SEC_EVIDENCE",
+        "explanationReason": "Cached SEC evidence does not prove provider revision timing or complete economic-scope equivalence."
+      },
+      "rawProviderValuesIncluded": false
+    },
+    {
+      "symbol": "TSN",
+      "classification": "CROSS_PROVIDER_TTM_CONFIRMED",
+      "reasonCodes": [],
+      "periodTypeValidation": {
+        "quarterly": "3M",
+        "annual": "12M",
+        "trailing": "TTM"
+      },
+      "currencyConsistency": "PASS",
+      "latestFourQuarterPeriodEnds": [
+        "2025-06-30",
+        "2025-09-30",
+        "2025-12-31",
+        "2026-03-31"
+      ],
+      "yahooTtmPeriodEnd": "2026-03-31",
+      "yahooInternalComparison": {
+        "matches": true,
+        "differenceEvidenceHash": "51CA46769BB295698DA544C490C6A4F84D70D5C11B69177240AEB9159F723D95"
+      },
+      "crossProviderComparison": {
+        "matches": true,
+        "differenceEvidenceHash": "C177059A68EA0069004D9BD3050A355F49E808150AAD6598B077EEE4D5DCADAA"
+      },
+      "rawYahooResponseHash": "A1B032D921ABC682BDEE28F57DB3184A97B5B53BC97B34F4D28A4883EF5FD857",
+      "rawYahooEnvelopeFileHash": "70224EE23535CC76F914D253956CCA6B2DFFFD3D95BAA8061D8F4FEC408C5A67",
+      "rawYahooStorageReference": "storage/provider-validation/yahoo-interest-cross-validation-v1/raw/TSN/A1B032D921ABC682BDEE28F57DB3184A97B5B53BC97B34F4D28A4883EF5FD857.json",
+      "controlledComparisonHash": "8DF06048C60F7E4538CCDE704AF90275225942DEC293049F310C466C0FA23E47",
+      "controlledComparisonStorageReference": "storage/provider-validation/yahoo-interest-cross-validation-v1/controlled/TSN/8DF06048C60F7E4538CCDE704AF90275225942DEC293049F310C466C0FA23E47.json",
+      "localSecEvidence": null,
+      "rawProviderValuesIncluded": false
+    },
+    {
+      "symbol": "WDFC",
+      "classification": "PROVIDER_VALUE_CONFLICT",
+      "reasonCodes": [
+        "EODHD_FOUR_QUARTER_SUM_DIFFERS_FROM_YAHOO_TTM"
+      ],
+      "periodTypeValidation": {
+        "quarterly": "3M",
+        "annual": "12M",
+        "trailing": "TTM"
+      },
+      "currencyConsistency": "PASS",
+      "latestFourQuarterPeriodEnds": [
+        "2025-08-31",
+        "2025-11-30",
+        "2026-02-28",
+        "2026-05-31"
+      ],
+      "yahooTtmPeriodEnd": "2026-05-31",
+      "yahooInternalComparison": {
+        "matches": true,
+        "differenceEvidenceHash": "51CA46769BB295698DA544C490C6A4F84D70D5C11B69177240AEB9159F723D95"
+      },
+      "crossProviderComparison": {
+        "matches": false,
+        "differenceEvidenceHash": "95217F290F9CD065862CB66E944FB8CBEE249FBCBC45F471C9DA10193BE9D443"
+      },
+      "rawYahooResponseHash": "CB780135A6278C27F6E7256E48D8908D9EEF90FEB0C8BB9BA85017203BB3C10C",
+      "rawYahooEnvelopeFileHash": "8CFB789FE06233C238AF953804A52BF03C04FE4264F2279686A5BF219FB6B7ED",
+      "rawYahooStorageReference": "storage/provider-validation/yahoo-interest-cross-validation-v1/raw/WDFC/CB780135A6278C27F6E7256E48D8908D9EEF90FEB0C8BB9BA85017203BB3C10C.json",
+      "controlledComparisonHash": "AD0C6F28A8971A96FE8D5075AB7A33C2D87ECA94C8D3CA3C7CE7F8AFC8143EA2",
+      "controlledComparisonStorageReference": "storage/provider-validation/yahoo-interest-cross-validation-v1/controlled/WDFC/AD0C6F28A8971A96FE8D5075AB7A33C2D87ECA94C8D3CA3C7CE7F8AFC8143EA2.json",
+      "localSecEvidence": {
+        "auditPath": "docs/generated/sec-issuer-interest-consistency-audit-v1-3.json",
+        "auditContentHash": "DDF74A1DCCDD67CF74F85C08B007A1333DF6809E6A6E2345A6ECE134F7357C2B",
+        "status": "PARTIAL",
+        "reasonCodes": [
+          "CURRENT_CONDITIONAL_INTEREST_FACTS_PRESENT",
+          "ISSUER_CONCEPT_EQUIVALENCE_NOT_PROVEN"
+        ],
+        "strictTtmStatus": "MISSING",
+        "strictTtmReasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+        "selectedPeriodEnds": [
+          "2025-02-28",
+          "2025-05-31",
+          "2025-08-31",
+          "2025-11-30",
+          "2026-02-28",
+          "2026-05-31"
+        ],
+        "companyFactsSourceContentHash": "34D76002569E6BFFA13978398F5F7F6635A422A853BA02BD6F8EECF3E064D38F",
+        "submissionsSourceContentHash": "4006F90C7B3E4B3BDA080F85877C856DEEF6871AD397C1A5EFA6E95A56CE108E",
+        "differenceExplanation": "NOT_EXPLAINED_BY_LOCAL_SEC_EVIDENCE",
+        "explanationReason": "Cached SEC evidence does not prove provider revision timing or complete economic-scope equivalence."
+      },
+      "rawProviderValuesIncluded": false
+    }
+  ],
+  "methodologyAcceptance": "PENDING_MAIN_ALGORITHM_REVIEW",
+  "interestSupplementsGenerated": false,
+  "scoresOrRanksIncluded": false,
+  "forwardValidationExecuted": false,
+  "rawProviderValuesIncluded": false,
+  "credentialsIncluded": false,
+  "artifactContentHash": "D40DE58FF9AE058507FCAA0DD8CF9152B5A2D4D4616862A02B385BFAD9A1E1B4"
+}

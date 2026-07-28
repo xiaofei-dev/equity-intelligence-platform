@@ -1,0 +1,47 @@
+{
+  "artifactType": "EXPANSION_PROVIDER_GATE_PROGRESS_AGGREGATE",
+  "schemaVersion": "provider-gate-expansion-progress-v1.0.0",
+  "generatedAfterRunId": "20260727T182857Z-502a088ad23e",
+  "networkRequestsExecutedDuringAggregation": false,
+  "completedSliceCount": 3,
+  "frozenUniverseVersion": "provider-expansion-us-v1.0.0",
+  "sliceManifestContentHash": "DEB9EC632BB873B678DC8052A4D6D56AE557FF8F253D5219579CDC49F05154A5",
+  "statusDistribution": {
+    "PASS": 48,
+    "PARTIAL": 6,
+    "EXCLUDED": 6
+  },
+  "scoringInputReadyCount": 48,
+  "slices": [
+    {
+      "sliceId": "slice-001",
+      "runId": "20260727T182014Z-c95420a2d72e",
+      "dashboardBefore": 15238,
+      "dashboardAfter": 15652,
+      "observedDelta": 414,
+      "billingStatus": "PROVISIONALLY_RECONCILED"
+    },
+    {
+      "sliceId": "slice-002",
+      "runId": "20260727T182529Z-eee622b2d7a6",
+      "dashboardBefore": 15652,
+      "dashboardAfter": 16066,
+      "observedDelta": 414,
+      "billingStatus": "PROVISIONALLY_RECONCILED"
+    },
+    {
+      "sliceId": "slice-003",
+      "runId": "20260727T182857Z-502a088ad23e",
+      "reportSha256": "5642E6FA2BE0C75A391911C45BA63AA0BA976894BC65071DAAB048C80E6F3BF7",
+      "scoringInputManifestSha256": "36040E597175A80076A19115D88FD3BCD6B29773EC5CE7E368A51B15AA237537",
+      "dashboardBefore": 16066,
+      "dashboardAfter": null,
+      "observedDelta": null,
+      "billingStatus": "AWAITING_DASHBOARD_AFTER"
+    }
+  ],
+  "endpointLevelBillingStatus": "NOT_RECONCILED",
+  "objectiveRatingExecuted": false,
+  "automaticContinuationAuthorized": false,
+  "artifactContentHash": "3F94A4C2783C4C4234C3206E8E660BFC03DF4EC6EFA92E4869F8102322960E3E"
+}

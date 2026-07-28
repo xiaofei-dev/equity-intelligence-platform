@@ -1,0 +1,34 @@
+{
+  "artifactType": "SEC_FILING_EVIDENCE_CANARY_CHECKPOINT",
+  "schemaVersion": "sec-filing-evidence-checkpoint-v1.0.0",
+  "runId": "20260728T035633Z-a0c07fd99aa9",
+  "sourceReportSha256": "B0EBB7BC2A089E1F25764560B0C1B48FA56EF62F18B417A1D0654A96044EE6DF",
+  "sourceReportContentHash": "8AEB75E963DB263EAB972B6A41EF18F11EE7C099865C6928FB2EC6BC227F2640",
+  "journalManifestHash": "3C1E55A043C870ED97FE75CAE96506F431E244A62EAE87AC04FA75A3B6353B9E",
+  "journalFileCount": 89,
+  "physicalHttpAttempts": 29,
+  "physicalAttemptsByEndpoint": {
+    "company_facts": 3,
+    "filing_index": 5,
+    "inline_xbrl": 5,
+    "label_linkbase": 5,
+    "presentation_linkbase": 5,
+    "submissions": 5,
+    "ticker_mapping": 1
+  },
+  "configuredLocalWeight": 29,
+  "maximumRetries": 0,
+  "completedSymbols": ["AAPL", "CAT", "JNJ", "NVDA", "XEL"],
+  "evidenceHashes": {
+    "AAPL": "89CE61EB3F493B978E6FE1A088452B305325B379AA1F49FDC3224EE7F3BF3FBA",
+    "CAT": "75F15640B4CA96B95B86D9A26509A9F0E8ADF66599B16145D44135F355B53F63",
+    "JNJ": "709663B26D4CF1CD675D7CD5065D3BD91B343D6D7A62D9C2FAFD3703E7E6CB30",
+    "NVDA": "6E5AC453538D7C0697EA7421F4D8DEEFAA30A8C7913167E86A4D03954BC04FDD",
+    "XEL": "820F4DC22E1B349DD9800B4FC6B08F242F754106A21224030A3FA760095A7B29"
+  },
+  "runFinalState": "COMPLETE",
+  "lockReleased": true,
+  "activeProcessObservedAfterRun": false,
+  "resumeRequired": false,
+  "contentHash": "5217779BCEF4A499162D44DD79EE37D167D72C3CD26DBEBF7225604DD5A4AE1D"
+}

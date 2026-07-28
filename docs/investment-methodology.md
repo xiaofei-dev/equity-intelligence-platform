@@ -76,6 +76,31 @@ Expected behavior:
 - Higher sensitivity to costs and slippage
 - Independent performance reporting
 
+The daily tactical model must not collapse rebound potential, entry timing,
+and risk into one recommendation. It reports:
+
+- the stronger setup thesis: momentum or mean reversion;
+- independent one-week, one-month, and three-month opportunity outlooks;
+- a setup-specific current entry-value score;
+- a separate momentum-extension or chase-risk score;
+- an entry stage: none, early candidate, probe eligible, confirmed, or
+  invalidated;
+- actionability and a deterministic risk-unit cap;
+- the completed-session cutoff, earliest next-session execution, and
+  one-session expiry.
+
+An early candidate is not an entry. A probe is intentionally earlier and less
+certain than a confirmed reversal, so it is limited to a fraction of one
+separately configured risk unit. A high rebound-potential score may coexist
+with low timing confidence or a risk block.
+
+A favorable opportunity does not automatically mean that the current price is
+an attractive entry. A gradual breakout may remain actionable even near a
+52-week high, while an unusually accelerated and extended breakout may return
+`WAIT_FOR_PULLBACK` with a zero risk-unit cap. The extension rule must use
+completed-session price structure rather than penalizing a security merely for
+making a new high.
+
 Near-term market condition and long-term investment assessment must remain
 separate. Strong momentum must not conceal weak business quality or an
 insufficient margin of safety, and weak momentum must not automatically

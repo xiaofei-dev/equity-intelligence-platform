@@ -1,0 +1,165 @@
+{
+  "artifactType": "OBJECTIVE_RATING_V1_SOURCE_SEMANTICS_AUDIT",
+  "schemaVersion": "objective-rating-v1-source-semantics-audit-v1.0.0",
+  "evidencePolicyVersion": "objective-rating-evidence-policy-v4.1.0",
+  "interestPolicyVersion": "sec-interest-expense-policy-v1.1.0",
+  "sourceAggregatePath": "docs/generated/formula-ready-243-final-aggregate-v1.json",
+  "sourceAggregateSha256": "2B3EE90401BB635FBB07CA977FD35D7A371CB64BB1735D070FC28268598CA9F8",
+  "sourceAggregateContentHash": "CE0EB2F588105DA4E12F8BB763EC65B759714A2C4A6C9435C35A9F2ED9F69859",
+  "sourceCanaryReportPath": "docs/generated/sec-filing-evidence-20260728T035633Z-a0c07fd99aa9.json",
+  "sourceCanaryReportSha256": "B0EBB7BC2A089E1F25764560B0C1B48FA56EF62F18B417A1D0654A96044EE6DF",
+  "sourceCanaryReportContentHash": "8AEB75E963DB263EAB972B6A41EF18F11EE7C099865C6928FB2EC6BC227F2640",
+  "sourceCanaryDiagnosticsPath": "docs/generated/sec-filing-evidence-20260728T035633Z-a0c07fd99aa9-diagnostics.json",
+  "sourceCanaryDiagnosticsSha256": "F70F85529EFD0198AC8E3B04AC32D04C2BF4578A7F6142B98D187C59B56C293A",
+  "formulaReadyProviderSecurityCount": 223,
+  "frozenSemantics": {
+    "interestExpense": "GROSS_REPORTED_INTEREST_EXPENSE_USED_AS_ABSOLUTE_EBIT_DENOMINATOR",
+    "totalDebt": "NORMALIZED_TOTAL_DEBT_WHERE_SUPPLIED",
+    "ebitda": "NORMALIZED_REPORTED_EBITDA_INPUT",
+    "marketCapitalization": "PROVIDER_MARKET_CAP_OR_PRICE_TIMES_PIT_INSTANT_SHARES",
+    "historicalFcfYieldPercentile": "MINIMUM_12_MONTHLY_PIT_FCF_YIELDS_USING_THEN_AVAILABLE_FCF_AND_SHARES"
+  },
+  "interestConceptAudit": {
+    "InterestExpense": {
+      "decision": "ACCEPT",
+      "economicScope": "TOTAL_GROSS_INTEREST_EXPENSE_OPERATING_AND_NONOPERATING",
+      "conditions": [
+        "CONSOLIDATED_ENTITY_CONTEXT",
+        "NO_SEGMENT_OR_RELATED_PARTY_DIMENSIONS",
+        "USD_DURATION_FACT",
+        "PIT_ACCESSION_AVAILABLE"
+      ],
+      "cachedSecurityCountWithAcceptedDurationFact": 171,
+      "cachedAcceptedDurationFactCount": 14828
+    },
+    "InterestExpenseDebt": {
+      "decision": "CONDITIONAL",
+      "economicScope": "COST_OF_BORROWED_FUNDS_ACCOUNTED_FOR_AS_INTEREST",
+      "conditions": [
+        "CONSOLIDATED_FACE_STATEMENT_OR_COMPLETE_CALCULATION_TOTAL",
+        "ISSUER_POLICY_PROVES_NO_OMITTED_INTEREST_COMPONENT",
+        "NO_SEGMENT_OR_RELATED_PARTY_DIMENSIONS",
+        "PIT_ACCESSION_AVAILABLE"
+      ],
+      "cachedSecurityCountWithAcceptedDurationFact": 39,
+      "cachedAcceptedDurationFactCount": 1950
+    },
+    "InterestExpenseNonoperating": {
+      "decision": "CONDITIONAL",
+      "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+      "conditions": [
+        "MATURE_NONFINANCIAL_OPERATING_COMPANY",
+        "ISSUER_POLICY_PROVES_NO_OPERATING_INTEREST_COMPONENT",
+        "CONSOLIDATED_FACE_STATEMENT",
+        "PIT_ACCESSION_AVAILABLE"
+      ],
+      "cachedSecurityCountWithAcceptedDurationFact": 118,
+      "cachedAcceptedDurationFactCount": 2652
+    },
+    "InterestAndDebtExpense": {
+      "decision": "REJECT",
+      "economicScope": "INTEREST_AND_DEBT_RELATED_FINANCING_EXPENSE",
+      "reason": "MAY_INCLUDE_NONINTEREST_DEBT_EXPENSE",
+      "cachedSecurityCountWithAcceptedDurationFact": 22,
+      "cachedAcceptedDurationFactCount": 1818
+    }
+  },
+  "providerFieldAudit": {
+    "interest_expense": {
+      "securityCountsByProvider": {
+        "eodhd": 222,
+        "sec_edgar": 182
+      },
+      "recordCountsByProviderAndPeriodType": {
+        "eodhd:ANNUAL": 660,
+        "eodhd:QUARTERLY": 1415,
+        "sec_edgar:QUARTERLY": 4388
+      }
+    },
+    "total_debt": {
+      "securityCountsByProvider": {
+        "eodhd": 223
+      },
+      "recordCountsByProviderAndPeriodType": {
+        "eodhd:ANNUAL": 667,
+        "eodhd:QUARTERLY": 1779
+      }
+    },
+    "ebitda": {
+      "securityCountsByProvider": {
+        "eodhd": 223
+      },
+      "recordCountsByProviderAndPeriodType": {
+        "eodhd:ANNUAL": 669,
+        "eodhd:QUARTERLY": 1783
+      }
+    },
+    "market_capitalization": {
+      "securityCountsByProvider": {
+        "eodhd": 223
+      },
+      "recordCountsByProviderAndPeriodType": {
+        "eodhd:DAILY": 58432
+      }
+    }
+  },
+  "canarySemanticReclassification": {
+    "symbol": "XEL",
+    "originalCanaryInterestDecision": "STRICT_INTEREST_SCOPE_NOT_PROVEN",
+    "reclassifiedPrimitiveDecision": "ACCEPT_TOTAL_INTEREST_PRIMITIVE",
+    "reason": "InterestExpense is the taxonomy total operating-and-nonoperating gross interest concept and appears on the consolidated income statement",
+    "ratingEligibilityChanged": false
+  },
+  "purposeSeparation": {
+    "CURRENT_SNAPSHOT_RATING": {
+      "historicalProviderPublicationMetadataRequiredForCurrentMarketCap": false,
+      "currentObservationMustBeIngestedByCutoff": true,
+      "uqHistoricalFcfYieldStillRequiresMonthlyPitInputs": true
+    },
+    "FORWARD_DECISION_QUALITY_VALIDATION": {
+      "usesSealedCurrentRatingSnapshot": true,
+      "historicalProviderPublicationMetadataRequiredBeyondFrozenFactorInputs": false,
+      "mayClaimHistoricalBacktestReadiness": false
+    },
+    "HISTORICAL_BACKTEST_RECONSTRUCTION": {
+      "historicalAvailabilityAndRevisionLineageRequired": true,
+      "currentIngestionMayProvePastAvailability": false
+    }
+  },
+  "eligibilityRecalculation": {
+    "currentQcEligibleCount": 0,
+    "currentUqEligibleCount": 0,
+    "historicalPitEligibleCount": 0,
+    "interestNoLongerUniversalBlocker": true,
+    "remainingCurrentQcBlockers": [
+      "VENDOR_TOTAL_DEBT_SEMANTIC_DOCUMENTATION_NOT_ACCEPTED",
+      "VENDOR_EBITDA_TTM_SEMANTICS_NOT_PROVEN"
+    ],
+    "remainingCurrentUqBlockers": [
+      "VENDOR_TOTAL_DEBT_SEMANTIC_DOCUMENTATION_NOT_ACCEPTED",
+      "VENDOR_EBITDA_TTM_SEMANTICS_NOT_PROVEN",
+      "HISTORICAL_FCF_YIELD_MONTHLY_PIT_INPUTS_NOT_PROVEN"
+    ],
+    "remainingHistoricalBlockers": [
+      "HISTORICAL_FUNDAMENTAL_AVAILABILITY_AND_REVISIONS_NOT_PROVEN",
+      "HISTORICAL_MARKET_CAP_OR_CLASS_SPECIFIC_SHARES_PIT_NOT_PROVEN"
+    ]
+  },
+  "minimumNextEvidence": {
+    "providerDocumentationOnly": [
+      "shortLongTermDebtTotal exact inclusion and exclusion semantics",
+      "financial-statement ebitda exact definition and whether quarterly values are discrete",
+      "current or TTM EBITDA period identity"
+    ],
+    "historicalPitData": [
+      "class-specific reported shares with availableAt and corporate-action lineage",
+      "or historical market capitalization with publication and revision lineage"
+    ]
+  },
+  "networkRequestsExecuted": false,
+  "algorithmScoringExecuted": false,
+  "forwardValidationExecuted": false,
+  "formulaChanges": false,
+  "licensedValuesIncluded": false,
+  "artifactContentHash": "E1D52253BB3988779DF4DACD509BFF1DE2573C2BE88DC334320D4250531D3CD4"
+}

@@ -1,0 +1,56 @@
+{
+  "artifactType": "FORMULA_READY_BACKFILL_EXECUTION_FAILURE_BILLING",
+  "schemaVersion": "formula-ready-backfill-execution-failure-billing-v1.0.0",
+  "artifactRunId": "20260727T203648Z-2500d75e8f57",
+  "failedRunIds": [
+    "20260727T202434Z-280943640209",
+    "20260727T202526Z-4cb742a9d9c9"
+  ],
+  "sliceId": "formula-ready-001",
+  "dashboardBefore": 21565,
+  "dashboardAfter": 21691,
+  "observedProviderBilledDelta": 126,
+  "approvedProvisionalProviderBilling": 500,
+  "approvedProviderBilledSafetyCeiling": 750,
+  "runLevelBillingStatus": "PROVISIONAL_ONLY",
+  "endpointLevelBillingStatus": "NOT_RECONCILED",
+  "telemetryCompleteness": "INCOMPLETE",
+  "preflight": {
+    "symbolCount": 20,
+    "eodhdPhysicalAttemptCeiling": 60,
+    "secPhysicalAttemptCeiling": 60,
+    "totalPhysicalAttemptCeiling": 120,
+    "configuredLocalWeightCeiling": 240,
+    "retryCeiling": 0
+  },
+  "executionEvidence": {
+    "firstRunFailure": "LOCAL_ENV_PATH_ARGUMENT_MISSING_BEFORE_NETWORK",
+    "secondRunFailure": "RUNNER_WAIT_TIMEOUT_WITH_LIVE_CHILD_PROCESS",
+    "terminatedProcesses": [
+      {
+        "pid": 1620,
+        "startTimeLocal": "2026-07-27T13:25:26-07:00",
+        "executable": "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python314\\python.exe"
+      },
+      {
+        "pid": 37356,
+        "startTimeLocal": "2026-07-27T13:25:26-07:00",
+        "executable": "C:\\Projects\\equity-intelligence-platform\\analysis-python\\.venv\\Scripts\\python.exe"
+      }
+    ],
+    "staleLockOwnerRunId": "20260727T202526Z-4cb742a9d9c9",
+    "staleLockRemovedAfterOwnerTermination": true,
+    "immutableReportProduced": false,
+    "symbolCheckpointProduced": false,
+    "endpointAttemptCountsAvailable": false,
+    "processesRemainingAfterTermination": 0
+  },
+  "inferencesExplicitlyRejected": [
+    "No endpoint-level attempt counts are inferred from the dashboard delta.",
+    "No configured endpoint weight is asserted to match provider billing.",
+    "The dashboard delta is not attributed to a specific endpoint or process."
+  ],
+  "objectiveRatingExecuted": false,
+  "forwardValidationExecuted": false,
+  "artifactContentHash": "1DAB1638F557E95257C9520AA8E9EF42956D68728760AC6E7F4A1C19F67AAA7C"
+}

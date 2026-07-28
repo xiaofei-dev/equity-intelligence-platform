@@ -21,6 +21,8 @@ class SnapshotRequest:
     market_normalization_version: str
     fundamental_normalization_version: str
     action_normalization_version: str
+    market_data_provider: str = "twelve_data"
+    market_adjustment_mode: str = "SPLIT_ADJUSTED"
 
 
 class DataSnapshotRepository:
@@ -41,11 +43,16 @@ class DataSnapshotRepository:
                 "fundamental": request.fundamental_normalization_version,
                 "action": request.action_normalization_version,
             },
+            "marketDataProvider": request.market_data_provider,
+            "marketAdjustmentMode": request.market_adjustment_mode,
             "sources": sorted(
                 (
                     str(item["batch_id"]),
                     item["content_hash"],
                     item["source_reference"],
+                    item.get("provider_code", "legacy"),
+                    item.get("provider_schema_version", "legacy"),
+                    item.get("parser_version", "legacy"),
                 )
                 for item in batches
             ),
@@ -60,29 +67,43 @@ class DataSnapshotRepository:
             batches = connection.execute(
                 """
                 SELECT DISTINCT batch.id AS batch_id, source.content_hash,
-                       source.source_reference
+                       source.source_reference, provider.code,
+                       source.schema_version, batch.parser_version
                 FROM analytics.ingestion_batch batch
+                JOIN analytics.data_provider provider ON provider.id = batch.provider_id
                 JOIN analytics.source_record source
                   ON source.ingestion_batch_id = batch.id
                 WHERE batch.status = 'SUCCEEDED'
                   AND source.available_at <= %s
                   AND source.ingested_at <= %s
+                  AND (
+                    provider.code NOT IN ('twelve_data', 'yfinance', 'eodhd')
+                    OR provider.code = %s
+                  )
                 ORDER BY batch.id, source.content_hash, source.source_reference
                 """,
-                (request.as_of_time, request.ingestion_cutoff),
+                (
+                    request.as_of_time,
+                    request.ingestion_cutoff,
+                    request.market_data_provider,
+                ),
             ).fetchall()
             batch_items = [
                 {
                     "batch_id": row[0],
                     "content_hash": row[1],
                     "source_reference": row[2],
+                    "provider_code": row[3],
+                    "provider_schema_version": row[4],
+                    "parser_version": row[5],
                 }
                 for row in batches
             ]
             manifest_hash = self._identity(request, batch_items)
             existing = connection.execute(
                 """
-                SELECT id, status, manifest_hash, as_of_time, ingestion_cutoff
+                SELECT id, status, manifest_hash, as_of_time, ingestion_cutoff,
+                       market_data_provider, market_adjustment_mode
                 FROM analytics.data_snapshot WHERE snapshot_key = %s
                 """,
                 (request.snapshot_key,),
@@ -92,6 +113,8 @@ class DataSnapshotRepository:
                     existing[2] != manifest_hash
                     or existing[3] != request.as_of_time
                     or existing[4] != request.ingestion_cutoff
+                    or existing[5] != request.market_data_provider
+                    or existing[6] != request.market_adjustment_mode
                 ):
                     raise SnapshotConflictError(
                         "Snapshot key is already associated with different inputs"
@@ -114,8 +137,9 @@ class DataSnapshotRepository:
                         snapshot_key, status, as_of_time, ingestion_cutoff,
                         market_normalization_version,
                         fundamental_normalization_version,
-                        action_normalization_version, manifest_hash
-                    ) VALUES (%s, 'BUILDING', %s, %s, %s, %s, %s, %s)
+                        action_normalization_version, manifest_hash,
+                        market_data_provider, market_adjustment_mode
+                    ) VALUES (%s, 'BUILDING', %s, %s, %s, %s, %s, %s, %s, %s)
                     RETURNING id
                     """,
                     (
@@ -126,6 +150,8 @@ class DataSnapshotRepository:
                         request.fundamental_normalization_version,
                         request.action_normalization_version,
                         manifest_hash,
+                        request.market_data_provider,
+                        request.market_adjustment_mode,
                     ),
                 ).fetchone()
                 assert row is not None

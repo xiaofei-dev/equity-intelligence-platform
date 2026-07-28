@@ -1,0 +1,4160 @@
+{
+  "artifactType": "FORWARD_DAILY_REFRESH_PLAN",
+  "schemaVersion": "forward-daily-refresh-plan-v1.0.0",
+  "policyVersion": "FORWARD-DAILY-INCREMENTAL-REFRESH-v1.0.0",
+  "status": "WAITING_FOR_COMPLETED_SESSION",
+  "targetSessionDate": "2026-07-28",
+  "sessionCompleted": false,
+  "sourceProtocol": {
+    "path": "docs/generated/forward-daily-incremental-protocol-v1.json",
+    "artifactContentHash": "21CA573B4BAEEFE7EA8225BCA3547EA31BD895007F5BF7AB57DE1CB54630F457"
+  },
+  "lastUpdatePolicy": {
+    "pricesAndMarketCap": "REFRESH_AFTER_EACH_COMPLETED_SESSION",
+    "fundamentals": "REFRESH_WHEN_OLDER_THAN_7_CALENDAR_DAYS",
+    "identity": "REFRESH_WHEN_OLDER_THAN_7_CALENDAR_DAYS",
+    "corporateActions": "REFRESH_ACTIVE_PREVIEW_AND_BENCHMARKS; UNIVERSE_TTL_7_CALENDAR_DAYS",
+    "missingLastUpdateIsDueImmediately": true
+  },
+  "requestCountsByEndpoint": {
+    "div": 64,
+    "eod": 231,
+    "fundamentals": 7,
+    "historical-market-cap": 223,
+    "splits": 64
+  },
+  "plannedPhysicalRequests": 589,
+  "dailyQuota": 100000,
+  "plannedQuotaPercent": "0.589",
+  "configuredCeiling": 1000,
+  "hardCeiling": 1500,
+  "retries": 0,
+  "requests": [
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "ADM",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "ADP",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "ALLE",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "AOS",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "APH",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "APP",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "APTV",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "AVGO",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "AXON",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "BLDR",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "BMY",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "CARR",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "CF",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "CL",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "CVS",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "DE",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "DVA",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "DXCM",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "EA",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "ELV",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "FICO",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "FIX",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "GPC",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "HLT",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "HRL",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "HSIC",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "HUM",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "IDXX",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "INTU",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "ITW",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "KDP",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "KLAC",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "LLY",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "LMT",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "LRCX",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "MCHP",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "MDLZ",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "MKC",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "MLM",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "MNST",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "MO",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "MRK",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "NUE",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "NVDA",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "NWSA",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "PCAR",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "PPG",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "QCOM",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "ROST",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "SAIA",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "SBUX",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "SPY",
+      "targetDate": "2026-07-28",
+      "reason": "BENCHMARK_ACTIONS_REQUIRED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "SYY",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "TGT",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "TSN",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "UFPI",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "UPS",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "XLB",
+      "targetDate": "2026-07-28",
+      "reason": "BENCHMARK_ACTIONS_REQUIRED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "XLC",
+      "targetDate": "2026-07-28",
+      "reason": "BENCHMARK_ACTIONS_REQUIRED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "XLI",
+      "targetDate": "2026-07-28",
+      "reason": "BENCHMARK_ACTIONS_REQUIRED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "XLK",
+      "targetDate": "2026-07-28",
+      "reason": "BENCHMARK_ACTIONS_REQUIRED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "XLP",
+      "targetDate": "2026-07-28",
+      "reason": "BENCHMARK_ACTIONS_REQUIRED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "XLV",
+      "targetDate": "2026-07-28",
+      "reason": "BENCHMARK_ACTIONS_REQUIRED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "div",
+      "symbol": "XLY",
+      "targetDate": "2026-07-28",
+      "reason": "BENCHMARK_ACTIONS_REQUIRED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "A",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "AAPL",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "ACN",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "ADBE",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "ADI",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "ADM",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "ADP",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "ADSK",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "AEE",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "AEP",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "AES",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "AKAM",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "ALB",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "ALLE",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "AMAT",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "AMCR",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "AMD",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "AME",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "AMZN",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "AOS",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "APD",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "APH",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "APP",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "APTV",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "ATO",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "AVGO",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "AVY",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "AWK",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "AXON",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "BA",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "BALL",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "BAX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "BBY",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "BDX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "BF-B",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "BG",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "BKNG",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "BLDR",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "BMY",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "BR",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "BSX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "CARR",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "CASY",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "CAT",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "CCL",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "CDNS",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "CDW",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "CEG",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "CF",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "CHD",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "CHRW",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "CHTR",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "CI",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "CIEN",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "CL",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "CLX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "CMCSA",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "CMI",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "CMS",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "CNC",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "CNP",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "COHR",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "COO",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "COR",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "CPRT",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "CRH",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "CRL",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "CROX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "CRWD",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "CSCO",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "CSX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "CTSH",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "CTVA",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "CVS",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "D",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "DAL",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "DD",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "DDOG",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "DE",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "DELL",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "DG",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "DGX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "DHR",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "DIS",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "DLTR",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "DOV",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "DTE",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "DUK",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "DVA",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "DXCM",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "EA",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "EBAY",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "ECL",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "ED",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "EFX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "EIX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "EL",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "ELF",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "ELV",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "EME",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "EMR",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "ES",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "ETN",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "ETR",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "EVRG",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "EXC",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "EXPE",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "F",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "FAST",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "FDX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "FE",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "FICO",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "FIX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "FLEX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "FOX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "FOXA",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "FSLR",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "FTV",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "GD",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "GEHC",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "GIS",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "GM",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "GOOG",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "GOOGL",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "GPC",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "GWW",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "HD",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "HLT",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "HON",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "HRL",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "HSIC",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "HUM",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "HWKN",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "IBM",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "IDXX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "IFF",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "INTU",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "IP",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "IQV",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "ITW",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "JNJ",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "KDP",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "KHC",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "KLAC",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "KMB",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "KO",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "KVUE",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "LEN",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "LH",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "LIN",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "LLY",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "LMT",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "LNT",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "LOW",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "LRCX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "LYV",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "MCD",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "MCHP",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "MCK",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "MDLZ",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "META",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "MKC",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "MLM",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "MNST",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "MO",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "MOS",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "MRK",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "MSFT",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "NFLX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "NI",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "NKE",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "NOC",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "NRG",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "NUE",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "NVDA",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "NWSA",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "OLED",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "OMC",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "ORCL",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "ORLY",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "PCAR",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "PCG",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "PEG",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "PFE",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "PG",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "PH",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "PLAB",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "PM",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "PNW",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "PPG",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "PPL",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "QCOM",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "ROK",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "ROST",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "RTX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "SAIA",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "SBUX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "SHW",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "SJM",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "SO",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "SPY",
+      "targetDate": "2026-07-28",
+      "reason": "BENCHMARK_TARGET_SESSION_PRICE_REQUIRED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "SRE",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "SW",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "SYY",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "T",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "TGT",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "TJX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "TKO",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "TMUS",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "TSN",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "TTC",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "TTD",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "TTWO",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "UFPI",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "UNP",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "UPS",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "VMC",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "WBD",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "WDFC",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "WM",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "WMT",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "XEL",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "XLB",
+      "targetDate": "2026-07-28",
+      "reason": "BENCHMARK_TARGET_SESSION_PRICE_REQUIRED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "XLC",
+      "targetDate": "2026-07-28",
+      "reason": "BENCHMARK_TARGET_SESSION_PRICE_REQUIRED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "XLI",
+      "targetDate": "2026-07-28",
+      "reason": "BENCHMARK_TARGET_SESSION_PRICE_REQUIRED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "XLK",
+      "targetDate": "2026-07-28",
+      "reason": "BENCHMARK_TARGET_SESSION_PRICE_REQUIRED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "XLP",
+      "targetDate": "2026-07-28",
+      "reason": "BENCHMARK_TARGET_SESSION_PRICE_REQUIRED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "XLV",
+      "targetDate": "2026-07-28",
+      "reason": "BENCHMARK_TARGET_SESSION_PRICE_REQUIRED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "XLY",
+      "targetDate": "2026-07-28",
+      "reason": "BENCHMARK_TARGET_SESSION_PRICE_REQUIRED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "YUM",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "eod",
+      "symbol": "ZBH",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_PRICE_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "fundamentals",
+      "symbol": "A",
+      "targetDate": "2026-07-28",
+      "reason": "FUNDAMENTALS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "fundamentals",
+      "symbol": "AAPL",
+      "targetDate": "2026-07-28",
+      "reason": "FUNDAMENTALS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "fundamentals",
+      "symbol": "ACN",
+      "targetDate": "2026-07-28",
+      "reason": "FUNDAMENTALS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "fundamentals",
+      "symbol": "ADBE",
+      "targetDate": "2026-07-28",
+      "reason": "FUNDAMENTALS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "fundamentals",
+      "symbol": "ADI",
+      "targetDate": "2026-07-28",
+      "reason": "FUNDAMENTALS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "fundamentals",
+      "symbol": "CAT",
+      "targetDate": "2026-07-28",
+      "reason": "FUNDAMENTALS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "fundamentals",
+      "symbol": "JNJ",
+      "targetDate": "2026-07-28",
+      "reason": "FUNDAMENTALS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "A",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "AAPL",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "ACN",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "ADBE",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "ADI",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "ADM",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "ADP",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "ADSK",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "AEE",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "AEP",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "AES",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "AKAM",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "ALB",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "ALLE",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "AMAT",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "AMCR",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "AMD",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "AME",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "AMZN",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "AOS",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "APD",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "APH",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "APP",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "APTV",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "ATO",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "AVGO",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "AVY",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "AWK",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "AXON",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "BA",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "BALL",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "BAX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "BBY",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "BDX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "BF-B",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "BG",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "BKNG",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "BLDR",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "BMY",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "BR",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "BSX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "CARR",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "CASY",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "CAT",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "CCL",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "CDNS",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "CDW",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "CEG",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "CF",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "CHD",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "CHRW",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "CHTR",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "CI",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "CIEN",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "CL",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "CLX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "CMCSA",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "CMI",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "CMS",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "CNC",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "CNP",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "COHR",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "COO",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "COR",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "CPRT",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "CRH",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "CRL",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "CROX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "CRWD",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "CSCO",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "CSX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "CTSH",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "CTVA",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "CVS",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "D",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "DAL",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "DD",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "DDOG",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "DE",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "DELL",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "DG",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "DGX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "DHR",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "DIS",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "DLTR",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "DOV",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "DTE",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "DUK",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "DVA",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "DXCM",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "EA",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "EBAY",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "ECL",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "ED",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "EFX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "EIX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "EL",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "ELF",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "ELV",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "EME",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "EMR",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "ES",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "ETN",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "ETR",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "EVRG",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "EXC",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "EXPE",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "F",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "FAST",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "FDX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "FE",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "FICO",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "FIX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "FLEX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "FOX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "FOXA",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "FSLR",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "FTV",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "GD",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "GEHC",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "GIS",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "GM",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "GOOG",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "GOOGL",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "GPC",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "GWW",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "HD",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "HLT",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "HON",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "HRL",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "HSIC",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "HUM",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "HWKN",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "IBM",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "IDXX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "IFF",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "INTU",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "IP",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "IQV",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "ITW",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "JNJ",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "KDP",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "KHC",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "KLAC",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "KMB",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "KO",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "KVUE",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "LEN",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "LH",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "LIN",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "LLY",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "LMT",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "LNT",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "LOW",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "LRCX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "LYV",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "MCD",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "MCHP",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "MCK",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "MDLZ",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "META",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "MKC",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "MLM",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "MNST",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "MO",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "MOS",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "MRK",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "MSFT",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "NFLX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "NI",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "NKE",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "NOC",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "NRG",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "NUE",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "NVDA",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "NWSA",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "OLED",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "OMC",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "ORCL",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "ORLY",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "PCAR",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "PCG",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "PEG",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "PFE",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "PG",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "PH",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "PLAB",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "PM",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "PNW",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "PPG",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "PPL",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "QCOM",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "ROK",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "ROST",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "RTX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "SAIA",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "SBUX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "SHW",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "SJM",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "SO",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "SRE",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "SW",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "SYY",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "T",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "TGT",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "TJX",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "TKO",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "TMUS",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "TSN",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "TTC",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "TTD",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "TTWO",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "UFPI",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "UNP",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "UPS",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "VMC",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "WBD",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "WDFC",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "WM",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "WMT",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "XEL",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "YUM",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "historical-market-cap",
+      "symbol": "ZBH",
+      "targetDate": "2026-07-28",
+      "reason": "TARGET_SESSION_MARKET_CAP_NOT_OBSERVED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "ADM",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "ADP",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "ALLE",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "AOS",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "APH",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "APP",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "APTV",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "AVGO",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "AXON",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "BLDR",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "BMY",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "CARR",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "CF",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "CL",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "CVS",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "DE",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "DVA",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "DXCM",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "EA",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "ELV",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "FICO",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "FIX",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "GPC",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "HLT",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "HRL",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "HSIC",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "HUM",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "IDXX",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "INTU",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "ITW",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "KDP",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "KLAC",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "LLY",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "LMT",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "LRCX",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "MCHP",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "MDLZ",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "MKC",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "MLM",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "MNST",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "MO",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "MRK",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "NUE",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "NVDA",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "NWSA",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "PCAR",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "PPG",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "QCOM",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "ROST",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "SAIA",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "SBUX",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "SPY",
+      "targetDate": "2026-07-28",
+      "reason": "BENCHMARK_ACTIONS_REQUIRED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "SYY",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "TGT",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "TSN",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "UFPI",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "UPS",
+      "targetDate": "2026-07-28",
+      "reason": "ACTIVE_PREVIEW_ACTIONS_TTL_DUE"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "XLB",
+      "targetDate": "2026-07-28",
+      "reason": "BENCHMARK_ACTIONS_REQUIRED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "XLC",
+      "targetDate": "2026-07-28",
+      "reason": "BENCHMARK_ACTIONS_REQUIRED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "XLI",
+      "targetDate": "2026-07-28",
+      "reason": "BENCHMARK_ACTIONS_REQUIRED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "XLK",
+      "targetDate": "2026-07-28",
+      "reason": "BENCHMARK_ACTIONS_REQUIRED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "XLP",
+      "targetDate": "2026-07-28",
+      "reason": "BENCHMARK_ACTIONS_REQUIRED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "XLV",
+      "targetDate": "2026-07-28",
+      "reason": "BENCHMARK_ACTIONS_REQUIRED"
+    },
+    {
+      "provider": "EODHD",
+      "endpoint": "splits",
+      "symbol": "XLY",
+      "targetDate": "2026-07-28",
+      "reason": "BENCHMARK_ACTIONS_REQUIRED"
+    }
+  ],
+  "networkRequestsExecuted": false,
+  "automaticTradingAuthorized": false,
+  "artifactContentHash": "4986A192636683250A8067431E877BDA998A7FFAFE6D6DEDBCF5EC777A09BB29"
+}

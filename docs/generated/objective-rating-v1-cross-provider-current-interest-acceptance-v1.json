@@ -1,0 +1,83 @@
+{
+  "artifactType": "OBJECTIVE_RATING_V1_CROSS_PROVIDER_CURRENT_INTEREST_ACCEPTANCE",
+  "schemaVersion": "objective-rating-v1-cross-provider-current-interest-acceptance-v1.0.0",
+  "policyVersion": "current-interest-cross-provider-evidence-v1.0.0",
+  "sourceProviderArtifact": {
+    "path": "docs/generated/provider-current-interest-cross-validation-20260728T075513Z-483a7026d70b.json",
+    "fileSha256": "4867C85B8975CA0A4B6600A83903D637EFA792DFEE0899560890C472B1E576B3",
+    "contentHash": "D40DE58FF9AE058507FCAA0DD8CF9152B5A2D4D4616862A02B385BFAD9A1E1B4"
+  },
+  "evidenceGateStatus": "ACCEPTED_CURRENT_SNAPSHOT_INPUT_ONLY",
+  "providerArtifactCoverage": {
+    "frozenSecurityCount": 10,
+    "terminalSecurityCount": 10,
+    "coveragePercent": "100.0000",
+    "systemFailureCount": 0
+  },
+  "acceptedCurrentTtm": {
+    "count": 7,
+    "confirmedSymbols": [
+      "AMAT",
+      "COO",
+      "CSCO",
+      "DHR",
+      "FAST",
+      "TSN"
+    ],
+    "confirmedWithQuarterConflictSymbols": [
+      "CIEN"
+    ],
+    "exactDecimalCrossProviderMatchCount": 7,
+    "toleranceOnlyMatchCount": 0
+  },
+  "providerConflict": {
+    "count": 3,
+    "symbols": [
+      "FIX",
+      "PLAB",
+      "WDFC"
+    ],
+    "factorStatus": "MISSING",
+    "numericSubstituteAllowed": false,
+    "localSecResolutionStatus": "NOT_RESOLVED"
+  },
+  "cienDecision": {
+    "status": "CURRENT_TTM_CONFIRMED_WITH_QUARTER_CONFLICT",
+    "factorStatus": "VALID",
+    "riskFlag": "YAHOO_QUARTER_SERIES_CONFLICT",
+    "eodhdSumExactlyMatchesYahooTtm": true,
+    "yahooQuarterSumExactlyMatchesYahooTtm": false,
+    "quarterHistoryAuthorized": false
+  },
+  "limitations": {
+    "currentSnapshotOnly": true,
+    "grossEconomicScopeProven": false,
+    "historicalPitAuthorized": false,
+    "quarterHistoryAuthorized": false,
+    "upstreamIndependenceProven": false,
+    "universalProviderContractEstablished": false
+  },
+  "sourceChainValidation": {
+    "providerArtifactCanonicalHash": "PASS",
+    "controlledComparisonPayloadCount": 10,
+    "controlledComparisonCanonicalHashPassCount": 10,
+    "rawYahooEnvelopeFileCount": 10,
+    "rawYahooEnvelopeFileHashPassCount": 10
+  },
+  "networkTelemetry": {
+    "yahooPhysicalHttpAttempts": 9,
+    "hashVerifiedYahooResponseReplays": 1,
+    "structureProbeAttemptsBeforeRun": 1,
+    "eodhdPhysicalHttpAttempts": 0,
+    "secPhysicalHttpAttempts": 0,
+    "retries": 0,
+    "methodologyReviewNetworkRequests": 0
+  },
+  "scoringInputIntegrationStatus": "NOT_IMPLEMENTED",
+  "interestSupplementsGenerated": false,
+  "algorithmGateExecuted": false,
+  "forwardValidationExecuted": false,
+  "scoresOrRanksIncluded": false,
+  "formulaOrThresholdChanges": false,
+  "artifactContentHash": "6ED6103538CD73E23F2FD71D2DC7B93FB9A2B04B89A0A2E4B70B2A3F3FEA58B1"
+}

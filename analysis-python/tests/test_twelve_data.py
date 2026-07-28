@@ -59,7 +59,7 @@ def test_fetch_daily_prices_normalizes_provider_response() -> None:
     assert series.security.name == "AAPL"
     assert series.security.instrument_type == "COMMON_STOCK"
     assert series.provider == "twelve_data"
-    assert series.adjustment_mode == "splits"
+    assert series.adjustment_mode == "SPLIT_ADJUSTED"
     assert len(series.bars) == 1
     assert series.bars[0].trading_date == date(2026, 7, 23)
     assert str(series.bars[0].close_price) == "213.750000"

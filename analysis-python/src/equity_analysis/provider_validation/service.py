@@ -1,6 +1,7 @@
 from collections.abc import Callable, Iterable
 from datetime import UTC, date, datetime
 
+from equity_analysis.provider_validation.market_data import MarketDataValidationClient
 from equity_analysis.provider_validation.models import (
     AcceptanceSecurity,
     AcceptanceUniverse,
@@ -25,10 +26,16 @@ class ProviderAcceptanceService:
         self,
         sec_client: SecEdgarClient | None,
         twelve_data_client: TwelveDataValidationClient | None,
+        market_data_clients: tuple[MarketDataValidationClient, ...] = (),
+        unavailable_market_providers: tuple[str, ...] = (),
+        validate_twelve_data: bool = True,
         clock: Callable[[], datetime] = lambda: datetime.now(UTC),
     ) -> None:
         self._sec_client = sec_client
         self._twelve_data_client = twelve_data_client
+        self._market_data_clients = market_data_clients
+        self._unavailable_market_providers = unavailable_market_providers
+        self._validate_twelve_data_enabled = validate_twelve_data
         self._clock = clock
 
     def validate(
@@ -185,7 +192,23 @@ class ProviderAcceptanceService:
         else:
             checks.extend(self._validate_sec_fundamentals(security, cik))
 
-        checks.extend(self._validate_twelve_data(security, start_date, end_date))
+        if self._validate_twelve_data_enabled:
+            checks.extend(self._validate_twelve_data(security, start_date, end_date))
+        for client in self._market_data_clients:
+            checks.extend(
+                self._validate_market_data_client(
+                    client, security, start_date, end_date
+                )
+            )
+        for provider_code in self._unavailable_market_providers:
+            checks.append(
+                self._check(
+                    provider_code,
+                    CheckCategory.DAILY_PRICE,
+                    CheckStatus.NOT_VERIFIED,
+                    f"{provider_code} is selected but not configured.",
+                )
+            )
         checks.append(
             self._check(
                 "validation_fixture",
@@ -206,6 +229,200 @@ class ProviderAcceptanceService:
             expected_company_type=security.expected_company_type,
             checks=tuple(checks),
         )
+
+    def _validate_market_data_client(
+        self,
+        client: MarketDataValidationClient,
+        security: AcceptanceSecurity,
+        start_date: date,
+        end_date: date,
+    ) -> tuple[ValidationCheck, ...]:
+        checks: list[ValidationCheck] = []
+        try:
+            price = client.fetch_price_summary(
+                security.symbol, start_date, end_date
+            )
+            checks.append(
+                self._check(
+                    client.provider_code,
+                    CheckCategory.DAILY_PRICE,
+                    CheckStatus.PASS,
+                    f"{client.provider_name} returned normalized daily price history.",
+                    {
+                        "adjustmentMode": price.adjustment_mode,
+                        "observationCount": price.observation_count,
+                        "firstDate": price.first_date.isoformat(),
+                        "lastDate": price.last_date.isoformat(),
+                        "exchange": price.exchange,
+                        "instrumentType": price.instrument_type,
+                        "currency": price.currency,
+                        "sourceReference": price.source_reference,
+                        "availableAt": (
+                            price.available_at.isoformat()
+                            if price.available_at
+                            else None
+                        ),
+                        "ingestedAt": (
+                            price.ingested_at.isoformat()
+                            if price.ingested_at
+                            else None
+                        ),
+                        "contentHash": price.content_hash,
+                        "providerSchemaVersion": price.provider_schema_version,
+                        "parserVersion": price.parser_version,
+                        "rejectedObservationCount": price.rejected_observation_count,
+                    },
+                )
+            )
+            checks.extend(
+                (
+                    self._check(
+                        client.provider_code,
+                        CheckCategory.ADJUSTMENT_SEMANTICS,
+                        CheckStatus.NOT_VERIFIED,
+                        "Normalized adjustment fields were returned, but live "
+                        "cross-provider economic equivalence is not accepted.",
+                        {"adjustmentMode": price.adjustment_mode},
+                    ),
+                    self._check(
+                        client.provider_code,
+                        CheckCategory.SOURCE_LINEAGE,
+                        CheckStatus.NOT_VERIFIED,
+                        "Source reference, retrieval timestamps, and content hash "
+                        "were recorded; historical effective and availability "
+                        "semantics remain unverified.",
+                        {
+                            "sourceReference": price.source_reference,
+                            "availableAt": (
+                                price.available_at.isoformat()
+                                if price.available_at
+                                else None
+                            ),
+                            "ingestedAt": (
+                                price.ingested_at.isoformat()
+                                if price.ingested_at
+                                else None
+                            ),
+                            "contentHash": price.content_hash,
+                        },
+                    ),
+                )
+            )
+        except Exception as error:
+            from equity_analysis.market_data.provider import MarketDataProviderError
+
+            if not isinstance(error, MarketDataProviderError):
+                raise
+            checks.append(
+                self._check(
+                    client.provider_code,
+                    CheckCategory.DAILY_PRICE,
+                    CheckStatus.NOT_VERIFIED,
+                    str(error),
+                )
+            )
+        for test_name, action_type, category in (
+            ("split", "split", CheckCategory.SPLIT_HISTORY),
+            ("reverse_split", "split", CheckCategory.SPLIT_HISTORY),
+            ("dividend", "dividend", CheckCategory.DIVIDEND_HISTORY),
+        ):
+            if test_name not in security.tests:
+                continue
+            if action_type == "split" and any(
+                check.category == CheckCategory.SPLIT_HISTORY for check in checks
+            ):
+                continue
+            try:
+                action = client.fetch_action_summary(
+                    security.symbol, action_type, start_date, end_date
+                )
+                action_status = (
+                    CheckStatus.PASS
+                    if action.observation_count > 0
+                    else CheckStatus.NOT_VERIFIED
+                )
+                checks.append(
+                    self._check(
+                        client.provider_code,
+                        category,
+                        action_status,
+                        (
+                            f"{client.provider_name} returned {action_type} history."
+                            if action_status == CheckStatus.PASS
+                            else f"{client.provider_name} returned no {action_type} history."
+                        ),
+                        {"observationCount": action.observation_count},
+                    )
+                )
+            except Exception as error:
+                from equity_analysis.market_data.provider import MarketDataProviderError
+
+                if not isinstance(error, MarketDataProviderError):
+                    raise
+                checks.append(
+                    self._check(
+                        client.provider_code,
+                        category,
+                        CheckStatus.NOT_VERIFIED,
+                        str(error),
+                    )
+                )
+        if "symbol_change" in security.tests:
+            checks.append(
+                self._check(
+                    client.provider_code,
+                    CheckCategory.SYMBOL_HISTORY,
+                    CheckStatus.NOT_VERIFIED,
+                    f"{client.provider_name} dated ticker history is not accepted.",
+                )
+            )
+        if "delisted" in security.tests:
+            checks.append(
+                self._check(
+                    client.provider_code,
+                    CheckCategory.DELISTING_HISTORY,
+                    CheckStatus.NOT_VERIFIED,
+                    f"{client.provider_name} delisting proceeds are not accepted.",
+                )
+            )
+        if security.expected_company_type == "MATURE_OPERATING_COMPANY":
+            checks.extend(
+                (
+                    self._check(
+                        client.provider_code,
+                        CheckCategory.FUNDAMENTAL_FIELDS,
+                        CheckStatus.NOT_VERIFIED,
+                        f"{client.provider_name} quarterly and annual fundamentals "
+                        "are outside the implemented acceptance adapter.",
+                    ),
+                    self._check(
+                        client.provider_code,
+                        CheckCategory.HISTORICAL_MARKET_VALUE,
+                        CheckStatus.NOT_VERIFIED,
+                        f"{client.provider_name} historical shares and market "
+                        "capitalization are outside the implemented adapter.",
+                    ),
+                )
+            )
+        checks.extend(
+            (
+                self._check(
+                    client.provider_code,
+                    CheckCategory.MISSING_DATA_BEHAVIOR,
+                    CheckStatus.NOT_VERIFIED,
+                    "Offline tests preserve missing values, but live null behavior "
+                    "has not completed the acceptance fixture.",
+                ),
+                self._check(
+                    client.provider_code,
+                    CheckCategory.RATE_LIMITING,
+                    CheckStatus.NOT_VERIFIED,
+                    "Offline retry behavior is tested, but live entitlement limits "
+                    "and reproducible reruns are not accepted.",
+                ),
+            )
+        )
+        return tuple(checks)
 
     def _validate_sec_fundamentals(
         self,

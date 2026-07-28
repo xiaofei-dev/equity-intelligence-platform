@@ -156,3 +156,25 @@ AI quality should be evaluated independently from investment performance:
 - Consistency
 - Unsupported-claim rate
 - Cost and latency
+
+## Versioned Production Contract
+
+The first fixed production contract is defined by:
+
+- `docs/ai-equity-research-rubric-v1.md`;
+- `docs/prompts/equity-research-v1-system.md`;
+- `docs/prompts/equity-research-v1-input-template.json`;
+- `docs/schemas/equity-research-v1-output.schema.json`.
+
+The contract requires a structured CEO history and execution review, current
+strategy and dependency analysis, an explicit counter-thesis, source-quality
+grading, dimension-level adjustment caps, evidence expiry, usage telemetry and
+safe abstention. The deterministic one-week, one-month, three-month and
+long-horizon results remain separately visible.
+
+The default model configuration is `gpt-5.6-terra` with medium reasoning,
+12,000 input tokens, 2,000 output tokens, no more than three web-search calls,
+a USD 0.15 target and a USD 0.20 hard per-security application budget.
+`gpt-5.6-sol` is reserved for material-risk or source-conflict escalation.
+Model configuration and provider pricing can change without changing the
+investment methodology version.

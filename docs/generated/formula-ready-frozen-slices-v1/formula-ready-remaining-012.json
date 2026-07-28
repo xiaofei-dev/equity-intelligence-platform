@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "formula-ready-frozen-slice-v1.0.0",
+  "sourceManifestContentHash": "856CF4C3C1174D258CB69D758BBE7740EE04A92E398E7A0841BAB3EBD7652EBC",
+  "sliceId": "formula-ready-remaining-012",
+  "sequence": 12,
+  "symbols": [
+    "TGT",
+    "TJX",
+    "TKO",
+    "TMUS",
+    "TSN",
+    "TTC",
+    "TTD",
+    "TTWO",
+    "UFPI",
+    "UNP",
+    "UPS",
+    "VMC",
+    "WBD",
+    "WDFC",
+    "WM",
+    "WMT",
+    "XEL",
+    "YUM",
+    "ZBH"
+  ],
+  "automaticSelection": false,
+  "automaticReplacement": false,
+  "contentHash": "E968F0AD8AB902008475C1E7FA3D4C3418166FE43EFF810CC574A5A90B46AED0"
+}

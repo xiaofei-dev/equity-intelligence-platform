@@ -1,0 +1,117 @@
+{
+  "artifactType": "OBJECTIVE_RATING_V1_CROSS_PROVIDER_CURRENT_INTEREST_POLICY",
+  "schemaVersion": "objective-rating-v1-cross-provider-current-interest-policy-v1.0.0",
+  "policyVersion": "current-interest-cross-provider-evidence-v1.0.0",
+  "inputContractVersion": "current-interest-cross-provider-input-v1.0.0",
+  "acceptanceStatus": "AWAITING_PROVIDER_ARTIFACT",
+  "frozenV1Ruling": {
+    "normalizedProviderOperandAllowed": true,
+    "secConceptRequired": false,
+    "grossEconomicScopeProofRequiredByOriginalV1": false,
+    "formulaChanged": false,
+    "weightChanged": false,
+    "cohortChanged": false,
+    "missingRuleChanged": false,
+    "pitRuleChanged": false
+  },
+  "requiredEvidence": {
+    "eodhdQuarterlyRecordCount": 4,
+    "eodhdQuarterDurationAuthorized": false,
+    "yahooQuarterlyRecordCount": 4,
+    "yahooQuarterPeriodType": "3M",
+    "yahooTrailingRecordCount": 1,
+    "yahooTrailingPeriodType": "TTM",
+    "exactDecimalMatchRequired": true,
+    "sameCurrencyRequired": true,
+    "sameLatestPeriodEndRequired": true,
+    "sourceHashRequired": true,
+    "sourceReferenceRequired": true,
+    "ingestedByCutoffRequired": true,
+    "providerParserVersionRequired": true,
+    "normalizationVersionRequired": true
+  },
+  "authorizedResult": {
+    "normalizedOperand": "interest_expense_ttm",
+    "currentSnapshotOnly": true,
+    "historicalPitAuthorized": false,
+    "quarterHistoryAuthorized": false,
+    "grossEconomicScopeProven": false,
+    "upstreamIndependenceProven": false
+  },
+  "statuses": {
+    "CURRENT_TTM_CONFIRMED": {
+      "factorStatus": "VALID",
+      "condition": "EODHD_FOUR_RECORD_SUM_EXACTLY_EQUALS_YAHOO_EXPLICIT_TTM_AND_YAHOO_3M_SUM"
+    },
+    "CURRENT_TTM_CONFIRMED_WITH_QUARTER_CONFLICT": {
+      "factorStatus": "VALID",
+      "condition": "EODHD_FOUR_RECORD_SUM_EXACTLY_EQUALS_YAHOO_EXPLICIT_TTM_BUT_YAHOO_3M_SUM_DIFFERS",
+      "riskFlag": "YAHOO_QUARTER_SERIES_CONFLICT"
+    },
+    "PROVIDER_CONFLICT": {
+      "factorStatus": "MISSING",
+      "numericSubstituteAllowed": false
+    },
+    "INSUFFICIENT_EVIDENCE": {
+      "factorStatus": "MISSING",
+      "numericSubstituteAllowed": false
+    }
+  },
+  "correlationRisk": {
+    "crossProviderMatchTerm": "CROSS_PROVIDER_CORROBORATION",
+    "independenceClaimAllowed": false,
+    "universalProviderContractClaimAllowed": false,
+    "perSecurityPerCutoffOnly": true
+  },
+  "canary": {
+    "symbols": [
+      "AMAT",
+      "CIEN",
+      "COO",
+      "CSCO",
+      "DHR",
+      "FAST",
+      "FIX",
+      "PLAB",
+      "TSN",
+      "WDFC"
+    ],
+    "requiredSecurityCount": 10,
+    "requiredCoveragePercent": "100.0000",
+    "minimumConfirmedBranchCount": 1,
+    "minimumConflictBranchCount": 1,
+    "requiredSystemFailureCount": 0,
+    "provisionalObservationOnly": {
+      "suggestedConfirmedSymbols": [
+        "AMAT",
+        "CIEN",
+        "COO",
+        "CSCO",
+        "DHR",
+        "FAST",
+        "TSN"
+      ],
+      "suggestedConflictSymbols": [
+        "FIX",
+        "PLAB",
+        "WDFC"
+      ],
+      "accepted": false
+    }
+  },
+  "cohortMinimumsUnchanged": {
+    "sectorMarketCapCompanyType": 20,
+    "sectorCompanyType": 30,
+    "generalCompany": 100
+  },
+  "providerConflictSecOverride": {
+    "allowed": true,
+    "condition": "EXISTING_LOCAL_HASH_VERIFIED_SEC_EVIDENCE_PROVES_COMPLETE_CURRENT_TTM_DENOMINATOR",
+    "newSecRequestsAuthorized": false
+  },
+  "algorithmGateExecuted": false,
+  "forwardValidationExecuted": false,
+  "networkRequestsExecuted": false,
+  "scoresOrRanksIncluded": false,
+  "artifactContentHash": "12B52C809EF68460E745C2187EA5FCD2B6DD289E31D9DE77D1E43278FC31C132"
+}

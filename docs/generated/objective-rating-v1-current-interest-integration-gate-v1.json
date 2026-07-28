@@ -1,0 +1,78 @@
+{
+  "artifactType": "OBJECTIVE_RATING_V1_CURRENT_INTEREST_INTEGRATION_GATE",
+  "schemaVersion": "objective-rating-v1-current-interest-integration-gate-v1.0.0",
+  "integrationPolicyVersion": "current-interest-input-integration-v1.0.0",
+  "sourcePolicy": {
+    "path": "docs/generated/objective-rating-v1-cross-provider-current-interest-policy-v1.json",
+    "fileSha256": "7C7F79AAA2047E48DE35CA4C6E494640A4080C217D77795562ED529016D7BA91",
+    "contentHash": "12B52C809EF68460E745C2187EA5FCD2B6DD289E31D9DE77D1E43278FC31C132"
+  },
+  "sourceAcceptance": {
+    "path": "docs/generated/objective-rating-v1-cross-provider-current-interest-acceptance-v1.json",
+    "fileSha256": "1DC1ABC242630272DFAF8F39B2D4250D9DCAA0BFECE4AB393F4760A18DEFB898",
+    "contentHash": "6ED6103538CD73E23F2FD71D2DC7B93FB9A2B04B89A0A2E4B70B2A3F3FEA58B1"
+  },
+  "factorInputManifest": {
+    "path": "docs/generated/objective-rating-v1-current-factor-input-manifest-v1-5.json",
+    "fileSha256": "B0DD6AB79629E348A6A26297DD08FF4DBA859235F48818FD556D9CEEDCE46399",
+    "contentHash": "FDB6554260A08FB83D36C13E880B004AB81B2D80653F679DC11BEF144A7B3C32",
+    "payloadCount": 55,
+    "payloadHashPassCount": 55
+  },
+  "cutoff": "2026-07-28T07:55:16.812055Z",
+  "interestSupplements": {
+    "count": 7,
+    "symbols": [
+      "AMAT",
+      "CIEN",
+      "COO",
+      "CSCO",
+      "DHR",
+      "FAST",
+      "TSN"
+    ],
+    "currentSnapshotOnly": true,
+    "historicalPitAuthorized": false,
+    "quarterHistoryAuthorized": false,
+    "grossEconomicScopeProven": false
+  },
+  "providerConflicts": {
+    "count": 3,
+    "symbols": [
+      "FIX",
+      "PLAB",
+      "WDFC"
+    ],
+    "factorStatus": "MISSING",
+    "reasonCode": "PROVIDER_CONFLICT",
+    "numericSubstituteAllowed": false
+  },
+  "currentInputReadiness": {
+    "qcCount": 7,
+    "qcSymbols": [
+      "AMAT",
+      "CIEN",
+      "COO",
+      "CSCO",
+      "DHR",
+      "FAST",
+      "TSN"
+    ],
+    "uqCount": 0,
+    "uqReasonCode": "HISTORICAL_FCF_YIELD_PIT_SERIES_BLOCKED_BY_FROZEN_POLICY"
+  },
+  "cohortGate": {
+    "eligibleSecurityCount": 7,
+    "sectorMarketCapCompanyTypeMinimum": 20,
+    "sectorCompanyTypeMinimum": 30,
+    "generalCompanyMinimum": 100,
+    "status": "COHORT_TOO_SMALL"
+  },
+  "algorithmGateStatus": "NOT_EXECUTED_COHORT_TOO_SMALL",
+  "forwardValidationExecuted": false,
+  "networkRequestsExecutedByIntegration": false,
+  "scoresOrRanksIncluded": false,
+  "formulaOrThresholdChanges": false,
+  "licensedValuesIncluded": false,
+  "artifactContentHash": "74E6731D1E34DCB4BE8218CF9B5F9BF4F1B4862A87A2FBD548200165D8890728"
+}

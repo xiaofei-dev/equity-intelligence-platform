@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "formula-ready-frozen-slice-v1.0.0",
+  "sourceManifestContentHash": "856CF4C3C1174D258CB69D758BBE7740EE04A92E398E7A0841BAB3EBD7652EBC",
+  "sliceId": "formula-ready-remaining-007",
+  "sequence": 7,
+  "symbols": [
+    "FIX",
+    "FLEX",
+    "FOX",
+    "FOXA",
+    "FSLR",
+    "FTV",
+    "GD",
+    "GEHC",
+    "GIS",
+    "GM",
+    "GOOG",
+    "GOOGL",
+    "GPC",
+    "GRMN",
+    "GWW",
+    "HD",
+    "HLT",
+    "HON",
+    "HRL",
+    "HSIC"
+  ],
+  "automaticSelection": false,
+  "automaticReplacement": false,
+  "contentHash": "5407E06377F8BFA490C52EB50E425D855D063A4C316FE3AC04ED9998D65D60B2"
+}

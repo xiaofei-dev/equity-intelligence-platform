@@ -1,0 +1,84 @@
+{
+  "runId": "20260727T204539Z-5dd84ab67acf",
+  "sliceId": "formula-ready-safety-canary-001",
+  "status": "FAIL",
+  "results": [
+    {
+      "symbol": "ABNB",
+      "status": "FAIL_FORMULA_COVERAGE",
+      "formulaCoverage": {
+        "requiredFormulaFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "market_capitalization",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "stockholders_equity",
+          "total_debt"
+        ],
+        "presentFinancialFields": [
+          "capital_expenditure",
+          "cash_and_equivalents",
+          "diluted_weighted_average_shares",
+          "ebitda",
+          "gross_profit",
+          "income_tax",
+          "interest_expense",
+          "long_term_debt",
+          "net_income",
+          "operating_cash_flow",
+          "operating_income",
+          "pretax_income",
+          "revenue",
+          "shares_outstanding",
+          "stockholders_equity",
+          "total_assets",
+          "total_debt",
+          "total_liabilities"
+        ],
+        "presentPriceFields": [
+          "adjusted_close",
+          "close",
+          "high",
+          "low",
+          "open",
+          "volume"
+        ],
+        "presentMarketCapFields": [
+          "market_capitalization"
+        ],
+        "missingFormulaFields": [],
+        "dilutedShareQuarterlyPeriods": 13,
+        "interestExpenseQuarterlyPeriods": 0,
+        "historicalMarketCapObservations": 263,
+        "dailyPriceObservationDates": 1411,
+        "minimumDailyPriceObservationDates": 1,
+        "historyRequirements": {
+          "quarterlyFinancialPeriods": 8,
+          "historicalValuationObservations": 12
+        },
+        "historyComplete": false,
+        "complete": false
+      }
+    }
+  ],
+  "endpointPhysicalAttempts": {
+    "company-facts": 1,
+    "eod": 1,
+    "fundamentals": 1,
+    "historical-market-cap": 1,
+    "submissions": 1,
+    "ticker-mapping": 1
+  },
+  "formulaExecuted": false,
+  "networkRetries": 0,
+  "artifactContentHash": "A44021F5B23CA9562E8B91D868D312152B0E4E59467FBF2570AF323D72C2A34E"
+}

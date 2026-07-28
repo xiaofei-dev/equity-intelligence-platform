@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "formula-ready-frozen-slice-v1.0.0",
+  "sourceManifestContentHash": "856CF4C3C1174D258CB69D758BBE7740EE04A92E398E7A0841BAB3EBD7652EBC",
+  "sliceId": "formula-ready-remaining-005",
+  "sequence": 5,
+  "symbols": [
+    "DASH",
+    "DD",
+    "DDOG",
+    "DE",
+    "DELL",
+    "DG",
+    "DGX",
+    "DHI",
+    "DHR",
+    "DIS",
+    "DLTR",
+    "DOV",
+    "DTE",
+    "DUK",
+    "DVA",
+    "DXCM",
+    "EA",
+    "EBAY",
+    "ECL",
+    "ED"
+  ],
+  "automaticSelection": false,
+  "automaticReplacement": false,
+  "contentHash": "217CF17AC586FCACF2242A980E400B0FC48F57F608767A61A0D846379162A7C6"
+}

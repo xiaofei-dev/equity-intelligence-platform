@@ -1,0 +1,857 @@
+{
+  "schemaVersion": "sec-issuer-interest-evidence-preflight-v1.0.0",
+  "runId": "20260728T051702Z-2d3c724d66ab",
+  "provider": "sec_edgar",
+  "symbols": [
+    "AMAT",
+    "CSCO",
+    "FIX"
+  ],
+  "frozenSourceAuditPath": "docs/generated/sec-issuer-interest-consistency-audit-v1-3.json",
+  "frozenSourceAuditSha256": "42662EE568F5F353F8604736BC19216795F96F26522A315D549D3A6FEA9C10CC",
+  "frozenSourceAuditContentHash": "DDF74A1DCCDD67CF74F85C08B007A1333DF6809E6A6E2345A6ECE134F7357C2B",
+  "accessionsBySymbol": {
+    "AMAT": [
+      "0000006951-25-000011",
+      "0000006951-25-000024",
+      "0000006951-25-000037",
+      "0001628280-25-056742",
+      "0001628280-26-009694",
+      "0001628280-26-037227"
+    ],
+    "CSCO": [
+      "0000858877-25-000007",
+      "0000858877-25-000033",
+      "0000858877-25-000111",
+      "0000858877-25-000171",
+      "0000858877-26-000021",
+      "0000858877-26-000078"
+    ],
+    "FIX": [
+      "0001104659-25-101821",
+      "0001104659-26-017530",
+      "0001104659-26-047689",
+      "0001104659-26-086258",
+      "0001558370-25-005411",
+      "0001558370-25-009536"
+    ]
+  },
+  "accessionCount": 18,
+  "endpointPlan": {
+    "filing_index": 18,
+    "inline_xbrl": 18,
+    "label_linkbase": 18,
+    "presentation_linkbase": 18
+  },
+  "hashVerifiedReplayPlan": {},
+  "plannedPhysicalHttpAttempts": 72,
+  "maximumPhysicalHttpAttempts": 100,
+  "maximumRetries": 0,
+  "requestDelaySeconds": 0.2,
+  "submissionsRequests": 0,
+  "companyFactsRequests": 0,
+  "eodhdRequests": 0,
+  "entries": [
+    {
+      "symbol": "AMAT",
+      "cik": "0000006951",
+      "accession": "0000006951-25-000011",
+      "filing": {
+        "accession": "0000006951-25-000011",
+        "form": "10-Q",
+        "filed": "2025-02-20",
+        "accepted": "2025-02-20T21:02:43Z",
+        "primaryDocument": "amat-20250126.htm"
+      },
+      "status": "NEEDS_EVIDENCE_COLLECTION",
+      "submissionsSourceHash": "0B95E8280C77C1F65C3754D66F85B29B66F47035726148AABF52582218FB7418",
+      "requests": [
+        {
+          "endpoint": "filing_index",
+          "urlPath": "/Archives/edgar/data/6951/000000695125000011/index.json",
+          "requestIdentity": "518604E1E114AF7F7E41AAD10DCB789DE9D0FB043115E5FF057CC3E5A1904AEA",
+          "cacheStatus": "NEEDS_HTTP",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "inline_xbrl",
+          "urlPath": "/Archives/edgar/data/6951/000000695125000011/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "presentation_linkbase",
+          "urlPath": "/Archives/edgar/data/6951/000000695125000011/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "label_linkbase",
+          "urlPath": "/Archives/edgar/data/6951/000000695125000011/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        }
+      ]
+    },
+    {
+      "symbol": "AMAT",
+      "cik": "0000006951",
+      "accession": "0000006951-25-000024",
+      "filing": {
+        "accession": "0000006951-25-000024",
+        "form": "10-Q",
+        "filed": "2025-05-22",
+        "accepted": "2025-05-22T20:02:01Z",
+        "primaryDocument": "amat-20250427.htm"
+      },
+      "status": "NEEDS_EVIDENCE_COLLECTION",
+      "submissionsSourceHash": "0B95E8280C77C1F65C3754D66F85B29B66F47035726148AABF52582218FB7418",
+      "requests": [
+        {
+          "endpoint": "filing_index",
+          "urlPath": "/Archives/edgar/data/6951/000000695125000024/index.json",
+          "requestIdentity": "A3418EFB7E96323CE0FE69F4DD9FA0B79FBF27396DB205AC93E6ADA884581784",
+          "cacheStatus": "NEEDS_HTTP",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "inline_xbrl",
+          "urlPath": "/Archives/edgar/data/6951/000000695125000024/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "presentation_linkbase",
+          "urlPath": "/Archives/edgar/data/6951/000000695125000024/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "label_linkbase",
+          "urlPath": "/Archives/edgar/data/6951/000000695125000024/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        }
+      ]
+    },
+    {
+      "symbol": "AMAT",
+      "cik": "0000006951",
+      "accession": "0000006951-25-000037",
+      "filing": {
+        "accession": "0000006951-25-000037",
+        "form": "10-Q",
+        "filed": "2025-08-21",
+        "accepted": "2025-08-21T20:02:16Z",
+        "primaryDocument": "amat-20250727.htm"
+      },
+      "status": "NEEDS_EVIDENCE_COLLECTION",
+      "submissionsSourceHash": "0B95E8280C77C1F65C3754D66F85B29B66F47035726148AABF52582218FB7418",
+      "requests": [
+        {
+          "endpoint": "filing_index",
+          "urlPath": "/Archives/edgar/data/6951/000000695125000037/index.json",
+          "requestIdentity": "292122704528A4A539B71F9EA5BD46C3CC081352A0C6E483465291C285B2A82B",
+          "cacheStatus": "NEEDS_HTTP",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "inline_xbrl",
+          "urlPath": "/Archives/edgar/data/6951/000000695125000037/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "presentation_linkbase",
+          "urlPath": "/Archives/edgar/data/6951/000000695125000037/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "label_linkbase",
+          "urlPath": "/Archives/edgar/data/6951/000000695125000037/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        }
+      ]
+    },
+    {
+      "symbol": "AMAT",
+      "cik": "0000006951",
+      "accession": "0001628280-25-056742",
+      "filing": {
+        "accession": "0001628280-25-056742",
+        "form": "10-K",
+        "filed": "2025-12-12",
+        "accepted": "2025-12-12T21:01:56Z",
+        "primaryDocument": "amat-20251026.htm"
+      },
+      "status": "NEEDS_EVIDENCE_COLLECTION",
+      "submissionsSourceHash": "0B95E8280C77C1F65C3754D66F85B29B66F47035726148AABF52582218FB7418",
+      "requests": [
+        {
+          "endpoint": "filing_index",
+          "urlPath": "/Archives/edgar/data/6951/000162828025056742/index.json",
+          "requestIdentity": "587BBC9325CF6E8AD981BD39AFE6F253C7AA42E849F966729AEB0A6CF5632DFB",
+          "cacheStatus": "NEEDS_HTTP",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "inline_xbrl",
+          "urlPath": "/Archives/edgar/data/6951/000162828025056742/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "presentation_linkbase",
+          "urlPath": "/Archives/edgar/data/6951/000162828025056742/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "label_linkbase",
+          "urlPath": "/Archives/edgar/data/6951/000162828025056742/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        }
+      ]
+    },
+    {
+      "symbol": "AMAT",
+      "cik": "0000006951",
+      "accession": "0001628280-26-009694",
+      "filing": {
+        "accession": "0001628280-26-009694",
+        "form": "10-Q",
+        "filed": "2026-02-19",
+        "accepted": "2026-02-19T21:01:19Z",
+        "primaryDocument": "amat-20260125.htm"
+      },
+      "status": "NEEDS_EVIDENCE_COLLECTION",
+      "submissionsSourceHash": "0B95E8280C77C1F65C3754D66F85B29B66F47035726148AABF52582218FB7418",
+      "requests": [
+        {
+          "endpoint": "filing_index",
+          "urlPath": "/Archives/edgar/data/6951/000162828026009694/index.json",
+          "requestIdentity": "BC82C26D1D49FC5DE4F7D263170381B2C0F6D52FF0131B46F6592C38AC343239",
+          "cacheStatus": "NEEDS_HTTP",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "inline_xbrl",
+          "urlPath": "/Archives/edgar/data/6951/000162828026009694/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "presentation_linkbase",
+          "urlPath": "/Archives/edgar/data/6951/000162828026009694/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "label_linkbase",
+          "urlPath": "/Archives/edgar/data/6951/000162828026009694/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        }
+      ]
+    },
+    {
+      "symbol": "AMAT",
+      "cik": "0000006951",
+      "accession": "0001628280-26-037227",
+      "filing": {
+        "accession": "0001628280-26-037227",
+        "form": "10-Q",
+        "filed": "2026-05-21",
+        "accepted": "2026-05-21T20:01:47Z",
+        "primaryDocument": "amat-20260426.htm"
+      },
+      "status": "NEEDS_EVIDENCE_COLLECTION",
+      "submissionsSourceHash": "0B95E8280C77C1F65C3754D66F85B29B66F47035726148AABF52582218FB7418",
+      "requests": [
+        {
+          "endpoint": "filing_index",
+          "urlPath": "/Archives/edgar/data/6951/000162828026037227/index.json",
+          "requestIdentity": "769B6B9D6C8E575E712BDD10D6E5FC30B88381A1CA4E5BC583503B089F2E8A8A",
+          "cacheStatus": "NEEDS_HTTP",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "inline_xbrl",
+          "urlPath": "/Archives/edgar/data/6951/000162828026037227/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "presentation_linkbase",
+          "urlPath": "/Archives/edgar/data/6951/000162828026037227/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "label_linkbase",
+          "urlPath": "/Archives/edgar/data/6951/000162828026037227/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        }
+      ]
+    },
+    {
+      "symbol": "CSCO",
+      "cik": "0000858877",
+      "accession": "0000858877-25-000007",
+      "filing": {
+        "accession": "0000858877-25-000007",
+        "form": "10-Q",
+        "filed": "2025-02-18",
+        "accepted": "2025-02-18T21:34:49Z",
+        "primaryDocument": "csco-20250125.htm"
+      },
+      "status": "NEEDS_EVIDENCE_COLLECTION",
+      "submissionsSourceHash": "2ED2AC4A678F2F879A21B50F488F6FE458865A35C38D34CF89BEEC31F90CD6FD",
+      "requests": [
+        {
+          "endpoint": "filing_index",
+          "urlPath": "/Archives/edgar/data/858877/000085887725000007/index.json",
+          "requestIdentity": "8E64D322A92E969E410AE72A0136DF34078773984CBE75B8E5A2143339639AEC",
+          "cacheStatus": "NEEDS_HTTP",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "inline_xbrl",
+          "urlPath": "/Archives/edgar/data/858877/000085887725000007/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "presentation_linkbase",
+          "urlPath": "/Archives/edgar/data/858877/000085887725000007/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "label_linkbase",
+          "urlPath": "/Archives/edgar/data/858877/000085887725000007/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        }
+      ]
+    },
+    {
+      "symbol": "CSCO",
+      "cik": "0000858877",
+      "accession": "0000858877-25-000033",
+      "filing": {
+        "accession": "0000858877-25-000033",
+        "form": "10-Q",
+        "filed": "2025-05-20",
+        "accepted": "2025-05-20T20:35:37Z",
+        "primaryDocument": "csco-20250426.htm"
+      },
+      "status": "NEEDS_EVIDENCE_COLLECTION",
+      "submissionsSourceHash": "2ED2AC4A678F2F879A21B50F488F6FE458865A35C38D34CF89BEEC31F90CD6FD",
+      "requests": [
+        {
+          "endpoint": "filing_index",
+          "urlPath": "/Archives/edgar/data/858877/000085887725000033/index.json",
+          "requestIdentity": "292118131F08316D0EAC5FB3EB86E9AEA3A836D34512D1780BFB6FF1545FBF53",
+          "cacheStatus": "NEEDS_HTTP",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "inline_xbrl",
+          "urlPath": "/Archives/edgar/data/858877/000085887725000033/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "presentation_linkbase",
+          "urlPath": "/Archives/edgar/data/858877/000085887725000033/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "label_linkbase",
+          "urlPath": "/Archives/edgar/data/858877/000085887725000033/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        }
+      ]
+    },
+    {
+      "symbol": "CSCO",
+      "cik": "0000858877",
+      "accession": "0000858877-25-000111",
+      "filing": {
+        "accession": "0000858877-25-000111",
+        "form": "10-K",
+        "filed": "2025-09-03",
+        "accepted": "2025-09-03T20:52:59Z",
+        "primaryDocument": "csco-20250726.htm"
+      },
+      "status": "NEEDS_EVIDENCE_COLLECTION",
+      "submissionsSourceHash": "2ED2AC4A678F2F879A21B50F488F6FE458865A35C38D34CF89BEEC31F90CD6FD",
+      "requests": [
+        {
+          "endpoint": "filing_index",
+          "urlPath": "/Archives/edgar/data/858877/000085887725000111/index.json",
+          "requestIdentity": "F4607B69C3068AE01948843A3D8501C5834940E3A70BF6E65E214B7A758129D4",
+          "cacheStatus": "NEEDS_HTTP",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "inline_xbrl",
+          "urlPath": "/Archives/edgar/data/858877/000085887725000111/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "presentation_linkbase",
+          "urlPath": "/Archives/edgar/data/858877/000085887725000111/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "label_linkbase",
+          "urlPath": "/Archives/edgar/data/858877/000085887725000111/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        }
+      ]
+    },
+    {
+      "symbol": "CSCO",
+      "cik": "0000858877",
+      "accession": "0000858877-25-000171",
+      "filing": {
+        "accession": "0000858877-25-000171",
+        "form": "10-Q",
+        "filed": "2025-11-18",
+        "accepted": "2025-11-18T21:38:53Z",
+        "primaryDocument": "csco-20251025.htm"
+      },
+      "status": "NEEDS_EVIDENCE_COLLECTION",
+      "submissionsSourceHash": "2ED2AC4A678F2F879A21B50F488F6FE458865A35C38D34CF89BEEC31F90CD6FD",
+      "requests": [
+        {
+          "endpoint": "filing_index",
+          "urlPath": "/Archives/edgar/data/858877/000085887725000171/index.json",
+          "requestIdentity": "37913764B861EA1842119E8695E27568E6DA30E8EAA32A14FC75FD68DBAA5E8F",
+          "cacheStatus": "NEEDS_HTTP",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "inline_xbrl",
+          "urlPath": "/Archives/edgar/data/858877/000085887725000171/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "presentation_linkbase",
+          "urlPath": "/Archives/edgar/data/858877/000085887725000171/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "label_linkbase",
+          "urlPath": "/Archives/edgar/data/858877/000085887725000171/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        }
+      ]
+    },
+    {
+      "symbol": "CSCO",
+      "cik": "0000858877",
+      "accession": "0000858877-26-000021",
+      "filing": {
+        "accession": "0000858877-26-000021",
+        "form": "10-Q",
+        "filed": "2026-02-17",
+        "accepted": "2026-02-17T21:27:10Z",
+        "primaryDocument": "csco-20260124.htm"
+      },
+      "status": "NEEDS_EVIDENCE_COLLECTION",
+      "submissionsSourceHash": "2ED2AC4A678F2F879A21B50F488F6FE458865A35C38D34CF89BEEC31F90CD6FD",
+      "requests": [
+        {
+          "endpoint": "filing_index",
+          "urlPath": "/Archives/edgar/data/858877/000085887726000021/index.json",
+          "requestIdentity": "80ABB2EBB88C03135E306F7E77FB772B274C69315CA9332DC4FC5C9993344BED",
+          "cacheStatus": "NEEDS_HTTP",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "inline_xbrl",
+          "urlPath": "/Archives/edgar/data/858877/000085887726000021/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "presentation_linkbase",
+          "urlPath": "/Archives/edgar/data/858877/000085887726000021/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "label_linkbase",
+          "urlPath": "/Archives/edgar/data/858877/000085887726000021/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        }
+      ]
+    },
+    {
+      "symbol": "CSCO",
+      "cik": "0000858877",
+      "accession": "0000858877-26-000078",
+      "filing": {
+        "accession": "0000858877-26-000078",
+        "form": "10-Q",
+        "filed": "2026-05-19",
+        "accepted": "2026-05-19T20:36:11Z",
+        "primaryDocument": "csco-20260425.htm"
+      },
+      "status": "NEEDS_EVIDENCE_COLLECTION",
+      "submissionsSourceHash": "2ED2AC4A678F2F879A21B50F488F6FE458865A35C38D34CF89BEEC31F90CD6FD",
+      "requests": [
+        {
+          "endpoint": "filing_index",
+          "urlPath": "/Archives/edgar/data/858877/000085887726000078/index.json",
+          "requestIdentity": "85D5A7AF6FA7C50208327438CC8BB652C4516CFBA90B56F2A3550EE618A4C92B",
+          "cacheStatus": "NEEDS_HTTP",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "inline_xbrl",
+          "urlPath": "/Archives/edgar/data/858877/000085887726000078/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "presentation_linkbase",
+          "urlPath": "/Archives/edgar/data/858877/000085887726000078/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "label_linkbase",
+          "urlPath": "/Archives/edgar/data/858877/000085887726000078/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        }
+      ]
+    },
+    {
+      "symbol": "FIX",
+      "cik": "0001035983",
+      "accession": "0001104659-25-101821",
+      "filing": {
+        "accession": "0001104659-25-101821",
+        "form": "10-Q",
+        "filed": "2025-10-23",
+        "accepted": "2025-10-23T20:07:18Z",
+        "primaryDocument": "fix-20250930x10q.htm"
+      },
+      "status": "NEEDS_EVIDENCE_COLLECTION",
+      "submissionsSourceHash": "BB7B9D507B78EF32C74F465AAF3C5E28C6D269A2B26B06579E9814F33932E723",
+      "requests": [
+        {
+          "endpoint": "filing_index",
+          "urlPath": "/Archives/edgar/data/1035983/000110465925101821/index.json",
+          "requestIdentity": "850FFB90850C78607D8EF3DD48ED91133058A3A3B01CBFA940543209C1DA39AA",
+          "cacheStatus": "NEEDS_HTTP",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "inline_xbrl",
+          "urlPath": "/Archives/edgar/data/1035983/000110465925101821/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "presentation_linkbase",
+          "urlPath": "/Archives/edgar/data/1035983/000110465925101821/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "label_linkbase",
+          "urlPath": "/Archives/edgar/data/1035983/000110465925101821/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        }
+      ]
+    },
+    {
+      "symbol": "FIX",
+      "cik": "0001035983",
+      "accession": "0001104659-26-017530",
+      "filing": {
+        "accession": "0001104659-26-017530",
+        "form": "10-K",
+        "filed": "2026-02-19",
+        "accepted": "2026-02-19T21:04:27Z",
+        "primaryDocument": "fix-20251231x10k.htm"
+      },
+      "status": "NEEDS_EVIDENCE_COLLECTION",
+      "submissionsSourceHash": "BB7B9D507B78EF32C74F465AAF3C5E28C6D269A2B26B06579E9814F33932E723",
+      "requests": [
+        {
+          "endpoint": "filing_index",
+          "urlPath": "/Archives/edgar/data/1035983/000110465926017530/index.json",
+          "requestIdentity": "9C00B1A2B95BD6473317FCC066377AF94392F212E5130C7B0163183B8E0191EF",
+          "cacheStatus": "NEEDS_HTTP",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "inline_xbrl",
+          "urlPath": "/Archives/edgar/data/1035983/000110465926017530/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "presentation_linkbase",
+          "urlPath": "/Archives/edgar/data/1035983/000110465926017530/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "label_linkbase",
+          "urlPath": "/Archives/edgar/data/1035983/000110465926017530/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        }
+      ]
+    },
+    {
+      "symbol": "FIX",
+      "cik": "0001035983",
+      "accession": "0001104659-26-047689",
+      "filing": {
+        "accession": "0001104659-26-047689",
+        "form": "10-Q",
+        "filed": "2026-04-23",
+        "accepted": "2026-04-23T20:06:53Z",
+        "primaryDocument": "fix-20260331x10q.htm"
+      },
+      "status": "NEEDS_EVIDENCE_COLLECTION",
+      "submissionsSourceHash": "BB7B9D507B78EF32C74F465AAF3C5E28C6D269A2B26B06579E9814F33932E723",
+      "requests": [
+        {
+          "endpoint": "filing_index",
+          "urlPath": "/Archives/edgar/data/1035983/000110465926047689/index.json",
+          "requestIdentity": "4B1F46AFDEB86B15A997FD84BCDF388C2FE2B54059E72E809EFEB05FB9AA1D12",
+          "cacheStatus": "NEEDS_HTTP",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "inline_xbrl",
+          "urlPath": "/Archives/edgar/data/1035983/000110465926047689/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "presentation_linkbase",
+          "urlPath": "/Archives/edgar/data/1035983/000110465926047689/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "label_linkbase",
+          "urlPath": "/Archives/edgar/data/1035983/000110465926047689/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        }
+      ]
+    },
+    {
+      "symbol": "FIX",
+      "cik": "0001035983",
+      "accession": "0001104659-26-086258",
+      "filing": {
+        "accession": "0001104659-26-086258",
+        "form": "10-Q",
+        "filed": "2026-07-23",
+        "accepted": "2026-07-23T20:06:53Z",
+        "primaryDocument": "fix-20260630x10q.htm"
+      },
+      "status": "NEEDS_EVIDENCE_COLLECTION",
+      "submissionsSourceHash": "BB7B9D507B78EF32C74F465AAF3C5E28C6D269A2B26B06579E9814F33932E723",
+      "requests": [
+        {
+          "endpoint": "filing_index",
+          "urlPath": "/Archives/edgar/data/1035983/000110465926086258/index.json",
+          "requestIdentity": "509A4DCC04F0AC4E7C1955FE88E22E70697FD7BE412D88D506793A2C94E26755",
+          "cacheStatus": "NEEDS_HTTP",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "inline_xbrl",
+          "urlPath": "/Archives/edgar/data/1035983/000110465926086258/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "presentation_linkbase",
+          "urlPath": "/Archives/edgar/data/1035983/000110465926086258/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "label_linkbase",
+          "urlPath": "/Archives/edgar/data/1035983/000110465926086258/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        }
+      ]
+    },
+    {
+      "symbol": "FIX",
+      "cik": "0001035983",
+      "accession": "0001558370-25-005411",
+      "filing": {
+        "accession": "0001558370-25-005411",
+        "form": "10-Q",
+        "filed": "2025-04-24",
+        "accepted": "2025-04-24T20:07:01Z",
+        "primaryDocument": "fix-20250331x10q.htm"
+      },
+      "status": "NEEDS_EVIDENCE_COLLECTION",
+      "submissionsSourceHash": "BB7B9D507B78EF32C74F465AAF3C5E28C6D269A2B26B06579E9814F33932E723",
+      "requests": [
+        {
+          "endpoint": "filing_index",
+          "urlPath": "/Archives/edgar/data/1035983/000155837025005411/index.json",
+          "requestIdentity": "79DE1FE7834BCC7A5D1DE45900B0CC5CD5C0531B866863E8FD8434D0834476CC",
+          "cacheStatus": "NEEDS_HTTP",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "inline_xbrl",
+          "urlPath": "/Archives/edgar/data/1035983/000155837025005411/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "presentation_linkbase",
+          "urlPath": "/Archives/edgar/data/1035983/000155837025005411/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "label_linkbase",
+          "urlPath": "/Archives/edgar/data/1035983/000155837025005411/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        }
+      ]
+    },
+    {
+      "symbol": "FIX",
+      "cik": "0001035983",
+      "accession": "0001558370-25-009536",
+      "filing": {
+        "accession": "0001558370-25-009536",
+        "form": "10-Q",
+        "filed": "2025-07-24",
+        "accepted": "2025-07-24T20:07:05Z",
+        "primaryDocument": "fix-20250630x10q.htm"
+      },
+      "status": "NEEDS_EVIDENCE_COLLECTION",
+      "submissionsSourceHash": "BB7B9D507B78EF32C74F465AAF3C5E28C6D269A2B26B06579E9814F33932E723",
+      "requests": [
+        {
+          "endpoint": "filing_index",
+          "urlPath": "/Archives/edgar/data/1035983/000155837025009536/index.json",
+          "requestIdentity": "4659B1EE7BC29E90FB791FEE0B3DE6FE9762DFC817A3131C60D285AA0D164C02",
+          "cacheStatus": "NEEDS_HTTP",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "inline_xbrl",
+          "urlPath": "/Archives/edgar/data/1035983/000155837025009536/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "presentation_linkbase",
+          "urlPath": "/Archives/edgar/data/1035983/000155837025009536/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        },
+        {
+          "endpoint": "label_linkbase",
+          "urlPath": "/Archives/edgar/data/1035983/000155837025009536/<resolved-from-index>",
+          "requestIdentity": null,
+          "cacheStatus": "NEEDS_HTTP_AFTER_INDEX",
+          "cachedResponseHash": null
+        }
+      ]
+    }
+  ],
+  "paths": {
+    "preflight": "docs/generated/sec-issuer-interest-evidence-20260728T051702Z-2d3c724d66ab-preflight.json",
+    "report": "docs/generated/sec-issuer-interest-evidence-20260728T051702Z-2d3c724d66ab.json",
+    "diagnostics": "docs/generated/sec-issuer-interest-evidence-20260728T051702Z-2d3c724d66ab-diagnostics.json",
+    "checkpoint": "docs/generated/sec-issuer-interest-evidence-20260728T051702Z-2d3c724d66ab-checkpoint.json"
+  },
+  "immutableOutputs": true,
+  "networkAccessedDuringPreflight": false,
+  "contentHash": "28D119D1D0B3AFA07B842A7818EC3AE982CBA02ACAB6798083C06755EB99939F"
+}

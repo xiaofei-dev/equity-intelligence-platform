@@ -1,0 +1,1448 @@
+{
+  "artifactType": "OFFLINE_DERIVED_RECLASSIFICATION",
+  "schemaVersion": "mature-gate-offline-reclassification-v1.0.0",
+  "runId": "20260727T175147Z-9f3b3532ca68",
+  "generatedAt": "2026-07-27T17:51:47.395558+00:00",
+  "isLiveGate": false,
+  "networkRequestsExecuted": false,
+  "sourceReferences": [
+    {
+      "path": "docs\\generated\\mature-company-data-gate-20260727T074150Z-50407538afa9.json",
+      "sha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9"
+    },
+    {
+      "path": "docs\\generated\\mature-company-data-gate-20260727T173753Z-079c976fda3f.json",
+      "sha256": "E2BA494C22EC480712221D8D948468E2E6A383CF2612D014052280FC41521EB7"
+    },
+    {
+      "path": "docs\\generated\\mature-company-data-gate-20260727T174805Z-516116490045.json",
+      "sha256": "3081F6B1F9AEC51BF70A988B3BAE8895D71AC10894BB6F4D35D6242DCFE46CFC"
+    },
+    {
+      "path": "docs\\generated\\mature-company-data-gate-20260727T173753Z-079c976fda3f-diagnostics.json",
+      "sha256": "75F4A97458890E73F3614BB7A57E037A171F29D229606B5F2F87CCA7677223DF"
+    },
+    {
+      "path": "docs\\generated\\mature-company-data-gate-20260727T174805Z-516116490045-diagnostics.json",
+      "sha256": "DF6C7B32624E627B187363B7960C529834678470195961FD6600D2819112E79E"
+    }
+  ],
+  "originalCounts": {
+    "PASS": 71,
+    "PARTIAL": 47,
+    "FAIL": 2
+  },
+  "derivedCounts": {
+    "PASS": 72,
+    "PARTIAL": 46,
+    "FAIL": 2
+  },
+  "confirmedPassCount": 72,
+  "additionalConfirmedPassesNeeded": 28,
+  "records": [
+    {
+      "symbol": "AAPL",
+      "candidateRole": "PRIMARY",
+      "sector": "Information Technology",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "MSFT",
+      "candidateRole": "PRIMARY",
+      "sector": "Information Technology",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "NVDA",
+      "candidateRole": "PRIMARY",
+      "sector": "Information Technology",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_ALIAS_RECOVERY"
+    },
+    {
+      "symbol": "AVGO",
+      "candidateRole": "PRIMARY",
+      "sector": "Information Technology",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "classification": "REQUIRES_REPARSE_FIELD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "ORCL",
+      "candidateRole": "PRIMARY",
+      "sector": "Information Technology",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "CSCO",
+      "candidateRole": "PRIMARY",
+      "sector": "Information Technology",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "ACN",
+      "candidateRole": "PRIMARY",
+      "sector": "Information Technology",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "IBM",
+      "candidateRole": "PRIMARY",
+      "sector": "Information Technology",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "TXN",
+      "candidateRole": "PRIMARY",
+      "sector": "Information Technology",
+      "originalStatus": "FAIL",
+      "originalReasonCodes": [
+        "SEC_EDGAR_REQUEST_FAILED"
+      ],
+      "derivedStatus": "FAIL",
+      "derivedReasonCodes": [
+        "SEC_NO_COMPLETE_TRADING_SESSION_AFTER_ACCEPTANCE"
+      ],
+      "classification": "LOCAL_PIT_FIX_PENDING_LIVE_CONFIRMATION"
+    },
+    {
+      "symbol": "QCOM",
+      "candidateRole": "PRIMARY",
+      "sector": "Information Technology",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "classification": "REQUIRES_REPARSE_FIELD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "AMAT",
+      "candidateRole": "PRIMARY",
+      "sector": "Information Technology",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "classification": "REQUIRES_REPARSE_FIELD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "ADI",
+      "candidateRole": "PRIMARY",
+      "sector": "Information Technology",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "classification": "REQUIRES_REPARSE_FIELD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "PLAB",
+      "candidateRole": "PRIMARY",
+      "sector": "Information Technology",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "classification": "REQUIRES_REPARSE_FIELD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "OLED",
+      "candidateRole": "PRIMARY",
+      "sector": "Information Technology",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "classification": "REQUIRES_REPARSE_FIELD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "META",
+      "candidateRole": "PRIMARY",
+      "sector": "Communication Services",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "GOOGL",
+      "candidateRole": "PRIMARY",
+      "sector": "Communication Services",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "NFLX",
+      "candidateRole": "PRIMARY",
+      "sector": "Communication Services",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "DIS",
+      "candidateRole": "PRIMARY",
+      "sector": "Communication Services",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "CMCSA",
+      "candidateRole": "PRIMARY",
+      "sector": "Communication Services",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "classification": "REQUIRES_REPARSE_FIELD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "TMUS",
+      "candidateRole": "PRIMARY",
+      "sector": "Communication Services",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "classification": "REQUIRES_REPARSE_FIELD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "VZ",
+      "candidateRole": "PRIMARY",
+      "sector": "Communication Services",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "classification": "CONFIRMED_PIT_NOT_YET_AVAILABLE"
+    },
+    {
+      "symbol": "EA",
+      "candidateRole": "PRIMARY",
+      "sector": "Communication Services",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "classification": "REQUIRES_REPARSE_FIELD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "AMZN",
+      "candidateRole": "PRIMARY",
+      "sector": "Consumer Discretionary",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "HD",
+      "candidateRole": "PRIMARY",
+      "sector": "Consumer Discretionary",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "LOW",
+      "candidateRole": "PRIMARY",
+      "sector": "Consumer Discretionary",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "MCD",
+      "candidateRole": "PRIMARY",
+      "sector": "Consumer Discretionary",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "SBUX",
+      "candidateRole": "PRIMARY",
+      "sector": "Consumer Discretionary",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "classification": "REQUIRES_REPARSE_FIELD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "NKE",
+      "candidateRole": "PRIMARY",
+      "sector": "Consumer Discretionary",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "TGT",
+      "candidateRole": "PRIMARY",
+      "sector": "Consumer Discretionary",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "TJX",
+      "candidateRole": "PRIMARY",
+      "sector": "Consumer Discretionary",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "ROST",
+      "candidateRole": "PRIMARY",
+      "sector": "Consumer Discretionary",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "classification": "REQUIRES_REPARSE_FIELD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "ORLY",
+      "candidateRole": "PRIMARY",
+      "sector": "Consumer Discretionary",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "classification": "REQUIRES_REPARSE_FIELD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "AZO",
+      "candidateRole": "PRIMARY",
+      "sector": "Consumer Discretionary",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "classification": "UNRESOLVED_PIT_WITHOUT_PERIOD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "CROX",
+      "candidateRole": "PRIMARY",
+      "sector": "Consumer Discretionary",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "classification": "REQUIRES_REPARSE_FIELD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "ELF",
+      "candidateRole": "PRIMARY",
+      "sector": "Consumer Discretionary",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "YUM",
+      "candidateRole": "PRIMARY",
+      "sector": "Consumer Discretionary",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "WMT",
+      "candidateRole": "PRIMARY",
+      "sector": "Consumer Staples",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "COST",
+      "candidateRole": "PRIMARY",
+      "sector": "Consumer Staples",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "classification": "UNRESOLVED_PIT_WITHOUT_PERIOD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "PG",
+      "candidateRole": "PRIMARY",
+      "sector": "Consumer Staples",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "KO",
+      "candidateRole": "PRIMARY",
+      "sector": "Consumer Staples",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "PEP",
+      "candidateRole": "PRIMARY",
+      "sector": "Consumer Staples",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_PITAVAILABILITY",
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_PITAVAILABILITY",
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "classification": "REQUIRES_REPARSE_AND_PIT_DIAGNOSTICS"
+    },
+    {
+      "symbol": "CL",
+      "candidateRole": "PRIMARY",
+      "sector": "Consumer Staples",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "MDLZ",
+      "candidateRole": "PRIMARY",
+      "sector": "Consumer Staples",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "classification": "REQUIRES_REPARSE_FIELD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "KMB",
+      "candidateRole": "PRIMARY",
+      "sector": "Consumer Staples",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "GIS",
+      "candidateRole": "PRIMARY",
+      "sector": "Consumer Staples",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "KR",
+      "candidateRole": "PRIMARY",
+      "sector": "Consumer Staples",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "classification": "UNRESOLVED_PIT_WITHOUT_PERIOD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "CALM",
+      "candidateRole": "PRIMARY",
+      "sector": "Consumer Staples",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "classification": "REQUIRES_REPARSE_FIELD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "LANC",
+      "candidateRole": "PRIMARY",
+      "sector": "Consumer Staples",
+      "originalStatus": "FAIL",
+      "originalReasonCodes": [
+        "SEC_EDGAR_CIK_NOT_FOUND"
+      ],
+      "derivedStatus": "FAIL",
+      "derivedReasonCodes": [
+        "SEC_TICKER_CIK_NOT_FOUND"
+      ],
+      "classification": "AUTHORITATIVE_CIK_MAPPING_MISSING"
+    },
+    {
+      "symbol": "JNJ",
+      "candidateRole": "PRIMARY",
+      "sector": "Health Care",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "ABT",
+      "candidateRole": "PRIMARY",
+      "sector": "Health Care",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "classification": "UNRESOLVED_PIT_WITHOUT_PERIOD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "MDT",
+      "candidateRole": "PRIMARY",
+      "sector": "Health Care",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "classification": "UNRESOLVED_PIT_WITHOUT_PERIOD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "SYK",
+      "candidateRole": "PRIMARY",
+      "sector": "Health Care",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "TMO",
+      "candidateRole": "PRIMARY",
+      "sector": "Health Care",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "classification": "UNRESOLVED_PIT_WITHOUT_PERIOD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "MCK",
+      "candidateRole": "PRIMARY",
+      "sector": "Health Care",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "BDX",
+      "candidateRole": "PRIMARY",
+      "sector": "Health Care",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "BSX",
+      "candidateRole": "PRIMARY",
+      "sector": "Health Care",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "EW",
+      "candidateRole": "PRIMARY",
+      "sector": "Health Care",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "classification": "UNRESOLVED_PIT_WITHOUT_PERIOD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "ISRG",
+      "candidateRole": "PRIMARY",
+      "sector": "Health Care",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "classification": "REQUIRES_REPARSE_FIELD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "ZBH",
+      "candidateRole": "PRIMARY",
+      "sector": "Health Care",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "PFE",
+      "candidateRole": "PRIMARY",
+      "sector": "Health Care",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "MRK",
+      "candidateRole": "PRIMARY",
+      "sector": "Health Care",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "BMY",
+      "candidateRole": "PRIMARY",
+      "sector": "Health Care",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "CAT",
+      "candidateRole": "PRIMARY",
+      "sector": "Industrials",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "ADP",
+      "candidateRole": "PRIMARY",
+      "sector": "Industrials",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "classification": "REQUIRES_REPARSE_FIELD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "HON",
+      "candidateRole": "PRIMARY",
+      "sector": "Industrials",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "classification": "REQUIRES_REPARSE_FIELD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "UPS",
+      "candidateRole": "PRIMARY",
+      "sector": "Industrials",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "UNP",
+      "candidateRole": "PRIMARY",
+      "sector": "Industrials",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "DE",
+      "candidateRole": "PRIMARY",
+      "sector": "Industrials",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "ETN",
+      "candidateRole": "PRIMARY",
+      "sector": "Industrials",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "classification": "REQUIRES_REPARSE_FIELD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "RTX",
+      "candidateRole": "PRIMARY",
+      "sector": "Industrials",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "LMT",
+      "candidateRole": "PRIMARY",
+      "sector": "Industrials",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "NOC",
+      "candidateRole": "PRIMARY",
+      "sector": "Industrials",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "GD",
+      "candidateRole": "PRIMARY",
+      "sector": "Industrials",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "PH",
+      "candidateRole": "PRIMARY",
+      "sector": "Industrials",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "ITW",
+      "candidateRole": "PRIMARY",
+      "sector": "Industrials",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "EMR",
+      "candidateRole": "PRIMARY",
+      "sector": "Industrials",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "CMI",
+      "candidateRole": "PRIMARY",
+      "sector": "Industrials",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "FAST",
+      "candidateRole": "PRIMARY",
+      "sector": "Industrials",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "classification": "REQUIRES_REPARSE_FIELD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "EXPO",
+      "candidateRole": "PRIMARY",
+      "sector": "Industrials",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_PITAVAILABILITY",
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "classification": "CONFIRMED_ALIAS_RECOVERY_WITH_TRUE_PIT_MISMATCH"
+    },
+    {
+      "symbol": "FIX",
+      "candidateRole": "PRIMARY",
+      "sector": "Industrials",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "SAIA",
+      "candidateRole": "PRIMARY",
+      "sector": "Industrials",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "classification": "REQUIRES_REPARSE_FIELD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "TTC",
+      "candidateRole": "PRIMARY",
+      "sector": "Industrials",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "NEE",
+      "candidateRole": "PRIMARY",
+      "sector": "Utilities",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "classification": "UNRESOLVED_PIT_WITHOUT_PERIOD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "DUK",
+      "candidateRole": "PRIMARY",
+      "sector": "Utilities",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "SO",
+      "candidateRole": "PRIMARY",
+      "sector": "Utilities",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "AEP",
+      "candidateRole": "PRIMARY",
+      "sector": "Utilities",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "classification": "REQUIRES_REPARSE_FIELD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "EXC",
+      "candidateRole": "PRIMARY",
+      "sector": "Utilities",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "classification": "REQUIRES_REPARSE_FIELD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "XEL",
+      "candidateRole": "PRIMARY",
+      "sector": "Utilities",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "classification": "REQUIRES_REPARSE_FIELD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "SRE",
+      "candidateRole": "PRIMARY",
+      "sector": "Utilities",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "ED",
+      "candidateRole": "PRIMARY",
+      "sector": "Utilities",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "LIN",
+      "candidateRole": "PRIMARY",
+      "sector": "Materials",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "SHW",
+      "candidateRole": "PRIMARY",
+      "sector": "Materials",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "ECL",
+      "candidateRole": "PRIMARY",
+      "sector": "Materials",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "APD",
+      "candidateRole": "PRIMARY",
+      "sector": "Materials",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "PPG",
+      "candidateRole": "PRIMARY",
+      "sector": "Materials",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "AVY",
+      "candidateRole": "PRIMARY",
+      "sector": "Materials",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "PKG",
+      "candidateRole": "PRIMARY",
+      "sector": "Materials",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "classification": "UNRESOLVED_PIT_WITHOUT_PERIOD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "UFPI",
+      "candidateRole": "PRIMARY",
+      "sector": "Materials",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "classification": "REQUIRES_REPARSE_FIELD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "WDFC",
+      "candidateRole": "PRIMARY",
+      "sector": "Materials",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "classification": "REQUIRES_REPARSE_FIELD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "HWKN",
+      "candidateRole": "PRIMARY",
+      "sector": "Materials",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "classification": "REQUIRES_REPARSE_FIELD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "LRCX",
+      "candidateRole": "RESERVE",
+      "sector": "Information Technology",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "classification": "REQUIRES_REPARSE_FIELD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "KLAC",
+      "candidateRole": "RESERVE",
+      "sector": "Information Technology",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "classification": "REQUIRES_REPARSE_FIELD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "INTU",
+      "candidateRole": "RESERVE",
+      "sector": "Information Technology",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "classification": "REQUIRES_REPARSE_FIELD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "MCHP",
+      "candidateRole": "RESERVE",
+      "sector": "Information Technology",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "classification": "REQUIRES_REPARSE_FIELD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "T",
+      "candidateRole": "RESERVE",
+      "sector": "Communication Services",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "OMC",
+      "candidateRole": "RESERVE",
+      "sector": "Communication Services",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "DHI",
+      "candidateRole": "RESERVE",
+      "sector": "Consumer Discretionary",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "LEN",
+      "candidateRole": "RESERVE",
+      "sector": "Consumer Discretionary",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "SYY",
+      "candidateRole": "RESERVE",
+      "sector": "Consumer Staples",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "HSY",
+      "candidateRole": "RESERVE",
+      "sector": "Consumer Staples",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "CAH",
+      "candidateRole": "RESERVE",
+      "sector": "Health Care",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "classification": "UNRESOLVED_PIT_WITHOUT_PERIOD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "COR",
+      "candidateRole": "RESERVE",
+      "sector": "Health Care",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "HSIC",
+      "candidateRole": "RESERVE",
+      "sector": "Health Care",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "classification": "REQUIRES_REPARSE_FIELD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "ROK",
+      "candidateRole": "RESERVE",
+      "sector": "Industrials",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "PCAR",
+      "candidateRole": "RESERVE",
+      "sector": "Industrials",
+      "originalStatus": "PARTIAL",
+      "originalReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "derivedStatus": "PARTIAL",
+      "derivedReasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "classification": "REQUIRES_REPARSE_FIELD_DIAGNOSTICS"
+    },
+    {
+      "symbol": "GWW",
+      "candidateRole": "RESERVE",
+      "sector": "Industrials",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "WM",
+      "candidateRole": "RESERVE",
+      "sector": "Industrials",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "CMS",
+      "candidateRole": "RESERVE",
+      "sector": "Utilities",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "MLM",
+      "candidateRole": "RESERVE",
+      "sector": "Materials",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    },
+    {
+      "symbol": "VMC",
+      "candidateRole": "RESERVE",
+      "sector": "Materials",
+      "originalStatus": "PASS",
+      "originalReasonCodes": [],
+      "derivedStatus": "PASS",
+      "derivedReasonCodes": [],
+      "classification": "CONFIRMED_PASS"
+    }
+  ],
+  "limitations": [
+    "The 120-security report does not retain normalized financial payloads or per-field provider diagnostics.",
+    "Only symbols with later focused evidence can be conclusively reclassified.",
+    "The TXN local PIT fix requires a later bounded live confirmation because its licensed payload was not retained.",
+    "No Objective Rating, PIT, required-field, or PASS rule was changed."
+  ],
+  "artifactContentHash": "977BB32E75C8007618FD94EBC2170621267DEF929722220878B0A1414EE858C7"
+}

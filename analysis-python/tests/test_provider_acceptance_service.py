@@ -164,6 +164,39 @@ def test_missing_twelve_data_configuration_is_not_silently_accepted() -> None:
     assert price_check.status == CheckStatus.NOT_VERIFIED
 
 
+def test_missing_eodhd_configuration_is_not_silently_accepted() -> None:
+    universe = AcceptanceUniverse(
+        universe_version="test-v1",
+        securities=(
+            AcceptanceSecurity(
+                symbol="AAPL",
+                cik="0000320193",
+                expected_company_type="MATURE_OPERATING_COMPANY",
+                tests=(),
+            ),
+        ),
+    )
+    service = ProviderAcceptanceService(
+        sec_client=FakeSecClient(),
+        twelve_data_client=None,
+        unavailable_market_providers=("eodhd",),
+    )
+
+    report = service.validate(
+        universe,
+        start_date=date(2020, 1, 1),
+        end_date=date(2026, 7, 25),
+    )
+
+    price_check = next(
+        check
+        for check in report.results[0].checks
+        if check.provider == "eodhd" and check.category == CheckCategory.DAILY_PRICE
+    )
+    assert price_check.status == CheckStatus.NOT_VERIFIED
+    assert report.production_backtest_status == CheckStatus.NOT_VERIFIED
+
+
 def test_missing_sec_identity_configuration_is_not_silently_accepted() -> None:
     universe = AcceptanceUniverse(
         universe_version="test-v1",

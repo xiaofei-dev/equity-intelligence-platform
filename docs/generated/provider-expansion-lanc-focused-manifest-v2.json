@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "provider-gate-expansion-lanc-focused-v2.0.0",
+  "universeVersion": "provider-expansion-us-v2.0.0",
+  "universeContentHash": "858A1482F94F6D36D2AA5C892C497C653EC2009E1357298FF20AEEA9C3D66B58",
+  "repairDecisionPath": "docs/generated/sec-lanc-ticker-mapping-repair-decision-20260727T185526Z.json",
+  "repairEvidencePath": "docs/generated/sec-authoritative-lanc-evidence-20260727T185526Z.json",
+  "repairEvidenceSha256": "7C23CDE98DAFFFE79A248754B15D33EFFD33CA9410B77030261DBA4BF13B84BD",
+  "sliceSize": 1,
+  "slices": [
+    {
+      "sliceId": "lanc-focused-001",
+      "symbols": [
+        "LANC"
+      ],
+      "symbolCount": 1,
+      "sectorDistribution": {
+        "Consumer Staples": 1
+      },
+      "marketCapDistribution": {
+        "MID": 1
+      },
+      "roleDistribution": {
+        "PRIMARY": 1
+      }
+    }
+  ],
+  "manifestContentHash": "DB0D5D9DC9E4ABF6A2C49DE4BEF20A5C849ED3E20B5554E51ABCC119D5D2707A"
+}

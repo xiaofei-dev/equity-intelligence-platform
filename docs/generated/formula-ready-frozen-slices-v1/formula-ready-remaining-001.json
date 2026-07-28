@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "formula-ready-frozen-slice-v1.0.0",
+  "sourceManifestContentHash": "856CF4C3C1174D258CB69D758BBE7740EE04A92E398E7A0841BAB3EBD7652EBC",
+  "sliceId": "formula-ready-remaining-001",
+  "sequence": 1,
+  "symbols": [
+    "A",
+    "ACN",
+    "ADBE",
+    "ADI",
+    "ADM",
+    "ADP",
+    "ADSK",
+    "AEE",
+    "AEP",
+    "AES",
+    "AKAM",
+    "ALB",
+    "ALGN",
+    "ALLE",
+    "AMAT",
+    "AMCR",
+    "AMD",
+    "AME",
+    "AMZN",
+    "ANET"
+  ],
+  "automaticSelection": false,
+  "automaticReplacement": false,
+  "contentHash": "FEB87C3493B643DCD8D1C77ADABB15CAF1F6CA715BDCD9FB9520C3837D7A4CAA"
+}

@@ -1,0 +1,49 @@
+{
+  "artifactType": "SEC_SCORING_SUPPLEMENT_FORMULA_COVERAGE",
+  "schemaVersion": "sec-scoring-supplement-formula-coverage-v1.0.0",
+  "runId": "20260727T201423Z-f94523bfc322",
+  "generatedAt": "2026-07-27T20:15:07.335831Z",
+  "sourceReportPath": "docs/generated/sec-scoring-supplement-20260727T201423Z-f94523bfc322.json",
+  "sourceReportSha256": "439B44A1FD736601D4FA4E5E4BA34EED4A290CC1DA6DFC512F5813656E2A275C",
+  "sourceManifestSha256": "8A08228D6DFDFB050067823C2DA4D6B9F000C2020D3806AAC67B7BD902679444",
+  "sourceDiagnosticsSha256": "8AEA6B6C5219BB7786406512169207E4C7560C99CCF85829DEA6E309CBC21D0A",
+  "networkRequestsExecutedDuringCoverageAnalysis": false,
+  "formulaReadyCount": 3,
+  "insufficientCount": 0,
+  "securities": [
+    {
+      "symbol": "AAPL",
+      "status": "FORMULA_READY",
+      "payloadHash": "83F478441CF8AA11A10E36633CB8815B5DA3737A6142BE1BDD564ED0E0F40A05",
+      "missingFormulaFields": [],
+      "dilutedSharesQuarterCount": 36,
+      "interestExpenseQuarterCount": 29,
+      "marketCapitalizationObservationCount": 262,
+      "formulaReady": true
+    },
+    {
+      "symbol": "CAT",
+      "status": "FORMULA_READY",
+      "payloadHash": "E736F990F76D88F04FB871F0D02A80D853F7EC0C8F2F64934B3524E1432A86C2",
+      "missingFormulaFields": [],
+      "dilutedSharesQuarterCount": 25,
+      "interestExpenseQuarterCount": 8,
+      "marketCapitalizationObservationCount": 261,
+      "formulaReady": true
+    },
+    {
+      "symbol": "JNJ",
+      "status": "FORMULA_READY",
+      "payloadHash": "41931F67FFAD86D46092D0A8727EFBC6CA80528A98336DDE963FB4EC67A3B191",
+      "missingFormulaFields": [],
+      "dilutedSharesQuarterCount": 29,
+      "interestExpenseQuarterCount": 30,
+      "marketCapitalizationObservationCount": 261,
+      "formulaReady": true
+    }
+  ],
+  "readyFor243BackfillDesign": true,
+  "objectiveRatingExecuted": false,
+  "licensedValuesIncluded": false,
+  "artifactContentHash": "046A5B173FB9367FB47F4B081A07E7A66C20A0733783083B7D71995EBDE9F62A"
+}

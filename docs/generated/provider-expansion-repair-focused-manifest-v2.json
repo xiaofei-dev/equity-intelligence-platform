@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "provider-gate-expansion-repair-focused-v2.0.0",
+  "universeVersion": "provider-expansion-us-v2.0.0",
+  "universeContentHash": "858A1482F94F6D36D2AA5C892C497C653EC2009E1357298FF20AEEA9C3D66B58",
+  "repairDiffPath": "docs/generated/provider-expansion-universe-v1-to-v2-diff.json",
+  "repairDiffSha256": "BD8B5379F67DB48188509758CE74C9807411BC77393360E658A0F310AE88F0DE",
+  "sliceSize": 1,
+  "slices": [
+    {
+      "sliceId": "repair-focused-001",
+      "symbols": [
+        "TSN"
+      ],
+      "symbolCount": 1,
+      "sectorDistribution": {
+        "Consumer Staples": 1
+      },
+      "marketCapDistribution": {
+        "LARGE": 1
+      },
+      "roleDistribution": {
+        "PRIMARY": 1
+      }
+    }
+  ],
+  "manifestContentHash": "A976A146CB0AE56E03A17560C70FB87EC9E0E19F377F09740AD6382E4F6677CC"
+}

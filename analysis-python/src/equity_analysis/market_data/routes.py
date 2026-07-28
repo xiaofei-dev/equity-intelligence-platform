@@ -5,13 +5,15 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from pydantic import BaseModel, Field, field_validator, model_validator
 
 from equity_analysis.config import Settings
-from equity_analysis.market_data.provider import MarketDataProviderError
+from equity_analysis.market_data.factory import (
+    ProviderConfigurationError,
+    create_market_data_provider,
+)
 from equity_analysis.market_data.repository import DailyPriceRepository
 from equity_analysis.market_data.service import (
     DailyPriceIngestionService,
     SymbolIngestionResult,
 )
-from equity_analysis.market_data.twelve_data import TwelveDataClient
 
 router = APIRouter(prefix="/internal/v1/market-data", tags=["market-data"])
 
@@ -44,15 +46,7 @@ class DailyPriceIngestionResponse(BaseModel):
 
 def get_ingestion_service() -> DailyPriceIngestionService:
     settings = Settings.from_environment()
-    if settings.market_data_provider != "twelve_data":
-        raise HTTPException(
-            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
-            detail={
-                "code": "MARKET_DATA_PROVIDER_UNSUPPORTED",
-                "message": "Configured market data provider is not supported",
-            },
-        )
-    if not settings.twelve_data_api_key or not settings.analytics_database_url:
+    if not settings.analytics_database_url:
         raise HTTPException(
             status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
             detail={
@@ -60,8 +54,15 @@ def get_ingestion_service() -> DailyPriceIngestionService:
                 "message": "Market data ingestion is not configured",
             },
         )
+    try:
+        provider = create_market_data_provider(settings)
+    except ProviderConfigurationError as error:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail={"code": error.code, "message": str(error)},
+        ) from error
     return DailyPriceIngestionService(
-        provider=TwelveDataClient(settings.twelve_data_api_key),
+        provider=provider,
         repository=DailyPriceRepository(settings.analytics_database_url),
     )
 
@@ -75,23 +76,23 @@ def ingest_daily_prices(
     request: DailyPriceIngestionRequest,
     service: Annotated[DailyPriceIngestionService, Depends(get_ingestion_service)],
 ) -> DailyPriceIngestionResponse:
-    try:
-        results = service.ingest(
-            symbols=tuple(request.symbols),
-            start_date=request.start_date,
-            end_date=request.end_date,
-        )
-    except MarketDataProviderError as error:
+    results = service.ingest(
+        symbols=tuple(request.symbols),
+        start_date=request.start_date,
+        end_date=request.end_date,
+    )
+    if results and all(result.status == "FAILED" for result in results):
         raise HTTPException(
             status_code=status.HTTP_502_BAD_GATEWAY,
             detail={
                 "code": "MARKET_DATA_PROVIDER_ERROR",
-                "message": str(error),
+                "message": "The market data provider failed for every requested symbol",
+                "results": [result.__dict__ for result in results],
             },
-        ) from error
+        )
 
     return DailyPriceIngestionResponse(
-        provider="twelve_data",
+        provider=service.provider_code,
         results=list(results),
         total_rows_upserted=sum(result.rows_upserted for result in results),
     )

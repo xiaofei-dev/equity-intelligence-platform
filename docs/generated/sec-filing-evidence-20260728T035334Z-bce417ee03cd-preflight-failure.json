@@ -1,0 +1,14 @@
+{
+  "artifactType": "SEC_FILING_EVIDENCE_PREFLIGHT_FAILURE",
+  "schemaVersion": "sec-filing-evidence-preflight-failure-v1.0.0",
+  "runId": "20260728T035334Z-bce417ee03cd",
+  "preflightContentHash": "9A77AEEC67D830F033FF9EAEB45282B99B1E1E002CBCA3F20E2F6BC8C5470747",
+  "errorCode": "LOCAL_ENV_PATH_INVOCATION_FAILED",
+  "errorType": "TypeError",
+  "physicalHttpAttempts": 0,
+  "networkRequestsExecuted": false,
+  "lockAcquired": false,
+  "eodhdRequests": 0,
+  "rawProviderValuesIncluded": false,
+  "contentHash": "F418C2F222D3EE786FFBA0EE84A819B371D756AD1DB7608C99345BBDE4528C29"
+}

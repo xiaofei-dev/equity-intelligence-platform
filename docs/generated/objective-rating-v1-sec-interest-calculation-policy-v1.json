@@ -1,0 +1,142 @@
+{
+  "artifactType": "OBJECTIVE_RATING_V1_SEC_INTEREST_CALCULATION_POLICY",
+  "schemaVersion": "objective-rating-v1-sec-interest-calculation-policy-v1.0.0",
+  "methodologyVersion": "SEC-INTEREST-CALCULATION-EVIDENCE-v1.0.0",
+  "parserVersion": "sec-interest-calculation-linkbase-parser-v1.0.0",
+  "policyVersion": "sec-interest-scope-continuity-calculation-policy-v1.0.0",
+  "sourceCanary": {
+    "path": "docs/generated/sec-issuer-interest-consistency-20260728T052922Z-0b0de73b0bb0-canary.json",
+    "fileSha256": "0572D24DDCA034F1C05FAA071DDCD05A545E3D1BEB51D2F5DECD8F5FC4E00A01",
+    "contentHash": "1743B5DDEA03E3C2BB706D7AAE8329A688A36F7101F4C9F3644449343F9A7A8C"
+  },
+  "sourceEvidenceRun": {
+    "path": "docs/generated/sec-issuer-interest-evidence-20260728T051809Z-ff6c07bd66ff.json",
+    "fileSha256": "F58839D369945E348DA010EF78AC4AE076AC6A964AA7B2EBB5D3338DDAF151ED",
+    "contentHash": "3EB296CA4392723B18E5E4A41483FAA03865CF1316D6769642D9E0D94964ADFD"
+  },
+  "authoritativeSources": [
+    {
+      "authority": "SEC_EDGAR_FILER_MANUAL_VOLUME_II",
+      "sections": [
+        "6.14",
+        "6.15"
+      ],
+      "url": "https://www.sec.gov/submit-filings/edgar-filer-manual"
+    },
+    {
+      "authority": "SEC_CALCULATION_RELATIONSHIP_SAMPLE_LETTER",
+      "url": "https://www.sec.gov/rules-regulations/staff-guidance/disclosure-guidance/divisionscorpfinguidancexbrl-calculation"
+    },
+    {
+      "authority": "XBRL_2_1_SPECIFICATION",
+      "section": "5.2.5",
+      "url": "https://www.xbrl.org/Specification/XBRL-2.1/REC-2003-12-31/XBRL-2.1-REC-2003-12-31%2Bcorrected-errata-2013-02-20.html"
+    }
+  ],
+  "requiredArcrole": "http://www.xbrl.org/2003/arcrole/summation-item",
+  "allowedWeights": [
+    "-1",
+    "1"
+  ],
+  "requiredFields": [
+    "accession",
+    "form",
+    "acceptedAt",
+    "sourceReference",
+    "sourceContentHash",
+    "ingestedAt",
+    "statementRole",
+    "arcrole",
+    "parentConcept",
+    "childConcept",
+    "weight",
+    "order",
+    "priority",
+    "use",
+    "entity",
+    "periodStart",
+    "periodEnd",
+    "unit",
+    "currency",
+    "dimensions",
+    "decimals"
+  ],
+  "automaticPassAllowed": false,
+  "outcomes": {
+    "PASS": {
+      "calculationOnlyAllowed": false,
+      "additionalEvidence": "Explicit issuer filing narrative proving complete gross interest scope with no omitted operating-interest component."
+    },
+    "PARTIAL": [
+      "CALCULATION_LINKBASE_MISSING_OR_NOT_COLLECTED",
+      "CALCULATION_LINKBASE_EMPTY",
+      "CALCULATION_RELATIONSHIP_ABSENT",
+      "EQUAL_VALUES_ONLY",
+      "CONTEXT_OR_ROLE_NOT_COMPARABLE",
+      "DTS_COMPLETENESS_NOT_PROVEN",
+      "STRUCTURAL_CONTINUITY_SUPPORTED_BUT_ECONOMIC_SCOPE_NOT_PROVEN"
+    ],
+    "REJECT": [
+      "NONOPERATING_IS_SUBSET_OF_BROADER_INTEREST_TOTAL",
+      "NEGATIVE_WEIGHT_NETTING",
+      "INTEREST_INCOME_INCLUDED",
+      "CAPITALIZED_INTEREST_INCLUDED",
+      "DEBT_OR_FINANCING_FEES_INCLUDED",
+      "CROSS_TRANSITION_AGGREGATION_CONTRADICTION",
+      "BINDING_CALCULATION_INCONSISTENT"
+    ]
+  },
+  "preflight": {
+    "symbols": [
+      "AMAT",
+      "CSCO",
+      "FIX"
+    ],
+    "accessionsBySymbol": {
+      "AMAT": [
+        "0000006951-25-000011",
+        "0000006951-25-000024",
+        "0000006951-25-000037",
+        "0001628280-25-056742",
+        "0001628280-26-009694",
+        "0001628280-26-037227"
+      ],
+      "CSCO": [
+        "0000858877-25-000007",
+        "0000858877-25-000033",
+        "0000858877-25-000111",
+        "0000858877-25-000171",
+        "0000858877-26-000021",
+        "0000858877-26-000078"
+      ],
+      "FIX": [
+        "0001104659-25-101821",
+        "0001104659-26-017530",
+        "0001104659-26-047689",
+        "0001104659-26-086258",
+        "0001558370-25-005411",
+        "0001558370-25-009536"
+      ]
+    },
+    "accessionCount": 18,
+    "endpoint": "SEC_FILING_CALCULATION_LINKBASE",
+    "physicalRequestsIfApproved": 18,
+    "maximumRetries": 0,
+    "eodhdRequests": 0,
+    "networkAccessed": false,
+    "executionDecision": "NOT_APPROVED_NO_AUTOMATIC_PASS_PATH"
+  },
+  "currentCanaryDecision": {
+    "AMAT": "PARTIAL",
+    "CSCO": "PARTIAL",
+    "FIX": "PARTIAL",
+    "reasonCode": "ISSUER_SCOPE_CONTINUITY_NOT_PROVEN"
+  },
+  "formulaChanges": false,
+  "weightChanges": false,
+  "missingRuleChanges": false,
+  "scoresOrRanksIncluded": false,
+  "forwardValidationExecuted": false,
+  "networkRequestsExecuted": false,
+  "artifactContentHash": "428500059A2DFE6D033DB1FEA75A1063938AEC448EC602E0ECCB747EFF9AE8A1"
+}

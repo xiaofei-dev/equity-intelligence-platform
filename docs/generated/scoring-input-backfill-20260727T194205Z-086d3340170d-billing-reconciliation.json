@@ -1,0 +1,20 @@
+{
+  "artifactType": "SCORING_INPUT_BACKFILL_FAILURE_BILLING_RECONCILIATION",
+  "schemaVersion": "formula-scoring-backfill-failure-billing-v1.0.0",
+  "runId": "20260727T194205Z-086d3340170d",
+  "failureEvidencePath": "docs/generated/scoring-input-backfill-20260727T194205Z-086d3340170d-failure.json",
+  "dashboardBefore": 21481,
+  "dashboardAfter": 21502,
+  "observedProviderBilledDelta": 21,
+  "approvedCanaryProvisionalBilling": 75,
+  "approvedCanaryHardSafetyCeiling": 113,
+  "withinProvisionalBilling": true,
+  "withinHardSafetyCeiling": true,
+  "physicalTelemetryStatus": "NOT_PERSISTED_BY_FAILED_PROCESS",
+  "runLevelBillingStatus": "PROVISIONALLY_RECONCILED_FROM_DASHBOARD_INTERVAL",
+  "endpointLevelBillingStatus": "NOT_RECONCILED",
+  "endpointAllocationInferred": false,
+  "reason": "The dashboard proves only the run interval delta. The failed process did not persist physical endpoint telemetry, so no per-endpoint allocation is claimed.",
+  "licensedValuesIncluded": false,
+  "credentialsIncluded": false
+}

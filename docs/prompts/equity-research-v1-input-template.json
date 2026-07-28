@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "ai-equity-research-input-v1.0.0",
+  "symbol": "{{SYMBOL}}",
+  "companyName": "{{COMPANY_NAME}}",
+  "analysisAsOf": "{{ISO_8601_TIMESTAMP}}",
+  "inputSnapshotHash": "{{SHA256}}",
+  "quantitativeAssessment": {
+    "oneWeekOpportunityIndex": null,
+    "oneMonthOpportunityIndex": null,
+    "threeMonthOpportunityIndex": null,
+    "longHorizonDeterministicScore": null,
+    "factorContributions": [],
+    "warnings": []
+  },
+  "companyContext": {
+    "sector": null,
+    "industry": null,
+    "businessModel": null,
+    "currentStrategy": null
+  },
+  "leadership": [
+    {
+      "name": null,
+      "role": "CEO",
+      "appointedAt": null,
+      "officialBiographySourceId": null
+    }
+  ],
+  "evidence": [
+    {
+      "sourceId": "{{UNIQUE_SOURCE_ID}}",
+      "sourceGrade": "A",
+      "title": "{{SOURCE_TITLE}}",
+      "publisher": "{{PUBLISHER}}",
+      "publishedAt": "{{ISO_8601_TIMESTAMP}}",
+      "retrievedAt": "{{ISO_8601_TIMESTAMP}}",
+      "url": "{{HTTPS_URL}}",
+      "contentHash": "{{SHA256}}",
+      "excerptOrStructuredFacts": []
+    }
+  ],
+  "runtimeLimits": {
+    "model": "gpt-5.6-terra",
+    "reasoningEffort": "medium",
+    "maxInputTokens": 12000,
+    "maxOutputTokens": 2000,
+    "maxWebSearchCalls": 3,
+    "targetCostUsd": 0.15,
+    "hardCostUsd": 0.2
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "artifactType": "FORMULA_READY_BACKFILL_RESUME_OUTCOME",
+  "schemaVersion": "formula-ready-backfill-resume-outcome-v1.0.0",
+  "artifactRunId": "20260727T210751Z-1338b14b5d99",
+  "resumedRunId": "20260727T204539Z-5dd84ab67acf",
+  "symbol": "ABNB",
+  "status": "INSUFFICIENT_DATA",
+  "gateStatus": "FAIL_FORMULA_COVERAGE",
+  "resumeCompatibilityModes": [
+    "LEGACY_GZIP_MAGIC_V1"
+  ],
+  "replayedCompletedEndpoints": [
+    "fundamentals",
+    "eod",
+    "historical-market-cap",
+    "ticker-mapping"
+  ],
+  "newPhysicalAttempts": {
+    "eodhd": 0,
+    "sec": 2,
+    "total": 2,
+    "retries": 0
+  },
+  "newSecEndpoints": [
+    "submissions",
+    "company-facts"
+  ],
+  "formulaCoverage": {
+    "missingFormulaFields": [],
+    "dilutedShareQuarterlyPeriods": 13,
+    "interestExpenseQuarterlyPeriods": 0,
+    "historicalMarketCapObservations": 263,
+    "dailyPriceObservationDates": 1411,
+    "requiredQuarterlyPeriods": 8,
+    "requiredHistoricalValuationObservations": 12,
+    "historyComplete": false
+  },
+  "sanitizedFailureReason": "INTEREST_EXPENSE_QUARTERLY_HISTORY_BELOW_REQUIRED_WINDOW",
+  "reportPath": "docs/generated/formula-ready-backfill-20260727T204539Z-5dd84ab67acf.json",
+  "reportSha256": "1B43BB65AE98394F764CD8C15A05E3268D9C02355CCAB77C4B536C376ED64BAC",
+  "manifestPath": "docs/generated/formula-ready-backfill-20260727T204539Z-5dd84ab67acf-manifest.json",
+  "manifestSha256": "EDB226B8D2179C0E52B17150C413BC2EB060DF5AAEFC7DECB11BEC6FB79010B8",
+  "diagnosticsPath": "docs/generated/formula-ready-backfill-20260727T204539Z-5dd84ab67acf-diagnostics.json",
+  "diagnosticsSha256": "AAC901620DC7E006CA23DB16EABFFB25A986591AA5EC57BEC58BFC17778B3262",
+  "runCompleteEventHash": "FFA81AB1DD90A84E218C5E76D19258BF90992D8A581C094AE287DDFDC12824BF",
+  "symbolCheckpointProduced": true,
+  "formulaReadyPayloadProduced": false,
+  "liveProcessRemaining": false,
+  "executionLockRemaining": false,
+  "objectiveRatingExecuted": false,
+  "forwardValidationExecuted": false,
+  "credentialsIncluded": false,
+  "licensedValuesIncluded": false,
+  "artifactContentHash": "2C5417B978498BFA9631B9A7C3C7E688F508A868630DCE483A322FB1C448320C"
+}

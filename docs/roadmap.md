@@ -2,9 +2,15 @@
 
 ## Current Position
 
-Phase 0 is complete. Phase 1 has a visible six-security market-data path. The
-next analytics milestone is provider and methodology validation, not a claim
-that the current engineering universe is a production screen.
+Phase 0 and the first end-to-end market-data slice are complete. The current
+analytics checkpoint includes a bounded EODHD current-decision route,
+provider-neutral model interfaces, a 136-security QC snapshot, Tactical Signal
+v2.1, and an accepted Forward Decision-Quality framework.
+
+Historical point-in-time UQ validation, prospective outcome maturation,
+source-verified AI operation, and portfolio recommendation workflows remain
+separate later gates. The current engineering acceptance is not a claim of
+proven excess returns.
 
 ## Phase 0: Foundation - Complete
 
@@ -34,36 +40,38 @@ Java, and the frontend.
 
 Exit status: achieved.
 
-## Phase 1B: Data and Methodology Validation - Next
+## Phase 1B: Data and Methodology Validation - Current Use Accepted
 
 - [x] Define the 20-security provider-validation universe
 - [x] Define reference, price, corporate-action, and fundamental data contracts
-- [ ] Validate point-in-time dates, adjustments, identifiers, null handling,
+- [x] Validate current-decision dates, adjustments, identifiers, null handling,
   and SEC consistency
 - [ ] Validate sector and industry normalization
 - [ ] Add major sector ETF history for sector market-condition research
-- [ ] Approve or reject the leading paid provider candidate
+- [x] Accept EODHD for bounded current use with capability-specific limitations
 - [x] Document the first factor definitions and exclusion rules
 
-Exit condition: required inputs for the first two strategy paths are available,
-traceable, and proven suitable for historical use.
+Current-use status: achieved for the sealed QC route. Historical point-in-time
+and revision suitability remains open and must not be inferred from current
+acceptance.
 
 ## Phase 2: Explainable Quantitative Screening
 
 - [x] Implement the versioned screening task and immutable result pipeline
 - [x] Connect the Spring Boot public API to the FastAPI screening contract
-- [ ] Complete general-company raw-input derivation for the 20-security universe
+- [x] Complete a sealed current-decision general-company raw-input route
 - [x] Implement `Quality Compounder`
 - [x] Implement `Undervalued Quality`
-- Compare within sector, size, company-type, and strategy cohorts
-- Preserve raw factors, normalized contributions, exclusions, and confidence
-- Version strategy configuration
-- Store candidate and coverage snapshots
-- Evaluate a 300-to-500-security stratified sample
-- Compare with passive and simple-factor baselines
+- [x] Compare within sector, size, company-type, and strategy cohorts
+- [x] Preserve raw factors, normalized contributions, exclusions, and confidence
+- [x] Version strategy configuration
+- [x] Store candidate and coverage snapshots
+- [x] Evaluate a 300-security stratified provider sample
+- [ ] Mature prospective sector, SPY, cash, and simple-policy comparisons
 
-Exit condition: deterministic rankings are reproducible, explainable, and
-evaluated without obvious point-in-time or survivorship leakage.
+Current status: deterministic current-decision rankings are reproducible and
+explainable. Historical leakage and survivorship claims remain unproven;
+prospective Forward evidence is `PENDING_FUTURE_OUTCOMES`.
 
 ## Phase 3: AI Evidence Review
 

@@ -1,0 +1,729 @@
+{
+  "schemaVersion": "provider-gate-expansion-v2.0.0",
+  "universeVersion": "provider-expansion-us-v2.0.0",
+  "universeContentHash": "858A1482F94F6D36D2AA5C892C497C653EC2009E1357298FF20AEEA9C3D66B58",
+  "deterministicOrdering": "Candidates sort by candidateRole, sector, marketCapBand, and symbol. Each candidate is assigned to the slice with the lowest count for its role-sector-band stratum, then the lowest total count, then slice number.",
+  "sliceSize": 20,
+  "slices": [
+    {
+      "sliceId": "slice-001",
+      "symbols": [
+        "CHTR",
+        "TTWO",
+        "DECK",
+        "ROST",
+        "CLX",
+        "MO",
+        "BDX",
+        "HCA",
+        "ALLE",
+        "DOV",
+        "SAIA",
+        "APP",
+        "AAPL",
+        "CRH",
+        "LIN",
+        "EIX",
+        "APA",
+        "AMGN",
+        "OMC",
+        "GWW"
+      ],
+      "symbolCount": 20,
+      "sectorDistribution": {
+        "Communication Services": 3,
+        "Consumer Discretionary": 2,
+        "Consumer Staples": 2,
+        "Energy": 1,
+        "Health Care": 3,
+        "Industrials": 4,
+        "Information Technology": 2,
+        "Materials": 2,
+        "Utilities": 1
+      },
+      "marketCapDistribution": {
+        "LARGE": 16,
+        "MEGA": 2,
+        "NOT_APPLICABLE": 2
+      },
+      "roleDistribution": {
+        "PRIMARY": 16,
+        "REFERENCE_ONLY": 2,
+        "RESERVE": 2
+      }
+    },
+    {
+      "sliceId": "slice-002",
+      "symbols": [
+        "CMCSA",
+        "VZ",
+        "DPZ",
+        "SBUX",
+        "DG",
+        "PEP",
+        "BMY",
+        "HUM",
+        "AME",
+        "EFX",
+        "UNP",
+        "CDNS",
+        "AMAT",
+        "CTVA",
+        "HWKN",
+        "ES",
+        "BKR",
+        "BIIB",
+        "T",
+        "PCAR"
+      ],
+      "symbolCount": 20,
+      "sectorDistribution": {
+        "Communication Services": 3,
+        "Consumer Discretionary": 2,
+        "Consumer Staples": 2,
+        "Energy": 1,
+        "Health Care": 3,
+        "Industrials": 4,
+        "Information Technology": 2,
+        "Materials": 2,
+        "Utilities": 1
+      },
+      "marketCapDistribution": {
+        "LARGE": 16,
+        "MEGA": 1,
+        "MID": 1,
+        "NOT_APPLICABLE": 2
+      },
+      "roleDistribution": {
+        "PRIMARY": 16,
+        "REFERENCE_ONLY": 2,
+        "RESERVE": 2
+      }
+    },
+    {
+      "sliceId": "slice-003",
+      "symbols": [
+        "DIS",
+        "WBD",
+        "DRI",
+        "TGT",
+        "DLTR",
+        "PM",
+        "BSX",
+        "IDXX",
+        "AOS",
+        "EME",
+        "UPS",
+        "CDW",
+        "AVGO",
+        "DD",
+        "UFPI",
+        "ETR",
+        "COP",
+        "GILD",
+        "DHI",
+        "ROK"
+      ],
+      "symbolCount": 20,
+      "sectorDistribution": {
+        "Communication Services": 2,
+        "Consumer Discretionary": 3,
+        "Consumer Staples": 2,
+        "Energy": 1,
+        "Health Care": 3,
+        "Industrials": 4,
+        "Information Technology": 2,
+        "Materials": 2,
+        "Utilities": 1
+      },
+      "marketCapDistribution": {
+        "LARGE": 16,
+        "MEGA": 1,
+        "MID": 1,
+        "NOT_APPLICABLE": 2
+      },
+      "roleDistribution": {
+        "PRIMARY": 16,
+        "REFERENCE_ONLY": 2,
+        "RESERVE": 2
+      }
+    },
+    {
+      "sliceId": "slice-004",
+      "symbols": [
+        "EA",
+        "GOOGL",
+        "EBAY",
+        "TJX",
+        "EL",
+        "SJM",
+        "CI",
+        "IQV",
+        "AXON",
+        "EMR",
+        "CAT",
+        "CIEN",
+        "CSCO",
+        "DOW",
+        "WDFC",
+        "EVRG",
+        "CVX",
+        "INCY",
+        "LEN",
+        "WM"
+      ],
+      "symbolCount": 20,
+      "sectorDistribution": {
+        "Communication Services": 2,
+        "Consumer Discretionary": 3,
+        "Consumer Staples": 2,
+        "Energy": 1,
+        "Health Care": 3,
+        "Industrials": 4,
+        "Information Technology": 2,
+        "Materials": 2,
+        "Utilities": 1
+      },
+      "marketCapDistribution": {
+        "LARGE": 14,
+        "MEGA": 3,
+        "MID": 1,
+        "NOT_APPLICABLE": 2
+      },
+      "roleDistribution": {
+        "PRIMARY": 16,
+        "REFERENCE_ONLY": 2,
+        "RESERVE": 2
+      }
+    },
+    {
+      "sliceId": "slice-005",
+      "symbols": [
+        "ECHO",
+        "META",
+        "EXPE",
+        "YUM",
+        "GIS",
+        "STZ",
+        "CNC",
+        "ISRG",
+        "BA",
+        "ETN",
+        "RTX",
+        "COHR",
+        "MSFT",
+        "ECL",
+        "AEE",
+        "EXC",
+        "DVN",
+        "MRNA",
+        "LULU",
+        "FLEX"
+      ],
+      "symbolCount": 20,
+      "sectorDistribution": {
+        "Communication Services": 2,
+        "Consumer Discretionary": 3,
+        "Consumer Staples": 2,
+        "Energy": 1,
+        "Health Care": 3,
+        "Industrials": 3,
+        "Information Technology": 3,
+        "Materials": 1,
+        "Utilities": 2
+      },
+      "marketCapDistribution": {
+        "LARGE": 15,
+        "MEGA": 3,
+        "NOT_APPLICABLE": 2
+      },
+      "roleDistribution": {
+        "PRIMARY": 16,
+        "REFERENCE_ONLY": 2,
+        "RESERVE": 2
+      }
+    },
+    {
+      "sliceId": "slice-006",
+      "symbols": [
+        "FOX",
+        "NFLX",
+        "F",
+        "AMZN",
+        "HRL",
+        "COST",
+        "COO",
+        "LH",
+        "BLDR",
+        "EXPD",
+        "EXPO",
+        "CRM",
+        "NVDA",
+        "IFF",
+        "AEP",
+        "FE",
+        "EOG",
+        "REGN",
+        "LVS",
+        "FSLR"
+      ],
+      "symbolCount": 20,
+      "sectorDistribution": {
+        "Communication Services": 2,
+        "Consumer Discretionary": 3,
+        "Consumer Staples": 2,
+        "Energy": 1,
+        "Health Care": 3,
+        "Industrials": 3,
+        "Information Technology": 3,
+        "Materials": 1,
+        "Utilities": 2
+      },
+      "marketCapDistribution": {
+        "LARGE": 13,
+        "MEGA": 4,
+        "MID": 1,
+        "NOT_APPLICABLE": 2
+      },
+      "roleDistribution": {
+        "PRIMARY": 16,
+        "REFERENCE_ONLY": 2,
+        "RESERVE": 2
+      }
+    },
+    {
+      "sliceId": "slice-007",
+      "symbols": [
+        "FOXA",
+        "ABNB",
+        "GM",
+        "HD",
+        "KDP",
+        "KO",
+        "CRL",
+        "MCK",
+        "BR",
+        "FAST",
+        "TTC",
+        "CRWD",
+        "ORCL",
+        "IP",
+        "AES",
+        "LNT",
+        "EQT",
+        "FCX",
+        "HSY",
+        "INTU"
+      ],
+      "symbolCount": 20,
+      "sectorDistribution": {
+        "Communication Services": 1,
+        "Consumer Discretionary": 3,
+        "Consumer Staples": 3,
+        "Energy": 1,
+        "Health Care": 2,
+        "Industrials": 3,
+        "Information Technology": 3,
+        "Materials": 2,
+        "Utilities": 2
+      },
+      "marketCapDistribution": {
+        "LARGE": 14,
+        "MEGA": 3,
+        "MID": 1,
+        "NOT_APPLICABLE": 2
+      },
+      "roleDistribution": {
+        "PRIMARY": 16,
+        "REFERENCE_ONLY": 2,
+        "RESERVE": 2
+      }
+    },
+    {
+      "sliceId": "slice-008",
+      "symbols": [
+        "GOOG",
+        "APTV",
+        "GPC",
+        "CROX",
+        "KHC",
+        "PG",
+        "CVS",
+        "MDT",
+        "CARR",
+        "FDX",
+        "ACN",
+        "CTSH",
+        "OLED",
+        "LYB",
+        "ATO",
+        "NEE",
+        "ACGL",
+        "NEM",
+        "SYY",
+        "MCHP"
+      ],
+      "symbolCount": 20,
+      "sectorDistribution": {
+        "Communication Services": 1,
+        "Consumer Discretionary": 3,
+        "Consumer Staples": 3,
+        "Financials": 1,
+        "Health Care": 2,
+        "Industrials": 2,
+        "Information Technology": 4,
+        "Materials": 2,
+        "Utilities": 2
+      },
+      "marketCapDistribution": {
+        "LARGE": 15,
+        "MEGA": 1,
+        "MID": 2,
+        "NOT_APPLICABLE": 2
+      },
+      "roleDistribution": {
+        "PRIMARY": 16,
+        "REFERENCE_ONLY": 2,
+        "RESERVE": 2
+      }
+    },
+    {
+      "sliceId": "slice-009",
+      "symbols": [
+        "LYV",
+        "AZO",
+        "GRMN",
+        "ELF",
+        "KMB",
+        "WMT",
+        "DGX",
+        "PFE",
+        "CHRW",
+        "FIX",
+        "ADBE",
+        "DDOG",
+        "PLAB",
+        "MOS",
+        "AWK",
+        "NI",
+        "AFL",
+        "AMT",
+        "TAP",
+        "KLAC"
+      ],
+      "symbolCount": 20,
+      "sectorDistribution": {
+        "Communication Services": 1,
+        "Consumer Discretionary": 3,
+        "Consumer Staples": 3,
+        "Financials": 1,
+        "Health Care": 2,
+        "Industrials": 2,
+        "Information Technology": 4,
+        "Materials": 1,
+        "Real Estate": 1,
+        "Utilities": 2
+      },
+      "marketCapDistribution": {
+        "LARGE": 14,
+        "MEGA": 2,
+        "MID": 1,
+        "NOT_APPLICABLE": 2,
+        "SMALL": 1
+      },
+      "roleDistribution": {
+        "PRIMARY": 16,
+        "REFERENCE_ONLY": 2,
+        "RESERVE": 2
+      }
+    },
+    {
+      "sliceId": "slice-010",
+      "symbols": [
+        "NWS",
+        "BBY",
+        "HAS",
+        "ADM",
+        "KR",
+        "CALM",
+        "DHR",
+        "SYK",
+        "CMI",
+        "GD",
+        "ADI",
+        "DELL",
+        "ALB",
+        "NUE",
+        "CEG",
+        "NRG",
+        "AIG",
+        "ARE",
+        "CAH",
+        "LRCX"
+      ],
+      "symbolCount": 20,
+      "sectorDistribution": {
+        "Communication Services": 1,
+        "Consumer Discretionary": 2,
+        "Consumer Staples": 3,
+        "Financials": 1,
+        "Health Care": 3,
+        "Industrials": 2,
+        "Information Technology": 3,
+        "Materials": 2,
+        "Real Estate": 1,
+        "Utilities": 2
+      },
+      "marketCapDistribution": {
+        "LARGE": 16,
+        "MEGA": 1,
+        "MID": 1,
+        "NOT_APPLICABLE": 2
+      },
+      "roleDistribution": {
+        "PRIMARY": 16,
+        "REFERENCE_ONLY": 2,
+        "RESERVE": 2
+      }
+    },
+    {
+      "sliceId": "slice-011",
+      "symbols": [
+        "NWSA",
+        "BKNG",
+        "HLT",
+        "BF-B",
+        "KVUE",
+        "TSN",
+        "DVA",
+        "ZBH",
+        "CPRT",
+        "HON",
+        "ADSK",
+        "FFIV",
+        "AMCR",
+        "PKG",
+        "CNP",
+        "PCG",
+        "AIZ",
+        "AVB",
+        "COR",
+        "MLM"
+      ],
+      "symbolCount": 20,
+      "sectorDistribution": {
+        "Communication Services": 1,
+        "Consumer Discretionary": 2,
+        "Consumer Staples": 3,
+        "Financials": 1,
+        "Health Care": 3,
+        "Industrials": 2,
+        "Information Technology": 2,
+        "Materials": 3,
+        "Real Estate": 1,
+        "Utilities": 2
+      },
+      "marketCapDistribution": {
+        "LARGE": 18,
+        "NOT_APPLICABLE": 2
+      },
+      "roleDistribution": {
+        "PRIMARY": 16,
+        "REFERENCE_ONLY": 2,
+        "RESERVE": 2
+      }
+    },
+    {
+      "sliceId": "slice-012",
+      "symbols": [
+        "PSKY",
+        "CCL",
+        "LOW",
+        "BG",
+        "LANC",
+        "A",
+        "DXCM",
+        "JNJ",
+        "CSX",
+        "ITW",
+        "AKAM",
+        "FICO",
+        "APD",
+        "PPG",
+        "D",
+        "PEG",
+        "AJG",
+        "BXP",
+        "HSIC",
+        "VMC"
+      ],
+      "symbolCount": 20,
+      "sectorDistribution": {
+        "Communication Services": 1,
+        "Consumer Discretionary": 2,
+        "Consumer Staples": 2,
+        "Financials": 1,
+        "Health Care": 4,
+        "Industrials": 2,
+        "Information Technology": 2,
+        "Materials": 3,
+        "Real Estate": 1,
+        "Utilities": 2
+      },
+      "marketCapDistribution": {
+        "LARGE": 17,
+        "MEGA": 1,
+        "NOT_APPLICABLE": 2
+      },
+      "roleDistribution": {
+        "PRIMARY": 16,
+        "REFERENCE_ONLY": 2,
+        "RESERVE": 2
+      }
+    },
+    {
+      "sliceId": "slice-013",
+      "symbols": [
+        "TKO",
+        "CMG",
+        "MCD",
+        "CASY",
+        "MDLZ",
+        "ABT",
+        "ELV",
+        "MRK",
+        "CTAS",
+        "LMT",
+        "AMD",
+        "IBM",
+        "AVY",
+        "SHW",
+        "DTE",
+        "SO",
+        "ALL",
+        "CBRE",
+        "LLY",
+        "CMS"
+      ],
+      "symbolCount": 20,
+      "sectorDistribution": {
+        "Communication Services": 1,
+        "Consumer Discretionary": 2,
+        "Consumer Staples": 2,
+        "Financials": 1,
+        "Health Care": 4,
+        "Industrials": 2,
+        "Information Technology": 2,
+        "Materials": 2,
+        "Real Estate": 1,
+        "Utilities": 3
+      },
+      "marketCapDistribution": {
+        "LARGE": 17,
+        "MEGA": 1,
+        "NOT_APPLICABLE": 2
+      },
+      "roleDistribution": {
+        "PRIMARY": 16,
+        "REFERENCE_ONLY": 2,
+        "RESERVE": 2
+      }
+    },
+    {
+      "sliceId": "slice-014",
+      "symbols": [
+        "TMUS",
+        "CVNA",
+        "NKE",
+        "CHD",
+        "MKC",
+        "ALGN",
+        "EW",
+        "TMO",
+        "DAL",
+        "NOC",
+        "ANET",
+        "QCOM",
+        "BALL",
+        "STLD",
+        "DUK",
+        "SRE",
+        "AMP",
+        "CCI",
+        "FDXF",
+        "PNW"
+      ],
+      "symbolCount": 20,
+      "sectorDistribution": {
+        "Communication Services": 1,
+        "Consumer Discretionary": 2,
+        "Consumer Staples": 2,
+        "Financials": 1,
+        "Health Care": 3,
+        "Industrials": 3,
+        "Information Technology": 2,
+        "Materials": 2,
+        "Real Estate": 1,
+        "Utilities": 3
+      },
+      "marketCapDistribution": {
+        "LARGE": 17,
+        "MEGA": 1,
+        "NOT_APPLICABLE": 2
+      },
+      "roleDistribution": {
+        "PRIMARY": 16,
+        "REFERENCE_ONLY": 2,
+        "RESERVE": 2
+      }
+    },
+    {
+      "sliceId": "slice-015",
+      "symbols": [
+        "TTD",
+        "DASH",
+        "ORLY",
+        "CL",
+        "MNST",
+        "BAX",
+        "GEHC",
+        "ADP",
+        "DE",
+        "PH",
+        "APH",
+        "TXN",
+        "CF",
+        "SW",
+        "ED",
+        "XEL",
+        "ABBV",
+        "CPT",
+        "FTV",
+        "PPL"
+      ],
+      "symbolCount": 20,
+      "sectorDistribution": {
+        "Communication Services": 1,
+        "Consumer Discretionary": 2,
+        "Consumer Staples": 2,
+        "Health Care": 3,
+        "Industrials": 4,
+        "Information Technology": 2,
+        "Materials": 2,
+        "Real Estate": 1,
+        "Utilities": 3
+      },
+      "marketCapDistribution": {
+        "LARGE": 18,
+        "NOT_APPLICABLE": 2
+      },
+      "roleDistribution": {
+        "PRIMARY": 16,
+        "REFERENCE_ONLY": 2,
+        "RESERVE": 2
+      }
+    }
+  ],
+  "manifestContentHash": "280CED07155A1B6AB06F6B2E949B131EA94C465C774D8F67A0F8A3E3ABBD511F",
+  "repairPolicy": "All v1 slice slots are frozen; only the invalid pseudo-security slot is replaced by the deterministic successor."
+}

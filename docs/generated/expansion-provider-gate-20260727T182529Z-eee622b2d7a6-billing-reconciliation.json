@@ -1,0 +1,19 @@
+{
+  "artifactType": "EXPANSION_SLICE_BILLING_RECONCILIATION",
+  "schemaVersion": "provider-gate-expansion-billing-reconciliation-v1.0.0",
+  "runId": "20260727T182529Z-eee622b2d7a6",
+  "sliceId": "slice-002",
+  "dashboardBefore": 15652,
+  "dashboardAfter": 16066,
+  "observedProviderBilledDelta": 414,
+  "provisionalProviderBilling": 500,
+  "providerBilledSafetyCeiling": 750,
+  "runLevelBillingStatus": "PROVISIONALLY_RECONCILED",
+  "endpointLevelBillingStatus": "NOT_RECONCILED",
+  "sourceReportPath": "docs/generated/expansion-provider-gate-20260727T182529Z-eee622b2d7a6.json",
+  "sourceReportSha256": "B922218AE13BDA75DD4322229D5A40487474754039BF55B702E56EB01EBED228",
+  "sourceCheckpointSha256": "ECBF93822F02BB04108EAC9CC03EB941D2F363ACE37A811E3FE5C4B840A95DCC",
+  "sourceScoringInputManifestSha256": "AE5DE6000A39E3C9096EC21A6EAE984688C44CC0C0075ECCD72EA204542E26DA",
+  "networkRequestsExecutedDuringReconciliation": false,
+  "artifactContentHash": "64A8B7F6DE6E8CD51FE3CA97BD085137F6983E2C2E50A68F0B4DB90CA9A1BD94"
+}

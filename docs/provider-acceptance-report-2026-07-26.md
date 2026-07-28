@@ -215,6 +215,12 @@ an unapproved cost-of-sales mapping.
 Objective Rating v1 method and contract validation is **accepted**. Free-source
 production data acceptance is **not accepted**.
 
+The replaceable provider implementation subsequently added offline-tested
+yfinance and EODHD adapters. These tests establish normalization, failure
+handling, retry, and secret-redaction behavior only. No live EODHD request was
+made, so EODHD production acceptance remains `NOT_VERIFIED` and the result
+counts in this report are unchanged.
+
 Implementation may proceed only for provider-neutral immutable observations,
 pure factors/scoring, bounded adapters and contract fixtures. Full-market
 backfill, production ranking and backtesting remain blocked on a separately
@@ -278,3 +284,72 @@ groups remained unavailable. As a financial company, `NBN` remains
 This validates broader development-price access. It does not establish
 PostgreSQL persistence, delisting returns, full PIT fundamentals, or
 production provider acceptance.
+
+## EODHD All-in-One Live Acceptance: 2026-07-26
+
+The configured All-in-One entitlement was tested through the provider-neutral
+20-security harness with SEC EDGAR and yfinance cross-checks. The API key
+remained local and was not printed, persisted, or included in a source
+reference. No raw licensed response was retained.
+
+The corrected run produced 116 `PASS`, zero `FAIL`, 210 `NOT_VERIFIED`, and six
+`NOT_APPLICABLE` checks. Production backtest status remains `NOT_VERIFIED`.
+
+EODHD daily-price coverage passed for all 20 securities:
+
+- Eighteen established current securities and both benchmarks returned 1,648
+  observations from 2020-01-02 through 2026-07-24.
+- LCID returned 1,468 observations from 2020-09-18 through 2026-07-24.
+- Delisted TWTR returned 712 observations from 2020-01-02 through 2022-10-27.
+- Every EODHD price series had zero rejected normalized observations.
+- The three requested dividend checks and two requested split checks passed.
+
+yfinance returned normalized price history for all 19 current securities and
+did not resolve TWTR. The adapter explicitly rejected one incomplete Yahoo row
+where required values were missing instead of converting the values to zero.
+
+This run validates bounded EODHD EOD price access, current metadata used by the
+adapter, sampled dividends, sampled splits, and delisted-symbol price
+availability. It does not yet accept:
+
+- Adjusted versus unadjusted economic equivalence across providers.
+- TWTR delisting proceeds or final return.
+- Dated FB-to-META identifier history.
+- Quarterly and annual EODHD fundamental normalization.
+- Historical shares or market capitalization.
+- Historical `effectiveAt` and `availableAt` semantics or revisions.
+- Live missing-data behavior across all required domains.
+- Documented entitlement limits and reproducible rerun hashes.
+
+EODHD therefore moves from `DOCUMENTED_CANDIDATE` to `VALIDATED_LIMITED` for
+the bounded price/action slice only. It is not accepted as the production
+Objective Rating v1 dataset, and no full-market ranking or formal forward
+validation is authorized by this result.
+
+## 100-Security Aggregate Provider Gate
+
+The mature-company provider gate is accepted through an offline, hash-verified
+merge of immutable live reports. This is a cross-run aggregate acceptance, not
+a claim that one 120-security execution produced 100 passing companies.
+
+The merge applies these evidence rules:
+
+- each security is counted once;
+- the original 120-security report supplies the baseline result;
+- a later result may replace the baseline only when it is an immutable live
+  report with a verified SHA-256 hash and the unchanged acceptance criteria;
+- offline derived evidence may explain or reclassify diagnostics, but it cannot
+  upgrade a security to `PASS`;
+- missing source identity, report hash, or immutable live-evidence metadata
+  invalidates an attempted override.
+
+The aggregate ledger contains 120 unique evaluated securities. Exactly 100
+have live-confirmed `PASS` evidence and 20 remain unresolved as `PARTIAL` or
+`FAIL`. No unresolved or offline-only result is included in the passing count.
+The aggregate provider-gate status is therefore `PASS`.
+
+This result establishes the bounded 100-security mature-company data gate only.
+It does not accept EODHD as an unrestricted production dataset, authorize
+Objective Rating execution, authorize the 300-500 security gate, or reconcile
+endpoint-level provider billing. Run-level billing is
+`PROVISIONALLY_RECONCILED`; endpoint-level billing remains `NOT_RECONCILED`.

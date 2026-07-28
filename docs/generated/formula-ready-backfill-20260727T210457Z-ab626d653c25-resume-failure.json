@@ -1,0 +1,42 @@
+{
+  "artifactType": "FORMULA_READY_BACKFILL_VERIFIED_RESUME_FAILURE",
+  "schemaVersion": "formula-ready-backfill-resume-failure-v1.0.0",
+  "artifactRunId": "20260727T210457Z-ab626d653c25",
+  "resumedRunId": "20260727T204539Z-5dd84ab67acf",
+  "symbol": "ABNB",
+  "status": "ABORTED",
+  "sanitizedReasonCode": "LEGACY_GZIP_CHECKPOINT_MISSING_CONTENT_ENCODING",
+  "dashboardBefore": 21712,
+  "dashboardAfter": null,
+  "verifiedReplayedEndpoints": [
+    "fundamentals",
+    "eod",
+    "historical-market-cap",
+    "ticker-mapping"
+  ],
+  "newPhysicalAttempts": {
+    "eodhd": 0,
+    "sec": 0,
+    "total": 0,
+    "retries": 0
+  },
+  "unrequestedEndpoints": [
+    "submissions",
+    "company-facts"
+  ],
+  "runJournalEvidence": {
+    "resumePreflightEventHash": "E2B59E45D478F52998092DCC7CE0C37325726901A213B13B3052FD1B43519478",
+    "abortedEventHash": "9B2B3FC0228CCB1FCE0DF35D07344C65E6CC8C6E46F42F6EF42405E78754CF27",
+    "responseHashesVerified": true,
+    "unknownRequestStates": 0
+  },
+  "symbolCheckpointProduced": false,
+  "reportProduced": false,
+  "liveProcessRemaining": false,
+  "executionLockRemaining": false,
+  "objectiveRatingExecuted": false,
+  "forwardValidationExecuted": false,
+  "credentialsIncluded": false,
+  "licensedValuesIncluded": false,
+  "artifactContentHash": "43D23BFE4BF5FCE003B2A5AB0C08E62CAF6047A05D61295C7DE4ECF2D983381C"
+}

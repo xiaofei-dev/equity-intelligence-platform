@@ -1,0 +1,76 @@
+{
+  "artifactType": "FORWARD_ENROLLMENT_OPERATIONAL_PREFLIGHT",
+  "schemaVersion": "forward-enrollment-preflight-v1.0.0",
+  "experimentId": "forward-dry-run-131fd6c59a596056",
+  "mode": "DRY_RUN",
+  "candidateEnrollmentDate": "2026-07-31",
+  "calendarVersion": "XNYS-CALENDAR-v1.0.0",
+  "calendarSource": "https://www.nyse.com/markets/hours-calendars",
+  "calendarSourceReviewedAt": "2026-07-28",
+  "calendarRuleStatus": "PASS",
+  "officialCalendarConfirmationRequiredAtEnrollment": true,
+  "previewSecurityCount": 56,
+  "previewTopCount": 28,
+  "previewBottomCount": 28,
+  "previewSymbolsHash": "C05D0ADC36AA12645E13447AF6EB82249D198F34CED0A77C19E112E3E9C1617C",
+  "coveredSectors": [
+    "Communication Services",
+    "Consumer Discretionary",
+    "Consumer Staples",
+    "Health Care",
+    "Industrials",
+    "Information Technology",
+    "Materials"
+  ],
+  "sectorBenchmarkMapVersion": "SECTOR-BENCHMARK-MAP-v1.0.0",
+  "benchmarkSymbols": [
+    "SPY",
+    "XLB",
+    "XLC",
+    "XLI",
+    "XLK",
+    "XLP",
+    "XLV",
+    "XLY"
+  ],
+  "missingSectorMappings": [],
+  "cashRateContract": {
+    "version": "CASH-RETURN-3M-TREASURY-v1.0.0",
+    "source": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve",
+    "series": "Daily Treasury Par Yield Curve Rate - 3-Month",
+    "availabilityRule": "Use only an observation published and ingested before the policy decision cutoff; missing remains unavailable."
+  },
+  "weeklyCloseExecutionPlan": {
+    "step1": "Confirm the candidate date is an actual completed regular US trading session.",
+    "step2": "Refresh and seal the 216-security current QC source universe; do not reuse the Tuesday rank as a Friday signal.",
+    "step3": "Refresh unadjusted closes, splits, dividends, identity and tradability for the newly selected top/bottom securities.",
+    "step4": "Refresh SPY and all required sector ETF prices and actions.",
+    "step5": "Store the latest cutoff-safe 3-month Treasury rate or stop with CASH_RATE_UNAVAILABLE.",
+    "step6": "Seal signals, input hashes and all six counterfactual arms; first fills occur no earlier than the next trading close."
+  },
+  "stopConditions": [
+    "CALENDAR_SESSION_NOT_CONFIRMED",
+    "FRESH_QC_RUN_NOT_SUCCEEDED",
+    "BENCHMARK_OR_SECURITY_PRICE_UNAVAILABLE",
+    "CORPORATE_ACTION_UNRESOLVED",
+    "CASH_RATE_UNAVAILABLE",
+    "INPUT_HASH_OR_IDENTITY_CONFLICT"
+  ],
+  "gateStatuses": {
+    "calendarDateRule": "PASS",
+    "sectorBenchmarkMapping": "PASS",
+    "officialPublishedCalendar": "PASS",
+    "completedRegularSession": "PENDING_AT_ENROLLMENT",
+    "freshWeeklyQcRun": "PENDING_AT_WEEKLY_CLOSE",
+    "candidatePriceAndActionRefresh": "PENDING_AT_WEEKLY_CLOSE",
+    "benchmarkPriceAndActionRefresh": "PENDING_AT_WEEKLY_CLOSE",
+    "threeMonthTreasuryRate": "PENDING_AT_WEEKLY_CLOSE",
+    "identityDelistingAndUnresolvedActionReview": "PENDING_AT_WEEKLY_CLOSE"
+  },
+  "enrollmentReady": false,
+  "signalsEnrolled": 0,
+  "networkRequestsExecuted": false,
+  "databaseWritesExecuted": false,
+  "automaticTradingAuthorized": false,
+  "artifactContentHash": "5DE891721C613A92A2ACB90C0A176474AD35C455EEC6DD7F1D07892966FEF190"
+}

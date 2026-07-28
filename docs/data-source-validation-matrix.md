@@ -34,8 +34,9 @@ Status meanings:
 | Source | Security and ticker history | Prices and actions | Statements and shares | PIT/revisions | Delisted coverage | v1 status and recommendation |
 | --- | --- | --- | --- | --- | --- | --- |
 | Twelve Data | Profile, exchange/MIC, type and optional FIGI/ISIN/CUSIP are documented; durable symbol-event history is not yet proven | Daily OHLCV supports `none`, `splits`, `dividends`, and `all`; splits and dividends are documented | Quarterly/annual income, balance sheet and cash flow endpoints include basic/diluted shares; historical market cap is documented on higher tiers | Fundamental `last_change` is documented, but filing acceptance and restatement history were not proven | Not proven | `VALIDATED_LIMITED` for adjusted daily prices. Keep the existing integration; do not approve it alone for PIT fundamentals. |
+| yfinance | Current Yahoo symbol and bounded metadata are available through the adapter; durable identity history is not established | Offline-tested unadjusted OHLCV, adjusted close, dividends and splits | Not accepted for PIT statements or historical shares | Historical availability and revisions are not established | Not established | `DEVELOPMENT_FALLBACK`; use for development and price cross-checks only. |
 | SEC EDGAR | CIK, tickers, exchanges, submissions and accession references | No market prices, total returns or complete corporate-action feed | Primary filed XBRL facts and statements, including many historical share facts | Live responses expose form, filed date, period, accession and submission acceptance time; issuer extensions still require mapping | Filing history remains available, but complete delisted price history does not | `VALIDATED_PRIMARY_SOURCE`. Use as the fundamental lineage authority and provider cross-check, not as the sole dataset. |
-| EODHD | Product catalogue documents instruments, identifier mapping and delisted-company data | EOD, splits and dividends are documented | Fundamentals and historical market cap are documented | Historical availability and revision semantics require a paid-key test | Documented, not tested | `DOCUMENTED_CANDIDATE`; leading one-month acceptance candidate if free sources cannot close the PIT and delisting gaps. |
+| EODHD | Current metadata was returned for the tested symbols; dated identifier mapping remains unverified | Live EOD history passed for all 20 cases, including TWTR; sampled splits and dividends passed | Fundamentals and historical market cap remain outside the implemented acceptance adapter | Historical availability and revision semantics remain unverified | TWTR price history passed; delisting proceeds and final return remain unverified | `VALIDATED_LIMITED` for the bounded price/action slice; not accepted for production Objective Rating data. |
 | Financial Modeling Prep | Company profiles and delisted-company endpoints are documented | Non-split-adjusted and dividend-adjusted EOD, splits and dividends are documented | Annual/quarterly statements and as-reported filings are documented | Filing dates exist in documented outputs, but historical revision/availability semantics require testing | Documented, not tested | `DOCUMENTED_CANDIDATE`; retain as the main alternative to EODHD. |
 | Massive / Polygon | Dated ticker reference, CIK/FIGI, inactive tickers and experimental ticker events are documented | Adjusted/unadjusted aggregates, splits and dividends are documented | Annual, quarterly and TTM statements are documented through the financials expansion | EDGAR index and financial endpoints are documented; revision and historical availability behavior require testing | Inactive tickers are documented, final-return completeness is not tested | `DOCUMENTED_CANDIDATE`; strongest reference/price alternative, but not approved for PIT fundamentals. |
 
@@ -88,10 +89,56 @@ Free-source acceptance is therefore:
 - `ACCEPTED_LIMITED` for current-security adjusted daily prices.
 - `NOT_ACCEPTED` for a production full-market PIT backtest dataset.
 
+Provider-gate diagnostic artifacts record field names and presence states,
+normalized alias resolution, fiscal periods, SEC forms, acceptance timestamps,
+accessions, hashes, and sanitized error codes. They do not retain licensed raw
+financial values. Multiple provider aliases for one normalized field use a
+versioned deterministic priority; null aliases cannot overwrite a previously
+selected non-null value. Diagnostic evidence never widens the PIT plus or
+minus seven-day rule or changes gate acceptance criteria.
+
+If a filing was accepted too late to have a complete trading session in the
+bounded price calendar, its facts remain unavailable and are excluded. The
+selector may fall back only to an older fact whose own acceptance has a
+defensible complete-session availability time. It never manufactures a
+natural-day availability date or extends the requested market-data horizon.
+
+The 100-security candidate threshold may be accepted from a cross-run ledger
+only when every contributing artifact is immutable and hash-verified, every
+symbol appears once, and every counted PASS is a live result produced under
+the unchanged gate standard. Offline replay or inference may explain or
+classify evidence but cannot upgrade a status. Cross-run aggregate acceptance
+must remain distinguishable from a single-run full-universe download.
+
+## Replaceable Provider Implementation
+
+The analytics service now normalizes Twelve Data, yfinance, and EODHD behind
+one ingestion boundary. This is implementation acceptance, not EODHD data
+acceptance. The EODHD adapter has offline coverage for prices, actions,
+metadata, retry behavior, and credential redaction; live endpoint entitlement,
+PIT fundamentals, identifier history, delisted returns, historical market
+value, rate limits, and licensing remain `NOT_VERIFIED`.
+
 The next paid trial, if separately authorized, must focus on dated ticker
 events, delisting proceeds, historical revisions, general corporate actions,
 AAPL interest expense and TGT gross profit. Broad endpoint availability alone
 is not a reason to subscribe.
+
+## Current Factor-Window Evidence
+
+The accepted current-snapshot EODHD total-debt and TTM EBITDA semantics do not
+by themselves make a security Objective Rating-ready. The offline
+`objective-rating-current-factor-window-v1.1.0` assembly evaluated the frozen
+55-security source-contract candidate set and found:
+
+- 55 of 55 with valid current net-debt-to-EBITDA raw inputs;
+- 0 of 55 with every QC input window;
+- 0 of 55 with every UQ input window;
+- 55 of 55 still blocked on the required monthly PIT FCF-yield history.
+
+The missing discrete-quarter, three-year, eight-quarter, minority-interest, and
+historical valuation evidence remains missing. It is not converted to zero,
+neutral quality, or a production score.
 
 No provider may move from `DOCUMENTED_CANDIDATE` to approved until the
 20-security fixture passes field coverage, units, action dates, null behavior,

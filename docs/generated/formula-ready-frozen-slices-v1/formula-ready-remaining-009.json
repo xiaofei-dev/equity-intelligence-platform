@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "formula-ready-frozen-slice-v1.0.0",
+  "sourceManifestContentHash": "856CF4C3C1174D258CB69D758BBE7740EE04A92E398E7A0841BAB3EBD7652EBC",
+  "sliceId": "formula-ready-remaining-009",
+  "sequence": 9,
+  "symbols": [
+    "LLY",
+    "LMT",
+    "LNT",
+    "LOW",
+    "LRCX",
+    "LULU",
+    "LYB",
+    "LYV",
+    "MCD",
+    "MCHP",
+    "MCK",
+    "MDLZ",
+    "META",
+    "MKC",
+    "MLM",
+    "MNST",
+    "MO",
+    "MOS",
+    "MRK",
+    "MSFT"
+  ],
+  "automaticSelection": false,
+  "automaticReplacement": false,
+  "contentHash": "9D6968CBDE3B0F6FC7E13CFBBF2BEEE9189C67E0CF11FFB21710C4B0B35ADCD1"
+}

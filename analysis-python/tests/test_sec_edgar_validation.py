@@ -4,6 +4,10 @@ from io import BytesIO
 
 import pytest
 
+from equity_analysis.provider_validation.sec_authoritative_overrides import (
+    SecAuthoritativeTickerOverride,
+    load_authoritative_ticker_overrides,
+)
 from equity_analysis.provider_validation.sec_edgar import SecEdgarClient, SecEdgarError
 
 
@@ -46,6 +50,7 @@ def test_sec_edgar_links_acceptance_timestamp_accession_and_xbrl_coverage() -> N
         "OperatingIncomeLoss": {},
         "NetIncomeLoss": {},
         "WeightedAverageNumberOfDilutedSharesOutstanding": {},
+        "InterestExpenseNonOperating": {},
         "CashAndCashEquivalentsAtCarryingValue": {},
         "Assets": {},
         "StockholdersEquity": {},
@@ -104,6 +109,108 @@ def test_sec_edgar_lookup_preserves_leading_zero_cik() -> None:
 
     assert cik == "0000320193"
     assert name == "Apple Inc."
+
+
+def test_sec_edgar_uses_authoritative_override_when_official_snapshot_omits_ticker() -> None:
+    override = SecAuthoritativeTickerOverride(
+        ticker="LANC",
+        issuer_legal_name="Lancaster Colony Corporation",
+        cik="0000057515",
+        source_reference="https://www.sec.gov/Archives/edgar/data/57515/example.htm",
+        evidence_hash="A" * 64,
+        observed_at=datetime(2026, 7, 27, tzinfo=UTC),
+        effective_at=datetime(2025, 2, 18, tzinfo=UTC),
+        expires_at=None,
+    )
+    client = SecEdgarClient(
+        user_agent="test@example.com",
+        opener=opener_for({"company_tickers.json": {}}),
+        sleeper=lambda _seconds: None,
+        authoritative_ticker_overrides={"LANC": override},
+    )
+
+    assert client.lookup_cik(" lanc ") == (
+        "0000057515",
+        "Lancaster Colony Corporation",
+    )
+
+
+def test_sec_edgar_prefers_matching_official_mapping_over_override() -> None:
+    override = SecAuthoritativeTickerOverride(
+        ticker="LANC",
+        issuer_legal_name="Lancaster Colony Corporation",
+        cik="0000057515",
+        source_reference="https://www.sec.gov/example",
+        evidence_hash="A" * 64,
+        observed_at=datetime(2026, 7, 27, tzinfo=UTC),
+        effective_at=datetime(2025, 2, 18, tzinfo=UTC),
+        expires_at=None,
+    )
+    client = SecEdgarClient(
+        user_agent="test@example.com",
+        opener=opener_for(
+            {
+                "company_tickers.json": {
+                    "0": {
+                        "cik_str": 57515,
+                        "ticker": "LANC",
+                        "title": "LANCASTER COLONY CORP",
+                    }
+                }
+            }
+        ),
+        sleeper=lambda _seconds: None,
+        authoritative_ticker_overrides={"LANC": override},
+    )
+
+    assert client.lookup_cik("LANC") == ("0000057515", "LANCASTER COLONY CORP")
+
+
+def test_sec_edgar_rejects_official_mapping_override_conflict() -> None:
+    override = SecAuthoritativeTickerOverride(
+        ticker="LANC",
+        issuer_legal_name="Lancaster Colony Corporation",
+        cik="0000057515",
+        source_reference="https://www.sec.gov/example",
+        evidence_hash="A" * 64,
+        observed_at=datetime(2026, 7, 27, tzinfo=UTC),
+        effective_at=datetime(2025, 2, 18, tzinfo=UTC),
+        expires_at=None,
+    )
+    client = SecEdgarClient(
+        user_agent="test@example.com",
+        opener=opener_for(
+            {
+                "company_tickers.json": {
+                    "0": {
+                        "cik_str": 1,
+                        "ticker": "LANC",
+                        "title": "Wrong Issuer",
+                    }
+                }
+            }
+        ),
+        sleeper=lambda _seconds: None,
+        authoritative_ticker_overrides={"LANC": override},
+    )
+
+    with pytest.raises(SecEdgarError) as captured:
+        client.lookup_cik("LANC")
+
+    assert captured.value.code == "SEC_TICKER_CIK_CONFLICT"
+
+
+def test_authoritative_registry_preserves_lineage_and_normalizes_ticker() -> None:
+    override = load_authoritative_ticker_overrides(
+        as_of=datetime(2026, 7, 27, 19, tzinfo=UTC)
+    )["LANC"]
+
+    assert override.cik == "0000057515"
+    assert override.ticker == "LANC"
+    assert override.source_reference.startswith("https://www.sec.gov/")
+    assert override.evidence_hash == (
+        "7C23CDE98DAFFFE79A248754B15D33EFFD33CA9410B77030261DBA4BF13B84BD"
+    )
 
 
 def test_sec_edgar_rejects_missing_supported_filing() -> None:

@@ -1,0 +1,160 @@
+{
+  "artifactType": "OBJECTIVE_RATING_V1_EVIDENCE_REQUIREMENTS",
+  "schemaVersion": "objective-rating-evidence-requirements-v4.1.0",
+  "strategyVersions": [
+    "QC-v1.0.0",
+    "UQ-v1.0.0"
+  ],
+  "sourceAudit": {
+    "migratedV3PayloadCount": 223,
+    "cachedResponseCount": 1076,
+    "uncachedSecurityCount": 7,
+    "currentAlgorithmEligibleCount": 0,
+    "historicalAlgorithmEligibleCount": 0,
+    "blockerCounts": {
+      "DURATION_SEMANTIC_UNPROVEN": 223,
+      "PERIOD_START_NOT_RETAINED": 223,
+      "HISTORICAL_VALUATION_PIT_UNPROVEN": 223
+    }
+  },
+  "observationTypes": {
+    "INSTANT": {
+      "requiredTimes": ["periodEnd", "availableAt", "ingestedAt"],
+      "requiredLineage": ["entityId", "concept", "unit", "accession", "contentHash"]
+    },
+    "DURATION": {
+      "requiredTimes": ["periodStart", "periodEnd", "acceptedAt", "availableAt", "ingestedAt"],
+      "requiredLineage": ["entityId", "concept", "unit", "form", "frame", "accession", "contentHash"]
+    },
+    "MARKET_OBSERVATION": {
+      "requiredTimes": ["marketSessionDate", "marketCloseTime", "availableAt", "ingestedAt"],
+      "requiredLineage": ["securityId", "adjustmentMode", "calendarVersion", "sourceReference", "contentHash"]
+    },
+    "DERIVED": {
+      "requiredTimes": ["availableAt"],
+      "requiredLineage": ["derivationVersion", "orderedOperandIds", "orderedOperandHashes"]
+    }
+  },
+  "factorRequirements": {
+    "roic": ["operating_income_ttm", "income_tax_ttm", "pretax_income_ttm", "current_invested_capital", "prior_invested_capital"],
+    "fcf_margin": ["operating_cash_flow_ttm", "capital_expenditure_ttm", "revenue_ttm"],
+    "cash_conversion": ["operating_cash_flow_ttm", "capital_expenditure_ttm", "net_income_ttm"],
+    "margin_quality": ["gross_margin_ttm", "operating_margin_ttm", "gross_margin_three_year_change", "operating_margin_three_year_change"],
+    "stability": ["eight_aligned_discrete_operating_margins", "eight_aligned_discrete_fcf_margins"],
+    "eps_growth": ["diluted_eps_current", "diluted_eps_three_year_prior"],
+    "fcf_per_share_growth": ["fcf_per_diluted_share_current", "fcf_per_diluted_share_three_year_prior"],
+    "net_debt_to_ebitda": ["instant_total_debt", "instant_cash", "ebitda_ttm"],
+    "interest_coverage": ["ebit_ttm", "interest_expense_ttm"],
+    "dilution": ["diluted_weighted_average_shares_current", "diluted_weighted_average_shares_three_year_prior"],
+    "earnings_yield": ["ebit_ttm", "pit_market_cap", "instant_total_debt", "instant_cash", "instant_minority_interest"],
+    "fcf_yield": ["fcf_ttm", "pit_market_cap"],
+    "historical_fcf_yield_percentile": ["minimum_12_monthly_pit_fcf_yields"],
+    "operating_margin": ["operating_income_ttm", "revenue_ttm"],
+    "valuation_guardrail": ["earnings_yield_cohort_percentile", "fcf_yield_cohort_percentile"]
+  },
+  "secPolicy": {
+    "conceptMappingVersion": "sec-us-gaap-objective-rating-map-v1.1.0",
+    "interestPolicyVersion": "sec-interest-expense-policy-v1.1.0",
+    "strictConcepts": {
+      "revenue": [
+        "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "Revenues",
+        "SalesRevenueNet"
+      ],
+      "operatingIncome": ["OperatingIncomeLoss"],
+      "grossProfit": ["GrossProfit"],
+      "netIncome": ["NetIncomeLoss"],
+      "incomeTax": ["IncomeTaxExpenseBenefit"],
+      "pretaxIncome": ["IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"],
+      "operatingCashFlow": ["NetCashProvidedByUsedInOperatingActivities"],
+      "capitalExpenditure": ["PaymentsToAcquirePropertyPlantAndEquipment"],
+      "dilutedWeightedAverageShares": [
+        "WeightedAverageNumberOfDilutedSharesOutstanding",
+        "WeightedAverageNumberOfShareOutstandingBasicAndDiluted"
+      ],
+      "interestExpense": ["InterestExpense"],
+      "cashAndEquivalents": ["CashAndCashEquivalentsAtCarryingValue"],
+      "stockholdersEquity": ["StockholdersEquity"],
+      "instantCommonShares": ["dei:EntityCommonStockSharesOutstanding"]
+    },
+    "explicitlyRejectedAsAutomaticSynonyms": [
+      "InterestAndDebtExpense",
+      "net interest",
+      "capitalized interest",
+      "non-GAAP EBITDA"
+    ],
+    "conditionalInterestConcepts": {
+      "InterestExpenseDebt": "REQUIRES_COMPLETE_ISSUER_INTEREST_SCOPE",
+      "InterestExpenseNonoperating": "REQUIRES_NO_OMITTED_OPERATING_INTEREST"
+    },
+    "customConceptDefault": "MISSING",
+    "unknownConceptDefault": "MISSING",
+    "ebitdaPolicy": "FROZEN_V1_REQUIRES_REPORTED_NORMALIZED_EBITDA_WITH_PROVEN_TTM_OR_BRIDGEABLE_DURATION",
+    "ytdDifferenceVersion": "SEC-YTD-DIFFERENCE-v1.0.0",
+    "ytdDifferenceKeys": ["entity", "taxonomy", "concept", "unit", "dimensions", "fiscalYearStart"],
+    "revisionRule": "LATEST_ACCEPTED_ACCESSION_AVAILABLE_AT_CUTOFF_WITHIN_IDENTICAL_CONTEXT"
+  },
+  "marketPolicy": {
+    "currentMarketCap": "CURRENT_PROVIDER_MARKET_CAP_OR_UNADJUSTED_CLOSE_TIMES_PIT_INSTANT_COMMON_SHARES",
+    "availabilityPolicyVersion": "US-EOD-NEXT-SESSION-OPEN-v1.0.0",
+    "availabilityRule": "UNADJUSTED_CLOSE_AVAILABLE_AT_NEXT_VERSIONED_US_TRADING_SESSION_OPEN",
+    "providerPublicationTimestampDocumented": false,
+    "historicalMinimumMonths": 12,
+    "historicalTargetMonths": 60,
+    "adjustedCloseUse": "TOTAL_RETURN_ONLY",
+    "ingestionTimeMayReplaceHistoricalAvailability": false,
+    "dilutedSharesMayReplaceInstantShares": false
+  },
+  "purposePolicy": {
+    "currentSnapshot": {
+      "historicalPublicationMetadataRequiredForCurrentMarketCap": false,
+      "currentObservationMustBeIngestedByCutoff": true,
+      "uqHistoricalFcfYieldStillRequiresMonthlyPitInputs": true
+    },
+    "forwardValidation": {
+      "usesSealedCurrentRatingSnapshot": true,
+      "addsHistoricalBacktestRequirements": false,
+      "mayClaimHistoricalBacktestReadiness": false
+    },
+    "historicalBacktest": {
+      "historicalAvailabilityAndRevisionLineageRequired": true,
+      "currentIngestionMayProvePastAvailability": false
+    }
+  },
+  "semanticAudit": {
+    "policyVersion": "objective-rating-evidence-policy-v4.1.0",
+    "artifactPath": "docs/generated/objective-rating-v1-source-semantics-audit-v1.json",
+    "interestExpenseAcceptedPrimitiveSecurityCount": 171,
+    "vendorTotalDebtObservedSecurityCount": 223,
+    "vendorEbitdaObservedSecurityCount": 223,
+    "vendorMarketCapObservedSecurityCount": 223,
+    "currentQcEligibleCount": 0,
+    "currentUqEligibleCount": 0,
+    "historicalPitEligibleCount": 0
+  },
+  "offlineV4Implementation": {
+    "finalManifestPath": "docs/generated/scoring-input-v4-sec-offline-manifest-v2.json",
+    "targetSecurityCount": 223,
+    "secTimelineBuiltCount": 216,
+    "secCacheMissingCount": 7,
+    "currentQcEligibleCount": 0,
+    "currentUqEligibleCount": 0,
+    "historicalPitEligibleCount": 0,
+    "ytdDifferenceCount": 59583,
+    "controlledValuesIncludedInGit": false
+  },
+  "snapshotContractVersion": "provider-neutral-scoring-input-v4.1.0",
+  "eligibilityStates": [
+    "CURRENT_ONLY_ELIGIBLE",
+    "HISTORICAL_PIT_ELIGIBLE",
+    "INSUFFICIENT_DATA",
+    "SPECIALIZED_MODEL_REQUIRED",
+    "INVALID"
+  ],
+  "formulaChanges": false,
+  "networkRequestsExecuted": false,
+  "algorithmGateExecuted": false,
+  "forwardValidationExecuted": false,
+  "licensedValuesIncluded": false,
+  "artifactContentHash": "DBEC29F26818E5438D01E3C7040202AADF9ABEE7F307A1CC219E3FEB7656D56B"
+}

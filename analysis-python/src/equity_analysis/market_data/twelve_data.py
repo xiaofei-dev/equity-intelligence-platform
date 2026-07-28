@@ -1,21 +1,39 @@
 import json
 from collections.abc import Callable
-from datetime import date
+from datetime import UTC, date, datetime
 from decimal import Decimal, InvalidOperation
 from typing import Any
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
 from equity_analysis.market_data.models import (
+    AdjustmentMode,
     DailyPriceBar,
     DailyPriceSeries,
+    ProviderCapability,
+    ProviderDescriptor,
+    ProviderUseClassification,
     SecurityMetadata,
 )
 from equity_analysis.market_data.provider import MarketDataProviderError
 
 TWELVE_DATA_BASE_URL = "https://api.twelvedata.com"
 PROVIDER_NAME = "twelve_data"
-ADJUSTMENT_MODE = "splits"
+ADJUSTMENT_MODE = AdjustmentMode.SPLIT_ADJUSTED
+TWELVE_DATA_DESCRIPTOR = ProviderDescriptor(
+    code=PROVIDER_NAME,
+    name="Twelve Data",
+    provider_schema_version="time-series-v1",
+    parser_version="twelve-data-time-series-v1.1.0",
+    capabilities=frozenset(
+        {
+            ProviderCapability.DAILY_PRICES,
+            ProviderCapability.CORPORATE_ACTIONS,
+            ProviderCapability.SECURITY_METADATA,
+        }
+    ),
+    use_classification=ProviderUseClassification.VALIDATED_LIMITED,
+)
 
 
 class TwelveDataClient:
@@ -31,6 +49,10 @@ class TwelveDataClient:
         self._opener = opener
         self._timeout_seconds = timeout_seconds
 
+    @property
+    def descriptor(self) -> ProviderDescriptor:
+        return TWELVE_DATA_DESCRIPTOR
+
     def fetch_daily_prices(
         self,
         symbol: str,
@@ -45,7 +67,7 @@ class TwelveDataClient:
                 "start_date": start_date.isoformat(),
                 "end_date": end_date.isoformat(),
                 "order": "ASC",
-                "adjust": ADJUSTMENT_MODE,
+                "adjust": "splits",
                 "outputsize": 5000,
             }
         )
@@ -68,8 +90,7 @@ class TwelveDataClient:
 
         return self._parse_response(normalized_symbol, payload)
 
-    @staticmethod
-    def _parse_response(symbol: str, payload: dict[str, Any]) -> DailyPriceSeries:
+    def _parse_response(self, symbol: str, payload: dict[str, Any]) -> DailyPriceSeries:
         if payload.get("status") == "error" or "values" not in payload:
             provider_message = str(payload.get("message", "missing time-series values"))
             raise MarketDataProviderError(
@@ -105,9 +126,15 @@ class TwelveDataClient:
         if not bars:
             raise MarketDataProviderError(f"Twelve Data returned no daily prices for {symbol}")
 
+        retrieved_at = datetime.now(UTC)
         return DailyPriceSeries(
             security=security,
-            provider=PROVIDER_NAME,
+            provider_descriptor=self.descriptor,
+            requested_symbol=symbol,
+            provider_symbol=security.symbol,
             adjustment_mode=ADJUSTMENT_MODE,
             bars=bars,
+            source_reference=f"twelve-data:time-series:{security.symbol}",
+            available_at=retrieved_at,
+            retrieved_at=retrieved_at,
         )

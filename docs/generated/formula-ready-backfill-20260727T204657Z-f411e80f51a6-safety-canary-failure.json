@@ -1,0 +1,78 @@
+{
+  "artifactType": "FORMULA_READY_BACKFILL_EXECUTION_SAFETY_CANARY_FAILURE",
+  "schemaVersion": "formula-ready-backfill-safety-canary-failure-v1.0.0",
+  "artifactRunId": "20260727T204657Z-f411e80f51a6",
+  "canaryRunId": "20260727T204539Z-5dd84ab67acf",
+  "sliceId": "formula-ready-safety-canary-001",
+  "symbol": "ABNB",
+  "status": "ABORTED",
+  "sanitizedReasonCode": "SEC_GZIP_CONTENT_ENCODING_NOT_PRESERVED",
+  "exceptionCategory": "UNICODEDECODEERROR",
+  "dashboardBefore": 21691,
+  "dashboardAfter": null,
+  "physicalAttempts": {
+    "eodhd": 3,
+    "sec": 1,
+    "total": 4,
+    "retries": 0
+  },
+  "configuredWeights": {
+    "eodhd": 12,
+    "sec": 1
+  },
+  "attempts": [
+    {
+      "endpoint": "fundamentals",
+      "attemptId": "2BAF5E17BD199B487F54646DD6FE6C721CEABCCF50FC097312DF1949C440691A:1",
+      "configuredWeight": 10,
+      "durationMs": 797,
+      "httpStatus": 200,
+      "responseContentHash": "276872640A96CA0CE378CDECDC63E4D0A631A40A28ED9B83A51E42A7D327FC02",
+      "eventHash": "1FE662BDA8006FF00E5F45DFA16130CF2D2B5D5D7713E46979006ABD6EAC4126"
+    },
+    {
+      "endpoint": "eod",
+      "attemptId": "30D66341EFF2E93D402CE1EC63567A31679C7E68781A364BFD3825CDC80E9D00:1",
+      "configuredWeight": 1,
+      "durationMs": 806,
+      "httpStatus": 200,
+      "responseContentHash": "B93CF2A1AF8F606A9D6F4FB5F18C40754C33AAFAA909D4023DF689EDAE8A290A",
+      "eventHash": "A914B64E29FEC2AF660B43D77568F7CAE01FA4E0155F56B7612FF84974FC7F5B"
+    },
+    {
+      "endpoint": "historical-market-cap",
+      "attemptId": "537DCA97AFB55913D2DCE467FC80898BF224DEC7613248D5594AFC2C837AFC26:1",
+      "configuredWeight": 1,
+      "durationMs": 500,
+      "httpStatus": 200,
+      "responseContentHash": "908D7866D351EDAA5CA41444DAE167F1EAFA9FE6644A63B90155C552ED3B8AC4",
+      "eventHash": "847FBC8AA2085E2B6C23DEE83941EF7F81A3F5C557A9FACD1A3EA59FA75EDF69"
+    },
+    {
+      "endpoint": "ticker-mapping",
+      "attemptId": "90AAD319D1A21DE29552547E70016527A79EADB1EE9BA998E438B68CB34C30B5:1",
+      "configuredWeight": 1,
+      "durationMs": 171,
+      "httpStatus": 200,
+      "responseContentHash": "FB10B63AE535C58B9054FB94C06405E61D3D38FF5AF10A5CC77C2C1AFD654E36",
+      "eventHash": "CE9B323607EAECD90B1CE44E1C01A938FE4A48A3ABE7B1D39289963350EA3951"
+    }
+  ],
+  "journalState": {
+    "preflightRecorded": true,
+    "runFinalState": "ABORTED",
+    "symbolCheckpointProduced": false,
+    "allRecordedAttemptsCompleted": true,
+    "unknownRequestStates": 0
+  },
+  "processAndLockState": {
+    "liveProcessRemaining": false,
+    "executionLockRemaining": false
+  },
+  "networkExpansionPrevented": true,
+  "objectiveRatingExecuted": false,
+  "forwardValidationExecuted": false,
+  "licensedValuesIncluded": false,
+  "credentialsIncluded": false,
+  "artifactContentHash": "5D7305B99828BFD14CDA09839B2DFDAB2C23FE6F5BDBC27E1266DE4230455C23"
+}

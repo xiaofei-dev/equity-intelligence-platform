@@ -1,0 +1,37 @@
+{
+  "artifactType": "FORMULA_READY_TERMINAL_EVIDENCE",
+  "schemaVersion": "formula-ready-terminal-evidence-v1.0.0",
+  "records": [
+    {
+      "symbol": "AAPL",
+      "status": "FORMULA_READY",
+      "sourceRunId": "20260727T201423Z-f94523bfc322",
+      "sourceReportSha256": "7A4F049541721C4022AD9FAFC142332486BCBEFD77A20619C2CDC9D836856934"
+    },
+    {
+      "symbol": "CAT",
+      "status": "FORMULA_READY",
+      "sourceRunId": "20260727T201423Z-f94523bfc322",
+      "sourceReportSha256": "7A4F049541721C4022AD9FAFC142332486BCBEFD77A20619C2CDC9D836856934"
+    },
+    {
+      "symbol": "JNJ",
+      "status": "FORMULA_READY",
+      "sourceRunId": "20260727T201423Z-f94523bfc322",
+      "sourceReportSha256": "7A4F049541721C4022AD9FAFC142332486BCBEFD77A20619C2CDC9D836856934"
+    },
+    {
+      "symbol": "ABNB",
+      "status": "SECURITY_INSUFFICIENT_DATA",
+      "sourceRunId": "20260727T204539Z-5dd84ab67acf",
+      "sourceReportSha256": "1B43BB65AE98394F764CD8C15A05E3268D9C02355CCAB77C4B536C376ED64BAC",
+      "reasonCodes": [
+        "INTEREST_EXPENSE_QUARTERS_0_OF_8"
+      ]
+    }
+  ],
+  "networkRequestsExecuted": false,
+  "objectiveRatingExecuted": false,
+  "licensedValuesIncluded": false,
+  "credentialsIncluded": false
+}

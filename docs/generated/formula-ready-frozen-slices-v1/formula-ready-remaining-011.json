@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "formula-ready-frozen-slice-v1.0.0",
+  "sourceManifestContentHash": "856CF4C3C1174D258CB69D758BBE7740EE04A92E398E7A0841BAB3EBD7652EBC",
+  "sliceId": "formula-ready-remaining-011",
+  "sequence": 11,
+  "symbols": [
+    "PM",
+    "PNW",
+    "PPG",
+    "PPL",
+    "PSKY",
+    "QCOM",
+    "ROK",
+    "ROST",
+    "RTX",
+    "SAIA",
+    "SBUX",
+    "SHW",
+    "SJM",
+    "SO",
+    "SRE",
+    "STZ",
+    "SW",
+    "SYK",
+    "SYY",
+    "T"
+  ],
+  "automaticSelection": false,
+  "automaticReplacement": false,
+  "contentHash": "78030FDCADB5D0AF131A539B245C9B2AF89834D2865A462277419DD4C23A5501"
+}

@@ -1,0 +1,402 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/equity-research-v1-output.schema.json",
+  "title": "AI Equity Research v1 Output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "symbol",
+    "status",
+    "analysisAsOf",
+    "modelVersion",
+    "promptVersion",
+    "rubricVersion",
+    "inputSnapshotHash",
+    "inputDataAsOf",
+    "quantitativeBase",
+    "dimensions",
+    "longHorizonOverlay",
+    "tacticalEventOverlays",
+    "positiveFactors",
+    "riskFactors",
+    "counterThesis",
+    "openQuestions",
+    "hardWarnings",
+    "finalJudgment",
+    "citations",
+    "usage"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "ai-equity-research-output-v1.0.0"
+    },
+    "symbol": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "COMPLETED",
+        "INSUFFICIENT_EVIDENCE",
+        "BLOCKED_SOURCE_CONFLICT",
+        "MATERIAL_RISK_REVIEW_REQUIRED",
+        "SIMULATED_NOT_SOURCE_VERIFIED"
+      ]
+    },
+    "analysisAsOf": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "modelVersion": {
+      "type": "string"
+    },
+    "promptVersion": {
+      "const": "AI-EQUITY-RESEARCH-PROMPT-v1.0.0"
+    },
+    "rubricVersion": {
+      "const": "AI-EQUITY-RESEARCH-v1.0.0"
+    },
+    "inputSnapshotHash": {
+      "type": "string"
+    },
+    "inputDataAsOf": {
+      "type": "string",
+      "format": "date"
+    },
+    "quantitativeBase": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "oneWeekOpportunityIndex",
+        "oneMonthOpportunityIndex",
+        "threeMonthOpportunityIndex",
+        "longHorizonDeterministicScore"
+      ],
+      "properties": {
+        "oneWeekOpportunityIndex": {
+          "$ref": "#/$defs/nullableScore"
+        },
+        "oneMonthOpportunityIndex": {
+          "$ref": "#/$defs/nullableScore"
+        },
+        "threeMonthOpportunityIndex": {
+          "$ref": "#/$defs/nullableScore"
+        },
+        "longHorizonDeterministicScore": {
+          "$ref": "#/$defs/nullableScore"
+        }
+      }
+    },
+    "dimensions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "dimension",
+          "maximumAdjustment",
+          "signedAssessment",
+          "confidence",
+          "sourceCoefficient",
+          "adjustment",
+          "observedFacts",
+          "inferences",
+          "sourceIds",
+          "missingEvidence"
+        ],
+        "properties": {
+          "dimension": {
+            "enum": [
+              "MANAGEMENT_EXECUTION",
+              "GOVERNANCE_INTEGRITY",
+              "STRATEGY_COMPETITION",
+              "CAPITAL_ALLOCATION",
+              "OPERATING_RESILIENCE",
+              "REGULATORY_LEGAL",
+              "ACCOUNTING_DISCLOSURE"
+            ]
+          },
+          "maximumAdjustment": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 2
+          },
+          "signedAssessment": {
+            "type": "number",
+            "minimum": -1,
+            "maximum": 1
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "sourceCoefficient": {
+            "enum": [
+              0,
+              0.4,
+              0.75,
+              0.9,
+              1
+            ]
+          },
+          "adjustment": {
+            "type": "number",
+            "minimum": -2,
+            "maximum": 2
+          },
+          "observedFacts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "inferences": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "sourceIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "missingEvidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "longHorizonOverlay": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "adjustment",
+        "adjustedScore"
+      ],
+      "properties": {
+        "adjustment": {
+          "type": "number",
+          "minimum": -10,
+          "maximum": 10
+        },
+        "adjustedScore": {
+          "$ref": "#/$defs/nullableScore"
+        }
+      }
+    },
+    "tacticalEventOverlays": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "horizon",
+          "adjustment",
+          "adjustedResearchView",
+          "expiresAt",
+          "sourceIds"
+        ],
+        "properties": {
+          "horizon": {
+            "enum": [
+              "ONE_WEEK",
+              "ONE_MONTH",
+              "THREE_MONTHS"
+            ]
+          },
+          "adjustment": {
+            "type": "number",
+            "minimum": -5,
+            "maximum": 5
+          },
+          "adjustedResearchView": {
+            "$ref": "#/$defs/nullableScore"
+          },
+          "expiresAt": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "sourceIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "positiveFactors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "riskFactors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "counterThesis": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "openQuestions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "hardWarnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "finalJudgment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "oneWeek",
+        "oneMonth",
+        "threeMonths",
+        "longHorizon",
+        "summary",
+        "confidence"
+      ],
+      "properties": {
+        "oneWeek": {
+          "type": "string"
+        },
+        "oneMonth": {
+          "type": "string"
+        },
+        "threeMonths": {
+          "type": "string"
+        },
+        "longHorizon": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "confidence": {
+          "enum": [
+            "LOW",
+            "MEDIUM",
+            "HIGH"
+          ]
+        }
+      }
+    },
+    "citations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "sourceId",
+          "sourceGrade",
+          "title",
+          "url",
+          "publishedAt",
+          "retrievedAt",
+          "contentHash"
+        ],
+        "properties": {
+          "sourceId": {
+            "type": "string"
+          },
+          "sourceGrade": {
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ]
+          },
+          "title": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "publishedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "retrievedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "contentHash": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "usage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "inputTokens",
+        "cachedInputTokens",
+        "outputTokens",
+        "webSearchCalls",
+        "estimatedCostUsd",
+        "withinBudget"
+      ],
+      "properties": {
+        "inputTokens": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "cachedInputTokens": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "outputTokens": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "webSearchCalls": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "estimatedCostUsd": {
+          "type": "number",
+          "minimum": 0
+        },
+        "withinBudget": {
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "nullableScore": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 100
+    }
+  }
+}

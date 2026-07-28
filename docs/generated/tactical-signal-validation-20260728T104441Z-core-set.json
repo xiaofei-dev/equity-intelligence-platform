@@ -1,0 +1,565 @@
+{
+  "schemaVersion": "tactical-signal-validation-v1.0.0",
+  "runId": "20260728T104441Z",
+  "generatedAt": "2026-07-28T10:44:41.691850+00:00",
+  "provider": "EODHD",
+  "sourceWindow": {
+    "from": "2024-01-01",
+    "to": "2026-07-28"
+  },
+  "physicalRequestCount": 13,
+  "failures": {},
+  "rawPayloadsGitIgnored": true,
+  "rawPayloadHashes": {
+    "AAPL": "676E4538125A941223F3A57710B816AB78EBD38BA1CE0B1A5D11C01056F93A67",
+    "AMZN": "AFA24B0D5BC9124E2951829B3C398F73566B5D946B877D3ADF10566B3C0C933D",
+    "GE": "B24EF1108E6151E8DD384268E813590CBDA201BC2FD059429629E828E605191D",
+    "KRE": "6AFEA331B608522666696A79A3BAE3937746754DD35073682A05E40D14C34431",
+    "NBN": "A6FC00836D09A68B41A3524878734406B39D5621922798B2B9F628BC676993B1",
+    "SPCX": "AC5F5A2ECFA6B2A98A677997046D173AB52788F2904085C2FC96D3D011D989D7",
+    "SPY": "88FA2B42CF52DA6D80EB27CDC823B277A704D21262F06F6F7ABAE70E7647A1CE",
+    "TSLA": "BC5BB9C3A964C2A155D391F6DC1A1A116B3AF16B476F2845FE05F268F4349486",
+    "UNH": "BA7518D0E7126CFF593BDD92C98A9D562888BA2E61BE3C5194D1BDC74C06C7B0",
+    "XLI": "F04CF82A60485AD5E5BE13EF26F76100366A6E40EED6BA11E36CCDAA5FC0E4FA",
+    "XLK": "6C8049757D2B559DE5EF74DED9696637B823782A1DD862761FB4BA8DF40053B6",
+    "XLV": "C54200E0F309887B634C45AD17CA508D320C14F27C60DD3F8AEDEF8628B7C7E3",
+    "XLY": "3192652E26A870BB4735AA8348418E006303B789CEBA1C413A75B4A445F96EED"
+  },
+  "results": {
+    "AAPL": {
+      "status": "ASSESSED",
+      "benchmark": "XLK",
+      "barCount": 643,
+      "asOfDate": "2026-07-27",
+      "state": "MOMENTUM_ENTRY",
+      "preferredSetup": "MOMENTUM",
+      "confidence": "HIGH",
+      "momentumScore": 92.61,
+      "meanReversionScore": 32.88,
+      "entryConfirmationScore": 90.0,
+      "marketRegimeScore": 46.21,
+      "eventDriftScore": 50.0,
+      "liquidityScore": 100.0,
+      "riskPenalty": 33.35,
+      "returnsPercent": {
+        "5": 3.16,
+        "10": 6.18,
+        "20": 18.72,
+        "60": 24.7
+      },
+      "relativeReturnsPercent": {
+        "5": 3.96,
+        "10": 10.03,
+        "20": 22.48,
+        "60": 15.16
+      },
+      "horizons": [
+        {
+          "tradingDays": 5,
+          "horizonLabel": "ONE_WEEK",
+          "opportunityScore": 69.52,
+          "state": "MOMENTUM_ENTRY"
+        },
+        {
+          "tradingDays": 20,
+          "horizonLabel": "ONE_MONTH",
+          "opportunityScore": 72.1,
+          "state": "MOMENTUM_ENTRY"
+        },
+        {
+          "tradingDays": 60,
+          "horizonLabel": "THREE_MONTHS",
+          "opportunityScore": 71.86,
+          "state": "MOMENTUM_ENTRY"
+        }
+      ],
+      "reasons": [
+        "Momentum is stronger than the mean-reversion setup.",
+        "Daily-price entry confirmation is present."
+      ],
+      "warnings": [],
+      "walkForward": [
+        {
+          "horizonTradingDays": 5,
+          "episodeCount": 25,
+          "hitRate": 0.52,
+          "averageExcessReturn": 0.022901,
+          "averageMaximumAdverseExcursion": -0.020477,
+          "statisticalEdgeProven": "NOT_ESTABLISHED"
+        },
+        {
+          "horizonTradingDays": 20,
+          "episodeCount": 25,
+          "hitRate": 0.64,
+          "averageExcessReturn": 0.055741,
+          "averageMaximumAdverseExcursion": -0.043004,
+          "statisticalEdgeProven": "NOT_ESTABLISHED"
+        },
+        {
+          "horizonTradingDays": 60,
+          "episodeCount": 25,
+          "hitRate": 0.84,
+          "averageExcessReturn": 0.179758,
+          "averageMaximumAdverseExcursion": -0.080624,
+          "statisticalEdgeProven": "NOT_ESTABLISHED"
+        }
+      ]
+    },
+    "AMZN": {
+      "status": "ASSESSED",
+      "benchmark": "XLY",
+      "barCount": 643,
+      "asOfDate": "2026-07-27",
+      "state": "WATCH_FOR_CONFIRMATION",
+      "preferredSetup": "MEAN_REVERSION",
+      "confidence": "HIGH",
+      "momentumScore": 29.88,
+      "meanReversionScore": 50.84,
+      "entryConfirmationScore": 20.0,
+      "marketRegimeScore": 27.27,
+      "eventDriftScore": 50.0,
+      "liquidityScore": 100.0,
+      "riskPenalty": 43.69,
+      "returnsPercent": {
+        "5": -7.44,
+        "10": -6.44,
+        "20": -0.56,
+        "60": -12.03
+      },
+      "relativeReturnsPercent": {
+        "5": -4.15,
+        "10": -1.96,
+        "20": 2.53,
+        "60": -6.9
+      },
+      "horizons": [
+        {
+          "tradingDays": 5,
+          "horizonLabel": "ONE_WEEK",
+          "opportunityScore": 32.6,
+          "state": "AVOID"
+        },
+        {
+          "tradingDays": 20,
+          "horizonLabel": "ONE_MONTH",
+          "opportunityScore": 36.86,
+          "state": "WATCH_FOR_CONFIRMATION"
+        },
+        {
+          "tradingDays": 60,
+          "horizonLabel": "THREE_MONTHS",
+          "opportunityScore": 35.94,
+          "state": "WATCH_FOR_CONFIRMATION"
+        }
+      ],
+      "reasons": [
+        "Mean reversion is stronger than trend continuation."
+      ],
+      "warnings": [
+        "Entry confirmation is incomplete."
+      ],
+      "walkForward": [
+        {
+          "horizonTradingDays": 5,
+          "episodeCount": 21,
+          "hitRate": 0.3333,
+          "averageExcessReturn": -0.002929,
+          "averageMaximumAdverseExcursion": -0.023888,
+          "statisticalEdgeProven": "NOT_ESTABLISHED"
+        },
+        {
+          "horizonTradingDays": 20,
+          "episodeCount": 21,
+          "hitRate": 0.381,
+          "averageExcessReturn": -0.010283,
+          "averageMaximumAdverseExcursion": -0.068038,
+          "statisticalEdgeProven": "NOT_ESTABLISHED"
+        },
+        {
+          "horizonTradingDays": 60,
+          "episodeCount": 21,
+          "hitRate": 0.2857,
+          "averageExcessReturn": -0.008602,
+          "averageMaximumAdverseExcursion": -0.11295,
+          "statisticalEdgeProven": "NOT_ESTABLISHED"
+        }
+      ]
+    },
+    "TSLA": {
+      "status": "ASSESSED",
+      "benchmark": "XLY",
+      "barCount": 643,
+      "asOfDate": "2026-07-27",
+      "state": "AVOID",
+      "preferredSetup": "MEAN_REVERSION",
+      "confidence": "MEDIUM",
+      "momentumScore": 4.42,
+      "meanReversionScore": 35.11,
+      "entryConfirmationScore": 24.62,
+      "marketRegimeScore": 27.27,
+      "eventDriftScore": 50.0,
+      "liquidityScore": 100.0,
+      "riskPenalty": 76.32,
+      "returnsPercent": {
+        "5": -16.33,
+        "10": -21.67,
+        "20": -18.56,
+        "60": -17.05
+      },
+      "relativeReturnsPercent": {
+        "5": -13.04,
+        "10": -17.19,
+        "20": -15.48,
+        "60": -11.92
+      },
+      "horizons": [
+        {
+          "tradingDays": 5,
+          "horizonLabel": "ONE_WEEK",
+          "opportunityScore": 19.25,
+          "state": "AVOID"
+        },
+        {
+          "tradingDays": 20,
+          "horizonLabel": "ONE_MONTH",
+          "opportunityScore": 20.69,
+          "state": "AVOID"
+        },
+        {
+          "tradingDays": 60,
+          "horizonLabel": "THREE_MONTHS",
+          "opportunityScore": 17.97,
+          "state": "AVOID"
+        }
+      ],
+      "reasons": [
+        "Mean reversion is stronger than trend continuation."
+      ],
+      "warnings": [
+        "Entry confirmation is incomplete.",
+        "Recent volatility, drawdown, or gap risk is elevated."
+      ],
+      "walkForward": [
+        {
+          "horizonTradingDays": 5,
+          "episodeCount": 15,
+          "hitRate": 0.5333,
+          "averageExcessReturn": 0.008761,
+          "averageMaximumAdverseExcursion": -0.050811,
+          "statisticalEdgeProven": "NOT_ESTABLISHED"
+        },
+        {
+          "horizonTradingDays": 20,
+          "episodeCount": 15,
+          "hitRate": 0.4667,
+          "averageExcessReturn": 0.001703,
+          "averageMaximumAdverseExcursion": -0.114159,
+          "statisticalEdgeProven": "NOT_ESTABLISHED"
+        },
+        {
+          "horizonTradingDays": 60,
+          "episodeCount": 15,
+          "hitRate": 0.6667,
+          "averageExcessReturn": 0.204002,
+          "averageMaximumAdverseExcursion": -0.185892,
+          "statisticalEdgeProven": "NOT_ESTABLISHED"
+        }
+      ]
+    },
+    "SPCX": {
+      "status": "ASSESSED",
+      "benchmark": "SPY",
+      "barCount": 33,
+      "asOfDate": "2026-07-27",
+      "state": "AVOID",
+      "preferredSetup": "MEAN_REVERSION",
+      "confidence": "LOW",
+      "momentumScore": 1.45,
+      "meanReversionScore": 50.36,
+      "entryConfirmationScore": 21.74,
+      "marketRegimeScore": 56.46,
+      "eventDriftScore": 50.0,
+      "liquidityScore": 100.0,
+      "riskPenalty": 86.62,
+      "returnsPercent": {
+        "5": -5.3,
+        "10": -18.43,
+        "20": -30.87
+      },
+      "relativeReturnsPercent": {
+        "5": -4.89,
+        "10": -17.08,
+        "20": -32.26
+      },
+      "horizons": [
+        {
+          "tradingDays": 5,
+          "horizonLabel": "ONE_WEEK",
+          "opportunityScore": 25.85,
+          "state": "AVOID"
+        },
+        {
+          "tradingDays": 20,
+          "horizonLabel": "ONE_MONTH",
+          "opportunityScore": 28.41,
+          "state": "AVOID"
+        },
+        {
+          "tradingDays": 60,
+          "horizonLabel": "THREE_MONTHS",
+          "opportunityScore": null,
+          "state": "INSUFFICIENT_DATA"
+        }
+      ],
+      "reasons": [
+        "Mean reversion is stronger than trend continuation."
+      ],
+      "warnings": [
+        "Entry confirmation is incomplete.",
+        "Recent volatility, drawdown, or gap risk is elevated.",
+        "Limited trading history reduces confidence."
+      ],
+      "walkForward": []
+    },
+    "UNH": {
+      "status": "ASSESSED",
+      "benchmark": "XLV",
+      "barCount": 643,
+      "asOfDate": "2026-07-27",
+      "state": "WATCH_FOR_CONFIRMATION",
+      "preferredSetup": "MEAN_REVERSION",
+      "confidence": "HIGH",
+      "momentumScore": 41.42,
+      "meanReversionScore": 67.36,
+      "entryConfirmationScore": 20.0,
+      "marketRegimeScore": 74.76,
+      "eventDriftScore": 50.0,
+      "liquidityScore": 100.0,
+      "riskPenalty": 33.42,
+      "returnsPercent": {
+        "5": -0.93,
+        "10": -2.67,
+        "20": -2.4,
+        "60": 12.65
+      },
+      "relativeReturnsPercent": {
+        "5": -3.53,
+        "10": -3.9,
+        "20": -4.3,
+        "60": -1.74
+      },
+      "horizons": [
+        {
+          "tradingDays": 5,
+          "horizonLabel": "ONE_WEEK",
+          "opportunityScore": 50.13,
+          "state": "WATCH_FOR_CONFIRMATION"
+        },
+        {
+          "tradingDays": 20,
+          "horizonLabel": "ONE_MONTH",
+          "opportunityScore": 54.5,
+          "state": "WATCH_FOR_CONFIRMATION"
+        },
+        {
+          "tradingDays": 60,
+          "horizonLabel": "THREE_MONTHS",
+          "opportunityScore": 55.24,
+          "state": "WATCH_FOR_CONFIRMATION"
+        }
+      ],
+      "reasons": [
+        "Mean reversion is stronger than trend continuation."
+      ],
+      "warnings": [
+        "Entry confirmation is incomplete."
+      ],
+      "walkForward": [
+        {
+          "horizonTradingDays": 5,
+          "episodeCount": 16,
+          "hitRate": 0.4375,
+          "averageExcessReturn": -0.023858,
+          "averageMaximumAdverseExcursion": -0.053068,
+          "statisticalEdgeProven": "NOT_ESTABLISHED"
+        },
+        {
+          "horizonTradingDays": 20,
+          "episodeCount": 16,
+          "hitRate": 0.25,
+          "averageExcessReturn": -0.053111,
+          "averageMaximumAdverseExcursion": -0.093566,
+          "statisticalEdgeProven": "NOT_ESTABLISHED"
+        },
+        {
+          "horizonTradingDays": 60,
+          "episodeCount": 16,
+          "hitRate": 0.375,
+          "averageExcessReturn": -0.075819,
+          "averageMaximumAdverseExcursion": -0.173255,
+          "statisticalEdgeProven": "NOT_ESTABLISHED"
+        }
+      ]
+    },
+    "GE": {
+      "status": "ASSESSED",
+      "benchmark": "XLI",
+      "barCount": 643,
+      "asOfDate": "2026-07-27",
+      "state": "WATCH_FOR_CONFIRMATION",
+      "preferredSetup": "MOMENTUM",
+      "confidence": "HIGH",
+      "momentumScore": 66.47,
+      "meanReversionScore": 59.26,
+      "entryConfirmationScore": 90.0,
+      "marketRegimeScore": 69.08,
+      "eventDriftScore": 50.0,
+      "liquidityScore": 100.0,
+      "riskPenalty": 35.77,
+      "returnsPercent": {
+        "5": 5.95,
+        "10": 2.32,
+        "20": -2.0,
+        "60": 27.52
+      },
+      "relativeReturnsPercent": {
+        "5": 3.1,
+        "10": 0.75,
+        "20": -3.11,
+        "60": 19.71
+      },
+      "horizons": [
+        {
+          "tradingDays": 5,
+          "horizonLabel": "ONE_WEEK",
+          "opportunityScore": 65.53,
+          "state": "MOMENTUM_ENTRY"
+        },
+        {
+          "tradingDays": 20,
+          "horizonLabel": "ONE_MONTH",
+          "opportunityScore": 63.04,
+          "state": "WATCH_FOR_CONFIRMATION"
+        },
+        {
+          "tradingDays": 60,
+          "horizonLabel": "THREE_MONTHS",
+          "opportunityScore": 60.19,
+          "state": "WATCH_FOR_CONFIRMATION"
+        }
+      ],
+      "reasons": [
+        "Momentum is stronger than the mean-reversion setup.",
+        "Daily-price entry confirmation is present."
+      ],
+      "warnings": [],
+      "walkForward": [
+        {
+          "horizonTradingDays": 5,
+          "episodeCount": 30,
+          "hitRate": 0.4667,
+          "averageExcessReturn": -0.000558,
+          "averageMaximumAdverseExcursion": -0.029374,
+          "statisticalEdgeProven": "NOT_ESTABLISHED"
+        },
+        {
+          "horizonTradingDays": 20,
+          "episodeCount": 30,
+          "hitRate": 0.5333,
+          "averageExcessReturn": -0.002897,
+          "averageMaximumAdverseExcursion": -0.062822,
+          "statisticalEdgeProven": "NOT_ESTABLISHED"
+        },
+        {
+          "horizonTradingDays": 60,
+          "episodeCount": 30,
+          "hitRate": 0.6333,
+          "averageExcessReturn": 0.023212,
+          "averageMaximumAdverseExcursion": -0.101015,
+          "statisticalEdgeProven": "NOT_ESTABLISHED"
+        }
+      ]
+    },
+    "NBN": {
+      "status": "ASSESSED",
+      "benchmark": "KRE",
+      "barCount": 643,
+      "asOfDate": "2026-07-27",
+      "state": "WATCH_FOR_CONFIRMATION",
+      "preferredSetup": "MOMENTUM",
+      "confidence": "HIGH",
+      "momentumScore": 57.96,
+      "meanReversionScore": 55.69,
+      "entryConfirmationScore": 100.0,
+      "marketRegimeScore": 58.37,
+      "eventDriftScore": 50.0,
+      "liquidityScore": 64.41,
+      "riskPenalty": 40.41,
+      "returnsPercent": {
+        "5": 1.89,
+        "10": 1.46,
+        "20": 0.25,
+        "60": 7.35
+      },
+      "relativeReturnsPercent": {
+        "5": 2.38,
+        "10": 0.92,
+        "20": -0.22,
+        "60": -2.05
+      },
+      "horizons": [
+        {
+          "tradingDays": 5,
+          "horizonLabel": "ONE_WEEK",
+          "opportunityScore": 56.6,
+          "state": "WATCH_FOR_CONFIRMATION"
+        },
+        {
+          "tradingDays": 20,
+          "horizonLabel": "ONE_MONTH",
+          "opportunityScore": 52.38,
+          "state": "WATCH_FOR_CONFIRMATION"
+        },
+        {
+          "tradingDays": 60,
+          "horizonLabel": "THREE_MONTHS",
+          "opportunityScore": 49.95,
+          "state": "WATCH_FOR_CONFIRMATION"
+        }
+      ],
+      "reasons": [
+        "Momentum is stronger than the mean-reversion setup.",
+        "Daily-price entry confirmation is present."
+      ],
+      "warnings": [],
+      "walkForward": [
+        {
+          "horizonTradingDays": 5,
+          "episodeCount": 15,
+          "hitRate": 0.6,
+          "averageExcessReturn": 0.001365,
+          "averageMaximumAdverseExcursion": -0.036845,
+          "statisticalEdgeProven": "NOT_ESTABLISHED"
+        },
+        {
+          "horizonTradingDays": 20,
+          "episodeCount": 15,
+          "hitRate": 0.4667,
+          "averageExcessReturn": 0.000252,
+          "averageMaximumAdverseExcursion": -0.077542,
+          "statisticalEdgeProven": "NOT_ESTABLISHED"
+        },
+        {
+          "horizonTradingDays": 60,
+          "episodeCount": 15,
+          "hitRate": 0.7333,
+          "averageExcessReturn": 0.039114,
+          "averageMaximumAdverseExcursion": -0.110131,
+          "statisticalEdgeProven": "NOT_ESTABLISHED"
+        }
+      ]
+    }
+  },
+  "statisticalEdgeProven": "NOT_ESTABLISHED",
+  "contentHash": "2EABDEED70F53DC3EC61D5B35515650F1554D5A3AD0FB04B248E318F0756D675"
+}

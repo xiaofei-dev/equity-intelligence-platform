@@ -1,0 +1,98 @@
+{
+  "artifactType": "FORWARD_DECISION_QUALITY_PREREGISTRATION",
+  "schemaVersion": "forward-validation-preregistration-v1.0.0",
+  "experimentId": "forward-dry-run-131fd6c59a596056",
+  "mode": "DRY_RUN",
+  "status": "PREREGISTERED_PENDING_ENROLLMENT_GATES",
+  "experimentVersion": "FORWARD-VALIDATION-v1.0.0",
+  "entryPolicyVersion": "ENTRY-POLICY-v1.0.0",
+  "costModelVersion": "COST-MODEL-v1.0.0",
+  "cashReturnVersion": "CASH-RETURN-3M-TREASURY-v1.0.0",
+  "sectorBenchmarkMapVersion": "SECTOR-BENCHMARK-MAP-v1.0.0",
+  "tradingCalendarVersion": "XNYS-CALENDAR-v1.0.0",
+  "notionalUsd": "10000.00",
+  "strategyPaths": [
+    "QC-v1.0.0"
+  ],
+  "observationHorizonsTradingDays": [
+    5,
+    20,
+    60
+  ],
+  "shadowArms": [
+    "A_LUMP_SUM",
+    "B_FIXED_FOUR_TRANCHE",
+    "C_STATE_GATED_FOUR_TRANCHE",
+    "D_CASH_ONLY",
+    "E_SECTOR_ETF",
+    "E_SPY"
+  ],
+  "costAssumptions": {
+    "buyTransactionCostBps": 10,
+    "buySlippageBps": 10,
+    "hypotheticalSaleTransactionCostBps": 10,
+    "hypotheticalSaleSlippageBps": 10
+  },
+  "sourceAlgorithmGate": {
+    "path": "docs/generated/objective-rating-v1-current-snapshot-algorithm-gate-v1.json",
+    "fileSha256": "AB438EB24D3D1EF477252E91DE63B46911BDF2FDB66ECB69BB65715F1675B6FC",
+    "artifactContentHash": "131FD6C59A596056CB6A329FDA3BB73404CADDF2976826B2CDD211D5CB593F4B",
+    "asOfTime": "2026-07-28T23:59:59Z",
+    "scoredSecurityCount": 136
+  },
+  "enrollmentRule": {
+    "timing": "After the regular close on the last verified US trading day of each week.",
+    "freshScoreRequired": true,
+    "topFraction": "0.20",
+    "bottomFraction": "0.20",
+    "boundaryTiesRetained": true,
+    "activeEpisodeReentryProhibited": true,
+    "episodeTradingDays": 60,
+    "calendarDayCandidate": "2026-07-31",
+    "calendarDayCandidateIsNotVerifiedTradingDay": true
+  },
+  "baselineBucketPreview": {
+    "status": "NOT_ENROLLED",
+    "topCount": 28,
+    "bottomCount": 28,
+    "topBoundaryScore": "64.0152",
+    "bottomBoundaryScore": "38.7500",
+    "topSymbolsHash": "49B4B5BD37DD416AF95A0583FB95BBE9507CBFDB543B0ADF73DCB3E30E5838EB",
+    "bottomSymbolsHash": "0F1CD164E1A7A6E4FB6FC7C4B46916A5E36547F690C1FFAC7508708D33F1208C",
+    "reason": "Preview verifies deterministic bucket construction. A fresh weekly-close run is required before signals are enrolled."
+  },
+  "sectorBenchmarks": {
+    "Communication Services": "XLC",
+    "Consumer Discretionary": "XLY",
+    "Consumer Staples": "XLP",
+    "Energy": "XLE",
+    "Financials": "XLF",
+    "Health Care": "XLV",
+    "Industrials": "XLI",
+    "Information Technology": "XLK",
+    "Materials": "XLB",
+    "Real Estate": "XLRE",
+    "Utilities": "XLU"
+  },
+  "launchGates": {
+    "calculationValidated": "PASS",
+    "providerAcceptedForCurrentProspectiveDryRun": "PASS",
+    "formalPitProviderAcceptance300To500": "BLOCKED",
+    "tradingCalendar": "PENDING_VERIFICATION",
+    "benchmarkPriceAndActionCoverage": "PENDING_VERIFICATION",
+    "cashRatePitCoverage": "PENDING_VERIFICATION",
+    "identityDelistingAndCorporateActionCoverage": "PENDING_VERIFICATION",
+    "freshWeeklyScreeningRun": "PENDING"
+  },
+  "formalLaunchEligible": false,
+  "dryRunPreregistered": true,
+  "signalsEnrolled": 0,
+  "futureOutcomesObserved": false,
+  "preliminaryConclusion": "INSUFFICIENT_SAMPLE",
+  "statisticalEdgeProven": "NOT_ESTABLISHED",
+  "claimBoundary": "Prospective shadow research only; no recommendation, real order, guaranteed return, or historical PIT performance claim.",
+  "networkRequestsExecuted": false,
+  "databaseWritesExecuted": false,
+  "automaticTradingAuthorized": false,
+  "artifactContentHash": "FD127210E0766B295C2E6FB54C27801D85D8C74124B47C967FB1CE151F7F1B69"
+}

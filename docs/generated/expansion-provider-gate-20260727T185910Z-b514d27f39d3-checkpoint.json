@@ -1,0 +1,17 @@
+{
+  "artifactType": "EXPANSION_SLICE_CHECKPOINT",
+  "runId": "20260727T185910Z-b514d27f39d3",
+  "sliceId": "lanc-focused-001",
+  "completedSymbols": [
+    "LANC"
+  ],
+  "reportPath": "docs\\generated\\expansion-provider-gate-20260727T185910Z-b514d27f39d3.json",
+  "reportSha256": "8EA89D6EC397D3D7114B0C9AAB7C22BF1B2353BAB680EE2439CAA5E4F5AF7ACD",
+  "diagnosticPath": "docs\\generated\\expansion-provider-gate-20260727T185910Z-b514d27f39d3-diagnostics.json",
+  "diagnosticSha256": "63AB5B604B8807761B666E686696C627E5004478C7A60AB5853CA201E72B256B",
+  "scoringInputManifestPath": "docs\\generated\\expansion-provider-gate-20260727T185910Z-b514d27f39d3-scoring-input-manifest.json",
+  "scoringInputManifestSha256": "48F86E6D8CA47F21262F4688EC14A1280A8CCEE7D554BF3E6F9FC80AA7C747E2",
+  "nextAction": "STOP_AND_RECORD_DASHBOARD_AFTER",
+  "automaticContinuationAuthorized": false,
+  "artifactContentHash": "ECCDA65ECE2F739DAC6C69808227467FC0C1DB4E0D5AC7BBFA5A9385BC2A4997"
+}

@@ -1,0 +1,100 @@
+{
+  "artifactType": "SEC_ISSUER_INTEREST_EVIDENCE_CANARY_CHECKPOINT",
+  "schemaVersion": "sec-issuer-interest-evidence-checkpoint-v1.0.0",
+  "runId": "20260728T051809Z-ff6c07bd66ff",
+  "completedAccessions": [
+    {
+      "symbol": "AMAT",
+      "accession": "0000006951-25-000011",
+      "evidenceContentHash": "17F47F42A54DB7B92258A41CE9CBCA5AE72C0724258C884C57BE308B8997C86C"
+    },
+    {
+      "symbol": "AMAT",
+      "accession": "0000006951-25-000024",
+      "evidenceContentHash": "2E62717604FDA824B455B0FA19166FF476AA272B617611571E1D7276D14E82B8"
+    },
+    {
+      "symbol": "AMAT",
+      "accession": "0000006951-25-000037",
+      "evidenceContentHash": "04D1012F0048AE46413C5F73C70570DF9E4BE8BE9782B33D06608D2132F7BABC"
+    },
+    {
+      "symbol": "AMAT",
+      "accession": "0001628280-25-056742",
+      "evidenceContentHash": "969C200B29CB84A2223CC67DA658F59B54779B36AF927D24803C48B12B7BB923"
+    },
+    {
+      "symbol": "AMAT",
+      "accession": "0001628280-26-009694",
+      "evidenceContentHash": "B9290B0E50F89AC3D53C24691FF3BDCFECAB2B4E1F554AD9FBDAFAC1B592888C"
+    },
+    {
+      "symbol": "AMAT",
+      "accession": "0001628280-26-037227",
+      "evidenceContentHash": "FF31B04009DA0829397B31155ABB7BF8E63FD00E8CD172B36D6D067EE1F7B075"
+    },
+    {
+      "symbol": "CSCO",
+      "accession": "0000858877-25-000007",
+      "evidenceContentHash": "C9AD856B6C10647663BCAE4ED12B14F72896CFB0EA3D7DBB7A39FB3F57B2E52B"
+    },
+    {
+      "symbol": "CSCO",
+      "accession": "0000858877-25-000033",
+      "evidenceContentHash": "BEC07AA0C895CF1E6EB59E63B39A24873500DE9CC2B77DC1402075B68EEB2516"
+    },
+    {
+      "symbol": "CSCO",
+      "accession": "0000858877-25-000111",
+      "evidenceContentHash": "413CA82CBE8F5408C92BC2F55668216DB80C0501F842D66695BCDB1290FF61B8"
+    },
+    {
+      "symbol": "CSCO",
+      "accession": "0000858877-25-000171",
+      "evidenceContentHash": "2BC300C5B076638C041B5D331CBDBB91EFA6BC22094E6307282FB456B99C1F86"
+    },
+    {
+      "symbol": "CSCO",
+      "accession": "0000858877-26-000021",
+      "evidenceContentHash": "C70466BCB9AB6E1D98A269C441C6EA17AD347AAE4608396AE87E2AFF01872A39"
+    },
+    {
+      "symbol": "CSCO",
+      "accession": "0000858877-26-000078",
+      "evidenceContentHash": "B13FE4A0850A850FD475C75F2AB82B4944BE843F5180F880281A8E47CDDE2C2E"
+    },
+    {
+      "symbol": "FIX",
+      "accession": "0001104659-25-101821",
+      "evidenceContentHash": "4EA9A35D5D7C872F9269009D111AA9D8DE3F1B5F7E68C6F79DDEB77A025A8E65"
+    },
+    {
+      "symbol": "FIX",
+      "accession": "0001104659-26-017530",
+      "evidenceContentHash": "B80F630DDAEBB90FCEACC60A1FA380DABE8A7116370F646FCB56DBF07F1E6765"
+    },
+    {
+      "symbol": "FIX",
+      "accession": "0001104659-26-047689",
+      "evidenceContentHash": "84163C7E15CB017E0BD7DC8102FA506D856CF202CC858E62D0886CE66134BAF0"
+    },
+    {
+      "symbol": "FIX",
+      "accession": "0001104659-26-086258",
+      "evidenceContentHash": "7CD90C78B7FA92BD3D52A91A48729C3B767A604779696FF7EFFB09397E2C7EF6"
+    },
+    {
+      "symbol": "FIX",
+      "accession": "0001558370-25-005411",
+      "evidenceContentHash": "F47EF19FEFFAC31C50260A9CEA7817061426E05E1051D301F59FEC4B7530142C"
+    },
+    {
+      "symbol": "FIX",
+      "accession": "0001558370-25-009536",
+      "evidenceContentHash": "E2B7C3054F70A610D9500924832E427110B7226316A4261BDDAFCDC6BE0269C8"
+    }
+  ],
+  "reportPath": "docs/generated/sec-issuer-interest-evidence-20260728T051809Z-ff6c07bd66ff.json",
+  "reportContentHash": "3EB296CA4392723B18E5E4A41483FAA03865CF1316D6769642D9E0D94964ADFD",
+  "artifactContentHash": "4390265BA4661F4F440E7B7CE1EEEF6C12C5577F5A0E76E6D713BD9F8A0F5236"
+}

@@ -1,0 +1,124 @@
+{
+  "artifactType": "SEC_FILING_EVIDENCE_CANARY_REPORT",
+  "schemaVersion": "sec-filing-evidence-run-v1.0.0",
+  "evidenceSchemaVersion": "sec-filing-evidence-v1.0.0",
+  "runId": "20260728T035633Z-a0c07fd99aa9",
+  "preflightContentHash": "B092CF7849F8AF76B7BD97A5A50C98A3536C49BA3D2F6F440623A946308E8C9F",
+  "symbols": [
+    "AAPL",
+    "CAT",
+    "JNJ",
+    "NVDA",
+    "XEL"
+  ],
+  "status": "PASS",
+  "physicalHttpAttempts": 29,
+  "physicalAttemptsByEndpoint": {
+    "company_facts": 3,
+    "filing_index": 5,
+    "inline_xbrl": 5,
+    "label_linkbase": 5,
+    "presentation_linkbase": 5,
+    "submissions": 5,
+    "ticker_mapping": 1
+  },
+  "configuredLocalWeight": 29,
+  "maximumRetries": 0,
+  "records": [
+    {
+      "symbol": "AAPL",
+      "status": "EVIDENCE_COLLECTED",
+      "entityId": "CIK:0000320193",
+      "accession": "0000320193-25-000079",
+      "form": "10-K",
+      "evidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/AAPL/89CE61EB3F493B978E6FE1A088452B305325B379AA1F49FDC3224EE7F3BF3FBA.json",
+      "evidenceContentHash": "89CE61EB3F493B978E6FE1A088452B305325B379AA1F49FDC3224EE7F3BF3FBA",
+      "strictInterestScopeProven": false,
+      "totalDebtProven": false,
+      "tradedClassIdentityProven": false,
+      "reasonCodes": [
+        "STRICT_INTEREST_SCOPE_NOT_PROVEN",
+        "TOTAL_DEBT_COMPLETENESS_NOT_PROVEN",
+        "TRADED_CLASS_IDENTITY_NOT_PROVEN"
+      ]
+    },
+    {
+      "symbol": "CAT",
+      "status": "EVIDENCE_COLLECTED",
+      "entityId": "CIK:0000018230",
+      "accession": "0000018230-26-000008",
+      "form": "10-K",
+      "evidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/CAT/75F15640B4CA96B95B86D9A26509A9F0E8ADF66599B16145D44135F355B53F63.json",
+      "evidenceContentHash": "75F15640B4CA96B95B86D9A26509A9F0E8ADF66599B16145D44135F355B53F63",
+      "strictInterestScopeProven": false,
+      "totalDebtProven": false,
+      "tradedClassIdentityProven": false,
+      "reasonCodes": [
+        "STRICT_INTEREST_SCOPE_NOT_PROVEN",
+        "TOTAL_DEBT_COMPLETENESS_NOT_PROVEN",
+        "TRADED_CLASS_IDENTITY_NOT_PROVEN"
+      ]
+    },
+    {
+      "symbol": "JNJ",
+      "status": "EVIDENCE_COLLECTED",
+      "entityId": "CIK:0000200406",
+      "accession": "0000200406-26-000016",
+      "form": "10-K",
+      "evidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/JNJ/709663B26D4CF1CD675D7CD5065D3BD91B343D6D7A62D9C2FAFD3703E7E6CB30.json",
+      "evidenceContentHash": "709663B26D4CF1CD675D7CD5065D3BD91B343D6D7A62D9C2FAFD3703E7E6CB30",
+      "strictInterestScopeProven": false,
+      "totalDebtProven": false,
+      "tradedClassIdentityProven": false,
+      "reasonCodes": [
+        "STRICT_INTEREST_SCOPE_NOT_PROVEN",
+        "TOTAL_DEBT_COMPLETENESS_NOT_PROVEN",
+        "TRADED_CLASS_IDENTITY_NOT_PROVEN"
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "status": "EVIDENCE_COLLECTED",
+      "entityId": "CIK:0001045810",
+      "accession": "0001045810-26-000021",
+      "form": "10-K",
+      "evidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/NVDA/6E5AC453538D7C0697EA7421F4D8DEEFAA30A8C7913167E86A4D03954BC04FDD.json",
+      "evidenceContentHash": "6E5AC453538D7C0697EA7421F4D8DEEFAA30A8C7913167E86A4D03954BC04FDD",
+      "strictInterestScopeProven": false,
+      "totalDebtProven": false,
+      "tradedClassIdentityProven": false,
+      "reasonCodes": [
+        "STRICT_INTEREST_SCOPE_NOT_PROVEN",
+        "TOTAL_DEBT_COMPLETENESS_NOT_PROVEN",
+        "TRADED_CLASS_IDENTITY_NOT_PROVEN"
+      ]
+    },
+    {
+      "symbol": "XEL",
+      "status": "EVIDENCE_COLLECTED",
+      "entityId": "CIK:0000072903",
+      "accession": "0000072903-26-000009",
+      "form": "10-K",
+      "evidencePath": "storage/provider-validation/scoring-inputs-v4/filing-evidence/XEL/820F4DC22E1B349DD9800B4FC6B08F242F754106A21224030A3FA760095A7B29.json",
+      "evidenceContentHash": "820F4DC22E1B349DD9800B4FC6B08F242F754106A21224030A3FA760095A7B29",
+      "strictInterestScopeProven": false,
+      "totalDebtProven": false,
+      "tradedClassIdentityProven": false,
+      "reasonCodes": [
+        "STRICT_INTEREST_SCOPE_NOT_PROVEN",
+        "TOTAL_DEBT_COMPLETENESS_NOT_PROVEN",
+        "TRADED_CLASS_IDENTITY_NOT_PROVEN"
+      ]
+    }
+  ],
+  "reasonCounts": {
+    "STRICT_INTEREST_SCOPE_NOT_PROVEN": 5,
+    "TOTAL_DEBT_COMPLETENESS_NOT_PROVEN": 5,
+    "TRADED_CLASS_IDENTITY_NOT_PROVEN": 5
+  },
+  "eodhdRequests": 0,
+  "algorithmScoringExecuted": false,
+  "forwardValidationExecuted": false,
+  "rawFilingValuesIncluded": false,
+  "artifactContentHash": "8AEB75E963DB263EAB972B6A41EF18F11EE7C099865C6928FB2EC6BC227F2640"
+}

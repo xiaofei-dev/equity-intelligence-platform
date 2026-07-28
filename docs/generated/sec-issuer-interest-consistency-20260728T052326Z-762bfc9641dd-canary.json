@@ -1,0 +1,1961 @@
+{
+  "artifactType": "SEC_ISSUER_INTEREST_CONSISTENCY_AUDIT",
+  "schemaVersion": "sec-issuer-interest-consistency-audit-v1.3.0",
+  "policyVersion": "sec-issuer-interest-consistency-v1.0.0",
+  "interestPolicyVersion": "sec-interest-expense-policy-v1.1.0",
+  "cutoff": "2026-07-27T23:59:59Z",
+  "symbols": [
+    "AMAT",
+    "CSCO",
+    "FIX"
+  ],
+  "sourceValidation": {
+    "supplementManifestPath": "docs/generated/objective-rating-v1-current-snapshot-supplements-v3.json",
+    "supplementManifestSha256": "8CAFF5829ECB09A8E99DE63659E8F6C4EDBA1377BC962DC34A72963199692CF5",
+    "supplementManifestContentHash": "9D23101FE4D81E3064F42BF655592851A80C41DD43CE156EDF2A808D0E446402",
+    "supplementPayloadsVerified": 216,
+    "factorManifestPath": "docs/generated/objective-rating-v1-current-factor-input-manifest-v1-4.json",
+    "factorManifestSha256": "093AECBC9B8924B39CF249ED14D7C8AD197AD55E94A4B0757DAA9D59AB3443ED",
+    "factorManifestContentHash": "A8635B83C083585D862660FB4186E509554A34975B4CDEC915271831450C96CA",
+    "factorPayloadsVerified": 55,
+    "interestOnlyCandidateSymbols": [
+      "AMAT",
+      "CIEN",
+      "COO",
+      "CSCO",
+      "DHR",
+      "FAST",
+      "FIX",
+      "PLAB",
+      "TSN",
+      "WDFC"
+    ],
+    "interestOnlyCandidateSetHash": "0B8EFCB407CBDBD757F3975A54E571C1F375FAB88413D3CA885CD30A1D57DD44"
+  },
+  "policy": {
+    "preferredConcept": "us-gaap:InterestExpense",
+    "correctConditionalConcept": "us-gaap:InterestExpenseNonoperating",
+    "transitionRequirements": [
+      "SAME_ECONOMIC_SCOPE",
+      "SAME_STATEMENT_ROLE",
+      "SAME_UNIT",
+      "SAME_SIGN_CONVENTION",
+      "COMPLETE_PERIOD_COVERAGE",
+      "ISSUER_DISCLOSURE_CONTINUITY",
+      "AVAILABLE_AT_OR_BEFORE_CUTOFF"
+    ],
+    "automaticSubstitutionForbidden": [
+      "InterestExpenseDebt",
+      "InterestExpenseNonoperating",
+      "InterestAndDebtExpense",
+      "InterestIncomeExpenseNonoperatingNet"
+    ],
+    "oldAnnualValueMayFillCurrentQuarter": false,
+    "missingRemainsMissing": true
+  },
+  "statusCounts": {
+    "PASS": 0,
+    "PARTIAL": 3,
+    "MISSING": 0
+  },
+  "qcInputReadyCount": 0,
+  "conceptFactCountsInSelectedPeriods": {
+    "InterestExpense": 1,
+    "InterestExpenseNonoperating": 38
+  },
+  "records": [
+    {
+      "symbol": "AMAT",
+      "issuerLegalName": "APPLIED MATERIALS INC /DE",
+      "entityId": "CIK:0000006951",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "CURRENT_CONDITIONAL_INTEREST_FACTS_PRESENT",
+        "ISSUER_CONCEPT_EQUIVALENCE_NOT_PROVEN"
+      ],
+      "sourceFactorSnapshotPath": "storage/provider-validation/current-factor-input-snapshots-v1-3/AMAT/14FD1CD829FCF4BC54D7A94C60AB327AAA9E3D732C5EB98CF0CE1970B81E5293.json",
+      "sourceFactorSnapshotContentHash": "14FD1CD829FCF4BC54D7A94C60AB327AAA9E3D732C5EB98CF0CE1970B81E5293",
+      "companyFactsSourceReference": "sec-edgar:companyfacts:CIK0000006951",
+      "companyFactsSourceContentHash": "8451FB853359F2E894645D6F55471B5FE44A9CD83CE300B8C58D68DFD3B68AFC",
+      "submissionsSourceReference": "sec-edgar:submissions:CIK0000006951",
+      "submissionsSourceContentHash": "0B95E8280C77C1F65C3754D66F85B29B66F47035726148AABF52582218FB7418",
+      "selectedPeriodEnds": [
+        "2025-01-26",
+        "2025-04-27",
+        "2025-07-27",
+        "2025-10-26",
+        "2026-01-25",
+        "2026-04-26"
+      ],
+      "selectedFactCount": 12,
+      "facts": [
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2024-10-28",
+          "periodEnd": "2025-01-26",
+          "durationSemantic": "DISCRETE_QUARTER",
+          "form": "10-Q",
+          "frame": null,
+          "fiscalYear": 2025,
+          "fiscalPeriod": "Q1",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0000006951-25-000011",
+          "filedAt": "2025-02-20",
+          "acceptedAt": "2025-02-20T21:02:43.000Z",
+          "availableAt": "2025-02-20T21:02:43.000Z",
+          "statementRoles": [
+            "http://www.appliedmaterials.com/role/ConsolidatedCondensedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0000006951-25-000011:InterestExpenseNonoperating",
+          "sourceContentHash": "8451FB853359F2E894645D6F55471B5FE44A9CD83CE300B8C58D68DFD3B68AFC",
+          "factEvidenceHash": "016370260C334958265D503BA9518325DB91F0DA2894868B0226F6764DEE801F"
+        },
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2024-10-28",
+          "periodEnd": "2025-01-26",
+          "durationSemantic": "DISCRETE_QUARTER",
+          "form": "10-Q",
+          "frame": "CY2024Q4",
+          "fiscalYear": 2026,
+          "fiscalPeriod": "Q1",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0001628280-26-009694",
+          "filedAt": "2026-02-19",
+          "acceptedAt": "2026-02-19T21:01:19.000Z",
+          "availableAt": "2026-02-19T21:01:19.000Z",
+          "statementRoles": [
+            "http://www.appliedmaterials.com/role/ConsolidatedCondensedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0001628280-26-009694:InterestExpenseNonoperating",
+          "sourceContentHash": "8451FB853359F2E894645D6F55471B5FE44A9CD83CE300B8C58D68DFD3B68AFC",
+          "factEvidenceHash": "E854053A09FA649F80093F378274FAA590B3502A63E491E41ABF30B1ECCE695E"
+        },
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2025-01-27",
+          "periodEnd": "2025-04-27",
+          "durationSemantic": "DISCRETE_QUARTER",
+          "form": "10-Q",
+          "frame": null,
+          "fiscalYear": 2025,
+          "fiscalPeriod": "Q2",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0000006951-25-000024",
+          "filedAt": "2025-05-22",
+          "acceptedAt": "2025-05-22T20:02:01.000Z",
+          "availableAt": "2025-05-22T20:02:01.000Z",
+          "statementRoles": [
+            "http://www.appliedmaterials.com/role/ConsolidatedCondensedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0000006951-25-000024:InterestExpenseNonoperating",
+          "sourceContentHash": "8451FB853359F2E894645D6F55471B5FE44A9CD83CE300B8C58D68DFD3B68AFC",
+          "factEvidenceHash": "50B50AE8AC91A425936F2F8A1D1BA08B6CEEE972BA23D556E67C8AE827B366F0"
+        },
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2024-10-28",
+          "periodEnd": "2025-04-27",
+          "durationSemantic": "YTD",
+          "form": "10-Q",
+          "frame": null,
+          "fiscalYear": 2025,
+          "fiscalPeriod": "Q2",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0000006951-25-000024",
+          "filedAt": "2025-05-22",
+          "acceptedAt": "2025-05-22T20:02:01.000Z",
+          "availableAt": "2025-05-22T20:02:01.000Z",
+          "statementRoles": [
+            "http://www.appliedmaterials.com/role/ConsolidatedCondensedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0000006951-25-000024:InterestExpenseNonoperating",
+          "sourceContentHash": "8451FB853359F2E894645D6F55471B5FE44A9CD83CE300B8C58D68DFD3B68AFC",
+          "factEvidenceHash": "0256ED35F566ADF8C0E74456031C15099F32B010EB553A685B66A4EEE421B59A"
+        },
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2025-01-27",
+          "periodEnd": "2025-04-27",
+          "durationSemantic": "DISCRETE_QUARTER",
+          "form": "10-Q",
+          "frame": "CY2025Q1",
+          "fiscalYear": 2026,
+          "fiscalPeriod": "Q2",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0001628280-26-037227",
+          "filedAt": "2026-05-21",
+          "acceptedAt": "2026-05-21T20:01:47.000Z",
+          "availableAt": "2026-05-21T20:01:47.000Z",
+          "statementRoles": [
+            "http://www.appliedmaterials.com/role/ConsolidatedCondensedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0001628280-26-037227:InterestExpenseNonoperating",
+          "sourceContentHash": "8451FB853359F2E894645D6F55471B5FE44A9CD83CE300B8C58D68DFD3B68AFC",
+          "factEvidenceHash": "FA282C2A36F75258FD67F1C40FE004C3344AF17DCA903E411019D313DB36F958"
+        },
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2024-10-28",
+          "periodEnd": "2025-04-27",
+          "durationSemantic": "YTD",
+          "form": "10-Q",
+          "frame": null,
+          "fiscalYear": 2026,
+          "fiscalPeriod": "Q2",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0001628280-26-037227",
+          "filedAt": "2026-05-21",
+          "acceptedAt": "2026-05-21T20:01:47.000Z",
+          "availableAt": "2026-05-21T20:01:47.000Z",
+          "statementRoles": [
+            "http://www.appliedmaterials.com/role/ConsolidatedCondensedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0001628280-26-037227:InterestExpenseNonoperating",
+          "sourceContentHash": "8451FB853359F2E894645D6F55471B5FE44A9CD83CE300B8C58D68DFD3B68AFC",
+          "factEvidenceHash": "F6E1B5AF4BAF4378405C4AD8A896E407AFDFC82D6345C680A00052C5476466E8"
+        },
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2025-04-28",
+          "periodEnd": "2025-07-27",
+          "durationSemantic": "DISCRETE_QUARTER",
+          "form": "10-Q",
+          "frame": "CY2025Q2",
+          "fiscalYear": 2025,
+          "fiscalPeriod": "Q3",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0000006951-25-000037",
+          "filedAt": "2025-08-21",
+          "acceptedAt": "2025-08-21T20:02:16.000Z",
+          "availableAt": "2025-08-21T20:02:16.000Z",
+          "statementRoles": [
+            "http://www.appliedmaterials.com/role/ConsolidatedCondensedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0000006951-25-000037:InterestExpenseNonoperating",
+          "sourceContentHash": "8451FB853359F2E894645D6F55471B5FE44A9CD83CE300B8C58D68DFD3B68AFC",
+          "factEvidenceHash": "39E100C4962A831DCB11E843090E6F4FD4668A8C999403CE3AFE79CF59E4C210"
+        },
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2024-10-28",
+          "periodEnd": "2025-07-27",
+          "durationSemantic": "YTD",
+          "form": "10-Q",
+          "frame": null,
+          "fiscalYear": 2025,
+          "fiscalPeriod": "Q3",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0000006951-25-000037",
+          "filedAt": "2025-08-21",
+          "acceptedAt": "2025-08-21T20:02:16.000Z",
+          "availableAt": "2025-08-21T20:02:16.000Z",
+          "statementRoles": [
+            "http://www.appliedmaterials.com/role/ConsolidatedCondensedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0000006951-25-000037:InterestExpenseNonoperating",
+          "sourceContentHash": "8451FB853359F2E894645D6F55471B5FE44A9CD83CE300B8C58D68DFD3B68AFC",
+          "factEvidenceHash": "22DA88EB589898DB7CAAD8B75A20013DE5FC598E42043C45282E209DF8CFD629"
+        },
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2024-10-28",
+          "periodEnd": "2025-10-26",
+          "durationSemantic": "ANNUAL",
+          "form": "10-K",
+          "frame": "CY2025",
+          "fiscalYear": 2025,
+          "fiscalPeriod": "FY",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0001628280-25-056742",
+          "filedAt": "2025-12-12",
+          "acceptedAt": "2025-12-12T21:01:56.000Z",
+          "availableAt": "2025-12-12T21:01:56.000Z",
+          "statementRoles": [
+            "http://www.appliedmaterials.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0001628280-25-056742:InterestExpenseNonoperating",
+          "sourceContentHash": "8451FB853359F2E894645D6F55471B5FE44A9CD83CE300B8C58D68DFD3B68AFC",
+          "factEvidenceHash": "9053F832347599202A72EE916B09CF6A1E459480ED5AB9C7D646B399887366FB"
+        },
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2025-10-27",
+          "periodEnd": "2026-01-25",
+          "durationSemantic": "DISCRETE_QUARTER",
+          "form": "10-Q",
+          "frame": "CY2025Q4",
+          "fiscalYear": 2026,
+          "fiscalPeriod": "Q1",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0001628280-26-009694",
+          "filedAt": "2026-02-19",
+          "acceptedAt": "2026-02-19T21:01:19.000Z",
+          "availableAt": "2026-02-19T21:01:19.000Z",
+          "statementRoles": [
+            "http://www.appliedmaterials.com/role/ConsolidatedCondensedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0001628280-26-009694:InterestExpenseNonoperating",
+          "sourceContentHash": "8451FB853359F2E894645D6F55471B5FE44A9CD83CE300B8C58D68DFD3B68AFC",
+          "factEvidenceHash": "E3FB9FE55278748C4178957AA5CD086B55C07BAA609E395B745609F85EED99C3"
+        },
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2026-01-26",
+          "periodEnd": "2026-04-26",
+          "durationSemantic": "DISCRETE_QUARTER",
+          "form": "10-Q",
+          "frame": "CY2026Q1",
+          "fiscalYear": 2026,
+          "fiscalPeriod": "Q2",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0001628280-26-037227",
+          "filedAt": "2026-05-21",
+          "acceptedAt": "2026-05-21T20:01:47.000Z",
+          "availableAt": "2026-05-21T20:01:47.000Z",
+          "statementRoles": [
+            "http://www.appliedmaterials.com/role/ConsolidatedCondensedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0001628280-26-037227:InterestExpenseNonoperating",
+          "sourceContentHash": "8451FB853359F2E894645D6F55471B5FE44A9CD83CE300B8C58D68DFD3B68AFC",
+          "factEvidenceHash": "650F6B03221C465BC4E56D064EFC4D8481B2B2ACFA331DD8B14F653156A92935"
+        },
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2025-10-27",
+          "periodEnd": "2026-04-26",
+          "durationSemantic": "YTD",
+          "form": "10-Q",
+          "frame": null,
+          "fiscalYear": 2026,
+          "fiscalPeriod": "Q2",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0001628280-26-037227",
+          "filedAt": "2026-05-21",
+          "acceptedAt": "2026-05-21T20:01:47.000Z",
+          "availableAt": "2026-05-21T20:01:47.000Z",
+          "statementRoles": [
+            "http://www.appliedmaterials.com/role/ConsolidatedCondensedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0001628280-26-037227:InterestExpenseNonoperating",
+          "sourceContentHash": "8451FB853359F2E894645D6F55471B5FE44A9CD83CE300B8C58D68DFD3B68AFC",
+          "factEvidenceHash": "632A484F9B56A72C625DD1666B7D89CFA6DEF33310FA53A36E3455B4EE4FA0BE"
+        }
+      ],
+      "strictInterestTtmAssessment": {
+        "status": "MISSING",
+        "route": null,
+        "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE"
+      },
+      "conceptTransitions": [
+        {
+          "fromConcept": "InterestExpense",
+          "toConcept": "InterestExpenseDebt",
+          "overlapCount": 0,
+          "equalValueOverlapCount": 0,
+          "statementRoleContinuityProven": false,
+          "economicScopeEquivalenceProven": false,
+          "authorized": false,
+          "reasonCodes": [
+            "ECONOMIC_SCOPE_EQUIVALENCE_NOT_PROVEN",
+            "INSUFFICIENT_EQUAL_VALUE_OVERLAP",
+            "STATEMENT_ROLE_CONTINUITY_NOT_PROVEN"
+          ],
+          "overlaps": []
+        },
+        {
+          "fromConcept": "InterestExpense",
+          "toConcept": "InterestExpenseNonoperating",
+          "overlapCount": 9,
+          "equalValueOverlapCount": 9,
+          "statementRoleContinuityProven": false,
+          "economicScopeEquivalenceProven": false,
+          "authorized": false,
+          "reasonCodes": [
+            "ECONOMIC_SCOPE_EQUIVALENCE_NOT_PROVEN",
+            "STATEMENT_ROLE_CONTINUITY_NOT_PROVEN"
+          ],
+          "overlaps": [
+            {
+              "periodStart": "2021-11-01",
+              "periodEnd": "2022-10-30",
+              "durationSemantic": "ANNUAL",
+              "unit": "USD",
+              "strictAccession": "0000006951-22-000043",
+              "candidateAccession": "0000006951-24-000044",
+              "strictFactEvidenceHash": "4687895431FBD8BB71093151BDA1A5A439973CF0B1A7124ED74FA63E07201A07",
+              "candidateFactEvidenceHash": "4653D1E343CA848258F37482F839D6A3CDB0C8CF5A0FC7C6D8569EC2B63A218D",
+              "valueRelationship": "EQUAL",
+              "strictStatementRoles": [],
+              "candidateStatementRoles": []
+            },
+            {
+              "periodStart": "2021-11-01",
+              "periodEnd": "2022-10-30",
+              "durationSemantic": "ANNUAL",
+              "unit": "USD",
+              "strictAccession": "0000006951-23-000041",
+              "candidateAccession": "0000006951-24-000044",
+              "strictFactEvidenceHash": "D26254D930140932FAF9CCC050B6E8052C01455AD58E99B8416DEF731563488D",
+              "candidateFactEvidenceHash": "4653D1E343CA848258F37482F839D6A3CDB0C8CF5A0FC7C6D8569EC2B63A218D",
+              "valueRelationship": "EQUAL",
+              "strictStatementRoles": [],
+              "candidateStatementRoles": []
+            },
+            {
+              "periodStart": "2022-10-31",
+              "periodEnd": "2023-07-30",
+              "durationSemantic": "YTD",
+              "unit": "USD",
+              "strictAccession": "0000006951-23-000031",
+              "candidateAccession": "0000006951-24-000032",
+              "strictFactEvidenceHash": "793F1CC1FD74756490A7C370A4241A926282A6571C2E585CD495DBC941DDC9D3",
+              "candidateFactEvidenceHash": "BE40D82CFAF8783975F13DD6DDFA9EF505C9FBF857BC3BF42737F0F7ADDC3EBC",
+              "valueRelationship": "EQUAL",
+              "strictStatementRoles": [],
+              "candidateStatementRoles": []
+            },
+            {
+              "periodStart": "2023-05-01",
+              "periodEnd": "2023-07-30",
+              "durationSemantic": "DISCRETE_QUARTER",
+              "unit": "USD",
+              "strictAccession": "0000006951-23-000031",
+              "candidateAccession": "0000006951-24-000032",
+              "strictFactEvidenceHash": "DA60390BB680318969A2BAE50EF63211387E6C2D54A68BAC54B592A4751B9CE1",
+              "candidateFactEvidenceHash": "5C32D023939F3D88E9C2A917BFDCD53E24BDAFEBE169878E0D6F97C148E4CD6D",
+              "valueRelationship": "EQUAL",
+              "strictStatementRoles": [],
+              "candidateStatementRoles": []
+            },
+            {
+              "periodStart": "2022-10-31",
+              "periodEnd": "2023-10-29",
+              "durationSemantic": "ANNUAL",
+              "unit": "USD",
+              "strictAccession": "0000006951-23-000041",
+              "candidateAccession": "0000006951-24-000044",
+              "strictFactEvidenceHash": "288727A7454C23399BF616F91455C3F3F6E64C05B2A7FC7E4545D5C45D007760",
+              "candidateFactEvidenceHash": "4E0F785C83C721521C8D94C7CF7880ACF315DCA2A0BC391B6FF790AAEDF438A9",
+              "valueRelationship": "EQUAL",
+              "strictStatementRoles": [],
+              "candidateStatementRoles": []
+            },
+            {
+              "periodStart": "2022-10-31",
+              "periodEnd": "2023-10-29",
+              "durationSemantic": "ANNUAL",
+              "unit": "USD",
+              "strictAccession": "0000006951-23-000041",
+              "candidateAccession": "0001628280-25-056742",
+              "strictFactEvidenceHash": "288727A7454C23399BF616F91455C3F3F6E64C05B2A7FC7E4545D5C45D007760",
+              "candidateFactEvidenceHash": "4BE443E02DBA8EE387A0BB606516A995B70E6362A18932DCF9CDD6612C2CF174",
+              "valueRelationship": "EQUAL",
+              "strictStatementRoles": [],
+              "candidateStatementRoles": [
+                "http://www.appliedmaterials.com/role/ConsolidatedStatementsofOperations"
+              ]
+            },
+            {
+              "periodStart": "2023-10-30",
+              "periodEnd": "2024-01-28",
+              "durationSemantic": "DISCRETE_QUARTER",
+              "unit": "USD",
+              "strictAccession": "0000006951-24-000012",
+              "candidateAccession": "0000006951-25-000011",
+              "strictFactEvidenceHash": "47C89640013266C69B63457CEA04F15465E8AC0B3809AFF1AB6CE5532A3AAC0E",
+              "candidateFactEvidenceHash": "FF48F57A6FE7F0AEC80B18B6E4C030BB3069311E14ABCCB982A6C339ECCC1BB5",
+              "valueRelationship": "EQUAL",
+              "strictStatementRoles": [],
+              "candidateStatementRoles": [
+                "http://www.appliedmaterials.com/role/ConsolidatedCondensedStatementsofOperations"
+              ]
+            },
+            {
+              "periodStart": "2023-10-30",
+              "periodEnd": "2024-04-28",
+              "durationSemantic": "YTD",
+              "unit": "USD",
+              "strictAccession": "0000006951-24-000022",
+              "candidateAccession": "0000006951-25-000024",
+              "strictFactEvidenceHash": "712668A9918C9630E6B362D6080E9C9010DF1A097CF53683605A06B65B1C1FAA",
+              "candidateFactEvidenceHash": "BA1C0C434AEA53106F76526365A791275F473F6EC57F10405F68EF83D8987A71",
+              "valueRelationship": "EQUAL",
+              "strictStatementRoles": [],
+              "candidateStatementRoles": [
+                "http://www.appliedmaterials.com/role/ConsolidatedCondensedStatementsofOperations"
+              ]
+            },
+            {
+              "periodStart": "2024-01-29",
+              "periodEnd": "2024-04-28",
+              "durationSemantic": "DISCRETE_QUARTER",
+              "unit": "USD",
+              "strictAccession": "0000006951-24-000022",
+              "candidateAccession": "0000006951-25-000024",
+              "strictFactEvidenceHash": "3D81B5C3CA6DCD020D6818725288E67AA12BC78B2600AAF58ECF2548193F8062",
+              "candidateFactEvidenceHash": "6697D35E7D4A66B84EA655EA451030012B23742F955BF581352D667F0DF4DD40",
+              "valueRelationship": "EQUAL",
+              "strictStatementRoles": [],
+              "candidateStatementRoles": [
+                "http://www.appliedmaterials.com/role/ConsolidatedCondensedStatementsofOperations"
+              ]
+            }
+          ]
+        }
+      ],
+      "minimumMissingEvidence": [
+        {
+          "reasonCode": "FILING_PRESENTATION_CONTEXT_NOT_CACHED",
+          "requiredEvidence": "Official SEC Inline-XBRL primary document, presentation linkbase, and label linkbase for the listed accessions.",
+          "accessions": []
+        },
+        {
+          "reasonCode": "ISSUER_SCOPE_CONTINUITY_NOT_PROVEN",
+          "requiredEvidence": "Issuer disclosure proving that the conditional concept is complete gross interest and omits no operating-interest component."
+        }
+      ],
+      "qcInputReadyAfterAudit": false
+    },
+    {
+      "symbol": "CSCO",
+      "issuerLegalName": "CISCO SYSTEMS, INC.",
+      "entityId": "CIK:0000858877",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "CURRENT_CONDITIONAL_INTEREST_FACTS_PRESENT",
+        "ISSUER_CONCEPT_EQUIVALENCE_NOT_PROVEN"
+      ],
+      "sourceFactorSnapshotPath": "storage/provider-validation/current-factor-input-snapshots-v1-3/CSCO/E225CBAC50FD439BC7EDA85673517FCC6C899AC086037F28F6A0281AF4E70E02.json",
+      "sourceFactorSnapshotContentHash": "E225CBAC50FD439BC7EDA85673517FCC6C899AC086037F28F6A0281AF4E70E02",
+      "companyFactsSourceReference": "sec-edgar:companyfacts:CIK0000858877",
+      "companyFactsSourceContentHash": "C17D2A439C21B377E5FA7069609CF900FFA6B07823EBE6F63FE342A3267B4893",
+      "submissionsSourceReference": "sec-edgar:submissions:CIK0000858877",
+      "submissionsSourceContentHash": "2ED2AC4A678F2F879A21B50F488F6FE458865A35C38D34CF89BEEC31F90CD6FD",
+      "selectedPeriodEnds": [
+        "2025-01-25",
+        "2025-04-26",
+        "2025-07-26",
+        "2025-10-25",
+        "2026-01-24",
+        "2026-04-25"
+      ],
+      "selectedFactCount": 14,
+      "facts": [
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2024-10-27",
+          "periodEnd": "2025-01-25",
+          "durationSemantic": "DISCRETE_QUARTER",
+          "form": "10-Q",
+          "frame": null,
+          "fiscalYear": 2025,
+          "fiscalPeriod": "Q2",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0000858877-25-000007",
+          "filedAt": "2025-02-18",
+          "acceptedAt": "2025-02-18T21:34:49.000Z",
+          "availableAt": "2025-02-18T21:34:49.000Z",
+          "statementRoles": [
+            "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0000858877-25-000007:InterestExpenseNonoperating",
+          "sourceContentHash": "C17D2A439C21B377E5FA7069609CF900FFA6B07823EBE6F63FE342A3267B4893",
+          "factEvidenceHash": "9B3F0885F26A03E3A9794E5596FED4E9CC4F5D048F6C1B67F57B7B431F1B8F39"
+        },
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2024-07-28",
+          "periodEnd": "2025-01-25",
+          "durationSemantic": "YTD",
+          "form": "10-Q",
+          "frame": null,
+          "fiscalYear": 2025,
+          "fiscalPeriod": "Q2",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0000858877-25-000007",
+          "filedAt": "2025-02-18",
+          "acceptedAt": "2025-02-18T21:34:49.000Z",
+          "availableAt": "2025-02-18T21:34:49.000Z",
+          "statementRoles": [
+            "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0000858877-25-000007:InterestExpenseNonoperating",
+          "sourceContentHash": "C17D2A439C21B377E5FA7069609CF900FFA6B07823EBE6F63FE342A3267B4893",
+          "factEvidenceHash": "6F223BA29836F62AB6BC42D13DD7F53C0A157460C9AD72FA5C4E276DF933FC65"
+        },
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2024-10-27",
+          "periodEnd": "2025-01-25",
+          "durationSemantic": "DISCRETE_QUARTER",
+          "form": "10-Q",
+          "frame": "CY2024Q4",
+          "fiscalYear": 2026,
+          "fiscalPeriod": "Q2",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0000858877-26-000021",
+          "filedAt": "2026-02-17",
+          "acceptedAt": "2026-02-17T21:27:10.000Z",
+          "availableAt": "2026-02-17T21:27:10.000Z",
+          "statementRoles": [
+            "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0000858877-26-000021:InterestExpenseNonoperating",
+          "sourceContentHash": "C17D2A439C21B377E5FA7069609CF900FFA6B07823EBE6F63FE342A3267B4893",
+          "factEvidenceHash": "0BA649AD6F3C252173C200ADD21A04FD24F5107A1582182D5A049C58E2BD3838"
+        },
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2024-07-28",
+          "periodEnd": "2025-01-25",
+          "durationSemantic": "YTD",
+          "form": "10-Q",
+          "frame": null,
+          "fiscalYear": 2026,
+          "fiscalPeriod": "Q2",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0000858877-26-000021",
+          "filedAt": "2026-02-17",
+          "acceptedAt": "2026-02-17T21:27:10.000Z",
+          "availableAt": "2026-02-17T21:27:10.000Z",
+          "statementRoles": [
+            "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0000858877-26-000021:InterestExpenseNonoperating",
+          "sourceContentHash": "C17D2A439C21B377E5FA7069609CF900FFA6B07823EBE6F63FE342A3267B4893",
+          "factEvidenceHash": "7842FAFE14BA13F9DBBB15EAB265D55A58292D94024B01DB2D9BE4E13C993461"
+        },
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2025-01-26",
+          "periodEnd": "2025-04-26",
+          "durationSemantic": "DISCRETE_QUARTER",
+          "form": "10-Q",
+          "frame": null,
+          "fiscalYear": 2025,
+          "fiscalPeriod": "Q3",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0000858877-25-000033",
+          "filedAt": "2025-05-20",
+          "acceptedAt": "2025-05-20T20:35:37.000Z",
+          "availableAt": "2025-05-20T20:35:37.000Z",
+          "statementRoles": [
+            "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0000858877-25-000033:InterestExpenseNonoperating",
+          "sourceContentHash": "C17D2A439C21B377E5FA7069609CF900FFA6B07823EBE6F63FE342A3267B4893",
+          "factEvidenceHash": "07AAAA2640F7F0B40D70D6C68864D034CE40B2FE56FCDCAF3E8385CEDB544FAB"
+        },
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2024-07-28",
+          "periodEnd": "2025-04-26",
+          "durationSemantic": "YTD",
+          "form": "10-Q",
+          "frame": null,
+          "fiscalYear": 2025,
+          "fiscalPeriod": "Q3",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0000858877-25-000033",
+          "filedAt": "2025-05-20",
+          "acceptedAt": "2025-05-20T20:35:37.000Z",
+          "availableAt": "2025-05-20T20:35:37.000Z",
+          "statementRoles": [
+            "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0000858877-25-000033:InterestExpenseNonoperating",
+          "sourceContentHash": "C17D2A439C21B377E5FA7069609CF900FFA6B07823EBE6F63FE342A3267B4893",
+          "factEvidenceHash": "2631B57BF93A567553C3F1692A9783030E89D6D4BAFB50127028C5B87096F59E"
+        },
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2025-01-26",
+          "periodEnd": "2025-04-26",
+          "durationSemantic": "DISCRETE_QUARTER",
+          "form": "10-Q",
+          "frame": "CY2025Q1",
+          "fiscalYear": 2026,
+          "fiscalPeriod": "Q3",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0000858877-26-000078",
+          "filedAt": "2026-05-19",
+          "acceptedAt": "2026-05-19T20:36:11.000Z",
+          "availableAt": "2026-05-19T20:36:11.000Z",
+          "statementRoles": [
+            "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0000858877-26-000078:InterestExpenseNonoperating",
+          "sourceContentHash": "C17D2A439C21B377E5FA7069609CF900FFA6B07823EBE6F63FE342A3267B4893",
+          "factEvidenceHash": "FA75CABE7A65038077CE31B231FDE25D1888179AC6B5556B04B12CE599C98FB7"
+        },
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2024-07-28",
+          "periodEnd": "2025-04-26",
+          "durationSemantic": "YTD",
+          "form": "10-Q",
+          "frame": null,
+          "fiscalYear": 2026,
+          "fiscalPeriod": "Q3",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0000858877-26-000078",
+          "filedAt": "2026-05-19",
+          "acceptedAt": "2026-05-19T20:36:11.000Z",
+          "availableAt": "2026-05-19T20:36:11.000Z",
+          "statementRoles": [
+            "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0000858877-26-000078:InterestExpenseNonoperating",
+          "sourceContentHash": "C17D2A439C21B377E5FA7069609CF900FFA6B07823EBE6F63FE342A3267B4893",
+          "factEvidenceHash": "4850B5898ECDBE07B8EEE136F8FF7B70E35643F8E1FB3044EA3B8FF52A2C6D06"
+        },
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2024-07-28",
+          "periodEnd": "2025-07-26",
+          "durationSemantic": "ANNUAL",
+          "form": "10-K",
+          "frame": "CY2025",
+          "fiscalYear": 2025,
+          "fiscalPeriod": "FY",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0000858877-25-000111",
+          "filedAt": "2025-09-03",
+          "acceptedAt": "2025-09-03T20:52:59.000Z",
+          "availableAt": "2025-09-03T20:52:59.000Z",
+          "statementRoles": [
+            "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0000858877-25-000111:InterestExpenseNonoperating",
+          "sourceContentHash": "C17D2A439C21B377E5FA7069609CF900FFA6B07823EBE6F63FE342A3267B4893",
+          "factEvidenceHash": "377E71426F8D2E18D9C0A58C3747EE5D5DEA466D4061F9CF8D72EE9C61A6C4DB"
+        },
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2025-07-27",
+          "periodEnd": "2025-10-25",
+          "durationSemantic": "DISCRETE_QUARTER",
+          "form": "10-Q",
+          "frame": "CY2025Q3",
+          "fiscalYear": 2026,
+          "fiscalPeriod": "Q1",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0000858877-25-000171",
+          "filedAt": "2025-11-18",
+          "acceptedAt": "2025-11-18T21:38:53.000Z",
+          "availableAt": "2025-11-18T21:38:53.000Z",
+          "statementRoles": [
+            "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0000858877-25-000171:InterestExpenseNonoperating",
+          "sourceContentHash": "C17D2A439C21B377E5FA7069609CF900FFA6B07823EBE6F63FE342A3267B4893",
+          "factEvidenceHash": "7693487BAFDAF826363B963B5BE5CEB9A64CFA4D24730F3F338662A026B333AB"
+        },
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2025-10-26",
+          "periodEnd": "2026-01-24",
+          "durationSemantic": "DISCRETE_QUARTER",
+          "form": "10-Q",
+          "frame": "CY2025Q4",
+          "fiscalYear": 2026,
+          "fiscalPeriod": "Q2",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0000858877-26-000021",
+          "filedAt": "2026-02-17",
+          "acceptedAt": "2026-02-17T21:27:10.000Z",
+          "availableAt": "2026-02-17T21:27:10.000Z",
+          "statementRoles": [
+            "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0000858877-26-000021:InterestExpenseNonoperating",
+          "sourceContentHash": "C17D2A439C21B377E5FA7069609CF900FFA6B07823EBE6F63FE342A3267B4893",
+          "factEvidenceHash": "5ACEB74465CA25A35276944DFCA022545BEB7024A7DBBD58FE5F02E5E22FB06A"
+        },
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2025-07-27",
+          "periodEnd": "2026-01-24",
+          "durationSemantic": "YTD",
+          "form": "10-Q",
+          "frame": null,
+          "fiscalYear": 2026,
+          "fiscalPeriod": "Q2",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0000858877-26-000021",
+          "filedAt": "2026-02-17",
+          "acceptedAt": "2026-02-17T21:27:10.000Z",
+          "availableAt": "2026-02-17T21:27:10.000Z",
+          "statementRoles": [
+            "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0000858877-26-000021:InterestExpenseNonoperating",
+          "sourceContentHash": "C17D2A439C21B377E5FA7069609CF900FFA6B07823EBE6F63FE342A3267B4893",
+          "factEvidenceHash": "1E49D13C9C873A26EDC8AF72E98A1108AEDD3C469463D55963335D5C30C4B5EB"
+        },
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2026-01-25",
+          "periodEnd": "2026-04-25",
+          "durationSemantic": "DISCRETE_QUARTER",
+          "form": "10-Q",
+          "frame": "CY2026Q1",
+          "fiscalYear": 2026,
+          "fiscalPeriod": "Q3",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0000858877-26-000078",
+          "filedAt": "2026-05-19",
+          "acceptedAt": "2026-05-19T20:36:11.000Z",
+          "availableAt": "2026-05-19T20:36:11.000Z",
+          "statementRoles": [
+            "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0000858877-26-000078:InterestExpenseNonoperating",
+          "sourceContentHash": "C17D2A439C21B377E5FA7069609CF900FFA6B07823EBE6F63FE342A3267B4893",
+          "factEvidenceHash": "022C578A60298EFF10A84C141E43B6EA356ECDCF8F9079F92F1C0FF75A1084EE"
+        },
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2025-07-27",
+          "periodEnd": "2026-04-25",
+          "durationSemantic": "YTD",
+          "form": "10-Q",
+          "frame": null,
+          "fiscalYear": 2026,
+          "fiscalPeriod": "Q3",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0000858877-26-000078",
+          "filedAt": "2026-05-19",
+          "acceptedAt": "2026-05-19T20:36:11.000Z",
+          "availableAt": "2026-05-19T20:36:11.000Z",
+          "statementRoles": [
+            "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0000858877-26-000078:InterestExpenseNonoperating",
+          "sourceContentHash": "C17D2A439C21B377E5FA7069609CF900FFA6B07823EBE6F63FE342A3267B4893",
+          "factEvidenceHash": "F7FF5E15828E0C232821F5C2EBD659B0C3B6905B1A68DB6A2B191980026A5AFF"
+        }
+      ],
+      "strictInterestTtmAssessment": {
+        "status": "MISSING",
+        "route": null,
+        "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE"
+      },
+      "conceptTransitions": [
+        {
+          "fromConcept": "InterestExpense",
+          "toConcept": "InterestExpenseDebt",
+          "overlapCount": 0,
+          "equalValueOverlapCount": 0,
+          "statementRoleContinuityProven": false,
+          "economicScopeEquivalenceProven": false,
+          "authorized": false,
+          "reasonCodes": [
+            "ECONOMIC_SCOPE_EQUIVALENCE_NOT_PROVEN",
+            "INSUFFICIENT_EQUAL_VALUE_OVERLAP",
+            "STATEMENT_ROLE_CONTINUITY_NOT_PROVEN"
+          ],
+          "overlaps": []
+        },
+        {
+          "fromConcept": "InterestExpense",
+          "toConcept": "InterestExpenseNonoperating",
+          "overlapCount": 9,
+          "equalValueOverlapCount": 9,
+          "statementRoleContinuityProven": false,
+          "economicScopeEquivalenceProven": false,
+          "authorized": false,
+          "reasonCodes": [
+            "ECONOMIC_SCOPE_EQUIVALENCE_NOT_PROVEN",
+            "STATEMENT_ROLE_CONTINUITY_NOT_PROVEN"
+          ],
+          "overlaps": [
+            {
+              "periodStart": "2021-08-01",
+              "periodEnd": "2022-07-30",
+              "durationSemantic": "ANNUAL",
+              "unit": "USD",
+              "strictAccession": "0000858877-22-000013",
+              "candidateAccession": "0000858877-24-000017",
+              "strictFactEvidenceHash": "D15358F656AF4AD194C9EFE79DEA7826B1FEDF35ED24ED5372D4C29536AF3893",
+              "candidateFactEvidenceHash": "AE317EE44452554AA0CD889674EAA51769ADFF26E6D4A1F9808E91C57FA917E7",
+              "valueRelationship": "EQUAL",
+              "strictStatementRoles": [],
+              "candidateStatementRoles": []
+            },
+            {
+              "periodStart": "2021-08-01",
+              "periodEnd": "2022-07-30",
+              "durationSemantic": "ANNUAL",
+              "unit": "USD",
+              "strictAccession": "0000858877-23-000023",
+              "candidateAccession": "0000858877-24-000017",
+              "strictFactEvidenceHash": "4E8F95B48A22FB6788B314888ED2F797B4BBEE858D9A70EEEC61BB7F8381A9FB",
+              "candidateFactEvidenceHash": "AE317EE44452554AA0CD889674EAA51769ADFF26E6D4A1F9808E91C57FA917E7",
+              "valueRelationship": "EQUAL",
+              "strictStatementRoles": [],
+              "candidateStatementRoles": []
+            },
+            {
+              "periodStart": "2022-07-31",
+              "periodEnd": "2023-07-29",
+              "durationSemantic": "ANNUAL",
+              "unit": "USD",
+              "strictAccession": "0000858877-23-000023",
+              "candidateAccession": "0000858877-24-000017",
+              "strictFactEvidenceHash": "A46345FB497223CE81FE8BA7A2373F08D438DA5C67711386168D308090ED5E1D",
+              "candidateFactEvidenceHash": "DB7AE5F4940EAF65291EF48440F6155E876659E8008D6277789526B71EFF0ADF",
+              "valueRelationship": "EQUAL",
+              "strictStatementRoles": [],
+              "candidateStatementRoles": []
+            },
+            {
+              "periodStart": "2022-07-31",
+              "periodEnd": "2023-07-29",
+              "durationSemantic": "ANNUAL",
+              "unit": "USD",
+              "strictAccession": "0000858877-23-000023",
+              "candidateAccession": "0000858877-25-000111",
+              "strictFactEvidenceHash": "A46345FB497223CE81FE8BA7A2373F08D438DA5C67711386168D308090ED5E1D",
+              "candidateFactEvidenceHash": "B73B4BA1380DC5065E0ACD97270FA5D5471F9B526220CCF7C08CA249873BD424",
+              "valueRelationship": "EQUAL",
+              "strictStatementRoles": [],
+              "candidateStatementRoles": [
+                "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+              ]
+            },
+            {
+              "periodStart": "2023-07-30",
+              "periodEnd": "2023-10-28",
+              "durationSemantic": "DISCRETE_QUARTER",
+              "unit": "USD",
+              "strictAccession": "0000858877-23-000031",
+              "candidateAccession": "0000858877-24-000030",
+              "strictFactEvidenceHash": "DA5276BAEAFD7028EF2E5C380B1168D2C4EAC289078DF624D9193ABDDDB14571",
+              "candidateFactEvidenceHash": "DC15F1D818718EC4EBFF364815ABD1458BC38BA3B4FBCF1D14B05432C1098374",
+              "valueRelationship": "EQUAL",
+              "strictStatementRoles": [],
+              "candidateStatementRoles": []
+            },
+            {
+              "periodStart": "2023-07-30",
+              "periodEnd": "2024-01-27",
+              "durationSemantic": "YTD",
+              "unit": "USD",
+              "strictAccession": "0000858877-24-000003",
+              "candidateAccession": "0000858877-25-000007",
+              "strictFactEvidenceHash": "1D834C6BBD2F427FA011CE20C732E86CA10AB5A1571224B4BB575DA94B3FBACC",
+              "candidateFactEvidenceHash": "9FBC059603D0963FB8C04DD8B6C6E95951C9C90CD3065653D6CB7F5CCF94E251",
+              "valueRelationship": "EQUAL",
+              "strictStatementRoles": [],
+              "candidateStatementRoles": [
+                "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+              ]
+            },
+            {
+              "periodStart": "2023-10-29",
+              "periodEnd": "2024-01-27",
+              "durationSemantic": "DISCRETE_QUARTER",
+              "unit": "USD",
+              "strictAccession": "0000858877-24-000003",
+              "candidateAccession": "0000858877-25-000007",
+              "strictFactEvidenceHash": "DDDEDC3742A993560F1BE0398DED6235F6C0BD523B226CD21703EE58274954A3",
+              "candidateFactEvidenceHash": "9B8537D773C6225498F8357FF40B5B335C55524E8D2A42C337973C32ED0231DF",
+              "valueRelationship": "EQUAL",
+              "strictStatementRoles": [],
+              "candidateStatementRoles": [
+                "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+              ]
+            },
+            {
+              "periodStart": "2023-07-30",
+              "periodEnd": "2024-04-27",
+              "durationSemantic": "YTD",
+              "unit": "USD",
+              "strictAccession": "0000858877-24-000007",
+              "candidateAccession": "0000858877-25-000033",
+              "strictFactEvidenceHash": "76D7D5786F3C64ECE2F81C6E9FF8FB64073139D041EDC433720BC10607C96B90",
+              "candidateFactEvidenceHash": "DABC27ADB02A786A979EF8CA319A67BA6DE8B45492BB1E41353907DB8F305B5C",
+              "valueRelationship": "EQUAL",
+              "strictStatementRoles": [],
+              "candidateStatementRoles": [
+                "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+              ]
+            },
+            {
+              "periodStart": "2024-01-28",
+              "periodEnd": "2024-04-27",
+              "durationSemantic": "DISCRETE_QUARTER",
+              "unit": "USD",
+              "strictAccession": "0000858877-24-000007",
+              "candidateAccession": "0000858877-25-000033",
+              "strictFactEvidenceHash": "BA62BFD7CAD1CC794EB7927CB4CCD29F1462276808785202B973C7594893203E",
+              "candidateFactEvidenceHash": "8E1CCAE3EC0009185F3B44F0ECB37786A2005D224D070B37F072C0DCE10D114E",
+              "valueRelationship": "EQUAL",
+              "strictStatementRoles": [],
+              "candidateStatementRoles": [
+                "http://www.cisco.com/role/ConsolidatedStatementsofOperations"
+              ]
+            }
+          ]
+        }
+      ],
+      "minimumMissingEvidence": [
+        {
+          "reasonCode": "FILING_PRESENTATION_CONTEXT_NOT_CACHED",
+          "requiredEvidence": "Official SEC Inline-XBRL primary document, presentation linkbase, and label linkbase for the listed accessions.",
+          "accessions": []
+        },
+        {
+          "reasonCode": "ISSUER_SCOPE_CONTINUITY_NOT_PROVEN",
+          "requiredEvidence": "Issuer disclosure proving that the conditional concept is complete gross interest and omits no operating-interest component."
+        }
+      ],
+      "qcInputReadyAfterAudit": false
+    },
+    {
+      "symbol": "FIX",
+      "issuerLegalName": "COMFORT SYSTEMS USA,\u00a0INC.",
+      "entityId": "CIK:0001035983",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "CURRENT_CONDITIONAL_INTEREST_FACTS_PRESENT",
+        "ISSUER_CONCEPT_EQUIVALENCE_NOT_PROVEN"
+      ],
+      "sourceFactorSnapshotPath": "storage/provider-validation/current-factor-input-snapshots-v1-3/FIX/28FC000A49207D093F49EFD17AD569DECFC31132C6574389973FD85C306D2B68.json",
+      "sourceFactorSnapshotContentHash": "28FC000A49207D093F49EFD17AD569DECFC31132C6574389973FD85C306D2B68",
+      "companyFactsSourceReference": "sec-edgar:companyfacts:CIK0001035983",
+      "companyFactsSourceContentHash": "459A05644D4DE59FD312162263E301AC48CC23B6E4C3EDC03017862576BD4BFF",
+      "submissionsSourceReference": "sec-edgar:submissions:CIK0001035983",
+      "submissionsSourceContentHash": "BB7B9D507B78EF32C74F465AAF3C5E28C6D269A2B26B06579E9814F33932E723",
+      "selectedPeriodEnds": [
+        "2025-03-31",
+        "2025-06-30",
+        "2025-09-30",
+        "2025-12-31",
+        "2026-03-31",
+        "2026-06-30"
+      ],
+      "selectedFactCount": 13,
+      "facts": [
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2025-01-01",
+          "periodEnd": "2025-03-31",
+          "durationSemantic": "DISCRETE_QUARTER",
+          "form": "10-Q",
+          "frame": null,
+          "fiscalYear": 2025,
+          "fiscalPeriod": "Q1",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0001558370-25-005411",
+          "filedAt": "2025-04-24",
+          "acceptedAt": "2025-04-24T20:07:01.000Z",
+          "availableAt": "2025-04-24T20:07:01.000Z",
+          "statementRoles": [
+            "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0001558370-25-005411:InterestExpenseNonoperating",
+          "sourceContentHash": "459A05644D4DE59FD312162263E301AC48CC23B6E4C3EDC03017862576BD4BFF",
+          "factEvidenceHash": "EDF88630A4BBB8F0303C68C59EA3DD4A8D5C5167CB57A3CEDEC9C251113788C2"
+        },
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2025-01-01",
+          "periodEnd": "2025-03-31",
+          "durationSemantic": "DISCRETE_QUARTER",
+          "form": "10-Q",
+          "frame": "CY2025Q1",
+          "fiscalYear": 2026,
+          "fiscalPeriod": "Q1",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0001104659-26-047689",
+          "filedAt": "2026-04-23",
+          "acceptedAt": "2026-04-23T20:06:53.000Z",
+          "availableAt": "2026-04-23T20:06:53.000Z",
+          "statementRoles": [
+            "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0001104659-26-047689:InterestExpenseNonoperating",
+          "sourceContentHash": "459A05644D4DE59FD312162263E301AC48CC23B6E4C3EDC03017862576BD4BFF",
+          "factEvidenceHash": "3C1666A2829A5B1874CCA0E0E350A8A289CD6ABE109A73BF7D79943EA0A4E132"
+        },
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2025-04-01",
+          "periodEnd": "2025-06-30",
+          "durationSemantic": "DISCRETE_QUARTER",
+          "form": "10-Q",
+          "frame": null,
+          "fiscalYear": 2025,
+          "fiscalPeriod": "Q2",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0001558370-25-009536",
+          "filedAt": "2025-07-24",
+          "acceptedAt": "2025-07-24T20:07:05.000Z",
+          "availableAt": "2025-07-24T20:07:05.000Z",
+          "statementRoles": [
+            "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0001558370-25-009536:InterestExpenseNonoperating",
+          "sourceContentHash": "459A05644D4DE59FD312162263E301AC48CC23B6E4C3EDC03017862576BD4BFF",
+          "factEvidenceHash": "3E658B9021D62392F64DA50B4AB2CCC9CEDC8145F92DE56A2C65D7EF2ABE4B01"
+        },
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2025-01-01",
+          "periodEnd": "2025-06-30",
+          "durationSemantic": "YTD",
+          "form": "10-Q",
+          "frame": null,
+          "fiscalYear": 2025,
+          "fiscalPeriod": "Q2",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0001558370-25-009536",
+          "filedAt": "2025-07-24",
+          "acceptedAt": "2025-07-24T20:07:05.000Z",
+          "availableAt": "2025-07-24T20:07:05.000Z",
+          "statementRoles": [
+            "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0001558370-25-009536:InterestExpenseNonoperating",
+          "sourceContentHash": "459A05644D4DE59FD312162263E301AC48CC23B6E4C3EDC03017862576BD4BFF",
+          "factEvidenceHash": "388D8BEAC8CCBE5E802BF851F937EFEE0B48705621B0C0F228C6EF0575151133"
+        },
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2025-04-01",
+          "periodEnd": "2025-06-30",
+          "durationSemantic": "DISCRETE_QUARTER",
+          "form": "10-Q",
+          "frame": "CY2025Q2",
+          "fiscalYear": 2026,
+          "fiscalPeriod": "Q2",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0001104659-26-086258",
+          "filedAt": "2026-07-23",
+          "acceptedAt": "2026-07-23T20:06:53.000Z",
+          "availableAt": "2026-07-23T20:06:53.000Z",
+          "statementRoles": [
+            "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0001104659-26-086258:InterestExpenseNonoperating",
+          "sourceContentHash": "459A05644D4DE59FD312162263E301AC48CC23B6E4C3EDC03017862576BD4BFF",
+          "factEvidenceHash": "50D9869CEFD1757F51E5CCCC29DEA9BD174AF7C63FA3A64161981E979EDB4605"
+        },
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2025-01-01",
+          "periodEnd": "2025-06-30",
+          "durationSemantic": "YTD",
+          "form": "10-Q",
+          "frame": null,
+          "fiscalYear": 2026,
+          "fiscalPeriod": "Q2",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0001104659-26-086258",
+          "filedAt": "2026-07-23",
+          "acceptedAt": "2026-07-23T20:06:53.000Z",
+          "availableAt": "2026-07-23T20:06:53.000Z",
+          "statementRoles": [
+            "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0001104659-26-086258:InterestExpenseNonoperating",
+          "sourceContentHash": "459A05644D4DE59FD312162263E301AC48CC23B6E4C3EDC03017862576BD4BFF",
+          "factEvidenceHash": "36970576FA79EA831B530F709A1655546D075E5755A23A8C4C94BA43F80899FE"
+        },
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2025-07-01",
+          "periodEnd": "2025-09-30",
+          "durationSemantic": "DISCRETE_QUARTER",
+          "form": "10-Q",
+          "frame": "CY2025Q3",
+          "fiscalYear": 2025,
+          "fiscalPeriod": "Q3",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0001104659-25-101821",
+          "filedAt": "2025-10-23",
+          "acceptedAt": "2025-10-23T20:07:18.000Z",
+          "availableAt": "2025-10-23T20:07:18.000Z",
+          "statementRoles": [
+            "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0001104659-25-101821:InterestExpenseNonoperating",
+          "sourceContentHash": "459A05644D4DE59FD312162263E301AC48CC23B6E4C3EDC03017862576BD4BFF",
+          "factEvidenceHash": "23A8253C29AADB974BBB4376AC7AEFEFD7B0BB6EE6164B8FE278520CFAD4A8DD"
+        },
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2025-01-01",
+          "periodEnd": "2025-09-30",
+          "durationSemantic": "YTD",
+          "form": "10-Q",
+          "frame": null,
+          "fiscalYear": 2025,
+          "fiscalPeriod": "Q3",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0001104659-25-101821",
+          "filedAt": "2025-10-23",
+          "acceptedAt": "2025-10-23T20:07:18.000Z",
+          "availableAt": "2025-10-23T20:07:18.000Z",
+          "statementRoles": [
+            "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0001104659-25-101821:InterestExpenseNonoperating",
+          "sourceContentHash": "459A05644D4DE59FD312162263E301AC48CC23B6E4C3EDC03017862576BD4BFF",
+          "factEvidenceHash": "61E09688BA5991D99F4316E9D7F8871E77FB7AFB3C03B6597EEC7210E29B2010"
+        },
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpense",
+          "policyDecision": "PREFERRED",
+          "economicScope": "TOTAL_GROSS_INTEREST_EXPENSE_OPERATING_AND_NONOPERATING",
+          "periodStart": "2025-01-01",
+          "periodEnd": "2025-12-31",
+          "durationSemantic": "ANNUAL",
+          "form": "10-K",
+          "frame": "CY2025",
+          "fiscalYear": 2025,
+          "fiscalPeriod": "FY",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0001104659-26-017530",
+          "filedAt": "2026-02-19",
+          "acceptedAt": "2026-02-19T21:04:27.000Z",
+          "availableAt": "2026-02-19T21:04:27.000Z",
+          "statementRoles": [
+            "http://www.comfortsystemsusa.com/role/DisclosureDebtObligationsFuturePaymentsAndInterestExpenseDetails"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0001104659-26-017530:InterestExpense",
+          "sourceContentHash": "459A05644D4DE59FD312162263E301AC48CC23B6E4C3EDC03017862576BD4BFF",
+          "factEvidenceHash": "42FCD06CCF2C60E86C0045E2C0F6383B9823F19E8E7B4D83C32A0E5623435028"
+        },
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2025-01-01",
+          "periodEnd": "2025-12-31",
+          "durationSemantic": "ANNUAL",
+          "form": "10-K",
+          "frame": "CY2025",
+          "fiscalYear": 2025,
+          "fiscalPeriod": "FY",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0001104659-26-017530",
+          "filedAt": "2026-02-19",
+          "acceptedAt": "2026-02-19T21:04:27.000Z",
+          "availableAt": "2026-02-19T21:04:27.000Z",
+          "statementRoles": [
+            "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0001104659-26-017530:InterestExpenseNonoperating",
+          "sourceContentHash": "459A05644D4DE59FD312162263E301AC48CC23B6E4C3EDC03017862576BD4BFF",
+          "factEvidenceHash": "9852FF9EC99A62DB970F9C94651EC3A1676FB3473E1C61AC0AE2717CEC78B8D5"
+        },
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2026-01-01",
+          "periodEnd": "2026-03-31",
+          "durationSemantic": "DISCRETE_QUARTER",
+          "form": "10-Q",
+          "frame": "CY2026Q1",
+          "fiscalYear": 2026,
+          "fiscalPeriod": "Q1",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0001104659-26-047689",
+          "filedAt": "2026-04-23",
+          "acceptedAt": "2026-04-23T20:06:53.000Z",
+          "availableAt": "2026-04-23T20:06:53.000Z",
+          "statementRoles": [
+            "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0001104659-26-047689:InterestExpenseNonoperating",
+          "sourceContentHash": "459A05644D4DE59FD312162263E301AC48CC23B6E4C3EDC03017862576BD4BFF",
+          "factEvidenceHash": "D1982BF2DCBD7C782A428D81AFBB98C55668C81DC35C6E9E45E399149B5116C6"
+        },
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2026-04-01",
+          "periodEnd": "2026-06-30",
+          "durationSemantic": "DISCRETE_QUARTER",
+          "form": "10-Q",
+          "frame": "CY2026Q2",
+          "fiscalYear": 2026,
+          "fiscalPeriod": "Q2",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0001104659-26-086258",
+          "filedAt": "2026-07-23",
+          "acceptedAt": "2026-07-23T20:06:53.000Z",
+          "availableAt": "2026-07-23T20:06:53.000Z",
+          "statementRoles": [
+            "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0001104659-26-086258:InterestExpenseNonoperating",
+          "sourceContentHash": "459A05644D4DE59FD312162263E301AC48CC23B6E4C3EDC03017862576BD4BFF",
+          "factEvidenceHash": "9332312C79663A91DF9EF55064059FF3020ECD941F6C8AA9EB433201A0B8AA59"
+        },
+        {
+          "taxonomy": "us-gaap",
+          "concept": "InterestExpenseNonoperating",
+          "policyDecision": "CONDITIONAL",
+          "economicScope": "NONOPERATING_INTEREST_EXPENSE",
+          "periodStart": "2026-01-01",
+          "periodEnd": "2026-06-30",
+          "durationSemantic": "YTD",
+          "form": "10-Q",
+          "frame": null,
+          "fiscalYear": 2026,
+          "fiscalPeriod": "Q2",
+          "dimensions": {
+            "scope": "CONSOLIDATED_ENTITY_FROM_COMPANY_FACTS"
+          },
+          "unit": "USD",
+          "accession": "0001104659-26-086258",
+          "filedAt": "2026-07-23",
+          "acceptedAt": "2026-07-23T20:06:53.000Z",
+          "availableAt": "2026-07-23T20:06:53.000Z",
+          "statementRoles": [
+            "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+          ],
+          "presentationLabels": [],
+          "presentationEvidenceStatus": "CACHED",
+          "sourceReference": "SEC-COMPANY-FACTS:0001104659-26-086258:InterestExpenseNonoperating",
+          "sourceContentHash": "459A05644D4DE59FD312162263E301AC48CC23B6E4C3EDC03017862576BD4BFF",
+          "factEvidenceHash": "0B693F67D7CA43CFF48CAD5A1A3D7050D38DC1985DA4C3A4D76D4FD4497BBE5B"
+        }
+      ],
+      "strictInterestTtmAssessment": {
+        "status": "MISSING",
+        "route": null,
+        "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE"
+      },
+      "conceptTransitions": [
+        {
+          "fromConcept": "InterestExpense",
+          "toConcept": "InterestExpenseDebt",
+          "overlapCount": 0,
+          "equalValueOverlapCount": 0,
+          "statementRoleContinuityProven": false,
+          "economicScopeEquivalenceProven": false,
+          "authorized": false,
+          "reasonCodes": [
+            "ECONOMIC_SCOPE_EQUIVALENCE_NOT_PROVEN",
+            "INSUFFICIENT_EQUAL_VALUE_OVERLAP",
+            "STATEMENT_ROLE_CONTINUITY_NOT_PROVEN"
+          ],
+          "overlaps": []
+        },
+        {
+          "fromConcept": "InterestExpense",
+          "toConcept": "InterestExpenseNonoperating",
+          "overlapCount": 19,
+          "equalValueOverlapCount": 19,
+          "statementRoleContinuityProven": false,
+          "economicScopeEquivalenceProven": false,
+          "authorized": false,
+          "reasonCodes": [
+            "ECONOMIC_SCOPE_EQUIVALENCE_NOT_PROVEN",
+            "STATEMENT_ROLE_CONTINUITY_NOT_PROVEN"
+          ],
+          "overlaps": [
+            {
+              "periodStart": "2022-01-01",
+              "periodEnd": "2022-12-31",
+              "durationSemantic": "ANNUAL",
+              "unit": "USD",
+              "strictAccession": "0001558370-23-001757",
+              "candidateAccession": "0001558370-25-001222",
+              "strictFactEvidenceHash": "7AFB34064C1FB9D57F338FFF35C25476E54AC6855A559A456B348096F391C88E",
+              "candidateFactEvidenceHash": "A6B8A10203E4CA7C615573E7E7FF7CFDC69D1CDFD4C04AA2EB4A3854F5BA0294",
+              "valueRelationship": "EQUAL",
+              "strictStatementRoles": [],
+              "candidateStatementRoles": []
+            },
+            {
+              "periodStart": "2022-01-01",
+              "periodEnd": "2022-12-31",
+              "durationSemantic": "ANNUAL",
+              "unit": "USD",
+              "strictAccession": "0001558370-24-001529",
+              "candidateAccession": "0001558370-25-001222",
+              "strictFactEvidenceHash": "533440DB1F0BB02267D04F8669E6DC7ADA244AC485AAF3E1A5F6FC3F7B4CE8D1",
+              "candidateFactEvidenceHash": "A6B8A10203E4CA7C615573E7E7FF7CFDC69D1CDFD4C04AA2EB4A3854F5BA0294",
+              "valueRelationship": "EQUAL",
+              "strictStatementRoles": [],
+              "candidateStatementRoles": []
+            },
+            {
+              "periodStart": "2022-01-01",
+              "periodEnd": "2022-12-31",
+              "durationSemantic": "ANNUAL",
+              "unit": "USD",
+              "strictAccession": "0001558370-25-001222",
+              "candidateAccession": "0001558370-25-001222",
+              "strictFactEvidenceHash": "186B2C8CA3933D97893AC061F67F4BCCF18BFB5828D6B1F505C115EC8B449548",
+              "candidateFactEvidenceHash": "A6B8A10203E4CA7C615573E7E7FF7CFDC69D1CDFD4C04AA2EB4A3854F5BA0294",
+              "valueRelationship": "EQUAL",
+              "strictStatementRoles": [],
+              "candidateStatementRoles": []
+            },
+            {
+              "periodStart": "2023-01-01",
+              "periodEnd": "2023-09-30",
+              "durationSemantic": "YTD",
+              "unit": "USD",
+              "strictAccession": "0001558370-23-016855",
+              "candidateAccession": "0001558370-24-013635",
+              "strictFactEvidenceHash": "773908B7C52C96368C075340B5864D73B906F7515303BDAA2BAA6FB9B5EDE39F",
+              "candidateFactEvidenceHash": "D4C2D86CAD12C241CFA3263EF1F21F3BACC72B7A8A82C8D1D4BC4168D7E0C35E",
+              "valueRelationship": "EQUAL",
+              "strictStatementRoles": [],
+              "candidateStatementRoles": []
+            },
+            {
+              "periodStart": "2023-07-01",
+              "periodEnd": "2023-09-30",
+              "durationSemantic": "DISCRETE_QUARTER",
+              "unit": "USD",
+              "strictAccession": "0001558370-23-016855",
+              "candidateAccession": "0001558370-24-013635",
+              "strictFactEvidenceHash": "AAEFFD48D0D08D160C5BB7D9639E6B8ADFAF741596862003AECA07CB6640D563",
+              "candidateFactEvidenceHash": "1677FDD51A0DF2764C02B0E166826680315F2AC90BC2D7EC28E17F1C8C9E8B71",
+              "valueRelationship": "EQUAL",
+              "strictStatementRoles": [],
+              "candidateStatementRoles": []
+            },
+            {
+              "periodStart": "2023-01-01",
+              "periodEnd": "2023-12-31",
+              "durationSemantic": "ANNUAL",
+              "unit": "USD",
+              "strictAccession": "0001558370-24-001529",
+              "candidateAccession": "0001558370-25-001222",
+              "strictFactEvidenceHash": "ECF351916B87C28665AB8B6FE11E2B43EBE2E0096A540C6A95F4D55960949AF7",
+              "candidateFactEvidenceHash": "0BD9C8F58D260DA1D8E7331752CC4B2AF34211CE58A0C948A084231CE089E9DB",
+              "valueRelationship": "EQUAL",
+              "strictStatementRoles": [],
+              "candidateStatementRoles": []
+            },
+            {
+              "periodStart": "2023-01-01",
+              "periodEnd": "2023-12-31",
+              "durationSemantic": "ANNUAL",
+              "unit": "USD",
+              "strictAccession": "0001558370-25-001222",
+              "candidateAccession": "0001558370-25-001222",
+              "strictFactEvidenceHash": "4D635BB6F0763FB4A80FE8C3BBE5C7C0C43487D7EF540608613FF84806F5FDF8",
+              "candidateFactEvidenceHash": "0BD9C8F58D260DA1D8E7331752CC4B2AF34211CE58A0C948A084231CE089E9DB",
+              "valueRelationship": "EQUAL",
+              "strictStatementRoles": [],
+              "candidateStatementRoles": []
+            },
+            {
+              "periodStart": "2023-01-01",
+              "periodEnd": "2023-12-31",
+              "durationSemantic": "ANNUAL",
+              "unit": "USD",
+              "strictAccession": "0001104659-26-017530",
+              "candidateAccession": "0001558370-25-001222",
+              "strictFactEvidenceHash": "F0648F1884C36A7A0C436A5B4E133E78DEA16F8B3EDC51918E056585514D6566",
+              "candidateFactEvidenceHash": "0BD9C8F58D260DA1D8E7331752CC4B2AF34211CE58A0C948A084231CE089E9DB",
+              "valueRelationship": "EQUAL",
+              "strictStatementRoles": [
+                "http://www.comfortsystemsusa.com/role/DisclosureDebtObligationsFuturePaymentsAndInterestExpenseDetails"
+              ],
+              "candidateStatementRoles": []
+            },
+            {
+              "periodStart": "2023-01-01",
+              "periodEnd": "2023-12-31",
+              "durationSemantic": "ANNUAL",
+              "unit": "USD",
+              "strictAccession": "0001558370-24-001529",
+              "candidateAccession": "0001104659-26-017530",
+              "strictFactEvidenceHash": "ECF351916B87C28665AB8B6FE11E2B43EBE2E0096A540C6A95F4D55960949AF7",
+              "candidateFactEvidenceHash": "5185219A20840F2296CA9B1A62EBA94F246D825763080484623A553B6E81F4AF",
+              "valueRelationship": "EQUAL",
+              "strictStatementRoles": [],
+              "candidateStatementRoles": [
+                "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+              ]
+            },
+            {
+              "periodStart": "2023-01-01",
+              "periodEnd": "2023-12-31",
+              "durationSemantic": "ANNUAL",
+              "unit": "USD",
+              "strictAccession": "0001558370-25-001222",
+              "candidateAccession": "0001104659-26-017530",
+              "strictFactEvidenceHash": "4D635BB6F0763FB4A80FE8C3BBE5C7C0C43487D7EF540608613FF84806F5FDF8",
+              "candidateFactEvidenceHash": "5185219A20840F2296CA9B1A62EBA94F246D825763080484623A553B6E81F4AF",
+              "valueRelationship": "EQUAL",
+              "strictStatementRoles": [],
+              "candidateStatementRoles": [
+                "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+              ]
+            },
+            {
+              "periodStart": "2023-01-01",
+              "periodEnd": "2023-12-31",
+              "durationSemantic": "ANNUAL",
+              "unit": "USD",
+              "strictAccession": "0001104659-26-017530",
+              "candidateAccession": "0001104659-26-017530",
+              "strictFactEvidenceHash": "F0648F1884C36A7A0C436A5B4E133E78DEA16F8B3EDC51918E056585514D6566",
+              "candidateFactEvidenceHash": "5185219A20840F2296CA9B1A62EBA94F246D825763080484623A553B6E81F4AF",
+              "valueRelationship": "EQUAL",
+              "strictStatementRoles": [
+                "http://www.comfortsystemsusa.com/role/DisclosureDebtObligationsFuturePaymentsAndInterestExpenseDetails"
+              ],
+              "candidateStatementRoles": [
+                "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+              ]
+            },
+            {
+              "periodStart": "2024-01-01",
+              "periodEnd": "2024-03-31",
+              "durationSemantic": "DISCRETE_QUARTER",
+              "unit": "USD",
+              "strictAccession": "0001558370-24-005763",
+              "candidateAccession": "0001558370-25-005411",
+              "strictFactEvidenceHash": "B62BF4F5A0AE175884D5CA3817CC28E7238BC3F0446DAA681CD7244DF5789FF5",
+              "candidateFactEvidenceHash": "7797DCF7222A4A9FB5FBF4A5320D47FEE0B0CF2D4462C58C54D8BCB6B3E0F6E8",
+              "valueRelationship": "EQUAL",
+              "strictStatementRoles": [],
+              "candidateStatementRoles": [
+                "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+              ]
+            },
+            {
+              "periodStart": "2024-01-01",
+              "periodEnd": "2024-06-30",
+              "durationSemantic": "YTD",
+              "unit": "USD",
+              "strictAccession": "0001558370-24-010178",
+              "candidateAccession": "0001558370-25-009536",
+              "strictFactEvidenceHash": "195C35878A4BCF195CBF9587093DFC18FBA68DCAC9A1D29D45238A3DE74FBEA9",
+              "candidateFactEvidenceHash": "CA1BA84034B8E9DA512E5813BFCDE78F3039EACC32F2BD117C4FB3BC260A6B9F",
+              "valueRelationship": "EQUAL",
+              "strictStatementRoles": [],
+              "candidateStatementRoles": [
+                "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+              ]
+            },
+            {
+              "periodStart": "2024-04-01",
+              "periodEnd": "2024-06-30",
+              "durationSemantic": "DISCRETE_QUARTER",
+              "unit": "USD",
+              "strictAccession": "0001558370-24-010178",
+              "candidateAccession": "0001558370-25-009536",
+              "strictFactEvidenceHash": "4F4C97052201C9DE4B0CBFF1CE07A97665EA78E901E7DADF8794D2187FEED417",
+              "candidateFactEvidenceHash": "90E84EC4D1FBFA6CD617D6D341C1D3515ADDD14FED24425B4D5857364855A1D5",
+              "valueRelationship": "EQUAL",
+              "strictStatementRoles": [],
+              "candidateStatementRoles": [
+                "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+              ]
+            },
+            {
+              "periodStart": "2024-01-01",
+              "periodEnd": "2024-12-31",
+              "durationSemantic": "ANNUAL",
+              "unit": "USD",
+              "strictAccession": "0001558370-25-001222",
+              "candidateAccession": "0001558370-25-001222",
+              "strictFactEvidenceHash": "2A760F7443A12D5EB6EC535DA2E0193C3DDC9341A0029601CC432C1CC3E94BDD",
+              "candidateFactEvidenceHash": "E225FC72880CD1912243D190BC941E33E6D4E416469B3E88B6928C10DC19F213",
+              "valueRelationship": "EQUAL",
+              "strictStatementRoles": [],
+              "candidateStatementRoles": []
+            },
+            {
+              "periodStart": "2024-01-01",
+              "periodEnd": "2024-12-31",
+              "durationSemantic": "ANNUAL",
+              "unit": "USD",
+              "strictAccession": "0001104659-26-017530",
+              "candidateAccession": "0001558370-25-001222",
+              "strictFactEvidenceHash": "4348512BAD794EDF41201713A07D430618B02E2B6581C40F2F4CEB86CF0740FD",
+              "candidateFactEvidenceHash": "E225FC72880CD1912243D190BC941E33E6D4E416469B3E88B6928C10DC19F213",
+              "valueRelationship": "EQUAL",
+              "strictStatementRoles": [
+                "http://www.comfortsystemsusa.com/role/DisclosureDebtObligationsFuturePaymentsAndInterestExpenseDetails"
+              ],
+              "candidateStatementRoles": []
+            },
+            {
+              "periodStart": "2024-01-01",
+              "periodEnd": "2024-12-31",
+              "durationSemantic": "ANNUAL",
+              "unit": "USD",
+              "strictAccession": "0001558370-25-001222",
+              "candidateAccession": "0001104659-26-017530",
+              "strictFactEvidenceHash": "2A760F7443A12D5EB6EC535DA2E0193C3DDC9341A0029601CC432C1CC3E94BDD",
+              "candidateFactEvidenceHash": "2EED25B781332A2CD21B81EE7DB2334DF135746A596625DBC42337D866142C22",
+              "valueRelationship": "EQUAL",
+              "strictStatementRoles": [],
+              "candidateStatementRoles": [
+                "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+              ]
+            },
+            {
+              "periodStart": "2024-01-01",
+              "periodEnd": "2024-12-31",
+              "durationSemantic": "ANNUAL",
+              "unit": "USD",
+              "strictAccession": "0001104659-26-017530",
+              "candidateAccession": "0001104659-26-017530",
+              "strictFactEvidenceHash": "4348512BAD794EDF41201713A07D430618B02E2B6581C40F2F4CEB86CF0740FD",
+              "candidateFactEvidenceHash": "2EED25B781332A2CD21B81EE7DB2334DF135746A596625DBC42337D866142C22",
+              "valueRelationship": "EQUAL",
+              "strictStatementRoles": [
+                "http://www.comfortsystemsusa.com/role/DisclosureDebtObligationsFuturePaymentsAndInterestExpenseDetails"
+              ],
+              "candidateStatementRoles": [
+                "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+              ]
+            },
+            {
+              "periodStart": "2025-01-01",
+              "periodEnd": "2025-12-31",
+              "durationSemantic": "ANNUAL",
+              "unit": "USD",
+              "strictAccession": "0001104659-26-017530",
+              "candidateAccession": "0001104659-26-017530",
+              "strictFactEvidenceHash": "42FCD06CCF2C60E86C0045E2C0F6383B9823F19E8E7B4D83C32A0E5623435028",
+              "candidateFactEvidenceHash": "9852FF9EC99A62DB970F9C94651EC3A1676FB3473E1C61AC0AE2717CEC78B8D5",
+              "valueRelationship": "EQUAL",
+              "strictStatementRoles": [
+                "http://www.comfortsystemsusa.com/role/DisclosureDebtObligationsFuturePaymentsAndInterestExpenseDetails"
+              ],
+              "candidateStatementRoles": [
+                "http://www.comfortsystemsusa.com/role/StatementConsolidatedStatementsOfOperations"
+              ]
+            }
+          ]
+        }
+      ],
+      "minimumMissingEvidence": [
+        {
+          "reasonCode": "FILING_PRESENTATION_CONTEXT_NOT_CACHED",
+          "requiredEvidence": "Official SEC Inline-XBRL primary document, presentation linkbase, and label linkbase for the listed accessions.",
+          "accessions": []
+        },
+        {
+          "reasonCode": "ISSUER_SCOPE_CONTINUITY_NOT_PROVEN",
+          "requiredEvidence": "Issuer disclosure proving that the conditional concept is complete gross interest and omits no operating-interest component."
+        }
+      ],
+      "qcInputReadyAfterAudit": false
+    }
+  ],
+  "interestSupplements": [],
+  "correctedFactorInputSnapshots": [],
+  "networkRequestsExecuted": false,
+  "scoresOrRanksIncluded": false,
+  "rawSecValuesIncluded": false,
+  "formulaOrPolicyThresholdChanges": false,
+  "artifactContentHash": "07BD1C93FEBDCB8A87585A8F4A8A83236492B1C0291B4357D2930CC63B5229EC"
+}

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "sec-authoritative-ticker-evidence-v1.0.0",
+  "observedAt": "2026-07-27T18:55:26.333894Z",
+  "issuerLegalName": "Lancaster Colony Corporation",
+  "ticker": "LANC",
+  "cik": "0000057515",
+  "sourceReference": "https://www.sec.gov/Archives/edgar/data/57515/000119312525030193/d936257d8k.htm",
+  "sourceType": "SEC_EDGAR_FILING",
+  "formType": "8-K",
+  "filingDate": "2025-02-18",
+  "evidenceStatement": "The SEC filing identifies Lancaster Colony Corporation, common stock ticker LANC, and is stored under EDGAR CIK path 57515.",
+  "rawProviderValuesIncluded": false,
+  "credentialsIncluded": false
+}

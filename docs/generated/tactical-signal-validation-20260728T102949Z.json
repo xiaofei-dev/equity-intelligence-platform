@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "tactical-signal-validation-v1.0.0",
+  "runId": "20260728T102949Z",
+  "generatedAt": "2026-07-28T10:29:49.154780+00:00",
+  "provider": "EODHD",
+  "sourceWindow": {
+    "from": "2024-01-01",
+    "to": "2026-07-28"
+  },
+  "physicalRequestCount": 13,
+  "failures": {
+    "AAPL": "URLError",
+    "AMZN": "URLError",
+    "GE": "URLError",
+    "KRE": "URLError",
+    "NBN": "URLError",
+    "SPCX": "URLError",
+    "SPY": "URLError",
+    "TSLA": "URLError",
+    "UNH": "URLError",
+    "XLI": "URLError",
+    "XLK": "URLError",
+    "XLV": "URLError",
+    "XLY": "URLError"
+  },
+  "rawPayloadsGitIgnored": true,
+  "rawPayloadHashes": {},
+  "results": {
+    "AAPL": {
+      "status": "INSUFFICIENT_DATA",
+      "barCount": 0,
+      "benchmark": "XLK"
+    },
+    "AMZN": {
+      "status": "INSUFFICIENT_DATA",
+      "barCount": 0,
+      "benchmark": "XLY"
+    },
+    "TSLA": {
+      "status": "INSUFFICIENT_DATA",
+      "barCount": 0,
+      "benchmark": "XLY"
+    },
+    "SPCX": {
+      "status": "INSUFFICIENT_DATA",
+      "barCount": 0,
+      "benchmark": "SPY"
+    },
+    "UNH": {
+      "status": "INSUFFICIENT_DATA",
+      "barCount": 0,
+      "benchmark": "XLV"
+    },
+    "GE": {
+      "status": "INSUFFICIENT_DATA",
+      "barCount": 0,
+      "benchmark": "XLI"
+    },
+    "NBN": {
+      "status": "INSUFFICIENT_DATA",
+      "barCount": 0,
+      "benchmark": "KRE"
+    }
+  },
+  "statisticalEdgeProven": "NOT_ESTABLISHED",
+  "contentHash": "58811B52A5C3DDFCC7B51498D117B0B1D0D6AF1697FF0FE08AC994457C4A7B32"
+}

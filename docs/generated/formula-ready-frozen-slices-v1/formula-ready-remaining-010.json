@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "formula-ready-frozen-slice-v1.0.0",
+  "sourceManifestContentHash": "856CF4C3C1174D258CB69D758BBE7740EE04A92E398E7A0841BAB3EBD7652EBC",
+  "sliceId": "formula-ready-remaining-010",
+  "sequence": 10,
+  "symbols": [
+    "NFLX",
+    "NI",
+    "NKE",
+    "NOC",
+    "NRG",
+    "NUE",
+    "NVDA",
+    "NWS",
+    "NWSA",
+    "OLED",
+    "OMC",
+    "ORCL",
+    "ORLY",
+    "PCAR",
+    "PCG",
+    "PEG",
+    "PFE",
+    "PG",
+    "PH",
+    "PLAB"
+  ],
+  "automaticSelection": false,
+  "automaticReplacement": false,
+  "contentHash": "0072895AB601BF2CCF664FE42BD21E9D8E5F982CD3B1FDCB425494F46C435C80"
+}

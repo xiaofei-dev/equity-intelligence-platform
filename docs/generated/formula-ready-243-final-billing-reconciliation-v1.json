@@ -1,0 +1,2923 @@
+{
+  "artifactType": "FORMULA_READY_FINAL_BILLING_RECONCILIATION",
+  "schemaVersion": "formula-ready-billing-reconciliation-v1.0.0",
+  "finalAggregatePath": "docs/generated/formula-ready-243-final-aggregate-v1.json",
+  "finalAggregateSha256": "2B3EE90401BB635FBB07CA977FD35D7A371CB64BB1735D070FC28268598CA9F8",
+  "finalAggregateContentHash": "CE0EB2F588105DA4E12F8BB763EC65B759714A2C4A6C9435C35A9F2ED9F69859",
+  "dashboard": {
+    "before": 21712,
+    "after": 26647,
+    "observedProviderBilledDelta": 4935
+  },
+  "budget": {
+    "configuredLocalWeights": 2820,
+    "provisionalProviderBilling": 5875,
+    "hardProviderBilledSafetyCeiling": 8813,
+    "provisionalBillingPerEodhdSymbol": 25
+  },
+  "physicalAttempts": {
+    "eodhd": 705,
+    "sec": 476,
+    "total": 1181,
+    "retries": 0,
+    "byEndpoint": {
+      "eodhd": {
+        "eod": 235,
+        "fundamentals": 235,
+        "historical-market-cap": 235
+      },
+      "sec": {
+        "company-facts": 232,
+        "submissions": 232,
+        "ticker-mapping": 12
+      }
+    }
+  },
+  "securityCounts": {
+    "unique": 243,
+    "formulaReady": 223,
+    "insufficientData": 20,
+    "systemExecutionFailures": 0
+  },
+  "runLevelBillingStatus": "PROVISIONALLY_RECONCILED",
+  "endpointLevelBillingStatus": "NOT_RECONCILED",
+  "componentEvidence": [
+    {
+      "runId": "20260727T212004Z-839d43ca4cba",
+      "sliceId": "formula-ready-remaining-001",
+      "reportPath": "docs/generated/formula-ready-backfill-20260727T212004Z-839d43ca4cba.json",
+      "reportSha256": "E4ABCD46FCEB4291D01325C41A0BFCF27841009CE0C0F111EE79701245F91394",
+      "reportContentHash": "CE68A860C3658CEDD70FA59FF2B683F9BFCDF6F6B6964FF4DEA628F085E81CFD",
+      "preflightJournalPath": "storage/provider-validation/scoring-inputs-v2/physical-request-journals/20260727T212004Z-839d43ca4cba/run/000001-PREFLIGHT.json",
+      "preflightJournalSha256": "046E03761B92382F172459C3F4D227EA52B96F8ECBF60793AD66D483F1393251",
+      "preflightEventHash": "9A4E8D2B51036FFB882DA3DBB391643BFC9A1876D3CD09A84004F071C3A45ABE",
+      "completeJournalPath": "storage/provider-validation/scoring-inputs-v2/physical-request-journals/20260727T212004Z-839d43ca4cba/run/000002-COMPLETE.json",
+      "completeJournalSha256": "25B20248F7EEB1F330E7D0F300D31BF8EA231AFFB468F88F0D40D78EDF30B246",
+      "completeEventHash": "29C2094032736C35C86EDCEC5A26ED3052C6B5033F5B15AA354B8B183176C4DD",
+      "configuredLocalWeightCeiling": 192,
+      "checkpoints": [
+        {
+          "symbol": "A",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212004Z-839d43ca4cba/0001-A.json",
+          "sha256": "F19750CF6A660BD8DEB6CEFA5248F2A2E698BBDEECB973338A4A0282DCFA7C7E"
+        },
+        {
+          "symbol": "ACN",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212004Z-839d43ca4cba/0002-ACN.json",
+          "sha256": "F76BD8E66A1781788BB785D442E07B20A0CD199E85A1D274DC8B8E373CBC1C7C"
+        },
+        {
+          "symbol": "ADBE",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212004Z-839d43ca4cba/0003-ADBE.json",
+          "sha256": "EA986C1727BC9D00DCE0E327A3ABB2DC8FC01794E394652B751C64BAF790DB6C"
+        },
+        {
+          "symbol": "ADI",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212004Z-839d43ca4cba/0004-ADI.json",
+          "sha256": "BEDB4FE56E8DF1A5F73A8CD0E87CA7E188FDFD8DC19AB638F02BB34305813103"
+        },
+        {
+          "symbol": "ADM",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212004Z-839d43ca4cba/0005-ADM.json",
+          "sha256": "9DA91E3B494FB5C2774FDB95BF069EB8B29364711AC52D65D1838D7931B8CA2F"
+        },
+        {
+          "symbol": "ADP",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212004Z-839d43ca4cba/0006-ADP.json",
+          "sha256": "59064600CCC803080923639DB074F3B20E811D769E9CA438AB058D6BF1A79F28"
+        },
+        {
+          "symbol": "ADSK",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212004Z-839d43ca4cba/0007-ADSK.json",
+          "sha256": "343AC2BA80BE5721864DAD733D63F17252D8A079CE400928395ADA054D85A49F"
+        },
+        {
+          "symbol": "AEE",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212004Z-839d43ca4cba/0008-AEE.json",
+          "sha256": "CF9E6D12F2CAABA4F5A3E2838F7D67152EC6B78D35E2B2EDF44B0E5564C85F88"
+        },
+        {
+          "symbol": "AEP",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212004Z-839d43ca4cba/0009-AEP.json",
+          "sha256": "B6888C27CB00D74C8C01ED447CE347FE852D7FADFDC2C5DD76382472C899A33A"
+        },
+        {
+          "symbol": "AES",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212004Z-839d43ca4cba/0010-AES.json",
+          "sha256": "53B3F78C3B9F93C511D55E28EF4353B00034BB0C5972F455B10D39BAD5E23179"
+        },
+        {
+          "symbol": "AKAM",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212004Z-839d43ca4cba/0011-AKAM.json",
+          "sha256": "787A2976CAA07A55A6FAD947ADF67F381DB64CDA1F370E3EA0F7D24D1A46DD94"
+        },
+        {
+          "symbol": "ALB",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212004Z-839d43ca4cba/0012-ALB.json",
+          "sha256": "75EBFDBC6EF48BD840E9D7D309A44414CAE507D57057FB897E5B4778FBDF8A59"
+        },
+        {
+          "symbol": "ALGN",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212004Z-839d43ca4cba/0013-ALGN.json",
+          "sha256": "77E59BF1549AF1D88B18A51E1C4F68138F157314B854543BCDCB6CA7E8F367C6"
+        },
+        {
+          "symbol": "ALLE",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212004Z-839d43ca4cba/0014-ALLE.json",
+          "sha256": "C4EC4B0257CD6EC5976959ACDF760B132570B2696CEB8C7721DEAD352F0A245F"
+        },
+        {
+          "symbol": "AMAT",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212004Z-839d43ca4cba/0015-AMAT.json",
+          "sha256": "8A0C7E394911628C8B79A4AFCC5ECE8D857BBC5E929195DC02BADD65A6E8D359"
+        },
+        {
+          "symbol": "AMCR",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212004Z-839d43ca4cba/0016-AMCR.json",
+          "sha256": "49CE9B097C735C83140FEF23A737B5BFABAEC86BD1537CF707569AC6DF6FB46A"
+        },
+        {
+          "symbol": "AMD",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212004Z-839d43ca4cba/0017-AMD.json",
+          "sha256": "2ECA00DE4CB7392E4D7C04AB0FA859973D209DA5FB7335414F123623AD91A7E5"
+        },
+        {
+          "symbol": "AME",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212004Z-839d43ca4cba/0018-AME.json",
+          "sha256": "74A6909AC615AEC0084318905020D225F27079025FD92FDAC0B86640DD65E42E"
+        },
+        {
+          "symbol": "AMZN",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212004Z-839d43ca4cba/0019-AMZN.json",
+          "sha256": "D7E9CD6F8945E2A39F7F342167DBFFD5333C5681B39296C1A3CE2F42F56DD2E1"
+        },
+        {
+          "symbol": "ANET",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212004Z-839d43ca4cba/0020-ANET.json",
+          "sha256": "FE92A252FBD730626F6DF6FE129B3400FD9494F6ADB0DD276A8B2CC74CF8A1FE"
+        }
+      ],
+      "terminalPayloads": [
+        {
+          "symbol": "A",
+          "status": "FORMULA_READY",
+          "contentHash": "13C49AF26B141FD547A8B89B8CE6A13DBEB8E32D6207F5E08445613265EEF730",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/A/13C49AF26B141FD547A8B89B8CE6A13DBEB8E32D6207F5E08445613265EEF730.json"
+        },
+        {
+          "symbol": "ACN",
+          "status": "FORMULA_READY",
+          "contentHash": "840B429B0750091D1055EC766E3E468474862C6C85FCC81733A670C9D6CCFD82",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/ACN/840B429B0750091D1055EC766E3E468474862C6C85FCC81733A670C9D6CCFD82.json"
+        },
+        {
+          "symbol": "ADBE",
+          "status": "FORMULA_READY",
+          "contentHash": "17C96D4FB5555C3EB22B7FAE44DD8FF915867E6DA12E8A38670AE85CA977B700",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/ADBE/17C96D4FB5555C3EB22B7FAE44DD8FF915867E6DA12E8A38670AE85CA977B700.json"
+        },
+        {
+          "symbol": "ADI",
+          "status": "FORMULA_READY",
+          "contentHash": "31BCCA8BF14F19FECF506C57B496DFBB473219F6A5F7BA13586A1E01F20EF215",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/ADI/31BCCA8BF14F19FECF506C57B496DFBB473219F6A5F7BA13586A1E01F20EF215.json"
+        },
+        {
+          "symbol": "ADM",
+          "status": "FORMULA_READY",
+          "contentHash": "C7297309AD9A04783988CEF51E5E603550DAC6FED25FFF09CF67EC29EFE7700E",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/ADM/C7297309AD9A04783988CEF51E5E603550DAC6FED25FFF09CF67EC29EFE7700E.json"
+        },
+        {
+          "symbol": "ADP",
+          "status": "FORMULA_READY",
+          "contentHash": "A6878549C8D7F4D3AD09667195A81B4977BB6D94E5BA9057B3A451BC3F5DD302",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/ADP/A6878549C8D7F4D3AD09667195A81B4977BB6D94E5BA9057B3A451BC3F5DD302.json"
+        },
+        {
+          "symbol": "ADSK",
+          "status": "FORMULA_READY",
+          "contentHash": "189D2B05149FED432F1F1812ECC03EE7461F7E76C34FDA59B2CF9D031F0D73F9",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/ADSK/189D2B05149FED432F1F1812ECC03EE7461F7E76C34FDA59B2CF9D031F0D73F9.json"
+        },
+        {
+          "symbol": "AEE",
+          "status": "FORMULA_READY",
+          "contentHash": "94A6B587D9CAB34BA7AAE88A863079BF5B4BC74373D20CF5BF7C2AA03DB7E195",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/AEE/94A6B587D9CAB34BA7AAE88A863079BF5B4BC74373D20CF5BF7C2AA03DB7E195.json"
+        },
+        {
+          "symbol": "AEP",
+          "status": "FORMULA_READY",
+          "contentHash": "B71C8220457367AE58F8CF32C0F9B89B7BA845F0521B54D2949C62E3AF34CA0B",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/AEP/B71C8220457367AE58F8CF32C0F9B89B7BA845F0521B54D2949C62E3AF34CA0B.json"
+        },
+        {
+          "symbol": "AES",
+          "status": "FORMULA_READY",
+          "contentHash": "95FF79760A57C89D2DA1BBEC270E93059A783E02266652DBA7F411325F19148E",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/AES/95FF79760A57C89D2DA1BBEC270E93059A783E02266652DBA7F411325F19148E.json"
+        },
+        {
+          "symbol": "AKAM",
+          "status": "FORMULA_READY",
+          "contentHash": "EA1DC6A84D0C87806D8F50F7A07E213CEE53F51811DF22C208D2034B604638CC",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/AKAM/EA1DC6A84D0C87806D8F50F7A07E213CEE53F51811DF22C208D2034B604638CC.json"
+        },
+        {
+          "symbol": "ALB",
+          "status": "FORMULA_READY",
+          "contentHash": "957EE7A3432285FF9D4E10DDFF6AF801A1B7CC0D186CA81E4F1874881FD6FEFC",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/ALB/957EE7A3432285FF9D4E10DDFF6AF801A1B7CC0D186CA81E4F1874881FD6FEFC.json"
+        },
+        {
+          "symbol": "ALGN",
+          "status": "SECURITY_INSUFFICIENT_DATA",
+          "contentHash": "0CE6D5F24346B4B4C9A437B15352A5C880C889DBE188914ABDEE8711FED83092",
+          "storageReference": null
+        },
+        {
+          "symbol": "ALLE",
+          "status": "FORMULA_READY",
+          "contentHash": "D395BC2D1BF9D04D0347462533F864BFF215A0B4F3519A9311E760DAD7BCBDF4",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/ALLE/D395BC2D1BF9D04D0347462533F864BFF215A0B4F3519A9311E760DAD7BCBDF4.json"
+        },
+        {
+          "symbol": "AMAT",
+          "status": "FORMULA_READY",
+          "contentHash": "BB2503DBA30C0DE19E6A1A1802F56C5D60C05A3E67B579A5F465100BF41EC6E2",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/AMAT/BB2503DBA30C0DE19E6A1A1802F56C5D60C05A3E67B579A5F465100BF41EC6E2.json"
+        },
+        {
+          "symbol": "AMCR",
+          "status": "FORMULA_READY",
+          "contentHash": "34C8C9FC7DB7C3F5E6ADE5D7BFB787D90164EE47E99788573AD8BC56ABCBCA66",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/AMCR/34C8C9FC7DB7C3F5E6ADE5D7BFB787D90164EE47E99788573AD8BC56ABCBCA66.json"
+        },
+        {
+          "symbol": "AMD",
+          "status": "FORMULA_READY",
+          "contentHash": "61B4D66C1A795D1142E38A363BB8334C59728D5C1EC67D63FE508D394C19DFD3",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/AMD/61B4D66C1A795D1142E38A363BB8334C59728D5C1EC67D63FE508D394C19DFD3.json"
+        },
+        {
+          "symbol": "AME",
+          "status": "FORMULA_READY",
+          "contentHash": "7B9D5E28C0B950D811AEE518F37BA81A18847002C5BD55B7076F611EA4AA5BFA",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/AME/7B9D5E28C0B950D811AEE518F37BA81A18847002C5BD55B7076F611EA4AA5BFA.json"
+        },
+        {
+          "symbol": "AMZN",
+          "status": "FORMULA_READY",
+          "contentHash": "C85F330707E8F8F9FAD4C6358E487B28A6838BC7CD9BD162BC4AB2D01603AB43",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/AMZN/C85F330707E8F8F9FAD4C6358E487B28A6838BC7CD9BD162BC4AB2D01603AB43.json"
+        },
+        {
+          "symbol": "ANET",
+          "status": "SECURITY_INSUFFICIENT_DATA",
+          "contentHash": "584E2EA6CB34F11AB943C74D0CB725150D4717F002DD4307666C71FC012A6AF4",
+          "storageReference": null
+        }
+      ]
+    },
+    {
+      "runId": "20260727T212844Z-d672887c8d5c",
+      "sliceId": "formula-ready-remaining-002",
+      "reportPath": "docs/generated/formula-ready-backfill-20260727T212844Z-d672887c8d5c.json",
+      "reportSha256": "EC9E76793DEF77EE6CFF4E4733E3567F6B77FDAA23E465CD97B38BD553ABBBAB",
+      "reportContentHash": "52C230B8338C4C144A547968B2F3DFDB36505511A0DBC961176B55DA803B9182",
+      "preflightJournalPath": "storage/provider-validation/scoring-inputs-v2/physical-request-journals/20260727T212844Z-d672887c8d5c/run/000001-PREFLIGHT.json",
+      "preflightJournalSha256": "C76CA20BB45A552C1261679E5D10BDDB657FB0F4CD9335A6C83B67ECDC453AA0",
+      "preflightEventHash": "47AB62950C50810FA0768774C08D27C6F62457299E82CF5751852B35E1BBE3C4",
+      "completeJournalPath": "storage/provider-validation/scoring-inputs-v2/physical-request-journals/20260727T212844Z-d672887c8d5c/run/000002-COMPLETE.json",
+      "completeJournalSha256": "27BF7FAB88C47465EDDED53EBB3DDF67D85D7D5239F3280F54FED95653EB0CD6",
+      "completeEventHash": "66B6BF87F87909A30F9E278EEEA4BB925AB8BCF23229E1FCEB54FDE41AF250C5",
+      "configuredLocalWeightCeiling": 240,
+      "checkpoints": [
+        {
+          "symbol": "AOS",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212844Z-d672887c8d5c/0001-AOS.json",
+          "sha256": "950883F42189A6D2F409B60A0365D0E97C698FB35997B3CC25965025D007B65B"
+        },
+        {
+          "symbol": "APD",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212844Z-d672887c8d5c/0002-APD.json",
+          "sha256": "14756E0DF71BDD86C805D8C714710A705D18255F664300C3881AFCFEF8AD8355"
+        },
+        {
+          "symbol": "APH",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212844Z-d672887c8d5c/0003-APH.json",
+          "sha256": "3C9707C9CFBF4C750C02529094CC896226881F6D96C75B557DC849BD76EA31CB"
+        },
+        {
+          "symbol": "APP",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212844Z-d672887c8d5c/0004-APP.json",
+          "sha256": "72A3D1129E184E0A4A937BC2764FBC7A85D2017FBB80EBF5260F3402ECEF55B9"
+        },
+        {
+          "symbol": "APTV",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212844Z-d672887c8d5c/0005-APTV.json",
+          "sha256": "B8CC9B44B550E49D984453F29D2B3186B6868F7A1CBCF48D71F21EB8BB9B9AC3"
+        },
+        {
+          "symbol": "ATO",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212844Z-d672887c8d5c/0006-ATO.json",
+          "sha256": "5D81E2DAEB2C70F87A713F806303007C5DC047C267871A8B83E5B0E3C07A7795"
+        },
+        {
+          "symbol": "AVGO",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212844Z-d672887c8d5c/0007-AVGO.json",
+          "sha256": "E383CF60B30ECDA7BFCC73B9C5FBEF9BD6ED32864B4F50FEAEA559BF8CBAA282"
+        },
+        {
+          "symbol": "AVY",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212844Z-d672887c8d5c/0008-AVY.json",
+          "sha256": "280B490A2AC403F41428957B09CC4546239B18FB6F077476E4E0A057507BDD3F"
+        },
+        {
+          "symbol": "AWK",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212844Z-d672887c8d5c/0009-AWK.json",
+          "sha256": "BF955B926B9FF436405FE2EC1535C322DF2169BE87FC0021BC7F8C75BEC9B3B1"
+        },
+        {
+          "symbol": "AXON",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212844Z-d672887c8d5c/0010-AXON.json",
+          "sha256": "6B13210ABA27A335D4E5C87F1649B1454277BD28FBE0041BEDBDFCD0D0DD6602"
+        },
+        {
+          "symbol": "BA",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212844Z-d672887c8d5c/0011-BA.json",
+          "sha256": "1722E77C827EED6F5FD6764318161130C13C92E5D029957145E0D48594034EC4"
+        },
+        {
+          "symbol": "BALL",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212844Z-d672887c8d5c/0012-BALL.json",
+          "sha256": "FEF15CBB476C0901D8B580CE806B584061EA3B2B6A271227A89A382829F8B6B4"
+        },
+        {
+          "symbol": "BAX",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212844Z-d672887c8d5c/0013-BAX.json",
+          "sha256": "BF31184BE79450968D87BA3127A0CCF568BE6046F4C490A61053346C2F34E590"
+        },
+        {
+          "symbol": "BBY",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212844Z-d672887c8d5c/0014-BBY.json",
+          "sha256": "0067661E3F41B0C3D2815D600474DB34041A4CFD94D4F7C0787E2A3F3A3429F0"
+        },
+        {
+          "symbol": "BDX",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212844Z-d672887c8d5c/0015-BDX.json",
+          "sha256": "AEDBDB620286B12EEFF1B818E925420244DC3F6141C4EED000B95765A092301E"
+        },
+        {
+          "symbol": "BF-B",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212844Z-d672887c8d5c/0016-BF-B.json",
+          "sha256": "8B0B6E043854F2DD56EADD422DEA05756CF3006A8F6A2EDEB0CF63D934B2C833"
+        },
+        {
+          "symbol": "BG",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212844Z-d672887c8d5c/0017-BG.json",
+          "sha256": "0C6E969D360640FB2C0FA143AB1FFD458851BC5E290E40F124E393E9E1901EF2"
+        },
+        {
+          "symbol": "BKNG",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212844Z-d672887c8d5c/0018-BKNG.json",
+          "sha256": "72A6E476DAB8F1FB0B75C2E99766348D223786E98963C36A8047D676177C0A95"
+        },
+        {
+          "symbol": "BLDR",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212844Z-d672887c8d5c/0019-BLDR.json",
+          "sha256": "BAE92DFF940CB5570D263F2CBC34AB60BE300CE9EE5F9553C9D24FED3AA575D6"
+        },
+        {
+          "symbol": "BMY",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T212844Z-d672887c8d5c/0020-BMY.json",
+          "sha256": "D0C8E54E15ED2CD6E5B43C77AD3D3B979100141219C9F1F370573F0633498A81"
+        }
+      ],
+      "terminalPayloads": [
+        {
+          "symbol": "AOS",
+          "status": "FORMULA_READY",
+          "contentHash": "71BB99503C2620338D6FBB2D16BF6B680E756550321E7F2BC9EE66FB38D6DCF1",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/AOS/71BB99503C2620338D6FBB2D16BF6B680E756550321E7F2BC9EE66FB38D6DCF1.json"
+        },
+        {
+          "symbol": "APD",
+          "status": "FORMULA_READY",
+          "contentHash": "89DFD97DBFF2D39D9E4A840476B10DE2C050BE5E1AA2048E986F99BA7B83C698",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/APD/89DFD97DBFF2D39D9E4A840476B10DE2C050BE5E1AA2048E986F99BA7B83C698.json"
+        },
+        {
+          "symbol": "APH",
+          "status": "FORMULA_READY",
+          "contentHash": "9182FFC6E40744B1D9E4A60973F2AA8263EEA4090AE704475FEC837422A101F0",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/APH/9182FFC6E40744B1D9E4A60973F2AA8263EEA4090AE704475FEC837422A101F0.json"
+        },
+        {
+          "symbol": "APP",
+          "status": "FORMULA_READY",
+          "contentHash": "FE096AB466E6DDAA21ABCB3501610CFA1AD0C0D6E3378F3FE534BF41629E46D1",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/APP/FE096AB466E6DDAA21ABCB3501610CFA1AD0C0D6E3378F3FE534BF41629E46D1.json"
+        },
+        {
+          "symbol": "APTV",
+          "status": "FORMULA_READY",
+          "contentHash": "542EBDABD3CA32C697265C92517B4B3AB562E362414C83D9ABE1A25625FDE31C",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/APTV/542EBDABD3CA32C697265C92517B4B3AB562E362414C83D9ABE1A25625FDE31C.json"
+        },
+        {
+          "symbol": "ATO",
+          "status": "FORMULA_READY",
+          "contentHash": "588DCC1AEB797AF813E3DAC47F00EF653B7A6A94E0681D9047D6D1986C0926A3",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/ATO/588DCC1AEB797AF813E3DAC47F00EF653B7A6A94E0681D9047D6D1986C0926A3.json"
+        },
+        {
+          "symbol": "AVGO",
+          "status": "FORMULA_READY",
+          "contentHash": "CCE0DAF2F562CE885CA479DCCDDDF30B26367E09F440B0909D5008EB9F6E7141",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/AVGO/CCE0DAF2F562CE885CA479DCCDDDF30B26367E09F440B0909D5008EB9F6E7141.json"
+        },
+        {
+          "symbol": "AVY",
+          "status": "FORMULA_READY",
+          "contentHash": "68A3C08202B1B69C16C41FB1BDCC6E01BA4DB0113CDF749DA4CCD4B5D470E90D",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/AVY/68A3C08202B1B69C16C41FB1BDCC6E01BA4DB0113CDF749DA4CCD4B5D470E90D.json"
+        },
+        {
+          "symbol": "AWK",
+          "status": "FORMULA_READY",
+          "contentHash": "F0A7BE5A7A1CEA722CF7C4C2A7425641B5AFCFB5526A596B44D25F3E57C8B19E",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/AWK/F0A7BE5A7A1CEA722CF7C4C2A7425641B5AFCFB5526A596B44D25F3E57C8B19E.json"
+        },
+        {
+          "symbol": "AXON",
+          "status": "FORMULA_READY",
+          "contentHash": "D371AF72C14233EBAE9F53C70DE18261581A6951BFBB403CE356C6CAFDB6FDE2",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/AXON/D371AF72C14233EBAE9F53C70DE18261581A6951BFBB403CE356C6CAFDB6FDE2.json"
+        },
+        {
+          "symbol": "BA",
+          "status": "FORMULA_READY",
+          "contentHash": "1C42A0519A1E28DDDCA70EC6BF165A1F30164D5216A606DE172977FD030258CD",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/BA/1C42A0519A1E28DDDCA70EC6BF165A1F30164D5216A606DE172977FD030258CD.json"
+        },
+        {
+          "symbol": "BALL",
+          "status": "FORMULA_READY",
+          "contentHash": "103C0E4AFFB46B16F229B52553FB63C79D36DF228ACCD82C599CFA53370CE0F9",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/BALL/103C0E4AFFB46B16F229B52553FB63C79D36DF228ACCD82C599CFA53370CE0F9.json"
+        },
+        {
+          "symbol": "BAX",
+          "status": "FORMULA_READY",
+          "contentHash": "0CCCB5AEBAB63BCC36EE390884D0A881486CE058A7D4CE7EB0E1DD1867941124",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/BAX/0CCCB5AEBAB63BCC36EE390884D0A881486CE058A7D4CE7EB0E1DD1867941124.json"
+        },
+        {
+          "symbol": "BBY",
+          "status": "FORMULA_READY",
+          "contentHash": "23B66D577805488EF9838884C5E3951FD40E05431457E83BDA10CF0692B7D535",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/BBY/23B66D577805488EF9838884C5E3951FD40E05431457E83BDA10CF0692B7D535.json"
+        },
+        {
+          "symbol": "BDX",
+          "status": "FORMULA_READY",
+          "contentHash": "C0513D05B0F1F93E8C8CB920B570E42EAE17B882D8A883A20E72A4FE7E705EBF",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/BDX/C0513D05B0F1F93E8C8CB920B570E42EAE17B882D8A883A20E72A4FE7E705EBF.json"
+        },
+        {
+          "symbol": "BF-B",
+          "status": "FORMULA_READY",
+          "contentHash": "3D9F290C726403649F41B3B971B7614655B9DD0F5A334F8BA3631AC37F7A8478",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/BF-B/3D9F290C726403649F41B3B971B7614655B9DD0F5A334F8BA3631AC37F7A8478.json"
+        },
+        {
+          "symbol": "BG",
+          "status": "FORMULA_READY",
+          "contentHash": "63322DB90559A4DF62703C3C371A9682E0DE7B09EE8E8535F960E96E599B19C7",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/BG/63322DB90559A4DF62703C3C371A9682E0DE7B09EE8E8535F960E96E599B19C7.json"
+        },
+        {
+          "symbol": "BKNG",
+          "status": "FORMULA_READY",
+          "contentHash": "AE0EE187A6B71C7424888A6928E162D2407B79B661F07943D25A19472EE6A869",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/BKNG/AE0EE187A6B71C7424888A6928E162D2407B79B661F07943D25A19472EE6A869.json"
+        },
+        {
+          "symbol": "BLDR",
+          "status": "FORMULA_READY",
+          "contentHash": "4B62E4D21A22FF5332CC15A8AA15369B919E8D6F2E5BC066CC21E5E9E5E41D80",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/BLDR/4B62E4D21A22FF5332CC15A8AA15369B919E8D6F2E5BC066CC21E5E9E5E41D80.json"
+        },
+        {
+          "symbol": "BMY",
+          "status": "FORMULA_READY",
+          "contentHash": "E0CD646B21163226654782036D7EE8FD94ED5E62C8B100E3C520FE3E2121C884",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/BMY/E0CD646B21163226654782036D7EE8FD94ED5E62C8B100E3C520FE3E2121C884.json"
+        }
+      ]
+    },
+    {
+      "runId": "20260727T213918Z-6e387f4215f3",
+      "sliceId": "formula-ready-remaining-003",
+      "reportPath": "docs/generated/formula-ready-backfill-20260727T213918Z-6e387f4215f3.json",
+      "reportSha256": "ADEA61D22451D8E584C951DC58B133AE20CA24E0EED394E79A2F40BB8A794666",
+      "reportContentHash": "42B447087394CAD780D5326020742EB8836BDA1E790BF40C9E157F800A1E33D9",
+      "preflightJournalPath": "storage/provider-validation/scoring-inputs-v2/physical-request-journals/20260727T213918Z-6e387f4215f3/run/000001-PREFLIGHT.json",
+      "preflightJournalSha256": "08D0A20BDF6CF993A66FB8CE9C64C297EB47E41276B7B77F5E3D5EAFE6A7851B",
+      "preflightEventHash": "FC21B7765FA17B536BF4DFC2FB6756CAB6D30F368A8C1C70AEF3D3565DD7E485",
+      "completeJournalPath": "storage/provider-validation/scoring-inputs-v2/physical-request-journals/20260727T213918Z-6e387f4215f3/run/000002-COMPLETE.json",
+      "completeJournalSha256": "B77F7949DC5B1596D7D225B200383F001042866F725028F1CD51AAB98968ACE5",
+      "completeEventHash": "20EBE3C23E3556EC942597C458B514A273C7BBFADADB1674FEAF6D3337EB76BC",
+      "configuredLocalWeightCeiling": 240,
+      "checkpoints": [
+        {
+          "symbol": "BR",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T213918Z-6e387f4215f3/0001-BR.json",
+          "sha256": "A314A06803F48D340F512F661ACA9D6D82094F631F44FE4B60D3516725CB41D7"
+        },
+        {
+          "symbol": "BSX",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T213918Z-6e387f4215f3/0002-BSX.json",
+          "sha256": "9B2EDC5D4E8991508349ED3125126FA4D53A45BDE5B2DE19E2C5236A0D629BCE"
+        },
+        {
+          "symbol": "CALM",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T213918Z-6e387f4215f3/0003-CALM.json",
+          "sha256": "15EBC5C137B634F2AD4FFD3E983B8EA6D4FD55930674882C06D2F49F5F4E09FD"
+        },
+        {
+          "symbol": "CARR",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T213918Z-6e387f4215f3/0004-CARR.json",
+          "sha256": "BC21755A7BA4F52A2ECE91F6F747BB6F1ABB04DC3B1B288E137543BBB6F9E331"
+        },
+        {
+          "symbol": "CASY",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T213918Z-6e387f4215f3/0005-CASY.json",
+          "sha256": "5B3C1753312CBF09408D705BD8DAA49E47A88C8A320FFB7E7549C7B3C2522F92"
+        },
+        {
+          "symbol": "CCL",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T213918Z-6e387f4215f3/0006-CCL.json",
+          "sha256": "5F6CC34F85D22062FBDEFCFE666DDCCD120767495B26B390E34043E789BD48F2"
+        },
+        {
+          "symbol": "CDNS",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T213918Z-6e387f4215f3/0007-CDNS.json",
+          "sha256": "F3266F3C945B0D851335C533C638F53C7BD7445C06B0A97AFE5F45CDFABD7B15"
+        },
+        {
+          "symbol": "CDW",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T213918Z-6e387f4215f3/0008-CDW.json",
+          "sha256": "46CBCCC235591FB9021C5388C29B73ECD4D7769C0A418322F09530C8DF1BEA12"
+        },
+        {
+          "symbol": "CEG",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T213918Z-6e387f4215f3/0009-CEG.json",
+          "sha256": "27B6EB5DE0ED06AB464EDC70E815027C8D92351123CF24C5D076C90AC92FAF5F"
+        },
+        {
+          "symbol": "CF",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T213918Z-6e387f4215f3/0010-CF.json",
+          "sha256": "BC1115FF4995C7FE6FAFB8F1A80F48957C99E2BED752CAFCC9452A4993D47DBE"
+        },
+        {
+          "symbol": "CHD",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T213918Z-6e387f4215f3/0011-CHD.json",
+          "sha256": "3E6A554BF0495611D27EDD76268ED199FF8AA10EAFD93E7CBBB72D69F85115BE"
+        },
+        {
+          "symbol": "CHRW",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T213918Z-6e387f4215f3/0012-CHRW.json",
+          "sha256": "9697D13884B6ED22802F50C911884F3EBEDBDBE36346B47F77E41FF499A47D40"
+        },
+        {
+          "symbol": "CHTR",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T213918Z-6e387f4215f3/0013-CHTR.json",
+          "sha256": "02415915108FDFB026383464E3C6AFE4D21C3EDDE274E40CCDC24CB8AF43FF4D"
+        },
+        {
+          "symbol": "CI",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T213918Z-6e387f4215f3/0014-CI.json",
+          "sha256": "0CC49AD1F9804272A8EC54AEB2AA388EACAD3BAA871F0F142E04DD7EE7D3E354"
+        },
+        {
+          "symbol": "CIEN",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T213918Z-6e387f4215f3/0015-CIEN.json",
+          "sha256": "675574B25467CCA63BDB741BE349E6C01D8DCA19CB95B441949CFD723E8D8EAC"
+        },
+        {
+          "symbol": "CL",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T213918Z-6e387f4215f3/0016-CL.json",
+          "sha256": "6A19395D717D67D5DDC69438F26D2CC309CF47EFB9B062A4882E02BEEE907A13"
+        },
+        {
+          "symbol": "CLX",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T213918Z-6e387f4215f3/0017-CLX.json",
+          "sha256": "2ED43803D41DB1A29CE51C45D68D02B5460F0C5308E1A72BB2B80F75FC4108EF"
+        },
+        {
+          "symbol": "CMCSA",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T213918Z-6e387f4215f3/0018-CMCSA.json",
+          "sha256": "4946C9633DFF6D69BB77EFE7810D811A815713B589EE356BC9F41D3E9D076963"
+        },
+        {
+          "symbol": "CMG",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T213918Z-6e387f4215f3/0019-CMG.json",
+          "sha256": "926CFF2E1B3C865B91D0D7884242B7E2A72B3B1607576632A5D9785C7B463ACF"
+        },
+        {
+          "symbol": "CMI",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T213918Z-6e387f4215f3/0020-CMI.json",
+          "sha256": "AEE5B5FD2C99DD4BE0FC9097AFE221529001B5D48D600980D9F3B51DA52FD304"
+        }
+      ],
+      "terminalPayloads": [
+        {
+          "symbol": "BR",
+          "status": "FORMULA_READY",
+          "contentHash": "A4D83A5E10CF1179129CAF2FF96F2F26AFC34F92553C66CE0916A9E175D57217",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/BR/A4D83A5E10CF1179129CAF2FF96F2F26AFC34F92553C66CE0916A9E175D57217.json"
+        },
+        {
+          "symbol": "BSX",
+          "status": "FORMULA_READY",
+          "contentHash": "61317A2BEA018961EDD7709BDEE59331489C93A25360EDCEAE3B020D9BE99F2B",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/BSX/61317A2BEA018961EDD7709BDEE59331489C93A25360EDCEAE3B020D9BE99F2B.json"
+        },
+        {
+          "symbol": "CALM",
+          "status": "SECURITY_INSUFFICIENT_DATA",
+          "contentHash": "8360A7EDDD804E2DC3B87B162F3F7D5BCC4803EE9827E6F933EAD5F3A4E4FBDE",
+          "storageReference": null
+        },
+        {
+          "symbol": "CARR",
+          "status": "FORMULA_READY",
+          "contentHash": "51FA32E4760CE3FA933A1B56E156435E566524F930EA9D7BDF8D04442233E54C",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/CARR/51FA32E4760CE3FA933A1B56E156435E566524F930EA9D7BDF8D04442233E54C.json"
+        },
+        {
+          "symbol": "CASY",
+          "status": "FORMULA_READY",
+          "contentHash": "45BFF929599E620BA2C441598BC0C925861A6445C79C273ECD923DCB327CF5D3",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/CASY/45BFF929599E620BA2C441598BC0C925861A6445C79C273ECD923DCB327CF5D3.json"
+        },
+        {
+          "symbol": "CCL",
+          "status": "FORMULA_READY",
+          "contentHash": "0B8A147209638108BB1459F06AFB7088704E0FBB2D22672B2530B85CBBBC79EF",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/CCL/0B8A147209638108BB1459F06AFB7088704E0FBB2D22672B2530B85CBBBC79EF.json"
+        },
+        {
+          "symbol": "CDNS",
+          "status": "FORMULA_READY",
+          "contentHash": "D5541243369420B67E5DAA3D2BCAC5813CDE618A0B0BE8A2B794170E00B4F9A5",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/CDNS/D5541243369420B67E5DAA3D2BCAC5813CDE618A0B0BE8A2B794170E00B4F9A5.json"
+        },
+        {
+          "symbol": "CDW",
+          "status": "FORMULA_READY",
+          "contentHash": "7E81BD188F82AAA5CE6D2D1EC6DA8F9E37418C2176694947225A8C3B0926A3A5",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/CDW/7E81BD188F82AAA5CE6D2D1EC6DA8F9E37418C2176694947225A8C3B0926A3A5.json"
+        },
+        {
+          "symbol": "CEG",
+          "status": "FORMULA_READY",
+          "contentHash": "DB9FC7B3BA79E86D2442139A4A92283776D9778AD198E291AABA62D52F89042B",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/CEG/DB9FC7B3BA79E86D2442139A4A92283776D9778AD198E291AABA62D52F89042B.json"
+        },
+        {
+          "symbol": "CF",
+          "status": "FORMULA_READY",
+          "contentHash": "92F6121649AC63CBD4209A856424BB5C391354C66C769ADE50F19ACF4DA6429F",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/CF/92F6121649AC63CBD4209A856424BB5C391354C66C769ADE50F19ACF4DA6429F.json"
+        },
+        {
+          "symbol": "CHD",
+          "status": "FORMULA_READY",
+          "contentHash": "2A3E5810B58486189B8B2C3B74F2D0DE1ECE9B4671431EC6EEF2D02CBC6724DE",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/CHD/2A3E5810B58486189B8B2C3B74F2D0DE1ECE9B4671431EC6EEF2D02CBC6724DE.json"
+        },
+        {
+          "symbol": "CHRW",
+          "status": "FORMULA_READY",
+          "contentHash": "8A9DBD108248B9DEAEB50B4E3503E7D666B10C1A530CDC0D028C48D308C69E1F",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/CHRW/8A9DBD108248B9DEAEB50B4E3503E7D666B10C1A530CDC0D028C48D308C69E1F.json"
+        },
+        {
+          "symbol": "CHTR",
+          "status": "FORMULA_READY",
+          "contentHash": "54ECDF5F6A107A6A761532FCB5EB3D0588770CDD82F854537214AC0CD7D7F915",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/CHTR/54ECDF5F6A107A6A761532FCB5EB3D0588770CDD82F854537214AC0CD7D7F915.json"
+        },
+        {
+          "symbol": "CI",
+          "status": "FORMULA_READY",
+          "contentHash": "17588FB265FC4FA7A88286F846448909411964308F5AB286F86DE2127C3C7F63",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/CI/17588FB265FC4FA7A88286F846448909411964308F5AB286F86DE2127C3C7F63.json"
+        },
+        {
+          "symbol": "CIEN",
+          "status": "FORMULA_READY",
+          "contentHash": "F4EC61701C2A7F030884785B7D08AD4255B8D2E2286A409CE9B60BA5BD21B882",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/CIEN/F4EC61701C2A7F030884785B7D08AD4255B8D2E2286A409CE9B60BA5BD21B882.json"
+        },
+        {
+          "symbol": "CL",
+          "status": "FORMULA_READY",
+          "contentHash": "514AD8ADFE6DD035DE837589A848B84F1FD051493DD6C5958D5B72DC3CEF1051",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/CL/514AD8ADFE6DD035DE837589A848B84F1FD051493DD6C5958D5B72DC3CEF1051.json"
+        },
+        {
+          "symbol": "CLX",
+          "status": "FORMULA_READY",
+          "contentHash": "54358C60048C9C15407E745660291A5E95B94C30A41A0E4181222D3DD38EB48C",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/CLX/54358C60048C9C15407E745660291A5E95B94C30A41A0E4181222D3DD38EB48C.json"
+        },
+        {
+          "symbol": "CMCSA",
+          "status": "FORMULA_READY",
+          "contentHash": "6983C5495B06C0A5B02D360A71D08C84B328617149695A48C1E92357F0D808A2",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/CMCSA/6983C5495B06C0A5B02D360A71D08C84B328617149695A48C1E92357F0D808A2.json"
+        },
+        {
+          "symbol": "CMG",
+          "status": "SECURITY_INSUFFICIENT_DATA",
+          "contentHash": "E3486F2B2383683102DC6494FAA24CE8D6558F8F81612C9AF7A04F654ACE2F5B",
+          "storageReference": null
+        },
+        {
+          "symbol": "CMI",
+          "status": "FORMULA_READY",
+          "contentHash": "86C27127178A5DCC49C7DA0D63F309F049EB303F0BF30B22A5DD92063DBB2769",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/CMI/86C27127178A5DCC49C7DA0D63F309F049EB303F0BF30B22A5DD92063DBB2769.json"
+        }
+      ]
+    },
+    {
+      "runId": "20260727T214936Z-1672ae4cb442",
+      "sliceId": "formula-ready-remaining-004",
+      "reportPath": "docs/generated/formula-ready-backfill-20260727T214936Z-1672ae4cb442.json",
+      "reportSha256": "8754F50B9BB07F4FBE8D5121D78D06A84B8781840D3C36C30FF0C07477C99175",
+      "reportContentHash": "9CCFD59D0AC52EEF8A71C1DC8E82F05E4163F1FA8CDA4E469A7ECE4AF266D7B0",
+      "preflightJournalPath": "storage/provider-validation/scoring-inputs-v2/physical-request-journals/20260727T214936Z-1672ae4cb442/run/000001-PREFLIGHT.json",
+      "preflightJournalSha256": "D01357893E17BB3A04C2DC09EE970EC97E55D27B186CAB4F33C82C81A29FD046",
+      "preflightEventHash": "89B89C63EAB57AF8CE8936B94AAED393557FA917694EF6306BE85CCD55C6DFA8",
+      "completeJournalPath": "storage/provider-validation/scoring-inputs-v2/physical-request-journals/20260727T214936Z-1672ae4cb442/run/000002-COMPLETE.json",
+      "completeJournalSha256": "F858C5A37986691CCDB22D23BEECD127D6916B1505EA41535122E0A740DA075A",
+      "completeEventHash": "69F6E4056360EC86B79EFE4811A686E9199D45C4D8608E118DF39378D39243A5",
+      "configuredLocalWeightCeiling": 240,
+      "checkpoints": [
+        {
+          "symbol": "CMS",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T214936Z-1672ae4cb442/0001-CMS.json",
+          "sha256": "6A5406B0476D236AF5C37A2638F424BD939A5343530AE1453BB29D1F15E71DF8"
+        },
+        {
+          "symbol": "CNC",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T214936Z-1672ae4cb442/0002-CNC.json",
+          "sha256": "E9E9CC01AAAAEEBF65FB384A9C751951BFA582766257C0F53A0F8DD09007F3E0"
+        },
+        {
+          "symbol": "CNP",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T214936Z-1672ae4cb442/0003-CNP.json",
+          "sha256": "24B238A01ECE8ECAFFFF0F39D23DD379AE4C457392C76699B3747F25FC0E98B5"
+        },
+        {
+          "symbol": "COHR",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T214936Z-1672ae4cb442/0004-COHR.json",
+          "sha256": "50CE7B457DF9B30DDC27F102E72637B01A8ADD8F5DCB912270E0E4829503FEFF"
+        },
+        {
+          "symbol": "COO",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T214936Z-1672ae4cb442/0005-COO.json",
+          "sha256": "2308C82B2270DD0D80FC7568152B4C8A1FD182FF80F5EE0A6BDE8129AD4A9311"
+        },
+        {
+          "symbol": "COR",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T214936Z-1672ae4cb442/0006-COR.json",
+          "sha256": "EAF63626EE4D026CE02A7E2B4A8D56C030E1467671EE5B25FD210F8B928885B9"
+        },
+        {
+          "symbol": "CPRT",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T214936Z-1672ae4cb442/0007-CPRT.json",
+          "sha256": "C859F9109AC7B185379CF692623A33212656835C728DC52E5A4073C102810B5D"
+        },
+        {
+          "symbol": "CRH",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T214936Z-1672ae4cb442/0008-CRH.json",
+          "sha256": "C266E6D211449A98DCE67A5A60FC0743DB7980F1E7DB5C64D8F9967B76BDDA14"
+        },
+        {
+          "symbol": "CRL",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T214936Z-1672ae4cb442/0009-CRL.json",
+          "sha256": "E362A445842072FF3F92790A7D0113D1A259435E32BFB6508DA5EA1C15FDA542"
+        },
+        {
+          "symbol": "CRM",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T214936Z-1672ae4cb442/0010-CRM.json",
+          "sha256": "CBF2C4CF034664891A47A40F55FF7D981948CFFA8E6576C3B64BBDE6B2C1FFE9"
+        },
+        {
+          "symbol": "CROX",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T214936Z-1672ae4cb442/0011-CROX.json",
+          "sha256": "87AB5B1A0D4C50A3F5FFABA3B2E3EF6581A032563D943641007C53CF5A6B0CF7"
+        },
+        {
+          "symbol": "CRWD",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T214936Z-1672ae4cb442/0012-CRWD.json",
+          "sha256": "60DEB5E6C0670DB178D5584BF53950D55D466A59AAB9DB6FAA593CD3EAFE67A8"
+        },
+        {
+          "symbol": "CSCO",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T214936Z-1672ae4cb442/0013-CSCO.json",
+          "sha256": "B38A0A42BED34C93505081C89B0C5E4840B71273BFAAFFC400108F68316B6923"
+        },
+        {
+          "symbol": "CSX",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T214936Z-1672ae4cb442/0014-CSX.json",
+          "sha256": "45A92E28CC8F3064A3F948958E2B1F47B1A846327428F96D0F6217642E0D1453"
+        },
+        {
+          "symbol": "CTSH",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T214936Z-1672ae4cb442/0015-CTSH.json",
+          "sha256": "73B30964966AD6E9AB84AD0808519B7FA491387060DA1F0DE9752FE53363F85C"
+        },
+        {
+          "symbol": "CTVA",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T214936Z-1672ae4cb442/0016-CTVA.json",
+          "sha256": "8198D9F0CE8FE2280D8296BBA5F342D96A7CAA9BAC4081FF585EC012DDD864FD"
+        },
+        {
+          "symbol": "CVNA",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T214936Z-1672ae4cb442/0017-CVNA.json",
+          "sha256": "7E58F7D2465C38CF476525068942F636F93A45EAB63B4E3D20D8D6760267E06C"
+        },
+        {
+          "symbol": "CVS",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T214936Z-1672ae4cb442/0018-CVS.json",
+          "sha256": "996A0BC981A8CC67F2AF96AA3398BDC90DF582CAB11B3696E07113AF38FBDC49"
+        },
+        {
+          "symbol": "D",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T214936Z-1672ae4cb442/0019-D.json",
+          "sha256": "7C1E66E794AE5BA39598038531455CD8AC52549AE8CE0F7A3407A58F632CA28D"
+        },
+        {
+          "symbol": "DAL",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T214936Z-1672ae4cb442/0020-DAL.json",
+          "sha256": "2B01B8C1BC4D85F7F0E50A7AD9D392ED9B513A22CB131C2463340BCA0FBEAD6B"
+        }
+      ],
+      "terminalPayloads": [
+        {
+          "symbol": "CMS",
+          "status": "FORMULA_READY",
+          "contentHash": "79A5EB29BB1DEE31EA7F680EABEC6BCD73A785A7B454C22B33DC3F01A7B7888E",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/CMS/79A5EB29BB1DEE31EA7F680EABEC6BCD73A785A7B454C22B33DC3F01A7B7888E.json"
+        },
+        {
+          "symbol": "CNC",
+          "status": "FORMULA_READY",
+          "contentHash": "7936AE3718C101E7C1472F9CF9F7D8897BE7F58C618F28337610C3460D4A9DE2",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/CNC/7936AE3718C101E7C1472F9CF9F7D8897BE7F58C618F28337610C3460D4A9DE2.json"
+        },
+        {
+          "symbol": "CNP",
+          "status": "FORMULA_READY",
+          "contentHash": "2EC1265888A5BB4DB32C254EEF7A9A07D66506187822D3462AFF362169BFC2F1",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/CNP/2EC1265888A5BB4DB32C254EEF7A9A07D66506187822D3462AFF362169BFC2F1.json"
+        },
+        {
+          "symbol": "COHR",
+          "status": "FORMULA_READY",
+          "contentHash": "2756DA99436D189038BD1B5056E98FC764209751B91069243869EEEB6A91C8F6",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/COHR/2756DA99436D189038BD1B5056E98FC764209751B91069243869EEEB6A91C8F6.json"
+        },
+        {
+          "symbol": "COO",
+          "status": "FORMULA_READY",
+          "contentHash": "065F51CD024D06D2D96E4DD8F86706D8D04E4A607ADB3533D8062B172F842186",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/COO/065F51CD024D06D2D96E4DD8F86706D8D04E4A607ADB3533D8062B172F842186.json"
+        },
+        {
+          "symbol": "COR",
+          "status": "FORMULA_READY",
+          "contentHash": "94ED596FC221D5FA75266D4B44906269649178E396F361DBF1E178C063DB36C1",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/COR/94ED596FC221D5FA75266D4B44906269649178E396F361DBF1E178C063DB36C1.json"
+        },
+        {
+          "symbol": "CPRT",
+          "status": "FORMULA_READY",
+          "contentHash": "7969DDBC6CC40624F09FDAA639F1C2543066DA3A0CE18A12C1E39B2683EFDD8C",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/CPRT/7969DDBC6CC40624F09FDAA639F1C2543066DA3A0CE18A12C1E39B2683EFDD8C.json"
+        },
+        {
+          "symbol": "CRH",
+          "status": "FORMULA_READY",
+          "contentHash": "F48B6E662CC753853D883189E62ADE9D2B6B04F664428D19483DAEEDF554FCB8",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/CRH/F48B6E662CC753853D883189E62ADE9D2B6B04F664428D19483DAEEDF554FCB8.json"
+        },
+        {
+          "symbol": "CRL",
+          "status": "FORMULA_READY",
+          "contentHash": "51F039FCF59A5DA7537A889B3C62DEA58306129A986FF5CA4B063F37EE2BBC5E",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/CRL/51F039FCF59A5DA7537A889B3C62DEA58306129A986FF5CA4B063F37EE2BBC5E.json"
+        },
+        {
+          "symbol": "CRM",
+          "status": "SECURITY_INSUFFICIENT_DATA",
+          "contentHash": "B91B90C9296FBBC3AC9FCDDFC166D72540B550CFA0EE6F6ED42C14E80EAEBBA3",
+          "storageReference": null
+        },
+        {
+          "symbol": "CROX",
+          "status": "FORMULA_READY",
+          "contentHash": "02744E89F9F8379024C61B45366D48359BD79EE9659EA25E279381D859690CC8",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/CROX/02744E89F9F8379024C61B45366D48359BD79EE9659EA25E279381D859690CC8.json"
+        },
+        {
+          "symbol": "CRWD",
+          "status": "FORMULA_READY",
+          "contentHash": "53EFA2E73D66ABA765AFE7264A0FDE7A49A7C5D1A5C8BE2938ECE39CE42F288B",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/CRWD/53EFA2E73D66ABA765AFE7264A0FDE7A49A7C5D1A5C8BE2938ECE39CE42F288B.json"
+        },
+        {
+          "symbol": "CSCO",
+          "status": "FORMULA_READY",
+          "contentHash": "EAF1F81D9D3E8F0070D3D1216A8EBF49D004AC41FF62538E675D366D18F0C829",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/CSCO/EAF1F81D9D3E8F0070D3D1216A8EBF49D004AC41FF62538E675D366D18F0C829.json"
+        },
+        {
+          "symbol": "CSX",
+          "status": "FORMULA_READY",
+          "contentHash": "8F33D453EFADD7EEBB640A1C825620BC2278FED2E3F57CE2421FEA6F98ED4240",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/CSX/8F33D453EFADD7EEBB640A1C825620BC2278FED2E3F57CE2421FEA6F98ED4240.json"
+        },
+        {
+          "symbol": "CTSH",
+          "status": "FORMULA_READY",
+          "contentHash": "799A18058DB2513990F91F90960739D79DC5BE62AA1CA23FB5CA7311D3C3DAB7",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/CTSH/799A18058DB2513990F91F90960739D79DC5BE62AA1CA23FB5CA7311D3C3DAB7.json"
+        },
+        {
+          "symbol": "CTVA",
+          "status": "FORMULA_READY",
+          "contentHash": "B3B32BD12C5B9BFD979E50281400FA70E55C92A2529A00427FB83A97E0631DDF",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/CTVA/B3B32BD12C5B9BFD979E50281400FA70E55C92A2529A00427FB83A97E0631DDF.json"
+        },
+        {
+          "symbol": "CVNA",
+          "status": "SECURITY_INSUFFICIENT_DATA",
+          "contentHash": "EC4DC6CDCD3D3484B5DAAE938C1EE13BBA557B48BE0A04D9A8E62316799AB3A4",
+          "storageReference": null
+        },
+        {
+          "symbol": "CVS",
+          "status": "FORMULA_READY",
+          "contentHash": "B45A9AE8B99399F96D671561D80E9B9D21773B62E3BD47676F1A3010C824EC34",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/CVS/B45A9AE8B99399F96D671561D80E9B9D21773B62E3BD47676F1A3010C824EC34.json"
+        },
+        {
+          "symbol": "D",
+          "status": "FORMULA_READY",
+          "contentHash": "1FD46AB10DB211BAFB3F7D3E13747C910C808A3C0253AD98BD18AF6F67AC63D9",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/D/1FD46AB10DB211BAFB3F7D3E13747C910C808A3C0253AD98BD18AF6F67AC63D9.json"
+        },
+        {
+          "symbol": "DAL",
+          "status": "FORMULA_READY",
+          "contentHash": "CE3927C0CADE6BF7DE3D103E1C3187DD4A0D3747376D5DFACFFDA6B2052944E7",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/DAL/CE3927C0CADE6BF7DE3D103E1C3187DD4A0D3747376D5DFACFFDA6B2052944E7.json"
+        }
+      ]
+    },
+    {
+      "runId": "20260727T220008Z-cefe3e037db4",
+      "sliceId": "formula-ready-remaining-005",
+      "reportPath": "docs/generated/formula-ready-backfill-20260727T220008Z-cefe3e037db4.json",
+      "reportSha256": "9A886762FDD53AA3C8693D9C360A7B02E98990AF3069A8DA03AE7C4FCBE098E6",
+      "reportContentHash": "91609D9FA7CD971E7DF2B8AB8CBF9B75020C4F49D71FBEDBC69E978F2A122D74",
+      "preflightJournalPath": "storage/provider-validation/scoring-inputs-v2/physical-request-journals/20260727T220008Z-cefe3e037db4/run/000001-PREFLIGHT.json",
+      "preflightJournalSha256": "E9FE5093597F3C62E1E61320E55BA3C1CA39046848EEC45E36BBC9BD4CBEBA5A",
+      "preflightEventHash": "462CA0B6B0052F8A4B890AC28FEE9D10C59B06AAF123D8A076CF08AE049C1DAC",
+      "completeJournalPath": "storage/provider-validation/scoring-inputs-v2/physical-request-journals/20260727T220008Z-cefe3e037db4/run/000002-COMPLETE.json",
+      "completeJournalSha256": "DE799BD1C0212B81A99343B5724D39EB56DD3696D9236905DC36DF220BB5A0E8",
+      "completeEventHash": "4313CE38D0FAB3D7D2951944B7C8EB45677C219D43EFB253EE014AA182A0731C",
+      "configuredLocalWeightCeiling": 240,
+      "checkpoints": [
+        {
+          "symbol": "DASH",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T220008Z-cefe3e037db4/0001-DASH.json",
+          "sha256": "60DFAD43955A0CDD8F2A4B052DD1BFC4CE1A02537467B57ADFA30D147A85086A"
+        },
+        {
+          "symbol": "DD",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T220008Z-cefe3e037db4/0002-DD.json",
+          "sha256": "513322CF9E4CB6F513F930CB3925DF563915D17A79E9F273C82823B681CAE7C7"
+        },
+        {
+          "symbol": "DDOG",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T220008Z-cefe3e037db4/0003-DDOG.json",
+          "sha256": "9E6AAF14610EC1B1667F9F549B42C248824D0F3B9B11E22F6FDD70E1ADC32556"
+        },
+        {
+          "symbol": "DE",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T220008Z-cefe3e037db4/0004-DE.json",
+          "sha256": "3C77D116541A399EB75D699DFFEF0633E204ACD8CD1EC217EB68653E6358F978"
+        },
+        {
+          "symbol": "DELL",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T220008Z-cefe3e037db4/0005-DELL.json",
+          "sha256": "22C4D5C1ACFBD46C0FDBA6B2AE7E19B3DDA2CE5F12B3B14C0E67A71E99DE191B"
+        },
+        {
+          "symbol": "DG",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T220008Z-cefe3e037db4/0006-DG.json",
+          "sha256": "E8852574D53796960933FFB14FBCA64BA235000A620CA9F5F422E5FCCDE31F83"
+        },
+        {
+          "symbol": "DGX",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T220008Z-cefe3e037db4/0007-DGX.json",
+          "sha256": "0D726905645B56F43595D63EE8CE66890F3F9A6EAA949F53F0113F26CF8AE56A"
+        },
+        {
+          "symbol": "DHI",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T220008Z-cefe3e037db4/0008-DHI.json",
+          "sha256": "2269C3FB0BAEA7F2005E48CA320C7029DB53333C7ACD14E7193D405DA159C5BB"
+        },
+        {
+          "symbol": "DHR",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T220008Z-cefe3e037db4/0009-DHR.json",
+          "sha256": "F3011E5BEB410E4CDFA550C3703ED8048A5C2A91CD4DA5F5563F89A5A97132BF"
+        },
+        {
+          "symbol": "DIS",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T220008Z-cefe3e037db4/0010-DIS.json",
+          "sha256": "7ACAD22476351B6F3CBB17787238DBAF666203A3FA76C652E7A69DF0AB1BAEEE"
+        },
+        {
+          "symbol": "DLTR",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T220008Z-cefe3e037db4/0011-DLTR.json",
+          "sha256": "8719ED276DAC67668289BD6672B3B5966DE8BEDF940AFC6FFA6D58BA34AB8DDF"
+        },
+        {
+          "symbol": "DOV",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T220008Z-cefe3e037db4/0012-DOV.json",
+          "sha256": "AFC8FDFB4B17B9F6063268859ECCD0728B21C5E17C5ED20EB6E9790B0A9EAA55"
+        },
+        {
+          "symbol": "DTE",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T220008Z-cefe3e037db4/0013-DTE.json",
+          "sha256": "4FB4E3770F2D06420B998BF0896F617378972F5CE55DEF165F2A5539DCFBC6A7"
+        },
+        {
+          "symbol": "DUK",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T220008Z-cefe3e037db4/0014-DUK.json",
+          "sha256": "328ABE39BDB5CD758B42223A3F92BE47FC810ECF62A758C7FD29DB90079CA21F"
+        },
+        {
+          "symbol": "DVA",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T220008Z-cefe3e037db4/0015-DVA.json",
+          "sha256": "272066D183C810F9A3DF5365F1658496A75B5D1D68C6BBCE73C82B1158B53C09"
+        },
+        {
+          "symbol": "DXCM",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T220008Z-cefe3e037db4/0016-DXCM.json",
+          "sha256": "8146066BCDE1D78A77353A14B3E79AEEA87B801866B7081A714CCC010FC1602C"
+        },
+        {
+          "symbol": "EA",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T220008Z-cefe3e037db4/0017-EA.json",
+          "sha256": "E2E7B7AAB74DCCCDE82CFEF3EEEC040011272339E75CBC05137EFB58D8BE3669"
+        },
+        {
+          "symbol": "EBAY",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T220008Z-cefe3e037db4/0018-EBAY.json",
+          "sha256": "A859A1E62B6539E45FCDCB567A682589FF2C66D85CBC56ABDB00BD31724B04D4"
+        },
+        {
+          "symbol": "ECL",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T220008Z-cefe3e037db4/0019-ECL.json",
+          "sha256": "7161DA240DAA2762C204C7FE38CA5D325C9384BBB38E7D7EC7445E9DA310326E"
+        },
+        {
+          "symbol": "ED",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T220008Z-cefe3e037db4/0020-ED.json",
+          "sha256": "82C81C061A9305C5151787DB5BB370BB97F7152C0C2C9E75522B4DC6A80D643B"
+        }
+      ],
+      "terminalPayloads": [
+        {
+          "symbol": "DASH",
+          "status": "SECURITY_INSUFFICIENT_DATA",
+          "contentHash": "5BCBE6E04649CF4B2845D3E67F8C83092427BE063BB4BD9FC478D44AB6ADBABE",
+          "storageReference": null
+        },
+        {
+          "symbol": "DD",
+          "status": "FORMULA_READY",
+          "contentHash": "169FF88D9C39CCCED7019BFAD53B39A5BD895938FEC117E4D3D35ADB196911BD",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/DD/169FF88D9C39CCCED7019BFAD53B39A5BD895938FEC117E4D3D35ADB196911BD.json"
+        },
+        {
+          "symbol": "DDOG",
+          "status": "FORMULA_READY",
+          "contentHash": "32482B6C298B743F6A224277BE13B2CDB135E5DA071AE299656754037BB9E4C3",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/DDOG/32482B6C298B743F6A224277BE13B2CDB135E5DA071AE299656754037BB9E4C3.json"
+        },
+        {
+          "symbol": "DE",
+          "status": "FORMULA_READY",
+          "contentHash": "A92EA191944EF7EB76C22AB0A1CE444AA43616B897B4714DED6C28A7DF3759FC",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/DE/A92EA191944EF7EB76C22AB0A1CE444AA43616B897B4714DED6C28A7DF3759FC.json"
+        },
+        {
+          "symbol": "DELL",
+          "status": "FORMULA_READY",
+          "contentHash": "434EEFB06209FFE20501F658B0BEC381D60AB71A05022215EF498C6BE0B7649D",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/DELL/434EEFB06209FFE20501F658B0BEC381D60AB71A05022215EF498C6BE0B7649D.json"
+        },
+        {
+          "symbol": "DG",
+          "status": "FORMULA_READY",
+          "contentHash": "FC8F88957EB1233C885239A137C17DD80D673DD0030E114641AB8A972E045F7B",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/DG/FC8F88957EB1233C885239A137C17DD80D673DD0030E114641AB8A972E045F7B.json"
+        },
+        {
+          "symbol": "DGX",
+          "status": "FORMULA_READY",
+          "contentHash": "85DFC37F2C3E521D0C8D13F27AAA1085A96A84F2CA0176D151C24135CF306689",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/DGX/85DFC37F2C3E521D0C8D13F27AAA1085A96A84F2CA0176D151C24135CF306689.json"
+        },
+        {
+          "symbol": "DHI",
+          "status": "SECURITY_INSUFFICIENT_DATA",
+          "contentHash": "98C7E2A9F2DA3C8FACD9CF5795673810E91BEB0F0D512246D48557F171D81588",
+          "storageReference": null
+        },
+        {
+          "symbol": "DHR",
+          "status": "FORMULA_READY",
+          "contentHash": "9AA562DCCF7BE58BFD2FD1001D44AD26A2FA2721C05C5EEBE57B0769BB589C7D",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/DHR/9AA562DCCF7BE58BFD2FD1001D44AD26A2FA2721C05C5EEBE57B0769BB589C7D.json"
+        },
+        {
+          "symbol": "DIS",
+          "status": "FORMULA_READY",
+          "contentHash": "82D2DB30FA452BFD325A9D75288811E6994AFE673953C85DCED1A1A5069E93F2",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/DIS/82D2DB30FA452BFD325A9D75288811E6994AFE673953C85DCED1A1A5069E93F2.json"
+        },
+        {
+          "symbol": "DLTR",
+          "status": "FORMULA_READY",
+          "contentHash": "C610211067578C16F83D14833871FC2133E2C783DC27BC6AD656BBCF89054433",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/DLTR/C610211067578C16F83D14833871FC2133E2C783DC27BC6AD656BBCF89054433.json"
+        },
+        {
+          "symbol": "DOV",
+          "status": "FORMULA_READY",
+          "contentHash": "DADF255EFB9CAE129135E79A8FAFB8A4FAD6D0A754F872DA31197914300EF54D",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/DOV/DADF255EFB9CAE129135E79A8FAFB8A4FAD6D0A754F872DA31197914300EF54D.json"
+        },
+        {
+          "symbol": "DTE",
+          "status": "FORMULA_READY",
+          "contentHash": "0A010384F701D753258469FEE2291993F2BD83EE9EA887CBE4A734F26277DED3",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/DTE/0A010384F701D753258469FEE2291993F2BD83EE9EA887CBE4A734F26277DED3.json"
+        },
+        {
+          "symbol": "DUK",
+          "status": "FORMULA_READY",
+          "contentHash": "42EA382E96E0463D6C1CA1F032F82AE6548C78FFDEBA71CF85AC074CD6AFC473",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/DUK/42EA382E96E0463D6C1CA1F032F82AE6548C78FFDEBA71CF85AC074CD6AFC473.json"
+        },
+        {
+          "symbol": "DVA",
+          "status": "FORMULA_READY",
+          "contentHash": "FB6EF3A7262E9C9083BA96287315C1AC70FA6549FE4CF3CD0DFE450ED4BA6FBB",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/DVA/FB6EF3A7262E9C9083BA96287315C1AC70FA6549FE4CF3CD0DFE450ED4BA6FBB.json"
+        },
+        {
+          "symbol": "DXCM",
+          "status": "FORMULA_READY",
+          "contentHash": "F8AA8353C6B516CB04E8A37D0D8E210C9807CA1BE4D73E4261CF554C5963B056",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/DXCM/F8AA8353C6B516CB04E8A37D0D8E210C9807CA1BE4D73E4261CF554C5963B056.json"
+        },
+        {
+          "symbol": "EA",
+          "status": "FORMULA_READY",
+          "contentHash": "23964CE62EE4F4B6E3A1C5BB39C71BC77A0B815C17004C9D86753A4678EDF0AD",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/EA/23964CE62EE4F4B6E3A1C5BB39C71BC77A0B815C17004C9D86753A4678EDF0AD.json"
+        },
+        {
+          "symbol": "EBAY",
+          "status": "FORMULA_READY",
+          "contentHash": "DF7173CBFB044DAFCDFD00B8745F9099690D592D69DF5BD2DCCECF44E53F5989",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/EBAY/DF7173CBFB044DAFCDFD00B8745F9099690D592D69DF5BD2DCCECF44E53F5989.json"
+        },
+        {
+          "symbol": "ECL",
+          "status": "FORMULA_READY",
+          "contentHash": "333A2B08A1D8A0BE510A2B70CD3A73FDD03F93FB30801AB37D35D1A53CDC40B4",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/ECL/333A2B08A1D8A0BE510A2B70CD3A73FDD03F93FB30801AB37D35D1A53CDC40B4.json"
+        },
+        {
+          "symbol": "ED",
+          "status": "FORMULA_READY",
+          "contentHash": "407722BF0C88CD326BF76C762B87730D0CD942DB8FDD296C65FE4A10D3D265B3",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/ED/407722BF0C88CD326BF76C762B87730D0CD942DB8FDD296C65FE4A10D3D265B3.json"
+        }
+      ]
+    },
+    {
+      "runId": "20260727T221100Z-3d5155171fc3",
+      "sliceId": "formula-ready-remaining-006",
+      "reportPath": "docs/generated/formula-ready-backfill-20260727T221100Z-3d5155171fc3.json",
+      "reportSha256": "A4FEC8A53CFE6613B226DF50EFB06A662FCB1BAAE00992E0ACBAC6E87123CF12",
+      "reportContentHash": "79064ECCE2D01BC2C2670C0F0521F3171CEB2925E759A047A8B912C74AA90F5C",
+      "preflightJournalPath": "storage/provider-validation/scoring-inputs-v2/physical-request-journals/20260727T221100Z-3d5155171fc3/run/000001-PREFLIGHT.json",
+      "preflightJournalSha256": "A0092C1984F2B1E8A1A34F7AE636061B2EE1A9E28C530E7831C726AF2AA85BE6",
+      "preflightEventHash": "3D3E9027A31CA7B7E80ED15A404ADB88651072AB7302B6363BA79CB3E62AE066",
+      "completeJournalPath": "storage/provider-validation/scoring-inputs-v2/physical-request-journals/20260727T221100Z-3d5155171fc3/run/000002-COMPLETE.json",
+      "completeJournalSha256": "A2E85E1007D2E9E70922A389C13229AF0B41175DEAD555DAD532DC2C14930114",
+      "completeEventHash": "497755015813C23AA7424E433E65951A44048BCED0D9355DF0CE9E2999B439EF",
+      "configuredLocalWeightCeiling": 240,
+      "checkpoints": [
+        {
+          "symbol": "EFX",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T221100Z-3d5155171fc3/0001-EFX.json",
+          "sha256": "AA84AC473040D4704491B534696F8F4B3E873F08175A5FA9214BFB3E12148A94"
+        },
+        {
+          "symbol": "EIX",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T221100Z-3d5155171fc3/0002-EIX.json",
+          "sha256": "0895142A67F99D026842D7B585690AD2742655BD0BBC065E929DEB4D193407EA"
+        },
+        {
+          "symbol": "EL",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T221100Z-3d5155171fc3/0003-EL.json",
+          "sha256": "1A5B9394DA3F5782CD29CC5285F294DE6768E3A0EC08386A39C99E051461528A"
+        },
+        {
+          "symbol": "ELF",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T221100Z-3d5155171fc3/0004-ELF.json",
+          "sha256": "D57FF2FB904B6D9F82C272DCBD47798F122173E87B8C13C03479944B73FC2D77"
+        },
+        {
+          "symbol": "ELV",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T221100Z-3d5155171fc3/0005-ELV.json",
+          "sha256": "EAE085D079FA7DA93591EC2D9FC9F96E239159DA46547703D03672C49122A216"
+        },
+        {
+          "symbol": "EME",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T221100Z-3d5155171fc3/0006-EME.json",
+          "sha256": "296FE291A272E528AFA0AB48E711E92F4E22E3D1947AD4E34475834F467F44BF"
+        },
+        {
+          "symbol": "EMR",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T221100Z-3d5155171fc3/0007-EMR.json",
+          "sha256": "184207FE70DEC6EF9DA415841C3135A0310F0B297AEE6D7FBA24264CBB5BBFF6"
+        },
+        {
+          "symbol": "ES",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T221100Z-3d5155171fc3/0008-ES.json",
+          "sha256": "6459E1A988902B7D4F37ADFDC3935B765AEF787879C20DCBB32778CA00A06C0F"
+        },
+        {
+          "symbol": "ETN",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T221100Z-3d5155171fc3/0009-ETN.json",
+          "sha256": "2386231BE89D06BCEAC74F142EE30425EBFDAFAA6893A90FC34E8B8B960E5D29"
+        },
+        {
+          "symbol": "ETR",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T221100Z-3d5155171fc3/0010-ETR.json",
+          "sha256": "B810D3A6020B80168938724E5B8110642BAC53106BA16141A749433B3E63EF10"
+        },
+        {
+          "symbol": "EVRG",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T221100Z-3d5155171fc3/0011-EVRG.json",
+          "sha256": "727E63550991707F46A43AE181A7CBCBCBC2AE82FAADC00CEA898010A0AAB225"
+        },
+        {
+          "symbol": "EXC",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T221100Z-3d5155171fc3/0012-EXC.json",
+          "sha256": "FB73FA8FA5B823ACE568C6C197CCCA8AE15482D0070FFE9C2D93C4D11E1F2981"
+        },
+        {
+          "symbol": "EXPD",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T221100Z-3d5155171fc3/0013-EXPD.json",
+          "sha256": "24A2526730E38C4EE3A842B7E764F83EC7DD82CCA166CE837B340EF6FB37D992"
+        },
+        {
+          "symbol": "EXPE",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T221100Z-3d5155171fc3/0014-EXPE.json",
+          "sha256": "B849302F86E6C3F7ABA7A5367F201BE0E4310D5085E024247B318406F1CCAC54"
+        },
+        {
+          "symbol": "F",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T221100Z-3d5155171fc3/0015-F.json",
+          "sha256": "5DE94E31C7B338C49EA1E0BC7979F5E14D5E3D958C4F7B3BC5E93B151A763213"
+        },
+        {
+          "symbol": "FAST",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T221100Z-3d5155171fc3/0016-FAST.json",
+          "sha256": "ACF94545DA904F1EFDD812FBEF9B80D2D033A7445796D9531669C3B63D50C8A3"
+        },
+        {
+          "symbol": "FDX",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T221100Z-3d5155171fc3/0017-FDX.json",
+          "sha256": "B859D5434E012D3FDEE77E5328E270C8BA0201B122F4A660B188FC99DB05C46D"
+        },
+        {
+          "symbol": "FE",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T221100Z-3d5155171fc3/0018-FE.json",
+          "sha256": "4B8881F5278ABE446F8611E0F49F98A535AFAC25B6E8DD64F8BD79D27A4F2216"
+        },
+        {
+          "symbol": "FFIV",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T221100Z-3d5155171fc3/0019-FFIV.json",
+          "sha256": "8390E9982A985CBE428363D0744E477D1FBDFF1B8B7918D6BBE48FEF0BD31C4D"
+        },
+        {
+          "symbol": "FICO",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T221100Z-3d5155171fc3/0020-FICO.json",
+          "sha256": "ACB01B05E56EB3D77BDF2CE4C19A09DBB103CFA4D33AF9118FB68005D69FE650"
+        }
+      ],
+      "terminalPayloads": [
+        {
+          "symbol": "EFX",
+          "status": "FORMULA_READY",
+          "contentHash": "ECED3A8992D0DDE6668D9B2193177FBD8F1287C3ADFA8E0AA85C3869ECAFD335",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/EFX/ECED3A8992D0DDE6668D9B2193177FBD8F1287C3ADFA8E0AA85C3869ECAFD335.json"
+        },
+        {
+          "symbol": "EIX",
+          "status": "FORMULA_READY",
+          "contentHash": "D917D27E06BFB86668658140207F8300E5FFF5571326777E8E2FCFFDC18FD179",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/EIX/D917D27E06BFB86668658140207F8300E5FFF5571326777E8E2FCFFDC18FD179.json"
+        },
+        {
+          "symbol": "EL",
+          "status": "FORMULA_READY",
+          "contentHash": "58F6F89F09368C79A6638FC6FDBEC57E308B951C01C89E30EFF0BDB9EA05C0AB",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/EL/58F6F89F09368C79A6638FC6FDBEC57E308B951C01C89E30EFF0BDB9EA05C0AB.json"
+        },
+        {
+          "symbol": "ELF",
+          "status": "FORMULA_READY",
+          "contentHash": "92959D012C4525C3128177F99A83E32DB894D3F7B8400BF6B182FC45E12A5DEA",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/ELF/92959D012C4525C3128177F99A83E32DB894D3F7B8400BF6B182FC45E12A5DEA.json"
+        },
+        {
+          "symbol": "ELV",
+          "status": "FORMULA_READY",
+          "contentHash": "89557BF01A4308333FF0FCA164E534F22ED441B23339A846CFA3A33B4BAF9CE5",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/ELV/89557BF01A4308333FF0FCA164E534F22ED441B23339A846CFA3A33B4BAF9CE5.json"
+        },
+        {
+          "symbol": "EME",
+          "status": "FORMULA_READY",
+          "contentHash": "8B3F5A6501E7A753E3C7FA16D325F70F1158D3753BFD2437CC5A67F02C91F246",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/EME/8B3F5A6501E7A753E3C7FA16D325F70F1158D3753BFD2437CC5A67F02C91F246.json"
+        },
+        {
+          "symbol": "EMR",
+          "status": "FORMULA_READY",
+          "contentHash": "2FE913F8FC606E595F8FC531B20012D0CDCF693CD41BC1842A09221C16315E95",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/EMR/2FE913F8FC606E595F8FC531B20012D0CDCF693CD41BC1842A09221C16315E95.json"
+        },
+        {
+          "symbol": "ES",
+          "status": "FORMULA_READY",
+          "contentHash": "EF349219589C2E25D650749AE37DF526F569F57FA57C4151316DDDBB6407EB3F",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/ES/EF349219589C2E25D650749AE37DF526F569F57FA57C4151316DDDBB6407EB3F.json"
+        },
+        {
+          "symbol": "ETN",
+          "status": "FORMULA_READY",
+          "contentHash": "23A36F7F2D9056580BA7C5361FE899C787B45E34C4C97CBD94D0C0828B00CA0A",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/ETN/23A36F7F2D9056580BA7C5361FE899C787B45E34C4C97CBD94D0C0828B00CA0A.json"
+        },
+        {
+          "symbol": "ETR",
+          "status": "FORMULA_READY",
+          "contentHash": "1ED66A262609308041A518C453F9AD4F7D2B761B0AC8FBBF79A9209A75EF66E1",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/ETR/1ED66A262609308041A518C453F9AD4F7D2B761B0AC8FBBF79A9209A75EF66E1.json"
+        },
+        {
+          "symbol": "EVRG",
+          "status": "FORMULA_READY",
+          "contentHash": "98D7216BB7E67DF8918FB1A2503DB921AF3903B82B8886AF76EFEEE6A4BA9CE1",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/EVRG/98D7216BB7E67DF8918FB1A2503DB921AF3903B82B8886AF76EFEEE6A4BA9CE1.json"
+        },
+        {
+          "symbol": "EXC",
+          "status": "FORMULA_READY",
+          "contentHash": "20D187AFAAAC0846DD1ABE5A02DDD7BECA25E0D2A3E3D089F3D694F27F702A75",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/EXC/20D187AFAAAC0846DD1ABE5A02DDD7BECA25E0D2A3E3D089F3D694F27F702A75.json"
+        },
+        {
+          "symbol": "EXPD",
+          "status": "SECURITY_INSUFFICIENT_DATA",
+          "contentHash": "7297D9E9208D431453EDE577C210E439CAE6BED3CFBBCD4244F3B4AECDCC5E8D",
+          "storageReference": null
+        },
+        {
+          "symbol": "EXPE",
+          "status": "FORMULA_READY",
+          "contentHash": "B144831724F7F072B49346D30C49AB7AF5E1224FD2DA3E025E24D3BE9DFFA0B7",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/EXPE/B144831724F7F072B49346D30C49AB7AF5E1224FD2DA3E025E24D3BE9DFFA0B7.json"
+        },
+        {
+          "symbol": "F",
+          "status": "FORMULA_READY",
+          "contentHash": "AAB6F03BFBEE55B034343FE895E604C5603CE56AA59D32C8B99F7D6279440B9E",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/F/AAB6F03BFBEE55B034343FE895E604C5603CE56AA59D32C8B99F7D6279440B9E.json"
+        },
+        {
+          "symbol": "FAST",
+          "status": "FORMULA_READY",
+          "contentHash": "F0B5055CEED101682BBFE3D83A6E14AC592865910B1FC954AA891BF385611A2E",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/FAST/F0B5055CEED101682BBFE3D83A6E14AC592865910B1FC954AA891BF385611A2E.json"
+        },
+        {
+          "symbol": "FDX",
+          "status": "FORMULA_READY",
+          "contentHash": "AE7C3C442C378BB14807553BAB626D01351CBCE49B07AE519A682D3B05DD61D5",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/FDX/AE7C3C442C378BB14807553BAB626D01351CBCE49B07AE519A682D3B05DD61D5.json"
+        },
+        {
+          "symbol": "FE",
+          "status": "FORMULA_READY",
+          "contentHash": "9679460C40B42013086B884A14FD0EBB01946E5B810504F8FE1AC2E3620CC6B4",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/FE/9679460C40B42013086B884A14FD0EBB01946E5B810504F8FE1AC2E3620CC6B4.json"
+        },
+        {
+          "symbol": "FFIV",
+          "status": "SECURITY_INSUFFICIENT_DATA",
+          "contentHash": "D2671C99C1BCD83CE84B286300BF460834CA75C415088554C5F61F462DBFAD47",
+          "storageReference": null
+        },
+        {
+          "symbol": "FICO",
+          "status": "FORMULA_READY",
+          "contentHash": "C5459025CF5A352805F2584E8854B9400D1C5752052C764B1CDB99EA5E577683",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/FICO/C5459025CF5A352805F2584E8854B9400D1C5752052C764B1CDB99EA5E577683.json"
+        }
+      ]
+    },
+    {
+      "runId": "20260727T222133Z-0013d26412cf",
+      "sliceId": "formula-ready-remaining-007",
+      "reportPath": "docs/generated/formula-ready-backfill-20260727T222133Z-0013d26412cf.json",
+      "reportSha256": "5DFD07D021A537929BC3207D1434366672909B9D13C64FED7107FBE9B609B871",
+      "reportContentHash": "AC70FF91ECD1913F13654650836073BCDE2375C7143FDE8DB6FB7D2D502D318D",
+      "preflightJournalPath": "storage/provider-validation/scoring-inputs-v2/physical-request-journals/20260727T222133Z-0013d26412cf/run/000001-PREFLIGHT.json",
+      "preflightJournalSha256": "2F6D8B94E33FA3F25C234073DBC2DD79D47A0BA3B3741A7FBB7FE270FE8F8CC9",
+      "preflightEventHash": "5931E5EFFE54427FE9A3FE0303FE72275613B8DC668FA61E88AA0541A28C6447",
+      "completeJournalPath": "storage/provider-validation/scoring-inputs-v2/physical-request-journals/20260727T222133Z-0013d26412cf/run/000002-COMPLETE.json",
+      "completeJournalSha256": "4402E90BD11B984FB584DCA3B4CB1F93C9F613F86AA1647C4A7939D270F2BA38",
+      "completeEventHash": "267A84726ABEABA9ED82EA4DF36D9BC6882BED5150A96FD44DDD1056D2FF87D9",
+      "configuredLocalWeightCeiling": 240,
+      "checkpoints": [
+        {
+          "symbol": "FIX",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T222133Z-0013d26412cf/0001-FIX.json",
+          "sha256": "F5530FE862BF620C1598E587D757D0162E31E4CDA2529746B334CFD9D7990042"
+        },
+        {
+          "symbol": "FLEX",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T222133Z-0013d26412cf/0002-FLEX.json",
+          "sha256": "D1AEF97726AF72ED9AE9EA4D3720A1F83219CB38E3FD6AD9CBDAD94FEDB6850B"
+        },
+        {
+          "symbol": "FOX",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T222133Z-0013d26412cf/0003-FOX.json",
+          "sha256": "33F7613E04308AF237DBEC9BF38341E23676FCE5C0DC55829A816D4B4083A6CF"
+        },
+        {
+          "symbol": "FOXA",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T222133Z-0013d26412cf/0004-FOXA.json",
+          "sha256": "C0C473F7A91F267FFDE621AF9D0EE8E033900840C462421516A20EBF896FBF1C"
+        },
+        {
+          "symbol": "FSLR",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T222133Z-0013d26412cf/0005-FSLR.json",
+          "sha256": "3B33F62FA8277E6D09103F406646695F2702EB1AE8C0C4A18F2C813D752B4F53"
+        },
+        {
+          "symbol": "FTV",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T222133Z-0013d26412cf/0006-FTV.json",
+          "sha256": "36CC848423D4CE56EF4DF67C4F4C3445D1B3B119FD251B15E65E391DB378EBD8"
+        },
+        {
+          "symbol": "GD",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T222133Z-0013d26412cf/0007-GD.json",
+          "sha256": "9F150F359C2C537D1D5557FC91EAB6764B051DF1B32D1A53481F968FCA7529AC"
+        },
+        {
+          "symbol": "GEHC",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T222133Z-0013d26412cf/0008-GEHC.json",
+          "sha256": "638BF6202A1D4AEF594FB65AE41AD22E589D1DF38372183D5A904665316DFC1E"
+        },
+        {
+          "symbol": "GIS",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T222133Z-0013d26412cf/0009-GIS.json",
+          "sha256": "5A880405C969210936CAFE8DF796424D636F7D64BA7BCAA56C1AA96919937A8A"
+        },
+        {
+          "symbol": "GM",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T222133Z-0013d26412cf/0010-GM.json",
+          "sha256": "11F71B2E630D1BB5F076C957F26DB96F2A9D09CBEC2B3E03CB69D0BEE42C3525"
+        },
+        {
+          "symbol": "GOOG",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T222133Z-0013d26412cf/0011-GOOG.json",
+          "sha256": "83F6B0CC53A0566F52D480CC0DB9ED6284B095DDD0C70193AA24BADFF7D36A7D"
+        },
+        {
+          "symbol": "GOOGL",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T222133Z-0013d26412cf/0012-GOOGL.json",
+          "sha256": "E6A373CD22418921D4462D03E73CAE442736FCB200CD982EAA950F7F42D62BBF"
+        },
+        {
+          "symbol": "GPC",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T222133Z-0013d26412cf/0013-GPC.json",
+          "sha256": "436EDBE29F71FF4452A16F95DF8576CFDBBFCD3C977E96D87E8A7174FEE86E86"
+        },
+        {
+          "symbol": "GRMN",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T222133Z-0013d26412cf/0014-GRMN.json",
+          "sha256": "F4C2AF2A3AF860E89112010BA4FC984E8A9D2F48199B9473D35361F6F1D3E762"
+        },
+        {
+          "symbol": "GWW",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T222133Z-0013d26412cf/0015-GWW.json",
+          "sha256": "C1754836A9771719F7FB88D8B70EB41C62E3A6E4082023DFBE1E1E8B4A75198E"
+        },
+        {
+          "symbol": "HD",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T222133Z-0013d26412cf/0016-HD.json",
+          "sha256": "CFA7B8C1BAFE3BCA8EA5BE4481E80830E35BA2C1B633A1390470BDA3B025A726"
+        },
+        {
+          "symbol": "HLT",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T222133Z-0013d26412cf/0017-HLT.json",
+          "sha256": "06CF409CA75233CBD1731E34D2C6998AC3D0C96704B3C37950D9BE506D47FE37"
+        },
+        {
+          "symbol": "HON",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T222133Z-0013d26412cf/0018-HON.json",
+          "sha256": "C564913770540D174E4B1EA898763990527F62DB3181063A704EC36E1AEAA00B"
+        },
+        {
+          "symbol": "HRL",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T222133Z-0013d26412cf/0019-HRL.json",
+          "sha256": "D189DA29BFA349EAA8E9678AE2FAEAB950C446E89060891F7C29032C3B82DF10"
+        },
+        {
+          "symbol": "HSIC",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T222133Z-0013d26412cf/0020-HSIC.json",
+          "sha256": "3775D239C244E1301E02BA2EF53455AB938D4ECC3507CD061C1F18275396EB7F"
+        }
+      ],
+      "terminalPayloads": [
+        {
+          "symbol": "FIX",
+          "status": "FORMULA_READY",
+          "contentHash": "4DCCFDDE38213EDC0140F118025CCC3D769A1DA39356551CF442EBC5DD4EBD70",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/FIX/4DCCFDDE38213EDC0140F118025CCC3D769A1DA39356551CF442EBC5DD4EBD70.json"
+        },
+        {
+          "symbol": "FLEX",
+          "status": "FORMULA_READY",
+          "contentHash": "6EB5B37632DCA092CFA25BEF7409A59BDD2CD1B34CF3BC85CE34CF3505C2EA16",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/FLEX/6EB5B37632DCA092CFA25BEF7409A59BDD2CD1B34CF3BC85CE34CF3505C2EA16.json"
+        },
+        {
+          "symbol": "FOX",
+          "status": "FORMULA_READY",
+          "contentHash": "FF83B25B29577B4EE60968AE94AE47D57ABB51CA6D6F17441A2AF54C62E191EF",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/FOX/FF83B25B29577B4EE60968AE94AE47D57ABB51CA6D6F17441A2AF54C62E191EF.json"
+        },
+        {
+          "symbol": "FOXA",
+          "status": "FORMULA_READY",
+          "contentHash": "6D8329BDC377598C6BE428E30491136D46FF52AA9CEC23D006C61E045BA7AB74",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/FOXA/6D8329BDC377598C6BE428E30491136D46FF52AA9CEC23D006C61E045BA7AB74.json"
+        },
+        {
+          "symbol": "FSLR",
+          "status": "FORMULA_READY",
+          "contentHash": "172CA06A3005A07EC0AF3DBC8101FCBC73775C34BEF76EE605306DC375CBDBFC",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/FSLR/172CA06A3005A07EC0AF3DBC8101FCBC73775C34BEF76EE605306DC375CBDBFC.json"
+        },
+        {
+          "symbol": "FTV",
+          "status": "FORMULA_READY",
+          "contentHash": "1537FA380DAFBD4D0A5A2A5DA22FC275E2F4E0DBAFD8C2D0AD9294400C019EA0",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/FTV/1537FA380DAFBD4D0A5A2A5DA22FC275E2F4E0DBAFD8C2D0AD9294400C019EA0.json"
+        },
+        {
+          "symbol": "GD",
+          "status": "FORMULA_READY",
+          "contentHash": "C0A79F9C976899E14BB7F0D4E645ADF15FAF0FB26427E126AA2162004033707A",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/GD/C0A79F9C976899E14BB7F0D4E645ADF15FAF0FB26427E126AA2162004033707A.json"
+        },
+        {
+          "symbol": "GEHC",
+          "status": "FORMULA_READY",
+          "contentHash": "886B94100C1AC4369DF23258903A840DAD19B4A9FA76C2A005FDE6E092A4FDAC",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/GEHC/886B94100C1AC4369DF23258903A840DAD19B4A9FA76C2A005FDE6E092A4FDAC.json"
+        },
+        {
+          "symbol": "GIS",
+          "status": "FORMULA_READY",
+          "contentHash": "540EA283FC3242D38E834AE3DE818C8A0A57C2579E924A6D332F5ED703A44A8B",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/GIS/540EA283FC3242D38E834AE3DE818C8A0A57C2579E924A6D332F5ED703A44A8B.json"
+        },
+        {
+          "symbol": "GM",
+          "status": "FORMULA_READY",
+          "contentHash": "55C020E6247068050B185E3EDCCD64888738047AE64E10A075B168F413834923",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/GM/55C020E6247068050B185E3EDCCD64888738047AE64E10A075B168F413834923.json"
+        },
+        {
+          "symbol": "GOOG",
+          "status": "FORMULA_READY",
+          "contentHash": "E0DC7207E4E00E8AC501170D642CA10FE0A2C0B47359DD3F77292D14D14FC947",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/GOOG/E0DC7207E4E00E8AC501170D642CA10FE0A2C0B47359DD3F77292D14D14FC947.json"
+        },
+        {
+          "symbol": "GOOGL",
+          "status": "FORMULA_READY",
+          "contentHash": "790C05E06D0FB10B41F194B2BE65290E8F425643470F75A48E54C884A9BA3D00",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/GOOGL/790C05E06D0FB10B41F194B2BE65290E8F425643470F75A48E54C884A9BA3D00.json"
+        },
+        {
+          "symbol": "GPC",
+          "status": "FORMULA_READY",
+          "contentHash": "CDCF8B92EC3AB379FA48EB2434130CCD4179A0B8988D2F3DF0E7A97B2791A0D5",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/GPC/CDCF8B92EC3AB379FA48EB2434130CCD4179A0B8988D2F3DF0E7A97B2791A0D5.json"
+        },
+        {
+          "symbol": "GRMN",
+          "status": "SECURITY_INSUFFICIENT_DATA",
+          "contentHash": "484748E041D1C700DF4915191CA00D5A08C7449415E50EA3694D59F4E9095676",
+          "storageReference": null
+        },
+        {
+          "symbol": "GWW",
+          "status": "FORMULA_READY",
+          "contentHash": "08EF17310D517628ABCA764D79E8B3E7A1B4E88A9BC3D6BF862AB02C811AC3B5",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/GWW/08EF17310D517628ABCA764D79E8B3E7A1B4E88A9BC3D6BF862AB02C811AC3B5.json"
+        },
+        {
+          "symbol": "HD",
+          "status": "FORMULA_READY",
+          "contentHash": "FD8EB5CD5648AB49F5F79B5F26F5A0AA1D47E423EA11C9E6D779EE5835562282",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/HD/FD8EB5CD5648AB49F5F79B5F26F5A0AA1D47E423EA11C9E6D779EE5835562282.json"
+        },
+        {
+          "symbol": "HLT",
+          "status": "FORMULA_READY",
+          "contentHash": "EC02473AC44EA7F06397466CC867E0884519EA961A802AED766F6209955A18FC",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/HLT/EC02473AC44EA7F06397466CC867E0884519EA961A802AED766F6209955A18FC.json"
+        },
+        {
+          "symbol": "HON",
+          "status": "FORMULA_READY",
+          "contentHash": "2A2471B428ECA26FD5296BDD3DB9B45EC92E825FDEE7FA956078032855C1378E",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/HON/2A2471B428ECA26FD5296BDD3DB9B45EC92E825FDEE7FA956078032855C1378E.json"
+        },
+        {
+          "symbol": "HRL",
+          "status": "FORMULA_READY",
+          "contentHash": "E1DB620901FBBD6E7B1F060683E3D50F446FE88360EB8122B3D69CBC54C034A7",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/HRL/E1DB620901FBBD6E7B1F060683E3D50F446FE88360EB8122B3D69CBC54C034A7.json"
+        },
+        {
+          "symbol": "HSIC",
+          "status": "FORMULA_READY",
+          "contentHash": "B95AEA9E2A0DA3F22E6657896A94F56ABACFA2313C962FF77F965D0A4833FA61",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/HSIC/B95AEA9E2A0DA3F22E6657896A94F56ABACFA2313C962FF77F965D0A4833FA61.json"
+        }
+      ]
+    },
+    {
+      "runId": "20260727T223144Z-bd6ef4148723",
+      "sliceId": "formula-ready-remaining-008",
+      "reportPath": "docs/generated/formula-ready-backfill-20260727T223144Z-bd6ef4148723.json",
+      "reportSha256": "254174FE988F178F93252AB2AF5E4A22EA11AFE00748C47F6482834EA90A0467",
+      "reportContentHash": "B93B426FC1046841CC80FE2D0B91F1246320129BC250CB4973143B6BB52AC903",
+      "preflightJournalPath": "storage/provider-validation/scoring-inputs-v2/physical-request-journals/20260727T223144Z-bd6ef4148723/run/000001-PREFLIGHT.json",
+      "preflightJournalSha256": "375B70A8F572C30C31B7423B8E1960B9C6E5DB4E09F873CE653C3C386F2095FA",
+      "preflightEventHash": "4A6865FDCB61988898CA2D3976458BFAB8CE0B5B0BEB6658468FAACB7F736EE8",
+      "completeJournalPath": "storage/provider-validation/scoring-inputs-v2/physical-request-journals/20260727T223144Z-bd6ef4148723/run/000002-COMPLETE.json",
+      "completeJournalSha256": "FD72D907C497986B2EF24454FEBCEE2013C35C28A36F594A62C247DC16FE9AD4",
+      "completeEventHash": "E41F6B4AA98EE5285938D86174049EAB4E6506094ACDB989FE37032704ADEB97",
+      "configuredLocalWeightCeiling": 240,
+      "checkpoints": [
+        {
+          "symbol": "HSY",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T223144Z-bd6ef4148723/0001-HSY.json",
+          "sha256": "9935F4F870BC47B23EAD087B651F14EB3D22043F2AA385AD29FDE8502284D384"
+        },
+        {
+          "symbol": "HUM",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T223144Z-bd6ef4148723/0002-HUM.json",
+          "sha256": "D906F294B0CC2E1BD968DE0DD0D9B8DD5F418644CD3063C8980511B07ED4DDD0"
+        },
+        {
+          "symbol": "HWKN",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T223144Z-bd6ef4148723/0003-HWKN.json",
+          "sha256": "ADD6A74F8D9EE2632A9A25DCD1CD1262FEE83EB9009419283C0B0A871760E0B9"
+        },
+        {
+          "symbol": "IBM",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T223144Z-bd6ef4148723/0004-IBM.json",
+          "sha256": "B3EDE80DE059206A677A8939A4A10E3906B192C175810B95E78401C68A961E25"
+        },
+        {
+          "symbol": "IDXX",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T223144Z-bd6ef4148723/0005-IDXX.json",
+          "sha256": "E339B3858BFCABBBBF831987B49AECA91EA187FD5F564CA00E38E0B7284EE34D"
+        },
+        {
+          "symbol": "IFF",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T223144Z-bd6ef4148723/0006-IFF.json",
+          "sha256": "459171A9D4FDCC81A93BAB21577BC8D46638B1D941CCFC326E0E933DDF8DA725"
+        },
+        {
+          "symbol": "INTU",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T223144Z-bd6ef4148723/0007-INTU.json",
+          "sha256": "1BF4E6423646F30A5186BF9B2B34432D34593C38A60F4522AAD7AEDB983E48E0"
+        },
+        {
+          "symbol": "IP",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T223144Z-bd6ef4148723/0008-IP.json",
+          "sha256": "B7A754C2DA6BC8752B66EB5AEA15D4930D26C4F1B0C874DA813F87DF6D86AF0C"
+        },
+        {
+          "symbol": "IQV",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T223144Z-bd6ef4148723/0009-IQV.json",
+          "sha256": "B79FD3A732FB5554DD6C0B1E58B5D929BCF822A26E39209BCFAEBBE474986F93"
+        },
+        {
+          "symbol": "ISRG",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T223144Z-bd6ef4148723/0010-ISRG.json",
+          "sha256": "90A901B35E12C575FBC81A6DEEE9CCFB73B481BDBCC45D95BEC53BAF82339FFC"
+        },
+        {
+          "symbol": "ITW",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T223144Z-bd6ef4148723/0011-ITW.json",
+          "sha256": "31DDFDAFF2D72192D9607195BDAD21B4DD8432B9FD905DB03C97201B06E2044B"
+        },
+        {
+          "symbol": "KDP",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T223144Z-bd6ef4148723/0012-KDP.json",
+          "sha256": "1C7EA92B0FF51C42A9FCB14697993BDB68049771E379FE2A8520ED5B2AAFF442"
+        },
+        {
+          "symbol": "KHC",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T223144Z-bd6ef4148723/0013-KHC.json",
+          "sha256": "95012546A07DC9F35CD12CC56A38EAFBCD63B9F9C94281241144E3F317C9258A"
+        },
+        {
+          "symbol": "KLAC",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T223144Z-bd6ef4148723/0014-KLAC.json",
+          "sha256": "C8F06306C37B5D21B3397D4C5845925E49BDCDE1328E61B7947ADD9CBB6415E9"
+        },
+        {
+          "symbol": "KMB",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T223144Z-bd6ef4148723/0015-KMB.json",
+          "sha256": "2A3D083327E7D415D90374D3DBF6A69F3037E8CFE3B0906E86B6190D9B3BDD23"
+        },
+        {
+          "symbol": "KO",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T223144Z-bd6ef4148723/0016-KO.json",
+          "sha256": "067E354730F69914014A4E37F285A72314AF292D4680295AC847607E4D16FB8A"
+        },
+        {
+          "symbol": "KVUE",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T223144Z-bd6ef4148723/0017-KVUE.json",
+          "sha256": "20D2A7DF9F866B1D5B3667BDBF2212A744E14D19191FDDEEEC8018BBE85C9FCB"
+        },
+        {
+          "symbol": "LEN",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T223144Z-bd6ef4148723/0018-LEN.json",
+          "sha256": "93CBB531B9AAF55CA4BF26FE62BCADA8057D57890BA3B19394280C97273277C6"
+        },
+        {
+          "symbol": "LH",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T223144Z-bd6ef4148723/0019-LH.json",
+          "sha256": "D30157E057FBAE2A8CCC2120C944A93B0BE0852B027A95D8B42B7ED581BFF08C"
+        },
+        {
+          "symbol": "LIN",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T223144Z-bd6ef4148723/0020-LIN.json",
+          "sha256": "B9E856FF01E1D16C851B776ECE3A548A44241CF6132440F183EE287BF55EA192"
+        }
+      ],
+      "terminalPayloads": [
+        {
+          "symbol": "HSY",
+          "status": "SECURITY_INSUFFICIENT_DATA",
+          "contentHash": "72E0AA5C1E3FAF9B619A99A42034BAC0C7A4DBAC319E945FFAEC4D0B552F0968",
+          "storageReference": null
+        },
+        {
+          "symbol": "HUM",
+          "status": "FORMULA_READY",
+          "contentHash": "082AA67ECB6712C210838FE29EF7A663F292F4BCEB9B6E8E75A4502D1C9120EF",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/HUM/082AA67ECB6712C210838FE29EF7A663F292F4BCEB9B6E8E75A4502D1C9120EF.json"
+        },
+        {
+          "symbol": "HWKN",
+          "status": "FORMULA_READY",
+          "contentHash": "7A3102461A924A3371E41ACEAE25E070545522D48C63DEF593443228AE6F60EB",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/HWKN/7A3102461A924A3371E41ACEAE25E070545522D48C63DEF593443228AE6F60EB.json"
+        },
+        {
+          "symbol": "IBM",
+          "status": "FORMULA_READY",
+          "contentHash": "4CB503B6578E2859952B871344CF543849F2945C0BE17DDAA86B79429D698F37",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/IBM/4CB503B6578E2859952B871344CF543849F2945C0BE17DDAA86B79429D698F37.json"
+        },
+        {
+          "symbol": "IDXX",
+          "status": "FORMULA_READY",
+          "contentHash": "5C0DCC296433E9B0F43ED4A4480B7103C16929701ED832D3E367C612A36AE666",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/IDXX/5C0DCC296433E9B0F43ED4A4480B7103C16929701ED832D3E367C612A36AE666.json"
+        },
+        {
+          "symbol": "IFF",
+          "status": "FORMULA_READY",
+          "contentHash": "2FE884696C1C51BA0D1D8BB73F3378271867580EB70E999A5E360EDCB0852A24",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/IFF/2FE884696C1C51BA0D1D8BB73F3378271867580EB70E999A5E360EDCB0852A24.json"
+        },
+        {
+          "symbol": "INTU",
+          "status": "FORMULA_READY",
+          "contentHash": "269C319FB473F417BB5B7CFD5126BE4558B94D7D3659F3551D236ED596CDD70D",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/INTU/269C319FB473F417BB5B7CFD5126BE4558B94D7D3659F3551D236ED596CDD70D.json"
+        },
+        {
+          "symbol": "IP",
+          "status": "FORMULA_READY",
+          "contentHash": "EDA15E4CD1AF10F1C801A9B9949949CD2440F57B498ED5069D7DBB682DA7E814",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/IP/EDA15E4CD1AF10F1C801A9B9949949CD2440F57B498ED5069D7DBB682DA7E814.json"
+        },
+        {
+          "symbol": "IQV",
+          "status": "FORMULA_READY",
+          "contentHash": "55B7745AEAFD626910EC5BEAEC617A6D2F597ED58C0893AC85F97077382EDCA2",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/IQV/55B7745AEAFD626910EC5BEAEC617A6D2F597ED58C0893AC85F97077382EDCA2.json"
+        },
+        {
+          "symbol": "ISRG",
+          "status": "SECURITY_INSUFFICIENT_DATA",
+          "contentHash": "D1BF27FF13C32FDA557A0ABB01F1EA65596EF92A900D4147AA300AD8EE026283",
+          "storageReference": null
+        },
+        {
+          "symbol": "ITW",
+          "status": "FORMULA_READY",
+          "contentHash": "F1789CADDD1DC7A2FC1782D69DB0BB40436F3ECFE02C666B8B654F0493DC2C52",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/ITW/F1789CADDD1DC7A2FC1782D69DB0BB40436F3ECFE02C666B8B654F0493DC2C52.json"
+        },
+        {
+          "symbol": "KDP",
+          "status": "FORMULA_READY",
+          "contentHash": "286B07D0FEFE1681145FDA0E0D5CBA0CBD2D54180E4F77DF7D44E449C5A640A9",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/KDP/286B07D0FEFE1681145FDA0E0D5CBA0CBD2D54180E4F77DF7D44E449C5A640A9.json"
+        },
+        {
+          "symbol": "KHC",
+          "status": "FORMULA_READY",
+          "contentHash": "BCDA41790D7BC2F394CF3AE46EADBCDC7E5AD904E0184FB11B6B1628557B4803",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/KHC/BCDA41790D7BC2F394CF3AE46EADBCDC7E5AD904E0184FB11B6B1628557B4803.json"
+        },
+        {
+          "symbol": "KLAC",
+          "status": "FORMULA_READY",
+          "contentHash": "A5735A703B53B90B4CDD4DBEB0AB084530720DC70BC18E3000262D26455BCF3F",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/KLAC/A5735A703B53B90B4CDD4DBEB0AB084530720DC70BC18E3000262D26455BCF3F.json"
+        },
+        {
+          "symbol": "KMB",
+          "status": "FORMULA_READY",
+          "contentHash": "A90B3755C96A2705D44B2395FD72C224D6DB1B958D2F74FD00B5A8271B264DDA",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/KMB/A90B3755C96A2705D44B2395FD72C224D6DB1B958D2F74FD00B5A8271B264DDA.json"
+        },
+        {
+          "symbol": "KO",
+          "status": "FORMULA_READY",
+          "contentHash": "976E9744BB90931236D52A120660152CF183A73DEDF2A622BA803E1BC5DC4B7B",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/KO/976E9744BB90931236D52A120660152CF183A73DEDF2A622BA803E1BC5DC4B7B.json"
+        },
+        {
+          "symbol": "KVUE",
+          "status": "FORMULA_READY",
+          "contentHash": "A29C6C47689E0862074E873C1738D025A28BC8EA57F7190B4AF06E0241533892",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/KVUE/A29C6C47689E0862074E873C1738D025A28BC8EA57F7190B4AF06E0241533892.json"
+        },
+        {
+          "symbol": "LEN",
+          "status": "FORMULA_READY",
+          "contentHash": "693269DF43A3FF180854C304F8C062E00D78499789638E4EA3C5232FEB73EB38",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/LEN/693269DF43A3FF180854C304F8C062E00D78499789638E4EA3C5232FEB73EB38.json"
+        },
+        {
+          "symbol": "LH",
+          "status": "FORMULA_READY",
+          "contentHash": "0E40B39E48814B955BCE7CA5D239F092B18DD950BE42642C070CBBAC44007EF1",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/LH/0E40B39E48814B955BCE7CA5D239F092B18DD950BE42642C070CBBAC44007EF1.json"
+        },
+        {
+          "symbol": "LIN",
+          "status": "FORMULA_READY",
+          "contentHash": "C41EBED6932CFCE000217A4BA2AF1825A097C49EF167FE6D6566DA0E67856123",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/LIN/C41EBED6932CFCE000217A4BA2AF1825A097C49EF167FE6D6566DA0E67856123.json"
+        }
+      ]
+    },
+    {
+      "runId": "20260727T224157Z-3f8b521ce6c0",
+      "sliceId": "formula-ready-remaining-009",
+      "reportPath": "docs/generated/formula-ready-backfill-20260727T224157Z-3f8b521ce6c0.json",
+      "reportSha256": "79281B47DF0905F2D49EBAFBD5C680F2F675BB5694BA8C74014DAF7E4241CFE7",
+      "reportContentHash": "EADF12596A7AE75A7AA4CDCA9C610D656BC389BD6D105A6DC35CCECFBA5D1685",
+      "preflightJournalPath": "storage/provider-validation/scoring-inputs-v2/physical-request-journals/20260727T224157Z-3f8b521ce6c0/run/000001-PREFLIGHT.json",
+      "preflightJournalSha256": "A849AAEA699E4F7A9B52993E9CD3E14F4092A0162F86ED5BCBEFB67347E95CA2",
+      "preflightEventHash": "E001120B1346FFA2F4BDF2D44E6BEB3BC89131DC41EDCB869C82E83B6EDC625D",
+      "completeJournalPath": "storage/provider-validation/scoring-inputs-v2/physical-request-journals/20260727T224157Z-3f8b521ce6c0/run/000002-COMPLETE.json",
+      "completeJournalSha256": "FF5571E8E039D4AA508748FFD68260533EDB07B1F00FF6BA410BCE3FB6AF58A0",
+      "completeEventHash": "294577B102150A62EF7490288E75F288FEF74C24058A36D5C1A9E8F131A2081B",
+      "configuredLocalWeightCeiling": 240,
+      "checkpoints": [
+        {
+          "symbol": "LLY",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T224157Z-3f8b521ce6c0/0001-LLY.json",
+          "sha256": "AC768B8150D955043F7445FE5FF7CB5CF2F79CCF576A1656DDAD8605AA52DB28"
+        },
+        {
+          "symbol": "LMT",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T224157Z-3f8b521ce6c0/0002-LMT.json",
+          "sha256": "24C57681AB75D65CEF5C3E545C9BB1A376B78FC51B97787E77CAF3064C3566E5"
+        },
+        {
+          "symbol": "LNT",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T224157Z-3f8b521ce6c0/0003-LNT.json",
+          "sha256": "99041CC0532819B2956D4A79325C9635F51FB3909B181B1896261944B3D1137E"
+        },
+        {
+          "symbol": "LOW",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T224157Z-3f8b521ce6c0/0004-LOW.json",
+          "sha256": "16EE273536EC9C63785C7F3CFDA9F37DB49E217FF5AC649487155FDC57401F51"
+        },
+        {
+          "symbol": "LRCX",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T224157Z-3f8b521ce6c0/0005-LRCX.json",
+          "sha256": "A1C6458E57D520C5061E31105581E7E68F42613874A7E34E6575062D2EB3DB96"
+        },
+        {
+          "symbol": "LULU",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T224157Z-3f8b521ce6c0/0006-LULU.json",
+          "sha256": "B12EACECCAB56B5368E20D05022FC0F729968A83B2A3385258D8BFF5C176957E"
+        },
+        {
+          "symbol": "LYB",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T224157Z-3f8b521ce6c0/0007-LYB.json",
+          "sha256": "3B361985FDF6CBF2A371DCEC346393B56E11A76A422F5CAC7C6673B71EF96E0B"
+        },
+        {
+          "symbol": "LYV",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T224157Z-3f8b521ce6c0/0008-LYV.json",
+          "sha256": "A3D343E8B4044F22AA9D5CCCCD5F8759423D8497A369C5810050A452B3FFBFC4"
+        },
+        {
+          "symbol": "MCD",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T224157Z-3f8b521ce6c0/0009-MCD.json",
+          "sha256": "961B1A910ED1BDA5703816B5792DE3A7CA8222049D23DD0B5C2AF50F5C57AABB"
+        },
+        {
+          "symbol": "MCHP",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T224157Z-3f8b521ce6c0/0010-MCHP.json",
+          "sha256": "50A6F6A4180710DA964A1CFF03F50E73E9EDF87F56335FE1F5756B5C4AB0B837"
+        },
+        {
+          "symbol": "MCK",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T224157Z-3f8b521ce6c0/0011-MCK.json",
+          "sha256": "C462036BE03B0B82BCEF561D4BF8DA0DF44AA27CC9024B53234CF20DB7B2E51A"
+        },
+        {
+          "symbol": "MDLZ",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T224157Z-3f8b521ce6c0/0012-MDLZ.json",
+          "sha256": "79A4450D6E31298A1B7CAA388C33871090B3BEFC664B06AEEF497F94D2C04EC8"
+        },
+        {
+          "symbol": "META",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T224157Z-3f8b521ce6c0/0013-META.json",
+          "sha256": "55C594B46FC4F3C536A36DCD527C156648B2393E9DA2EEFC2E886C75434D35EB"
+        },
+        {
+          "symbol": "MKC",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T224157Z-3f8b521ce6c0/0014-MKC.json",
+          "sha256": "918EC9C4AACFAAFDEEB122C5E580BAB932BF5EBC42C419D1753EFEA8AB5AB02B"
+        },
+        {
+          "symbol": "MLM",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T224157Z-3f8b521ce6c0/0015-MLM.json",
+          "sha256": "0539C333D4B04646B12895CCA062CDC46D1DF53FB1C164E6D07C10EAE3523B80"
+        },
+        {
+          "symbol": "MNST",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T224157Z-3f8b521ce6c0/0016-MNST.json",
+          "sha256": "DF58C9268A57C7CBFB65D8AF38FC1065505A4ADF0E7534CDB2822D96706650E8"
+        },
+        {
+          "symbol": "MO",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T224157Z-3f8b521ce6c0/0017-MO.json",
+          "sha256": "16559B4DE6E441152D313EAF3CF5814110038E8504E2B4A20FD408BD17E40E0F"
+        },
+        {
+          "symbol": "MOS",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T224157Z-3f8b521ce6c0/0018-MOS.json",
+          "sha256": "E2FD0F3BB126FE305F779BB89C12C3140374410639673E70AB26ADB90AEC616A"
+        },
+        {
+          "symbol": "MRK",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T224157Z-3f8b521ce6c0/0019-MRK.json",
+          "sha256": "C72EB485235BF1FCD90E993FCD6C69B25A9873F3F984CCA63FF7703DBEDFD6DD"
+        },
+        {
+          "symbol": "MSFT",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T224157Z-3f8b521ce6c0/0020-MSFT.json",
+          "sha256": "C2D6ADB02D44C02D86E57EDE2969C961343E2B7AE054C7B430A2798CAD64A116"
+        }
+      ],
+      "terminalPayloads": [
+        {
+          "symbol": "LLY",
+          "status": "FORMULA_READY",
+          "contentHash": "DE1383A245B5F58480277515A99787175DD9AC81D631C73AD149243FF28ABB1C",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/LLY/DE1383A245B5F58480277515A99787175DD9AC81D631C73AD149243FF28ABB1C.json"
+        },
+        {
+          "symbol": "LMT",
+          "status": "FORMULA_READY",
+          "contentHash": "9A66D3F97727879E4D8BC4965793F8FBADEFB95616152E73AB14CF561EA5868B",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/LMT/9A66D3F97727879E4D8BC4965793F8FBADEFB95616152E73AB14CF561EA5868B.json"
+        },
+        {
+          "symbol": "LNT",
+          "status": "FORMULA_READY",
+          "contentHash": "8A6F7C322F91D3256D055D4C56FF902A16DAE91E49C17A3469E56E07ACF55C04",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/LNT/8A6F7C322F91D3256D055D4C56FF902A16DAE91E49C17A3469E56E07ACF55C04.json"
+        },
+        {
+          "symbol": "LOW",
+          "status": "FORMULA_READY",
+          "contentHash": "61985AF4CDCB13D9464463AE9E9D2E7E6A7B0E812A3E732422EB90BBFC565202",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/LOW/61985AF4CDCB13D9464463AE9E9D2E7E6A7B0E812A3E732422EB90BBFC565202.json"
+        },
+        {
+          "symbol": "LRCX",
+          "status": "FORMULA_READY",
+          "contentHash": "688F21B5163971ED906AF9B8A63C607AB954E4C72A1A07AE0A6C31332BB9413F",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/LRCX/688F21B5163971ED906AF9B8A63C607AB954E4C72A1A07AE0A6C31332BB9413F.json"
+        },
+        {
+          "symbol": "LULU",
+          "status": "SECURITY_INSUFFICIENT_DATA",
+          "contentHash": "A1B5A158ACF31E740AEDF52092BBB137A030E31368ABA5E94896FD136108AD18",
+          "storageReference": null
+        },
+        {
+          "symbol": "LYB",
+          "status": "SECURITY_INSUFFICIENT_DATA",
+          "contentHash": "FECEA1E0CFCBB1DD9E9FD5F8FC7643BEFFB3231EF19D01821339B2A69E038CC4",
+          "storageReference": null
+        },
+        {
+          "symbol": "LYV",
+          "status": "FORMULA_READY",
+          "contentHash": "AD6C1149B59AD18B054D8BE0F200F287431F53108E6119ECEB170499ACB80982",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/LYV/AD6C1149B59AD18B054D8BE0F200F287431F53108E6119ECEB170499ACB80982.json"
+        },
+        {
+          "symbol": "MCD",
+          "status": "FORMULA_READY",
+          "contentHash": "1DDA854CEA32315FC9AEC34DAEFDEE89C28C835F614645C7B2106023429CD94C",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/MCD/1DDA854CEA32315FC9AEC34DAEFDEE89C28C835F614645C7B2106023429CD94C.json"
+        },
+        {
+          "symbol": "MCHP",
+          "status": "FORMULA_READY",
+          "contentHash": "1AE368D75C0FD75573A943AEA8765252D4DFD89F3E14C896B4D1B4D707B2FB3C",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/MCHP/1AE368D75C0FD75573A943AEA8765252D4DFD89F3E14C896B4D1B4D707B2FB3C.json"
+        },
+        {
+          "symbol": "MCK",
+          "status": "FORMULA_READY",
+          "contentHash": "7CD4C85C48391B414BEE921948B64012B24F52C684DBB21EF73980B6AC9E7537",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/MCK/7CD4C85C48391B414BEE921948B64012B24F52C684DBB21EF73980B6AC9E7537.json"
+        },
+        {
+          "symbol": "MDLZ",
+          "status": "FORMULA_READY",
+          "contentHash": "3A6DB842801CF462F5A00C495B111B9906BDA89CDBC96C28C278BA7C9437AA9D",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/MDLZ/3A6DB842801CF462F5A00C495B111B9906BDA89CDBC96C28C278BA7C9437AA9D.json"
+        },
+        {
+          "symbol": "META",
+          "status": "FORMULA_READY",
+          "contentHash": "C245C105A787E2D8E21740CF09C8A32A728EB939D5CE824D1CE7898F732676CB",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/META/C245C105A787E2D8E21740CF09C8A32A728EB939D5CE824D1CE7898F732676CB.json"
+        },
+        {
+          "symbol": "MKC",
+          "status": "FORMULA_READY",
+          "contentHash": "C95BE6265AC936B6347DF9BA21FAB52F2833C6BF2D2622422A108F8C74AAA29C",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/MKC/C95BE6265AC936B6347DF9BA21FAB52F2833C6BF2D2622422A108F8C74AAA29C.json"
+        },
+        {
+          "symbol": "MLM",
+          "status": "FORMULA_READY",
+          "contentHash": "9F50618649F5B48FB887570E47B1D76A12C422C5B4C24F56D107C6D789050152",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/MLM/9F50618649F5B48FB887570E47B1D76A12C422C5B4C24F56D107C6D789050152.json"
+        },
+        {
+          "symbol": "MNST",
+          "status": "FORMULA_READY",
+          "contentHash": "F791CC8472AA09754DDA29E3FCDF01B1D5345D75DBE7F22C72967E3E6570143D",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/MNST/F791CC8472AA09754DDA29E3FCDF01B1D5345D75DBE7F22C72967E3E6570143D.json"
+        },
+        {
+          "symbol": "MO",
+          "status": "FORMULA_READY",
+          "contentHash": "A95F035CF1C603CB7C448A3A7731ABF1806790DD4710D17FD97E2FD1F79C6EF4",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/MO/A95F035CF1C603CB7C448A3A7731ABF1806790DD4710D17FD97E2FD1F79C6EF4.json"
+        },
+        {
+          "symbol": "MOS",
+          "status": "FORMULA_READY",
+          "contentHash": "90D2E6E8FFAFC4F63449B8F435493F8CEFC8CB90E6818945CAF632B6EA8E7764",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/MOS/90D2E6E8FFAFC4F63449B8F435493F8CEFC8CB90E6818945CAF632B6EA8E7764.json"
+        },
+        {
+          "symbol": "MRK",
+          "status": "FORMULA_READY",
+          "contentHash": "77E3057C85432725187C137B9E2AD87098732AA16810361C8713F9969C64F0CD",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/MRK/77E3057C85432725187C137B9E2AD87098732AA16810361C8713F9969C64F0CD.json"
+        },
+        {
+          "symbol": "MSFT",
+          "status": "FORMULA_READY",
+          "contentHash": "467BFF6C996C33F25ACE4B8BD9A90D46A7457147C2419F933A82A85AB6472BC2",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/MSFT/467BFF6C996C33F25ACE4B8BD9A90D46A7457147C2419F933A82A85AB6472BC2.json"
+        }
+      ]
+    },
+    {
+      "runId": "20260727T225229Z-8ff57f4726d9",
+      "sliceId": "formula-ready-remaining-010",
+      "reportPath": "docs/generated/formula-ready-backfill-20260727T225229Z-8ff57f4726d9.json",
+      "reportSha256": "2B3AE3A5EC842B64EE3C2907529DAB1BF1F551A24F9C8542067BA5211B618F68",
+      "reportContentHash": "6CF743CEAFCD6DEE77A00752B36CAC7C51F2EEA0266AB147C57E661EF64FD22B",
+      "preflightJournalPath": "storage/provider-validation/scoring-inputs-v2/physical-request-journals/20260727T225229Z-8ff57f4726d9/run/000001-PREFLIGHT.json",
+      "preflightJournalSha256": "4609F6007183EB14552A106D120E816AAB0D1006F1643C973D3F67A17E35AFCC",
+      "preflightEventHash": "0E7F533E2C911859AEFB05C412215E7930CD8E85F7D4135A5259666A534A5109",
+      "completeJournalPath": "storage/provider-validation/scoring-inputs-v2/physical-request-journals/20260727T225229Z-8ff57f4726d9/run/000002-COMPLETE.json",
+      "completeJournalSha256": "FFCD92122ED3328F9115A952B64DE7AE75A6C32A4F86755AE1C36B26ECA5A144",
+      "completeEventHash": "6FD2F3D5080A6BFF35E18FD762E117C1A96F41330B0097C8E9D9450BA271B0FE",
+      "configuredLocalWeightCeiling": 240,
+      "checkpoints": [
+        {
+          "symbol": "NFLX",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T225229Z-8ff57f4726d9/0001-NFLX.json",
+          "sha256": "1229DEBDDFAA16850DDB426AC966D9CAF361A6A75739894482933B83D1967D80"
+        },
+        {
+          "symbol": "NI",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T225229Z-8ff57f4726d9/0002-NI.json",
+          "sha256": "58724686D8C90DE6115A4CD433C9B73DE820CD9C1177EE30EEDFC8C9DE43A47D"
+        },
+        {
+          "symbol": "NKE",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T225229Z-8ff57f4726d9/0003-NKE.json",
+          "sha256": "C2688013EE25315078B68A4574280297943A03147EF24824A37A5858D5D06CFF"
+        },
+        {
+          "symbol": "NOC",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T225229Z-8ff57f4726d9/0004-NOC.json",
+          "sha256": "4AA6C2610551F8C6048CED0FF2E1E03E0E77F4563354C926D64DD88B343BADF0"
+        },
+        {
+          "symbol": "NRG",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T225229Z-8ff57f4726d9/0005-NRG.json",
+          "sha256": "DACF238F0879CEC00D32352247DC53EE005763FE83E322B140BF675BEA9E6FCF"
+        },
+        {
+          "symbol": "NUE",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T225229Z-8ff57f4726d9/0006-NUE.json",
+          "sha256": "FB3D56405CAF79F992C7F62DE79DB872EF8C395F8EAF53FFF6351F3E80179268"
+        },
+        {
+          "symbol": "NVDA",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T225229Z-8ff57f4726d9/0007-NVDA.json",
+          "sha256": "0B71329E1D3EFAB4277F9D941A3118BBD3571D04686F441E5FD4472063E6201B"
+        },
+        {
+          "symbol": "NWS",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T225229Z-8ff57f4726d9/0008-NWS.json",
+          "sha256": "54281F3D168923D325A445D5BE0E1E2DA1087943C24450674F65AAE237B7E47F"
+        },
+        {
+          "symbol": "NWSA",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T225229Z-8ff57f4726d9/0009-NWSA.json",
+          "sha256": "DAEBB87199930791051B73AC8D0C6A879F054EC8A83AE12C8A658A54BCAB401B"
+        },
+        {
+          "symbol": "OLED",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T225229Z-8ff57f4726d9/0010-OLED.json",
+          "sha256": "844EF475492EA296EFFC92DB3CDB919E4C1831DDCCC2CA7C64BA200A14F2567E"
+        },
+        {
+          "symbol": "OMC",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T225229Z-8ff57f4726d9/0011-OMC.json",
+          "sha256": "A59E46B548396818FB98E8EA13708EE913A42BB3FCF1ED57402805A3ED445BE4"
+        },
+        {
+          "symbol": "ORCL",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T225229Z-8ff57f4726d9/0012-ORCL.json",
+          "sha256": "E1122F6968F7CE5DEB4272F6A4E2958B39D63CB712523B79871B466E5BFE5337"
+        },
+        {
+          "symbol": "ORLY",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T225229Z-8ff57f4726d9/0013-ORLY.json",
+          "sha256": "95E6FCB8F9FE770EAA61F137F224E6ECF5BF4A288C97B7D64EAA25B1EEDC4590"
+        },
+        {
+          "symbol": "PCAR",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T225229Z-8ff57f4726d9/0014-PCAR.json",
+          "sha256": "C24ACAECA1DF632D04DEC6BD4279B0428CBDE3122219720CAB25E763AA2CDB35"
+        },
+        {
+          "symbol": "PCG",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T225229Z-8ff57f4726d9/0015-PCG.json",
+          "sha256": "3DCF4BDFE926CAD920513CF852F4525C15144C319653EAE8291A2B08E4783B21"
+        },
+        {
+          "symbol": "PEG",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T225229Z-8ff57f4726d9/0016-PEG.json",
+          "sha256": "046DE10AEE06384359D7BCE5741ED87D3C7EFA1F9DC5A1911D03A1ECE82D1D7A"
+        },
+        {
+          "symbol": "PFE",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T225229Z-8ff57f4726d9/0017-PFE.json",
+          "sha256": "416C00BF38579F1BC8229DC592DAFD776ECF0B2DD0B0B6C43A24491B0B0A3CD0"
+        },
+        {
+          "symbol": "PG",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T225229Z-8ff57f4726d9/0018-PG.json",
+          "sha256": "08165404952BDAC6D299C0432CB012330FC6AAA7BEA2DE2855C593312FC77514"
+        },
+        {
+          "symbol": "PH",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T225229Z-8ff57f4726d9/0019-PH.json",
+          "sha256": "BA0B51055AF159D14975BC392D1C6165CE9192C39611616A4103077419812585"
+        },
+        {
+          "symbol": "PLAB",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T225229Z-8ff57f4726d9/0020-PLAB.json",
+          "sha256": "1610DD608C5DAB67A4CCC274FE94CF09B1C06C7B013E88F76434E8994CD6C650"
+        }
+      ],
+      "terminalPayloads": [
+        {
+          "symbol": "NFLX",
+          "status": "FORMULA_READY",
+          "contentHash": "56D4491C2C6602461741EC59E4B4A90E4B533FD6D3CC8492010D01D9F14F8065",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/NFLX/56D4491C2C6602461741EC59E4B4A90E4B533FD6D3CC8492010D01D9F14F8065.json"
+        },
+        {
+          "symbol": "NI",
+          "status": "FORMULA_READY",
+          "contentHash": "FD93476DF2803E4F73EBE3EB9181D8BE87BB7914290095F9A8311EBF597D601A",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/NI/FD93476DF2803E4F73EBE3EB9181D8BE87BB7914290095F9A8311EBF597D601A.json"
+        },
+        {
+          "symbol": "NKE",
+          "status": "FORMULA_READY",
+          "contentHash": "5F74B218CD0272A8525DE5A915F5A627473670567CB3494E396239B1533BCDA6",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/NKE/5F74B218CD0272A8525DE5A915F5A627473670567CB3494E396239B1533BCDA6.json"
+        },
+        {
+          "symbol": "NOC",
+          "status": "FORMULA_READY",
+          "contentHash": "FA48AC79FA8756FD0D5DA7D3579EF294D7D1CB7A6D6AD2A888C3630D1CAAC38E",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/NOC/FA48AC79FA8756FD0D5DA7D3579EF294D7D1CB7A6D6AD2A888C3630D1CAAC38E.json"
+        },
+        {
+          "symbol": "NRG",
+          "status": "FORMULA_READY",
+          "contentHash": "0D369492841A1FF1E903750F527D2763A07E73FF19597088B84BB80C9D21C15D",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/NRG/0D369492841A1FF1E903750F527D2763A07E73FF19597088B84BB80C9D21C15D.json"
+        },
+        {
+          "symbol": "NUE",
+          "status": "FORMULA_READY",
+          "contentHash": "F65A6B43B4F717790E8F28F406EE76EFA18DCBBD53C10EF019C6528BE7055F55",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/NUE/F65A6B43B4F717790E8F28F406EE76EFA18DCBBD53C10EF019C6528BE7055F55.json"
+        },
+        {
+          "symbol": "NVDA",
+          "status": "FORMULA_READY",
+          "contentHash": "0A4287BAC3B97E219A3891BE73A67067FC071E10BD10392636D8F46E574AFEE5",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/NVDA/0A4287BAC3B97E219A3891BE73A67067FC071E10BD10392636D8F46E574AFEE5.json"
+        },
+        {
+          "symbol": "NWS",
+          "status": "SECURITY_INSUFFICIENT_DATA",
+          "contentHash": "45C89C4F607A1D67995ACEDFD268166044B545BE69C9D2603812F6EF354DFF91",
+          "storageReference": null
+        },
+        {
+          "symbol": "NWSA",
+          "status": "FORMULA_READY",
+          "contentHash": "0E91338C4F27FD0CF6614A6BE960860C44BADDBCCEB105A4B9507F0F65412E5F",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/NWSA/0E91338C4F27FD0CF6614A6BE960860C44BADDBCCEB105A4B9507F0F65412E5F.json"
+        },
+        {
+          "symbol": "OLED",
+          "status": "FORMULA_READY",
+          "contentHash": "D9826E56BA8BC356163AC7719FA4043E99DCA5BDB1B8706D41A8D111604345B7",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/OLED/D9826E56BA8BC356163AC7719FA4043E99DCA5BDB1B8706D41A8D111604345B7.json"
+        },
+        {
+          "symbol": "OMC",
+          "status": "FORMULA_READY",
+          "contentHash": "68C863BDBBB7E0C290DEE770FADF4394DB0EE1B902FB0009513CF198A0A50EEB",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/OMC/68C863BDBBB7E0C290DEE770FADF4394DB0EE1B902FB0009513CF198A0A50EEB.json"
+        },
+        {
+          "symbol": "ORCL",
+          "status": "FORMULA_READY",
+          "contentHash": "C4737554CE5DF694FB3DC38201E46A8C8499CC46520279A46947897F7E181A85",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/ORCL/C4737554CE5DF694FB3DC38201E46A8C8499CC46520279A46947897F7E181A85.json"
+        },
+        {
+          "symbol": "ORLY",
+          "status": "FORMULA_READY",
+          "contentHash": "EE868C396D1C7E7F2D6E9ADC01A67195468F0F7B21857AEA076F8BC2D4C10BCA",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/ORLY/EE868C396D1C7E7F2D6E9ADC01A67195468F0F7B21857AEA076F8BC2D4C10BCA.json"
+        },
+        {
+          "symbol": "PCAR",
+          "status": "FORMULA_READY",
+          "contentHash": "16D11F840712528E7AE206597015A7EF8BF963F3E2E2C7D2E2FF9AFD19AFFA75",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/PCAR/16D11F840712528E7AE206597015A7EF8BF963F3E2E2C7D2E2FF9AFD19AFFA75.json"
+        },
+        {
+          "symbol": "PCG",
+          "status": "FORMULA_READY",
+          "contentHash": "FA1C9848D6165AA9BDB17CE6253B1D94C6E4D2CDC516E2186778209BD565EBF6",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/PCG/FA1C9848D6165AA9BDB17CE6253B1D94C6E4D2CDC516E2186778209BD565EBF6.json"
+        },
+        {
+          "symbol": "PEG",
+          "status": "FORMULA_READY",
+          "contentHash": "7B70B90A8D09243C4161D754C414A728E34DD3F6F3C0BCBED2612651B03F4860",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/PEG/7B70B90A8D09243C4161D754C414A728E34DD3F6F3C0BCBED2612651B03F4860.json"
+        },
+        {
+          "symbol": "PFE",
+          "status": "FORMULA_READY",
+          "contentHash": "265EDFBBD6ACB79C85AF4129FFC0D8CFCEE471EF58281946BB340FB1B9C5227C",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/PFE/265EDFBBD6ACB79C85AF4129FFC0D8CFCEE471EF58281946BB340FB1B9C5227C.json"
+        },
+        {
+          "symbol": "PG",
+          "status": "FORMULA_READY",
+          "contentHash": "ABD25D06B8C7BB0D682719780591DB4070B5744528D3A34B92E67483C7D2E672",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/PG/ABD25D06B8C7BB0D682719780591DB4070B5744528D3A34B92E67483C7D2E672.json"
+        },
+        {
+          "symbol": "PH",
+          "status": "FORMULA_READY",
+          "contentHash": "5D5B5BC87DA31F8EF954FB30F434CA946D7D81ED90A98092C2B27933DDF971A0",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/PH/5D5B5BC87DA31F8EF954FB30F434CA946D7D81ED90A98092C2B27933DDF971A0.json"
+        },
+        {
+          "symbol": "PLAB",
+          "status": "FORMULA_READY",
+          "contentHash": "E5F8890A8FF79364A578FE3F919AEF0E81C2461E1297145F2A6A2BF74912981A",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/PLAB/E5F8890A8FF79364A578FE3F919AEF0E81C2461E1297145F2A6A2BF74912981A.json"
+        }
+      ]
+    },
+    {
+      "runId": "20260727T230310Z-549a3da754af",
+      "sliceId": "formula-ready-remaining-011",
+      "reportPath": "docs/generated/formula-ready-backfill-20260727T230310Z-549a3da754af.json",
+      "reportSha256": "BD254E4EED1BC9A6F55C4D78F72CA595F6245A1C70482762E26669F78738382C",
+      "reportContentHash": "CEC4CCF778C0EF04026E775B6530DAF3BAA070273A0A5C2FC816ABDD71A996D5",
+      "preflightJournalPath": "storage/provider-validation/scoring-inputs-v2/physical-request-journals/20260727T230310Z-549a3da754af/run/000001-PREFLIGHT.json",
+      "preflightJournalSha256": "2536E6DD6C78D5A38C5A4C7780010ED97D80A123AF908E236A7B87EEEEA5B201",
+      "preflightEventHash": "9D0EB5A8F9A62CB2E383DDF777500DECB765F89EE4BFDFE4903B6024DEDC76C2",
+      "completeJournalPath": "storage/provider-validation/scoring-inputs-v2/physical-request-journals/20260727T230310Z-549a3da754af/run/000002-COMPLETE.json",
+      "completeJournalSha256": "48BA36A8AB9D38F99402351BD03254A7D137372A5F1584C742A7EA65CD3332AE",
+      "completeEventHash": "E16EFA525C488E7D59611F1C92035F7C349D6F2EAF3DA4794D1CC91285AFDB3C",
+      "configuredLocalWeightCeiling": 240,
+      "checkpoints": [
+        {
+          "symbol": "PM",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T230310Z-549a3da754af/0001-PM.json",
+          "sha256": "1DDEDCC8A7DD835DB6690187AB41E7B746F2A60DA918A8BC2CA8D1F0408AA4AB"
+        },
+        {
+          "symbol": "PNW",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T230310Z-549a3da754af/0002-PNW.json",
+          "sha256": "08ECACE892A0E29D613EE72FF49626381CFBFFD937983DB0B8F47F53FDF6C7F0"
+        },
+        {
+          "symbol": "PPG",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T230310Z-549a3da754af/0003-PPG.json",
+          "sha256": "B8EABFCFD169D772521EAAE4643858F62D0B1B802937EC048C2DD78BF561A829"
+        },
+        {
+          "symbol": "PPL",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T230310Z-549a3da754af/0004-PPL.json",
+          "sha256": "1AD67242530B5B85EDE741A8B35208CF6FB53EF68D66D8FE2CF8C6071A726474"
+        },
+        {
+          "symbol": "PSKY",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T230310Z-549a3da754af/0005-PSKY.json",
+          "sha256": "553F20888B607CBB16047BA6283B7570FB4EAAE39AD94BAED7C72046C4A90E89"
+        },
+        {
+          "symbol": "QCOM",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T230310Z-549a3da754af/0006-QCOM.json",
+          "sha256": "9ADF7AAD2282BE9AE039CC2673DBBD88E35A1B76D6248AC003CBA4218A26BCBD"
+        },
+        {
+          "symbol": "ROK",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T230310Z-549a3da754af/0007-ROK.json",
+          "sha256": "F407618D201D7D4D3C91EC4E9E7DF339DB90DC026C4865CBABF2951E28801E4F"
+        },
+        {
+          "symbol": "ROST",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T230310Z-549a3da754af/0008-ROST.json",
+          "sha256": "B52EC93DE439EB1549B6898CDCF737AB90A04E0AC6FA3FFF465F529A275D9F45"
+        },
+        {
+          "symbol": "RTX",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T230310Z-549a3da754af/0009-RTX.json",
+          "sha256": "BAD4885114DAE652CEAE0ABA1B3E0F149E8AD4888B540428A127382C6E2C3A7D"
+        },
+        {
+          "symbol": "SAIA",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T230310Z-549a3da754af/0010-SAIA.json",
+          "sha256": "A0039E2743517CAA6618473D6671822C3C243D0287E12F6CF4AC65CEE9517253"
+        },
+        {
+          "symbol": "SBUX",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T230310Z-549a3da754af/0011-SBUX.json",
+          "sha256": "1E3890F36B26C65EE8E94BDACB0554FD9BCCF5D862AEDA03AA00088907020698"
+        },
+        {
+          "symbol": "SHW",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T230310Z-549a3da754af/0012-SHW.json",
+          "sha256": "56BA1BF294C52ED4D1B87FA02F865A2EC260C847A31AFE0A0DCD408F5E69AE49"
+        },
+        {
+          "symbol": "SJM",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T230310Z-549a3da754af/0013-SJM.json",
+          "sha256": "3367BFF0F2D1A298793335E0A6555F8B3BFD530A773C24A0E91CB8316C7B525B"
+        },
+        {
+          "symbol": "SO",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T230310Z-549a3da754af/0014-SO.json",
+          "sha256": "58F4258DF21C4BF7051B118B2E5F28D36E68642C6EF5D33FC0C2357F93FAB87C"
+        },
+        {
+          "symbol": "SRE",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T230310Z-549a3da754af/0015-SRE.json",
+          "sha256": "9A80F0265A9C580588C49BCC77B0191FDC92709134F1D58640C224BB11E03F8A"
+        },
+        {
+          "symbol": "STZ",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T230310Z-549a3da754af/0016-STZ.json",
+          "sha256": "95C4E3D5C49435826245DF5ECAFF48C8990B8DF69CB06116337185B5BA962280"
+        },
+        {
+          "symbol": "SW",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T230310Z-549a3da754af/0017-SW.json",
+          "sha256": "8FE953081ACC03286B4D7F0C82ACC6B42240916737142F789C049964596E6E0C"
+        },
+        {
+          "symbol": "SYK",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T230310Z-549a3da754af/0018-SYK.json",
+          "sha256": "E5A540A57B045635DEA90202E2AE1CED36F1963E3E5AC9C3281AC6B332F570F0"
+        },
+        {
+          "symbol": "SYY",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T230310Z-549a3da754af/0019-SYY.json",
+          "sha256": "89FA9F29B343416EA039068DE1C828560311A062682FDAFEEE87FA7E6C7B5A77"
+        },
+        {
+          "symbol": "T",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T230310Z-549a3da754af/0020-T.json",
+          "sha256": "77AEEA26544D9C134C18C400069AD2CCB295F23BF3989128062B880840832A57"
+        }
+      ],
+      "terminalPayloads": [
+        {
+          "symbol": "PM",
+          "status": "FORMULA_READY",
+          "contentHash": "347A6AA905B879035C243FA44732D4FCBDF9B51139EF7CA9548E913EB563B601",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/PM/347A6AA905B879035C243FA44732D4FCBDF9B51139EF7CA9548E913EB563B601.json"
+        },
+        {
+          "symbol": "PNW",
+          "status": "FORMULA_READY",
+          "contentHash": "222E0193E12EA220D1144EA6E5C6E92B1B9B3227CB6600A2B9FEA6B37A55B232",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/PNW/222E0193E12EA220D1144EA6E5C6E92B1B9B3227CB6600A2B9FEA6B37A55B232.json"
+        },
+        {
+          "symbol": "PPG",
+          "status": "FORMULA_READY",
+          "contentHash": "835DC5D17ACB048B1AADC68AF6985051477125F9C9DF26F3DBBA263A486FD378",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/PPG/835DC5D17ACB048B1AADC68AF6985051477125F9C9DF26F3DBBA263A486FD378.json"
+        },
+        {
+          "symbol": "PPL",
+          "status": "FORMULA_READY",
+          "contentHash": "E238A950E9C19CC66AEA4EF818BDAEFD9AE242235C6DB48A2F7C8DF888EF661A",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/PPL/E238A950E9C19CC66AEA4EF818BDAEFD9AE242235C6DB48A2F7C8DF888EF661A.json"
+        },
+        {
+          "symbol": "PSKY",
+          "status": "SECURITY_INSUFFICIENT_DATA",
+          "contentHash": "E8705ECD3B682602F13686B5D400FAB98382BE62F1D0FF46B2D977905CE3F64A",
+          "storageReference": null
+        },
+        {
+          "symbol": "QCOM",
+          "status": "FORMULA_READY",
+          "contentHash": "ADCD05CEAC68417EF497B3AD9EF9E29008DDFD50E5914CDD41AF5632ED8B8A9A",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/QCOM/ADCD05CEAC68417EF497B3AD9EF9E29008DDFD50E5914CDD41AF5632ED8B8A9A.json"
+        },
+        {
+          "symbol": "ROK",
+          "status": "FORMULA_READY",
+          "contentHash": "35862210DECA4EFF28C4660CDF599B26F25D1E6B095E9F2C5A44F03291039039",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/ROK/35862210DECA4EFF28C4660CDF599B26F25D1E6B095E9F2C5A44F03291039039.json"
+        },
+        {
+          "symbol": "ROST",
+          "status": "FORMULA_READY",
+          "contentHash": "A436FEF54D8C483FF256194B416A7C0834F3D19AE4475C84D5B929C3D4E23186",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/ROST/A436FEF54D8C483FF256194B416A7C0834F3D19AE4475C84D5B929C3D4E23186.json"
+        },
+        {
+          "symbol": "RTX",
+          "status": "FORMULA_READY",
+          "contentHash": "2E50A4B241D8D7EAAAAEEC18BECEA6259BF5393F1092904DF98721A39162E96E",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/RTX/2E50A4B241D8D7EAAAAEEC18BECEA6259BF5393F1092904DF98721A39162E96E.json"
+        },
+        {
+          "symbol": "SAIA",
+          "status": "FORMULA_READY",
+          "contentHash": "0ED8D8069174637E445A533BEE33EA79AC0A92527565E86666ACA3115E1B9481",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/SAIA/0ED8D8069174637E445A533BEE33EA79AC0A92527565E86666ACA3115E1B9481.json"
+        },
+        {
+          "symbol": "SBUX",
+          "status": "FORMULA_READY",
+          "contentHash": "0CA5B7A2DC40687E9095A91591120D5B8B11FC565374DDE3E1438EACC4C02E8C",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/SBUX/0CA5B7A2DC40687E9095A91591120D5B8B11FC565374DDE3E1438EACC4C02E8C.json"
+        },
+        {
+          "symbol": "SHW",
+          "status": "FORMULA_READY",
+          "contentHash": "801FF8D03C5EB91162DF1E6F9046D78DCB5EAE775288A3803E8E15E192562F1B",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/SHW/801FF8D03C5EB91162DF1E6F9046D78DCB5EAE775288A3803E8E15E192562F1B.json"
+        },
+        {
+          "symbol": "SJM",
+          "status": "FORMULA_READY",
+          "contentHash": "DB5BF911283B9B5CBC65F2D80A49C9E49E89821F222A877E973F5ED97ABC18B8",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/SJM/DB5BF911283B9B5CBC65F2D80A49C9E49E89821F222A877E973F5ED97ABC18B8.json"
+        },
+        {
+          "symbol": "SO",
+          "status": "FORMULA_READY",
+          "contentHash": "9A5B7775708BF8864FBC4CC2D6D6533EBFE5791D9256FCCBF5C57FD49DA9E57C",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/SO/9A5B7775708BF8864FBC4CC2D6D6533EBFE5791D9256FCCBF5C57FD49DA9E57C.json"
+        },
+        {
+          "symbol": "SRE",
+          "status": "FORMULA_READY",
+          "contentHash": "14081A1E79903CB2948414004CB260840E3CC262410B585BE48747F4D055C19D",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/SRE/14081A1E79903CB2948414004CB260840E3CC262410B585BE48747F4D055C19D.json"
+        },
+        {
+          "symbol": "STZ",
+          "status": "SECURITY_INSUFFICIENT_DATA",
+          "contentHash": "97F7FCAF670351E2D4688FFA4529FF5348B31962B5E88B4CEAFD0F5A7AB8A6C1",
+          "storageReference": null
+        },
+        {
+          "symbol": "SW",
+          "status": "FORMULA_READY",
+          "contentHash": "4E46BE29FB7A0236D67D9EC4CEF1AEFFEF56F35D19999D61CEEADCBC8E2E8DE1",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/SW/4E46BE29FB7A0236D67D9EC4CEF1AEFFEF56F35D19999D61CEEADCBC8E2E8DE1.json"
+        },
+        {
+          "symbol": "SYK",
+          "status": "SECURITY_INSUFFICIENT_DATA",
+          "contentHash": "5F946F9CD6D76C12C4286B9177DEC0508DAC2A319FE0345F1C30BC0EBA545BC6",
+          "storageReference": null
+        },
+        {
+          "symbol": "SYY",
+          "status": "FORMULA_READY",
+          "contentHash": "FD27A88D56DC7148815F9D700CBE979DBF35D30AC0162E6DE4970B891E924A79",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/SYY/FD27A88D56DC7148815F9D700CBE979DBF35D30AC0162E6DE4970B891E924A79.json"
+        },
+        {
+          "symbol": "T",
+          "status": "FORMULA_READY",
+          "contentHash": "7B641AD626FC0C5147D99117E83796AA806A25D34604E695C4787ED7D0513245",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/T/7B641AD626FC0C5147D99117E83796AA806A25D34604E695C4787ED7D0513245.json"
+        }
+      ]
+    },
+    {
+      "runId": "20260727T231323Z-34aa60b39431",
+      "sliceId": "formula-ready-remaining-012",
+      "reportPath": "docs/generated/formula-ready-backfill-20260727T231323Z-34aa60b39431.json",
+      "reportSha256": "8FE1C623007E6CB7646E9040F6548DAC9BB77998A72C97902D2EA9CA0232B037",
+      "reportContentHash": "7E1669C20A7C0B84FE9719D4A6A18B04B438E478235F46E6CB7B7E23C53D15CC",
+      "preflightJournalPath": "storage/provider-validation/scoring-inputs-v2/physical-request-journals/20260727T231323Z-34aa60b39431/run/000001-PREFLIGHT.json",
+      "preflightJournalSha256": "9824E082CFB8B09289386C19E9AB226C4BA508A92C66071F1F9DB644F62821DA",
+      "preflightEventHash": "F77C069CA75EC0503113E4765A2F346607393613B5C97552094248AA785672D8",
+      "completeJournalPath": "storage/provider-validation/scoring-inputs-v2/physical-request-journals/20260727T231323Z-34aa60b39431/run/000002-COMPLETE.json",
+      "completeJournalSha256": "4DF762C1CBF58CBA9E86B32328179166DADACB199D75790A84EAEAD20FAEB5B6",
+      "completeEventHash": "F592AA9E5DCC10668B58040F453F28793DCA690FBE2F8B580C8F2BF1095C5C4D",
+      "configuredLocalWeightCeiling": 228,
+      "checkpoints": [
+        {
+          "symbol": "TGT",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T231323Z-34aa60b39431/0001-TGT.json",
+          "sha256": "6B8C4AB24E9596F3D94D20921225985B93E2CD3B6C12074D84284EB4DBB8C7C9"
+        },
+        {
+          "symbol": "TJX",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T231323Z-34aa60b39431/0002-TJX.json",
+          "sha256": "11E30C16948F5ADB7C5642D64DDBA977EB319774E1D0D16AC3D0D50A0D29A206"
+        },
+        {
+          "symbol": "TKO",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T231323Z-34aa60b39431/0003-TKO.json",
+          "sha256": "8E64FEF2B4670A95FDF662B09160A06939BE7C1E46D95916261E94B57D8C908A"
+        },
+        {
+          "symbol": "TMUS",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T231323Z-34aa60b39431/0004-TMUS.json",
+          "sha256": "C96ABDC0B179FCB99B2D80CF7BE8077678C2FE7C8E250042A8DD4E4A31514860"
+        },
+        {
+          "symbol": "TSN",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T231323Z-34aa60b39431/0005-TSN.json",
+          "sha256": "EA19BE5C4E7E786D0CCA05D90D76DF94157EA7ABF2B0CBBB3105F51DA66583BB"
+        },
+        {
+          "symbol": "TTC",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T231323Z-34aa60b39431/0006-TTC.json",
+          "sha256": "C09B8E2CE4FFF006041492A80CCCE1277C7414EDE6C62F121F0A6ECE5DD7604C"
+        },
+        {
+          "symbol": "TTD",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T231323Z-34aa60b39431/0007-TTD.json",
+          "sha256": "F11CE9B954A81A596F75DB4A8A5F9812A8B4FDE0210BC37D4E9F4D11471094B6"
+        },
+        {
+          "symbol": "TTWO",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T231323Z-34aa60b39431/0008-TTWO.json",
+          "sha256": "E47A355BEE5A93DACA118CBA7DB567869AF048D308658E5D99132ECE56BCE670"
+        },
+        {
+          "symbol": "UFPI",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T231323Z-34aa60b39431/0009-UFPI.json",
+          "sha256": "361E87791A3A26E86D77FA68C72A981B9D1D4836670AE03E97BAF91E26C12A99"
+        },
+        {
+          "symbol": "UNP",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T231323Z-34aa60b39431/0010-UNP.json",
+          "sha256": "34034E8CBC2767F1DCD448D969B241E4DF118E800B376383DFC5016E82E47C98"
+        },
+        {
+          "symbol": "UPS",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T231323Z-34aa60b39431/0011-UPS.json",
+          "sha256": "6CC6CE029D3A3258B81BA2EF1E705DF4C1288DFDF5236156F1A8BE5C5CA15CA3"
+        },
+        {
+          "symbol": "VMC",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T231323Z-34aa60b39431/0012-VMC.json",
+          "sha256": "C972E916CC8A24885C31BC9AA31B3958EC5F7B88FA34984D7FC583DCD89EA0C5"
+        },
+        {
+          "symbol": "WBD",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T231323Z-34aa60b39431/0013-WBD.json",
+          "sha256": "B95254835D7AA1950E0C3B2E5C3A9CE4E8C142E39B6B1CA96B5F8FED19AC13CC"
+        },
+        {
+          "symbol": "WDFC",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T231323Z-34aa60b39431/0014-WDFC.json",
+          "sha256": "B1CD687CD51EBEF234B6278C7CBCEC28E987780B0A65263F08B313B5AF0B635B"
+        },
+        {
+          "symbol": "WM",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T231323Z-34aa60b39431/0015-WM.json",
+          "sha256": "BDBB10F46C17E3DDAB4AF3855EAB850A05B1CF753A074A82AF30B7864CDF89CE"
+        },
+        {
+          "symbol": "WMT",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T231323Z-34aa60b39431/0016-WMT.json",
+          "sha256": "0D975A61985DFDDC39BB97F7C12FDDA1C2AF5EDE3962E530E9A5B8A6994CA23D"
+        },
+        {
+          "symbol": "XEL",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T231323Z-34aa60b39431/0017-XEL.json",
+          "sha256": "93558446FF7A777D37FD1DBC0017C0536237F0F4F1B5AF9B1CC017B696ABD52B"
+        },
+        {
+          "symbol": "YUM",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T231323Z-34aa60b39431/0018-YUM.json",
+          "sha256": "210CEF978159F87AED634016379D84FB246D000D0A4DA2939533DF232F53AB1B"
+        },
+        {
+          "symbol": "ZBH",
+          "path": "storage/provider-validation/scoring-inputs-v2/checkpoints/20260727T231323Z-34aa60b39431/0019-ZBH.json",
+          "sha256": "589C69D091E4F4937CC49AFA2273E8D366DA587FFFF8AC9A3BD19182575B2766"
+        }
+      ],
+      "terminalPayloads": [
+        {
+          "symbol": "TGT",
+          "status": "FORMULA_READY",
+          "contentHash": "F1A8770D23844CCA822040BC282DCD9F417CEB753A64AC2B0CE72715B10EA1C9",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/TGT/F1A8770D23844CCA822040BC282DCD9F417CEB753A64AC2B0CE72715B10EA1C9.json"
+        },
+        {
+          "symbol": "TJX",
+          "status": "FORMULA_READY",
+          "contentHash": "4FDE6D053999C62661EB96C13125D6CEEFEFFAE6E7ED2E8327339804FC09F972",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/TJX/4FDE6D053999C62661EB96C13125D6CEEFEFFAE6E7ED2E8327339804FC09F972.json"
+        },
+        {
+          "symbol": "TKO",
+          "status": "FORMULA_READY",
+          "contentHash": "C2629961F5EE7270A1903B98395FB5E8EC5EACEB8F96AE148C8C9D4C7BAA9494",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/TKO/C2629961F5EE7270A1903B98395FB5E8EC5EACEB8F96AE148C8C9D4C7BAA9494.json"
+        },
+        {
+          "symbol": "TMUS",
+          "status": "FORMULA_READY",
+          "contentHash": "142F8DAEC7F6E7C2D8C8726BFD3156F95B3CCDF0E39005F0534BA3274113D0F7",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/TMUS/142F8DAEC7F6E7C2D8C8726BFD3156F95B3CCDF0E39005F0534BA3274113D0F7.json"
+        },
+        {
+          "symbol": "TSN",
+          "status": "FORMULA_READY",
+          "contentHash": "208E299F6BA12079D1FD68D86760D0A642F4CF13FF300CD6839D510CCA192093",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/TSN/208E299F6BA12079D1FD68D86760D0A642F4CF13FF300CD6839D510CCA192093.json"
+        },
+        {
+          "symbol": "TTC",
+          "status": "FORMULA_READY",
+          "contentHash": "D0F2409F2DB28BF973D4BEBFBF2EF7997C8813C5F4322DE3354D3542DEC9A073",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/TTC/D0F2409F2DB28BF973D4BEBFBF2EF7997C8813C5F4322DE3354D3542DEC9A073.json"
+        },
+        {
+          "symbol": "TTD",
+          "status": "FORMULA_READY",
+          "contentHash": "6AA4D0D6A8736A59A6ABCB492C689B3D77A2259DF01761261EB2F2C6AB6CDE00",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/TTD/6AA4D0D6A8736A59A6ABCB492C689B3D77A2259DF01761261EB2F2C6AB6CDE00.json"
+        },
+        {
+          "symbol": "TTWO",
+          "status": "FORMULA_READY",
+          "contentHash": "179FBFCB15C8194D0B2CB309947D09179C7131CC9341E686DE4B38E55DF6ECB1",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/TTWO/179FBFCB15C8194D0B2CB309947D09179C7131CC9341E686DE4B38E55DF6ECB1.json"
+        },
+        {
+          "symbol": "UFPI",
+          "status": "FORMULA_READY",
+          "contentHash": "2372E14B131B2BB57496564BE250789C93D8FA9D0F6D4717EBDF47D4A632563B",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/UFPI/2372E14B131B2BB57496564BE250789C93D8FA9D0F6D4717EBDF47D4A632563B.json"
+        },
+        {
+          "symbol": "UNP",
+          "status": "FORMULA_READY",
+          "contentHash": "4018CC3BBD42EC58EE25FE425EAACC8EECF14E43F182DF5D46945BD374C6A2D5",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/UNP/4018CC3BBD42EC58EE25FE425EAACC8EECF14E43F182DF5D46945BD374C6A2D5.json"
+        },
+        {
+          "symbol": "UPS",
+          "status": "FORMULA_READY",
+          "contentHash": "CA8DED877D42DA10413E399126F7871FB0253C447B6B06EEEF1129F4C375F6D5",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/UPS/CA8DED877D42DA10413E399126F7871FB0253C447B6B06EEEF1129F4C375F6D5.json"
+        },
+        {
+          "symbol": "VMC",
+          "status": "FORMULA_READY",
+          "contentHash": "7764E12CACC73EB9F6C90D95CA33122F8A646CD858B3E941959BE3F4E84A1BEB",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/VMC/7764E12CACC73EB9F6C90D95CA33122F8A646CD858B3E941959BE3F4E84A1BEB.json"
+        },
+        {
+          "symbol": "WBD",
+          "status": "FORMULA_READY",
+          "contentHash": "04F16E1DD6F96292C5AAC78787B74659887C3AB7C64F70944A0EC92C1091BD49",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/WBD/04F16E1DD6F96292C5AAC78787B74659887C3AB7C64F70944A0EC92C1091BD49.json"
+        },
+        {
+          "symbol": "WDFC",
+          "status": "FORMULA_READY",
+          "contentHash": "596782E85CF22CDCC4E9365EAC5A5A030E5D31DE6DD291DB367E8E76D7470FA0",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/WDFC/596782E85CF22CDCC4E9365EAC5A5A030E5D31DE6DD291DB367E8E76D7470FA0.json"
+        },
+        {
+          "symbol": "WM",
+          "status": "FORMULA_READY",
+          "contentHash": "57C5AFD82E75D1144BE171883B31DCDF1D6462A3A93BA073FEB54D7B014E1248",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/WM/57C5AFD82E75D1144BE171883B31DCDF1D6462A3A93BA073FEB54D7B014E1248.json"
+        },
+        {
+          "symbol": "WMT",
+          "status": "FORMULA_READY",
+          "contentHash": "02DB53955D6EA6BE25AB1AEB5FB3CEDDE0B8A5CF8DE7EAE45A2E2C29F21D6FF8",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/WMT/02DB53955D6EA6BE25AB1AEB5FB3CEDDE0B8A5CF8DE7EAE45A2E2C29F21D6FF8.json"
+        },
+        {
+          "symbol": "XEL",
+          "status": "FORMULA_READY",
+          "contentHash": "EF037DE9043890438C195E1CB4EB5B662271EDE9429890E1D58FE89246BF6111",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/XEL/EF037DE9043890438C195E1CB4EB5B662271EDE9429890E1D58FE89246BF6111.json"
+        },
+        {
+          "symbol": "YUM",
+          "status": "FORMULA_READY",
+          "contentHash": "66A5964CEFA3F0F07F005D609D205947DA1FC6E14C5CA1C103CE9580FFEA75A8",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/YUM/66A5964CEFA3F0F07F005D609D205947DA1FC6E14C5CA1C103CE9580FFEA75A8.json"
+        },
+        {
+          "symbol": "ZBH",
+          "status": "FORMULA_READY",
+          "contentHash": "32A59D435FA4DDA2F5E79451E08D1B8DD00568113B5DC76D8060F7731D61DE2D",
+          "storageReference": "storage/provider-validation/scoring-inputs-v2/ZBH/32A59D435FA4DDA2F5E79451E08D1B8DD00568113B5DC76D8060F7731D61DE2D.json"
+        }
+      ]
+    }
+  ],
+  "terminalEvidenceOutsideSlices": [
+    {
+      "symbol": "AAPL",
+      "status": "FORMULA_READY",
+      "contentHash": "83F478441CF8AA11A10E36633CB8815B5DA3737A6142BE1BDD564ED0E0F40A05",
+      "storageReference": null
+    },
+    {
+      "symbol": "ABNB",
+      "status": "SECURITY_INSUFFICIENT_DATA",
+      "contentHash": "9C7615FACF22E8AC6CF520224143D27940200242880ED7368017012AD6AA70B1",
+      "storageReference": null
+    },
+    {
+      "symbol": "CAT",
+      "status": "FORMULA_READY",
+      "contentHash": "E736F990F76D88F04FB871F0D02A80D853F7EC0C8F2F64934B3524E1432A86C2",
+      "storageReference": null
+    },
+    {
+      "symbol": "JNJ",
+      "status": "FORMULA_READY",
+      "contentHash": "41931F67FFAD86D46092D0A8727EFBC6CA80528A98336DDE963FB4EC67A3B191",
+      "storageReference": null
+    }
+  ],
+  "rawProviderValuesIncluded": false,
+  "licensedPayloadsIncluded": false,
+  "credentialsIncluded": false,
+  "objectiveRatingExecuted": false,
+  "networkRequestsExecutedDuringReconciliation": false,
+  "artifactContentHash": "6D421A2A14269FD0DFB25528BBD3D08DB91BCE81E9F2129B4F671ACF37739CFB"
+}

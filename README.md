@@ -69,6 +69,11 @@ Performance tracking and strategy evaluation
 - [System Architecture](docs/architecture.md)
 - [Local Development](docs/development.md)
 - [Investment Methodology](docs/investment-methodology.md)
+- [Tactical Signal v2.1 Methodology](docs/tactical-signal-v2-1-methodology-2026-07-28.md)
+- [Long-Horizon Research Rating v1](docs/long-horizon-research-rating-v1-2026-07-28.md)
+- [Analytics Model Interface v1](docs/analytics-model-interface-v1.md)
+- [Forward Decision-Quality Final Offline Acceptance](docs/forward-decision-quality-final-acceptance-2026-07-28.md)
+- [Analytics Stage Closeout](docs/analytics-stage-closeout-2026-07-28.md)
 - [AI Analysis](docs/ai-analysis.md)
 - [Data and Backtesting](docs/data-and-backtesting.md)
 - [Quantitative Screening Design](docs/quantitative-screening.md)
@@ -83,24 +88,35 @@ Performance tracking and strategy evaluation
 
 ## Current Status
 
-Phase 0 is complete and Phase 1 is in progress. The complete local stack runs
-through Docker Compose, and GitHub Actions validates the frontend, backend,
-analytics service, and full Git history for secrets.
+Phase 0 is complete and Phase 1 analytics has reached an engineering
+acceptance checkpoint. The complete local stack runs through Docker Compose,
+and GitHub Actions validates the frontend, backend, analytics service, and full
+Git history for secrets.
 
-The first real-data slice now:
+The current analytics foundation includes:
 
-- Ingests split-adjusted daily OHLCV data from Twelve Data
-- Stores normalized securities and prices in PostgreSQL
-- Exposes the latest stored observation through Spring Boot
-- Displays six engineering-universe securities at `/market-data`
-- Preserves provider, trading-date, timezone, adjustment, and ingestion
-  metadata
+- provider-neutral, point-in-time-aware market and fundamental evidence
+  boundaries;
+- deterministic `LONG-HORIZON-RESEARCH-v1.0.0` and
+  `TACTICAL-SIGNAL-v2.1.0` models behind one stable versioned interface;
+- a sealed current-decision-only `QC-v1.0.0` snapshot for 136 securities;
+- daily tactical one-week, one-month, and three-month opportunity states with
+  separate entry value, extension risk, actionability, expiry, and risk caps;
+- a source-backed AI review contract that remains separate from deterministic
+  scores; and
+- an accepted Forward Decision-Quality framework with transaction costs,
+  slippage, cash, sector ETF, and SPY counterfactuals.
 
-The next analytics milestone is a data-contract and provider-validation slice
-for two initial long-term screening paths: `Quality Compounder` and
-`Undervalued Quality`. Deterministic screening will precede source-backed AI
-evidence review. User portfolio fit and allocation scenarios remain later
-workstreams.
+Market-data ingestion remains replaceable through `MARKET_DATA_PROVIDER`.
+EODHD is the current bounded licensed source, yfinance is used only for
+development or bounded cross-checking, and Twelve Data remains supported
+through the same normalized boundary. Provider acceptance does not by itself
+make a security scoreable; formula readiness and explicit missing-data states
+remain separate gates.
+
+Forward Validation is operationally ready but not a performance result. No
+prospective signal has yet matured through the 5-, 20-, or 60-trading-day
+horizon, and `statisticalEdgeProven` remains `NOT_ESTABLISHED`.
 
 ## Quick Start
 
@@ -118,9 +134,10 @@ Copy-Item .env.example .env
 docker compose up --build
 ```
 
-Set `TWELVE_DATA_API_KEY` in the local `.env` file before running real market
-data ingestion. Never commit `.env` or place credentials in browser-exposed
-variables.
+Set the credential required by the selected provider in the local `.env`
+file. Twelve Data uses `TWELVE_DATA_API_KEY`; EODHD uses `EODHD_API_KEY`;
+yfinance does not use an API key. Never commit `.env` or place credentials in
+browser-exposed variables.
 
 Then open:
 

@@ -1,0 +1,2251 @@
+{
+  "artifactType": "OBJECTIVE_RATING_CURRENT_FACTOR_INPUT_MANIFEST",
+  "schemaVersion": "objective-rating-current-factor-input-manifest-v1.2.0",
+  "snapshotContractVersion": "objective-rating-current-factor-input-v1.1.0",
+  "windowPolicyVersion": "objective-rating-current-factor-window-v1.1.0",
+  "cutoff": "2026-07-27T23:59:59Z",
+  "sourceContractCandidateCount": 55,
+  "sourceContractCandidateSetHash": "86CCFB3BDFDAAD46AC6DCC3D606E66CA16AF94C4A39439ACE404CC7AED7ED3A2",
+  "sourcePaths": {
+    "aggregate": "docs/generated/formula-ready-243-final-aggregate-v1.json",
+    "secManifest": "docs/generated/scoring-input-v4-sec-offline-manifest-v2.json",
+    "currentSupplementManifest": "docs/generated/objective-rating-v1-current-snapshot-supplements-v1.json",
+    "sourceSemanticsAudit": "docs/generated/objective-rating-v1-source-semantics-audit-v2.json",
+    "evidenceRequirements": "docs/generated/objective-rating-v1-evidence-requirements-v4.json"
+  },
+  "frozenFactorRequirements": {
+    "cash_conversion": [
+      "operating_cash_flow_ttm",
+      "capital_expenditure_ttm",
+      "net_income_ttm"
+    ],
+    "dilution": [
+      "diluted_weighted_average_shares_current",
+      "diluted_weighted_average_shares_three_year_prior"
+    ],
+    "earnings_yield": [
+      "ebit_ttm",
+      "pit_market_cap",
+      "instant_total_debt",
+      "instant_cash",
+      "instant_minority_interest"
+    ],
+    "eps_growth": [
+      "diluted_eps_current",
+      "diluted_eps_three_year_prior"
+    ],
+    "fcf_margin": [
+      "operating_cash_flow_ttm",
+      "capital_expenditure_ttm",
+      "revenue_ttm"
+    ],
+    "fcf_per_share_growth": [
+      "fcf_per_diluted_share_current",
+      "fcf_per_diluted_share_three_year_prior"
+    ],
+    "fcf_yield": [
+      "fcf_ttm",
+      "pit_market_cap"
+    ],
+    "historical_fcf_yield_percentile": [
+      "minimum_12_monthly_pit_fcf_yields"
+    ],
+    "interest_coverage": [
+      "ebit_ttm",
+      "interest_expense_ttm"
+    ],
+    "margin_quality": [
+      "gross_margin_ttm",
+      "operating_margin_ttm",
+      "gross_margin_three_year_change",
+      "operating_margin_three_year_change"
+    ],
+    "net_debt_to_ebitda": [
+      "instant_total_debt",
+      "instant_cash",
+      "ebitda_ttm"
+    ],
+    "operating_margin": [
+      "operating_income_ttm",
+      "revenue_ttm"
+    ],
+    "roic": [
+      "operating_income_ttm",
+      "income_tax_ttm",
+      "pretax_income_ttm",
+      "current_invested_capital",
+      "prior_invested_capital"
+    ],
+    "stability": [
+      "eight_aligned_discrete_operating_margins",
+      "eight_aligned_discrete_fcf_margins"
+    ],
+    "valuation_guardrail": [
+      "earnings_yield_cohort_percentile",
+      "fcf_yield_cohort_percentile"
+    ]
+  },
+  "windowRules": {
+    "ttm": "Four consecutive observations classified DISCRETE_QUARTER; no raw YTD observation is summed.",
+    "weightedShares": "Four discrete-quarter diluted weighted-average share facts weighted by inclusive duration days.",
+    "threeYear": "Current and prior four-quarter windows have period ends 1,000 through 1,200 days apart.",
+    "stability": "Eight consecutive period-aligned discrete quarters across operating income, revenue, operating cash flow, and capex.",
+    "currentWindowMaximumAgeDays": 200,
+    "cutoffRule": "availableAt must be at or before cutoff.",
+    "fiscalCalendarRule": "Date continuity permits 53/54-week fiscal calendars; calendar-year labels are not assumed."
+  },
+  "currentQcInputReadyCount": 0,
+  "currentUqInputReadyCount": 0,
+  "factorStatusCounts": {
+    "qcFactors:cash_conversion": {
+      "MISSING": 55
+    },
+    "qcFactors:dilution": {
+      "MISSING": 55
+    },
+    "qcFactors:eps_growth": {
+      "MISSING": 55
+    },
+    "qcFactors:fcf_margin": {
+      "MISSING": 55
+    },
+    "qcFactors:fcf_per_share_growth": {
+      "MISSING": 55
+    },
+    "qcFactors:interest_coverage": {
+      "MISSING": 55
+    },
+    "qcFactors:margin_quality": {
+      "MISSING": 55
+    },
+    "qcFactors:net_debt_to_ebitda": {
+      "VALID": 55
+    },
+    "qcFactors:roic": {
+      "MISSING": 55
+    },
+    "qcFactors:stability": {
+      "MISSING": 55
+    },
+    "qcFactors:valuation_guardrail": {
+      "MISSING": 55
+    },
+    "uqFactors:cash_conversion": {
+      "MISSING": 55
+    },
+    "uqFactors:dilution": {
+      "MISSING": 55
+    },
+    "uqFactors:earnings_yield": {
+      "MISSING": 55
+    },
+    "uqFactors:fcf_yield": {
+      "MISSING": 55
+    },
+    "uqFactors:historical_fcf_yield_percentile": {
+      "MISSING": 55
+    },
+    "uqFactors:interest_coverage": {
+      "MISSING": 55
+    },
+    "uqFactors:net_debt_to_ebitda": {
+      "VALID": 55
+    },
+    "uqFactors:operating_margin": {
+      "MISSING": 55
+    },
+    "uqFactors:roic": {
+      "MISSING": 55
+    },
+    "uqFactors:stability": {
+      "MISSING": 55
+    }
+  },
+  "blockingOperandCounts": {
+    "capital_expenditure_ttm": 165,
+    "diluted_eps_current": 55,
+    "diluted_eps_three_year_prior": 55,
+    "diluted_weighted_average_shares_current": 110,
+    "diluted_weighted_average_shares_three_year_prior": 110,
+    "ebit_ttm": 220,
+    "eight_aligned_discrete_fcf_margins": 110,
+    "eight_aligned_discrete_operating_margins": 110,
+    "fcf_per_diluted_share_current": 55,
+    "fcf_per_diluted_share_three_year_prior": 55,
+    "fcf_ttm": 110,
+    "gross_margin_three_year_change": 55,
+    "gross_margin_ttm": 55,
+    "income_tax_ttm": 110,
+    "instant_minority_interest": 110,
+    "interest_expense_ttm": 110,
+    "minimum_12_monthly_pit_fcf_yields": 55,
+    "net_income_ttm": 110,
+    "operating_cash_flow_ttm": 165,
+    "operating_income_ttm": 165,
+    "operating_margin_three_year_change": 55,
+    "operating_margin_ttm": 55,
+    "pretax_income_ttm": 110,
+    "revenue_ttm": 110
+  },
+  "operandReasonCounts": {
+    "CURRENT_DILUTED_EPS_INPUT_WINDOW_MISSING": 55,
+    "CURRENT_FCF_PER_SHARE_INPUT_WINDOW_MISSING": 55,
+    "CURRENT_TTM_WINDOW_NOT_AVAILABLE": 54,
+    "DEFERRED_TO_ALGORITHM_COHORT_STAGE": 110,
+    "EIGHT_ALIGNED_DISCRETE_QUARTERS_NOT_AVAILABLE": 110,
+    "FCF_TTM_INPUT_WINDOW_MISSING": 55,
+    "FOUR_CONSECUTIVE_DISCRETE_QUARTERS_NOT_AVAILABLE": 649,
+    "GROSS_MARGIN_THREE_YEAR_ENDPOINT_MISSING": 55,
+    "GROSS_MARGIN_TTM_INPUT_WINDOW_MISSING": 55,
+    "HISTORICAL_FCF_YIELD_PIT_SERIES_BLOCKED_BY_FROZEN_POLICY": 55,
+    "LATEST_DISCRETE_TTM_WINDOW_IS_STALE": 11,
+    "MINORITY_INTEREST_NOT_PROVEN_OR_EXPLICITLY_NOT_APPLICABLE": 55,
+    "OPERATING_MARGIN_THREE_YEAR_ENDPOINT_MISSING": 55,
+    "OPERATING_MARGIN_TTM_INPUT_WINDOW_MISSING": 55,
+    "THREE_YEAR_PRIOR_DILUTED_EPS_INPUT_WINDOW_MISSING": 55,
+    "THREE_YEAR_PRIOR_FCF_PER_SHARE_INPUT_WINDOW_MISSING": 55,
+    "THREE_YEAR_PRIOR_TTM_WINDOW_NOT_AVAILABLE": 1
+  },
+  "securities": [
+    {
+      "symbol": "ADSK",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/ADSK/845732600CAE5E4AFB828935C29A411EAA6C16AE527FD5034AAB8B2ABA9299BB.json",
+      "payloadContentHash": "845732600CAE5E4AFB828935C29A411EAA6C16AE527FD5034AAB8B2ABA9299BB",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "AMAT",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/AMAT/C1CEA09CBACE5B5497EB3A5C7AF3233CEDB92F26CD63B81BD8132C7034A4F686.json",
+      "payloadContentHash": "C1CEA09CBACE5B5497EB3A5C7AF3233CEDB92F26CD63B81BD8132C7034A4F686",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "AMCR",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/AMCR/9B970BB0D451DD0537F7DE358B079FA63C1C3D799B997A11DD0F2E67EF0B3909.json",
+      "payloadContentHash": "9B970BB0D451DD0537F7DE358B079FA63C1C3D799B997A11DD0F2E67EF0B3909",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "AMD",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/AMD/C6BC0AE7A2A6CBD8DD56B1E3C8877CC37071E9F66B11C2D3FE836171718EA101.json",
+      "payloadContentHash": "C6BC0AE7A2A6CBD8DD56B1E3C8877CC37071E9F66B11C2D3FE836171718EA101",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "APD",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/APD/E7C1B69D87EAD2DEB911E5D410179BF1E87D8ACFD06586198588B01D76F0975B.json",
+      "payloadContentHash": "E7C1B69D87EAD2DEB911E5D410179BF1E87D8ACFD06586198588B01D76F0975B",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "APH",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/APH/E6768ADEC1A8F24DAE242BB0F0405B842FDB7543BE68763C7FC38EDEA21DB0CB.json",
+      "payloadContentHash": "E6768ADEC1A8F24DAE242BB0F0405B842FDB7543BE68763C7FC38EDEA21DB0CB",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "APTV",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/APTV/D7AD990DE4353B352AAC50130C2ADAA793BFC94B489035BF12C20EFB4CAB335D.json",
+      "payloadContentHash": "D7AD990DE4353B352AAC50130C2ADAA793BFC94B489035BF12C20EFB4CAB335D",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "AVGO",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/AVGO/85FC32547EF0A659B8731207477D9A1F5EC318C82A6B81AE842A59320761A3CF.json",
+      "payloadContentHash": "85FC32547EF0A659B8731207477D9A1F5EC318C82A6B81AE842A59320761A3CF",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "BDX",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/BDX/A6849C134B2BB4674CACCCFE08A3068AE5EF0A6CF02DAE1CBA893BD893D0F95C.json",
+      "payloadContentHash": "A6849C134B2BB4674CACCCFE08A3068AE5EF0A6CF02DAE1CBA893BD893D0F95C",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "BF-B",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/BF-B/C9946200867C29CF9C02A597C4EDFC8108408F71DA7BC6E4EEF009F731DA5542.json",
+      "payloadContentHash": "C9946200867C29CF9C02A597C4EDFC8108408F71DA7BC6E4EEF009F731DA5542",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "BLDR",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/BLDR/B81E24F9F03C5776534B2E9BC8DA72997E94113BDA444A7DCB93D2FFAE615C32.json",
+      "payloadContentHash": "B81E24F9F03C5776534B2E9BC8DA72997E94113BDA444A7DCB93D2FFAE615C32",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "CHD",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/CHD/60D61847D6A7822FA80FF128C4B7D629A5ED0F19798CAEE15036358B1E1C69D4.json",
+      "payloadContentHash": "60D61847D6A7822FA80FF128C4B7D629A5ED0F19798CAEE15036358B1E1C69D4",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "CIEN",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/CIEN/5B3E52519EDD3447903ABB48B6FA56E0B0ADF3D1A5D8C66DB646FAB25949CB9F.json",
+      "payloadContentHash": "5B3E52519EDD3447903ABB48B6FA56E0B0ADF3D1A5D8C66DB646FAB25949CB9F",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "CNC",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/CNC/EA52C25B4F9C0677FB730F770E4BCA2FE0BC3754A254AFD9DC0A7D4D17BF6640.json",
+      "payloadContentHash": "EA52C25B4F9C0677FB730F770E4BCA2FE0BC3754A254AFD9DC0A7D4D17BF6640",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "COO",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/COO/807E2E1729CD1B51B4E7370015D4CDEEB6F62E7FA2D49978FB910D9B75625304.json",
+      "payloadContentHash": "807E2E1729CD1B51B4E7370015D4CDEEB6F62E7FA2D49978FB910D9B75625304",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "CRH",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/CRH/7C04BDA461E908950AAF1783CF3499403CAF453E0403F35ADA642F2271418865.json",
+      "payloadContentHash": "7C04BDA461E908950AAF1783CF3499403CAF453E0403F35ADA642F2271418865",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "CROX",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/CROX/333CD888E8BEE55700DC0093BD943C60E2475C2CF43AA5A35234BF8DEF92C7A2.json",
+      "payloadContentHash": "333CD888E8BEE55700DC0093BD943C60E2475C2CF43AA5A35234BF8DEF92C7A2",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "CSCO",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/CSCO/1A7C946A22B4AFF08319A357F0E705E154896A61F5584D5A86ACE870C3584707.json",
+      "payloadContentHash": "1A7C946A22B4AFF08319A357F0E705E154896A61F5584D5A86ACE870C3584707",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "CVS",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/CVS/560CD452FB4A5FBF4F802718764A0617718F0C893EE118C1E48393C3EAA27DE3.json",
+      "payloadContentHash": "560CD452FB4A5FBF4F802718764A0617718F0C893EE118C1E48393C3EAA27DE3",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "DDOG",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/DDOG/7F08FCB5FA2DD05F1448D8BC0A32FB66074760382E8C0FE93033D8BADA50DCE1.json",
+      "payloadContentHash": "7F08FCB5FA2DD05F1448D8BC0A32FB66074760382E8C0FE93033D8BADA50DCE1",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "DELL",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/DELL/6D16F6CBECCCCC3DD710B72013C785EE45C84CB6A1FB783CD75F30FF42F135B8.json",
+      "payloadContentHash": "6D16F6CBECCCCC3DD710B72013C785EE45C84CB6A1FB783CD75F30FF42F135B8",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "DHR",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/DHR/5C636F7766273A4B707BE93012232376200E98F69BB7BD5F9CBC131B4D4A116B.json",
+      "payloadContentHash": "5C636F7766273A4B707BE93012232376200E98F69BB7BD5F9CBC131B4D4A116B",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "DOV",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/DOV/9C1AA5BC9DB24A1814981B31C3E7A9B9762F11E48C3669BBCD23D238565A900F.json",
+      "payloadContentHash": "9C1AA5BC9DB24A1814981B31C3E7A9B9762F11E48C3669BBCD23D238565A900F",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "DXCM",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/DXCM/D8E4965BD180A3B009B3E4DE931EFFC01540033FE0090656A734831EB2ED0069.json",
+      "payloadContentHash": "D8E4965BD180A3B009B3E4DE931EFFC01540033FE0090656A734831EB2ED0069",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "EBAY",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/EBAY/65DE6C148F3FAD888C61BDF0B20816E19DD6669353B6F9BC433CD87308D29412.json",
+      "payloadContentHash": "65DE6C148F3FAD888C61BDF0B20816E19DD6669353B6F9BC433CD87308D29412",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "FAST",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/FAST/0C2B8D9615A797518E7FA677E942CFEE8EDEF67F1E5ECD16F5786E4023158628.json",
+      "payloadContentHash": "0C2B8D9615A797518E7FA677E942CFEE8EDEF67F1E5ECD16F5786E4023158628",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "FIX",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/FIX/120B1F2B74ABB17568F6ED13B3D6FE2D171B739ECA413C360DBF9FD0CCC44010.json",
+      "payloadContentHash": "120B1F2B74ABB17568F6ED13B3D6FE2D171B739ECA413C360DBF9FD0CCC44010",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "FLEX",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/FLEX/D2E4E9C041C4EEF6DE62EFD7E427CC0C966563C3555B3BC8BB139AB710D27381.json",
+      "payloadContentHash": "D2E4E9C041C4EEF6DE62EFD7E427CC0C966563C3555B3BC8BB139AB710D27381",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "FSLR",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/FSLR/58E118AD14913A9B7F0357FF5DBC65D445379ADA0C15FE670A1CEC467F4E5304.json",
+      "payloadContentHash": "58E118AD14913A9B7F0357FF5DBC65D445379ADA0C15FE670A1CEC467F4E5304",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "FTV",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/FTV/195046BD221BB9895DBBF23C8741D19A15A46A367EFB1C641B1B49283466E4CE.json",
+      "payloadContentHash": "195046BD221BB9895DBBF23C8741D19A15A46A367EFB1C641B1B49283466E4CE",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "GPC",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/GPC/5007AA4FBD9070F4F652234B7087693C292D2843C3C8648435E06E4AC9EE796E.json",
+      "payloadContentHash": "5007AA4FBD9070F4F652234B7087693C292D2843C3C8648435E06E4AC9EE796E",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "GWW",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/GWW/A28677C48D125EB8F9C3C840906E8BA963C3195CF595C6FEF3962DF5A1AE2A13.json",
+      "payloadContentHash": "A28677C48D125EB8F9C3C840906E8BA963C3195CF595C6FEF3962DF5A1AE2A13",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "HRL",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/HRL/FE26118C87D3BAE68F671F7B8FABF99D586A91132CB90950721FFBAFAD315EFA.json",
+      "payloadContentHash": "FE26118C87D3BAE68F671F7B8FABF99D586A91132CB90950721FFBAFAD315EFA",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "IDXX",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/IDXX/AEB5D81894064D95D6CBE4CBF03609C8B70EB525E141A4DCBCEA462BD7D11C42.json",
+      "payloadContentHash": "AEB5D81894064D95D6CBE4CBF03609C8B70EB525E141A4DCBCEA462BD7D11C42",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "IFF",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/IFF/85A1F15E03B7C0FCE991F6ED336DD04AA56FB13E6F99CD58628F3508E4A65E3C.json",
+      "payloadContentHash": "85A1F15E03B7C0FCE991F6ED336DD04AA56FB13E6F99CD58628F3508E4A65E3C",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "KDP",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/KDP/87A7CA058EE3333D5DEEE1E884C8C4FF514923C0121247403307B93583E44095.json",
+      "payloadContentHash": "87A7CA058EE3333D5DEEE1E884C8C4FF514923C0121247403307B93583E44095",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "KO",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/KO/D7AA51BAD87DEB625F762FCBC3525DEE0CEF82B76E860EFBEB6A6D80AD2A0D23.json",
+      "payloadContentHash": "D7AA51BAD87DEB625F762FCBC3525DEE0CEF82B76E860EFBEB6A6D80AD2A0D23",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "KVUE",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/KVUE/009EAD86F6487CCDB55BC10536E3D406DF0781381FF8BD7169DFD3804E7FA779.json",
+      "payloadContentHash": "009EAD86F6487CCDB55BC10536E3D406DF0781381FF8BD7169DFD3804E7FA779",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "MCHP",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/MCHP/AC3515462708D873D91BF6BA965D419F698F9E89958941703327A9A9233384A7.json",
+      "payloadContentHash": "AC3515462708D873D91BF6BA965D419F698F9E89958941703327A9A9233384A7",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "MCK",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/MCK/F86BE6FDB53AD7E69101A904A51C3E44BFDDFBA4ADDA3BD3BCE557F507A63564.json",
+      "payloadContentHash": "F86BE6FDB53AD7E69101A904A51C3E44BFDDFBA4ADDA3BD3BCE557F507A63564",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "MLM",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/MLM/2F601A25C11D5E66E6E315254DD213751428767AD83CDBF0D190DC0136444719.json",
+      "payloadContentHash": "2F601A25C11D5E66E6E315254DD213751428767AD83CDBF0D190DC0136444719",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "MO",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/MO/785112088F55DADAAD00ACB99FF74BF4814B09B299516B51DED1D11984DCC792.json",
+      "payloadContentHash": "785112088F55DADAAD00ACB99FF74BF4814B09B299516B51DED1D11984DCC792",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "MOS",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/MOS/315268277776224086D64CA9C8B864BAA3310489B43FE783524AEF281341AF45.json",
+      "payloadContentHash": "315268277776224086D64CA9C8B864BAA3310489B43FE783524AEF281341AF45",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/MSFT/1C984A0606DE2C47F3DAFD724E1987FC40CDD63C4A4C536BA9FB6FC37C3A17A6.json",
+      "payloadContentHash": "1C984A0606DE2C47F3DAFD724E1987FC40CDD63C4A4C536BA9FB6FC37C3A17A6",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/NVDA/8EE0F18858B2AB778BD416DFB4BA1143414A9F780AF0A46F73D57763304F264F.json",
+      "payloadContentHash": "8EE0F18858B2AB778BD416DFB4BA1143414A9F780AF0A46F73D57763304F264F",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "OLED",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/OLED/CAD80386F0F3EEDB3103C74D23EA2C0673E773286B16D3DC9FD282A5F6C6CADE.json",
+      "payloadContentHash": "CAD80386F0F3EEDB3103C74D23EA2C0673E773286B16D3DC9FD282A5F6C6CADE",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "ORCL",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/ORCL/082610B2D412E4C90A5A0958739F04AE1B80530A82BA5F7F89CFBD2CD2E72BC6.json",
+      "payloadContentHash": "082610B2D412E4C90A5A0958739F04AE1B80530A82BA5F7F89CFBD2CD2E72BC6",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "PH",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/PH/9F808ECC1531E197A60088100C64CA0B491E8A8F589C7D5CA8BC32C23E6EF1D9.json",
+      "payloadContentHash": "9F808ECC1531E197A60088100C64CA0B491E8A8F589C7D5CA8BC32C23E6EF1D9",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "PLAB",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/PLAB/72B6450E1296E414CADD3AF5CE5C18CB99A740DB11CE0BBA48A0AA211DD200EC.json",
+      "payloadContentHash": "72B6450E1296E414CADD3AF5CE5C18CB99A740DB11CE0BBA48A0AA211DD200EC",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "ROK",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/ROK/9379CA076E31881C33FDB641080C01CD72A3351D971A756DE120F5BA4EAC8274.json",
+      "payloadContentHash": "9379CA076E31881C33FDB641080C01CD72A3351D971A756DE120F5BA4EAC8274",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "TGT",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/TGT/2685517FD9E7139F10EDB35280DBD57D66EDD995D439945E19B36BC6C866F09F.json",
+      "payloadContentHash": "2685517FD9E7139F10EDB35280DBD57D66EDD995D439945E19B36BC6C866F09F",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "TSN",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/TSN/5FB9579C5D35B35702B559D2A27DAE331D3E7898688256C1A5F64444DF7E9A2D.json",
+      "payloadContentHash": "5FB9579C5D35B35702B559D2A27DAE331D3E7898688256C1A5F64444DF7E9A2D",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "TTC",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/TTC/3D04A58CE56D096BD335392F2B9EE354B5048393A3E34EB6D40AAE3F6FE95C4B.json",
+      "payloadContentHash": "3D04A58CE56D096BD335392F2B9EE354B5048393A3E34EB6D40AAE3F6FE95C4B",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "VMC",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/VMC/1088399C70068D26A43CF99C1C60565143B1D8E9D9FD3217CEA7F5B28F57092C.json",
+      "payloadContentHash": "1088399C70068D26A43CF99C1C60565143B1D8E9D9FD3217CEA7F5B28F57092C",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    },
+    {
+      "symbol": "WDFC",
+      "status": "FACTOR_INPUT_SNAPSHOT_BUILT",
+      "currentQcInputReady": false,
+      "currentUqInputReady": false,
+      "storageReference": "storage/provider-validation/current-factor-input-snapshots-v1-1/WDFC/436F5AE060BB1B504E33783FE3807FE6E6DF21FE0D9C43B0727B0E9461F3BBDB.json",
+      "payloadContentHash": "436F5AE060BB1B504E33783FE3807FE6E6DF21FE0D9C43B0727B0E9461F3BBDB",
+      "qcFactorStatuses": {
+        "roic": "MISSING",
+        "fcf_margin": "MISSING",
+        "cash_conversion": "MISSING",
+        "margin_quality": "MISSING",
+        "stability": "MISSING",
+        "eps_growth": "MISSING",
+        "fcf_per_share_growth": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "dilution": "MISSING",
+        "valuation_guardrail": "MISSING"
+      },
+      "uqFactorStatuses": {
+        "earnings_yield": "MISSING",
+        "fcf_yield": "MISSING",
+        "historical_fcf_yield_percentile": "MISSING",
+        "roic": "MISSING",
+        "operating_margin": "MISSING",
+        "net_debt_to_ebitda": "VALID",
+        "interest_coverage": "MISSING",
+        "cash_conversion": "MISSING",
+        "stability": "MISSING",
+        "dilution": "MISSING"
+      },
+      "reasonCodes": [
+        "MISSING_REQUIRED_OPERANDS",
+        "RAW_VALUATION_INPUTS_MISSING"
+      ]
+    }
+  ],
+  "licensedValuesIncluded": false,
+  "scoresOrRanksIncluded": false,
+  "networkRequestsExecuted": false,
+  "formulaOrWeightChanges": false,
+  "artifactContentHash": "3B7D36AD53A8C1852E47BA312D871E50346B77518F5B6E65C7F25FD71A7B2C2C"
+}

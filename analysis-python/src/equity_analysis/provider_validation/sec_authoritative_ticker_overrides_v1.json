@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "sec-authoritative-ticker-overrides-v1.0.0",
+  "overrides": [
+    {
+      "ticker": "LANC",
+      "issuerLegalName": "Lancaster Colony Corporation",
+      "cik": "0000057515",
+      "sourceReference": "https://www.sec.gov/Archives/edgar/data/57515/000119312525030193/d936257d8k.htm",
+      "evidenceHash": "7C23CDE98DAFFFE79A248754B15D33EFFD33CA9410B77030261DBA4BF13B84BD",
+      "observedAt": "2026-07-27T18:55:26.333894Z",
+      "effectiveAt": "2025-02-18T00:00:00Z",
+      "expiresAt": null
+    }
+  ]
+}

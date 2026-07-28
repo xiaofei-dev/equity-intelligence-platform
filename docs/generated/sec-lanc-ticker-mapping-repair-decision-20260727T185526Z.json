@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "sec-ticker-mapping-repair-decision-v1.0.0",
+  "decisionId": "sec-lanc-ticker-mapping-repair-20260727T185526Z",
+  "observedAt": "2026-07-27T18:55:26.333894Z",
+  "symbol": "LANC",
+  "issuerLegalName": "Lancaster Colony Corporation",
+  "cik": "0000057515",
+  "confirmedFacts": {
+    "sourceReference": "https://www.sec.gov/Archives/edgar/data/57515/000119312525030193/d936257d8k.htm",
+    "sourceType": "SEC_EDGAR_FILING",
+    "evidenceArtifact": "docs/generated/sec-authoritative-lanc-evidence-20260727T185526Z.json",
+    "evidenceArtifactSha256": "7C23CDE98DAFFFE79A248754B15D33EFFD33CA9410B77030261DBA4BF13B84BD",
+    "originalFailureCode": "SEC_TICKER_CIK_NOT_FOUND"
+  },
+  "rootCause": {
+    "category": "SEC_OFFICIAL_TICKER_SNAPSHOT_OMISSION",
+    "finding": "The fetched SEC company_tickers.json snapshot did not contain a canonical LANC match, while an SEC EDGAR filing authoritatively identifies the issuer, ticker and CIK.",
+    "tickerNormalizationDefect": false,
+    "cikFormattingDefect": false
+  },
+  "decision": {
+    "registrySchemaVersion": "sec-authoritative-ticker-overrides-v1.0.0",
+    "ordinaryMappingPriority": "SEC company_tickers.json remains primary when it agrees with authoritative evidence.",
+    "conflictPolicy": "Reject a CIK conflict; never silently prefer an override.",
+    "fallbackPolicy": "Use a non-expired SEC-authoritative registry entry only when the ordinary official mapping has no ticker match.",
+    "pitRuleChanged": false,
+    "passCriteriaChanged": false
+  },
+  "rawProviderValuesIncluded": false,
+  "credentialsIncluded": false
+}

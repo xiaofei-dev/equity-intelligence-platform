@@ -1,0 +1,20 @@
+{
+  "artifactType": "FINAL_BILLING_RECONCILIATION",
+  "runId": "20260727T074150Z-50407538afa9",
+  "immutableReportReference": "mature-company-data-gate-20260727T074150Z-50407538afa9.json",
+  "immutableReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+  "providerDashboard": {
+    "before": 11512,
+    "after": 14387,
+    "observedProviderBilledDelta": 2875
+  },
+  "provisionalProviderBillingEstimate": 3125,
+  "providerBilledSafetyCeiling": 4688,
+  "runLevelBillingStatus": "PROVISIONALLY_RECONCILED",
+  "endpointLevelBillingStatus": "NOT_RECONCILED",
+  "notes": [
+    "The observed run-level delta is 250 calls below the provisional estimate and 1813 calls below the safety ceiling.",
+    "The dashboard evidence does not identify billing by endpoint.",
+    "This artifact does not modify or supersede the immutable gate report."
+  ]
+}

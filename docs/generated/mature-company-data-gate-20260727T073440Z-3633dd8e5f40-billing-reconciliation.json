@@ -1,0 +1,21 @@
+{
+  "runId": "20260727T073440Z-3633dd8e5f40",
+  "reportReference": "mature-company-data-gate-20260727T073440Z-3633dd8e5f40.json",
+  "physicalHttpAttempts": {
+    "eodhd": 30,
+    "secEdgar": 9,
+    "total": 39
+  },
+  "configuredLocalWeightedCalls": 84,
+  "provisionalProviderBillingEstimate": 150,
+  "providerDashboard": {
+    "before": 11374,
+    "after": 11512,
+    "observedDelta": 138
+  },
+  "configuredToObservedDifference": 54,
+  "observedToConfiguredRatio": "1.6428571428571429",
+  "provisionalToObservedDifference": -12,
+  "providerBillingReconciliation": "NOT_RECONCILED",
+  "conclusion": "The observed provider-billed delta is below the provisional 150-call estimate but remains above configured local endpoint weights. No endpoint-level billing cause is established."
+}

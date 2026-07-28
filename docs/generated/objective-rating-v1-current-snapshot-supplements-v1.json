@@ -1,0 +1,2231 @@
+{
+  "schemaVersion": "eodhd-current-snapshot-supplement-manifest-v1.0.0",
+  "policyVersion": "objective-rating-current-snapshot-policy-v1.0.0",
+  "scope": "CURRENT_SNAPSHOT_ONLY",
+  "cutoff": "2026-07-27T23:59:59Z",
+  "targetSecurityCount": 223,
+  "statusCounts": {
+    "CURRENT_SNAPSHOT_SUPPLEMENT_READY": 216,
+    "INSUFFICIENT_DATA": 7
+  },
+  "reasonCounts": {
+    "CACHED_FUNDAMENTALS_RESPONSE_NOT_FOUND": 7
+  },
+  "securities": [
+    {
+      "symbol": "A",
+      "status": "INSUFFICIENT_DATA",
+      "reasonCodes": [
+        "CACHED_FUNDAMENTALS_RESPONSE_NOT_FOUND"
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "status": "INSUFFICIENT_DATA",
+      "reasonCodes": [
+        "CACHED_FUNDAMENTALS_RESPONSE_NOT_FOUND"
+      ]
+    },
+    {
+      "symbol": "ACN",
+      "status": "INSUFFICIENT_DATA",
+      "reasonCodes": [
+        "CACHED_FUNDAMENTALS_RESPONSE_NOT_FOUND"
+      ]
+    },
+    {
+      "symbol": "ADBE",
+      "status": "INSUFFICIENT_DATA",
+      "reasonCodes": [
+        "CACHED_FUNDAMENTALS_RESPONSE_NOT_FOUND"
+      ]
+    },
+    {
+      "symbol": "ADI",
+      "status": "INSUFFICIENT_DATA",
+      "reasonCodes": [
+        "CACHED_FUNDAMENTALS_RESPONSE_NOT_FOUND"
+      ]
+    },
+    {
+      "symbol": "ADM",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/ADM/ADED3A331C198A98A22C7083FEE856D4035D8326C09197EB22D2F9AAF3224BBF.json",
+      "payloadContentHash": "ADED3A331C198A98A22C7083FEE856D4035D8326C09197EB22D2F9AAF3224BBF",
+      "sourceResponseContentHash": "4C689F59A817AD985778F7B9CF86EBAA2F122A4D64F3BF0585F8C388A49DB1E4",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:20:04.841139Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "ADP",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/ADP/6D3B174BEF34983A9E3694207EE9782FAFC50444157D12ADB33CF216E3033751.json",
+      "payloadContentHash": "6D3B174BEF34983A9E3694207EE9782FAFC50444157D12ADB33CF216E3033751",
+      "sourceResponseContentHash": "8EEE490C178E2E906D3737933A0D48DC087AE151A4E2EBFB4AF40F2E1DE934F9",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T21:20:36.333692Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "ADSK",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/ADSK/9C78D4004A7E0B05A82B5A70A80B22D7241D8B93D3CA44E19E25F94C7570FE83.json",
+      "payloadContentHash": "9C78D4004A7E0B05A82B5A70A80B22D7241D8B93D3CA44E19E25F94C7570FE83",
+      "sourceResponseContentHash": "2C5073DE4FEAEEC74ED778B4A41BB4196193FD110281493893E925E924C4B30F",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:21:07.730155Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "AEE",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/AEE/C6EEE7A54EB79BF07E6403CE9FE3B0DE290F7D2558B2455BC5FE282DFC82662E.json",
+      "payloadContentHash": "C6EEE7A54EB79BF07E6403CE9FE3B0DE290F7D2558B2455BC5FE282DFC82662E",
+      "sourceResponseContentHash": "60206B620E896DDD4F17D3A2CF7C5437D183EA1033F5EE47C6D4D4465618D7F4",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T21:21:38.938990Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "AEP",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/AEP/409888ED0B23F927DEB7F9CC2F5D53FD8A7C21BA7E053EABD2B4E09F6C186342.json",
+      "payloadContentHash": "409888ED0B23F927DEB7F9CC2F5D53FD8A7C21BA7E053EABD2B4E09F6C186342",
+      "sourceResponseContentHash": "855429973BC3E8673480EFB5BAA4FCE02879E2B53BABB95113B531A738BE0939",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T21:22:09.727832Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "AES",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/AES/5F7ECE1E2A6292FAE378C98C1522D51DAE2724AA56E9F3BCDBF3EC5427606007.json",
+      "payloadContentHash": "5F7ECE1E2A6292FAE378C98C1522D51DAE2724AA56E9F3BCDBF3EC5427606007",
+      "sourceResponseContentHash": "DAFB4B222CB25AF29C34F89BBD80C4494F95B9906E2472AF4AD27539D75E9C8A",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:22:40.456830Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "AKAM",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/AKAM/25399E289BCB115FF31025FAAB121C65EB7336E72843C87A84940747E07DCD1F.json",
+      "payloadContentHash": "25399E289BCB115FF31025FAAB121C65EB7336E72843C87A84940747E07DCD1F",
+      "sourceResponseContentHash": "0A7485C6037D744478CE01CFE4AE77C42E54E81713193ACCD8CC703A48E4321F",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:23:11.466337Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "ALB",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/ALB/5C9E6EC14E38ED24ED87A711F78432E85C6FD0626A2106C85B0022DA2ABDCB4B.json",
+      "payloadContentHash": "5C9E6EC14E38ED24ED87A711F78432E85C6FD0626A2106C85B0022DA2ABDCB4B",
+      "sourceResponseContentHash": "2EAB8848FC99045CAB626FD2957DB47BF973CA184A1C75E47361632B62397757",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:23:42.247257Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "ALLE",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/ALLE/DA428670B3FDD20C7ADD5FEC3DD27C24E602008B92C07EFD4C0EB713D1CDBE90.json",
+      "payloadContentHash": "DA428670B3FDD20C7ADD5FEC3DD27C24E602008B92C07EFD4C0EB713D1CDBE90",
+      "sourceResponseContentHash": "1201882146D6CD81B9CE62E6616E1408D3BF25108BFFC8FE37A924F5BFE4B05A",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:24:44.146356Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "AMAT",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/AMAT/C16079C5BA0AB8606754C0AD443D9C7AC0D84CF3EC1D4F719C49E376238054E4.json",
+      "payloadContentHash": "C16079C5BA0AB8606754C0AD443D9C7AC0D84CF3EC1D4F719C49E376238054E4",
+      "sourceResponseContentHash": "743D849CC70A67B6CB528B9AE226D4136D38B45EA1AB1270B45B0CA13126D2BC",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T21:25:15.376069Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "AMCR",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/AMCR/1A8F2124700E5F44BB5778A2B0E630CF3E8608D1539E49903F6D257C96CCF7BF.json",
+      "payloadContentHash": "1A8F2124700E5F44BB5778A2B0E630CF3E8608D1539E49903F6D257C96CCF7BF",
+      "sourceResponseContentHash": "D5DFC26D652BC13DFD52AF75B36D1CAD8B666EF29D9F142E9B58D4B8F5E06134",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:25:46.745598Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "AMD",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/AMD/C2E56E4A77CE1750B465C0B8A0C65B009DD935CF84EEFBA9054B1A98C55C4777.json",
+      "payloadContentHash": "C2E56E4A77CE1750B465C0B8A0C65B009DD935CF84EEFBA9054B1A98C55C4777",
+      "sourceResponseContentHash": "4CF80CCD79DB8877DAD12907E547673A859A9CA72EBCEAB944B75CC497015254",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:26:17.272171Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "AME",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/AME/6D7D99A6AB7BC53BD34981E461D65E899852039E09E7A7B75C09F596A354ADE1.json",
+      "payloadContentHash": "6D7D99A6AB7BC53BD34981E461D65E899852039E09E7A7B75C09F596A354ADE1",
+      "sourceResponseContentHash": "1570050FA438E5F29D7FE848847FD1DD21DB443CE75CD6FA91C5F400785692E7",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T21:26:48.126770Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "AMZN",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/AMZN/39BA933CDF90CB4C4803CEA7F6FF138E40DB2C76410B6BDEC431233EE72D0529.json",
+      "payloadContentHash": "39BA933CDF90CB4C4803CEA7F6FF138E40DB2C76410B6BDEC431233EE72D0529",
+      "sourceResponseContentHash": "600779A0262F24770BD84B1C7188B7ED74D87842C5840A6C62899ACF2F613621",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:27:19.463031Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "AOS",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/AOS/716C60C22200D6C3CB646FE52CAB1B4E6077E8B39F9E52CB989644E19A9D0C18.json",
+      "payloadContentHash": "716C60C22200D6C3CB646FE52CAB1B4E6077E8B39F9E52CB989644E19A9D0C18",
+      "sourceResponseContentHash": "1EB88A47B561791A816EE6161AC5EE5E8FD6C2D3CD730A9D8A610599197495ED",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T21:28:44.648039Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "APD",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/APD/D6E575566EC06A26D556E8558C51E7F8D1312ADA4BCBDC3F8DA9CC5E6B36C023.json",
+      "payloadContentHash": "D6E575566EC06A26D556E8558C51E7F8D1312ADA4BCBDC3F8DA9CC5E6B36C023",
+      "sourceResponseContentHash": "3451E05809A44E32A91C49B21538E3CA2A139502450B0F2140965DDB1FF353B3",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T21:29:15.818071Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "APH",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/APH/E56BA1151B70E2481BC8D3DAD8BF93C13DEB9E6ABE7894FE960A114F9AE797EE.json",
+      "payloadContentHash": "E56BA1151B70E2481BC8D3DAD8BF93C13DEB9E6ABE7894FE960A114F9AE797EE",
+      "sourceResponseContentHash": "990F8ACEA455008FDAB41F942C379D6429468A5C61DA3358D365F483549EF88A",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T21:29:47.393980Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "APP",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/APP/10BD2E94DF0D852F8E46B9B5165B7B2D9DDBE6FF9C85E2D11D85E3043F8669FA.json",
+      "payloadContentHash": "10BD2E94DF0D852F8E46B9B5165B7B2D9DDBE6FF9C85E2D11D85E3043F8669FA",
+      "sourceResponseContentHash": "E983C2C69910DBCC38D4AA6E2C62D7DD7A6003C4340007B09A54901A7673C73A",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:30:18.569049Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "APTV",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/APTV/88749E3691A6CB36C80C2078C0C5FD37AAD8E1E86610A220804B3939F15F736D.json",
+      "payloadContentHash": "88749E3691A6CB36C80C2078C0C5FD37AAD8E1E86610A220804B3939F15F736D",
+      "sourceResponseContentHash": "AB4630E71D9924D99A7B75A889B45FB80B2D8143C214082DE6FD73D461A02D79",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T21:30:40.608627Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "ATO",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/ATO/F3FB22C943364E57B24D34E6BF5CE3B0D44E2B9946FB3D4BDE351B30E4F0B745.json",
+      "payloadContentHash": "F3FB22C943364E57B24D34E6BF5CE3B0D44E2B9946FB3D4BDE351B30E4F0B745",
+      "sourceResponseContentHash": "2AF95136F0FF59208EEA8859206913812297293CDFC9D021EE853ABEF20DC114",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:31:10.845569Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "AVGO",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/AVGO/384625B931E39B3FABE48617AE3C88FC5BD5A1B5A1078F3C23A9A8C0BCC51A47.json",
+      "payloadContentHash": "384625B931E39B3FABE48617AE3C88FC5BD5A1B5A1078F3C23A9A8C0BCC51A47",
+      "sourceResponseContentHash": "91432B620DC702699D0E5414DAF2A71492C4C276002F39F0025F01AAB0439F3E",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T21:31:43.336129Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "AVY",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/AVY/82ED44B14193F83CF25FF18C6FE4E99005FB62A1DE20D0843B96400ABE47A696.json",
+      "payloadContentHash": "82ED44B14193F83CF25FF18C6FE4E99005FB62A1DE20D0843B96400ABE47A696",
+      "sourceResponseContentHash": "31A3AD4A211FE6114BA5C8641AF44DBB6C3319B7EA359CE5C2BA93744FE454C8",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T21:32:14.275873Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "AWK",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/AWK/902D168EF470CB8C00ECAE9A8B7EB61322F77A17736C672E84C5A333C95DD21C.json",
+      "payloadContentHash": "902D168EF470CB8C00ECAE9A8B7EB61322F77A17736C672E84C5A333C95DD21C",
+      "sourceResponseContentHash": "E0F6BB4C79A56C2C510779BF95ED0032963BA93762288CF080B86E32CC8B0FEF",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:32:45.223191Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "AXON",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/AXON/B99792D70BDE0EE079E78FACFAED860667BA1A2C1528E1372494C17316D7EE1C.json",
+      "payloadContentHash": "B99792D70BDE0EE079E78FACFAED860667BA1A2C1528E1372494C17316D7EE1C",
+      "sourceResponseContentHash": "CD671D5A44C87F24EA9CC11195B2F910C5AAD9F39A261F25CD9B894283AF19FF",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:33:16.047269Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "BA",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/BA/6978F59A17E888CEFDBF1CC9DB804A082442A37256D2983EDFC40C92F4C56649.json",
+      "payloadContentHash": "6978F59A17E888CEFDBF1CC9DB804A082442A37256D2983EDFC40C92F4C56649",
+      "sourceResponseContentHash": "67488B1BBF1287D5E70A28CBD0ACAC2494DD0AB98E5F9ADA6C3DA0CB26BC9A4E",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T21:33:46.556408Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "BALL",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/BALL/05BA88A488317561E4A4407FC6CF5F9316C5355F71ED51C9839889A13608DDA9.json",
+      "payloadContentHash": "05BA88A488317561E4A4407FC6CF5F9316C5355F71ED51C9839889A13608DDA9",
+      "sourceResponseContentHash": "26A4E1E3F1823A6394A37CE63AF0457AFE92A4C5BA7584FD835AE696ACB7A246",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:34:17.161965Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "BAX",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/BAX/CF35873ECB8B02B328D6605312ED5D07F0D7AC5F57DB8A3D1E9ED0F8F07A3AF8.json",
+      "payloadContentHash": "CF35873ECB8B02B328D6605312ED5D07F0D7AC5F57DB8A3D1E9ED0F8F07A3AF8",
+      "sourceResponseContentHash": "C708354A0C02A26029F09BE82B8AF63B12232023D963B5C0FF30191E6EC45B85",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:34:47.856632Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "BBY",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/BBY/C2BA1180B5F4D0C815F85910E7080A31AFB554BE43FCE33A1CA1FB9E607449D9.json",
+      "payloadContentHash": "C2BA1180B5F4D0C815F85910E7080A31AFB554BE43FCE33A1CA1FB9E607449D9",
+      "sourceResponseContentHash": "43F10AB5BF32E1981C59E060EB63B0476CEB4A5A0F50A462740B3B7D8791A39F",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T21:35:18.497066Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "BDX",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/BDX/BFF1F83130FE48ACEC7F7DB25AD2F372792EF7A1BD9D56F430761F1B3F046325.json",
+      "payloadContentHash": "BFF1F83130FE48ACEC7F7DB25AD2F372792EF7A1BD9D56F430761F1B3F046325",
+      "sourceResponseContentHash": "F027C75FE07B7520F1CCA0ED1EE759B5ED2E9CDFF9A9BBF6C3F82295429B915A",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:35:50.100894Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "BF-B",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/BF-B/49ECAAF7EEF378ED636CF1AE9C187151A669F6162D8A0EFE2F8EB832933E9F89.json",
+      "payloadContentHash": "49ECAAF7EEF378ED636CF1AE9C187151A669F6162D8A0EFE2F8EB832933E9F89",
+      "sourceResponseContentHash": "3231E47F820F133494344135FD888D2ADE22A4515202F3737FB651AE0FFA82B3",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:36:21.970374Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "BG",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/BG/21154402F891050A59B9EFC44725ED70E844C9B72C9E5A306142C4511EF5A9CB.json",
+      "payloadContentHash": "21154402F891050A59B9EFC44725ED70E844C9B72C9E5A306142C4511EF5A9CB",
+      "sourceResponseContentHash": "87A0FDBA80FA0F3197BF7FF174B2650ECE103EFF4419EBC5CFA4AE86FABC5025",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:36:53.471049Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "BKNG",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/BKNG/13DF984B71B01BD157FDF0043B12E7CB64522528AF2F5D6415121E41C8CE1ACB.json",
+      "payloadContentHash": "13DF984B71B01BD157FDF0043B12E7CB64522528AF2F5D6415121E41C8CE1ACB",
+      "sourceResponseContentHash": "F2506CC52182ABE29CE679014048AFA55563CCB9C37F9676576CCB94AC7BED95",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T21:37:24.043656Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "BLDR",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/BLDR/8EA48D005C323FEB8DBBDED7314BD86AB4CFF00B8F9CBEFC9BF043698BF2F950.json",
+      "payloadContentHash": "8EA48D005C323FEB8DBBDED7314BD86AB4CFF00B8F9CBEFC9BF043698BF2F950",
+      "sourceResponseContentHash": "720185E67F8E81FA10BDEDFD1DAD12F98F97EB78FED07FD61A11EFAD22F520F1",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T21:37:55.078504Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "BMY",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/BMY/7E40B86BAC36A6491153C2F2A2CD3D4B922A28D7884E4D966B01F8CF3168E54D.json",
+      "payloadContentHash": "7E40B86BAC36A6491153C2F2A2CD3D4B922A28D7884E4D966B01F8CF3168E54D",
+      "sourceResponseContentHash": "215A55054E1976948B7FC0437FAD81AD75A6A4B688A573C5A4050413591B8C69",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T21:38:25.734451Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "BR",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/BR/EDE4546C9D41E00086D9918BF63A35EB7F378204ECAFB880B8D63DB6252934D5.json",
+      "payloadContentHash": "EDE4546C9D41E00086D9918BF63A35EB7F378204ECAFB880B8D63DB6252934D5",
+      "sourceResponseContentHash": "7103C54E9A169DD55A4F7B96DE447F5A8321D1BC2659111F148F3891FFCE9C81",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:39:18.905262Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "BSX",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/BSX/2EA6C01642382160677F714163D6D6E047C712A7DFA2BC1A98AEF605933CA73A.json",
+      "payloadContentHash": "2EA6C01642382160677F714163D6D6E047C712A7DFA2BC1A98AEF605933CA73A",
+      "sourceResponseContentHash": "327405824952FCD4E6FC7CE84723457E4DB58B75652F580DFDB55F97818AD942",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:39:50.270045Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "CARR",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/CARR/488AE3894C6271F24626D10FF524BB11A49BE8B3F537099582BA9CE291C1AEF5.json",
+      "payloadContentHash": "488AE3894C6271F24626D10FF524BB11A49BE8B3F537099582BA9CE291C1AEF5",
+      "sourceResponseContentHash": "71484B47CDE11051A0205BFA669783E2D9D71FDE4EA8C7CF0DAA3AC7C5C41E8E",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:40:51.162059Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "CASY",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/CASY/3569669960CB7F23F1D83C4499DFD2995C7164E5AFE5AA723D330FB72D69A629.json",
+      "payloadContentHash": "3569669960CB7F23F1D83C4499DFD2995C7164E5AFE5AA723D330FB72D69A629",
+      "sourceResponseContentHash": "68ED8124061C094D862251B389B7E2ABED51C7855E292023F48B8CF9F7C8028A",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:41:19.148965Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "CAT",
+      "status": "INSUFFICIENT_DATA",
+      "reasonCodes": [
+        "CACHED_FUNDAMENTALS_RESPONSE_NOT_FOUND"
+      ]
+    },
+    {
+      "symbol": "CCL",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/CCL/00AFB49DCB49724F76154A3699AD1F0B15894FD1EC075D8D0332454A39597788.json",
+      "payloadContentHash": "00AFB49DCB49724F76154A3699AD1F0B15894FD1EC075D8D0332454A39597788",
+      "sourceResponseContentHash": "7BCDF0E7CC129E5F237465275D77823619329B8C06D552FDCD0A7B84CA0EAA20",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:41:49.668126Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "CDNS",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/CDNS/ED91A1FA4AB2179AD31AA541DE0A95B49783A4A2A67847B672F4C5BA4184DAA5.json",
+      "payloadContentHash": "ED91A1FA4AB2179AD31AA541DE0A95B49783A4A2A67847B672F4C5BA4184DAA5",
+      "sourceResponseContentHash": "D25175B17B74D143E99E56CAAD409FC5A5A8E7B8785F5C2F5CC616573C2F1B32",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T21:42:20.259014Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "CDW",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/CDW/962AA3C61C38D884D12F488D9F231145C9AE16ED67F654131A4D3E4FBDACF8A3.json",
+      "payloadContentHash": "962AA3C61C38D884D12F488D9F231145C9AE16ED67F654131A4D3E4FBDACF8A3",
+      "sourceResponseContentHash": "71127687DFFEC17796AB53E6F0A6A3B53EC2FC6140817D41290E9B9B50B1667D",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T21:42:50.581940Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "CEG",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/CEG/29B970F2E500FD91CBF23E9988B8133AC21AA4945A18E61D3715177C8CC9B542.json",
+      "payloadContentHash": "29B970F2E500FD91CBF23E9988B8133AC21AA4945A18E61D3715177C8CC9B542",
+      "sourceResponseContentHash": "DB68DE4B4693C0B6F1C1167C08A86654B57B4C1342FE2AF504E65B5CA0FF8EF5",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:43:21.267472Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "CF",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/CF/32B1582951746B74560F5399D0BE162E3821E2B71EAD3C2A5F26DA95E2B3EEDC.json",
+      "payloadContentHash": "32B1582951746B74560F5399D0BE162E3821E2B71EAD3C2A5F26DA95E2B3EEDC",
+      "sourceResponseContentHash": "6CBA1DECD4263F8B0F0B9788FE569578AD1501F1664D7863BFDD8988B9D49612",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T21:43:36.723313Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "CHD",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/CHD/46ECCA3663E30372720D5D904960BE97FB833EFB7F6D23BC9A0D1B0C6A5F8168.json",
+      "payloadContentHash": "46ECCA3663E30372720D5D904960BE97FB833EFB7F6D23BC9A0D1B0C6A5F8168",
+      "sourceResponseContentHash": "5BF0CDC7E6A8F7F0312435B64108A749905C2150B1EFCB470AABAF4269DE6371",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T21:44:07.099502Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "CHRW",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/CHRW/0A5D514A6317F8598C915C4279C22F0A7092485EBB798C952923C05925CD626D.json",
+      "payloadContentHash": "0A5D514A6317F8598C915C4279C22F0A7092485EBB798C952923C05925CD626D",
+      "sourceResponseContentHash": "154CC83C68D13EB750376A20094795653E178A690E1237FE3FBF7DFCE98B28CC",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T21:44:37.542064Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "CHTR",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/CHTR/05EA1AC7B61AF4EFD79D13C69476924B0F3650AE8DF969440E9DC9D70652B9E4.json",
+      "payloadContentHash": "05EA1AC7B61AF4EFD79D13C69476924B0F3650AE8DF969440E9DC9D70652B9E4",
+      "sourceResponseContentHash": "B175FAF0AD093F014F0AC475E9640A473BCDB08BE351C91938CCFA15139A644E",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:45:08.706561Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "CI",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/CI/501A5A27548A3F5C3B43C5F36717FF5328215F384F6A8EA50A6B9AC0092F622D.json",
+      "payloadContentHash": "501A5A27548A3F5C3B43C5F36717FF5328215F384F6A8EA50A6B9AC0092F622D",
+      "sourceResponseContentHash": "C6EB3F6CE580050A33B90B57487C4117D7E576E31BDE92F7314B8A2F2344281C",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:45:39.082702Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "CIEN",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/CIEN/89E975B53D76A5F2FB2255422A346C76A2E981487643550868DEB7582549B0BA.json",
+      "payloadContentHash": "89E975B53D76A5F2FB2255422A346C76A2E981487643550868DEB7582549B0BA",
+      "sourceResponseContentHash": "18184B0088D439413A8B259EA56958CD9A2B84CA46D30AF2F86BA7329A9BE4BB",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:46:10.277641Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "CL",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/CL/537B0B75CBB21D529F4AA758270C19E5909F1CA458777B6739182B9E893BD414.json",
+      "payloadContentHash": "537B0B75CBB21D529F4AA758270C19E5909F1CA458777B6739182B9E893BD414",
+      "sourceResponseContentHash": "AFE412D424B7E819810870782A595529499A030E045260AA26B18DE468D09B8D",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T21:46:40.793790Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "CLX",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/CLX/BA3A976007F51AC1CEA629B0BB59DC70E0230930813B079352618F2349F60257.json",
+      "payloadContentHash": "BA3A976007F51AC1CEA629B0BB59DC70E0230930813B079352618F2349F60257",
+      "sourceResponseContentHash": "761D4F52C75C549B26A0B9A667EAEAFF8182D2336292452C3ECDFBCDB15FD320",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T21:47:11.788765Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "CMCSA",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/CMCSA/AF963AC49A8D9CE6264A3D555C089D6A83BBBE35DD33F68B28ECB9A958F957FB.json",
+      "payloadContentHash": "AF963AC49A8D9CE6264A3D555C089D6A83BBBE35DD33F68B28ECB9A958F957FB",
+      "sourceResponseContentHash": "CD2950E47587FC18C65C14D7CE39E61022120CE8F2F533D556C17E941433D394",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:47:42.689320Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "CMI",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/CMI/C7BC7FDECC9CB70C2580810762C8828BAFF303C0E20EA2B9DAA767ED4AB7F380.json",
+      "payloadContentHash": "C7BC7FDECC9CB70C2580810762C8828BAFF303C0E20EA2B9DAA767ED4AB7F380",
+      "sourceResponseContentHash": "2070C74195B5B83A4D376A4437FB400E5E778BFB4F4E6E844F3ABA555C77CAF3",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:48:47.116309Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "CMS",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/CMS/E57362FB93F14D0D27125A0A0E73D34CD82580C9476F5E8DE4AED5160A89610D.json",
+      "payloadContentHash": "E57362FB93F14D0D27125A0A0E73D34CD82580C9476F5E8DE4AED5160A89610D",
+      "sourceResponseContentHash": "41E6B352E9141227FA5723D4F966065851CD10773B408A8118108788ADBCE058",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:49:36.201611Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "CNC",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/CNC/F844EEC19E6015220E017C91D7199786A04B1536ACEA33E14F8483E01A746A8D.json",
+      "payloadContentHash": "F844EEC19E6015220E017C91D7199786A04B1536ACEA33E14F8483E01A746A8D",
+      "sourceResponseContentHash": "9C3F2829B398BD14CA2480042C186BC8073D8A0354E5A37C6E5CF5367EFE17C9",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T21:50:07.931020Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "CNP",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/CNP/011AB138E4E426D1E4DC0C82A80D86AA84A1BD86934EE9BB4A5B18F73581796F.json",
+      "payloadContentHash": "011AB138E4E426D1E4DC0C82A80D86AA84A1BD86934EE9BB4A5B18F73581796F",
+      "sourceResponseContentHash": "A55B0148D85C2DA9BF7DC816F72EFDAD86AE4E6F1BB813AE42523521D86EBE5A",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T21:50:39.058475Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "COHR",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/COHR/0DF799B4A43B3C8D199A7D28F5920DEB69A9697A79E44D5542034C89C0682CC4.json",
+      "payloadContentHash": "0DF799B4A43B3C8D199A7D28F5920DEB69A9697A79E44D5542034C89C0682CC4",
+      "sourceResponseContentHash": "ED63962320EF75BBB12D5DA7EEF4C712D41ECDCE897B1B554D9D068AB013C1FF",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:51:09.725864Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "COO",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/COO/10AC3A92E324C794BA01C39C121174A01828B3CF8833D287D6FB31E19137452D.json",
+      "payloadContentHash": "10AC3A92E324C794BA01C39C121174A01828B3CF8833D287D6FB31E19137452D",
+      "sourceResponseContentHash": "3D9A4EC533593705902F29AA9B7AA1BC5B85819DAC0DD271380179A2B6FFFBEE",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:51:39.975258Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "COR",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/COR/537FD6864B24C522B8140FBB786B14E1819129C8A763F8789D8EB827085882CA.json",
+      "payloadContentHash": "537FD6864B24C522B8140FBB786B14E1819129C8A763F8789D8EB827085882CA",
+      "sourceResponseContentHash": "F6DD6C68422B492B4E4F51C1D8BB096ABF78ED05E4F75FADD89AB2497293FE35",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:52:10.684979Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "CPRT",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/CPRT/1F32E744753AA18B6383A795C7A99425EC8CCA6B6A35975AEF8C9D1C4D1A8D97.json",
+      "payloadContentHash": "1F32E744753AA18B6383A795C7A99425EC8CCA6B6A35975AEF8C9D1C4D1A8D97",
+      "sourceResponseContentHash": "A22BC672B0514838E336DD49C3F03465AD63EEF6A59504BCF9349B76E43EDEF2",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:52:42.220755Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "CRH",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/CRH/FE64C7ECCC5036DFB8DFF211669B1B4DC4E3D0D778056909B5505CAA979006D4.json",
+      "payloadContentHash": "FE64C7ECCC5036DFB8DFF211669B1B4DC4E3D0D778056909B5505CAA979006D4",
+      "sourceResponseContentHash": "8261EBB6B935F0113B54B3758A793FBBBAE1EEA0DB7B642AD12AF12A9366B84D",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:53:12.852535Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "CRL",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/CRL/919788EE4A026DCA53A89C102A1FAC181E08A4C2474F38AC91E9AA14C2458B54.json",
+      "payloadContentHash": "919788EE4A026DCA53A89C102A1FAC181E08A4C2474F38AC91E9AA14C2458B54",
+      "sourceResponseContentHash": "3E57D3856AA55940DE7B6535862D7166E831CD8DE85A933CC304248E43606500",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:53:43.135265Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "CROX",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/CROX/564477CB95EAED03374999C1FE8D436BE206DD27A5B344C0F89ED5C519809720.json",
+      "payloadContentHash": "564477CB95EAED03374999C1FE8D436BE206DD27A5B344C0F89ED5C519809720",
+      "sourceResponseContentHash": "2514B60FB6DFA7887139323B6070E3FA966B2363AC55DC2C92D4A39ECE4FA93D",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:54:44.167573Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "CRWD",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/CRWD/CB5062292F258A2DAC9C03743F8D524416BAC858AAB504F0836185A14C8DAF21.json",
+      "payloadContentHash": "CB5062292F258A2DAC9C03743F8D524416BAC858AAB504F0836185A14C8DAF21",
+      "sourceResponseContentHash": "308D274139246684B070BDCE100FED7E590DA28BC5F31EB83669677D810227FC",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:55:15.064957Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "CSCO",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/CSCO/D51DE366BBF3045E59AC5D727E9CC6C5E79E6FFFFFEB60405813FEC6ED38C0E9.json",
+      "payloadContentHash": "D51DE366BBF3045E59AC5D727E9CC6C5E79E6FFFFFEB60405813FEC6ED38C0E9",
+      "sourceResponseContentHash": "9FB3DEFCDDEFDC8E2996107272149F9F98FFB8835F96027E3A4F84B107A8F85F",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T21:55:45.682821Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "CSX",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/CSX/9065EB1FD001AFE69EF576E60D9B215B52AF4E96F02E843AA7074A008BC9D5CA.json",
+      "payloadContentHash": "9065EB1FD001AFE69EF576E60D9B215B52AF4E96F02E843AA7074A008BC9D5CA",
+      "sourceResponseContentHash": "131085B4C503442C78123D78FB7A6BBE8F8D2C59397723ADA45FEF4C06EE7E6C",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T21:56:16.278838Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "CTSH",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/CTSH/213BC1B2721F285045C1ACC04C95A858127F668E2B914E2DD1609C9F52A0F8D3.json",
+      "payloadContentHash": "213BC1B2721F285045C1ACC04C95A858127F668E2B914E2DD1609C9F52A0F8D3",
+      "sourceResponseContentHash": "365DEB7B7E37DDDE5F3879093EF36D6FEA6E9B721C430674F9C1896D8B92AE85",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T21:56:47.268634Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "CTVA",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/CTVA/99FCC122AFB2C49CA1F54710B7A2A70FCC5DD0BA1738567666862999BEAEAF42.json",
+      "payloadContentHash": "99FCC122AFB2C49CA1F54710B7A2A70FCC5DD0BA1738567666862999BEAEAF42",
+      "sourceResponseContentHash": "4F66630A9DE740F1C04DB13DC25D7B11ABBB989B6F50140DE80ADA3D72EEB6B1",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:57:17.781640Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "CVS",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/CVS/4487BFD75304047ADD95DA019E956A7C884C8E8FC205446015C1DB937936B897.json",
+      "payloadContentHash": "4487BFD75304047ADD95DA019E956A7C884C8E8FC205446015C1DB937936B897",
+      "sourceResponseContentHash": "6B32CAECC89A99ED0E2A420D0040C1EE01BAE3B86B93782FAE7B301DD752C61D",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:58:17.768282Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "D",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/D/1BE1874C34D8154B985EA38D76B6B999C92F6A83A88337AB56598724A6588F1E.json",
+      "payloadContentHash": "1BE1874C34D8154B985EA38D76B6B999C92F6A83A88337AB56598724A6588F1E",
+      "sourceResponseContentHash": "8DFC8BCE38B02DD5F3B7E0A25C3545949671B828E9628AE89C44E57276DE515E",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:58:48.231023Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "DAL",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/DAL/F66D4C05E376DF92E237A05165C3655166A807FA611736F8B5CCF5B13999ECDA.json",
+      "payloadContentHash": "F66D4C05E376DF92E237A05165C3655166A807FA611736F8B5CCF5B13999ECDA",
+      "sourceResponseContentHash": "39A913862B2D5051ACA9E427B6BFA756AE3D68992410E1CF1075FD57BA4369FE",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T21:59:19.540251Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "DD",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/DD/BA43B934A215466EAE7CD66F64F1B612449F3430D06882DBB3E411D27A6E31E4.json",
+      "payloadContentHash": "BA43B934A215466EAE7CD66F64F1B612449F3430D06882DBB3E411D27A6E31E4",
+      "sourceResponseContentHash": "B1900A382D3A7A69F36D8912D16C9EA0FA8F58B43512D9A69F852C0258E00FA1",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:00:46.693183Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "DDOG",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/DDOG/D9D1FEB6BC4A00ADE59D2F9DACEABC39584491250DB1B97BB4F883588F9582FC.json",
+      "payloadContentHash": "D9D1FEB6BC4A00ADE59D2F9DACEABC39584491250DB1B97BB4F883588F9582FC",
+      "sourceResponseContentHash": "5B75829314CEF7AE7CF51FF69AF561C653EA4D92A024D7E4CBB48EA35920BE3E",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:01:20.584227Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "DE",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/DE/2B73422C02804720ABADF5481F401443CFF8980BF8F43DB3D073ABDAB34DC1A9.json",
+      "payloadContentHash": "2B73422C02804720ABADF5481F401443CFF8980BF8F43DB3D073ABDAB34DC1A9",
+      "sourceResponseContentHash": "FF813472F255E6D500F193D31A1745ABC378CD245CD24DCFFF068E6C55BFBFA9",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:01:51.620109Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "DELL",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/DELL/23B8A27BFC6E29C42017C7C11709BD3B09994AB206674FA6552312048A011463.json",
+      "payloadContentHash": "23B8A27BFC6E29C42017C7C11709BD3B09994AB206674FA6552312048A011463",
+      "sourceResponseContentHash": "191EAF5D4E6E3E155E4C6C18A914390D2FEB7374FA33A78094F02B60843A4440",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:02:22.461042Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "DG",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/DG/169BD8C49C602ADB10AEB63F9622C0210B6D518D288CE0F7E2DF4950458D2901.json",
+      "payloadContentHash": "169BD8C49C602ADB10AEB63F9622C0210B6D518D288CE0F7E2DF4950458D2901",
+      "sourceResponseContentHash": "7C29B890FB977D38B2C94B6726FBD280CE304157D7C6D78E5DADBC3CCF0362C4",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:02:52.982831Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "DGX",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/DGX/82688C58045DCF769B6B9BE94EF6F60A68BD81F86E8BD708BFDF90088D0E7D02.json",
+      "payloadContentHash": "82688C58045DCF769B6B9BE94EF6F60A68BD81F86E8BD708BFDF90088D0E7D02",
+      "sourceResponseContentHash": "4725682ECFB6955FFF4578F60BD9A39EDF2829C901EA4AC214B4455BA47F4707",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:03:24.027029Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "DHR",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/DHR/D4A985B9D8FC8EF313B40EB65C936765717F91F0D38AD1352943C14C947C66C5.json",
+      "payloadContentHash": "D4A985B9D8FC8EF313B40EB65C936765717F91F0D38AD1352943C14C947C66C5",
+      "sourceResponseContentHash": "D064A181AE83BBE2AFBFDFC293F97A662A7477ADA28C8530A70CB8133DC00A69",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:04:26.174727Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "DIS",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/DIS/0329D3CBD33E1DAB88CD21755982FDA8F42CA0F232B850896406BD344563EA1A.json",
+      "payloadContentHash": "0329D3CBD33E1DAB88CD21755982FDA8F42CA0F232B850896406BD344563EA1A",
+      "sourceResponseContentHash": "E7482D12845582B829D6CFCB960CB222281D3C101C3F00A5B04313C358AF3AF7",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:04:57.914257Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "DLTR",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/DLTR/EB4358B861A6927C878E529979E486CFC93CCAD9BC78364FFAA5CACE228B5053.json",
+      "payloadContentHash": "EB4358B861A6927C878E529979E486CFC93CCAD9BC78364FFAA5CACE228B5053",
+      "sourceResponseContentHash": "2B7EA8C29C2CAC49D210796AD9EBEBB2F3DEC6BE031A0962D21F07F654D00CC8",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:05:28.959717Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "DOV",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/DOV/B6409DEEB6400037D4758B63507DF512EBFCBE75E1B55CAF94A812679AB89B21.json",
+      "payloadContentHash": "B6409DEEB6400037D4758B63507DF512EBFCBE75E1B55CAF94A812679AB89B21",
+      "sourceResponseContentHash": "D82EDE98CFC2E24B965888F3A368767DFE00040567A0BFC907706A1AF9219DF3",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:06:01.902602Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "DTE",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/DTE/B4C2EA56135A5092BA77504439177F9D73DC1B3CFE3210DF7DA27A84A7A1DB58.json",
+      "payloadContentHash": "B4C2EA56135A5092BA77504439177F9D73DC1B3CFE3210DF7DA27A84A7A1DB58",
+      "sourceResponseContentHash": "F08EFF67FFC0199B00AB8C451CA88B8B950A6C1B9554D0BFEB26A33EA13D4644",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:06:33.335584Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "DUK",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/DUK/10D05A544F6DFB7E0DC51C8013D136DB66E2AF80386C6339E896C01FFEABFB52.json",
+      "payloadContentHash": "10D05A544F6DFB7E0DC51C8013D136DB66E2AF80386C6339E896C01FFEABFB52",
+      "sourceResponseContentHash": "E502B6D632504E9419B2F0D1298D08EB67E32265C3208C2DF7E77EB0500EAC0F",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:07:04.306434Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "DVA",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/DVA/C7B56DCFB89D6860422CE536C85FD3F59F7E075D09268E7C61F770B50971BB04.json",
+      "payloadContentHash": "C7B56DCFB89D6860422CE536C85FD3F59F7E075D09268E7C61F770B50971BB04",
+      "sourceResponseContentHash": "584D89DD7A0E8DE36C1C437C61971E62AC6A3778A5068EF8407CE115975116FE",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:07:34.714611Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "DXCM",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/DXCM/A15A19A9CE23C370C50395AE5B9B53957CEE0DB17DA0472B97AD358621D5B3C5.json",
+      "payloadContentHash": "A15A19A9CE23C370C50395AE5B9B53957CEE0DB17DA0472B97AD358621D5B3C5",
+      "sourceResponseContentHash": "F972D3B67CC56248C8F604335F8EF750DFEDE89033FE0B59C23A3ED6F12701A4",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:08:06.248047Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "EA",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/EA/6D9C8427CE2E8339155562C3CAB2BCD6B541D0A5B6D039A8FCE9E3EE336AF12B.json",
+      "payloadContentHash": "6D9C8427CE2E8339155562C3CAB2BCD6B541D0A5B6D039A8FCE9E3EE336AF12B",
+      "sourceResponseContentHash": "6F3A061F6FA8FD7735EC671D527E0F20CB5E944CAA819AEF9B0086F0DF73E29C",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:08:36.552587Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "EBAY",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/EBAY/9F60BA731BFAABA28CC4A5221D1656EE64933D291CCF4EE3919EE39621B32220.json",
+      "payloadContentHash": "9F60BA731BFAABA28CC4A5221D1656EE64933D291CCF4EE3919EE39621B32220",
+      "sourceResponseContentHash": "2D6ED0714F228684136B21FB5E685E80564EE15F0F04D68A590208F95E9A5519",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:09:08.077343Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "ECL",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/ECL/0E28CC0BFEA3D8812EBA92D5D7A644BCD343953AD4D42B4629F5FDACF9D5FFCF.json",
+      "payloadContentHash": "0E28CC0BFEA3D8812EBA92D5D7A644BCD343953AD4D42B4629F5FDACF9D5FFCF",
+      "sourceResponseContentHash": "BB362A6E90E1819C3C8F7B1559C4351D926BD04B9696ED0E9C1C06B50C3ABC89",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:09:38.281843Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "ED",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/ED/1044685DC235E5C569E056C4FE73EAF7D756A5D3787B0854778DA0119E511453.json",
+      "payloadContentHash": "1044685DC235E5C569E056C4FE73EAF7D756A5D3787B0854778DA0119E511453",
+      "sourceResponseContentHash": "48656C22A3900B5C36B8D005A1ECDB012572496A9CCE3335051A3D119B2B6764",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:10:09.665746Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "EFX",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/EFX/19C7C6BADD892BAF182A78A84A80FD340826A091850F5DEFBAA0CEA15718BEED.json",
+      "payloadContentHash": "19C7C6BADD892BAF182A78A84A80FD340826A091850F5DEFBAA0CEA15718BEED",
+      "sourceResponseContentHash": "5BF34CDB9E5DE95C4A98AE9F1281A1BA10DD4884E0B435BC654C40EE3D859E21",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:11:00.361116Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "EIX",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/EIX/CF208A0113FADDBFC5383CA3C026A1B6F662718DD90F9D3048C0F522812C2A12.json",
+      "payloadContentHash": "CF208A0113FADDBFC5383CA3C026A1B6F662718DD90F9D3048C0F522812C2A12",
+      "sourceResponseContentHash": "2A0552CDA82CABB3111B1800FC3823FF945ECB745CE293965A316241AEFA74B1",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:11:31.198325Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "EL",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/EL/CDF90348ADAC8BF84F22D77E2D09E68E48D51EAABFECA51982D92C81D631CDA4.json",
+      "payloadContentHash": "CDF90348ADAC8BF84F22D77E2D09E68E48D51EAABFECA51982D92C81D631CDA4",
+      "sourceResponseContentHash": "BF7903D6CE81948EB4E13DAAC0A30C1FEE78BBCB55766014E62C0159D88D1BE6",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:12:03.483495Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "ELF",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/ELF/4503034EE94C1E4F04C5758533E15577F736FCE005DB189BC61271D4DF060441.json",
+      "payloadContentHash": "4503034EE94C1E4F04C5758533E15577F736FCE005DB189BC61271D4DF060441",
+      "sourceResponseContentHash": "9C38E13AF6309B0A712F5010B30992235451707369042611C8D17CD139B178E6",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:12:34.691314Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "ELV",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/ELV/BC3D16C839B353CEC73D1EDCD7FACA78FDD4CE60A54D2F90C59083A43CA7F3EF.json",
+      "payloadContentHash": "BC3D16C839B353CEC73D1EDCD7FACA78FDD4CE60A54D2F90C59083A43CA7F3EF",
+      "sourceResponseContentHash": "6BB404ED2D99ECD7EDDB04FE22FF72836E34DC6FDB9E80DBE9B3152D4AD42E80",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:13:09.034944Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "EME",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/EME/ABCB0CB972D3E1EBC6942F08084DA1A498E7E55781A2CB33F508A8B4F0468C92.json",
+      "payloadContentHash": "ABCB0CB972D3E1EBC6942F08084DA1A498E7E55781A2CB33F508A8B4F0468C92",
+      "sourceResponseContentHash": "B0071FCF01E5EBDAE6DD6CADDB9F09C363D00FF42AD818D7B82E03389194DD53",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:13:40.580141Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "EMR",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/EMR/CE58AA7D4FB756E1495BD08F50A78908025C3F3F0C5199A4CB09AC9FDC39D81E.json",
+      "payloadContentHash": "CE58AA7D4FB756E1495BD08F50A78908025C3F3F0C5199A4CB09AC9FDC39D81E",
+      "sourceResponseContentHash": "79BA914D555E9B59950E57EEFF2E83B24B1CD1BBA305240033DC47490574EC87",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:14:10.570971Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "ES",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/ES/F2FBDEB93359C5341FD8D6FD4C18392546944E63B62EE1E84BD7796673E84B81.json",
+      "payloadContentHash": "F2FBDEB93359C5341FD8D6FD4C18392546944E63B62EE1E84BD7796673E84B81",
+      "sourceResponseContentHash": "9473BA63F7AAFF66D0B9F9BB81DE1862248130FBF459F862BA998554BFF18308",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:14:40.833821Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "ETN",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/ETN/D6A54320065602D8DC8E3EADA48011EC649AB2F04332AC05C189D1916160DBFF.json",
+      "payloadContentHash": "D6A54320065602D8DC8E3EADA48011EC649AB2F04332AC05C189D1916160DBFF",
+      "sourceResponseContentHash": "CD1B60A401B848EACD5B483415DA84F632C74AA75A3E2EA1327FC42D0C3822C2",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:15:10.983286Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "ETR",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/ETR/68CD1C58BEB7FB4A71C2407BF89311EB4E97608CEE1A1C39C76E8A633E57ECF5.json",
+      "payloadContentHash": "68CD1C58BEB7FB4A71C2407BF89311EB4E97608CEE1A1C39C76E8A633E57ECF5",
+      "sourceResponseContentHash": "81A78562041281BCA75A8A9DFA74DA62D2D84F7A3BB4FDFC5FF63DB072B2543E",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:15:41.370662Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "EVRG",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/EVRG/084A8C285B2202AB2E64FEA246094F2817E62726ED78766B795362826E96458B.json",
+      "payloadContentHash": "084A8C285B2202AB2E64FEA246094F2817E62726ED78766B795362826E96458B",
+      "sourceResponseContentHash": "1A750835BF4721EB612C4CFADC8AAFEF1DB885462D6FE4AD690FD28A723A318F",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:16:11.823031Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "EXC",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/EXC/F173202BFCDAD29C6FDBF11A9C565A2CC27F1046AE67147BCB500BC1C7768433.json",
+      "payloadContentHash": "F173202BFCDAD29C6FDBF11A9C565A2CC27F1046AE67147BCB500BC1C7768433",
+      "sourceResponseContentHash": "0323E568E864864F2FB91C3A96D5B9883282B4E302568EE2E829F3E2803FC265",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:16:41.873791Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "EXPE",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/EXPE/28B73FA20505BC8EDD013FD744AB95BCFA1A1C9FB8FD52B00BF412EEF63544AC.json",
+      "payloadContentHash": "28B73FA20505BC8EDD013FD744AB95BCFA1A1C9FB8FD52B00BF412EEF63544AC",
+      "sourceResponseContentHash": "59E9603C9EA14E9C7301B78C420142B002DE1042654C4EFAECC0645C0BF20DF0",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:17:42.338042Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "F",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/F/8EC787D19803D395BA49C513A673150CB6EC07C2ED828BCEF57925850E1D9FE9.json",
+      "payloadContentHash": "8EC787D19803D395BA49C513A673150CB6EC07C2ED828BCEF57925850E1D9FE9",
+      "sourceResponseContentHash": "3257E5FBFB46480C11146B3A0D150D8E0FE05916DB3B3248C259CB0F88ABD3D0",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:18:13.000227Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "FAST",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/FAST/4688C9E5833179A9E55369FB516739E3A4EC923CA3F899DFB2CE966E35FD675F.json",
+      "payloadContentHash": "4688C9E5833179A9E55369FB516739E3A4EC923CA3F899DFB2CE966E35FD675F",
+      "sourceResponseContentHash": "B6500EB37FEEAD2442EBB56DFF94650964D699CE60FF3531EC73A570401C4E54",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:18:42.688849Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "FDX",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/FDX/B11A40CEDCB377D379EEA0DB34EB782B7948BEC5DC504C69FA8DEB90EF8FD386.json",
+      "payloadContentHash": "B11A40CEDCB377D379EEA0DB34EB782B7948BEC5DC504C69FA8DEB90EF8FD386",
+      "sourceResponseContentHash": "BB3FE32434A7A10BD5ED4B1AB8C925B6987937F716E4BE928928E2B12227143B",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:19:12.964177Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "FE",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/FE/AA4B1E0B8AB9D70198553F56DD83CB9000FDB78022096268FAF4406CCEFA33CA.json",
+      "payloadContentHash": "AA4B1E0B8AB9D70198553F56DD83CB9000FDB78022096268FAF4406CCEFA33CA",
+      "sourceResponseContentHash": "0D26F7BD1580ABFC52DCC56DBF08ADF972086CE28708E5CC2810B4BBA9CB9B2E",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:19:44.127723Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "FICO",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/FICO/C3C2D029E3CF4DF2939E35953F6E4FE1C74D80D49FC9172BACA24D6772D5AB8F.json",
+      "payloadContentHash": "C3C2D029E3CF4DF2939E35953F6E4FE1C74D80D49FC9172BACA24D6772D5AB8F",
+      "sourceResponseContentHash": "81052BD0F826DA603C6F1C4C2BCE1EF21A88E38BEDB32EF8DE6816215AE81BFB",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:20:44.306567Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "FIX",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/FIX/199B8CC4C66498335F3C3BA1BD335C999CBA7D6EF720CFA3B929C5354ABC2C3C.json",
+      "payloadContentHash": "199B8CC4C66498335F3C3BA1BD335C999CBA7D6EF720CFA3B929C5354ABC2C3C",
+      "sourceResponseContentHash": "056E5C27B3AEA8DC668A596883CE952A60A418670FE085D0E41D00BD7CB54E84",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:21:33.306709Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "FLEX",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/FLEX/5CD69CC324117F8C23578E6A814486E1D255DBA45C50A311BD585526B61ADE8D.json",
+      "payloadContentHash": "5CD69CC324117F8C23578E6A814486E1D255DBA45C50A311BD585526B61ADE8D",
+      "sourceResponseContentHash": "AF250FAC7D8868374C03190B429FDDEFAD01D527AB35D393500C5698FC9D878A",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:22:04.350694Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "FOX",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/FOX/7AC55FBE14FE932AB73CD1C3E8B78FFBEC8B944D267758E3E72190AF2C3D7CD1.json",
+      "payloadContentHash": "7AC55FBE14FE932AB73CD1C3E8B78FFBEC8B944D267758E3E72190AF2C3D7CD1",
+      "sourceResponseContentHash": "CE9E61D7A386E0520E06198D77AA438D6053C445B32F783BB8E9C4F0990A6C76",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:22:34.905392Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "FOXA",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/FOXA/43ED72E26EA3E4FA544092DE11FC9E49B66598DFC9275F67AA9F500B28EDE4BA.json",
+      "payloadContentHash": "43ED72E26EA3E4FA544092DE11FC9E49B66598DFC9275F67AA9F500B28EDE4BA",
+      "sourceResponseContentHash": "DE2183FE5EB8213A354C7F59FE3469E432A5CA15FD0E1391512F2FF70B9AFAEF",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:23:04.524710Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "FSLR",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/FSLR/ADD0025970C4EF374E89DA9C44962561E394A6BCF39469B22882CC8F33E3A658.json",
+      "payloadContentHash": "ADD0025970C4EF374E89DA9C44962561E394A6BCF39469B22882CC8F33E3A658",
+      "sourceResponseContentHash": "FA4D2DE630772428B70148EA937C86D0D3FEB631AD5D1BAA64591D60DD42F984",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:23:33.592844Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "FTV",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/FTV/28D53FA17FDCA3650B4B392CA62A5C78B931EAFFA7507950F74A7F5AB6352667.json",
+      "payloadContentHash": "28D53FA17FDCA3650B4B392CA62A5C78B931EAFFA7507950F74A7F5AB6352667",
+      "sourceResponseContentHash": "D865CC915A61F8E6BE7C9677BD43E480BC370D1676BF2D6602E84174436A6F78",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:24:03.775846Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "GD",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/GD/B77D2406D84A1277FFE653374FA793A3B84699CEB98F5EB9FBAE17AB54C8117E.json",
+      "payloadContentHash": "B77D2406D84A1277FFE653374FA793A3B84699CEB98F5EB9FBAE17AB54C8117E",
+      "sourceResponseContentHash": "56D698A95648EB4350B3C892EBD4E50987D360C9AADE4F60499EEDEE236679AC",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:24:33.974750Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "GEHC",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/GEHC/4314523A1554C98498FB96E68B6C9F71DFDF52EF3FF6BD36D26DA7F38D5A65DF.json",
+      "payloadContentHash": "4314523A1554C98498FB96E68B6C9F71DFDF52EF3FF6BD36D26DA7F38D5A65DF",
+      "sourceResponseContentHash": "902E0FA7EC5517C64AC4E30EC0CA92093628A79583F90F3A4540E2F45F7D49DB",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:25:04.606496Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "GIS",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/GIS/E9D35CE68B801F17413CE98DB2D9EA7722E1D67E6C409846BF9B498D711BEA4E.json",
+      "payloadContentHash": "E9D35CE68B801F17413CE98DB2D9EA7722E1D67E6C409846BF9B498D711BEA4E",
+      "sourceResponseContentHash": "A682E66EFB4B2B1993CD3BB851EEDBB101CD72BBEA281825907DAA1CE9C5D4BE",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:25:14.967861Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "GM",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/GM/C3A491FB414996034FA5FCFE21DB273C0B146192B352EC89570C49A2EBF95956.json",
+      "payloadContentHash": "C3A491FB414996034FA5FCFE21DB273C0B146192B352EC89570C49A2EBF95956",
+      "sourceResponseContentHash": "AD2D21D59400D165B31144687F6B78B12CB33F51709EE65B657834AC20CF9B2F",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:25:45.566071Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "GOOG",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/GOOG/BBD90B5B5F4E6F47FCAA7F8AD78C8ACF9E2932F7F38DF9C852CD09622F803DF7.json",
+      "payloadContentHash": "BBD90B5B5F4E6F47FCAA7F8AD78C8ACF9E2932F7F38DF9C852CD09622F803DF7",
+      "sourceResponseContentHash": "F3BB64EB1DF570C6DC320D3DF57B3FA36442C6EF951962ABDE4EC1E068EF163F",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:26:15.868093Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "GOOGL",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/GOOGL/A98F3239256C846DC69C4DECF9E430EEF01976DAA92CFD22D0F6E2C238149422.json",
+      "payloadContentHash": "A98F3239256C846DC69C4DECF9E430EEF01976DAA92CFD22D0F6E2C238149422",
+      "sourceResponseContentHash": "14C9B69E19E7A1018DCDFD3B915C54EAAE62EBB9B7FD086A17EF898767AE92A0",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:26:45.657330Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "GPC",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/GPC/263BCE32E5BF6966D69BB54D2E77B29646B7C8907E46AACCBD891D5F5ABFA9F6.json",
+      "payloadContentHash": "263BCE32E5BF6966D69BB54D2E77B29646B7C8907E46AACCBD891D5F5ABFA9F6",
+      "sourceResponseContentHash": "0C8821801A032CE3DC5A2C99A1F7FE4B25EEEB77A7E300B1A33C73F03185CCC1",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:27:15.246135Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "GWW",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/GWW/BA660F933E7A551053D118C4132DF5BDCBEEB91E0E54AE71B230A0DFD13905D6.json",
+      "payloadContentHash": "BA660F933E7A551053D118C4132DF5BDCBEEB91E0E54AE71B230A0DFD13905D6",
+      "sourceResponseContentHash": "476AF96E6E1A2F0DC4E9DB75E81DBE3A6004FB68F7781C7AB3C2D17180B55F7A",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:28:17.152217Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "HD",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/HD/D399DF5A29EFDBA4FE196FBC5CED6B35FB6CF1DB99B078E15B8FC32948D32797.json",
+      "payloadContentHash": "D399DF5A29EFDBA4FE196FBC5CED6B35FB6CF1DB99B078E15B8FC32948D32797",
+      "sourceResponseContentHash": "743FBF24E719C2DDE4811A43577554F5EEED41BA45F2D26A35C109DE8C927F9F",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:28:48.019547Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "HLT",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/HLT/78F1672D512E2A0A116A6EEB7797B3636CE243AD49F1199DB8FA17ACEE412414.json",
+      "payloadContentHash": "78F1672D512E2A0A116A6EEB7797B3636CE243AD49F1199DB8FA17ACEE412414",
+      "sourceResponseContentHash": "B78E060CE19AFB43B31A3746CDF6483F29945BEE8C1E356D4A1A051B2E3D55C9",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:29:19.239866Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "HON",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/HON/A90C040E8062435A23DAEFAE2DA93DD76C3FF992749B3B0E9BB94E2B2E239301.json",
+      "payloadContentHash": "A90C040E8062435A23DAEFAE2DA93DD76C3FF992749B3B0E9BB94E2B2E239301",
+      "sourceResponseContentHash": "90E69F7A81AA24BACB8D90A581DD7A7C24CB22F67F89AACF5EF463761B75B25C",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:29:49.801621Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "HRL",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/HRL/BAFD25C67ABE20484ECF4904D368B7E26D7D0C893127CAEAF0564FD450C9D144.json",
+      "payloadContentHash": "BAFD25C67ABE20484ECF4904D368B7E26D7D0C893127CAEAF0564FD450C9D144",
+      "sourceResponseContentHash": "D001F7B863F6B4EF8FE81898C7B8726CE4813B79D52304D46E1E18E2A966BBA8",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:30:20.533040Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "HSIC",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/HSIC/6E65431CAF9A37A7658C998381CC068DE25816578388C498944C5E7D112227F6.json",
+      "payloadContentHash": "6E65431CAF9A37A7658C998381CC068DE25816578388C498944C5E7D112227F6",
+      "sourceResponseContentHash": "ACBEBE2B87795D55E5B1683CEDE451AE6161D530DEB2AC6BCE5598491CCFD870",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:30:51.337699Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "HUM",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/HUM/E45758A7C2D992E541825DA89F855304236F3394210B91E2329F2CE1C32781D2.json",
+      "payloadContentHash": "E45758A7C2D992E541825DA89F855304236F3394210B91E2329F2CE1C32781D2",
+      "sourceResponseContentHash": "C7552E9FE94462B92FDA54ECB95FDF67177C591935CB40626708703DE10B75C8",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:32:15.054701Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "HWKN",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/HWKN/665516EF67AB56D13A960B27C9D14488D6F0423B17391CAFB1D5BA1F1E8BA7F0.json",
+      "payloadContentHash": "665516EF67AB56D13A960B27C9D14488D6F0423B17391CAFB1D5BA1F1E8BA7F0",
+      "sourceResponseContentHash": "ADDBE36B196C3CEE2603A817A19C3EF6ADF22655C35A2FD9120F8E4B851F833C",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:32:46.198590Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "IBM",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/IBM/9204EBC4F2E4A2E1F2440C0803AE8C712130D3D1E790306EDA4FDD26C02CD3F0.json",
+      "payloadContentHash": "9204EBC4F2E4A2E1F2440C0803AE8C712130D3D1E790306EDA4FDD26C02CD3F0",
+      "sourceResponseContentHash": "501646B5D66B07CEE67890F4972C97234FE0EE6277F0B76879235E3300033035",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:33:17.022402Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "IDXX",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/IDXX/CAB513F006D02906F27F6205E600B661D05A0A05DA03E15A0A2613E28AAD2E44.json",
+      "payloadContentHash": "CAB513F006D02906F27F6205E600B661D05A0A05DA03E15A0A2613E28AAD2E44",
+      "sourceResponseContentHash": "B349B5107700A111F769F2E7E575501B15BF22D99FB8D509272EED03E22904F4",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:33:47.849627Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "IFF",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/IFF/D7F989C518F3784E6E7D7026361D5C2AC1C7C81F4B3C901BB4AA482A62571C74.json",
+      "payloadContentHash": "D7F989C518F3784E6E7D7026361D5C2AC1C7C81F4B3C901BB4AA482A62571C74",
+      "sourceResponseContentHash": "9DFCE977B290FE5C247522164F2E6767C07FF56FE5520D43B8468710A16DE83B",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:34:18.329072Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "INTU",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/INTU/742E2FF271EBF0C41CE1150FD6E211E345B7ADF03EBCE41B34FBDCC7B94AE51B.json",
+      "payloadContentHash": "742E2FF271EBF0C41CE1150FD6E211E345B7ADF03EBCE41B34FBDCC7B94AE51B",
+      "sourceResponseContentHash": "5368E1FFD96683AD63DF7FBB8980C1D1C7E9A5C73259AFA2208B1A95EBCB8488",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:34:49.242209Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "IP",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/IP/2C7227282D53D8C617A914A2876A9874CDA50B5DA9ED30E3071811CB5D45273A.json",
+      "payloadContentHash": "2C7227282D53D8C617A914A2876A9874CDA50B5DA9ED30E3071811CB5D45273A",
+      "sourceResponseContentHash": "A210961E142CA0916395076FAC75F70A7523265EDA4EE44814851E70B447EF8E",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:35:19.807697Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "IQV",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/IQV/E9427170DC26B67DC95CAA515594D801C4F486D58743100F186B5B11D187B8EA.json",
+      "payloadContentHash": "E9427170DC26B67DC95CAA515594D801C4F486D58743100F186B5B11D187B8EA",
+      "sourceResponseContentHash": "E19AA5F49CB4D87719324E6695C43DDBEB2E8D2EBDCB21FF2641AFBBE2A1E5D8",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:35:50.699942Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "ITW",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/ITW/0F7E543F9F9520343DD29BA6E5D45BFC7250FB8B6A633C7C7D06D99045E401FD.json",
+      "payloadContentHash": "0F7E543F9F9520343DD29BA6E5D45BFC7250FB8B6A633C7C7D06D99045E401FD",
+      "sourceResponseContentHash": "A789508950C88D9EC04B07E3A0E92F8E0F0BDCE9E2BA58C05BECAF2F9F46E8EB",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:36:51.678500Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "JNJ",
+      "status": "INSUFFICIENT_DATA",
+      "reasonCodes": [
+        "CACHED_FUNDAMENTALS_RESPONSE_NOT_FOUND"
+      ]
+    },
+    {
+      "symbol": "KDP",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/KDP/E2708D54CE6E1012AD1E6585B344DAF073D4DB1B52582E3F5E7086598BF63DFF.json",
+      "payloadContentHash": "E2708D54CE6E1012AD1E6585B344DAF073D4DB1B52582E3F5E7086598BF63DFF",
+      "sourceResponseContentHash": "5740F8A6BF4E004947140C05724193E29FE615F34F6429175C2942E22CC0D06B",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:37:21.987764Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "KHC",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/KHC/3386F3C7257CE772DBFD4551C9EF3330820F96A78717CE6A04790345346BFCD5.json",
+      "payloadContentHash": "3386F3C7257CE772DBFD4551C9EF3330820F96A78717CE6A04790345346BFCD5",
+      "sourceResponseContentHash": "C567F30FFAA021F84D8C966703EE8E78F567BA1885D74C92BFC0699ADCA22D13",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:37:52.893870Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "KLAC",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/KLAC/F5D43441BD6739EB49C2266D70F7D1E9DF4F1D242D10E9150E36E8D78B22936A.json",
+      "payloadContentHash": "F5D43441BD6739EB49C2266D70F7D1E9DF4F1D242D10E9150E36E8D78B22936A",
+      "sourceResponseContentHash": "983EB2AD145A5E4F1CA9CA9CA91A9C9A18B08382488FD3F391FA45A2FC6151BD",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:38:23.852437Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "KMB",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/KMB/ED6DDBF68256A111BC3566978F58E5F91617B13E4B1FA281FA1506D56CD8E0B6.json",
+      "payloadContentHash": "ED6DDBF68256A111BC3566978F58E5F91617B13E4B1FA281FA1506D56CD8E0B6",
+      "sourceResponseContentHash": "DD8D9034CD2A1C7621583E1CD988DFB46E9ACAC6921D50B5ED1EA190FEC5D02C",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:38:55.415179Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "KO",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/KO/D71A58EAA7D7B801FDB3955685C145D11CC3AFE0684899BA4085FD083C59E155.json",
+      "payloadContentHash": "D71A58EAA7D7B801FDB3955685C145D11CC3AFE0684899BA4085FD083C59E155",
+      "sourceResponseContentHash": "E31062D0A7AC9314ACEC0168A2E083D35A09AC117B91C9D9019A94C47C918C52",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:39:26.315692Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "KVUE",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/KVUE/77ABE705DDE3B0AA4B17A9D2C84049096696FE87AF77B38187A14756508F4E5E.json",
+      "payloadContentHash": "77ABE705DDE3B0AA4B17A9D2C84049096696FE87AF77B38187A14756508F4E5E",
+      "sourceResponseContentHash": "D45E15EA8E4BD8C37E88FFFB24219BA916F5C5CB04BA7DD7337F2CF1A7692D3B",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:39:57.849306Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "LEN",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/LEN/EB8539896EB7C7233DF926826C0DB38796550D854735CA80179042D27860D444.json",
+      "payloadContentHash": "EB8539896EB7C7233DF926826C0DB38796550D854735CA80179042D27860D444",
+      "sourceResponseContentHash": "B052E6567A8184D878AC223204E79B14F2BEF2FAE96F9B1C3122A27AEAA27B3B",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:40:06.540884Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "LH",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/LH/7C69A6BD28D72D936137CD5AD977F02BE6A60EB08C183B75340D766055DAB33D.json",
+      "payloadContentHash": "7C69A6BD28D72D936137CD5AD977F02BE6A60EB08C183B75340D766055DAB33D",
+      "sourceResponseContentHash": "BE8E6D29DA0231270E25BA08A3D6228581F1471FB0ADD605212C384E563CEE4A",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:40:38.084945Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "LIN",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/LIN/D98DD702CA62F609E93B2970FD5108D08408ACD0F1172EC758C7FE87E2D624F5.json",
+      "payloadContentHash": "D98DD702CA62F609E93B2970FD5108D08408ACD0F1172EC758C7FE87E2D624F5",
+      "sourceResponseContentHash": "755DD5A1BEC2259EE6DE2FD7B11AA5B15A2703EDC257241984C5F9034121958C",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:41:09.467312Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "LLY",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/LLY/B3958FFFEB49E30B53C79E76F7581467F09015F1246BD0161D1CB25EE412746D.json",
+      "payloadContentHash": "B3958FFFEB49E30B53C79E76F7581467F09015F1246BD0161D1CB25EE412746D",
+      "sourceResponseContentHash": "5389E5B7521D5E62D37551669E09E52022216088272F1421A0DB4A5461720ED4",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:41:57.838332Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "LMT",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/LMT/D8B5A2A18A5DE3B9F31D28C9AF6464C130119ED996B7B5FC48176918B8931D6D.json",
+      "payloadContentHash": "D8B5A2A18A5DE3B9F31D28C9AF6464C130119ED996B7B5FC48176918B8931D6D",
+      "sourceResponseContentHash": "B8879BDED9CA05668A588047CAB8A3B180A87FE6BBBE83E0022B02A58E2E809C",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:42:28.593029Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "LNT",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/LNT/B025643011A7C464996C9671333C43945BA421A81A6740B3AE43E2EA8C71FBD4.json",
+      "payloadContentHash": "B025643011A7C464996C9671333C43945BA421A81A6740B3AE43E2EA8C71FBD4",
+      "sourceResponseContentHash": "3AFDEE407E6C42F5432B6BC04CA89BF4676B79EE046682EA2F5917FB3C5AA676",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:42:58.836701Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "LOW",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/LOW/10AD656C3FAA429EC108950CE801CC0066C0CB016542DE0F9C8C9D8DD07BB233.json",
+      "payloadContentHash": "10AD656C3FAA429EC108950CE801CC0066C0CB016542DE0F9C8C9D8DD07BB233",
+      "sourceResponseContentHash": "4695F3760BDB44873A76C3FDC75825C084C3BF51F153782C951F95606F6E905C",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:43:29.177930Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "LRCX",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/LRCX/D825AA669ED3EE2EA6EF6BBCC500CBF13A8E99677161F1FCCFB7352B1CBEA719.json",
+      "payloadContentHash": "D825AA669ED3EE2EA6EF6BBCC500CBF13A8E99677161F1FCCFB7352B1CBEA719",
+      "sourceResponseContentHash": "4770279DFD74D3EA2504D92EFB041793B6C96B961B845D03397799B67EAF7EAA",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:43:59.798527Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "LYV",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/LYV/8686A9358A51223AA62B2B22EA36BC56ED220DBF30F302AADF8D6013C83CBDAB.json",
+      "payloadContentHash": "8686A9358A51223AA62B2B22EA36BC56ED220DBF30F302AADF8D6013C83CBDAB",
+      "sourceResponseContentHash": "AD2A151B938E21834019FEE71DB5DD6E0CCCAF183E31C817335F9C49C27EAC0C",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:45:31.352153Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "MCD",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/MCD/547729F34C546E325A0FC01A839A527149B024F35FA313DB283BE2B052858BAD.json",
+      "payloadContentHash": "547729F34C546E325A0FC01A839A527149B024F35FA313DB283BE2B052858BAD",
+      "sourceResponseContentHash": "C0285D0204D1CFCF0825B5B3DB245FA710AD8027262514FBAF9A14E04154614B",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:46:02.052258Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "MCHP",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/MCHP/1E10A1F0401AB6BE4161369EAAA8415DCEEB077F5948E16F617E63D61E64C392.json",
+      "payloadContentHash": "1E10A1F0401AB6BE4161369EAAA8415DCEEB077F5948E16F617E63D61E64C392",
+      "sourceResponseContentHash": "A75E008CB77474C4DF36A0FE3376D819347F21159C8714C4E208ABDCDAF8B9C5",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:46:33.103323Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "MCK",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/MCK/241C2CC76DFA4FB300AC10EFBE6C7DDD0A26F29AC24F430D10ABCF6211309090.json",
+      "payloadContentHash": "241C2CC76DFA4FB300AC10EFBE6C7DDD0A26F29AC24F430D10ABCF6211309090",
+      "sourceResponseContentHash": "95F37B1BD2A74E13137079006692D9DF1B5A7E14EA312EA51ECBE5043DEAFD0E",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:47:03.386695Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "MDLZ",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/MDLZ/9FEDEA1BA3A6645C342EA4609317BF765B80D8C63510554408326E73821055A5.json",
+      "payloadContentHash": "9FEDEA1BA3A6645C342EA4609317BF765B80D8C63510554408326E73821055A5",
+      "sourceResponseContentHash": "909819AA4F7D6A7247212B652EDEEBEE2BA1D0BCFBC6C13A8211CA0F34A24950",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:47:34.695065Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "META",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/META/FE6386BD543DCFF704FB7C7ECAD47EC1C57F81999DB4A1E72AFB7B6A98907F18.json",
+      "payloadContentHash": "FE6386BD543DCFF704FB7C7ECAD47EC1C57F81999DB4A1E72AFB7B6A98907F18",
+      "sourceResponseContentHash": "3B1C2A24B4CE610BBB4A6940A7096130052A8B60D75B5B0357E5958D6D62C425",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:48:04.902002Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "MKC",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/MKC/48B40215FBC40D08C53A91A3321BB3C4D4B8C5B20F0A61BF60C0CFACF5D0DF10.json",
+      "payloadContentHash": "48B40215FBC40D08C53A91A3321BB3C4D4B8C5B20F0A61BF60C0CFACF5D0DF10",
+      "sourceResponseContentHash": "C843E5C47FE5E50E023CF0832B48C080AC828C7F28150DF8D6D8081CF57124FC",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:48:34.976535Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "MLM",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/MLM/50CEEF0C85AD3B2838D607187F62FC862789225358A68C7D68674E897F16C469.json",
+      "payloadContentHash": "50CEEF0C85AD3B2838D607187F62FC862789225358A68C7D68674E897F16C469",
+      "sourceResponseContentHash": "8591777CE933D3FC24E349F7F1B445735A04F8BDCB7605B7C4C2906BF30ABCA6",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:49:05.668964Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "MNST",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/MNST/14E577CBA7B2D51DF3A3455C2CE0BA6F6D4E30E960613559B48037D5BB395572.json",
+      "payloadContentHash": "14E577CBA7B2D51DF3A3455C2CE0BA6F6D4E30E960613559B48037D5BB395572",
+      "sourceResponseContentHash": "E20D4E1B2267D755584297D1FF4B6F64EB353DE0AFB24F70D229E199D40FF287",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:49:36.370673Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "MO",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/MO/66169F837031FF843A745B650C08990DDC3CBEACE02CF57D45D4E42E02B146B4.json",
+      "payloadContentHash": "66169F837031FF843A745B650C08990DDC3CBEACE02CF57D45D4E42E02B146B4",
+      "sourceResponseContentHash": "450863076F68AEFD6B0A142C90BEBE008026E92F45F5E4EC4A314AFEABA3918B",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:50:07.022919Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "MOS",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/MOS/E0292656276A98DBF6088442FBC762314A7A65FA48084B1EED8014B665938112.json",
+      "payloadContentHash": "E0292656276A98DBF6088442FBC762314A7A65FA48084B1EED8014B665938112",
+      "sourceResponseContentHash": "D5755CFF74049C99A5C5E6451C3F5D0B8619B848A66FEBD61ACE22F27518E4C0",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:50:38.145996Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "MRK",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/MRK/D004CF4A74D21D597571720AF442DB0FDC00E198F2DB5CBD157388DD3E7A3561.json",
+      "payloadContentHash": "D004CF4A74D21D597571720AF442DB0FDC00E198F2DB5CBD157388DD3E7A3561",
+      "sourceResponseContentHash": "BE41EFE03A9DC0271DBE8C4D6C78FDA3443D8FEA1B42B54491117EBFEB70EF42",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:51:09.066899Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "MSFT",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/MSFT/D3B51C214263D51BAE9CB905BA2DE5554B5A462B7B8B93F21DC9A9FC373E957D.json",
+      "payloadContentHash": "D3B51C214263D51BAE9CB905BA2DE5554B5A462B7B8B93F21DC9A9FC373E957D",
+      "sourceResponseContentHash": "7CF537DFF253355990E3A4253A912165B8EAF8081E4BAAA9D828BE0CA2D6FA4F",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:51:39.462619Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "NFLX",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/NFLX/FFB4B172EF0CFD9403AD349C74634A8FD1B69D875A4BB0606E6D0EBD3F65B93E.json",
+      "payloadContentHash": "FFB4B172EF0CFD9403AD349C74634A8FD1B69D875A4BB0606E6D0EBD3F65B93E",
+      "sourceResponseContentHash": "63DCD0C36F5E8312CE793A1D70F20D99F29ABF8B9F78598235405CD919DD6F3F",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:52:30.018314Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "NI",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/NI/0566C16F63628C500A50FDDDC90B261F5F5837F9CAF63D45131AB6655855003D.json",
+      "payloadContentHash": "0566C16F63628C500A50FDDDC90B261F5F5837F9CAF63D45131AB6655855003D",
+      "sourceResponseContentHash": "2AF501B2489777AE4728C1808A48469742DEE69A9B3554B0D67D5298628FB75F",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:53:00.907090Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "NKE",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/NKE/4383693018C0134D87B0B75866FF7DD467DAF6556289022D754BACB7C75B9733.json",
+      "payloadContentHash": "4383693018C0134D87B0B75866FF7DD467DAF6556289022D754BACB7C75B9733",
+      "sourceResponseContentHash": "7B0A218FD5A4E829671EBEB0394BF9A26BF445ABBB1B928EBC1F42783862F7D8",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:53:31.380626Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "NOC",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/NOC/DCDA6CCDAE78150E0084FAF83A7D60FC1550C421B662A9474A1961F2E25DDF92.json",
+      "payloadContentHash": "DCDA6CCDAE78150E0084FAF83A7D60FC1550C421B662A9474A1961F2E25DDF92",
+      "sourceResponseContentHash": "A911ACBE66D154C6CE490BD97F1241905691E24E0731F749CA42E183B92325E9",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:54:02.428261Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "NRG",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/NRG/2244056C8B232BD7CE1D690C7B4EDC9D99A0A073A4B1E4E746C22EB67857CEAD.json",
+      "payloadContentHash": "2244056C8B232BD7CE1D690C7B4EDC9D99A0A073A4B1E4E746C22EB67857CEAD",
+      "sourceResponseContentHash": "60D5D62BA42BB074DF6180AFA1F8DE415D4A8942A1AD88B78726020C1F77F2E1",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:54:33.519959Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "NUE",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/NUE/4925AA37E26F2E5AD2D276883DEE4536E9A77459CE9AC27FED571299491DD855.json",
+      "payloadContentHash": "4925AA37E26F2E5AD2D276883DEE4536E9A77459CE9AC27FED571299491DD855",
+      "sourceResponseContentHash": "53E65B72B8A4E79F03FEBCE3A6E72DE13F62A4014A5036D03521866EA190265D",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:55:04.892775Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "NVDA",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/NVDA/D45C03CC1E4E8E57AB99BA9A3AE0AB578CA4E70243744560C6A82D67EA427DFF.json",
+      "payloadContentHash": "D45C03CC1E4E8E57AB99BA9A3AE0AB578CA4E70243744560C6A82D67EA427DFF",
+      "sourceResponseContentHash": "4F7A70DA3EBF15A46D315E55B8E136E59FDBBF6C223CE132ADA92E3FE667C518",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:55:35.832905Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "NWSA",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/NWSA/FD36E286DA32043DF7CAADA06C9EE9E947E078EDEAE701472BFF962464E341E3.json",
+      "payloadContentHash": "FD36E286DA32043DF7CAADA06C9EE9E947E078EDEAE701472BFF962464E341E3",
+      "sourceResponseContentHash": "46296202E0021C36A586F66D7797ED2F35693E4386F9384BF4DC75BCC6883019",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:56:36.683022Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "OLED",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/OLED/31E6ABBFEF28F5896F3706C02A008F93234C36BF03124E425EC72297417A484D.json",
+      "payloadContentHash": "31E6ABBFEF28F5896F3706C02A008F93234C36BF03124E425EC72297417A484D",
+      "sourceResponseContentHash": "467ACB4E519E758D5092C4555963A8842740EFB9A99863E07C9ADD020B2DD1E1",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:57:06.345131Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "OMC",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/OMC/823F9D936D1F9A871890F00E2419F50E95395D84D3C149C977C41C6BB71DA39C.json",
+      "payloadContentHash": "823F9D936D1F9A871890F00E2419F50E95395D84D3C149C977C41C6BB71DA39C",
+      "sourceResponseContentHash": "B588B806240E30E89AFEDE3ADF5DD7063A35C555A21B513E41B3B578DC19BE4B",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:57:36.921894Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "ORCL",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/ORCL/B8DEF66203CBF7BA9481AC2872F100292A9555E7F86C7C2F3E0311B111A8B6B0.json",
+      "payloadContentHash": "B8DEF66203CBF7BA9481AC2872F100292A9555E7F86C7C2F3E0311B111A8B6B0",
+      "sourceResponseContentHash": "81E853C50688BD0CB6891609BE7DD8D09779BBD3B33C220B3160FAE67FE1345C",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:58:07.985145Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "ORLY",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/ORLY/BB30E47BBDCCE854A2B0D20FFAB4FC432E4F3B6DEABEB4D5E6E69D5506ECC5DE.json",
+      "payloadContentHash": "BB30E47BBDCCE854A2B0D20FFAB4FC432E4F3B6DEABEB4D5E6E69D5506ECC5DE",
+      "sourceResponseContentHash": "164B1FA3CD20C302B6CBD480ACFDEF731BC0570A6ACCA93E15173F75B45C770B",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:58:38.894590Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "PCAR",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/PCAR/588CCF9ABFAF3674E0E954BF1D2C78C22DBA18AA0AB8D9DC2CE0CA6E5C3FB1C9.json",
+      "payloadContentHash": "588CCF9ABFAF3674E0E954BF1D2C78C22DBA18AA0AB8D9DC2CE0CA6E5C3FB1C9",
+      "sourceResponseContentHash": "2714AA430C18A930DC4376261F9F8DF7C51008B772F30CB289BD36A28CC8D43A",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T22:59:10.125158Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "PCG",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/PCG/7BD7FC9B5700B24966E5EAD8699D10BCAB2445BB2F59105328B3E02B259EFC2B.json",
+      "payloadContentHash": "7BD7FC9B5700B24966E5EAD8699D10BCAB2445BB2F59105328B3E02B259EFC2B",
+      "sourceResponseContentHash": "B1561DBE383BBC22FE07E40E3AB40EA829A7791A22C222978473C2A1CAFEAC9D",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T22:59:41.256338Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "PEG",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/PEG/D2BB87779E79A147C0D7473544A05EA29C3F4CC024AA2166770AF0A4679633AF.json",
+      "payloadContentHash": "D2BB87779E79A147C0D7473544A05EA29C3F4CC024AA2166770AF0A4679633AF",
+      "sourceResponseContentHash": "9C1E2C62A9C269E5F47251427DE7DC60D4CF4B28E9350AD6DB13105865CDFF9C",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T23:00:12.164669Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "PFE",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/PFE/C359FDFCD255E940346F8B890E50068A9D6E0FA0248FE1436542F41B4BB33F8B.json",
+      "payloadContentHash": "C359FDFCD255E940346F8B890E50068A9D6E0FA0248FE1436542F41B4BB33F8B",
+      "sourceResponseContentHash": "558F80158B64411F75B7805AD3DD2CE0E0B7BB5B7BE157244522C07328BAE09B",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T23:00:47.226441Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "PG",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/PG/832B09E8522D3705DBD058E152263777C82B7D577436E703B921CA7ABDE70393.json",
+      "payloadContentHash": "832B09E8522D3705DBD058E152263777C82B7D577436E703B921CA7ABDE70393",
+      "sourceResponseContentHash": "8B640AF02C93851F3227CA4CAD8E2DE64F2330E3685F4CFA32CBDB04459D5330",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T23:01:18.537639Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "PH",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/PH/2CF14F152E597810432D57C796E95AA32B0D7C111CD466D272FA655396394B6E.json",
+      "payloadContentHash": "2CF14F152E597810432D57C796E95AA32B0D7C111CD466D272FA655396394B6E",
+      "sourceResponseContentHash": "C03C9D3B857E56F69738466B87867BCA11EBF6AB9DA1CB8D2685E21E840DC322",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T23:01:49.563058Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "PLAB",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/PLAB/78B8F75FA872899B0E57B086CB778F08D982F9B4C7E84FCF0517FB88364B7B22.json",
+      "payloadContentHash": "78B8F75FA872899B0E57B086CB778F08D982F9B4C7E84FCF0517FB88364B7B22",
+      "sourceResponseContentHash": "68803D52AF729AF9924F8A6D594A5CD90D55B70DC0F3FC2D8A04EB62DB116949",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T23:02:21.326153Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "PM",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/PM/0F915AA70B26B2E6EB7CE50ACCA0491F8160C86E755ADCE25FD6061159C7A54D.json",
+      "payloadContentHash": "0F915AA70B26B2E6EB7CE50ACCA0491F8160C86E755ADCE25FD6061159C7A54D",
+      "sourceResponseContentHash": "647B65BB076C1715D5ECD6A259B1292130DB2259C561A32331EF3E626CAE2AA2",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T23:03:10.599471Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "PNW",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/PNW/2B7B251DF5D03344DF4B0C2E0F58B1980ACA26782DBCF54CB6B3F4B953D4717E.json",
+      "payloadContentHash": "2B7B251DF5D03344DF4B0C2E0F58B1980ACA26782DBCF54CB6B3F4B953D4717E",
+      "sourceResponseContentHash": "7A98ED433CCA3CF28E8E1A69E895984D4A96310D893E4B3D58A2B88D1D9D25F6",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T23:03:41.794315Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "PPG",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/PPG/6505B67AD745621A3C2E097503EF152FFA13B73F4412FECEBB4EEDED6D407877.json",
+      "payloadContentHash": "6505B67AD745621A3C2E097503EF152FFA13B73F4412FECEBB4EEDED6D407877",
+      "sourceResponseContentHash": "79228E0988F9F5048FE33EC270BBC52F3790A2CA231D04067D43E0C5D2916B68",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T23:04:12.317225Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "PPL",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/PPL/136FDC20FB2D5824E821A08E5DBBD3E16B98713BB690BEFF8008BA46DF6D5187.json",
+      "payloadContentHash": "136FDC20FB2D5824E821A08E5DBBD3E16B98713BB690BEFF8008BA46DF6D5187",
+      "sourceResponseContentHash": "FFA719F6A024D65EFE6826B1097274CC93A5AE268D08855F076552128E311C07",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T23:04:43.344534Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "QCOM",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/QCOM/14955DE2DA6AF3D93DAC9CFB7C563203A4DEACC18A54055CDC225AEECEAE87E3.json",
+      "payloadContentHash": "14955DE2DA6AF3D93DAC9CFB7C563203A4DEACC18A54055CDC225AEECEAE87E3",
+      "sourceResponseContentHash": "EF3BC54549151E5F8B300E8429DF14F7025C76A0CD9A07A8D46C4159786499DF",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T23:05:43.070132Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "ROK",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/ROK/43BFE60EEDEFACCA47FC9A47501031309305EB2C5C4EB2A537EAA42BB3E65683.json",
+      "payloadContentHash": "43BFE60EEDEFACCA47FC9A47501031309305EB2C5C4EB2A537EAA42BB3E65683",
+      "sourceResponseContentHash": "569E1EF023ABE3D8333A3E23A6038297120E661405B33172D446B971EDC93123",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T23:06:14.031321Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "ROST",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/ROST/3742B54EE5E2B35593D198587850EAF3F3F94E9962B6C1DCF16850CCCB181E03.json",
+      "payloadContentHash": "3742B54EE5E2B35593D198587850EAF3F3F94E9962B6C1DCF16850CCCB181E03",
+      "sourceResponseContentHash": "CD1415E6FE0D8A884DAF3A985DEF1723ABF71DE7FBE3E1B5FF1D0F359D724305",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T23:06:44.797463Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "RTX",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/RTX/E692A5D7363F6D5AF7554CABAAE842C52038433AB852495EE598643F554A90EA.json",
+      "payloadContentHash": "E692A5D7363F6D5AF7554CABAAE842C52038433AB852495EE598643F554A90EA",
+      "sourceResponseContentHash": "7129EF1791443767764B550FDBB33C61402DA2A2CE96BA5089814512F6391D8D",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T23:07:15.503458Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "SAIA",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/SAIA/36569B8CAAB83BC0CCD1136FEA936BAE7F18F8973D294C9433DF29BD79C2A791.json",
+      "payloadContentHash": "36569B8CAAB83BC0CCD1136FEA936BAE7F18F8973D294C9433DF29BD79C2A791",
+      "sourceResponseContentHash": "E611F149D0A86D7CA14A90C37EDBA824FFE8B4021AE7C2DF3B99B45E1CF37893",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T23:07:46.193794Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "SBUX",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/SBUX/F323D91782C9BD101F243D38687C463495D163AD2641321C0FF206953FD1454F.json",
+      "payloadContentHash": "F323D91782C9BD101F243D38687C463495D163AD2641321C0FF206953FD1454F",
+      "sourceResponseContentHash": "9E5BF73EC1764746C8D5AB910D1FAF4200F03A981943F7B4D82293331FA96D6E",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T23:08:16.767127Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "SHW",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/SHW/E6466A206C902251B922C0F1D8B073BD48B91F3362DFC5FC3A819A8410F29294.json",
+      "payloadContentHash": "E6466A206C902251B922C0F1D8B073BD48B91F3362DFC5FC3A819A8410F29294",
+      "sourceResponseContentHash": "E409FEE0C67D4230A1A65B880882720D3B64B74FB32FC5B025838C471FF3B87E",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T23:08:47.294859Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "SJM",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/SJM/9D19D2DBBA8B45C20305313DCF3A7E2AFEA99C23035C9AAECEF0A6CAEB62C4C2.json",
+      "payloadContentHash": "9D19D2DBBA8B45C20305313DCF3A7E2AFEA99C23035C9AAECEF0A6CAEB62C4C2",
+      "sourceResponseContentHash": "49BE79E12A11471D4EB919DB568B3B95C5F2789E901B5342BB192E57A29F455F",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T23:09:18.948901Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "SO",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/SO/5639556F9DF76F17021669B90E60E771DA35209963E0607856EDB7803053D126.json",
+      "payloadContentHash": "5639556F9DF76F17021669B90E60E771DA35209963E0607856EDB7803053D126",
+      "sourceResponseContentHash": "516E96751B9918148D8D341285F9F10478E03FFA5CED59A9E3FC5240297504DA",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T23:09:49.160011Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "SRE",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/SRE/F837058C44A4796F64E0A325F70D506018A0DA1AF584DBCBDE98894FF83AE3CF.json",
+      "payloadContentHash": "F837058C44A4796F64E0A325F70D506018A0DA1AF584DBCBDE98894FF83AE3CF",
+      "sourceResponseContentHash": "26683538183A39886D852879849CB0F2C74F5F151DEC75A1453AAE0E94944284",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T23:10:20.266775Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "SW",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/SW/2252CB55DB0875071DD9492B193ADFD557A60EFCD0B0B1E503477512E5B25588.json",
+      "payloadContentHash": "2252CB55DB0875071DD9492B193ADFD557A60EFCD0B0B1E503477512E5B25588",
+      "sourceResponseContentHash": "44B2B0331170B4C0F936241C8FE2AA101CD9EBCD7765E73A3FD1B47A9E7482A8",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T23:11:20.872345Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "SYY",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/SYY/8667FB5AE2F825C06D8B0AF9DF63EDF6880C54492101BD39F581113EFDFE3C38.json",
+      "payloadContentHash": "8667FB5AE2F825C06D8B0AF9DF63EDF6880C54492101BD39F581113EFDFE3C38",
+      "sourceResponseContentHash": "98486E1F9CA94C2CB017C78A3428D0351DA4D477A53D61B712D8A8DF40CA8632",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T23:12:04.330258Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "T",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/T/9FA9B56CBCBAD321C947AABBBAD352F0CBB43AB551EEAF1590159EEAFFC16FEE.json",
+      "payloadContentHash": "9FA9B56CBCBAD321C947AABBBAD352F0CBB43AB551EEAF1590159EEAFFC16FEE",
+      "sourceResponseContentHash": "AED2CCDFBEEB43072F7E1009752F6D8C819FD62048D077BF37A0FAC97BDE4B88",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T23:12:34.669792Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "TGT",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/TGT/67A0E0F9918BE35B0A4B50180DED69562ABE1491F8EC10A1262BE6E153D4D6D8.json",
+      "payloadContentHash": "67A0E0F9918BE35B0A4B50180DED69562ABE1491F8EC10A1262BE6E153D4D6D8",
+      "sourceResponseContentHash": "D23B7EF4CC765DC7F966E1C0C04E5168A2D0B653A1AFEF9BBB4BCD25F2E4F74B",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T23:13:23.677914Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "TJX",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/TJX/29EA1807D8DB054079F30049EFB360FFDE82D88785A44B75C20B3F00F551A809.json",
+      "payloadContentHash": "29EA1807D8DB054079F30049EFB360FFDE82D88785A44B75C20B3F00F551A809",
+      "sourceResponseContentHash": "427D86FD9903F7CE2FADB26A3BC6EC1652E9038941D74466179D5A77829E88DD",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T23:13:55.120817Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "TKO",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/TKO/1F962E95171F358FD9B00C55A5F6E7CC6B661A228C1B9409DBA878760DF029D5.json",
+      "payloadContentHash": "1F962E95171F358FD9B00C55A5F6E7CC6B661A228C1B9409DBA878760DF029D5",
+      "sourceResponseContentHash": "433493FEBD29027174213C6039A4C0796FF239FDDCCCAF492E91F020DB498B76",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T23:14:25.831220Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "TMUS",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/TMUS/9DAFD2D45384689B80DD6A695ED6FEB9B5AE250DCA73F0609F4DB040896F6CEB.json",
+      "payloadContentHash": "9DAFD2D45384689B80DD6A695ED6FEB9B5AE250DCA73F0609F4DB040896F6CEB",
+      "sourceResponseContentHash": "9343DC20AD4668E4CD64FA365E95001222B5FF8DB9D0F5BDB821384507F79011",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T23:14:55.899934Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "TSN",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/TSN/4C55CB840814CDEE0B1C7289F92B330C36EA9D334D1BF633BCD3433FA08134B4.json",
+      "payloadContentHash": "4C55CB840814CDEE0B1C7289F92B330C36EA9D334D1BF633BCD3433FA08134B4",
+      "sourceResponseContentHash": "2F2C0ACC89FFC00E948AE5C9A212A1983E18B327D9C61C9C2678C7A8E22ACA74",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T23:15:27.564976Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "TTC",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/TTC/EB02639F92B1E2AF4DC773BF54D997818869CB5B86BAE970FDFB54E28E48D0F8.json",
+      "payloadContentHash": "EB02639F92B1E2AF4DC773BF54D997818869CB5B86BAE970FDFB54E28E48D0F8",
+      "sourceResponseContentHash": "975EAEA0CF2AB9DD236FF4D05FDDF9CB33DBF601B3C481548B0D3DAFEEE4F255",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T23:15:57.838626Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "TTD",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/TTD/A3415D1BC7AA1797612F8B68E0AFBB3F9E4524AA50DA73B4C3CD0192AC6EC619.json",
+      "payloadContentHash": "A3415D1BC7AA1797612F8B68E0AFBB3F9E4524AA50DA73B4C3CD0192AC6EC619",
+      "sourceResponseContentHash": "BB433CA8380E121B83598D39623B867974A862C0943E4C38D8DC4CE6F3A885AC",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T23:16:29.107574Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "TTWO",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/TTWO/8D2CD12411A38F03901C3DD8B7A412FAFFC272427402E2D9D42F982A098BD6E9.json",
+      "payloadContentHash": "8D2CD12411A38F03901C3DD8B7A412FAFFC272427402E2D9D42F982A098BD6E9",
+      "sourceResponseContentHash": "98A63571BCEBE0EB1AAF36C52252EECD0539BF30C4DCFB7D981D1F069C949B18",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T23:17:00.053591Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "UFPI",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/UFPI/F23EA5A82BEC55E7669EB7CDBE241D17B359A54D1BDEB3D5817E76FF34A4BC8C.json",
+      "payloadContentHash": "F23EA5A82BEC55E7669EB7CDBE241D17B359A54D1BDEB3D5817E76FF34A4BC8C",
+      "sourceResponseContentHash": "23AF085ED284BA51772E3F8A0AAA4DC90B35C9BA07F05BB94C9ED3764C5F2C82",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T23:17:31.268922Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "UNP",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/UNP/2F70609DDF2F2B983CFD4B734609D112A6D5389BBCDD114ABE8323FBAC610184.json",
+      "payloadContentHash": "2F70609DDF2F2B983CFD4B734609D112A6D5389BBCDD114ABE8323FBAC610184",
+      "sourceResponseContentHash": "FA9B663B2A2CA4A8170800D57C4CCB11B0DEA06B6D2CE6FCD30F69852FA327E5",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T23:18:02.120556Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "UPS",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/UPS/CE3BE8FAC1BD48487830B9DBE1394AB2B340CECE1544939AAA26E549D3B1EADD.json",
+      "payloadContentHash": "CE3BE8FAC1BD48487830B9DBE1394AB2B340CECE1544939AAA26E549D3B1EADD",
+      "sourceResponseContentHash": "E8B0F105B583A7311A624CEE709F54DBE3312408663CBAE8CE0A6D62B346D169",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T23:18:33.358360Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "VMC",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/VMC/CD1F6189062B3A1F6DF446350EDCD717DCC61E170A4ED59C71B834EBA98D976B.json",
+      "payloadContentHash": "CD1F6189062B3A1F6DF446350EDCD717DCC61E170A4ED59C71B834EBA98D976B",
+      "sourceResponseContentHash": "CD3E0A8C588C6F7F9185E3261488A1EE5327297740C7A351D247203CAC3453FE",
+      "providerUpdatedDate": "2026-07-26",
+      "retrievalStartedAt": "2026-07-27T23:19:04.838270Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "WBD",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/WBD/A3DF14F9AFB6A1F2E0013D4437F647FB4A9C437A7CEE575F1C225EC90B9C9D5C.json",
+      "payloadContentHash": "A3DF14F9AFB6A1F2E0013D4437F647FB4A9C437A7CEE575F1C225EC90B9C9D5C",
+      "sourceResponseContentHash": "9382878C9B730A79085BB57BA42E89B2D3F9A2766D71BC8B532EE11A35E0F07A",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T23:19:36.464243Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "WDFC",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/WDFC/4420382BEDEB54D36F54D3BCF8DE9FC552BDFB8332EBDDA6B364C83775A63D9B.json",
+      "payloadContentHash": "4420382BEDEB54D36F54D3BCF8DE9FC552BDFB8332EBDDA6B364C83775A63D9B",
+      "sourceResponseContentHash": "4F5451D543984CE812998E331832CFE3B896B6AAA62693F6C8B3DF732826C7C7",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T23:20:07.394104Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "WM",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/WM/3C45B2EAD6A1BCF347B02C4963DF27C57A20DB7205FEFD4DD7CFDB70A9544DF0.json",
+      "payloadContentHash": "3C45B2EAD6A1BCF347B02C4963DF27C57A20DB7205FEFD4DD7CFDB70A9544DF0",
+      "sourceResponseContentHash": "C2C272D9F95F6A8F6AB627FFD4F35EECE59B3D46AB1338257AF6994CB2165CB4",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T23:20:39.169615Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "WMT",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/WMT/6F6A4417F363182A9F2A833B008336067D6E46F6CEA2024EDA8924ED3FCE5611.json",
+      "payloadContentHash": "6F6A4417F363182A9F2A833B008336067D6E46F6CEA2024EDA8924ED3FCE5611",
+      "sourceResponseContentHash": "9734642697128189A603514232B4852A465B93DA5C7ADDF86F63DB90D53F4778",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T23:21:10.639236Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "XEL",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/XEL/F5D6FC6F5A89A05E07DC8E4AE1B8776E63052973F8681C2B7CD5C8100804FE11.json",
+      "payloadContentHash": "F5D6FC6F5A89A05E07DC8E4AE1B8776E63052973F8681C2B7CD5C8100804FE11",
+      "sourceResponseContentHash": "54983550620745FEC44CA4992A5B8C75C20430F7E1851B0C62D52ED9BEE42EA6",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T23:21:41.921055Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "YUM",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/YUM/5AC6E63400F243B2977BEB63934DC2A5BDF06B65A2D560F1770FEAE402ADCF4E.json",
+      "payloadContentHash": "5AC6E63400F243B2977BEB63934DC2A5BDF06B65A2D560F1770FEAE402ADCF4E",
+      "sourceResponseContentHash": "DF8D238D2D8A247F2432DDD055551C51393DFD8B8980D0F68EC9CE0B502D82DF",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T23:22:13.106674Z",
+      "currency": "USD"
+    },
+    {
+      "symbol": "ZBH",
+      "status": "CURRENT_SNAPSHOT_SUPPLEMENT_READY",
+      "storageReference": "storage/provider-validation/current-snapshot-supplements-v1/ZBH/FB8895834CD21F74CF1D55343F6172B8A5ECA7DFA5B9501EE09FD14D196CED21.json",
+      "payloadContentHash": "FB8895834CD21F74CF1D55343F6172B8A5ECA7DFA5B9501EE09FD14D196CED21",
+      "sourceResponseContentHash": "A9E4EB8CE7CA76F07DE07BEA5D65F39919A880D4EF98EC85F4ACDA6190A2D4B0",
+      "providerUpdatedDate": "2026-07-27",
+      "retrievalStartedAt": "2026-07-27T23:22:45.287736Z",
+      "currency": "USD"
+    }
+  ],
+  "licensedValuesIncluded": false,
+  "networkRequestsExecuted": false,
+  "sourceAggregatePath": "docs/generated/formula-ready-243-final-aggregate-v1.json",
+  "sourceAggregateSha256": "2B3EE90401BB635FBB07CA977FD35D7A371CB64BB1735D070FC28268598CA9F8",
+  "sourceAggregateContentHash": "CE0EB2F588105DA4E12F8BB763EC65B759714A2C4A6C9435C35A9F2ED9F69859",
+  "artifactContentHash": "B2EA348D9FD0032738EBB3532774E3DCE06A8168000C9F05DD9C50C7632EE8A0"
+}

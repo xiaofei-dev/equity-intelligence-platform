@@ -1,0 +1,17 @@
+{
+  "artifactType": "EXPANSION_SLICE_CHECKPOINT",
+  "runId": "20260727T185058Z-161ca626a511",
+  "sliceId": "repair-focused-001",
+  "completedSymbols": [
+    "TSN"
+  ],
+  "reportPath": "docs\\generated\\expansion-provider-gate-20260727T185058Z-161ca626a511.json",
+  "reportSha256": "2583C65BFF246CCA6ABC7274DEDC2307DCBC68F2602105EB8D3E59A6743D9EBE",
+  "diagnosticPath": "docs\\generated\\expansion-provider-gate-20260727T185058Z-161ca626a511-diagnostics.json",
+  "diagnosticSha256": "997FFFED7F34DDE92933951C7E5511EF9DD878A4A851B3617D29B98DF8E10D5B",
+  "scoringInputManifestPath": "docs\\generated\\expansion-provider-gate-20260727T185058Z-161ca626a511-scoring-input-manifest.json",
+  "scoringInputManifestSha256": "EE858C318B0E27338C74A25022A3F5EFC7BB5C8093B23E6543D6D3406B6CB943",
+  "nextAction": "STOP_AND_RECORD_DASHBOARD_AFTER",
+  "automaticContinuationAuthorized": false,
+  "artifactContentHash": "631EA9DFB52F07C523B414D1682E2D469ECAD692864D6F968E40E8A03F30E1DE"
+}

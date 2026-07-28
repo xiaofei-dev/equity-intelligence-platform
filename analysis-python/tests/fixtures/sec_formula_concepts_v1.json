@@ -1,0 +1,122 @@
+{
+  "filings": [
+    {
+      "cik": "0000000001",
+      "entityName": "Fixture Issuer",
+      "symbol": "FIX",
+      "form": "10-Q",
+      "filingDate": "2025-05-01",
+      "acceptanceDatetime": "2025-05-01T08:00:00-04:00",
+      "accessionNumber": "0000000001-25-000001",
+      "reportDate": "2025-03-31"
+    },
+    {
+      "cik": "0000000001",
+      "entityName": "Fixture Issuer",
+      "symbol": "FIX",
+      "form": "10-Q/A",
+      "filingDate": "2025-05-20",
+      "acceptanceDatetime": "2025-05-20T08:00:00-04:00",
+      "accessionNumber": "0000000001-25-000002",
+      "reportDate": "2025-03-31"
+    },
+    {
+      "cik": "0000000001",
+      "entityName": "Fixture Issuer",
+      "symbol": "FIX",
+      "form": "10-Q",
+      "filingDate": "2025-08-01",
+      "acceptanceDatetime": "2025-08-01T08:00:00-04:00",
+      "accessionNumber": "0000000001-25-000003",
+      "reportDate": "2025-06-30"
+    }
+  ],
+  "companyFacts": {
+    "facts": {
+      "us-gaap": {
+        "WeightedAverageNumberOfDilutedSharesOutstanding": {
+          "units": {
+            "shares": [
+              {
+                "start": "2025-01-01",
+                "end": "2025-03-31",
+                "val": 100,
+                "accn": "0000000001-25-000001",
+                "filed": "2025-05-01",
+                "fy": 2025,
+                "fp": "Q1"
+              },
+              {
+                "start": "2025-01-01",
+                "end": "2025-03-31",
+                "val": 101,
+                "accn": "0000000001-25-000002",
+                "filed": "2025-05-20",
+                "fy": 2025,
+                "fp": "Q1"
+              },
+              {
+                "start": "2025-01-01",
+                "end": "2025-06-30",
+                "val": 102,
+                "accn": "0000000001-25-000003",
+                "filed": "2025-08-01",
+                "fy": 2025,
+                "fp": "Q2"
+              }
+            ],
+            "USD": [
+              {
+                "start": "2025-01-01",
+                "end": "2025-03-31",
+                "val": 999,
+                "accn": "0000000001-25-000001",
+                "filed": "2025-05-01",
+                "fy": 2025,
+                "fp": "Q1"
+              }
+            ]
+          }
+        },
+        "InterestExpenseNonOperating": {
+          "units": {
+            "USD": [
+              {
+                "start": "2025-01-01",
+                "end": "2025-03-31",
+                "val": 10,
+                "accn": "0000000001-25-000001",
+                "filed": "2025-05-01",
+                "fy": 2025,
+                "fp": "Q1"
+              }
+            ]
+          }
+        },
+        "InterestExpense": {
+          "units": {
+            "USD": [
+              {
+                "start": "2025-01-01",
+                "end": "2025-03-31",
+                "val": 20,
+                "accn": "0000000001-25-000002",
+                "filed": "2025-05-20",
+                "fy": 2025,
+                "fp": "Q1"
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "tradingDates": [
+    "2025-05-01",
+    "2025-05-02",
+    "2025-05-20",
+    "2025-05-21",
+    "2025-08-01",
+    "2025-08-04"
+  ]
+}

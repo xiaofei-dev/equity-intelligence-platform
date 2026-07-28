@@ -1,0 +1,1331 @@
+{
+  "artifactType": "OBJECTIVE_RATING_V1_QC_CURRENT_INPUT_POLICY",
+  "schemaVersion": "objective-rating-v1-qc-current-input-policy-v1",
+  "policyVersion": "objective-rating-v1-current-provider-fields-v1.0.0",
+  "sourceFeasibilityArtifact": {
+    "path": "../docs/generated/objective-rating-v1-qc-cohort-completion-feasibility-v1-1.json",
+    "fileSha256": "C915A4633EB1A8FE5717F165E59FF483532FD9B5B00148E76870818F60E3E9D3",
+    "artifactContentHash": "4AEF2143F09DE937DA6F49FA9DB4D5281A916C5265C1ACD854C0D60B7973709D"
+  },
+  "frozenContract": {
+    "strategyVersion": "QC-v1.0.0",
+    "currentFinancialFreshnessDays": 150,
+    "cohortMinimum": 20,
+    "missingValuesRemainMissing": true,
+    "formulaWeightOrCohortChanges": false
+  },
+  "fieldRulings": {
+    "Highlights.DilutedEpsTTM": {
+      "normalizedOperand": "diluted_eps_current",
+      "decision": "ACCEPT_CURRENT_SNAPSHOT_ONLY",
+      "periodType": "TTM",
+      "unitType": "CURRENCY_PER_SHARE",
+      "derivationRequired": false,
+      "historicalEndpointAuthorized": false,
+      "reasonCode": "FROZEN_V1_NAMES_DILUTED_EPS_AS_A_RAW_INPUT"
+    },
+    "Highlights.RevenueTTM": {
+      "normalizedOperand": "revenue_ttm",
+      "decision": "ACCEPT_CURRENT_SNAPSHOT_ONLY",
+      "periodType": "TTM",
+      "unitType": "CURRENCY",
+      "derivationRequired": false,
+      "historicalEndpointAuthorized": false,
+      "reasonCode": "FROZEN_V1_NAMES_REVENUE_AS_A_RAW_INPUT"
+    },
+    "Highlights.GrossProfitTTM": {
+      "normalizedOperand": "gross_profit_ttm",
+      "decision": "ACCEPT_CURRENT_SNAPSHOT_ONLY",
+      "periodType": "TTM",
+      "unitType": "CURRENCY",
+      "derivationRequired": false,
+      "historicalEndpointAuthorized": false,
+      "reasonCode": "FROZEN_V1_NAMES_GROSS_PROFIT_AS_A_RAW_INPUT"
+    },
+    "Highlights.OperatingMarginTTM": {
+      "normalizedOperand": "operating_margin_ttm",
+      "decision": "REJECT_AS_FORMULA_INPUT",
+      "periodType": "TTM",
+      "unitType": "RATIO",
+      "derivationRequired": true,
+      "historicalEndpointAuthorized": false,
+      "reasonCode": "VENDOR_RATIOS_ARE_COMPARISON_ONLY_IN_FROZEN_V1"
+    }
+  },
+  "dilutedEpsEndpointPolicy": {
+    "currentDirectProviderFieldAllowed": true,
+    "netIncomeDividedBySharesRequired": false,
+    "threeYearEndpointRequiresExplicitTtm": true,
+    "annualPriorMayNotBeMixedWithTrailingCurrent": true,
+    "sameProviderFieldNormalizationCurrencyUnitAndSplitModeRequired": true,
+    "endpointSeparationDays": {
+      "minimum": 1000,
+      "maximum": 1200
+    },
+    "crossProviderExactMatchCanConfirmCurrentOnly": true,
+    "crossProviderMatchDoesNotCreateHistoricalEndpoint": true
+  },
+  "existingCacheAuthorization": {
+    "authorizedForProviderReassembly": [
+      "Highlights.DilutedEpsTTM",
+      "Highlights.RevenueTTM",
+      "Highlights.GrossProfitTTM"
+    ],
+    "comparisonOnly": [
+      "Highlights.OperatingMarginTTM"
+    ],
+    "historicalUseAuthorized": false
+  },
+  "freshnessCorrection": {
+    "implementationObservedDays": 200,
+    "frozenRequiredDays": 150,
+    "sourceManifestPath": "docs/generated/objective-rating-v1-current-factor-input-manifest-v1-5.json",
+    "sourceManifestFileSha256": "B0DD6AB79629E348A6A26297DD08FF4DBA859235F48818FD556D9CEEDCE46399",
+    "sourceManifestContentHash": "FDB6554260A08FB83D36C13E880B004AB81B2D80653F679DC11BEF144A7B3C32",
+    "previousReadyCount": 7,
+    "correctedReadyCount": 6,
+    "removedReadySymbols": [
+      "CSCO"
+    ],
+    "additionalRequiredToReachMinimum": 14,
+    "securityResults": [
+      {
+        "symbol": "AMAT",
+        "oldestRequiredCurrentPeriodAgeDays": 93,
+        "passesFrozen150DayRule": true,
+        "snapshotContentHash": "8156DE8D1C5B1F88BBC502AEB20B741B94675062F6EB30243243D2D9AFE13D89"
+      },
+      {
+        "symbol": "CIEN",
+        "oldestRequiredCurrentPeriodAgeDays": 89,
+        "passesFrozen150DayRule": true,
+        "snapshotContentHash": "03871FCBAD2A8812DCD00CC56B64D6F2E7FA7DAEE912857900C1FCAC3964B745"
+      },
+      {
+        "symbol": "COO",
+        "oldestRequiredCurrentPeriodAgeDays": 89,
+        "passesFrozen150DayRule": true,
+        "snapshotContentHash": "0F05E57056BC70DC993CB4D4165089B64529E28A375244F8898EF04A37247964"
+      },
+      {
+        "symbol": "CSCO",
+        "oldestRequiredCurrentPeriodAgeDays": 185,
+        "passesFrozen150DayRule": false,
+        "snapshotContentHash": "BC1738F2F5363BDDA7A7BDE48A2ABEE03006208664E799A69803BFE500A04AD1"
+      },
+      {
+        "symbol": "DHR",
+        "oldestRequiredCurrentPeriodAgeDays": 32,
+        "passesFrozen150DayRule": true,
+        "snapshotContentHash": "6C9142669B85E93D67FD9CC9120BC2848E51AADAFC4659E5590BFDFD3EBBD8B8"
+      },
+      {
+        "symbol": "FAST",
+        "oldestRequiredCurrentPeriodAgeDays": 28,
+        "passesFrozen150DayRule": true,
+        "snapshotContentHash": "F6021896071CDE3B82AC412CA9A4299C146B2A5C0317DB850CD269ED1F3E045D"
+      },
+      {
+        "symbol": "TSN",
+        "oldestRequiredCurrentPeriodAgeDays": 122,
+        "passesFrozen150DayRule": true,
+        "snapshotContentHash": "3618238D7B0C5DDC17D5BE02ED71BD29E3D7558116413089E0F39A8A47D9706F"
+      }
+    ]
+  },
+  "boundedEvidencePlan": {
+    "status": "CAPABLE_IF_ALL_EVIDENCE_PASSES_NOT_A_PROMISE",
+    "originalThirteenCannotReachMinimumAfterFreshnessCorrection": true,
+    "excludedProviderConflictSymbols": [
+      "FIX",
+      "PLAB",
+      "WDFC"
+    ],
+    "selectionRule": "KEEP_PROVIDER_PRIORITY_AFTER_REMOVING_CONFLICTS_THEN_FILL_LOWEST_FACTOR_COUNT_WITH_SYMBOL_ASCENDING_TIE_BREAK",
+    "targetSymbols": [
+      "TTC",
+      "AVGO",
+      "HRL",
+      "GPC",
+      "DOV",
+      "BDX",
+      "APD",
+      "ROK",
+      "ADSK",
+      "AMD",
+      "APH",
+      "BF-B",
+      "BLDR",
+      "CNC"
+    ],
+    "targetSecurityRequirements": [
+      {
+        "symbol": "TTC",
+        "blockingOperandCount": 2,
+        "blockers": [
+          {
+            "factor": "eps_growth",
+            "operand": "diluted_eps_three_year_prior",
+            "reasonCode": "THREE_YEAR_PRIOR_DILUTED_EPS_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "interest_coverage",
+            "operand": "interest_expense_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": null
+          }
+        ]
+      },
+      {
+        "symbol": "AVGO",
+        "blockingOperandCount": 4,
+        "blockers": [
+          {
+            "factor": "cash_conversion",
+            "operand": "net_income_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "eps_growth",
+            "operand": "diluted_eps_current",
+            "reasonCode": "CURRENT_DILUTED_EPS_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": "Highlights.DilutedEpsTTM"
+          },
+          {
+            "factor": "eps_growth",
+            "operand": "diluted_eps_three_year_prior",
+            "reasonCode": "THREE_YEAR_PRIOR_DILUTED_EPS_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "interest_coverage",
+            "operand": "interest_expense_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": null
+          }
+        ]
+      },
+      {
+        "symbol": "HRL",
+        "blockingOperandCount": 8,
+        "blockers": [
+          {
+            "factor": "fcf_margin",
+            "operand": "revenue_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": "Highlights.RevenueTTM"
+          },
+          {
+            "factor": "margin_quality",
+            "operand": "gross_margin_ttm",
+            "reasonCode": "GROSS_MARGIN_TTM_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": "Highlights.GrossProfitTTM+Highlights.RevenueTTM"
+          },
+          {
+            "factor": "margin_quality",
+            "operand": "operating_margin_ttm",
+            "reasonCode": "OPERATING_MARGIN_TTM_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": "Highlights.OperatingMarginTTM"
+          },
+          {
+            "factor": "margin_quality",
+            "operand": "gross_margin_three_year_change",
+            "reasonCode": "GROSS_MARGIN_THREE_YEAR_ENDPOINT_MISSING",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "margin_quality",
+            "operand": "operating_margin_three_year_change",
+            "reasonCode": "OPERATING_MARGIN_THREE_YEAR_ENDPOINT_MISSING",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "stability",
+            "operand": "eight_aligned_discrete_operating_margins",
+            "reasonCode": "EIGHT_ALIGNED_DISCRETE_QUARTERS_NOT_AVAILABLE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "stability",
+            "operand": "eight_aligned_discrete_fcf_margins",
+            "reasonCode": "EIGHT_ALIGNED_DISCRETE_QUARTERS_NOT_AVAILABLE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "interest_coverage",
+            "operand": "interest_expense_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": null
+          }
+        ]
+      },
+      {
+        "symbol": "GPC",
+        "blockingOperandCount": 7,
+        "blockers": [
+          {
+            "factor": "roic",
+            "operand": "operating_income_ttm",
+            "reasonCode": "FOUR_CONSECUTIVE_DISCRETE_QUARTERS_NOT_AVAILABLE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "margin_quality",
+            "operand": "operating_margin_ttm",
+            "reasonCode": "OPERATING_MARGIN_TTM_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": "Highlights.OperatingMarginTTM"
+          },
+          {
+            "factor": "margin_quality",
+            "operand": "operating_margin_three_year_change",
+            "reasonCode": "OPERATING_MARGIN_THREE_YEAR_ENDPOINT_MISSING",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "stability",
+            "operand": "eight_aligned_discrete_operating_margins",
+            "reasonCode": "EIGHT_ALIGNED_DISCRETE_QUARTERS_NOT_AVAILABLE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "stability",
+            "operand": "eight_aligned_discrete_fcf_margins",
+            "reasonCode": "EIGHT_ALIGNED_DISCRETE_QUARTERS_NOT_AVAILABLE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "interest_coverage",
+            "operand": "ebit_ttm",
+            "reasonCode": "FOUR_CONSECUTIVE_DISCRETE_QUARTERS_NOT_AVAILABLE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "interest_coverage",
+            "operand": "interest_expense_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "valuation_guardrail",
+            "operand": "ebit_ttm",
+            "reasonCode": "FOUR_CONSECUTIVE_DISCRETE_QUARTERS_NOT_AVAILABLE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          }
+        ]
+      },
+      {
+        "symbol": "DOV",
+        "blockingOperandCount": 7,
+        "blockers": [
+          {
+            "factor": "roic",
+            "operand": "pretax_income_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "fcf_margin",
+            "operand": "operating_cash_flow_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "cash_conversion",
+            "operand": "operating_cash_flow_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "stability",
+            "operand": "eight_aligned_discrete_operating_margins",
+            "reasonCode": "EIGHT_ALIGNED_DISCRETE_QUARTERS_NOT_AVAILABLE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "stability",
+            "operand": "eight_aligned_discrete_fcf_margins",
+            "reasonCode": "EIGHT_ALIGNED_DISCRETE_QUARTERS_NOT_AVAILABLE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "fcf_per_share_growth",
+            "operand": "fcf_per_diluted_share_current",
+            "reasonCode": "CURRENT_FCF_PER_SHARE_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "interest_coverage",
+            "operand": "interest_expense_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "valuation_guardrail",
+            "operand": "fcf_ttm",
+            "reasonCode": "FCF_TTM_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          }
+        ]
+      },
+      {
+        "symbol": "BDX",
+        "blockingOperandCount": 8,
+        "blockers": [
+          {
+            "factor": "fcf_margin",
+            "operand": "operating_cash_flow_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "cash_conversion",
+            "operand": "operating_cash_flow_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "margin_quality",
+            "operand": "gross_margin_ttm",
+            "reasonCode": "GROSS_MARGIN_TTM_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": "Highlights.GrossProfitTTM+Highlights.RevenueTTM"
+          },
+          {
+            "factor": "margin_quality",
+            "operand": "gross_margin_three_year_change",
+            "reasonCode": "GROSS_MARGIN_THREE_YEAR_ENDPOINT_MISSING",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "stability",
+            "operand": "eight_aligned_discrete_operating_margins",
+            "reasonCode": "EIGHT_ALIGNED_DISCRETE_QUARTERS_NOT_AVAILABLE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "stability",
+            "operand": "eight_aligned_discrete_fcf_margins",
+            "reasonCode": "EIGHT_ALIGNED_DISCRETE_QUARTERS_NOT_AVAILABLE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "fcf_per_share_growth",
+            "operand": "fcf_per_diluted_share_current",
+            "reasonCode": "CURRENT_FCF_PER_SHARE_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "interest_coverage",
+            "operand": "interest_expense_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "valuation_guardrail",
+            "operand": "fcf_ttm",
+            "reasonCode": "FCF_TTM_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          }
+        ]
+      },
+      {
+        "symbol": "APD",
+        "blockingOperandCount": 9,
+        "blockers": [
+          {
+            "factor": "fcf_margin",
+            "operand": "operating_cash_flow_ttm",
+            "reasonCode": "FOUR_CONSECUTIVE_DISCRETE_QUARTERS_NOT_AVAILABLE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "cash_conversion",
+            "operand": "operating_cash_flow_ttm",
+            "reasonCode": "FOUR_CONSECUTIVE_DISCRETE_QUARTERS_NOT_AVAILABLE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "margin_quality",
+            "operand": "gross_margin_ttm",
+            "reasonCode": "GROSS_MARGIN_TTM_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": "Highlights.GrossProfitTTM+Highlights.RevenueTTM"
+          },
+          {
+            "factor": "margin_quality",
+            "operand": "gross_margin_three_year_change",
+            "reasonCode": "GROSS_MARGIN_THREE_YEAR_ENDPOINT_MISSING",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "stability",
+            "operand": "eight_aligned_discrete_operating_margins",
+            "reasonCode": "EIGHT_ALIGNED_DISCRETE_QUARTERS_NOT_AVAILABLE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "stability",
+            "operand": "eight_aligned_discrete_fcf_margins",
+            "reasonCode": "EIGHT_ALIGNED_DISCRETE_QUARTERS_NOT_AVAILABLE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "fcf_per_share_growth",
+            "operand": "fcf_per_diluted_share_current",
+            "reasonCode": "CURRENT_FCF_PER_SHARE_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "fcf_per_share_growth",
+            "operand": "fcf_per_diluted_share_three_year_prior",
+            "reasonCode": "THREE_YEAR_PRIOR_FCF_PER_SHARE_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "interest_coverage",
+            "operand": "interest_expense_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "valuation_guardrail",
+            "operand": "fcf_ttm",
+            "reasonCode": "FCF_TTM_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          }
+        ]
+      },
+      {
+        "symbol": "ROK",
+        "blockingOperandCount": 10,
+        "blockers": [
+          {
+            "factor": "roic",
+            "operand": "operating_income_ttm",
+            "reasonCode": "FOUR_CONSECUTIVE_DISCRETE_QUARTERS_NOT_AVAILABLE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "fcf_margin",
+            "operand": "capital_expenditure_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "cash_conversion",
+            "operand": "capital_expenditure_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "margin_quality",
+            "operand": "operating_margin_ttm",
+            "reasonCode": "OPERATING_MARGIN_TTM_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": "Highlights.OperatingMarginTTM"
+          },
+          {
+            "factor": "margin_quality",
+            "operand": "operating_margin_three_year_change",
+            "reasonCode": "OPERATING_MARGIN_THREE_YEAR_ENDPOINT_MISSING",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "stability",
+            "operand": "eight_aligned_discrete_operating_margins",
+            "reasonCode": "EIGHT_ALIGNED_DISCRETE_QUARTERS_NOT_AVAILABLE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "stability",
+            "operand": "eight_aligned_discrete_fcf_margins",
+            "reasonCode": "EIGHT_ALIGNED_DISCRETE_QUARTERS_NOT_AVAILABLE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "fcf_per_share_growth",
+            "operand": "fcf_per_diluted_share_current",
+            "reasonCode": "CURRENT_FCF_PER_SHARE_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "interest_coverage",
+            "operand": "ebit_ttm",
+            "reasonCode": "FOUR_CONSECUTIVE_DISCRETE_QUARTERS_NOT_AVAILABLE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "interest_coverage",
+            "operand": "interest_expense_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "valuation_guardrail",
+            "operand": "ebit_ttm",
+            "reasonCode": "FOUR_CONSECUTIVE_DISCRETE_QUARTERS_NOT_AVAILABLE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "valuation_guardrail",
+            "operand": "fcf_ttm",
+            "reasonCode": "FCF_TTM_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          }
+        ]
+      },
+      {
+        "symbol": "ADSK",
+        "blockingOperandCount": 14,
+        "blockers": [
+          {
+            "factor": "roic",
+            "operand": "operating_income_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "roic",
+            "operand": "income_tax_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "roic",
+            "operand": "pretax_income_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "fcf_margin",
+            "operand": "revenue_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": "Highlights.RevenueTTM"
+          },
+          {
+            "factor": "cash_conversion",
+            "operand": "net_income_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "margin_quality",
+            "operand": "gross_margin_ttm",
+            "reasonCode": "GROSS_MARGIN_TTM_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": "Highlights.GrossProfitTTM+Highlights.RevenueTTM"
+          },
+          {
+            "factor": "margin_quality",
+            "operand": "operating_margin_ttm",
+            "reasonCode": "OPERATING_MARGIN_TTM_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": "Highlights.OperatingMarginTTM"
+          },
+          {
+            "factor": "margin_quality",
+            "operand": "gross_margin_three_year_change",
+            "reasonCode": "GROSS_MARGIN_THREE_YEAR_ENDPOINT_MISSING",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "margin_quality",
+            "operand": "operating_margin_three_year_change",
+            "reasonCode": "OPERATING_MARGIN_THREE_YEAR_ENDPOINT_MISSING",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "eps_growth",
+            "operand": "diluted_eps_current",
+            "reasonCode": "CURRENT_DILUTED_EPS_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": "Highlights.DilutedEpsTTM"
+          },
+          {
+            "factor": "fcf_per_share_growth",
+            "operand": "fcf_per_diluted_share_current",
+            "reasonCode": "CURRENT_FCF_PER_SHARE_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "interest_coverage",
+            "operand": "ebit_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "interest_coverage",
+            "operand": "interest_expense_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "dilution",
+            "operand": "diluted_weighted_average_shares_current",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "valuation_guardrail",
+            "operand": "ebit_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          }
+        ]
+      },
+      {
+        "symbol": "AMD",
+        "blockingOperandCount": 14,
+        "blockers": [
+          {
+            "factor": "roic",
+            "operand": "operating_income_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "roic",
+            "operand": "income_tax_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "roic",
+            "operand": "pretax_income_ttm",
+            "reasonCode": "FOUR_CONSECUTIVE_DISCRETE_QUARTERS_NOT_AVAILABLE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "fcf_margin",
+            "operand": "revenue_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": "Highlights.RevenueTTM"
+          },
+          {
+            "factor": "cash_conversion",
+            "operand": "net_income_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "margin_quality",
+            "operand": "gross_margin_ttm",
+            "reasonCode": "GROSS_MARGIN_TTM_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": "Highlights.GrossProfitTTM+Highlights.RevenueTTM"
+          },
+          {
+            "factor": "margin_quality",
+            "operand": "operating_margin_ttm",
+            "reasonCode": "OPERATING_MARGIN_TTM_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": "Highlights.OperatingMarginTTM"
+          },
+          {
+            "factor": "margin_quality",
+            "operand": "gross_margin_three_year_change",
+            "reasonCode": "GROSS_MARGIN_THREE_YEAR_ENDPOINT_MISSING",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "margin_quality",
+            "operand": "operating_margin_three_year_change",
+            "reasonCode": "OPERATING_MARGIN_THREE_YEAR_ENDPOINT_MISSING",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "eps_growth",
+            "operand": "diluted_eps_current",
+            "reasonCode": "CURRENT_DILUTED_EPS_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": "Highlights.DilutedEpsTTM"
+          },
+          {
+            "factor": "fcf_per_share_growth",
+            "operand": "fcf_per_diluted_share_current",
+            "reasonCode": "CURRENT_FCF_PER_SHARE_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "interest_coverage",
+            "operand": "ebit_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "interest_coverage",
+            "operand": "interest_expense_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "dilution",
+            "operand": "diluted_weighted_average_shares_current",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "valuation_guardrail",
+            "operand": "ebit_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          }
+        ]
+      },
+      {
+        "symbol": "APH",
+        "blockingOperandCount": 14,
+        "blockers": [
+          {
+            "factor": "roic",
+            "operand": "operating_income_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "roic",
+            "operand": "income_tax_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "roic",
+            "operand": "pretax_income_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "fcf_margin",
+            "operand": "revenue_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": "Highlights.RevenueTTM"
+          },
+          {
+            "factor": "cash_conversion",
+            "operand": "net_income_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "margin_quality",
+            "operand": "gross_margin_ttm",
+            "reasonCode": "GROSS_MARGIN_TTM_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": "Highlights.GrossProfitTTM+Highlights.RevenueTTM"
+          },
+          {
+            "factor": "margin_quality",
+            "operand": "operating_margin_ttm",
+            "reasonCode": "OPERATING_MARGIN_TTM_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": "Highlights.OperatingMarginTTM"
+          },
+          {
+            "factor": "margin_quality",
+            "operand": "gross_margin_three_year_change",
+            "reasonCode": "GROSS_MARGIN_THREE_YEAR_ENDPOINT_MISSING",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "margin_quality",
+            "operand": "operating_margin_three_year_change",
+            "reasonCode": "OPERATING_MARGIN_THREE_YEAR_ENDPOINT_MISSING",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "eps_growth",
+            "operand": "diluted_eps_current",
+            "reasonCode": "CURRENT_DILUTED_EPS_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": "Highlights.DilutedEpsTTM"
+          },
+          {
+            "factor": "fcf_per_share_growth",
+            "operand": "fcf_per_diluted_share_current",
+            "reasonCode": "CURRENT_FCF_PER_SHARE_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "interest_coverage",
+            "operand": "ebit_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "interest_coverage",
+            "operand": "interest_expense_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "dilution",
+            "operand": "diluted_weighted_average_shares_current",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "valuation_guardrail",
+            "operand": "ebit_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          }
+        ]
+      },
+      {
+        "symbol": "BF-B",
+        "blockingOperandCount": 14,
+        "blockers": [
+          {
+            "factor": "roic",
+            "operand": "operating_income_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "roic",
+            "operand": "income_tax_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "roic",
+            "operand": "pretax_income_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "fcf_margin",
+            "operand": "revenue_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": "Highlights.RevenueTTM"
+          },
+          {
+            "factor": "cash_conversion",
+            "operand": "net_income_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "margin_quality",
+            "operand": "gross_margin_ttm",
+            "reasonCode": "GROSS_MARGIN_TTM_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": "Highlights.GrossProfitTTM+Highlights.RevenueTTM"
+          },
+          {
+            "factor": "margin_quality",
+            "operand": "operating_margin_ttm",
+            "reasonCode": "OPERATING_MARGIN_TTM_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": "Highlights.OperatingMarginTTM"
+          },
+          {
+            "factor": "margin_quality",
+            "operand": "gross_margin_three_year_change",
+            "reasonCode": "GROSS_MARGIN_THREE_YEAR_ENDPOINT_MISSING",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "margin_quality",
+            "operand": "operating_margin_three_year_change",
+            "reasonCode": "OPERATING_MARGIN_THREE_YEAR_ENDPOINT_MISSING",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "eps_growth",
+            "operand": "diluted_eps_current",
+            "reasonCode": "CURRENT_DILUTED_EPS_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": "Highlights.DilutedEpsTTM"
+          },
+          {
+            "factor": "fcf_per_share_growth",
+            "operand": "fcf_per_diluted_share_current",
+            "reasonCode": "CURRENT_FCF_PER_SHARE_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "interest_coverage",
+            "operand": "ebit_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "interest_coverage",
+            "operand": "interest_expense_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "dilution",
+            "operand": "diluted_weighted_average_shares_current",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "valuation_guardrail",
+            "operand": "ebit_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          }
+        ]
+      },
+      {
+        "symbol": "BLDR",
+        "blockingOperandCount": 14,
+        "blockers": [
+          {
+            "factor": "roic",
+            "operand": "operating_income_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "roic",
+            "operand": "income_tax_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "roic",
+            "operand": "pretax_income_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "fcf_margin",
+            "operand": "revenue_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": "Highlights.RevenueTTM"
+          },
+          {
+            "factor": "cash_conversion",
+            "operand": "net_income_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "margin_quality",
+            "operand": "gross_margin_ttm",
+            "reasonCode": "GROSS_MARGIN_TTM_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": "Highlights.GrossProfitTTM+Highlights.RevenueTTM"
+          },
+          {
+            "factor": "margin_quality",
+            "operand": "operating_margin_ttm",
+            "reasonCode": "OPERATING_MARGIN_TTM_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": "Highlights.OperatingMarginTTM"
+          },
+          {
+            "factor": "margin_quality",
+            "operand": "gross_margin_three_year_change",
+            "reasonCode": "GROSS_MARGIN_THREE_YEAR_ENDPOINT_MISSING",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "margin_quality",
+            "operand": "operating_margin_three_year_change",
+            "reasonCode": "OPERATING_MARGIN_THREE_YEAR_ENDPOINT_MISSING",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "eps_growth",
+            "operand": "diluted_eps_current",
+            "reasonCode": "CURRENT_DILUTED_EPS_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": "Highlights.DilutedEpsTTM"
+          },
+          {
+            "factor": "fcf_per_share_growth",
+            "operand": "fcf_per_diluted_share_current",
+            "reasonCode": "CURRENT_FCF_PER_SHARE_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "interest_coverage",
+            "operand": "ebit_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "interest_coverage",
+            "operand": "interest_expense_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "dilution",
+            "operand": "diluted_weighted_average_shares_current",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "valuation_guardrail",
+            "operand": "ebit_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          }
+        ]
+      },
+      {
+        "symbol": "CNC",
+        "blockingOperandCount": 14,
+        "blockers": [
+          {
+            "factor": "roic",
+            "operand": "operating_income_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "roic",
+            "operand": "income_tax_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "roic",
+            "operand": "pretax_income_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "fcf_margin",
+            "operand": "revenue_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": "Highlights.RevenueTTM"
+          },
+          {
+            "factor": "cash_conversion",
+            "operand": "net_income_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "margin_quality",
+            "operand": "gross_margin_ttm",
+            "reasonCode": "GROSS_MARGIN_TTM_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": "Highlights.GrossProfitTTM+Highlights.RevenueTTM"
+          },
+          {
+            "factor": "margin_quality",
+            "operand": "operating_margin_ttm",
+            "reasonCode": "OPERATING_MARGIN_TTM_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": "Highlights.OperatingMarginTTM"
+          },
+          {
+            "factor": "margin_quality",
+            "operand": "gross_margin_three_year_change",
+            "reasonCode": "GROSS_MARGIN_THREE_YEAR_ENDPOINT_MISSING",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "margin_quality",
+            "operand": "operating_margin_three_year_change",
+            "reasonCode": "OPERATING_MARGIN_THREE_YEAR_ENDPOINT_MISSING",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "eps_growth",
+            "operand": "diluted_eps_current",
+            "reasonCode": "CURRENT_DILUTED_EPS_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": "Highlights.DilutedEpsTTM"
+          },
+          {
+            "factor": "fcf_per_share_growth",
+            "operand": "fcf_per_diluted_share_current",
+            "reasonCode": "CURRENT_FCF_PER_SHARE_INPUT_WINDOW_MISSING",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "interest_coverage",
+            "operand": "ebit_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "interest_coverage",
+            "operand": "interest_expense_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "POTENTIAL_DOCUMENTED_CURRENT_FIELD_OR_BOUNDED_CONFIRMATION",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "dilution",
+            "operand": "diluted_weighted_average_shares_current",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          },
+          {
+            "factor": "valuation_guardrail",
+            "operand": "ebit_ttm",
+            "reasonCode": "LATEST_DISCRETE_TTM_WINDOW_IS_STALE",
+            "resolutionCategory": "BLOCKED_SEMANTICS_HISTORY_OR_SUPPORT",
+            "existingCacheCandidate": null
+          }
+        ]
+      }
+    ],
+    "requiredEvidenceClasses": [
+      "CURRENT_TTM_RAW_FIELDS_WITH_150_DAY_FRESHNESS",
+      "EXPLICIT_COMPARABLE_TTM_DILUTED_EPS_ENDPOINTS",
+      "EIGHT_ALIGNED_EXPLICIT_DISCRETE_QUARTERS_WHERE_REQUIRED",
+      "THREE_YEAR_TTM_MARGIN_ENDPOINTS_WHERE_REQUIRED",
+      "CURRENT_AND_THREE_YEAR_FCF_PER_SHARE_INPUTS_WHERE_REQUIRED",
+      "BOUNDED_YAHOO_EODHD_CURRENT_INTEREST_CONFIRMATION"
+    ],
+    "publicYahooUse": {
+      "trailingDilutedEps": "CURRENT_TTM_CONFIRMATION_ONLY",
+      "annualDilutedEps": "NOT_A_SUBSTITUTE_FOR_HISTORICAL_TTM",
+      "quarterlyDilutedEps": "DIAGNOSTIC_ONLY_UNLESS_FOUR_EXPLICIT_3M_RECORDS_FORM_AN APPROVED_COMPARABLE_TTM_WINDOW"
+    }
+  },
+  "sourceReportedCounts": {
+    "scopedSecurityCount": 55,
+    "nonReadyBlockerInventoryCount": 48,
+    "readyCount": 7,
+    "nonReadyCount": 48,
+    "blockerSignatureCount": 17,
+    "offlineImmediateFixCount": 0
+  },
+  "scoresOrRanksGenerated": false,
+  "supplementsGenerated": false,
+  "networkRequestsExecuted": false,
+  "forwardValidationExecuted": false,
+  "artifactContentHash": "997F37C2BE1DBBD8A05F7AF49AD60B0928D56F012FB8F5FD6531AFCD68F74BBA"
+}

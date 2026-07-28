@@ -1,0 +1,16 @@
+{
+  "artifactType": "FORMULA_READY_BACKFILL_GIT_SAFE_MANIFEST",
+  "runId": "20260727T204539Z-5dd84ab67acf",
+  "sliceId": "formula-ready-safety-canary-001",
+  "reportContentHash": "A44021F5B23CA9562E8B91D868D312152B0E4E59467FBF2570AF323D72C2A34E",
+  "licensedValuesIncluded": false,
+  "results": [
+    {
+      "symbol": "ABNB",
+      "status": "FAIL_FORMULA_COVERAGE",
+      "receipt": null,
+      "formulaCoverageComplete": false
+    }
+  ],
+  "artifactContentHash": "DD074BAB15A1965557FAEF50985F1040C22F3729583D9C4D6293DD0A0E4D381D"
+}

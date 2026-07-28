@@ -1,0 +1,40 @@
+{
+  "artifactType": "SCORING_INPUT_V2_STALE_LOCK_RECOVERY",
+  "schemaVersion": "scoring-input-v2-stale-lock-recovery-v1.0.0",
+  "artifactRunId": "20260728T030609Z-11d62268bbc9",
+  "lockPath": "storage/provider-validation/scoring-inputs-v2/.scoring-input-v2.lock",
+  "lockOwnerRunId": "20260727T201423Z-f94523bfc322",
+  "legacyLockSchema": true,
+  "lockLastWriteAt": "2026-07-27T20:14:23.5037014Z",
+  "ownerTerminalEvidence": {
+    "reportPath": "docs/generated/sec-scoring-supplement-20260727T201423Z-f94523bfc322.json",
+    "reportSha256": "439B44A1FD736601D4FA4E5E4BA34EED4A290CC1DA6DFC512F5813656E2A275C",
+    "manifestPath": "docs/generated/sec-scoring-supplement-20260727T201423Z-f94523bfc322-manifest.json",
+    "manifestSha256": "8A08228D6DFDFB050067823C2DA4D6B9F000C2020D3806AAC67B7BD902679444",
+    "diagnosticsSha256": "8AEA6B6C5219BB7786406512169207E4C7560C99CCF85829DEA6E309CBC21D0A",
+    "formulaCoverageSha256": "7A4F049541721C4022AD9FAFC142332486BCBEFD77A20619C2CDC9D836856934",
+    "completedSymbols": 3,
+    "retryCount": 0,
+    "canonicalPayloadHashesVerified": [
+      "83F478441CF8AA11A10E36633CB8815B5DA3737A6142BE1BDD564ED0E0F40A05",
+      "E736F990F76D88F04FB871F0D02A80D853F7EC0C8F2F64934B3524E1432A86C2",
+      "41931F67FFAD86D46092D0A8727EFBC6CA80528A98336DDE963FB4EC67A3B191"
+    ]
+  },
+  "processEvidence": {
+    "activePythonProcesses": 0,
+    "ownerPidAvailableInLegacyLock": false,
+    "heartbeatAvailableInLegacyLock": false
+  },
+  "staleDecision": {
+    "safeToRecover": true,
+    "reasonCode": "TERMINAL_OWNER_NO_ACTIVE_PROCESS_LOCK_OLDER_THAN_STALE_THRESHOLD",
+    "broadPathDeletionPerformed": false
+  },
+  "lockRemoved": true,
+  "networkRequestsExecuted": false,
+  "objectiveRatingExecuted": false,
+  "credentialsIncluded": false,
+  "licensedValuesIncluded": false,
+  "artifactContentHash": "4E113619CF93F13B3591293C5E2B1B83AC77C137F02434E818CCEF10E55FA628"
+}

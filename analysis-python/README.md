@@ -6,11 +6,34 @@ analysis, screening, backtesting, and later AI evidence preparation.
 ## Implemented Contracts
 
 - `GET /health`: service health
-- `POST /internal/v1/market-data/daily-prices/ingest`: bounded and idempotent
-  Twelve Data daily-price ingestion
+- `POST /internal/v1/market-data/daily-prices/ingest`: bounded, idempotent,
+  provider-neutral daily-price ingestion with explicit per-symbol outcomes
+- `POST /internal/v1/tactical/evaluate`: deterministic
+  `TACTICAL-SIGNAL-v2.1.0` evaluation over caller-supplied adjusted completed
+  daily bars; it performs no provider request or trade execution
+- `POST /internal/v1/analytics/models/long-horizon/evaluate`: stable,
+  versioned `LONG-HORIZON-RESEARCH-v1.0.0` model boundary
+- `POST /internal/v1/analytics/models/tactical/evaluate`: stable, versioned
+  `TACTICAL-SIGNAL-v2.1.0` model boundary
 
-The service reads `TWELVE_DATA_API_KEY` and `ANALYTICS_DATABASE_URL` from the
-runtime environment. It must not log or return credentials.
+The market-data ingestion service selects `twelve_data`, `yfinance`, or `eodhd` with
+`MARKET_DATA_PROVIDER`. Twelve Data reads `TWELVE_DATA_API_KEY`, EODHD reads
+`EODHD_API_KEY`, and yfinance requires no key. All providers also require
+`ANALYTICS_DATABASE_URL` for ingestion. Credentials must not be logged,
+returned, persisted, or placed in source references.
+
+The analytics model interface is provider-neutral. Daily-price providers
+implement the normalized `DailyPriceProvider` boundary. Long-horizon evidence
+must first pass the factor, point-in-time, and missing-data assembly boundary.
+Changing a provider changes its adapter and evidence provenance, not either
+model's request or scoring contract.
+
+New observations use `UNADJUSTED`, `SPLIT_ADJUSTED`, or
+`TOTAL_RETURN_ADJUSTED`. Historical `splits` and `all` values remain readable
+through the compatibility mapping. yfinance is development/fallback only.
+EODHD has passed the bounded current-use provider gates. That acceptance is
+capability-specific and does not by itself establish historical point-in-time
+readiness or make every security eligible for a score.
 
 ## Development
 
@@ -27,21 +50,46 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m pytest
 ```
 
-## Next Responsibility
+## Tactical Signal v2.1
 
-Design and validate the first quantitative data contract before broad
-implementation. The authoritative methodology handoff is
-[`docs/quantitative-screening.md`](../docs/quantitative-screening.md).
+`equity_analysis.tactical.signal_v2` evaluates completed daily sessions for
+short-term speculation without changing the long-horizon investment models.
+It separates rebound potential, entry timing, risk, entry stage, and
+one-week/one-month/three-month outlooks. V2.1 additionally separates tactical
+opportunity from current entry value and momentum extension risk, so a valid
+momentum thesis can explicitly return `WAIT_FOR_PULLBACK`.
 
-The next slice should:
+Replay all currently sealed tactical payloads without provider requests:
 
-- Define a 20-security provider-validation universe
-- Add replaceable reference, price, corporate-action, and fundamental provider
-  contracts
-- Validate point-in-time fields and data lineage
-- Ingest sufficient history for general non-financial companies
-- Produce versioned `Quality Compounder` and `Undervalued Quality` rankings
-- Keep quantitative-only and AI-reviewed states separate
+```powershell
+.\analysis-python\.venv\Scripts\python.exe `
+  analysis-python\scripts\run_tactical_signal_validation.py `
+  --all `
+  --replay-latest
+```
+
+Replay mode does not require `.env` or an API key and records zero physical
+requests. Live validation is blocked unless `--execute-live` is supplied
+explicitly. Signals are formed after the close, become effective no earlier
+than the next session open, and expire after the next completed daily refresh.
+See the
+[Tactical Signal v2.1 methodology](../docs/tactical-signal-v2-1-methodology-2026-07-28.md).
+
+## Current Analytical Boundary
+
+The two deterministic models now share a stable invocation and evidence
+envelope. The AI research layer remains a separately versioned, validated
+overlay and cannot replace missing deterministic inputs.
+
+The Forward Decision-Quality framework has passed offline contract acceptance.
+Its performance status remains `PENDING_FUTURE_OUTCOMES`: no prospective
+signal has yet matured through the 5-, 20-, or 60-trading-day horizon, and no
+statistical edge is claimed.
+
+The next analytical responsibility is to create a fresh synchronized objective
+and tactical decision snapshot after a completed session, pass the
+identity/corporate-action/benchmark gates, and then append prospective
+outcomes without changing the frozen model contracts.
 
 Do not force banks, insurers, REITs, resource companies, biotechnology, or
 special situations through the initial general-company model.
@@ -93,3 +141,61 @@ For an SEC-only acceptance run that does not consume Twelve Data credits:
   equity_analysis.provider_validation.cli `
   --providers sec_edgar
 ```
+
+After `EODHD_API_KEY` is configured locally, run the bounded EODHD acceptance
+and yfinance price cross-check with:
+
+```powershell
+.\analysis-python\.venv\Scripts\python.exe -m `
+  equity_analysis.provider_validation.cli `
+  --providers eodhd sec_edgar yfinance `
+  --fixture analysis-python/tests/fixtures/provider_acceptance_universe_v1.json `
+  --start-date 2020-01-01 `
+  --end-date 2026-07-25
+```
+
+Without the EODHD key, EODHD checks return `NOT_VERIFIED`; mock tests never
+substitute for live acceptance.
+
+### 100-security mature-company data gate
+
+The bounded mature-company gate uses
+`tests/fixtures/provider_acceptance_universe_v3.json`. It contains exactly 100
+primary general-company candidates and 20 sector-matched reserves across eight
+non-financial sectors. It does not use exchange-wide or bulk-US downloads.
+
+EODHD supplies normalized fundamentals and historical market value. SEC EDGAR
+filing acceptance timestamps remain authoritative for point-in-time
+availability. An EODHD financial period without a matching SEC availability
+timestamp remains `PARTIAL` and cannot enter an Objective Rating snapshot.
+
+The live run has hard limits of 1,122 HTTP attempts and 3,500 weighted EODHD
+calls. The live step requires separate authorization. Offline tests never read
+`EODHD_API_KEY`.
+
+Validate the manifest without network requests:
+
+```powershell
+.\analysis-python\.venv\Scripts\python.exe -m `
+  equity_analysis.provider_validation.mature_gate_cli
+```
+
+Every invocation first prints a no-network preflight showing the selected
+symbols, endpoints, locally projected HTTP requests, and locally configured
+weighted-call accounting. The current local weights are not treated as
+provider-dashboard proof while the July 27 usage discrepancy remains open.
+
+Live execution requires both `--execute-live` and the exact confirmation
+`--confirm-live I_CONFIRM_BOUNDED_LIVE_REQUESTS`. Use `--maximum-symbols` for a
+bounded canary.
+
+Only one live gate may hold the cross-process lock. Each accepted live start
+receives a unique run ID and writes to a new
+`mature-company-data-gate-{run-id}.json` path using exclusive creation.
+Existing reports are never overwritten. The lock is preventive; it does not
+prove that earlier visible Windows processes represented independent runs.
+
+The command does not print the API key or persist licensed raw responses.
+
+Only `PASS` companies are scoreable. Missing values remain absent, and the gate
+does not change Objective Rating v1 formulas, thresholds, or public contracts.

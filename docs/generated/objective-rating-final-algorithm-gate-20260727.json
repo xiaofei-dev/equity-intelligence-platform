@@ -1,0 +1,5377 @@
+{
+  "artifactType": "OBJECTIVE_RATING_FINAL_ALGORITHM_GATE",
+  "schemaVersion": "objective-rating-final-algorithm-gate-v1.0.0",
+  "input": {
+    "aggregatePath": "formula-ready-243-final-aggregate-v1.json",
+    "aggregateSha256": "2B3EE90401BB635FBB07CA977FD35D7A371CB64BB1735D070FC28268598CA9F8",
+    "aggregateContentHash": "CE0EB2F588105DA4E12F8BB763EC65B759714A2C4A6C9435C35A9F2ED9F69859",
+    "billingPath": "formula-ready-243-final-billing-reconciliation-v1.json",
+    "billingSha256": "074C8D62F046DA78931B91559A5C5748ACDC045C122056F440D20AADCED1CCD9",
+    "inputContractVersion": "provider-neutral-scoring-input-v2.0.0",
+    "formulaReadyPayloadCount": 223,
+    "insufficientInputCount": 20,
+    "controlledRecordCount": 2300961,
+    "checkpointHashesVerified": 220
+  },
+  "snapshot": {
+    "status": "NOT_SEALED",
+    "asOfTime": null,
+    "cutoff": null,
+    "universeVersion": null,
+    "companyTypeVersion": null,
+    "parserVersions": [
+      "eodhd-parser-v1.3.0",
+      "sec-concept-mapping-v1.0.0"
+    ],
+    "normalizationVersions": [
+      "provider-neutral-scoring-input-v2.0.0"
+    ],
+    "reason": "The input contract cannot reproduce Objective Rating v1 PIT factors."
+  },
+  "formulaManifest": {
+    "qualityCompounderWeights": {
+      "roic": "0.25",
+      "fcf_margin": "0.10",
+      "cash_conversion": "0.10",
+      "margin_quality": "0.075",
+      "stability": "0.075",
+      "eps_growth": "0.075",
+      "fcf_per_share_growth": "0.075",
+      "net_debt_to_ebitda": "0.05",
+      "interest_coverage": "0.05",
+      "dilution": "0.10",
+      "valuation_guardrail": "0.05"
+    },
+    "undervaluedQualityWeights": {
+      "earnings_yield": "0.15",
+      "fcf_yield": "0.20",
+      "historical_fcf_yield_percentile": "0.10",
+      "roic": "0.15",
+      "operating_margin": "0.10",
+      "net_debt_to_ebitda": "0.075",
+      "interest_coverage": "0.075",
+      "cash_conversion": "0.05",
+      "stability": "0.05",
+      "dilution": "0.05"
+    },
+    "winsorizationPercentiles": [
+      "0.05",
+      "0.95"
+    ],
+    "cohortMinimums": {
+      "sectorSizeCompanyType": 20,
+      "sectorCompanyType": 30,
+      "generalCompany": 100
+    },
+    "missingDataRule": "NO_ZERO_NO_NEUTRAL_NO_WEIGHT_REDISTRIBUTION"
+  },
+  "validation": {
+    "aggregateHashChain": "PASS",
+    "billingHash": "PASS",
+    "sourceReportHashChain": "PASS",
+    "payloadCanonicalHashes": "PASS",
+    "checkpointHashes": "PASS",
+    "recordContractShape": "PASS",
+    "periodStartCoverage": "FAIL",
+    "durationSemanticsCoverage": "FAIL",
+    "historicalValuationPitStatus": "FAIL",
+    "historicalRecordsUnavailableAtEffectiveTime": 2244928,
+    "classificationSnapshotStatus": "FAIL"
+  },
+  "result": {
+    "algorithmGateStatus": "NOT_ACCEPTED",
+    "inputFormulaReadyCount": 223,
+    "algorithmEligibleCount": 0,
+    "qcEligibleCount": 0,
+    "uqEligibleCount": 0,
+    "scoredCount": 0,
+    "rankedCount": 0,
+    "insufficientDataCount": 243,
+    "notApplicableCount": 0,
+    "determinismStatus": "PASS_FOR_GATE_DECISION",
+    "cohortStatus": "NOT_EVALUABLE"
+  },
+  "securities": [
+    {
+      "symbol": "A",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "13C49AF26B141FD547A8B89B8CE6A13DBEB8E32D6207F5E08445613265EEF730"
+    },
+    {
+      "symbol": "AAPL",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "83F478441CF8AA11A10E36633CB8815B5DA3737A6142BE1BDD564ED0E0F40A05"
+    },
+    {
+      "symbol": "ACN",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "840B429B0750091D1055EC766E3E468474862C6C85FCC81733A670C9D6CCFD82"
+    },
+    {
+      "symbol": "ADBE",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "17C96D4FB5555C3EB22B7FAE44DD8FF915867E6DA12E8A38670AE85CA977B700"
+    },
+    {
+      "symbol": "ADI",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "31BCCA8BF14F19FECF506C57B496DFBB473219F6A5F7BA13586A1E01F20EF215"
+    },
+    {
+      "symbol": "ADM",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "C7297309AD9A04783988CEF51E5E603550DAC6FED25FFF09CF67EC29EFE7700E"
+    },
+    {
+      "symbol": "ADP",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "A6878549C8D7F4D3AD09667195A81B4977BB6D94E5BA9057B3A451BC3F5DD302"
+    },
+    {
+      "symbol": "ADSK",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "189D2B05149FED432F1F1812ECC03EE7461F7E76C34FDA59B2CF9D031F0D73F9"
+    },
+    {
+      "symbol": "AEE",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "94A6B587D9CAB34BA7AAE88A863079BF5B4BC74373D20CF5BF7C2AA03DB7E195"
+    },
+    {
+      "symbol": "AEP",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "B71C8220457367AE58F8CF32C0F9B89B7BA845F0521B54D2949C62E3AF34CA0B"
+    },
+    {
+      "symbol": "AES",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "95FF79760A57C89D2DA1BBEC270E93059A783E02266652DBA7F411325F19148E"
+    },
+    {
+      "symbol": "AKAM",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "EA1DC6A84D0C87806D8F50F7A07E213CEE53F51811DF22C208D2034B604638CC"
+    },
+    {
+      "symbol": "ALB",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "957EE7A3432285FF9D4E10DDFF6AF801A1B7CC0D186CA81E4F1874881FD6FEFC"
+    },
+    {
+      "symbol": "ALLE",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "D395BC2D1BF9D04D0347462533F864BFF215A0B4F3519A9311E760DAD7BCBDF4"
+    },
+    {
+      "symbol": "AMAT",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "BB2503DBA30C0DE19E6A1A1802F56C5D60C05A3E67B579A5F465100BF41EC6E2"
+    },
+    {
+      "symbol": "AMCR",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "34C8C9FC7DB7C3F5E6ADE5D7BFB787D90164EE47E99788573AD8BC56ABCBCA66"
+    },
+    {
+      "symbol": "AMD",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "61B4D66C1A795D1142E38A363BB8334C59728D5C1EC67D63FE508D394C19DFD3"
+    },
+    {
+      "symbol": "AME",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "7B9D5E28C0B950D811AEE518F37BA81A18847002C5BD55B7076F611EA4AA5BFA"
+    },
+    {
+      "symbol": "AMZN",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "C85F330707E8F8F9FAD4C6358E487B28A6838BC7CD9BD162BC4AB2D01603AB43"
+    },
+    {
+      "symbol": "AOS",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "71BB99503C2620338D6FBB2D16BF6B680E756550321E7F2BC9EE66FB38D6DCF1"
+    },
+    {
+      "symbol": "APD",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "89DFD97DBFF2D39D9E4A840476B10DE2C050BE5E1AA2048E986F99BA7B83C698"
+    },
+    {
+      "symbol": "APH",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "9182FFC6E40744B1D9E4A60973F2AA8263EEA4090AE704475FEC837422A101F0"
+    },
+    {
+      "symbol": "APP",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "FE096AB466E6DDAA21ABCB3501610CFA1AD0C0D6E3378F3FE534BF41629E46D1"
+    },
+    {
+      "symbol": "APTV",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "542EBDABD3CA32C697265C92517B4B3AB562E362414C83D9ABE1A25625FDE31C"
+    },
+    {
+      "symbol": "ATO",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "588DCC1AEB797AF813E3DAC47F00EF653B7A6A94E0681D9047D6D1986C0926A3"
+    },
+    {
+      "symbol": "AVGO",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "CCE0DAF2F562CE885CA479DCCDDDF30B26367E09F440B0909D5008EB9F6E7141"
+    },
+    {
+      "symbol": "AVY",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "68A3C08202B1B69C16C41FB1BDCC6E01BA4DB0113CDF749DA4CCD4B5D470E90D"
+    },
+    {
+      "symbol": "AWK",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "F0A7BE5A7A1CEA722CF7C4C2A7425641B5AFCFB5526A596B44D25F3E57C8B19E"
+    },
+    {
+      "symbol": "AXON",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "D371AF72C14233EBAE9F53C70DE18261581A6951BFBB403CE356C6CAFDB6FDE2"
+    },
+    {
+      "symbol": "BA",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "1C42A0519A1E28DDDCA70EC6BF165A1F30164D5216A606DE172977FD030258CD"
+    },
+    {
+      "symbol": "BALL",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "103C0E4AFFB46B16F229B52553FB63C79D36DF228ACCD82C599CFA53370CE0F9"
+    },
+    {
+      "symbol": "BAX",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "0CCCB5AEBAB63BCC36EE390884D0A881486CE058A7D4CE7EB0E1DD1867941124"
+    },
+    {
+      "symbol": "BBY",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "23B66D577805488EF9838884C5E3951FD40E05431457E83BDA10CF0692B7D535"
+    },
+    {
+      "symbol": "BDX",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "C0513D05B0F1F93E8C8CB920B570E42EAE17B882D8A883A20E72A4FE7E705EBF"
+    },
+    {
+      "symbol": "BF-B",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "3D9F290C726403649F41B3B971B7614655B9DD0F5A334F8BA3631AC37F7A8478"
+    },
+    {
+      "symbol": "BG",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "63322DB90559A4DF62703C3C371A9682E0DE7B09EE8E8535F960E96E599B19C7"
+    },
+    {
+      "symbol": "BKNG",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "AE0EE187A6B71C7424888A6928E162D2407B79B661F07943D25A19472EE6A869"
+    },
+    {
+      "symbol": "BLDR",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "4B62E4D21A22FF5332CC15A8AA15369B919E8D6F2E5BC066CC21E5E9E5E41D80"
+    },
+    {
+      "symbol": "BMY",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "E0CD646B21163226654782036D7EE8FD94ED5E62C8B100E3C520FE3E2121C884"
+    },
+    {
+      "symbol": "BR",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "A4D83A5E10CF1179129CAF2FF96F2F26AFC34F92553C66CE0916A9E175D57217"
+    },
+    {
+      "symbol": "BSX",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "61317A2BEA018961EDD7709BDEE59331489C93A25360EDCEAE3B020D9BE99F2B"
+    },
+    {
+      "symbol": "CARR",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "51FA32E4760CE3FA933A1B56E156435E566524F930EA9D7BDF8D04442233E54C"
+    },
+    {
+      "symbol": "CASY",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "45BFF929599E620BA2C441598BC0C925861A6445C79C273ECD923DCB327CF5D3"
+    },
+    {
+      "symbol": "CAT",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "E736F990F76D88F04FB871F0D02A80D853F7EC0C8F2F64934B3524E1432A86C2"
+    },
+    {
+      "symbol": "CCL",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "0B8A147209638108BB1459F06AFB7088704E0FBB2D22672B2530B85CBBBC79EF"
+    },
+    {
+      "symbol": "CDNS",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "D5541243369420B67E5DAA3D2BCAC5813CDE618A0B0BE8A2B794170E00B4F9A5"
+    },
+    {
+      "symbol": "CDW",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "7E81BD188F82AAA5CE6D2D1EC6DA8F9E37418C2176694947225A8C3B0926A3A5"
+    },
+    {
+      "symbol": "CEG",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "DB9FC7B3BA79E86D2442139A4A92283776D9778AD198E291AABA62D52F89042B"
+    },
+    {
+      "symbol": "CF",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "92F6121649AC63CBD4209A856424BB5C391354C66C769ADE50F19ACF4DA6429F"
+    },
+    {
+      "symbol": "CHD",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "2A3E5810B58486189B8B2C3B74F2D0DE1ECE9B4671431EC6EEF2D02CBC6724DE"
+    },
+    {
+      "symbol": "CHRW",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "8A9DBD108248B9DEAEB50B4E3503E7D666B10C1A530CDC0D028C48D308C69E1F"
+    },
+    {
+      "symbol": "CHTR",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "54ECDF5F6A107A6A761532FCB5EB3D0588770CDD82F854537214AC0CD7D7F915"
+    },
+    {
+      "symbol": "CI",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "17588FB265FC4FA7A88286F846448909411964308F5AB286F86DE2127C3C7F63"
+    },
+    {
+      "symbol": "CIEN",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "F4EC61701C2A7F030884785B7D08AD4255B8D2E2286A409CE9B60BA5BD21B882"
+    },
+    {
+      "symbol": "CL",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "514AD8ADFE6DD035DE837589A848B84F1FD051493DD6C5958D5B72DC3CEF1051"
+    },
+    {
+      "symbol": "CLX",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "54358C60048C9C15407E745660291A5E95B94C30A41A0E4181222D3DD38EB48C"
+    },
+    {
+      "symbol": "CMCSA",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "6983C5495B06C0A5B02D360A71D08C84B328617149695A48C1E92357F0D808A2"
+    },
+    {
+      "symbol": "CMI",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "86C27127178A5DCC49C7DA0D63F309F049EB303F0BF30B22A5DD92063DBB2769"
+    },
+    {
+      "symbol": "CMS",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "79A5EB29BB1DEE31EA7F680EABEC6BCD73A785A7B454C22B33DC3F01A7B7888E"
+    },
+    {
+      "symbol": "CNC",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "7936AE3718C101E7C1472F9CF9F7D8897BE7F58C618F28337610C3460D4A9DE2"
+    },
+    {
+      "symbol": "CNP",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "2EC1265888A5BB4DB32C254EEF7A9A07D66506187822D3462AFF362169BFC2F1"
+    },
+    {
+      "symbol": "COHR",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "2756DA99436D189038BD1B5056E98FC764209751B91069243869EEEB6A91C8F6"
+    },
+    {
+      "symbol": "COO",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "065F51CD024D06D2D96E4DD8F86706D8D04E4A607ADB3533D8062B172F842186"
+    },
+    {
+      "symbol": "COR",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "94ED596FC221D5FA75266D4B44906269649178E396F361DBF1E178C063DB36C1"
+    },
+    {
+      "symbol": "CPRT",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "7969DDBC6CC40624F09FDAA639F1C2543066DA3A0CE18A12C1E39B2683EFDD8C"
+    },
+    {
+      "symbol": "CRH",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "F48B6E662CC753853D883189E62ADE9D2B6B04F664428D19483DAEEDF554FCB8"
+    },
+    {
+      "symbol": "CRL",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "51F039FCF59A5DA7537A889B3C62DEA58306129A986FF5CA4B063F37EE2BBC5E"
+    },
+    {
+      "symbol": "CROX",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "02744E89F9F8379024C61B45366D48359BD79EE9659EA25E279381D859690CC8"
+    },
+    {
+      "symbol": "CRWD",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "53EFA2E73D66ABA765AFE7264A0FDE7A49A7C5D1A5C8BE2938ECE39CE42F288B"
+    },
+    {
+      "symbol": "CSCO",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "EAF1F81D9D3E8F0070D3D1216A8EBF49D004AC41FF62538E675D366D18F0C829"
+    },
+    {
+      "symbol": "CSX",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "8F33D453EFADD7EEBB640A1C825620BC2278FED2E3F57CE2421FEA6F98ED4240"
+    },
+    {
+      "symbol": "CTSH",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "799A18058DB2513990F91F90960739D79DC5BE62AA1CA23FB5CA7311D3C3DAB7"
+    },
+    {
+      "symbol": "CTVA",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "B3B32BD12C5B9BFD979E50281400FA70E55C92A2529A00427FB83A97E0631DDF"
+    },
+    {
+      "symbol": "CVS",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "B45A9AE8B99399F96D671561D80E9B9D21773B62E3BD47676F1A3010C824EC34"
+    },
+    {
+      "symbol": "D",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "1FD46AB10DB211BAFB3F7D3E13747C910C808A3C0253AD98BD18AF6F67AC63D9"
+    },
+    {
+      "symbol": "DAL",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "CE3927C0CADE6BF7DE3D103E1C3187DD4A0D3747376D5DFACFFDA6B2052944E7"
+    },
+    {
+      "symbol": "DD",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "169FF88D9C39CCCED7019BFAD53B39A5BD895938FEC117E4D3D35ADB196911BD"
+    },
+    {
+      "symbol": "DDOG",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "32482B6C298B743F6A224277BE13B2CDB135E5DA071AE299656754037BB9E4C3"
+    },
+    {
+      "symbol": "DE",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "A92EA191944EF7EB76C22AB0A1CE444AA43616B897B4714DED6C28A7DF3759FC"
+    },
+    {
+      "symbol": "DELL",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "434EEFB06209FFE20501F658B0BEC381D60AB71A05022215EF498C6BE0B7649D"
+    },
+    {
+      "symbol": "DG",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "FC8F88957EB1233C885239A137C17DD80D673DD0030E114641AB8A972E045F7B"
+    },
+    {
+      "symbol": "DGX",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "85DFC37F2C3E521D0C8D13F27AAA1085A96A84F2CA0176D151C24135CF306689"
+    },
+    {
+      "symbol": "DHR",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "9AA562DCCF7BE58BFD2FD1001D44AD26A2FA2721C05C5EEBE57B0769BB589C7D"
+    },
+    {
+      "symbol": "DIS",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "82D2DB30FA452BFD325A9D75288811E6994AFE673953C85DCED1A1A5069E93F2"
+    },
+    {
+      "symbol": "DLTR",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "C610211067578C16F83D14833871FC2133E2C783DC27BC6AD656BBCF89054433"
+    },
+    {
+      "symbol": "DOV",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "DADF255EFB9CAE129135E79A8FAFB8A4FAD6D0A754F872DA31197914300EF54D"
+    },
+    {
+      "symbol": "DTE",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "0A010384F701D753258469FEE2291993F2BD83EE9EA887CBE4A734F26277DED3"
+    },
+    {
+      "symbol": "DUK",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "42EA382E96E0463D6C1CA1F032F82AE6548C78FFDEBA71CF85AC074CD6AFC473"
+    },
+    {
+      "symbol": "DVA",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "FB6EF3A7262E9C9083BA96287315C1AC70FA6549FE4CF3CD0DFE450ED4BA6FBB"
+    },
+    {
+      "symbol": "DXCM",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "F8AA8353C6B516CB04E8A37D0D8E210C9807CA1BE4D73E4261CF554C5963B056"
+    },
+    {
+      "symbol": "EA",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "23964CE62EE4F4B6E3A1C5BB39C71BC77A0B815C17004C9D86753A4678EDF0AD"
+    },
+    {
+      "symbol": "EBAY",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "DF7173CBFB044DAFCDFD00B8745F9099690D592D69DF5BD2DCCECF44E53F5989"
+    },
+    {
+      "symbol": "ECL",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "333A2B08A1D8A0BE510A2B70CD3A73FDD03F93FB30801AB37D35D1A53CDC40B4"
+    },
+    {
+      "symbol": "ED",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "407722BF0C88CD326BF76C762B87730D0CD942DB8FDD296C65FE4A10D3D265B3"
+    },
+    {
+      "symbol": "EFX",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "ECED3A8992D0DDE6668D9B2193177FBD8F1287C3ADFA8E0AA85C3869ECAFD335"
+    },
+    {
+      "symbol": "EIX",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "D917D27E06BFB86668658140207F8300E5FFF5571326777E8E2FCFFDC18FD179"
+    },
+    {
+      "symbol": "EL",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "58F6F89F09368C79A6638FC6FDBEC57E308B951C01C89E30EFF0BDB9EA05C0AB"
+    },
+    {
+      "symbol": "ELF",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "92959D012C4525C3128177F99A83E32DB894D3F7B8400BF6B182FC45E12A5DEA"
+    },
+    {
+      "symbol": "ELV",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "89557BF01A4308333FF0FCA164E534F22ED441B23339A846CFA3A33B4BAF9CE5"
+    },
+    {
+      "symbol": "EME",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "8B3F5A6501E7A753E3C7FA16D325F70F1158D3753BFD2437CC5A67F02C91F246"
+    },
+    {
+      "symbol": "EMR",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "2FE913F8FC606E595F8FC531B20012D0CDCF693CD41BC1842A09221C16315E95"
+    },
+    {
+      "symbol": "ES",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "EF349219589C2E25D650749AE37DF526F569F57FA57C4151316DDDBB6407EB3F"
+    },
+    {
+      "symbol": "ETN",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "23A36F7F2D9056580BA7C5361FE899C787B45E34C4C97CBD94D0C0828B00CA0A"
+    },
+    {
+      "symbol": "ETR",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "1ED66A262609308041A518C453F9AD4F7D2B761B0AC8FBBF79A9209A75EF66E1"
+    },
+    {
+      "symbol": "EVRG",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "98D7216BB7E67DF8918FB1A2503DB921AF3903B82B8886AF76EFEEE6A4BA9CE1"
+    },
+    {
+      "symbol": "EXC",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "20D187AFAAAC0846DD1ABE5A02DDD7BECA25E0D2A3E3D089F3D694F27F702A75"
+    },
+    {
+      "symbol": "EXPE",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "B144831724F7F072B49346D30C49AB7AF5E1224FD2DA3E025E24D3BE9DFFA0B7"
+    },
+    {
+      "symbol": "F",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "AAB6F03BFBEE55B034343FE895E604C5603CE56AA59D32C8B99F7D6279440B9E"
+    },
+    {
+      "symbol": "FAST",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "F0B5055CEED101682BBFE3D83A6E14AC592865910B1FC954AA891BF385611A2E"
+    },
+    {
+      "symbol": "FDX",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "AE7C3C442C378BB14807553BAB626D01351CBCE49B07AE519A682D3B05DD61D5"
+    },
+    {
+      "symbol": "FE",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "9679460C40B42013086B884A14FD0EBB01946E5B810504F8FE1AC2E3620CC6B4"
+    },
+    {
+      "symbol": "FICO",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "C5459025CF5A352805F2584E8854B9400D1C5752052C764B1CDB99EA5E577683"
+    },
+    {
+      "symbol": "FIX",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "4DCCFDDE38213EDC0140F118025CCC3D769A1DA39356551CF442EBC5DD4EBD70"
+    },
+    {
+      "symbol": "FLEX",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "6EB5B37632DCA092CFA25BEF7409A59BDD2CD1B34CF3BC85CE34CF3505C2EA16"
+    },
+    {
+      "symbol": "FOX",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "FF83B25B29577B4EE60968AE94AE47D57ABB51CA6D6F17441A2AF54C62E191EF"
+    },
+    {
+      "symbol": "FOXA",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "6D8329BDC377598C6BE428E30491136D46FF52AA9CEC23D006C61E045BA7AB74"
+    },
+    {
+      "symbol": "FSLR",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "172CA06A3005A07EC0AF3DBC8101FCBC73775C34BEF76EE605306DC375CBDBFC"
+    },
+    {
+      "symbol": "FTV",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "1537FA380DAFBD4D0A5A2A5DA22FC275E2F4E0DBAFD8C2D0AD9294400C019EA0"
+    },
+    {
+      "symbol": "GD",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "C0A79F9C976899E14BB7F0D4E645ADF15FAF0FB26427E126AA2162004033707A"
+    },
+    {
+      "symbol": "GEHC",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "886B94100C1AC4369DF23258903A840DAD19B4A9FA76C2A005FDE6E092A4FDAC"
+    },
+    {
+      "symbol": "GIS",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "540EA283FC3242D38E834AE3DE818C8A0A57C2579E924A6D332F5ED703A44A8B"
+    },
+    {
+      "symbol": "GM",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "55C020E6247068050B185E3EDCCD64888738047AE64E10A075B168F413834923"
+    },
+    {
+      "symbol": "GOOG",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "E0DC7207E4E00E8AC501170D642CA10FE0A2C0B47359DD3F77292D14D14FC947"
+    },
+    {
+      "symbol": "GOOGL",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "790C05E06D0FB10B41F194B2BE65290E8F425643470F75A48E54C884A9BA3D00"
+    },
+    {
+      "symbol": "GPC",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "CDCF8B92EC3AB379FA48EB2434130CCD4179A0B8988D2F3DF0E7A97B2791A0D5"
+    },
+    {
+      "symbol": "GWW",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "08EF17310D517628ABCA764D79E8B3E7A1B4E88A9BC3D6BF862AB02C811AC3B5"
+    },
+    {
+      "symbol": "HD",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "FD8EB5CD5648AB49F5F79B5F26F5A0AA1D47E423EA11C9E6D779EE5835562282"
+    },
+    {
+      "symbol": "HLT",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "EC02473AC44EA7F06397466CC867E0884519EA961A802AED766F6209955A18FC"
+    },
+    {
+      "symbol": "HON",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "2A2471B428ECA26FD5296BDD3DB9B45EC92E825FDEE7FA956078032855C1378E"
+    },
+    {
+      "symbol": "HRL",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "E1DB620901FBBD6E7B1F060683E3D50F446FE88360EB8122B3D69CBC54C034A7"
+    },
+    {
+      "symbol": "HSIC",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "B95AEA9E2A0DA3F22E6657896A94F56ABACFA2313C962FF77F965D0A4833FA61"
+    },
+    {
+      "symbol": "HUM",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "082AA67ECB6712C210838FE29EF7A663F292F4BCEB9B6E8E75A4502D1C9120EF"
+    },
+    {
+      "symbol": "HWKN",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "7A3102461A924A3371E41ACEAE25E070545522D48C63DEF593443228AE6F60EB"
+    },
+    {
+      "symbol": "IBM",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "4CB503B6578E2859952B871344CF543849F2945C0BE17DDAA86B79429D698F37"
+    },
+    {
+      "symbol": "IDXX",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "5C0DCC296433E9B0F43ED4A4480B7103C16929701ED832D3E367C612A36AE666"
+    },
+    {
+      "symbol": "IFF",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "2FE884696C1C51BA0D1D8BB73F3378271867580EB70E999A5E360EDCB0852A24"
+    },
+    {
+      "symbol": "INTU",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "269C319FB473F417BB5B7CFD5126BE4558B94D7D3659F3551D236ED596CDD70D"
+    },
+    {
+      "symbol": "IP",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "EDA15E4CD1AF10F1C801A9B9949949CD2440F57B498ED5069D7DBB682DA7E814"
+    },
+    {
+      "symbol": "IQV",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "55B7745AEAFD626910EC5BEAEC617A6D2F597ED58C0893AC85F97077382EDCA2"
+    },
+    {
+      "symbol": "ITW",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "F1789CADDD1DC7A2FC1782D69DB0BB40436F3ECFE02C666B8B654F0493DC2C52"
+    },
+    {
+      "symbol": "JNJ",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "41931F67FFAD86D46092D0A8727EFBC6CA80528A98336DDE963FB4EC67A3B191"
+    },
+    {
+      "symbol": "KDP",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "286B07D0FEFE1681145FDA0E0D5CBA0CBD2D54180E4F77DF7D44E449C5A640A9"
+    },
+    {
+      "symbol": "KHC",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "BCDA41790D7BC2F394CF3AE46EADBCDC7E5AD904E0184FB11B6B1628557B4803"
+    },
+    {
+      "symbol": "KLAC",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "A5735A703B53B90B4CDD4DBEB0AB084530720DC70BC18E3000262D26455BCF3F"
+    },
+    {
+      "symbol": "KMB",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "A90B3755C96A2705D44B2395FD72C224D6DB1B958D2F74FD00B5A8271B264DDA"
+    },
+    {
+      "symbol": "KO",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "976E9744BB90931236D52A120660152CF183A73DEDF2A622BA803E1BC5DC4B7B"
+    },
+    {
+      "symbol": "KVUE",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "A29C6C47689E0862074E873C1738D025A28BC8EA57F7190B4AF06E0241533892"
+    },
+    {
+      "symbol": "LEN",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "693269DF43A3FF180854C304F8C062E00D78499789638E4EA3C5232FEB73EB38"
+    },
+    {
+      "symbol": "LH",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "0E40B39E48814B955BCE7CA5D239F092B18DD950BE42642C070CBBAC44007EF1"
+    },
+    {
+      "symbol": "LIN",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "C41EBED6932CFCE000217A4BA2AF1825A097C49EF167FE6D6566DA0E67856123"
+    },
+    {
+      "symbol": "LLY",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "DE1383A245B5F58480277515A99787175DD9AC81D631C73AD149243FF28ABB1C"
+    },
+    {
+      "symbol": "LMT",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "9A66D3F97727879E4D8BC4965793F8FBADEFB95616152E73AB14CF561EA5868B"
+    },
+    {
+      "symbol": "LNT",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "8A6F7C322F91D3256D055D4C56FF902A16DAE91E49C17A3469E56E07ACF55C04"
+    },
+    {
+      "symbol": "LOW",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "61985AF4CDCB13D9464463AE9E9D2E7E6A7B0E812A3E732422EB90BBFC565202"
+    },
+    {
+      "symbol": "LRCX",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "688F21B5163971ED906AF9B8A63C607AB954E4C72A1A07AE0A6C31332BB9413F"
+    },
+    {
+      "symbol": "LYV",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "AD6C1149B59AD18B054D8BE0F200F287431F53108E6119ECEB170499ACB80982"
+    },
+    {
+      "symbol": "MCD",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "1DDA854CEA32315FC9AEC34DAEFDEE89C28C835F614645C7B2106023429CD94C"
+    },
+    {
+      "symbol": "MCHP",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "1AE368D75C0FD75573A943AEA8765252D4DFD89F3E14C896B4D1B4D707B2FB3C"
+    },
+    {
+      "symbol": "MCK",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "7CD4C85C48391B414BEE921948B64012B24F52C684DBB21EF73980B6AC9E7537"
+    },
+    {
+      "symbol": "MDLZ",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "3A6DB842801CF462F5A00C495B111B9906BDA89CDBC96C28C278BA7C9437AA9D"
+    },
+    {
+      "symbol": "META",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "C245C105A787E2D8E21740CF09C8A32A728EB939D5CE824D1CE7898F732676CB"
+    },
+    {
+      "symbol": "MKC",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "C95BE6265AC936B6347DF9BA21FAB52F2833C6BF2D2622422A108F8C74AAA29C"
+    },
+    {
+      "symbol": "MLM",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "9F50618649F5B48FB887570E47B1D76A12C422C5B4C24F56D107C6D789050152"
+    },
+    {
+      "symbol": "MNST",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "F791CC8472AA09754DDA29E3FCDF01B1D5345D75DBE7F22C72967E3E6570143D"
+    },
+    {
+      "symbol": "MO",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "A95F035CF1C603CB7C448A3A7731ABF1806790DD4710D17FD97E2FD1F79C6EF4"
+    },
+    {
+      "symbol": "MOS",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "90D2E6E8FFAFC4F63449B8F435493F8CEFC8CB90E6818945CAF632B6EA8E7764"
+    },
+    {
+      "symbol": "MRK",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "77E3057C85432725187C137B9E2AD87098732AA16810361C8713F9969C64F0CD"
+    },
+    {
+      "symbol": "MSFT",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "467BFF6C996C33F25ACE4B8BD9A90D46A7457147C2419F933A82A85AB6472BC2"
+    },
+    {
+      "symbol": "NFLX",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "56D4491C2C6602461741EC59E4B4A90E4B533FD6D3CC8492010D01D9F14F8065"
+    },
+    {
+      "symbol": "NI",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "FD93476DF2803E4F73EBE3EB9181D8BE87BB7914290095F9A8311EBF597D601A"
+    },
+    {
+      "symbol": "NKE",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "5F74B218CD0272A8525DE5A915F5A627473670567CB3494E396239B1533BCDA6"
+    },
+    {
+      "symbol": "NOC",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "FA48AC79FA8756FD0D5DA7D3579EF294D7D1CB7A6D6AD2A888C3630D1CAAC38E"
+    },
+    {
+      "symbol": "NRG",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "0D369492841A1FF1E903750F527D2763A07E73FF19597088B84BB80C9D21C15D"
+    },
+    {
+      "symbol": "NUE",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "F65A6B43B4F717790E8F28F406EE76EFA18DCBBD53C10EF019C6528BE7055F55"
+    },
+    {
+      "symbol": "NVDA",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "0A4287BAC3B97E219A3891BE73A67067FC071E10BD10392636D8F46E574AFEE5"
+    },
+    {
+      "symbol": "NWSA",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "0E91338C4F27FD0CF6614A6BE960860C44BADDBCCEB105A4B9507F0F65412E5F"
+    },
+    {
+      "symbol": "OLED",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "D9826E56BA8BC356163AC7719FA4043E99DCA5BDB1B8706D41A8D111604345B7"
+    },
+    {
+      "symbol": "OMC",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "68C863BDBBB7E0C290DEE770FADF4394DB0EE1B902FB0009513CF198A0A50EEB"
+    },
+    {
+      "symbol": "ORCL",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "C4737554CE5DF694FB3DC38201E46A8C8499CC46520279A46947897F7E181A85"
+    },
+    {
+      "symbol": "ORLY",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "EE868C396D1C7E7F2D6E9ADC01A67195468F0F7B21857AEA076F8BC2D4C10BCA"
+    },
+    {
+      "symbol": "PCAR",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "16D11F840712528E7AE206597015A7EF8BF963F3E2E2C7D2E2FF9AFD19AFFA75"
+    },
+    {
+      "symbol": "PCG",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "FA1C9848D6165AA9BDB17CE6253B1D94C6E4D2CDC516E2186778209BD565EBF6"
+    },
+    {
+      "symbol": "PEG",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "7B70B90A8D09243C4161D754C414A728E34DD3F6F3C0BCBED2612651B03F4860"
+    },
+    {
+      "symbol": "PFE",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "265EDFBBD6ACB79C85AF4129FFC0D8CFCEE471EF58281946BB340FB1B9C5227C"
+    },
+    {
+      "symbol": "PG",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "ABD25D06B8C7BB0D682719780591DB4070B5744528D3A34B92E67483C7D2E672"
+    },
+    {
+      "symbol": "PH",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "5D5B5BC87DA31F8EF954FB30F434CA946D7D81ED90A98092C2B27933DDF971A0"
+    },
+    {
+      "symbol": "PLAB",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "E5F8890A8FF79364A578FE3F919AEF0E81C2461E1297145F2A6A2BF74912981A"
+    },
+    {
+      "symbol": "PM",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "347A6AA905B879035C243FA44732D4FCBDF9B51139EF7CA9548E913EB563B601"
+    },
+    {
+      "symbol": "PNW",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "222E0193E12EA220D1144EA6E5C6E92B1B9B3227CB6600A2B9FEA6B37A55B232"
+    },
+    {
+      "symbol": "PPG",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "835DC5D17ACB048B1AADC68AF6985051477125F9C9DF26F3DBBA263A486FD378"
+    },
+    {
+      "symbol": "PPL",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "E238A950E9C19CC66AEA4EF818BDAEFD9AE242235C6DB48A2F7C8DF888EF661A"
+    },
+    {
+      "symbol": "QCOM",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "ADCD05CEAC68417EF497B3AD9EF9E29008DDFD50E5914CDD41AF5632ED8B8A9A"
+    },
+    {
+      "symbol": "ROK",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "35862210DECA4EFF28C4660CDF599B26F25D1E6B095E9F2C5A44F03291039039"
+    },
+    {
+      "symbol": "ROST",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "A436FEF54D8C483FF256194B416A7C0834F3D19AE4475C84D5B929C3D4E23186"
+    },
+    {
+      "symbol": "RTX",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "2E50A4B241D8D7EAAAAEEC18BECEA6259BF5393F1092904DF98721A39162E96E"
+    },
+    {
+      "symbol": "SAIA",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "0ED8D8069174637E445A533BEE33EA79AC0A92527565E86666ACA3115E1B9481"
+    },
+    {
+      "symbol": "SBUX",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "0CA5B7A2DC40687E9095A91591120D5B8B11FC565374DDE3E1438EACC4C02E8C"
+    },
+    {
+      "symbol": "SHW",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "801FF8D03C5EB91162DF1E6F9046D78DCB5EAE775288A3803E8E15E192562F1B"
+    },
+    {
+      "symbol": "SJM",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "DB5BF911283B9B5CBC65F2D80A49C9E49E89821F222A877E973F5ED97ABC18B8"
+    },
+    {
+      "symbol": "SO",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "9A5B7775708BF8864FBC4CC2D6D6533EBFE5791D9256FCCBF5C57FD49DA9E57C"
+    },
+    {
+      "symbol": "SRE",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "14081A1E79903CB2948414004CB260840E3CC262410B585BE48747F4D055C19D"
+    },
+    {
+      "symbol": "SW",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "4E46BE29FB7A0236D67D9EC4CEF1AEFFEF56F35D19999D61CEEADCBC8E2E8DE1"
+    },
+    {
+      "symbol": "SYY",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "FD27A88D56DC7148815F9D700CBE979DBF35D30AC0162E6DE4970B891E924A79"
+    },
+    {
+      "symbol": "T",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "7B641AD626FC0C5147D99117E83796AA806A25D34604E695C4787ED7D0513245"
+    },
+    {
+      "symbol": "TGT",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "F1A8770D23844CCA822040BC282DCD9F417CEB753A64AC2B0CE72715B10EA1C9"
+    },
+    {
+      "symbol": "TJX",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "4FDE6D053999C62661EB96C13125D6CEEFEFFAE6E7ED2E8327339804FC09F972"
+    },
+    {
+      "symbol": "TKO",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "C2629961F5EE7270A1903B98395FB5E8EC5EACEB8F96AE148C8C9D4C7BAA9494"
+    },
+    {
+      "symbol": "TMUS",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "142F8DAEC7F6E7C2D8C8726BFD3156F95B3CCDF0E39005F0534BA3274113D0F7"
+    },
+    {
+      "symbol": "TSN",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "208E299F6BA12079D1FD68D86760D0A642F4CF13FF300CD6839D510CCA192093"
+    },
+    {
+      "symbol": "TTC",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "D0F2409F2DB28BF973D4BEBFBF2EF7997C8813C5F4322DE3354D3542DEC9A073"
+    },
+    {
+      "symbol": "TTD",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "6AA4D0D6A8736A59A6ABCB492C689B3D77A2259DF01761261EB2F2C6AB6CDE00"
+    },
+    {
+      "symbol": "TTWO",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "179FBFCB15C8194D0B2CB309947D09179C7131CC9341E686DE4B38E55DF6ECB1"
+    },
+    {
+      "symbol": "UFPI",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "2372E14B131B2BB57496564BE250789C93D8FA9D0F6D4717EBDF47D4A632563B"
+    },
+    {
+      "symbol": "UNP",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "4018CC3BBD42EC58EE25FE425EAACC8EECF14E43F182DF5D46945BD374C6A2D5"
+    },
+    {
+      "symbol": "UPS",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "CA8DED877D42DA10413E399126F7871FB0253C447B6B06EEEF1129F4C375F6D5"
+    },
+    {
+      "symbol": "VMC",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "7764E12CACC73EB9F6C90D95CA33122F8A646CD858B3E941959BE3F4E84A1BEB"
+    },
+    {
+      "symbol": "WBD",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "04F16E1DD6F96292C5AAC78787B74659887C3AB7C64F70944A0EC92C1091BD49"
+    },
+    {
+      "symbol": "WDFC",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "596782E85CF22CDCC4E9365EAC5A5A030E5D31DE6DD291DB367E8E76D7470FA0"
+    },
+    {
+      "symbol": "WM",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "57C5AFD82E75D1144BE171883B31DCDF1D6462A3A93BA073FEB54D7B014E1248"
+    },
+    {
+      "symbol": "WMT",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "02DB53955D6EA6BE25AB1AEB5FB3CEDDE0B8A5CF8DE7EAE45A2E2C29F21D6FF8"
+    },
+    {
+      "symbol": "XEL",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "EF037DE9043890438C195E1CB4EB5B662271EDE9429890E1D58FE89246BF6111"
+    },
+    {
+      "symbol": "YUM",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "66A5964CEFA3F0F07F005D609D205947DA1FC6E14C5CA1C103CE9580FFEA75A8"
+    },
+    {
+      "symbol": "ZBH",
+      "inputStatus": "FORMULA_READY",
+      "algorithmStatus": "INSUFFICIENT_DATA",
+      "qualityCompounder": {
+        "strategyVersion": "QC-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "undervaluedQuality": {
+        "strategyVersion": "UQ-v1.0.0",
+        "status": "INSUFFICIENT_DATA",
+        "score": null,
+        "rank": null
+      },
+      "reasonCodes": [
+        "COMPANY_CLASSIFICATION_SNAPSHOT_MISSING",
+        "FINANCIAL_DURATION_SEMANTICS_MISSING",
+        "HISTORICAL_VALUATION_PIT_UNAVAILABLE"
+      ],
+      "payloadHash": "32A59D435FA4DDA2F5E79451E08D1B8DD00568113B5DC76D8060F7731D61DE2D"
+    },
+    {
+      "symbol": "ABNB",
+      "status": "INSUFFICIENT_DATA",
+      "reasonCodes": [
+        "INTEREST_EXPENSE_QUARTERS_0_OF_8"
+      ]
+    },
+    {
+      "symbol": "ALGN",
+      "status": "INSUFFICIENT_DATA",
+      "reasonCodes": [
+        "INTEREST_EXPENSE_QUARTERS_3_OF_8"
+      ]
+    },
+    {
+      "symbol": "ANET",
+      "status": "INSUFFICIENT_DATA",
+      "reasonCodes": [
+        "INTEREST_EXPENSE_QUARTERS_0_OF_8",
+        "MISSING_FORMULA_FIELD_INTEREST_EXPENSE"
+      ]
+    },
+    {
+      "symbol": "CALM",
+      "status": "INSUFFICIENT_DATA",
+      "reasonCodes": [
+        "MISSING_FORMULA_FIELD_TOTAL_DEBT"
+      ]
+    },
+    {
+      "symbol": "CMG",
+      "status": "INSUFFICIENT_DATA",
+      "reasonCodes": [
+        "INTEREST_EXPENSE_QUARTERS_0_OF_8",
+        "MISSING_FORMULA_FIELD_INTEREST_EXPENSE"
+      ]
+    },
+    {
+      "symbol": "CRM",
+      "status": "INSUFFICIENT_DATA",
+      "reasonCodes": [
+        "INTEREST_EXPENSE_QUARTERS_7_OF_8"
+      ]
+    },
+    {
+      "symbol": "CVNA",
+      "status": "INSUFFICIENT_DATA",
+      "reasonCodes": [
+        "DILUTED_SHARES_QUARTERS_2_OF_8"
+      ]
+    },
+    {
+      "symbol": "DASH",
+      "status": "INSUFFICIENT_DATA",
+      "reasonCodes": [
+        "INTEREST_EXPENSE_QUARTERS_7_OF_8"
+      ]
+    },
+    {
+      "symbol": "DHI",
+      "status": "INSUFFICIENT_DATA",
+      "reasonCodes": [
+        "INTEREST_EXPENSE_QUARTERS_7_OF_8"
+      ]
+    },
+    {
+      "symbol": "EXPD",
+      "status": "INSUFFICIENT_DATA",
+      "reasonCodes": [
+        "INTEREST_EXPENSE_QUARTERS_6_OF_8"
+      ]
+    },
+    {
+      "symbol": "FFIV",
+      "status": "INSUFFICIENT_DATA",
+      "reasonCodes": [
+        "INTEREST_EXPENSE_QUARTERS_0_OF_8",
+        "MISSING_FORMULA_FIELD_INTEREST_EXPENSE"
+      ]
+    },
+    {
+      "symbol": "GRMN",
+      "status": "INSUFFICIENT_DATA",
+      "reasonCodes": [
+        "INTEREST_EXPENSE_QUARTERS_0_OF_8",
+        "MISSING_FORMULA_FIELD_INTEREST_EXPENSE"
+      ]
+    },
+    {
+      "symbol": "HSY",
+      "status": "INSUFFICIENT_DATA",
+      "reasonCodes": [
+        "DILUTED_SHARES_QUARTERS_0_OF_8",
+        "MISSING_FORMULA_FIELD_DILUTED_WEIGHTED_AVERAGE_SHARES"
+      ]
+    },
+    {
+      "symbol": "ISRG",
+      "status": "INSUFFICIENT_DATA",
+      "reasonCodes": [
+        "INTEREST_EXPENSE_QUARTERS_1_OF_8"
+      ]
+    },
+    {
+      "symbol": "LULU",
+      "status": "INSUFFICIENT_DATA",
+      "reasonCodes": [
+        "INTEREST_EXPENSE_QUARTERS_0_OF_8",
+        "MISSING_FORMULA_FIELD_INTEREST_EXPENSE"
+      ]
+    },
+    {
+      "symbol": "LYB",
+      "status": "INSUFFICIENT_DATA",
+      "reasonCodes": [
+        "DILUTED_SHARES_QUARTERS_2_OF_8"
+      ]
+    },
+    {
+      "symbol": "NWS",
+      "status": "INSUFFICIENT_DATA",
+      "reasonCodes": [
+        "INTEREST_EXPENSE_QUARTERS_7_OF_8"
+      ]
+    },
+    {
+      "symbol": "PSKY",
+      "status": "INSUFFICIENT_DATA",
+      "reasonCodes": [
+        "DILUTED_SHARES_QUARTERS_4_OF_8"
+      ]
+    },
+    {
+      "symbol": "STZ",
+      "status": "INSUFFICIENT_DATA",
+      "reasonCodes": [
+        "DILUTED_SHARES_QUARTERS_0_OF_8",
+        "MISSING_FORMULA_FIELD_DILUTED_WEIGHTED_AVERAGE_SHARES"
+      ]
+    },
+    {
+      "symbol": "SYK",
+      "status": "INSUFFICIENT_DATA",
+      "reasonCodes": [
+        "INTEREST_EXPENSE_QUARTERS_5_OF_8"
+      ]
+    }
+  ],
+  "licensedValuesIncluded": false,
+  "networkRequestsExecuted": false,
+  "forwardValidationExecuted": false,
+  "aiParticipation": "NONE",
+  "artifactContentHash": "81D41686E94D48CF241D45E432B7A0079674D2BDAFBF3B69B3BFE7187491BCE5"
+}

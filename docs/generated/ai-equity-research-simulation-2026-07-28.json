@@ -1,0 +1,113 @@
+{
+  "schemaVersion": "ai-equity-research-simulation-v1.0.0",
+  "status": "SIMULATED_NOT_SOURCE_VERIFIED",
+  "productionEligible": false,
+  "rubricVersion": "AI-EQUITY-RESEARCH-v1.0.0",
+  "promptVersion": "AI-EQUITY-RESEARCH-PROMPT-v1.0.0",
+  "tacticalModelVersion": "TACTICAL-SIGNAL-v1.1.0",
+  "tacticalResultsSupersededBy": "TACTICAL-SIGNAL-v2.0.0",
+  "inputDataAsOf": "2026-07-27",
+  "limitation": "This artifact demonstrates the product output. It does not contain the source package and citations required for a production AI review.",
+  "results": [
+    {
+      "symbol": "AAPL",
+      "oneWeek": 69.52,
+      "oneMonth": 72.1,
+      "threeMonths": 71.86,
+      "longHorizonBase": 69.15,
+      "simulatedAiAdjustment": 1.8,
+      "simulatedAdjustedLongHorizon": 70.95,
+      "judgment": "Strong tactical alignment and durable ecosystem advantages support further research, while valuation and hardware concentration limit the long-horizon uplift."
+    },
+    {
+      "symbol": "AMZN",
+      "oneWeek": 32.6,
+      "oneMonth": 36.86,
+      "threeMonths": 35.94,
+      "longHorizonBase": 72.54,
+      "simulatedAiAdjustment": 1.5,
+      "simulatedAdjustedLongHorizon": 74.04,
+      "judgment": "Cloud, advertising and operating leverage support the long thesis, but capital intensity and weak entry confirmation argue against treating business quality as a current tactical signal."
+    },
+    {
+      "symbol": "GE",
+      "oneWeek": 65.53,
+      "oneMonth": 63.04,
+      "threeMonths": 60.19,
+      "longHorizonBase": 59.96,
+      "simulatedAiAdjustment": 1.2,
+      "simulatedAdjustedLongHorizon": 61.16,
+      "judgment": "Aerospace execution and demand visibility support the thesis, while cycle, supply-chain and price-chasing risks keep the conclusion selective."
+    },
+    {
+      "symbol": "MSFT",
+      "oneWeek": 43.2,
+      "oneMonth": 42.01,
+      "threeMonths": 38.75,
+      "longHorizonBase": 83.73,
+      "simulatedAiAdjustment": 1.5,
+      "simulatedAdjustedLongHorizon": 85.23,
+      "judgment": "Cloud distribution, enterprise switching costs and AI platform positioning support the strongest long-horizon conclusion, but capital spending, regulation and valuation make the tactical entry less attractive."
+    },
+    {
+      "symbol": "NBN",
+      "oneWeek": 56.6,
+      "oneMonth": 52.38,
+      "threeMonths": 49.95,
+      "longHorizonBase": 81.29,
+      "simulatedAiAdjustment": -2.4,
+      "simulatedAdjustedLongHorizon": 78.89,
+      "judgment": "The bank-specific quantitative result is attractive, but liquidity, credit concentration, commercial-real-estate exposure and one-time accounting effects require a qualitative risk discount."
+    },
+    {
+      "symbol": "NFLX",
+      "oneWeek": 40.5,
+      "oneMonth": 38.45,
+      "threeMonths": 34.55,
+      "longHorizonBase": 79.06,
+      "simulatedAiAdjustment": 1.2,
+      "simulatedAdjustedLongHorizon": 80.26,
+      "judgment": "Global distribution, pricing power and cash generation support the long thesis, but content concentration and a weak three-month trend argue for waiting rather than chasing a rebound."
+    },
+    {
+      "symbol": "RBLX",
+      "oneWeek": 26.78,
+      "oneMonth": 30.97,
+      "threeMonths": 30.84,
+      "longHorizonBase": 25.68,
+      "simulatedAiAdjustment": -2.4,
+      "simulatedAdjustedLongHorizon": 23.28,
+      "judgment": "Platform optionality is real, but profitability, content-safety, regulatory and execution risks do not justify overriding the weak deterministic assessment."
+    },
+    {
+      "symbol": "SPCX",
+      "oneWeek": 25.85,
+      "oneMonth": 28.41,
+      "threeMonths": null,
+      "longHorizonBase": null,
+      "simulatedAiAdjustment": 0,
+      "simulatedAdjustedLongHorizon": null,
+      "judgment": "Limited public-market history prevents a three-month or long-horizon conclusion; AI narrative cannot replace the missing evidence."
+    },
+    {
+      "symbol": "TSLA",
+      "oneWeek": 19.25,
+      "oneMonth": 20.69,
+      "threeMonths": 17.97,
+      "longHorizonBase": 42.57,
+      "simulatedAiAdjustment": -4.2,
+      "simulatedAdjustedLongHorizon": 38.37,
+      "judgment": "Technology and energy optionality remain material, but valuation dependence, margin pressure, competition, key-person and governance risk reinforce the current avoid state."
+    },
+    {
+      "symbol": "UNH",
+      "oneWeek": 50.13,
+      "oneMonth": 54.5,
+      "threeMonths": 55.24,
+      "longHorizonBase": 57.62,
+      "simulatedAiAdjustment": -2.7,
+      "simulatedAdjustedLongHorizon": 54.92,
+      "judgment": "Scale and integrated healthcare capabilities support a recovery thesis, but medical-cost, regulatory, legal and policy uncertainty require a meaningful risk discount."
+    }
+  ]
+}

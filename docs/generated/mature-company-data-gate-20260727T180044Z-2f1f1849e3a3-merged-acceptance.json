@@ -1,0 +1,2587 @@
+{
+  "runId": "20260727T180044Z-2f1f1849e3a3",
+  "artifactType": "CROSS_RUN_PROVIDER_GATE_AGGREGATE_ACCEPTANCE",
+  "schemaVersion": "mature-gate-merged-acceptance-v1.0.0",
+  "isSingleLiveGateRun": false,
+  "networkRequestsExecuted": false,
+  "generatedAt": "2026-07-27T18:00:45.029676+00:00",
+  "targetPassCount": 100,
+  "standards": {
+    "gateReportVersion": "mature-company-data-gate-v1.0.0",
+    "diagnosticSchemaVersion": "provider-gate-diagnostics-v1.0.0",
+    "parserVersions": [
+      "eodhd-parser-v1.1.0",
+      "eodhd-parser-v1.2.0"
+    ],
+    "pitPeriodToleranceDays": 7,
+    "requiredNormalizedFields": [
+      "capital_expenditure",
+      "cash_and_equivalents",
+      "income_tax",
+      "net_income",
+      "operating_cash_flow",
+      "operating_income",
+      "pretax_income",
+      "revenue",
+      "shares_outstanding",
+      "stockholders_equity",
+      "total_assets",
+      "total_debt",
+      "total_liabilities"
+    ]
+  },
+  "coverageRule": "Each base-universe symbol appears once. A later status replaces an earlier status only when it comes from a hash-verified immutable live report using the same gate standard. Offline evidence never upgrades status.",
+  "componentRunIds": [
+    "20260727T074150Z-50407538afa9",
+    "20260727T173753Z-079c976fda3f",
+    "20260727T174805Z-516116490045",
+    "20260727T175355Z-be763adcfa24",
+    "20260727T175552Z-925cd46d35ff"
+  ],
+  "billingEvidence": [
+    {
+      "runId": "20260727T074150Z-50407538afa9",
+      "dashboardBefore": 11512,
+      "dashboardAfter": 14387,
+      "observedDelta": 2875,
+      "provisionalBilling": 3125,
+      "billingSafetyCeiling": 4688,
+      "runLevelBillingStatus": "PROVISIONALLY_RECONCILED",
+      "endpointLevelBillingStatus": "NOT_RECONCILED"
+    },
+    {
+      "runId": "20260727T173753Z-079c976fda3f",
+      "dashboardBefore": 14387,
+      "dashboardAfter": 14502,
+      "observedDelta": 115,
+      "provisionalBilling": 125,
+      "billingSafetyCeiling": 188,
+      "runLevelBillingStatus": "PROVISIONALLY_RECONCILED",
+      "endpointLevelBillingStatus": "NOT_RECONCILED"
+    },
+    {
+      "runId": "20260727T174805Z-516116490045",
+      "dashboardBefore": 14502,
+      "dashboardAfter": 14571,
+      "observedDelta": 69,
+      "provisionalBilling": 75,
+      "billingSafetyCeiling": 113,
+      "runLevelBillingStatus": "PROVISIONALLY_RECONCILED",
+      "endpointLevelBillingStatus": "NOT_RECONCILED"
+    },
+    {
+      "runId": "20260727T175355Z-be763adcfa24",
+      "dashboardBefore": 14571,
+      "dashboardAfter": 14778,
+      "observedDelta": 207,
+      "provisionalBilling": 225,
+      "billingSafetyCeiling": 338,
+      "runLevelBillingStatus": "PROVISIONALLY_RECONCILED",
+      "endpointLevelBillingStatus": "NOT_RECONCILED"
+    },
+    {
+      "runId": "20260727T175552Z-925cd46d35ff",
+      "dashboardBefore": 14778,
+      "dashboardAfter": 15238,
+      "observedDelta": 460,
+      "provisionalBilling": 500,
+      "billingSafetyCeiling": 750,
+      "runLevelBillingStatus": "PROVISIONALLY_RECONCILED",
+      "endpointLevelBillingStatus": "NOT_RECONCILED"
+    }
+  ],
+  "runLevelBillingStatus": "PROVISIONALLY_RECONCILED",
+  "endpointLevelBillingStatus": "NOT_RECONCILED",
+  "ledger": [
+    {
+      "symbol": "AAPL",
+      "sector": "Information Technology",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "ABT",
+      "sector": "Health Care",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "ACN",
+      "sector": "Information Technology",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "ADI",
+      "sector": "Information Technology",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "ADP",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175355Z-be763adcfa24",
+      "sourceReportSha256": "E631B056BB023CAF7C7EA1D3CB5445872EE1BC297C3B8721ACC40C0CDCF097B5",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "AEP",
+      "sector": "Utilities",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175355Z-be763adcfa24",
+      "sourceReportSha256": "E631B056BB023CAF7C7EA1D3CB5445872EE1BC297C3B8721ACC40C0CDCF097B5",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "AMAT",
+      "sector": "Information Technology",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "AMZN",
+      "sector": "Consumer Discretionary",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "APD",
+      "sector": "Materials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "AVGO",
+      "sector": "Information Technology",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175355Z-be763adcfa24",
+      "sourceReportSha256": "E631B056BB023CAF7C7EA1D3CB5445872EE1BC297C3B8721ACC40C0CDCF097B5",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "AVY",
+      "sector": "Materials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "AZO",
+      "sector": "Consumer Discretionary",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "BDX",
+      "sector": "Health Care",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "BMY",
+      "sector": "Health Care",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "BSX",
+      "sector": "Health Care",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "CAH",
+      "sector": "Health Care",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "CALM",
+      "sector": "Consumer Staples",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "CAT",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "CL",
+      "sector": "Consumer Staples",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "CMCSA",
+      "sector": "Communication Services",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175355Z-be763adcfa24",
+      "sourceReportSha256": "E631B056BB023CAF7C7EA1D3CB5445872EE1BC297C3B8721ACC40C0CDCF097B5",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "CMI",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "CMS",
+      "sector": "Utilities",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "COR",
+      "sector": "Health Care",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "COST",
+      "sector": "Consumer Staples",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "CROX",
+      "sector": "Consumer Discretionary",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "CSCO",
+      "sector": "Information Technology",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "DE",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "DHI",
+      "sector": "Consumer Discretionary",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "DIS",
+      "sector": "Communication Services",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "DUK",
+      "sector": "Utilities",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "EA",
+      "sector": "Communication Services",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "ECL",
+      "sector": "Materials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "ED",
+      "sector": "Utilities",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "ELF",
+      "sector": "Consumer Discretionary",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "EMR",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "ETN",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "EW",
+      "sector": "Health Care",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "EXC",
+      "sector": "Utilities",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "EXPO",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T174805Z-516116490045",
+      "sourceReportSha256": "3081F6B1F9AEC51BF70A988B3BAE8895D71AC10894BB6F4D35D6242DCFE46CFC",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "FAST",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "FIX",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "GD",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "GIS",
+      "sector": "Consumer Staples",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "GOOGL",
+      "sector": "Communication Services",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "GWW",
+      "sector": "Industrials",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "HD",
+      "sector": "Consumer Discretionary",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "HON",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "HSIC",
+      "sector": "Health Care",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "HSY",
+      "sector": "Consumer Staples",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "HWKN",
+      "sector": "Materials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "IBM",
+      "sector": "Information Technology",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "INTU",
+      "sector": "Information Technology",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "ISRG",
+      "sector": "Health Care",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175355Z-be763adcfa24",
+      "sourceReportSha256": "E631B056BB023CAF7C7EA1D3CB5445872EE1BC297C3B8721ACC40C0CDCF097B5",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "ITW",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "JNJ",
+      "sector": "Health Care",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "KLAC",
+      "sector": "Information Technology",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "KMB",
+      "sector": "Consumer Staples",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "KO",
+      "sector": "Consumer Staples",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "KR",
+      "sector": "Consumer Staples",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "LANC",
+      "sector": "Consumer Staples",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T173753Z-079c976fda3f",
+      "sourceReportSha256": "E2BA494C22EC480712221D8D948468E2E6A383CF2612D014052280FC41521EB7",
+      "status": "FAIL",
+      "reasonCodes": [
+        "SEC_TICKER_CIK_NOT_FOUND"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "LEN",
+      "sector": "Consumer Discretionary",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "LIN",
+      "sector": "Materials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "LMT",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "LOW",
+      "sector": "Consumer Discretionary",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "LRCX",
+      "sector": "Information Technology",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "MCD",
+      "sector": "Consumer Discretionary",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "MCHP",
+      "sector": "Information Technology",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "MCK",
+      "sector": "Health Care",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "MDLZ",
+      "sector": "Consumer Staples",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175355Z-be763adcfa24",
+      "sourceReportSha256": "E631B056BB023CAF7C7EA1D3CB5445872EE1BC297C3B8721ACC40C0CDCF097B5",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "MDT",
+      "sector": "Health Care",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "META",
+      "sector": "Communication Services",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "MLM",
+      "sector": "Materials",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "MRK",
+      "sector": "Health Care",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "MSFT",
+      "sector": "Information Technology",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "NEE",
+      "sector": "Utilities",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "NFLX",
+      "sector": "Communication Services",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "NKE",
+      "sector": "Consumer Discretionary",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "NOC",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "NVDA",
+      "sector": "Information Technology",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T174805Z-516116490045",
+      "sourceReportSha256": "3081F6B1F9AEC51BF70A988B3BAE8895D71AC10894BB6F4D35D6242DCFE46CFC",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "OLED",
+      "sector": "Information Technology",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "OMC",
+      "sector": "Communication Services",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "ORCL",
+      "sector": "Information Technology",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "ORLY",
+      "sector": "Consumer Discretionary",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "PCAR",
+      "sector": "Industrials",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "PEP",
+      "sector": "Consumer Staples",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_PITAVAILABILITY",
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "PFE",
+      "sector": "Health Care",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "PG",
+      "sector": "Consumer Staples",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "PH",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "PKG",
+      "sector": "Materials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "PLAB",
+      "sector": "Information Technology",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "PPG",
+      "sector": "Materials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "QCOM",
+      "sector": "Information Technology",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "ROK",
+      "sector": "Industrials",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "ROST",
+      "sector": "Consumer Discretionary",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "RTX",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "SAIA",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "SBUX",
+      "sector": "Consumer Discretionary",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175355Z-be763adcfa24",
+      "sourceReportSha256": "E631B056BB023CAF7C7EA1D3CB5445872EE1BC297C3B8721ACC40C0CDCF097B5",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "SHW",
+      "sector": "Materials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "SO",
+      "sector": "Utilities",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "SRE",
+      "sector": "Utilities",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "SYK",
+      "sector": "Health Care",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "SYY",
+      "sector": "Consumer Staples",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "T",
+      "sector": "Communication Services",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "TGT",
+      "sector": "Consumer Discretionary",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "TJX",
+      "sector": "Consumer Discretionary",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "TMO",
+      "sector": "Health Care",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "TMUS",
+      "sector": "Communication Services",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "TTC",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "TXN",
+      "sector": "Information Technology",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175355Z-be763adcfa24",
+      "sourceReportSha256": "E631B056BB023CAF7C7EA1D3CB5445872EE1BC297C3B8721ACC40C0CDCF097B5",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "UFPI",
+      "sector": "Materials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175355Z-be763adcfa24",
+      "sourceReportSha256": "E631B056BB023CAF7C7EA1D3CB5445872EE1BC297C3B8721ACC40C0CDCF097B5",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "UNP",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "UPS",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "VMC",
+      "sector": "Materials",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "VZ",
+      "sector": "Communication Services",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T173753Z-079c976fda3f",
+      "sourceReportSha256": "E2BA494C22EC480712221D8D948468E2E6A383CF2612D014052280FC41521EB7",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "WDFC",
+      "sector": "Materials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "WM",
+      "sector": "Industrials",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "WMT",
+      "sector": "Consumer Staples",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "XEL",
+      "sector": "Utilities",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "YUM",
+      "sector": "Consumer Discretionary",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "ZBH",
+      "sector": "Health Care",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    }
+  ],
+  "passRecords": [
+    {
+      "symbol": "AAPL",
+      "sector": "Information Technology",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "ACN",
+      "sector": "Information Technology",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "ADI",
+      "sector": "Information Technology",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "ADP",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175355Z-be763adcfa24",
+      "sourceReportSha256": "E631B056BB023CAF7C7EA1D3CB5445872EE1BC297C3B8721ACC40C0CDCF097B5",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "AEP",
+      "sector": "Utilities",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175355Z-be763adcfa24",
+      "sourceReportSha256": "E631B056BB023CAF7C7EA1D3CB5445872EE1BC297C3B8721ACC40C0CDCF097B5",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "AMAT",
+      "sector": "Information Technology",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "AMZN",
+      "sector": "Consumer Discretionary",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "APD",
+      "sector": "Materials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "AVGO",
+      "sector": "Information Technology",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175355Z-be763adcfa24",
+      "sourceReportSha256": "E631B056BB023CAF7C7EA1D3CB5445872EE1BC297C3B8721ACC40C0CDCF097B5",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "AVY",
+      "sector": "Materials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "BDX",
+      "sector": "Health Care",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "BMY",
+      "sector": "Health Care",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "BSX",
+      "sector": "Health Care",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "CALM",
+      "sector": "Consumer Staples",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "CAT",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "CL",
+      "sector": "Consumer Staples",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "CMCSA",
+      "sector": "Communication Services",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175355Z-be763adcfa24",
+      "sourceReportSha256": "E631B056BB023CAF7C7EA1D3CB5445872EE1BC297C3B8721ACC40C0CDCF097B5",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "CMI",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "CMS",
+      "sector": "Utilities",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "COR",
+      "sector": "Health Care",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "CROX",
+      "sector": "Consumer Discretionary",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "CSCO",
+      "sector": "Information Technology",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "DE",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "DHI",
+      "sector": "Consumer Discretionary",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "DIS",
+      "sector": "Communication Services",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "DUK",
+      "sector": "Utilities",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "EA",
+      "sector": "Communication Services",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "ECL",
+      "sector": "Materials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "ED",
+      "sector": "Utilities",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "ELF",
+      "sector": "Consumer Discretionary",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "EMR",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "ETN",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "EXC",
+      "sector": "Utilities",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "FAST",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "FIX",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "GD",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "GIS",
+      "sector": "Consumer Staples",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "GOOGL",
+      "sector": "Communication Services",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "GWW",
+      "sector": "Industrials",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "HD",
+      "sector": "Consumer Discretionary",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "HON",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "HSY",
+      "sector": "Consumer Staples",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "HWKN",
+      "sector": "Materials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "IBM",
+      "sector": "Information Technology",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "ISRG",
+      "sector": "Health Care",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175355Z-be763adcfa24",
+      "sourceReportSha256": "E631B056BB023CAF7C7EA1D3CB5445872EE1BC297C3B8721ACC40C0CDCF097B5",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "ITW",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "JNJ",
+      "sector": "Health Care",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "KMB",
+      "sector": "Consumer Staples",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "KO",
+      "sector": "Consumer Staples",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "LEN",
+      "sector": "Consumer Discretionary",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "LIN",
+      "sector": "Materials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "LMT",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "LOW",
+      "sector": "Consumer Discretionary",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "LRCX",
+      "sector": "Information Technology",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "MCD",
+      "sector": "Consumer Discretionary",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "MCK",
+      "sector": "Health Care",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "MDLZ",
+      "sector": "Consumer Staples",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175355Z-be763adcfa24",
+      "sourceReportSha256": "E631B056BB023CAF7C7EA1D3CB5445872EE1BC297C3B8721ACC40C0CDCF097B5",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "META",
+      "sector": "Communication Services",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "MLM",
+      "sector": "Materials",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "MRK",
+      "sector": "Health Care",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "MSFT",
+      "sector": "Information Technology",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "NFLX",
+      "sector": "Communication Services",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "NKE",
+      "sector": "Consumer Discretionary",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "NOC",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "NVDA",
+      "sector": "Information Technology",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T174805Z-516116490045",
+      "sourceReportSha256": "3081F6B1F9AEC51BF70A988B3BAE8895D71AC10894BB6F4D35D6242DCFE46CFC",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "OLED",
+      "sector": "Information Technology",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "OMC",
+      "sector": "Communication Services",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "ORCL",
+      "sector": "Information Technology",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "ORLY",
+      "sector": "Consumer Discretionary",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "PFE",
+      "sector": "Health Care",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "PG",
+      "sector": "Consumer Staples",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "PH",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "PLAB",
+      "sector": "Information Technology",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "PPG",
+      "sector": "Materials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "QCOM",
+      "sector": "Information Technology",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "ROK",
+      "sector": "Industrials",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "ROST",
+      "sector": "Consumer Discretionary",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "RTX",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "SAIA",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "SBUX",
+      "sector": "Consumer Discretionary",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175355Z-be763adcfa24",
+      "sourceReportSha256": "E631B056BB023CAF7C7EA1D3CB5445872EE1BC297C3B8721ACC40C0CDCF097B5",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "SHW",
+      "sector": "Materials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "SO",
+      "sector": "Utilities",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "SRE",
+      "sector": "Utilities",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "SYK",
+      "sector": "Health Care",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "SYY",
+      "sector": "Consumer Staples",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "T",
+      "sector": "Communication Services",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "TGT",
+      "sector": "Consumer Discretionary",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "TJX",
+      "sector": "Consumer Discretionary",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "TMUS",
+      "sector": "Communication Services",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "TTC",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "UFPI",
+      "sector": "Materials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175355Z-be763adcfa24",
+      "sourceReportSha256": "E631B056BB023CAF7C7EA1D3CB5445872EE1BC297C3B8721ACC40C0CDCF097B5",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "UNP",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "UPS",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "VMC",
+      "sector": "Materials",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "WDFC",
+      "sector": "Materials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "WM",
+      "sector": "Industrials",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "WMT",
+      "sector": "Consumer Staples",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "XEL",
+      "sector": "Utilities",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175552Z-925cd46d35ff",
+      "sourceReportSha256": "E839EE59C6B7C9D05AD97D2139EB1B94E25A201E0BB7A0F76902900CA3A6A277",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "YUM",
+      "sector": "Consumer Discretionary",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "ZBH",
+      "sector": "Health Care",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PASS",
+      "reasonCodes": [],
+      "liveConfirmed": true
+    }
+  ],
+  "unresolvedRecords": [
+    {
+      "symbol": "ABT",
+      "sector": "Health Care",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "AZO",
+      "sector": "Consumer Discretionary",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "CAH",
+      "sector": "Health Care",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "COST",
+      "sector": "Consumer Staples",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "EW",
+      "sector": "Health Care",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "EXPO",
+      "sector": "Industrials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T174805Z-516116490045",
+      "sourceReportSha256": "3081F6B1F9AEC51BF70A988B3BAE8895D71AC10894BB6F4D35D6242DCFE46CFC",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "HSIC",
+      "sector": "Health Care",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "INTU",
+      "sector": "Information Technology",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "KLAC",
+      "sector": "Information Technology",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "KR",
+      "sector": "Consumer Staples",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "LANC",
+      "sector": "Consumer Staples",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T173753Z-079c976fda3f",
+      "sourceReportSha256": "E2BA494C22EC480712221D8D948468E2E6A383CF2612D014052280FC41521EB7",
+      "status": "FAIL",
+      "reasonCodes": [
+        "SEC_TICKER_CIK_NOT_FOUND"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "MCHP",
+      "sector": "Information Technology",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "MDT",
+      "sector": "Health Care",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "NEE",
+      "sector": "Utilities",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "PCAR",
+      "sector": "Industrials",
+      "candidateRole": "RESERVE",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "PEP",
+      "sector": "Consumer Staples",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_PITAVAILABILITY",
+        "MISSING_REQUIREDRATINGFIELDS"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "PKG",
+      "sector": "Materials",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "TMO",
+      "sector": "Health Care",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T074150Z-50407538afa9",
+      "sourceReportSha256": "47DD2B16254E7E3C02C6543B0B5662B0DAF053313EA57DDF5971921CE9BDFCF9",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "TXN",
+      "sector": "Information Technology",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T175355Z-be763adcfa24",
+      "sourceReportSha256": "E631B056BB023CAF7C7EA1D3CB5445872EE1BC297C3B8721ACC40C0CDCF097B5",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "liveConfirmed": true
+    },
+    {
+      "symbol": "VZ",
+      "sector": "Communication Services",
+      "candidateRole": "PRIMARY",
+      "sourceRunId": "20260727T173753Z-079c976fda3f",
+      "sourceReportSha256": "E2BA494C22EC480712221D8D948468E2E6A383CF2612D014052280FC41521EB7",
+      "status": "PARTIAL",
+      "reasonCodes": [
+        "MISSING_PITAVAILABILITY"
+      ],
+      "liveConfirmed": true
+    }
+  ],
+  "uniquePassCount": 100,
+  "aggregateGateStatus": "PASS",
+  "passShortfall": 0,
+  "artifactContentHash": "BB4C5D940359354DF377D9C6375B756969352D6BE69AA3FC535EEEC7812599FF"
+}

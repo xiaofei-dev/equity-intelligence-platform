@@ -1,0 +1,33 @@
+{
+  "artifactType": "FORMULA_READY_BACKFILL_SAFETY_CANARY_BILLING_RECONCILIATION",
+  "schemaVersion": "formula-ready-backfill-safety-canary-billing-v1.0.0",
+  "artifactRunId": "20260727T205812Z-fd5ce580bdba",
+  "canaryRunId": "20260727T204539Z-5dd84ab67acf",
+  "failureArtifactPath": "docs/generated/formula-ready-backfill-20260727T204657Z-f411e80f51a6-safety-canary-failure.json",
+  "failureArtifactSha256": "88646E15AE6158C68EBF18329782490588C084D162BE198AC155D595405D7302",
+  "dashboardBefore": 21691,
+  "dashboardAfter": 21712,
+  "observedProviderBilledDelta": 21,
+  "provisionalProviderBilling": 25,
+  "providerBilledSafetyCeiling": 38,
+  "withinProvisionalBudget": true,
+  "withinSafetyCeiling": true,
+  "runLevelBillingStatus": "PROVISIONALLY_RECONCILED",
+  "endpointLevelBillingStatus": "NOT_RECONCILED",
+  "physicalAttempts": {
+    "eodhd": 3,
+    "sec": 1,
+    "total": 4,
+    "retries": 0
+  },
+  "configuredWeights": {
+    "eodhd": 12,
+    "sec": 1
+  },
+  "billingCaveat": "The dashboard does not identify provider billing by endpoint. No endpoint cost is inferred from the observed aggregate delta.",
+  "objectiveRatingExecuted": false,
+  "forwardValidationExecuted": false,
+  "credentialsIncluded": false,
+  "licensedValuesIncluded": false,
+  "artifactContentHash": "6A90D301C6D344B223F09F9A435A78287F6CABCEF7235C5AEA8EA422D9FA3664"
+}

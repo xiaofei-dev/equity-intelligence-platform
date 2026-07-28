@@ -1,0 +1,122 @@
+{
+  "artifactType": "SCORING_INPUT_V2_CANARY_FORMULA_COVERAGE",
+  "schemaVersion": "formula-scoring-input-coverage-v1.0.0",
+  "runId": "20260727T200022Z-190272fd2019",
+  "generatedAt": "2026-07-27T20:02:58.921603Z",
+  "sourceReportPath": "docs/generated/scoring-input-backfill-20260727T200022Z-190272fd2019.json",
+  "sourceReportSha256": "CC6E05A5FC5F99AD69DBAD8BC2BF6D8DD9E32DDBC3593D2BFA3D0EF9038F90BB",
+  "sourceManifestPath": "docs/generated/scoring-input-backfill-20260727T200022Z-190272fd2019-manifest.json",
+  "sourceManifestSha256": "6B835579F8DBD4A4CB60A16472391E481C976E1404D8180CFD62783B3825F2EE",
+  "networkRequestsExecutedDuringCoverageAnalysis": false,
+  "physicalAttempts": {
+    "fundamentals": 3,
+    "eod": 3,
+    "historicalMarketCap": 3,
+    "total": 9
+  },
+  "configuredLocalWeights": 36,
+  "retries": 0,
+  "formulaReadyCount": 0,
+  "insufficientCount": 3,
+  "securities": [
+    {
+      "symbol": "AAPL",
+      "status": "INSUFFICIENT_DATA",
+      "missingFormulaFields": [
+        "diluted_weighted_average_shares"
+      ],
+      "quarterlyFieldCounts": {
+        "capital_expenditure": 8,
+        "cash_and_equivalents": 8,
+        "ebitda": 8,
+        "gross_profit": 8,
+        "income_tax": 8,
+        "interest_expense": 1,
+        "long_term_debt": 8,
+        "net_income": 16,
+        "operating_cash_flow": 8,
+        "operating_income": 8,
+        "pretax_income": 8,
+        "revenue": 8,
+        "shares_outstanding": 8,
+        "stockholders_equity": 8,
+        "total_assets": 8,
+        "total_debt": 8,
+        "total_liabilities": 8
+      },
+      "marketCapitalizationObservationCount": 262,
+      "dailyPriceObservationCount": 1648,
+      "payloadHash": "6BD99A3CCBE40E0E20CEB7D2050C2638A726B8160F2D45E9279DA9FBE5652ED2",
+      "formulaReady": false,
+      "additionalReasonCodes": [
+        "INSUFFICIENT_QUARTERLY_INTEREST_EXPENSE_HISTORY"
+      ]
+    },
+    {
+      "symbol": "CAT",
+      "status": "INSUFFICIENT_DATA",
+      "missingFormulaFields": [
+        "diluted_weighted_average_shares"
+      ],
+      "quarterlyFieldCounts": {
+        "capital_expenditure": 8,
+        "cash_and_equivalents": 8,
+        "ebitda": 8,
+        "gross_profit": 8,
+        "income_tax": 8,
+        "interest_expense": 8,
+        "long_term_debt": 8,
+        "net_income": 16,
+        "operating_cash_flow": 8,
+        "operating_income": 8,
+        "pretax_income": 8,
+        "revenue": 8,
+        "shares_outstanding": 8,
+        "stockholders_equity": 8,
+        "total_assets": 8,
+        "total_debt": 8,
+        "total_liabilities": 8
+      },
+      "marketCapitalizationObservationCount": 261,
+      "dailyPriceObservationCount": 1648,
+      "payloadHash": "FCF108256A724E55DA9CB6B11657EB28BA56A098A9850D749871CFD7578299D9",
+      "formulaReady": false,
+      "additionalReasonCodes": []
+    },
+    {
+      "symbol": "JNJ",
+      "status": "INSUFFICIENT_DATA",
+      "missingFormulaFields": [
+        "diluted_weighted_average_shares"
+      ],
+      "quarterlyFieldCounts": {
+        "capital_expenditure": 8,
+        "cash_and_equivalents": 8,
+        "ebitda": 8,
+        "gross_profit": 8,
+        "income_tax": 8,
+        "interest_expense": 8,
+        "long_term_debt": 8,
+        "net_income": 16,
+        "operating_cash_flow": 8,
+        "operating_income": 8,
+        "pretax_income": 8,
+        "revenue": 8,
+        "shares_outstanding": 8,
+        "stockholders_equity": 8,
+        "total_assets": 8,
+        "total_debt": 8,
+        "total_liabilities": 8
+      },
+      "marketCapitalizationObservationCount": 261,
+      "dailyPriceObservationCount": 1648,
+      "payloadHash": "03C899E0E1E45465288DDCEAB10A189DDE202BC1539AEC53D8C59B4C4B529675",
+      "formulaReady": false,
+      "additionalReasonCodes": []
+    }
+  ],
+  "gateDecision": "STOP_PROVIDER_CAPABILITY_GAP",
+  "objectiveRatingExecuted": false,
+  "licensedValuesIncluded": false,
+  "artifactContentHash": "A96DFEF770C3FAC29998B739091E571AB964B288F4B4CE3F30951A66249A09B6"
+}

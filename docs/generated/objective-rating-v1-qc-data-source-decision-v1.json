@@ -1,0 +1,577 @@
+{
+  "artifactType": "OBJECTIVE_RATING_V1_QC_DATA_SOURCE_DECISION",
+  "schemaVersion": "objective-rating-v1-qc-data-source-decision-v1",
+  "decisionVersion": "objective-rating-v1-qc-data-source-decision-v1.0.0",
+  "sourceArtifacts": {
+    "currentFactorManifest": {
+      "path": "../docs/generated/objective-rating-v1-current-factor-input-manifest-v1-7.json",
+      "fileSha256": "AA70CECE3A24C4E127F20BA063A4AD9FC704394E94124064F482A933A7A38F5B",
+      "artifactContentHash": "84541167D9E45C966538388E3CF82C1B3D31A466E098626FADE9504A88C8B6F1"
+    },
+    "residualEvidencePlan": {
+      "path": "../docs/generated/objective-rating-v1-qc-residual-evidence-plan-v1.json",
+      "fileSha256": "8E2E3E6821721711AE32B46CE6B256818B7DAADEF7A5AB61F390E6D1EBE967A5",
+      "artifactContentHash": "AE2D097570E78BBEBBF8D1DE13837AA1C03626002D886032C84AA05701622A20"
+    }
+  },
+  "reassemblyDecision": {
+    "status": "ACCEPTED_METHOD_CONFORMANT_COHORT_INSUFFICIENT",
+    "currentQcInputReadyCount": 6,
+    "minimumRequired": 20,
+    "additionalConflictFreeSecuritiesRequired": 14,
+    "boundedYahooTtcBestCaseReadyCount": 7,
+    "algorithmGateAuthorized": false
+  },
+  "residualTargetSymbols": [
+    "TTC",
+    "AVGO",
+    "HRL",
+    "GPC",
+    "DOV",
+    "BDX",
+    "APD",
+    "ROK",
+    "ADSK",
+    "AMD",
+    "APH",
+    "BF-B",
+    "BLDR",
+    "CNC"
+  ],
+  "uniqueResidualOperandSecurityCounts": {
+    "capital_expenditure_ttm": 1,
+    "diluted_eps_three_year_prior": 2,
+    "diluted_weighted_average_shares_current": 6,
+    "ebit_ttm": 8,
+    "eight_aligned_discrete_fcf_margins": 6,
+    "eight_aligned_discrete_operating_margins": 6,
+    "fcf_per_diluted_share_current": 10,
+    "fcf_per_diluted_share_three_year_prior": 1,
+    "fcf_ttm": 4,
+    "gross_margin_three_year_change": 9,
+    "income_tax_ttm": 6,
+    "interest_expense_ttm": 14,
+    "net_income_ttm": 7,
+    "operating_cash_flow_ttm": 3,
+    "operating_income_ttm": 8,
+    "operating_margin_three_year_change": 9,
+    "operating_margin_ttm": 8,
+    "pretax_income_ttm": 7
+  },
+  "primitiveRequirementsBySymbol": [
+    {
+      "symbol": "TTC",
+      "residualOperands": [
+        "diluted_eps_three_year_prior",
+        "interest_expense_ttm"
+      ],
+      "minimumSourceRequirements": [
+        "current_ttm:interestExpense",
+        "historical_ttm:dilutedEps"
+      ]
+    },
+    {
+      "symbol": "AVGO",
+      "residualOperands": [
+        "diluted_eps_three_year_prior",
+        "interest_expense_ttm",
+        "net_income_ttm"
+      ],
+      "minimumSourceRequirements": [
+        "current_ttm:interestExpense",
+        "current_ttm:netIncome",
+        "historical_ttm:dilutedEps"
+      ]
+    },
+    {
+      "symbol": "HRL",
+      "residualOperands": [
+        "eight_aligned_discrete_fcf_margins",
+        "eight_aligned_discrete_operating_margins",
+        "gross_margin_three_year_change",
+        "interest_expense_ttm",
+        "operating_margin_three_year_change"
+      ],
+      "minimumSourceRequirements": [
+        "current_ttm:interestExpense",
+        "eight_explicit_3m:capitalExpenditures",
+        "eight_explicit_3m:operatingIncome",
+        "eight_explicit_3m:totalCashFromOperatingActivities",
+        "eight_explicit_3m:totalRevenue",
+        "historical_ttm:grossProfit",
+        "historical_ttm:operatingIncome",
+        "historical_ttm:totalRevenue"
+      ]
+    },
+    {
+      "symbol": "GPC",
+      "residualOperands": [
+        "ebit_ttm",
+        "eight_aligned_discrete_fcf_margins",
+        "eight_aligned_discrete_operating_margins",
+        "interest_expense_ttm",
+        "operating_income_ttm",
+        "operating_margin_three_year_change",
+        "operating_margin_ttm"
+      ],
+      "minimumSourceRequirements": [
+        "current_ttm:interestExpense",
+        "current_ttm:operatingIncome",
+        "current_ttm:totalRevenue",
+        "eight_explicit_3m:capitalExpenditures",
+        "eight_explicit_3m:operatingIncome",
+        "eight_explicit_3m:totalCashFromOperatingActivities",
+        "eight_explicit_3m:totalRevenue",
+        "historical_ttm:operatingIncome",
+        "historical_ttm:totalRevenue"
+      ]
+    },
+    {
+      "symbol": "DOV",
+      "residualOperands": [
+        "eight_aligned_discrete_fcf_margins",
+        "eight_aligned_discrete_operating_margins",
+        "fcf_per_diluted_share_current",
+        "fcf_ttm",
+        "interest_expense_ttm",
+        "operating_cash_flow_ttm",
+        "pretax_income_ttm"
+      ],
+      "minimumSourceRequirements": [
+        "current_ttm:capitalExpenditures",
+        "current_ttm:dilutedWeightedAverageShares",
+        "current_ttm:incomeBeforeTax",
+        "current_ttm:interestExpense",
+        "current_ttm:totalCashFromOperatingActivities",
+        "eight_explicit_3m:capitalExpenditures",
+        "eight_explicit_3m:operatingIncome",
+        "eight_explicit_3m:totalCashFromOperatingActivities",
+        "eight_explicit_3m:totalRevenue"
+      ]
+    },
+    {
+      "symbol": "BDX",
+      "residualOperands": [
+        "eight_aligned_discrete_fcf_margins",
+        "eight_aligned_discrete_operating_margins",
+        "fcf_per_diluted_share_current",
+        "fcf_ttm",
+        "gross_margin_three_year_change",
+        "interest_expense_ttm",
+        "operating_cash_flow_ttm"
+      ],
+      "minimumSourceRequirements": [
+        "current_ttm:capitalExpenditures",
+        "current_ttm:dilutedWeightedAverageShares",
+        "current_ttm:interestExpense",
+        "current_ttm:totalCashFromOperatingActivities",
+        "eight_explicit_3m:capitalExpenditures",
+        "eight_explicit_3m:operatingIncome",
+        "eight_explicit_3m:totalCashFromOperatingActivities",
+        "eight_explicit_3m:totalRevenue",
+        "historical_ttm:grossProfit",
+        "historical_ttm:totalRevenue"
+      ]
+    },
+    {
+      "symbol": "APD",
+      "residualOperands": [
+        "eight_aligned_discrete_fcf_margins",
+        "eight_aligned_discrete_operating_margins",
+        "fcf_per_diluted_share_current",
+        "fcf_per_diluted_share_three_year_prior",
+        "fcf_ttm",
+        "gross_margin_three_year_change",
+        "interest_expense_ttm",
+        "operating_cash_flow_ttm"
+      ],
+      "minimumSourceRequirements": [
+        "current_ttm:capitalExpenditures",
+        "current_ttm:dilutedWeightedAverageShares",
+        "current_ttm:interestExpense",
+        "current_ttm:totalCashFromOperatingActivities",
+        "eight_explicit_3m:capitalExpenditures",
+        "eight_explicit_3m:operatingIncome",
+        "eight_explicit_3m:totalCashFromOperatingActivities",
+        "eight_explicit_3m:totalRevenue",
+        "historical_ttm:capitalExpenditures",
+        "historical_ttm:dilutedWeightedAverageShares",
+        "historical_ttm:grossProfit",
+        "historical_ttm:totalCashFromOperatingActivities",
+        "historical_ttm:totalRevenue"
+      ]
+    },
+    {
+      "symbol": "ROK",
+      "residualOperands": [
+        "capital_expenditure_ttm",
+        "ebit_ttm",
+        "eight_aligned_discrete_fcf_margins",
+        "eight_aligned_discrete_operating_margins",
+        "fcf_per_diluted_share_current",
+        "fcf_ttm",
+        "interest_expense_ttm",
+        "operating_income_ttm",
+        "operating_margin_three_year_change",
+        "operating_margin_ttm"
+      ],
+      "minimumSourceRequirements": [
+        "current_ttm:capitalExpenditures",
+        "current_ttm:dilutedWeightedAverageShares",
+        "current_ttm:interestExpense",
+        "current_ttm:operatingIncome",
+        "current_ttm:totalCashFromOperatingActivities",
+        "current_ttm:totalRevenue",
+        "eight_explicit_3m:capitalExpenditures",
+        "eight_explicit_3m:operatingIncome",
+        "eight_explicit_3m:totalCashFromOperatingActivities",
+        "eight_explicit_3m:totalRevenue",
+        "historical_ttm:operatingIncome",
+        "historical_ttm:totalRevenue"
+      ]
+    },
+    {
+      "symbol": "ADSK",
+      "residualOperands": [
+        "diluted_weighted_average_shares_current",
+        "ebit_ttm",
+        "fcf_per_diluted_share_current",
+        "gross_margin_three_year_change",
+        "income_tax_ttm",
+        "interest_expense_ttm",
+        "net_income_ttm",
+        "operating_income_ttm",
+        "operating_margin_three_year_change",
+        "operating_margin_ttm",
+        "pretax_income_ttm"
+      ],
+      "minimumSourceRequirements": [
+        "current_ttm:capitalExpenditures",
+        "current_ttm:dilutedWeightedAverageShares",
+        "current_ttm:incomeBeforeTax",
+        "current_ttm:incomeTaxExpense",
+        "current_ttm:interestExpense",
+        "current_ttm:netIncome",
+        "current_ttm:operatingIncome",
+        "current_ttm:totalCashFromOperatingActivities",
+        "current_ttm:totalRevenue",
+        "historical_ttm:grossProfit",
+        "historical_ttm:operatingIncome",
+        "historical_ttm:totalRevenue"
+      ]
+    },
+    {
+      "symbol": "AMD",
+      "residualOperands": [
+        "diluted_weighted_average_shares_current",
+        "ebit_ttm",
+        "fcf_per_diluted_share_current",
+        "gross_margin_three_year_change",
+        "income_tax_ttm",
+        "interest_expense_ttm",
+        "net_income_ttm",
+        "operating_income_ttm",
+        "operating_margin_three_year_change",
+        "operating_margin_ttm",
+        "pretax_income_ttm"
+      ],
+      "minimumSourceRequirements": [
+        "current_ttm:capitalExpenditures",
+        "current_ttm:dilutedWeightedAverageShares",
+        "current_ttm:incomeBeforeTax",
+        "current_ttm:incomeTaxExpense",
+        "current_ttm:interestExpense",
+        "current_ttm:netIncome",
+        "current_ttm:operatingIncome",
+        "current_ttm:totalCashFromOperatingActivities",
+        "current_ttm:totalRevenue",
+        "historical_ttm:grossProfit",
+        "historical_ttm:operatingIncome",
+        "historical_ttm:totalRevenue"
+      ]
+    },
+    {
+      "symbol": "APH",
+      "residualOperands": [
+        "diluted_weighted_average_shares_current",
+        "ebit_ttm",
+        "fcf_per_diluted_share_current",
+        "gross_margin_three_year_change",
+        "income_tax_ttm",
+        "interest_expense_ttm",
+        "net_income_ttm",
+        "operating_income_ttm",
+        "operating_margin_three_year_change",
+        "operating_margin_ttm",
+        "pretax_income_ttm"
+      ],
+      "minimumSourceRequirements": [
+        "current_ttm:capitalExpenditures",
+        "current_ttm:dilutedWeightedAverageShares",
+        "current_ttm:incomeBeforeTax",
+        "current_ttm:incomeTaxExpense",
+        "current_ttm:interestExpense",
+        "current_ttm:netIncome",
+        "current_ttm:operatingIncome",
+        "current_ttm:totalCashFromOperatingActivities",
+        "current_ttm:totalRevenue",
+        "historical_ttm:grossProfit",
+        "historical_ttm:operatingIncome",
+        "historical_ttm:totalRevenue"
+      ]
+    },
+    {
+      "symbol": "BF-B",
+      "residualOperands": [
+        "diluted_weighted_average_shares_current",
+        "ebit_ttm",
+        "fcf_per_diluted_share_current",
+        "gross_margin_three_year_change",
+        "income_tax_ttm",
+        "interest_expense_ttm",
+        "net_income_ttm",
+        "operating_income_ttm",
+        "operating_margin_three_year_change",
+        "operating_margin_ttm",
+        "pretax_income_ttm"
+      ],
+      "minimumSourceRequirements": [
+        "current_ttm:capitalExpenditures",
+        "current_ttm:dilutedWeightedAverageShares",
+        "current_ttm:incomeBeforeTax",
+        "current_ttm:incomeTaxExpense",
+        "current_ttm:interestExpense",
+        "current_ttm:netIncome",
+        "current_ttm:operatingIncome",
+        "current_ttm:totalCashFromOperatingActivities",
+        "current_ttm:totalRevenue",
+        "historical_ttm:grossProfit",
+        "historical_ttm:operatingIncome",
+        "historical_ttm:totalRevenue"
+      ]
+    },
+    {
+      "symbol": "BLDR",
+      "residualOperands": [
+        "diluted_weighted_average_shares_current",
+        "ebit_ttm",
+        "fcf_per_diluted_share_current",
+        "gross_margin_three_year_change",
+        "income_tax_ttm",
+        "interest_expense_ttm",
+        "net_income_ttm",
+        "operating_income_ttm",
+        "operating_margin_three_year_change",
+        "operating_margin_ttm",
+        "pretax_income_ttm"
+      ],
+      "minimumSourceRequirements": [
+        "current_ttm:capitalExpenditures",
+        "current_ttm:dilutedWeightedAverageShares",
+        "current_ttm:incomeBeforeTax",
+        "current_ttm:incomeTaxExpense",
+        "current_ttm:interestExpense",
+        "current_ttm:netIncome",
+        "current_ttm:operatingIncome",
+        "current_ttm:totalCashFromOperatingActivities",
+        "current_ttm:totalRevenue",
+        "historical_ttm:grossProfit",
+        "historical_ttm:operatingIncome",
+        "historical_ttm:totalRevenue"
+      ]
+    },
+    {
+      "symbol": "CNC",
+      "residualOperands": [
+        "diluted_weighted_average_shares_current",
+        "ebit_ttm",
+        "fcf_per_diluted_share_current",
+        "gross_margin_three_year_change",
+        "income_tax_ttm",
+        "interest_expense_ttm",
+        "net_income_ttm",
+        "operating_income_ttm",
+        "operating_margin_three_year_change",
+        "operating_margin_ttm",
+        "pretax_income_ttm"
+      ],
+      "minimumSourceRequirements": [
+        "current_ttm:capitalExpenditures",
+        "current_ttm:dilutedWeightedAverageShares",
+        "current_ttm:incomeBeforeTax",
+        "current_ttm:incomeTaxExpense",
+        "current_ttm:interestExpense",
+        "current_ttm:netIncome",
+        "current_ttm:operatingIncome",
+        "current_ttm:totalCashFromOperatingActivities",
+        "current_ttm:totalRevenue",
+        "historical_ttm:grossProfit",
+        "historical_ttm:operatingIncome",
+        "historical_ttm:totalRevenue"
+      ]
+    }
+  ],
+  "smallestDataSourceRequirements": [
+    {
+      "requirementId": "EXPLICIT_DURATION_CONTRACT",
+      "minimumRequirement": "For each quarterly and yearly duration value: periodStart, periodEnd, explicit 3M/YTD/12M/TTM classification, unit, currency, and fiscal period identity.",
+      "providerState": "VALUE_FIELDS_EXIST_METADATA_NOT_OBSERVED_OR_DOCUMENTED",
+      "issueType": "PUBLIC_DOCUMENTATION_AMBIGUITY_AND_MODEL_EVIDENCE_REQUIREMENT"
+    },
+    {
+      "requirementId": "CURRENT_INTEREST_TTM",
+      "minimumRequirement": "A current TTM interestExpense value or four explicitly discrete 3M gross-interest values ending at the current fiscal period.",
+      "providerState": "INTEREST_FIELD_EXISTS_EXPLICIT_TTM_PATH_NOT_OBSERVED",
+      "issueType": "PROVIDER_COVERAGE_AND_PUBLIC_DOCUMENTATION_AMBIGUITY"
+    },
+    {
+      "requirementId": "HISTORICAL_TTM_ENDPOINTS",
+      "minimumRequirement": "Comparable TTM endpoints 1,000 through 1,200 days apart for diluted EPS, gross profit, revenue, operating income, CFO, capex, and diluted weighted-average shares when required by a security.",
+      "providerState": "CURRENT_HIGHLIGHTS_EXIST_HISTORICAL_TTM_SERIES_NOT_OBSERVED",
+      "issueType": "PROVIDER_COVERAGE_AND_MODEL_EVIDENCE_REQUIREMENT"
+    },
+    {
+      "requirementId": "EIGHT_DISCRETE_QUARTERS",
+      "minimumRequirement": "Eight consecutive explicit 3M records for operating income, revenue, CFO, and capex, with non-overlapping periods and consistent units.",
+      "providerState": "HISTORICAL_VALUES_EXIST_DURATION_CLASS_UNPROVEN",
+      "issueType": "PUBLIC_DOCUMENTATION_AMBIGUITY_AND_MODEL_EVIDENCE_REQUIREMENT"
+    },
+    {
+      "requirementId": "AVAILABILITY_AND_REVISIONS",
+      "minimumRequirement": "Per-record publication or availability time, meaning of filing_date, revision/update behavior, and a stable revision or vintage identity.",
+      "providerState": "FILING_DATE_EXISTS_PUBLICATION_AND_REVISION_SEMANTICS_UNPROVEN",
+      "issueType": "PUBLIC_DOCUMENTATION_AMBIGUITY_OR_MISSING_PROVIDER_CAPABILITY"
+    }
+  ],
+  "existingEodhdAllInOneValuePaths": {
+    "incomeStatement": [
+      "Financials.Income_Statement.quarterly.*.totalRevenue",
+      "Financials.Income_Statement.quarterly.*.grossProfit",
+      "Financials.Income_Statement.quarterly.*.operatingIncome",
+      "Financials.Income_Statement.quarterly.*.ebit",
+      "Financials.Income_Statement.quarterly.*.netIncome",
+      "Financials.Income_Statement.quarterly.*.incomeTaxExpense",
+      "Financials.Income_Statement.quarterly.*.incomeBeforeTax",
+      "Financials.Income_Statement.quarterly.*.interestExpense",
+      "Financials.Income_Statement.yearly.*"
+    ],
+    "cashFlow": [
+      "Financials.Cash_Flow.quarterly.*.totalCashFromOperatingActivities",
+      "Financials.Cash_Flow.quarterly.*.capitalExpenditures",
+      "Financials.Cash_Flow.yearly.*"
+    ],
+    "dilutedSharesAliases": [
+      "weightedAverageShsOutDil",
+      "dilutedWeightedAverageShares",
+      "weightedAverageSharesDiluted"
+    ]
+  },
+  "notObservedInCurrentPayloadContract": [
+    "periodStart",
+    "explicit duration type per record",
+    "historical TTM diluted EPS series",
+    "per-record provider publication or availability timestamp",
+    "immutable revision or vintage identifier"
+  ],
+  "resolvedQuestionsNotToRepeat": [
+    "provider-normalized current total debt",
+    "Highlights.EBITDA current TTM",
+    "Highlights.RevenueTTM current TTM",
+    "Highlights.GrossProfitTTM current TTM",
+    "Highlights.DilutedEpsTTM current TTM"
+  ],
+  "reproducibleExamples": [
+    {
+      "symbol": "TTC",
+      "currentPeriodEnd": "2026-05-01",
+      "historicalTtmEndRange": [
+        "2023-01-17",
+        "2023-08-05"
+      ],
+      "needed": [
+        "historical diluted EPS TTM",
+        "current interest expense TTM"
+      ]
+    },
+    {
+      "symbol": "AVGO",
+      "currentPeriodEnd": "2026-05-03",
+      "historicalTtmEndRange": [
+        "2023-01-19",
+        "2023-08-07"
+      ],
+      "needed": [
+        "current net income TTM",
+        "historical diluted EPS TTM",
+        "current interest expense TTM"
+      ]
+    },
+    {
+      "symbol": "HRL",
+      "currentPeriodEnd": "2026-04-30",
+      "historicalTtmEndRange": [
+        "2023-01-16",
+        "2023-08-04"
+      ],
+      "needed": [
+        "eight explicit 3M operating-income/revenue/CFO/capex records",
+        "historical gross and operating margin TTM inputs",
+        "current interest expense TTM"
+      ]
+    },
+    {
+      "symbol": "GPC",
+      "currentPeriodEnd": "2026-06-30",
+      "historicalTtmEndRange": [
+        "2023-03-18",
+        "2023-10-04"
+      ],
+      "needed": [
+        "current operating income or EBIT TTM",
+        "eight explicit 3M operating-income/revenue/CFO/capex records",
+        "historical operating-margin TTM inputs",
+        "current interest expense TTM"
+      ]
+    },
+    {
+      "symbol": "ADSK",
+      "currentPeriodEnd": "2026-04-30",
+      "historicalTtmEndRange": [
+        "2023-01-16",
+        "2023-08-04"
+      ],
+      "needed": [
+        "current operating income, pretax income, income tax, and net income TTM",
+        "current CFO, capex, and diluted weighted-average shares",
+        "historical gross and operating margin TTM inputs",
+        "current interest expense TTM"
+      ]
+    }
+  ],
+  "supportAnswerAcceptance": {
+    "requiredForm": [
+      "exact endpoint URL template without an API token",
+      "exact JSON path and data type",
+      "explicit period semantics",
+      "historical coverage statement",
+      "revision and update behavior",
+      "plan entitlement or required add-on",
+      "documentation version or effective date"
+    ],
+    "verbalAssuranceWithoutPathsOrSemanticsAccepted": false
+  },
+  "fallbackCapabilityEvaluation": [
+    "standardized US fundamentals with explicit periodStart and periodEnd",
+    "explicit 3M, YTD, 12M, and TTM duration classification",
+    "at least eight quarters of raw income-statement and cash-flow history",
+    "comparable historical TTM diluted EPS and weighted diluted shares",
+    "currency, unit, and split-adjustment metadata",
+    "per-record publication availability and revision or vintage lineage",
+    "stable security identifiers and licensed local snapshot retention"
+  ],
+  "networkRequestsExecuted": false,
+  "scoresOrRanksGenerated": false,
+  "forwardValidationExecuted": false,
+  "formulaWeightCohortOrMissingRuleChanges": false,
+  "artifactContentHash": "0023FCCC790827EB097B03C5519B230D70F36575CB91538601ED5E8F0BFE333C"
+}

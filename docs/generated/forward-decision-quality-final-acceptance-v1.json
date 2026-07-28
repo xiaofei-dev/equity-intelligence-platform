@@ -1,0 +1,253 @@
+{
+  "artifactType": "FORWARD_DECISION_QUALITY_FINAL_OFFLINE_ACCEPTANCE",
+  "schemaVersion": "forward-decision-quality-final-acceptance-v1.0.0",
+  "status": "PENDING_FUTURE_OUTCOMES",
+  "evaluatedFromEvidenceAt": "2026-07-28T23:59:59Z",
+  "expectedContractManifest": {
+    "path": "docs/generated/forward-decision-quality-expected-contracts-v1.json",
+    "fileSha256": "0FDFC987556BC496AE2190128573F21E6B8A37ADB8B391A8C4AEFBED32FCAE3E",
+    "artifactContentHash": "CA963812D9BCD65B77F93F074BC7377BD8AC430AFB87DDB0A668D6F1DA6536B9"
+  },
+  "frameworkAcceptance": "PASS",
+  "deterministicModelAcceptance": {
+    "objectiveRating": {
+      "status": "PASS",
+      "modelVersion": "QC-v1.0.0",
+      "schemaVersion": "objective-rating-current-snapshot-algorithm-gate-v1.0.0",
+      "scope": "CURRENT_DECISION_ONLY",
+      "decisionCutoff": "2026-07-28T23:59:59Z",
+      "scoredSecurityCount": 136
+    },
+    "tacticalSignal": {
+      "status": "PASS",
+      "modelVersion": "TACTICAL-SIGNAL-v2.1.0",
+      "schemaVersion": "tactical-signal-validation-v2.1.0",
+      "executionMode": "REPLAY",
+      "generatedAt": "2026-07-28T12:03:54.858249Z",
+      "sourceWindow": {
+        "from": "2024-01-02",
+        "to": "2026-07-27"
+      },
+      "assessedSecurityCount": 10,
+      "insufficientSecurityCount": 0,
+      "decisionDates": [
+        "2026-07-27"
+      ],
+      "effectiveFrom": "NEXT_SESSION_OPEN",
+      "signalTtlCompletedSessions": 1,
+      "actionabilityCounts": {
+        "ENTRY": 2,
+        "LIMITED_ENTRY": 1,
+        "WATCH_ONLY": 7
+      },
+      "entryStageCounts": {
+        "CONFIRMED": 2,
+        "EARLY_REVERSAL_CANDIDATE": 3,
+        "NONE": 4,
+        "PROBE_ELIGIBLE": 1
+      },
+      "abstentionCount": 7,
+      "horizonOutlookCounts": {
+        "5": {
+          "FAVORABLE": 3,
+          "NEUTRAL": 6,
+          "UNFAVORABLE": 1
+        },
+        "20": {
+          "FAVORABLE": 2,
+          "NEUTRAL": 6,
+          "UNFAVORABLE": 2
+        },
+        "60": {
+          "FAVORABLE": 2,
+          "INSUFFICIENT_DATA": 1,
+          "NEUTRAL": 5,
+          "UNFAVORABLE": 2
+        }
+      }
+    },
+    "jointDecisionSnapshot": {
+      "status": "PENDING_FRESH_SYNCHRONIZED_DECISION_SNAPSHOT",
+      "timestampsSynchronized": false,
+      "fullObjectiveUniverseTacticalCoverage": false,
+      "objectiveSecurityCount": 136,
+      "tacticalSecurityCount": 10,
+      "intersectionCount": 2,
+      "intersectionSymbolsHash": "27C7CF847C2F1C9F877BDA3AE9D121C5CE6F01AD565CA4F1232724AF4C615A40"
+    }
+  },
+  "operationalReadiness": {
+    "frameworkImplementation": "PASS",
+    "currentEnrollmentStatus": "PENDING_FRESH_SYNCHRONIZED_DECISION_SNAPSHOT",
+    "legacyWeeklyStatus": "PREREGISTERED_PENDING_ENROLLMENT_GATES",
+    "dailyProtocolStatus": "PENDING_FIRST_COMPLETED_SESSION",
+    "preflightEnrollmentReady": false,
+    "signalsEnrolled": 0,
+    "futureOutcomesObserved": false,
+    "costAssumptions": {
+      "buyTransactionCostBps": 10,
+      "buySlippageBps": 10,
+      "hypotheticalSaleTransactionCostBps": 10,
+      "hypotheticalSaleSlippageBps": 10
+    },
+    "roundTripCostAndSlippageBps": 40,
+    "baselineArms": [
+      "A_LUMP_SUM",
+      "B_FIXED_FOUR_TRANCHE",
+      "D_CASH_ONLY"
+    ],
+    "policyArm": "C_STATE_GATED_FOUR_TRANCHE",
+    "benchmarkComparisons": [
+      "SECTOR_ETF",
+      "SPY"
+    ],
+    "sectorBenchmarkCoverage": {
+      "status": "PASS",
+      "coveredObjectiveSectorCount": 7,
+      "missingSectors": []
+    }
+  },
+  "decisionTimingAndExecution": {
+    "status": "PASS",
+    "objectiveDecisionCutoff": "2026-07-28T23:59:59Z",
+    "tacticalDecisionDates": [
+      "2026-07-27"
+    ],
+    "decisionCutoffRule": "COMPLETED_SESSION_ONLY",
+    "executionRule": "NO_EARLIER_THAN_NEXT_SESSION",
+    "tacticalEffectiveFrom": "NEXT_SESSION_OPEN",
+    "sameSessionExecutionPermitted": false,
+    "tacticalSignalTtlCompletedSessions": 1
+  },
+  "prospectiveOutcomeEvidence": {
+    "status": "PENDING_FUTURE_OUTCOMES",
+    "signalsEnrolled": 0,
+    "realizedProspectiveEpisodeCount": 0,
+    "horizons": [
+      {
+        "horizonTradingDays": 5,
+        "status": "PENDING_FUTURE_OUTCOMES",
+        "prospectiveCompletedEpisodeCount": 0,
+        "baselineComparisonStatus": "PENDING_FUTURE_OUTCOMES",
+        "sectorBenchmarkComparisonStatus": "PENDING_FUTURE_OUTCOMES",
+        "spyComparisonStatus": "PENDING_FUTURE_OUTCOMES",
+        "calibrationStatus": "PENDING_FUTURE_OUTCOMES",
+        "reason": "No signal has been enrolled under a fresh synchronized decision snapshot, so no prospective horizon is mature."
+      },
+      {
+        "horizonTradingDays": 20,
+        "status": "PENDING_FUTURE_OUTCOMES",
+        "prospectiveCompletedEpisodeCount": 0,
+        "baselineComparisonStatus": "PENDING_FUTURE_OUTCOMES",
+        "sectorBenchmarkComparisonStatus": "PENDING_FUTURE_OUTCOMES",
+        "spyComparisonStatus": "PENDING_FUTURE_OUTCOMES",
+        "calibrationStatus": "PENDING_FUTURE_OUTCOMES",
+        "reason": "No signal has been enrolled under a fresh synchronized decision snapshot, so no prospective horizon is mature."
+      },
+      {
+        "horizonTradingDays": 60,
+        "status": "PENDING_FUTURE_OUTCOMES",
+        "prospectiveCompletedEpisodeCount": 0,
+        "baselineComparisonStatus": "PENDING_FUTURE_OUTCOMES",
+        "sectorBenchmarkComparisonStatus": "PENDING_FUTURE_OUTCOMES",
+        "spyComparisonStatus": "PENDING_FUTURE_OUTCOMES",
+        "calibrationStatus": "PENDING_FUTURE_OUTCOMES",
+        "reason": "No signal has been enrolled under a fresh synchronized decision snapshot, so no prospective horizon is mature."
+      }
+    ],
+    "preliminaryConclusion": "INSUFFICIENT_SAMPLE",
+    "statisticalEdgeProven": "NOT_ESTABLISHED"
+  },
+  "calibrationAndCoverageContract": {
+    "status": "PENDING_FUTURE_OUTCOMES",
+    "minimumOverallCompletedEpisodes": 20,
+    "minimumSectorOrSizeCompletedEpisodes": 10,
+    "requiredCoverageMeasures": [
+      "ENROLLED_TO_MATURED_EPISODE_RATE",
+      "ABSTENTION_RATE_AND_REASON",
+      "MISSING_OR_STALE_INPUT_RATE",
+      "TACTICAL_OUTLOOK_CALIBRATION_BY_HORIZON",
+      "ENTRY_STAGE_CALIBRATION_BY_HORIZON",
+      "OBJECTIVE_TOP_MINUS_BOTTOM_SPREAD",
+      "SECTOR_AND_SPY_RELATIVE_RETURN_AFTER_COSTS"
+    ],
+    "currentTacticalAbstentionCount": 7,
+    "missingValuesRemainExplicit": true,
+    "missingValuesCoercedToNeutralOrZero": false
+  },
+  "contaminationControls": {
+    "immutableDecisionArtifactsVerified": true,
+    "allSourceFileHashesVerified": true,
+    "allEmbeddedContentHashesVerified": true,
+    "noSameSessionExecution": true,
+    "objectiveCurrentSnapshotNotRelabeledHistoricalPit": true,
+    "dailyCohortOverlapReported": true,
+    "sameSecurityStrategyBucketCooldownTradingDays": 60,
+    "identityDelistingAndCorporateActionCoverage": "PENDING_AT_ENROLLMENT",
+    "survivorshipContaminationControl": "PENDING_PROSPECTIVE_IDENTITY_AND_ACTION_GATES",
+    "lookAheadContaminationStatus": "PASS_FOR_FRAMEWORK_PENDING_PROSPECTIVE_OBSERVATIONS"
+  },
+  "historicalWalkForwardDiagnostics": {
+    "status": "DESCRIPTIVE_DIAGNOSTIC_ONLY",
+    "prospectiveOutcomeEvidence": false,
+    "survivorshipBiasControlled": false,
+    "survivorshipStatus": "NOT_PROVEN_NAMED_SECURITY_SAMPLE",
+    "costAdjusted": true,
+    "totalEpisodeRowsByHorizon": {
+      "5": 215,
+      "20": 215,
+      "60": 215
+    },
+    "statisticalEdgeProven": "NOT_ESTABLISHED"
+  },
+  "evidence": {
+    "sourceArtifacts": {
+      "objectiveRating": {
+        "path": "docs/generated/objective-rating-v1-current-snapshot-algorithm-gate-v1.json",
+        "fileSha256": "AB438EB24D3D1EF477252E91DE63B46911BDF2FDB66ECB69BB65715F1675B6FC",
+        "embeddedHashField": "artifactContentHash",
+        "embeddedContentHash": "131FD6C59A596056CB6A329FDA3BB73404CADDF2976826B2CDD211D5CB593F4B"
+      },
+      "tacticalSignal": {
+        "path": "docs/generated/tactical-signal-validation-20260728T120349Z-all-requested.json",
+        "fileSha256": "D01BEBB339402959EBBCF219701DAF621C4F316D2FAF36A7B0D51314BCAF6EDC",
+        "embeddedHashField": "contentHash",
+        "embeddedContentHash": "DCFF8D6510BE7BDDF80401E878B66DF213DF7C6E171F1E9CD253985A146D97FF"
+      },
+      "weeklyPreregistration": {
+        "path": "docs/generated/forward-decision-quality-preregistration-v1.json",
+        "fileSha256": "44C1637AC719F114BC54ED62C4280CB7370AE5C346D9ABFFB6AF5FF49BE3C0E1",
+        "embeddedHashField": "artifactContentHash",
+        "embeddedContentHash": "FD127210E0766B295C2E6FB54C27801D85D8C74124B47C967FB1CE151F7F1B69"
+      },
+      "dailyProtocol": {
+        "path": "docs/generated/forward-daily-incremental-protocol-v1.json",
+        "fileSha256": "15B77E18F8D5E938B1A55A53ACCDEF4CE4FD17DE96DA7864119EE267FD279EBE",
+        "embeddedHashField": "artifactContentHash",
+        "embeddedContentHash": "21CA573B4BAEEFE7EA8225BCA3547EA31BD895007F5BF7AB57DE1CB54630F457"
+      },
+      "enrollmentPreflight": {
+        "path": "docs/generated/forward-enrollment-operational-preflight-v1.json",
+        "fileSha256": "CC464319B5FE3406907EF051D15BFC320C58283369D5462D183876F110449DD4",
+        "embeddedHashField": "artifactContentHash",
+        "embeddedContentHash": "5DE891721C613A92A2ACB90C0A176474AD35C455EEC6DD7F1D07892966FEF190"
+      }
+    },
+    "sourceEvidenceSetHash": "25C4954E4EDFF80DC92D6228DEDA3452961293F02883EC8ABFFA0C295836A9EF"
+  },
+  "claimBoundary": {
+    "operationalReadinessIsPerformanceEvidence": false,
+    "historicalWalkForwardIsProspectiveEvidence": false,
+    "oneMonthOutcomeObserved": false,
+    "threeMonthOutcomeObserved": false,
+    "realizedReturnClaimAuthorized": false,
+    "automaticTradingAuthorized": false,
+    "recommendationAuthorized": false
+  },
+  "networkRequestsExecuted": false,
+  "providerRequestsExecuted": 0,
+  "databaseWritesExecuted": false,
+  "scoringExecuted": false,
+  "commitPushOrDeploymentExecuted": false,
+  "artifactContentHash": "3C56150D6706802071A504B51E94D6B059D8EF097330CA164C2E415EB88FDA69"
+}

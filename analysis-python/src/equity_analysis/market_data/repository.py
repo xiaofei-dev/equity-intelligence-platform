@@ -1,5 +1,3 @@
-import hashlib
-import json
 from collections.abc import Sequence
 from datetime import UTC, datetime
 
@@ -82,29 +80,19 @@ class DailyPriceRepository:
                     provider_schema_version = EXCLUDED.provider_schema_version
                 RETURNING id
                 """,
-                (series.provider, "Twelve Data", "time-series-v1"),
+                (
+                    series.provider_descriptor.code,
+                    series.provider_descriptor.name,
+                    series.provider_descriptor.provider_schema_version,
+                ),
             ).fetchone()
             if provider_row is None:
                 raise RuntimeError("Provider upsert did not return an identifier")
             provider_id = provider_row[0]
-            canonical = json.dumps(
-                [
-                    {
-                        "date": bar.trading_date.isoformat(),
-                        "open": str(bar.open_price),
-                        "high": str(bar.high_price),
-                        "low": str(bar.low_price),
-                        "close": str(bar.close_price),
-                        "volume": bar.volume,
-                    }
-                    for bar in series.bars
-                ],
-                sort_keys=True,
-                separators=(",", ":"),
-            )
-            content_hash = "sha256:" + hashlib.sha256(canonical.encode()).hexdigest()
+            content_hash = series.content_hash
             request_key = (
-                f"daily-price:{series.security.symbol}:{series.adjustment_mode}:{content_hash}"
+                f"daily-price:{series.provider_symbol}:{series.bars[0].trading_date}:"
+                f"{series.bars[-1].trading_date}:{series.adjustment_mode}:{content_hash}"
             )
             ingested_at = datetime.now(UTC)
             batch_row = connection.execute(
@@ -119,7 +107,7 @@ class DailyPriceRepository:
                 (
                     provider_id,
                     request_key,
-                    "twelve-data-time-series-v1.0.0",
+                    series.provider_descriptor.parser_version,
                     "market-normalization-v1.0.0",
                     ingested_at,
                     ingested_at,
@@ -137,10 +125,10 @@ class DailyPriceRepository:
             source_row = connection.execute(
                 """
                 INSERT INTO analytics.source_record (
-                    ingestion_batch_id, provider_id, source_reference,
+                    ingestion_batch_id, provider_id, provider_record_id, source_reference,
                     available_at, ingested_at, schema_version, revision_status,
                     quality_status, content_hash
-                ) VALUES (%s, %s, %s, %s, %s, %s, 'AS_REPORTED',
+                ) VALUES (%s, %s, %s, %s, %s, %s, %s, 'AS_REPORTED',
                           'PROVISIONAL', %s)
                 ON CONFLICT (provider_id, source_reference, content_hash)
                 DO NOTHING RETURNING id
@@ -148,10 +136,11 @@ class DailyPriceRepository:
                 (
                     batch_row[0],
                     provider_id,
-                    f"twelve-data:time-series:{series.security.symbol}",
+                    series.provider_record_id,
+                    series.source_reference,
+                    series.available_at,
                     ingested_at,
-                    ingested_at,
-                    "time-series-v1",
+                    series.provider_descriptor.provider_schema_version,
                     content_hash,
                 ),
             ).fetchone()
@@ -164,7 +153,7 @@ class DailyPriceRepository:
                     """,
                     (
                         provider_id,
-                        f"twelve-data:time-series:{series.security.symbol}",
+                        series.source_reference,
                         content_hash,
                     ),
                 ).fetchone()
@@ -180,7 +169,7 @@ class DailyPriceRepository:
                     bar.close_price,
                     bar.volume,
                     series.provider,
-                    series.adjustment_mode,
+                    str(series.adjustment_mode),
                     series.security.exchange_timezone,
                 )
                 for bar in series.bars
@@ -217,35 +206,70 @@ class DailyPriceRepository:
                     """,
                     rows,
                 )
-                immutable_rows = [
-                    (
-                        security_id,
-                        bar.trading_date,
-                        bar.open_price,
-                        bar.high_price,
-                        bar.low_price,
-                        bar.close_price,
-                        bar.volume,
-                        provider_id,
-                        series.adjustment_mode,
-                        series.security.exchange_timezone,
-                        source_row[0],
-                        ingested_at,
-                        ingested_at,
+                immutable_rows = []
+                for bar in series.bars:
+                    existing = connection.execute(
+                        """
+                        SELECT 1 FROM analytics.daily_price_observation
+                        WHERE security_id = %s AND trading_date = %s
+                          AND provider_id = %s AND adjustment_mode = %s
+                          AND source_record_id = %s
+                        """,
+                        (
+                            security_id,
+                            bar.trading_date,
+                            provider_id,
+                            str(series.adjustment_mode),
+                            source_row[0],
+                        ),
+                    ).fetchone()
+                    if existing is not None:
+                        continue
+                    revision = connection.execute(
+                        """
+                        SELECT COALESCE(MAX(revision_number), 0) + 1
+                        FROM analytics.daily_price_observation
+                        WHERE security_id = %s AND trading_date = %s
+                          AND provider_id = %s AND adjustment_mode = %s
+                        """,
+                        (
+                            security_id,
+                            bar.trading_date,
+                            provider_id,
+                            str(series.adjustment_mode),
+                        ),
+                    ).fetchone()
+                    assert revision is not None
+                    immutable_rows.append(
+                        (
+                            security_id,
+                            bar.trading_date,
+                            bar.open_price,
+                            bar.high_price,
+                            bar.low_price,
+                            bar.close_price,
+                            bar.adjusted_close,
+                            bar.volume,
+                            provider_id,
+                            str(series.adjustment_mode),
+                            series.security.exchange_timezone,
+                            source_row[0],
+                            series.available_at,
+                            ingested_at,
+                            revision[0],
+                        )
                     )
-                    for bar in series.bars
-                ]
                 cursor.executemany(
                     """
                     INSERT INTO analytics.daily_price_observation (
                         security_id, trading_date, open_price, high_price,
-                        low_price, close_price, volume, provider_id,
+                        low_price, close_price, adjusted_close, volume, provider_id,
                         adjustment_mode, source_timezone, source_record_id,
                         available_at, ingested_at, normalization_version,
-                        quality_status
+                        quality_status, revision_number
                     ) VALUES (
                         %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,
-                        %s, 'market-normalization-v1.0.0', 'PROVISIONAL'
+                        %s, %s, 'market-normalization-v1.0.0', 'PROVISIONAL', %s
                     )
                     ON CONFLICT (
                         security_id, trading_date, provider_id,

@@ -1,4 +1,5 @@
 import gzip
+import hashlib
 import json
 import time
 from collections.abc import Callable
@@ -11,15 +12,24 @@ from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
 
 from equity_analysis.provider_validation.models import (
+    ProviderRequestMetric,
+    SecAvailabilityExclusion,
     SecDerivedFactObservation,
     SecFactObservation,
+    SecFactSelectionResult,
     SecFactsSummary,
     SecFilingSummary,
+)
+from equity_analysis.provider_validation.sec_authoritative_overrides import (
+    SecAuthoritativeTickerOverride,
+    canonical_sec_ticker,
+    load_authoritative_ticker_overrides,
 )
 
 SEC_DATA_BASE_URL = "https://data.sec.gov"
 SEC_FILES_BASE_URL = "https://www.sec.gov/files"
 SUPPORTED_FORMS = frozenset({"10-K", "10-Q", "10-K/A", "10-Q/A"})
+SEC_CONCEPT_MAPPING_VERSION = "sec-concept-mapping-v1.0.0"
 REQUIRED_TAG_GROUPS: dict[str, tuple[str, ...]] = {
     "revenue": (
         "RevenueFromContractWithCustomerExcludingAssessedTax",
@@ -28,7 +38,15 @@ REQUIRED_TAG_GROUPS: dict[str, tuple[str, ...]] = {
     ),
     "operating_income": ("OperatingIncomeLoss",),
     "net_income": ("NetIncomeLoss",),
-    "diluted_shares": ("WeightedAverageNumberOfDilutedSharesOutstanding",),
+    "diluted_shares": (
+        "WeightedAverageNumberOfDilutedSharesOutstanding",
+        "WeightedAverageNumberOfShareOutstandingBasicAndDiluted",
+    ),
+    "interest_expense": (
+        "InterestExpenseNonOperating",
+        "InterestExpense",
+        "InterestAndDebtExpense",
+    ),
     "cash": (
         "CashAndCashEquivalentsAtCarryingValue",
         "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
@@ -44,6 +62,14 @@ REQUIRED_TAG_GROUPS: dict[str, tuple[str, ...]] = {
         "PaymentsToAcquireOtherPropertyPlantAndEquipment",
         "PaymentsForProceedsFromOtherPropertyPlantAndEquipment",
     ),
+}
+SEC_METRIC_SEMANTICS = {
+    "diluted_shares": "DURATION_WEIGHTED_AVERAGE_DILUTED_SHARES",
+    "interest_expense": "DURATION_GROSS_INTEREST_EXPENSE",
+}
+SEC_METRIC_ALLOWED_UNITS = {
+    "diluted_shares": frozenset({"shares"}),
+    "interest_expense": frozenset({"USD"}),
 }
 NEW_YORK = ZoneInfo("America/New_York")
 OPERATING_INCOME_DERIVATION_VERSION = "operating-income-issuer-v1.0.0"
@@ -84,6 +110,16 @@ OPERATING_INCOME_DERIVATIONS: dict[
 class SecEdgarError(RuntimeError):
     """Raised when SEC EDGAR cannot return a usable validation response."""
 
+    def __init__(
+        self,
+        message: str,
+        code: str = "SEC_REQUEST_FAILED",
+        endpoint_category: str = "unknown",
+    ) -> None:
+        super().__init__(message)
+        self.code = code
+        self.endpoint_category = endpoint_category
+
 
 def availability_after_full_trading_session(
     acceptance_datetime: datetime,
@@ -106,7 +142,11 @@ def availability_after_full_trading_session(
                 tzinfo=NEW_YORK,
             ).astimezone(UTC)
 
-    raise SecEdgarError("No complete trading session is available after the filing acceptance")
+    raise SecEdgarError(
+        "No complete trading session is available after the filing acceptance",
+        "SEC_NO_COMPLETE_TRADING_SESSION_AFTER_ACCEPTANCE",
+        "local_pit",
+    )
 
 
 def select_point_in_time_facts(
@@ -115,6 +155,20 @@ def select_point_in_time_facts(
     trading_dates: tuple[date, ...],
     as_of_time: datetime,
 ) -> tuple[SecFactObservation, ...]:
+    return select_point_in_time_facts_with_diagnostics(
+        company_facts_payload,
+        filings,
+        trading_dates,
+        as_of_time,
+    ).facts
+
+
+def select_point_in_time_facts_with_diagnostics(
+    company_facts_payload: dict[str, Any],
+    filings: tuple[SecFilingSummary, ...],
+    trading_dates: tuple[date, ...],
+    as_of_time: datetime,
+) -> SecFactSelectionResult:
     if as_of_time.tzinfo is None or as_of_time.utcoffset() is None:
         raise ValueError("Point-in-time cutoff must include a timezone")
 
@@ -133,13 +187,25 @@ def select_point_in_time_facts(
         tuple[str, str, date | None, date, str | None],
         SecFactObservation,
     ] = {}
+    availability_exclusions: dict[str, SecAvailabilityExclusion] = {}
     us_gaap = company_facts_payload.get("facts", {}).get("us-gaap", {})
+    source_content_hash = hashlib.sha256(
+        json.dumps(
+            company_facts_payload,
+            sort_keys=True,
+            separators=(",", ":"),
+            ensure_ascii=True,
+        ).encode("utf-8")
+    ).hexdigest().upper()
 
     for taxonomy_tag, fact in us_gaap.items():
         metric_code = tag_to_metric.get(taxonomy_tag)
         if metric_code is None:
             continue
         for unit, entries in fact.get("units", {}).items():
+            allowed_units = SEC_METRIC_ALLOWED_UNITS.get(metric_code)
+            if allowed_units is not None and unit not in allowed_units:
+                continue
             for entry in entries:
                 accession_number = str(entry.get("accn", ""))
                 filing = filing_by_accession.get(accession_number)
@@ -147,10 +213,27 @@ def select_point_in_time_facts(
                     continue
                 if filing.acceptance_datetime > as_of_time:
                     continue
-                available_at = availability_after_full_trading_session(
-                    filing.acceptance_datetime,
-                    trading_dates,
-                )
+                try:
+                    available_at = availability_after_full_trading_session(
+                        filing.acceptance_datetime,
+                        trading_dates,
+                    )
+                except SecEdgarError as error:
+                    if error.code != "SEC_NO_COMPLETE_TRADING_SESSION_AFTER_ACCEPTANCE":
+                        raise
+                    availability_exclusions[accession_number] = (
+                        SecAvailabilityExclusion(
+                            accession_number=accession_number,
+                            form=filing.form,
+                            acceptance_timestamp=filing.acceptance_datetime,
+                            latest_trading_date=(
+                                max(trading_dates) if trading_dates else None
+                            ),
+                            as_of_time=as_of_time,
+                            reason_code=error.code,
+                        )
+                    )
+                    continue
                 if available_at > as_of_time:
                     continue
                 try:
@@ -163,7 +246,9 @@ def select_point_in_time_facts(
                     fiscal_year = int(entry["fy"]) if entry.get("fy") is not None else None
                 except (InvalidOperation, KeyError, TypeError, ValueError) as error:
                     raise SecEdgarError(
-                        f"SEC EDGAR returned a malformed {taxonomy_tag} fact"
+                        f"SEC EDGAR returned a malformed {taxonomy_tag} fact",
+                        "SEC_COMPANY_FACTS_NORMALIZATION_FAILED",
+                        "local_pit",
                     ) from error
 
                 observation = SecFactObservation(
@@ -181,6 +266,13 @@ def select_point_in_time_facts(
                     acceptance_datetime=filing.acceptance_datetime,
                     available_at=available_at,
                     frame=str(entry["frame"]) if entry.get("frame") else None,
+                    concept_mapping_version=SEC_CONCEPT_MAPPING_VERSION,
+                    semantic_classification=SEC_METRIC_SEMANTICS.get(
+                        metric_code,
+                        "DIRECT_US_GAAP_CONCEPT",
+                    ),
+                    concept_priority=tag_priority[taxonomy_tag],
+                    source_content_hash=source_content_hash,
                 )
                 key = (
                     metric_code,
@@ -191,26 +283,37 @@ def select_point_in_time_facts(
                 )
                 current = selected.get(key)
                 if current is None or (
-                    observation.available_at,
                     -tag_priority[observation.taxonomy_tag],
+                    observation.available_at,
                     observation.accession_number,
                 ) > (
-                    current.available_at,
                     -tag_priority[current.taxonomy_tag],
+                    current.available_at,
                     current.accession_number,
                 ):
                     selected[key] = observation
 
-    return tuple(
-        sorted(
-            selected.values(),
-            key=lambda item: (
-                item.metric_code,
-                item.period_end,
-                item.period_start or date.min,
-                item.unit,
-            ),
-        )
+    return SecFactSelectionResult(
+        facts=tuple(
+            sorted(
+                selected.values(),
+                key=lambda item: (
+                    item.metric_code,
+                    item.period_end,
+                    item.period_start or date.min,
+                    item.unit,
+                ),
+            )
+        ),
+        availability_exclusions=tuple(
+            sorted(
+                availability_exclusions.values(),
+                key=lambda item: (
+                    item.acceptance_timestamp,
+                    item.accession_number,
+                ),
+            )
+        ),
     )
 
 
@@ -310,6 +413,10 @@ class SecEdgarClient:
         sleeper: Callable[[float], None] = time.sleep,
         request_delay_seconds: float = 0.12,
         timeout_seconds: float = 20.0,
+        request_observer: Callable[[ProviderRequestMetric], None] | None = None,
+        authoritative_ticker_overrides: (
+            dict[str, SecAuthoritativeTickerOverride] | None
+        ) = None,
     ) -> None:
         if not user_agent.strip():
             raise ValueError("SEC EDGAR user agent is required")
@@ -318,14 +425,61 @@ class SecEdgarClient:
         self._sleeper = sleeper
         self._request_delay_seconds = request_delay_seconds
         self._timeout_seconds = timeout_seconds
+        self._request_observer = request_observer
+        self._authoritative_ticker_overrides = (
+            load_authoritative_ticker_overrides()
+            if authoritative_ticker_overrides is None
+            else authoritative_ticker_overrides
+        )
+        self._last_unsupported_forms: tuple[str, ...] = ()
+
+    @property
+    def last_unsupported_forms(self) -> tuple[str, ...]:
+        return self._last_unsupported_forms
 
     def lookup_cik(self, symbol: str) -> tuple[str, str]:
         payload = self._fetch_json(f"{SEC_FILES_BASE_URL}/company_tickers.json")
-        normalized_symbol = symbol.strip().upper()
+        normalized_symbol = self._canonical_sec_ticker(symbol)
+        official_match: tuple[str, str] | None = None
         for item in payload.values():
-            if str(item.get("ticker", "")).upper() == normalized_symbol:
-                return str(item["cik_str"]).zfill(10), str(item["title"])
-        raise SecEdgarError(f"SEC EDGAR did not list a CIK for {normalized_symbol}")
+            if (
+                self._canonical_sec_ticker(str(item.get("ticker", "")))
+                == normalized_symbol
+            ):
+                official_match = (
+                    str(item["cik_str"]).zfill(10),
+                    str(item["title"]),
+                )
+                break
+        authoritative_override = self._authoritative_ticker_overrides.get(
+            normalized_symbol
+        )
+        if official_match is not None:
+            if (
+                authoritative_override is not None
+                and official_match[0] != authoritative_override.cik
+            ):
+                raise SecEdgarError(
+                    f"SEC ticker mapping conflicts with authoritative evidence for "
+                    f"{normalized_symbol}",
+                    "SEC_TICKER_CIK_CONFLICT",
+                    "ticker_mapping",
+                )
+            return official_match
+        if authoritative_override is not None:
+            return (
+                authoritative_override.cik,
+                authoritative_override.issuer_legal_name,
+            )
+        raise SecEdgarError(
+            f"SEC EDGAR did not list a CIK for {normalized_symbol}",
+            "SEC_TICKER_CIK_NOT_FOUND",
+            "ticker_mapping",
+        )
+
+    @staticmethod
+    def _canonical_sec_ticker(symbol: str) -> str:
+        return canonical_sec_ticker(symbol)
 
     def fetch_latest_filing(self, cik: str, symbol: str) -> SecFilingSummary:
         return self.fetch_filing_as_of(
@@ -376,7 +530,9 @@ class SecEdgarClient:
                     break
         if not eligible:
             raise SecEdgarError(
-                f"SEC EDGAR returned no supported filing available by the cutoff for {symbol}"
+                f"SEC EDGAR returned no supported filing available by the cutoff for {symbol}",
+                "SEC_NO_ELIGIBLE_FILING_BEFORE_AS_OF",
+                "submissions",
             )
         return max(eligible, key=lambda filing: filing.acceptance_datetime)
 
@@ -443,7 +599,37 @@ class SecEdgarClient:
             matching_accession_fact_count=matching_count,
         )
 
+    def fetch_recent_filings(
+        self,
+        cik: str,
+        symbol: str,
+        as_of_time: datetime,
+    ) -> tuple[SecFilingSummary, ...]:
+        if as_of_time.tzinfo is None or as_of_time.utcoffset() is None:
+            raise ValueError("SEC filing cutoff must include a timezone")
+        normalized_cik = cik.zfill(10)
+        payload = self._fetch_json(f"{SEC_DATA_BASE_URL}/submissions/CIK{normalized_cik}.json")
+        forms = tuple(payload.get("filings", {}).get("recent", {}).get("form", ()))
+        self._last_unsupported_forms = tuple(
+            sorted({str(form) for form in forms if form not in SUPPORTED_FORMS})
+        )
+        filings = self._eligible_filings(
+            payload.get("filings", {}).get("recent", {}),
+            normalized_cik,
+            str(payload["name"]),
+            symbol,
+            as_of_time,
+        )
+        return tuple(sorted(filings, key=lambda item: item.acceptance_datetime))
+
+    def fetch_company_facts(self, cik: str) -> dict[str, Any]:
+        normalized_cik = cik.zfill(10)
+        return self._fetch_json(
+            f"{SEC_DATA_BASE_URL}/api/xbrl/companyfacts/CIK{normalized_cik}.json"
+        )
+
     def _fetch_json(self, url: str) -> dict[str, Any]:
+        endpoint_category = self._endpoint_category(url)
         request = Request(
             url,
             headers={
@@ -452,6 +638,7 @@ class SecEdgarClient:
                 "User-Agent": self._user_agent,
             },
         )
+        started_at = time.monotonic()
         try:
             with self._opener(request, timeout=self._timeout_seconds) as response:
                 raw = response.read()
@@ -461,11 +648,65 @@ class SecEdgarClient:
                     raw = gzip.decompress(raw)
                 payload = json.loads(raw.decode("utf-8"))
         except HTTPError as error:
-            raise SecEdgarError(f"SEC EDGAR returned HTTP {error.code}") from error
+            self._observe_request(url, "FAILED", started_at, f"HTTP_{error.code}")
+            raise SecEdgarError(
+                f"SEC EDGAR returned HTTP {error.code}",
+                self._request_failure_code(endpoint_category),
+                endpoint_category,
+            ) from error
         except (OSError, TimeoutError, json.JSONDecodeError) as error:
-            raise SecEdgarError("SEC EDGAR request failed") from error
+            self._observe_request(url, "FAILED", started_at, "SEC_REQUEST_FAILED")
+            raise SecEdgarError(
+                "SEC EDGAR request failed",
+                self._request_failure_code(endpoint_category),
+                endpoint_category,
+            ) from error
+        else:
+            self._observe_request(url, "SUCCESS", started_at)
         finally:
             self._sleeper(self._request_delay_seconds)
         if not isinstance(payload, dict):
-            raise SecEdgarError("SEC EDGAR returned a non-object response")
+            raise SecEdgarError(
+                "SEC EDGAR returned a non-object response",
+                self._request_failure_code(endpoint_category),
+                endpoint_category,
+            )
         return payload
+
+    @staticmethod
+    def _endpoint_category(url: str) -> str:
+        if "/companyfacts/" in url:
+            return "company_facts"
+        if "/submissions/" in url:
+            return "submissions"
+        return "ticker_mapping"
+
+    @staticmethod
+    def _request_failure_code(endpoint_category: str) -> str:
+        return {
+            "ticker_mapping": "SEC_TICKER_MAPPING_REQUEST_FAILED",
+            "submissions": "SEC_SUBMISSIONS_REQUEST_FAILED",
+            "company_facts": "SEC_COMPANY_FACTS_REQUEST_FAILED",
+        }[endpoint_category]
+
+    def _observe_request(
+        self,
+        url: str,
+        status: str,
+        started_at: float,
+        error_code: str | None = None,
+    ) -> None:
+        if self._request_observer is None:
+            return
+        endpoint_category = self._endpoint_category(url)
+        self._request_observer(
+            ProviderRequestMetric(
+                provider="sec_edgar",
+                endpoint_category=endpoint_category,
+                attempt=1,
+                status=status,
+                duration_ms=max(int((time.monotonic() - started_at) * 1000), 0),
+                weighted_calls=1,
+                error_code=error_code,
+            )
+        )

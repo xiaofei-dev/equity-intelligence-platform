@@ -21,6 +21,11 @@ logs/
 coverage/
 htmlcov/
 
+# High-volume or invalid generated analytics evidence
+docs/generated/*-diagnostics.json
+docs/generated/*.lock
+docs/generated/tactical-signal-validation-20260728T120259Z-all-requested.json
+
 # Frontend build output and dependencies
 frontend/node_modules/
 frontend/.next/

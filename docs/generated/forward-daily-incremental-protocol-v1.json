@@ -1,0 +1,2086 @@
+{
+  "artifactType": "FORWARD_DAILY_INCREMENTAL_PROTOCOL",
+  "schemaVersion": "forward-daily-incremental-protocol-v1.0.0",
+  "experimentVersion": "FORWARD-VALIDATION-v1.1.0",
+  "status": "PENDING_FIRST_COMPLETED_SESSION",
+  "supersedes": {
+    "path": "docs/generated/forward-decision-quality-preregistration-v1.json",
+    "artifactContentHash": "FD127210E0766B295C2E6FB54C27801D85D8C74124B47C967FB1CE151F7F1B69",
+    "reason": "User approved daily rather than weekly enrollment."
+  },
+  "sourceAlgorithmGate": {
+    "path": "docs/generated/objective-rating-v1-current-snapshot-algorithm-gate-v1.json",
+    "artifactContentHash": "131FD6C59A596056CB6A329FDA3BB73404CADDF2976826B2CDD211D5CB593F4B",
+    "asOfTime": "2026-07-28T23:59:59Z"
+  },
+  "enrollmentPolicy": {
+    "version": "DAILY-AFTER-CLOSE-ENROLLMENT-v1.0.0",
+    "frequency": "EACH_COMPLETED_REGULAR_US_TRADING_SESSION",
+    "timing": "After close and after complete EOD data are verified.",
+    "topFraction": "0.20",
+    "bottomFraction": "0.20",
+    "boundaryTiesRetained": true,
+    "activeEpisodeReentryProhibited": true,
+    "sameSecuritySameStrategyBucketReentryCooldownTradingDays": 60,
+    "dailySignalsAreCorrelatedCohorts": true,
+    "primaryEvaluationRule": "Retain daily cohorts, but calculate inference using unique first-entry episodes and report overlap explicitly."
+  },
+  "refreshPolicy": {
+    "version": "FORWARD-DAILY-INCREMENTAL-REFRESH-v1.0.0",
+    "dailyPriceMaximumAgeCompletedSessions": 0,
+    "marketCapMaximumAgeCompletedSessions": 0,
+    "fundamentalsMaximumAgeCalendarDays": 7,
+    "identityMaximumAgeCalendarDays": 7,
+    "universeCorporateActionRefreshCalendarDays": 7,
+    "priorityRefreshTriggers": [
+      "MISSING_DATA",
+      "PROVIDER_UPDATED_DATE_CHANGED",
+      "EXPECTED_OR_REPORTED_FILING",
+      "ACTIVE_SIGNAL",
+      "TOP_OR_BOTTOM_BUCKET_PREVIEW",
+      "IDENTITY_OR_CORPORATE_ACTION_WARNING"
+    ],
+    "missingLastUpdateIsDueImmediately": true,
+    "noDefaultForStaleOrMissingData": true
+  },
+  "firstDailySessionCandidate": "2026-07-28",
+  "firstDailySessionStatus": "PREMARKET_NOT_COMPLETED",
+  "sourceSecurityCount": 223,
+  "previewSecurityCount": 56,
+  "benchmarkSymbols": [
+    "SPY",
+    "XLB",
+    "XLC",
+    "XLI",
+    "XLK",
+    "XLP",
+    "XLV",
+    "XLY"
+  ],
+  "initialRefreshBudget": {
+    "dailyPriceRequests": 231,
+    "historicalMarketCapRequests": 223,
+    "previewAndBenchmarkDividendSplitRequests": 128,
+    "fundamentalsRequests": 0,
+    "plannedEodhdPhysicalRequests": 582,
+    "configuredCeiling": 1000,
+    "hardCeiling": 1500,
+    "dailyPlanQuotaPercentAt100k": "0.582",
+    "retries": 0
+  },
+  "updateStates": [
+    {
+      "symbol": "A",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-10",
+      "fundamentalsLastFetchedAt": null,
+      "fundamentalsResponseHash": null,
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "AAPL",
+      "dailyPriceLastObservationDate": "2026-07-24",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": null,
+      "fundamentalsResponseHash": null,
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "ACN",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": null,
+      "fundamentalsResponseHash": null,
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "ADBE",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": null,
+      "fundamentalsResponseHash": null,
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "ADI",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": null,
+      "fundamentalsResponseHash": null,
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "ADM",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:20:04Z",
+      "fundamentalsResponseHash": "4C689F59A817AD985778F7B9CF86EBAA2F122A4D64F3BF0585F8C388A49DB1E4",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "ADP",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:20:04Z",
+      "fundamentalsResponseHash": "8EEE490C178E2E906D3737933A0D48DC087AE151A4E2EBFB4AF40F2E1DE934F9",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "ADSK",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:20:04Z",
+      "fundamentalsResponseHash": "2C5073DE4FEAEEC74ED778B4A41BB4196193FD110281493893E925E924C4B30F",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "AEE",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:20:04Z",
+      "fundamentalsResponseHash": "60206B620E896DDD4F17D3A2CF7C5437D183EA1033F5EE47C6D4D4465618D7F4",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "AEP",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:20:04Z",
+      "fundamentalsResponseHash": "855429973BC3E8673480EFB5BAA4FCE02879E2B53BABB95113B531A738BE0939",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "AES",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:20:04Z",
+      "fundamentalsResponseHash": "DAFB4B222CB25AF29C34F89BBD80C4494F95B9906E2472AF4AD27539D75E9C8A",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "AKAM",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:20:04Z",
+      "fundamentalsResponseHash": "0A7485C6037D744478CE01CFE4AE77C42E54E81713193ACCD8CC703A48E4321F",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "ALB",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:20:04Z",
+      "fundamentalsResponseHash": "2EAB8848FC99045CAB626FD2957DB47BF973CA184A1C75E47361632B62397757",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "ALLE",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:20:04Z",
+      "fundamentalsResponseHash": "1201882146D6CD81B9CE62E6616E1408D3BF25108BFFC8FE37A924F5BFE4B05A",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "AMAT",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:20:04Z",
+      "fundamentalsResponseHash": "743D849CC70A67B6CB528B9AE226D4136D38B45EA1AB1270B45B0CA13126D2BC",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "AMCR",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:20:04Z",
+      "fundamentalsResponseHash": "D5DFC26D652BC13DFD52AF75B36D1CAD8B666EF29D9F142E9B58D4B8F5E06134",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "AMD",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-17",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:20:04Z",
+      "fundamentalsResponseHash": "4CF80CCD79DB8877DAD12907E547673A859A9CA72EBCEAB944B75CC497015254",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "AME",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:20:04Z",
+      "fundamentalsResponseHash": "1570050FA438E5F29D7FE848847FD1DD21DB443CE75CD6FA91C5F400785692E7",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "AMZN",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:20:04Z",
+      "fundamentalsResponseHash": "600779A0262F24770BD84B1C7188B7ED74D87842C5840A6C62899ACF2F613621",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "AOS",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:28:44Z",
+      "fundamentalsResponseHash": "1EB88A47B561791A816EE6161AC5EE5E8FD6C2D3CD730A9D8A610599197495ED",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "APD",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:28:44Z",
+      "fundamentalsResponseHash": "3451E05809A44E32A91C49B21538E3CA2A139502450B0F2140965DDB1FF353B3",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "APH",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:28:44Z",
+      "fundamentalsResponseHash": "990F8ACEA455008FDAB41F942C379D6429468A5C61DA3358D365F483549EF88A",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "APP",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:28:44Z",
+      "fundamentalsResponseHash": "E983C2C69910DBCC38D4AA6E2C62D7DD7A6003C4340007B09A54901A7673C73A",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "APTV",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:28:44Z",
+      "fundamentalsResponseHash": "AB4630E71D9924D99A7B75A889B45FB80B2D8143C214082DE6FD73D461A02D79",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "ATO",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:28:44Z",
+      "fundamentalsResponseHash": "2AF95136F0FF59208EEA8859206913812297293CDFC9D021EE853ABEF20DC114",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "AVGO",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:28:44Z",
+      "fundamentalsResponseHash": "91432B620DC702699D0E5414DAF2A71492C4C276002F39F0025F01AAB0439F3E",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "AVY",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:28:44Z",
+      "fundamentalsResponseHash": "31A3AD4A211FE6114BA5C8641AF44DBB6C3319B7EA359CE5C2BA93744FE454C8",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "AWK",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:28:44Z",
+      "fundamentalsResponseHash": "E0F6BB4C79A56C2C510779BF95ED0032963BA93762288CF080B86E32CC8B0FEF",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "AXON",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-17",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:28:44Z",
+      "fundamentalsResponseHash": "CD671D5A44C87F24EA9CC11195B2F910C5AAD9F39A261F25CD9B894283AF19FF",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "BA",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:28:44Z",
+      "fundamentalsResponseHash": "67488B1BBF1287D5E70A28CBD0ACAC2494DD0AB98E5F9ADA6C3DA0CB26BC9A4E",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "BALL",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:28:44Z",
+      "fundamentalsResponseHash": "26A4E1E3F1823A6394A37CE63AF0457AFE92A4C5BA7584FD835AE696ACB7A246",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "BAX",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:28:44Z",
+      "fundamentalsResponseHash": "C708354A0C02A26029F09BE82B8AF63B12232023D963B5C0FF30191E6EC45B85",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "BBY",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:28:44Z",
+      "fundamentalsResponseHash": "43F10AB5BF32E1981C59E060EB63B0476CEB4A5A0F50A462740B3B7D8791A39F",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "BDX",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:28:44Z",
+      "fundamentalsResponseHash": "F027C75FE07B7520F1CCA0ED1EE759B5ED2E9CDFF9A9BBF6C3F82295429B915A",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "BF-B",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:28:44Z",
+      "fundamentalsResponseHash": "3231E47F820F133494344135FD888D2ADE22A4515202F3737FB651AE0FFA82B3",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "BG",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:28:44Z",
+      "fundamentalsResponseHash": "87A0FDBA80FA0F3197BF7FF174B2650ECE103EFF4419EBC5CFA4AE86FABC5025",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "BKNG",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:28:44Z",
+      "fundamentalsResponseHash": "F2506CC52182ABE29CE679014048AFA55563CCB9C37F9676576CCB94AC7BED95",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "BLDR",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:28:44Z",
+      "fundamentalsResponseHash": "720185E67F8E81FA10BDEDFD1DAD12F98F97EB78FED07FD61A11EFAD22F520F1",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "BMY",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:28:44Z",
+      "fundamentalsResponseHash": "215A55054E1976948B7FC0437FAD81AD75A6A4B688A573C5A4050413591B8C69",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "BR",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:39:18Z",
+      "fundamentalsResponseHash": "7103C54E9A169DD55A4F7B96DE447F5A8321D1BC2659111F148F3891FFCE9C81",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "BSX",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-10",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:39:18Z",
+      "fundamentalsResponseHash": "327405824952FCD4E6FC7CE84723457E4DB58B75652F580DFDB55F97818AD942",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "CARR",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:39:18Z",
+      "fundamentalsResponseHash": "71484B47CDE11051A0205BFA669783E2D9D71FDE4EA8C7CF0DAA3AC7C5C41E8E",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "CASY",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:39:18Z",
+      "fundamentalsResponseHash": "68ED8124061C094D862251B389B7E2ABED51C7855E292023F48B8CF9F7C8028A",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "CAT",
+      "dailyPriceLastObservationDate": "2026-07-24",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": null,
+      "fundamentalsResponseHash": null,
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "CCL",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:39:18Z",
+      "fundamentalsResponseHash": "7BCDF0E7CC129E5F237465275D77823619329B8C06D552FDCD0A7B84CA0EAA20",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "CDNS",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:39:18Z",
+      "fundamentalsResponseHash": "D25175B17B74D143E99E56CAAD409FC5A5A8E7B8785F5C2F5CC616573C2F1B32",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "CDW",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:39:18Z",
+      "fundamentalsResponseHash": "71127687DFFEC17796AB53E6F0A6A3B53EC2FC6140817D41290E9B9B50B1667D",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "CEG",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:39:18Z",
+      "fundamentalsResponseHash": "DB68DE4B4693C0B6F1C1167C08A86654B57B4C1342FE2AF504E65B5CA0FF8EF5",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "CF",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:39:18Z",
+      "fundamentalsResponseHash": "6CBA1DECD4263F8B0F0B9788FE569578AD1501F1664D7863BFDD8988B9D49612",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "CHD",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-17",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:39:18Z",
+      "fundamentalsResponseHash": "5BF0CDC7E6A8F7F0312435B64108A749905C2150B1EFCB470AABAF4269DE6371",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "CHRW",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:39:18Z",
+      "fundamentalsResponseHash": "154CC83C68D13EB750376A20094795653E178A690E1237FE3FBF7DFCE98B28CC",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "CHTR",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:39:18Z",
+      "fundamentalsResponseHash": "B175FAF0AD093F014F0AC475E9640A473BCDB08BE351C91938CCFA15139A644E",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "CI",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:39:18Z",
+      "fundamentalsResponseHash": "C6EB3F6CE580050A33B90B57487C4117D7E576E31BDE92F7314B8A2F2344281C",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "CIEN",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-17",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:39:18Z",
+      "fundamentalsResponseHash": "18184B0088D439413A8B259EA56958CD9A2B84CA46D30AF2F86BA7329A9BE4BB",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "CL",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:39:18Z",
+      "fundamentalsResponseHash": "AFE412D424B7E819810870782A595529499A030E045260AA26B18DE468D09B8D",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "CLX",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:39:18Z",
+      "fundamentalsResponseHash": "761D4F52C75C549B26A0B9A667EAEAFF8182D2336292452C3ECDFBCDB15FD320",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "CMCSA",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:39:18Z",
+      "fundamentalsResponseHash": "CD2950E47587FC18C65C14D7CE39E61022120CE8F2F533D556C17E941433D394",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "CMI",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:39:18Z",
+      "fundamentalsResponseHash": "2070C74195B5B83A4D376A4437FB400E5E778BFB4F4E6E844F3ABA555C77CAF3",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "CMS",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:49:36Z",
+      "fundamentalsResponseHash": "41E6B352E9141227FA5723D4F966065851CD10773B408A8118108788ADBCE058",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "CNC",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:49:36Z",
+      "fundamentalsResponseHash": "9C3F2829B398BD14CA2480042C186BC8073D8A0354E5A37C6E5CF5367EFE17C9",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "CNP",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:49:36Z",
+      "fundamentalsResponseHash": "A55B0148D85C2DA9BF7DC816F72EFDAD86AE4E6F1BB813AE42523521D86EBE5A",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "COHR",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-17",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:49:36Z",
+      "fundamentalsResponseHash": "ED63962320EF75BBB12D5DA7EEF4C712D41ECDCE897B1B554D9D068AB013C1FF",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "COO",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-17",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:49:36Z",
+      "fundamentalsResponseHash": "3D9A4EC533593705902F29AA9B7AA1BC5B85819DAC0DD271380179A2B6FFFBEE",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "COR",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:49:36Z",
+      "fundamentalsResponseHash": "F6DD6C68422B492B4E4F51C1D8BB096ABF78ED05E4F75FADD89AB2497293FE35",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "CPRT",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:49:36Z",
+      "fundamentalsResponseHash": "A22BC672B0514838E336DD49C3F03465AD63EEF6A59504BCF9349B76E43EDEF2",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "CRH",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:49:36Z",
+      "fundamentalsResponseHash": "8261EBB6B935F0113B54B3758A793FBBBAE1EEA0DB7B642AD12AF12A9366B84D",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "CRL",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:49:36Z",
+      "fundamentalsResponseHash": "3E57D3856AA55940DE7B6535862D7166E831CD8DE85A933CC304248E43606500",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "CROX",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:49:36Z",
+      "fundamentalsResponseHash": "2514B60FB6DFA7887139323B6070E3FA966B2363AC55DC2C92D4A39ECE4FA93D",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "CRWD",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:49:36Z",
+      "fundamentalsResponseHash": "308D274139246684B070BDCE100FED7E590DA28BC5F31EB83669677D810227FC",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "CSCO",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:49:36Z",
+      "fundamentalsResponseHash": "9FB3DEFCDDEFDC8E2996107272149F9F98FFB8835F96027E3A4F84B107A8F85F",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "CSX",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:49:36Z",
+      "fundamentalsResponseHash": "131085B4C503442C78123D78FB7A6BBE8F8D2C59397723ADA45FEF4C06EE7E6C",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "CTSH",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:49:36Z",
+      "fundamentalsResponseHash": "365DEB7B7E37DDDE5F3879093EF36D6FEA6E9B721C430674F9C1896D8B92AE85",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "CTVA",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:49:36Z",
+      "fundamentalsResponseHash": "4F66630A9DE740F1C04DB13DC25D7B11ABBB989B6F50140DE80ADA3D72EEB6B1",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "CVS",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-17",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:49:36Z",
+      "fundamentalsResponseHash": "6B32CAECC89A99ED0E2A420D0040C1EE01BAE3B86B93782FAE7B301DD752C61D",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "D",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:49:36Z",
+      "fundamentalsResponseHash": "8DFC8BCE38B02DD5F3B7E0A25C3545949671B828E9628AE89C44E57276DE515E",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "DAL",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T21:49:36Z",
+      "fundamentalsResponseHash": "39A913862B2D5051ACA9E427B6BFA756AE3D68992410E1CF1075FD57BA4369FE",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "DD",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:00:08Z",
+      "fundamentalsResponseHash": "B1900A382D3A7A69F36D8912D16C9EA0FA8F58B43512D9A69F852C0258E00FA1",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "DDOG",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:00:08Z",
+      "fundamentalsResponseHash": "5B75829314CEF7AE7CF51FF69AF561C653EA4D92A024D7E4CBB48EA35920BE3E",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "DE",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:00:08Z",
+      "fundamentalsResponseHash": "FF813472F255E6D500F193D31A1745ABC378CD245CD24DCFFF068E6C55BFBFA9",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "DELL",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:00:08Z",
+      "fundamentalsResponseHash": "191EAF5D4E6E3E155E4C6C18A914390D2FEB7374FA33A78094F02B60843A4440",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "DG",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:00:08Z",
+      "fundamentalsResponseHash": "7C29B890FB977D38B2C94B6726FBD280CE304157D7C6D78E5DADBC3CCF0362C4",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "DGX",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:00:08Z",
+      "fundamentalsResponseHash": "4725682ECFB6955FFF4578F60BD9A39EDF2829C901EA4AC214B4455BA47F4707",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "DHR",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:00:08Z",
+      "fundamentalsResponseHash": "D064A181AE83BBE2AFBFDFC293F97A662A7477ADA28C8530A70CB8133DC00A69",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "DIS",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:00:08Z",
+      "fundamentalsResponseHash": "E7482D12845582B829D6CFCB960CB222281D3C101C3F00A5B04313C358AF3AF7",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "DLTR",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:00:08Z",
+      "fundamentalsResponseHash": "2B7EA8C29C2CAC49D210796AD9EBEBB2F3DEC6BE031A0962D21F07F654D00CC8",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "DOV",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:00:08Z",
+      "fundamentalsResponseHash": "D82EDE98CFC2E24B965888F3A368767DFE00040567A0BFC907706A1AF9219DF3",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "DTE",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:00:08Z",
+      "fundamentalsResponseHash": "F08EFF67FFC0199B00AB8C451CA88B8B950A6C1B9554D0BFEB26A33EA13D4644",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "DUK",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:00:08Z",
+      "fundamentalsResponseHash": "E502B6D632504E9419B2F0D1298D08EB67E32265C3208C2DF7E77EB0500EAC0F",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "DVA",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:00:08Z",
+      "fundamentalsResponseHash": "584D89DD7A0E8DE36C1C437C61971E62AC6A3778A5068EF8407CE115975116FE",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "DXCM",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:00:08Z",
+      "fundamentalsResponseHash": "F972D3B67CC56248C8F604335F8EF750DFEDE89033FE0B59C23A3ED6F12701A4",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "EA",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-17",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:00:08Z",
+      "fundamentalsResponseHash": "6F3A061F6FA8FD7735EC671D527E0F20CB5E944CAA819AEF9B0086F0DF73E29C",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "EBAY",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:00:08Z",
+      "fundamentalsResponseHash": "2D6ED0714F228684136B21FB5E685E80564EE15F0F04D68A590208F95E9A5519",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "ECL",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:00:08Z",
+      "fundamentalsResponseHash": "BB362A6E90E1819C3C8F7B1559C4351D926BD04B9696ED0E9C1C06B50C3ABC89",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "ED",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:00:08Z",
+      "fundamentalsResponseHash": "48656C22A3900B5C36B8D005A1ECDB012572496A9CCE3335051A3D119B2B6764",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "EFX",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:11:00Z",
+      "fundamentalsResponseHash": "5BF34CDB9E5DE95C4A98AE9F1281A1BA10DD4884E0B435BC654C40EE3D859E21",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "EIX",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:11:00Z",
+      "fundamentalsResponseHash": "2A0552CDA82CABB3111B1800FC3823FF945ECB745CE293965A316241AEFA74B1",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "EL",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-17",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:11:00Z",
+      "fundamentalsResponseHash": "BF7903D6CE81948EB4E13DAAC0A30C1FEE78BBCB55766014E62C0159D88D1BE6",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "ELF",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:11:00Z",
+      "fundamentalsResponseHash": "9C38E13AF6309B0A712F5010B30992235451707369042611C8D17CD139B178E6",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "ELV",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:11:00Z",
+      "fundamentalsResponseHash": "6BB404ED2D99ECD7EDDB04FE22FF72836E34DC6FDB9E80DBE9B3152D4AD42E80",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "EME",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:11:00Z",
+      "fundamentalsResponseHash": "B0071FCF01E5EBDAE6DD6CADDB9F09C363D00FF42AD818D7B82E03389194DD53",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "EMR",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-17",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:11:00Z",
+      "fundamentalsResponseHash": "79BA914D555E9B59950E57EEFF2E83B24B1CD1BBA305240033DC47490574EC87",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "ES",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:11:00Z",
+      "fundamentalsResponseHash": "9473BA63F7AAFF66D0B9F9BB81DE1862248130FBF459F862BA998554BFF18308",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "ETN",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:11:00Z",
+      "fundamentalsResponseHash": "CD1B60A401B848EACD5B483415DA84F632C74AA75A3E2EA1327FC42D0C3822C2",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "ETR",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:11:00Z",
+      "fundamentalsResponseHash": "81A78562041281BCA75A8A9DFA74DA62D2D84F7A3BB4FDFC5FF63DB072B2543E",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "EVRG",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:11:00Z",
+      "fundamentalsResponseHash": "1A750835BF4721EB612C4CFADC8AAFEF1DB885462D6FE4AD690FD28A723A318F",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "EXC",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:11:00Z",
+      "fundamentalsResponseHash": "0323E568E864864F2FB91C3A96D5B9883282B4E302568EE2E829F3E2803FC265",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "EXPE",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:11:00Z",
+      "fundamentalsResponseHash": "59E9603C9EA14E9C7301B78C420142B002DE1042654C4EFAECC0645C0BF20DF0",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "F",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:11:00Z",
+      "fundamentalsResponseHash": "3257E5FBFB46480C11146B3A0D150D8E0FE05916DB3B3248C259CB0F88ABD3D0",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "FAST",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:11:00Z",
+      "fundamentalsResponseHash": "B6500EB37FEEAD2442EBB56DFF94650964D699CE60FF3531EC73A570401C4E54",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "FDX",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:11:00Z",
+      "fundamentalsResponseHash": "BB3FE32434A7A10BD5ED4B1AB8C925B6987937F716E4BE928928E2B12227143B",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "FE",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:11:00Z",
+      "fundamentalsResponseHash": "0D26F7BD1580ABFC52DCC56DBF08ADF972086CE28708E5CC2810B4BBA9CB9B2E",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "FICO",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:11:00Z",
+      "fundamentalsResponseHash": "81052BD0F826DA603C6F1C4C2BCE1EF21A88E38BEDB32EF8DE6816215AE81BFB",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "FIX",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:21:33Z",
+      "fundamentalsResponseHash": "056E5C27B3AEA8DC668A596883CE952A60A418670FE085D0E41D00BD7CB54E84",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "FLEX",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:21:33Z",
+      "fundamentalsResponseHash": "AF250FAC7D8868374C03190B429FDDEFAD01D527AB35D393500C5698FC9D878A",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "FOX",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:21:33Z",
+      "fundamentalsResponseHash": "CE9E61D7A386E0520E06198D77AA438D6053C445B32F783BB8E9C4F0990A6C76",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "FOXA",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:21:33Z",
+      "fundamentalsResponseHash": "DE2183FE5EB8213A354C7F59FE3469E432A5CA15FD0E1391512F2FF70B9AFAEF",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "FSLR",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:21:33Z",
+      "fundamentalsResponseHash": "FA4D2DE630772428B70148EA937C86D0D3FEB631AD5D1BAA64591D60DD42F984",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "FTV",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:21:33Z",
+      "fundamentalsResponseHash": "D865CC915A61F8E6BE7C9677BD43E480BC370D1676BF2D6602E84174436A6F78",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "GD",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-17",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:21:33Z",
+      "fundamentalsResponseHash": "56D698A95648EB4350B3C892EBD4E50987D360C9AADE4F60499EEDEE236679AC",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "GEHC",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:21:33Z",
+      "fundamentalsResponseHash": "902E0FA7EC5517C64AC4E30EC0CA92093628A79583F90F3A4540E2F45F7D49DB",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "GIS",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:21:33Z",
+      "fundamentalsResponseHash": "A682E66EFB4B2B1993CD3BB851EEDBB101CD72BBEA281825907DAA1CE9C5D4BE",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "GM",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:21:33Z",
+      "fundamentalsResponseHash": "AD2D21D59400D165B31144687F6B78B12CB33F51709EE65B657834AC20CF9B2F",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "GOOG",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:21:33Z",
+      "fundamentalsResponseHash": "F3BB64EB1DF570C6DC320D3DF57B3FA36442C6EF951962ABDE4EC1E068EF163F",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "GOOGL",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:21:33Z",
+      "fundamentalsResponseHash": "14C9B69E19E7A1018DCDFD3B915C54EAAE62EBB9B7FD086A17EF898767AE92A0",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "GPC",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:21:33Z",
+      "fundamentalsResponseHash": "0C8821801A032CE3DC5A2C99A1F7FE4B25EEEB77A7E300B1A33C73F03185CCC1",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "GWW",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:21:33Z",
+      "fundamentalsResponseHash": "476AF96E6E1A2F0DC4E9DB75E81DBE3A6004FB68F7781C7AB3C2D17180B55F7A",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "HD",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:21:33Z",
+      "fundamentalsResponseHash": "743FBF24E719C2DDE4811A43577554F5EEED41BA45F2D26A35C109DE8C927F9F",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "HLT",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:21:33Z",
+      "fundamentalsResponseHash": "B78E060CE19AFB43B31A3746CDF6483F29945BEE8C1E356D4A1A051B2E3D55C9",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "HON",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:21:33Z",
+      "fundamentalsResponseHash": "90E69F7A81AA24BACB8D90A581DD7A7C24CB22F67F89AACF5EF463761B75B25C",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "HRL",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:21:33Z",
+      "fundamentalsResponseHash": "D001F7B863F6B4EF8FE81898C7B8726CE4813B79D52304D46E1E18E2A966BBA8",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "HSIC",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-17",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:21:33Z",
+      "fundamentalsResponseHash": "ACBEBE2B87795D55E5B1683CEDE451AE6161D530DEB2AC6BCE5598491CCFD870",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "HUM",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:31:44Z",
+      "fundamentalsResponseHash": "C7552E9FE94462B92FDA54ECB95FDF67177C591935CB40626708703DE10B75C8",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "HWKN",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:31:44Z",
+      "fundamentalsResponseHash": "ADDBE36B196C3CEE2603A817A19C3EF6ADF22655C35A2FD9120F8E4B851F833C",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "IBM",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-17",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:31:44Z",
+      "fundamentalsResponseHash": "501646B5D66B07CEE67890F4972C97234FE0EE6277F0B76879235E3300033035",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "IDXX",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:31:44Z",
+      "fundamentalsResponseHash": "B349B5107700A111F769F2E7E575501B15BF22D99FB8D509272EED03E22904F4",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "IFF",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:31:44Z",
+      "fundamentalsResponseHash": "9DFCE977B290FE5C247522164F2E6767C07FF56FE5520D43B8468710A16DE83B",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "INTU",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:31:44Z",
+      "fundamentalsResponseHash": "5368E1FFD96683AD63DF7FBB8980C1D1C7E9A5C73259AFA2208B1A95EBCB8488",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "IP",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:31:44Z",
+      "fundamentalsResponseHash": "A210961E142CA0916395076FAC75F70A7523265EDA4EE44814851E70B447EF8E",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "IQV",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:31:44Z",
+      "fundamentalsResponseHash": "E19AA5F49CB4D87719324E6695C43DDBEB2E8D2EBDCB21FF2641AFBBE2A1E5D8",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "ITW",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:31:44Z",
+      "fundamentalsResponseHash": "A789508950C88D9EC04B07E3A0E92F8E0F0BDCE9E2BA58C05BECAF2F9F46E8EB",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "JNJ",
+      "dailyPriceLastObservationDate": "2026-07-24",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": null,
+      "fundamentalsResponseHash": null,
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "KDP",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:31:44Z",
+      "fundamentalsResponseHash": "5740F8A6BF4E004947140C05724193E29FE615F34F6429175C2942E22CC0D06B",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "KHC",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:31:44Z",
+      "fundamentalsResponseHash": "C567F30FFAA021F84D8C966703EE8E78F567BA1885D74C92BFC0699ADCA22D13",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "KLAC",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:31:44Z",
+      "fundamentalsResponseHash": "983EB2AD145A5E4F1CA9CA9CA91A9C9A18B08382488FD3F391FA45A2FC6151BD",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "KMB",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:31:44Z",
+      "fundamentalsResponseHash": "DD8D9034CD2A1C7621583E1CD988DFB46E9ACAC6921D50B5ED1EA190FEC5D02C",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "KO",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:31:44Z",
+      "fundamentalsResponseHash": "E31062D0A7AC9314ACEC0168A2E083D35A09AC117B91C9D9019A94C47C918C52",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "KVUE",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:31:44Z",
+      "fundamentalsResponseHash": "D45E15EA8E4BD8C37E88FFFB24219BA916F5C5CB04BA7DD7337F2CF1A7692D3B",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "LEN",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:31:44Z",
+      "fundamentalsResponseHash": "B052E6567A8184D878AC223204E79B14F2BEF2FAE96F9B1C3122A27AEAA27B3B",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "LH",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:31:44Z",
+      "fundamentalsResponseHash": "BE8E6D29DA0231270E25BA08A3D6228581F1471FB0ADD605212C384E563CEE4A",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "LIN",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:31:44Z",
+      "fundamentalsResponseHash": "755DD5A1BEC2259EE6DE2FD7B11AA5B15A2703EDC257241984C5F9034121958C",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "LLY",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:41:57Z",
+      "fundamentalsResponseHash": "5389E5B7521D5E62D37551669E09E52022216088272F1421A0DB4A5461720ED4",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "LMT",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:41:57Z",
+      "fundamentalsResponseHash": "B8879BDED9CA05668A588047CAB8A3B180A87FE6BBBE83E0022B02A58E2E809C",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "LNT",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:41:57Z",
+      "fundamentalsResponseHash": "3AFDEE407E6C42F5432B6BC04CA89BF4676B79EE046682EA2F5917FB3C5AA676",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "LOW",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:41:57Z",
+      "fundamentalsResponseHash": "4695F3760BDB44873A76C3FDC75825C084C3BF51F153782C951F95606F6E905C",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "LRCX",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:41:57Z",
+      "fundamentalsResponseHash": "4770279DFD74D3EA2504D92EFB041793B6C96B961B845D03397799B67EAF7EAA",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "LYV",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:41:57Z",
+      "fundamentalsResponseHash": "AD2A151B938E21834019FEE71DB5DD6E0CCCAF183E31C817335F9C49C27EAC0C",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "MCD",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:41:57Z",
+      "fundamentalsResponseHash": "C0285D0204D1CFCF0825B5B3DB245FA710AD8027262514FBAF9A14E04154614B",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "MCHP",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:41:57Z",
+      "fundamentalsResponseHash": "A75E008CB77474C4DF36A0FE3376D819347F21159C8714C4E208ABDCDAF8B9C5",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "MCK",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:41:57Z",
+      "fundamentalsResponseHash": "95F37B1BD2A74E13137079006692D9DF1B5A7E14EA312EA51ECBE5043DEAFD0E",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "MDLZ",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:41:57Z",
+      "fundamentalsResponseHash": "909819AA4F7D6A7247212B652EDEEBEE2BA1D0BCFBC6C13A8211CA0F34A24950",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "META",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:41:57Z",
+      "fundamentalsResponseHash": "3B1C2A24B4CE610BBB4A6940A7096130052A8B60D75B5B0357E5958D6D62C425",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "MKC",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:41:57Z",
+      "fundamentalsResponseHash": "C843E5C47FE5E50E023CF0832B48C080AC828C7F28150DF8D6D8081CF57124FC",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "MLM",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:41:57Z",
+      "fundamentalsResponseHash": "8591777CE933D3FC24E349F7F1B445735A04F8BDCB7605B7C4C2906BF30ABCA6",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "MNST",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:41:57Z",
+      "fundamentalsResponseHash": "E20D4E1B2267D755584297D1FF4B6F64EB353DE0AFB24F70D229E199D40FF287",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "MO",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:41:57Z",
+      "fundamentalsResponseHash": "450863076F68AEFD6B0A142C90BEBE008026E92F45F5E4EC4A314AFEABA3918B",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "MOS",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:41:57Z",
+      "fundamentalsResponseHash": "D5755CFF74049C99A5C5E6451C3F5D0B8619B848A66FEBD61ACE22F27518E4C0",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "MRK",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:41:57Z",
+      "fundamentalsResponseHash": "BE41EFE03A9DC0271DBE8C4D6C78FDA3443D8FEA1B42B54491117EBFEB70EF42",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "MSFT",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:41:57Z",
+      "fundamentalsResponseHash": "7CF537DFF253355990E3A4253A912165B8EAF8081E4BAAA9D828BE0CA2D6FA4F",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "NFLX",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:52:29Z",
+      "fundamentalsResponseHash": "63DCD0C36F5E8312CE793A1D70F20D99F29ABF8B9F78598235405CD919DD6F3F",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "NI",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:52:29Z",
+      "fundamentalsResponseHash": "2AF501B2489777AE4728C1808A48469742DEE69A9B3554B0D67D5298628FB75F",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "NKE",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:52:29Z",
+      "fundamentalsResponseHash": "7B0A218FD5A4E829671EBEB0394BF9A26BF445ABBB1B928EBC1F42783862F7D8",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "NOC",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:52:29Z",
+      "fundamentalsResponseHash": "A911ACBE66D154C6CE490BD97F1241905691E24E0731F749CA42E183B92325E9",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "NRG",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:52:29Z",
+      "fundamentalsResponseHash": "60D5D62BA42BB074DF6180AFA1F8DE415D4A8942A1AD88B78726020C1F77F2E1",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "NUE",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:52:29Z",
+      "fundamentalsResponseHash": "53E65B72B8A4E79F03FEBCE3A6E72DE13F62A4014A5036D03521866EA190265D",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "NVDA",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:52:29Z",
+      "fundamentalsResponseHash": "4F7A70DA3EBF15A46D315E55B8E136E59FDBBF6C223CE132ADA92E3FE667C518",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "NWSA",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-17",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:52:29Z",
+      "fundamentalsResponseHash": "46296202E0021C36A586F66D7797ED2F35693E4386F9384BF4DC75BCC6883019",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "OLED",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:52:29Z",
+      "fundamentalsResponseHash": "467ACB4E519E758D5092C4555963A8842740EFB9A99863E07C9ADD020B2DD1E1",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "OMC",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:52:29Z",
+      "fundamentalsResponseHash": "B588B806240E30E89AFEDE3ADF5DD7063A35C555A21B513E41B3B578DC19BE4B",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "ORCL",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:52:29Z",
+      "fundamentalsResponseHash": "81E853C50688BD0CB6891609BE7DD8D09779BBD3B33C220B3160FAE67FE1345C",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "ORLY",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:52:29Z",
+      "fundamentalsResponseHash": "164B1FA3CD20C302B6CBD480ACFDEF731BC0570A6ACCA93E15173F75B45C770B",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "PCAR",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:52:29Z",
+      "fundamentalsResponseHash": "2714AA430C18A930DC4376261F9F8DF7C51008B772F30CB289BD36A28CC8D43A",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "PCG",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:52:29Z",
+      "fundamentalsResponseHash": "B1561DBE383BBC22FE07E40E3AB40EA829A7791A22C222978473C2A1CAFEAC9D",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "PEG",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:52:29Z",
+      "fundamentalsResponseHash": "9C1E2C62A9C269E5F47251427DE7DC60D4CF4B28E9350AD6DB13105865CDFF9C",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "PFE",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:52:29Z",
+      "fundamentalsResponseHash": "558F80158B64411F75B7805AD3DD2CE0E0B7BB5B7BE157244522C07328BAE09B",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "PG",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:52:29Z",
+      "fundamentalsResponseHash": "8B640AF02C93851F3227CA4CAD8E2DE64F2330E3685F4CFA32CBDB04459D5330",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "PH",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:52:29Z",
+      "fundamentalsResponseHash": "C03C9D3B857E56F69738466B87867BCA11EBF6AB9DA1CB8D2685E21E840DC322",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "PLAB",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T22:52:29Z",
+      "fundamentalsResponseHash": "68803D52AF729AF9924F8A6D594A5CD90D55B70DC0F3FC2D8A04EB62DB116949",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "PM",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T23:03:10Z",
+      "fundamentalsResponseHash": "647B65BB076C1715D5ECD6A259B1292130DB2259C561A32331EF3E626CAE2AA2",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "PNW",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T23:03:10Z",
+      "fundamentalsResponseHash": "7A98ED433CCA3CF28E8E1A69E895984D4A96310D893E4B3D58A2B88D1D9D25F6",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "PPG",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T23:03:10Z",
+      "fundamentalsResponseHash": "79228E0988F9F5048FE33EC270BBC52F3790A2CA231D04067D43E0C5D2916B68",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "PPL",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T23:03:10Z",
+      "fundamentalsResponseHash": "FFA719F6A024D65EFE6826B1097274CC93A5AE268D08855F076552128E311C07",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "QCOM",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T23:03:10Z",
+      "fundamentalsResponseHash": "EF3BC54549151E5F8B300E8429DF14F7025C76A0CD9A07A8D46C4159786499DF",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "ROK",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T23:03:10Z",
+      "fundamentalsResponseHash": "569E1EF023ABE3D8333A3E23A6038297120E661405B33172D446B971EDC93123",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "ROST",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T23:03:10Z",
+      "fundamentalsResponseHash": "CD1415E6FE0D8A884DAF3A985DEF1723ABF71DE7FBE3E1B5FF1D0F359D724305",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "RTX",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T23:03:10Z",
+      "fundamentalsResponseHash": "7129EF1791443767764B550FDBB33C61402DA2A2CE96BA5089814512F6391D8D",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "SAIA",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T23:03:10Z",
+      "fundamentalsResponseHash": "E611F149D0A86D7CA14A90C37EDBA824FFE8B4021AE7C2DF3B99B45E1CF37893",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "SBUX",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T23:03:10Z",
+      "fundamentalsResponseHash": "9E5BF73EC1764746C8D5AB910D1FAF4200F03A981943F7B4D82293331FA96D6E",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "SHW",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T23:03:10Z",
+      "fundamentalsResponseHash": "E409FEE0C67D4230A1A65B880882720D3B64B74FB32FC5B025838C471FF3B87E",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "SJM",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T23:03:10Z",
+      "fundamentalsResponseHash": "49BE79E12A11471D4EB919DB568B3B95C5F2789E901B5342BB192E57A29F455F",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "SO",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T23:03:10Z",
+      "fundamentalsResponseHash": "516E96751B9918148D8D341285F9F10478E03FFA5CED59A9E3FC5240297504DA",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "SRE",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T23:03:10Z",
+      "fundamentalsResponseHash": "26683538183A39886D852879849CB0F2C74F5F151DEC75A1453AAE0E94944284",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "SW",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T23:03:10Z",
+      "fundamentalsResponseHash": "44B2B0331170B4C0F936241C8FE2AA101CD9EBCD7765E73A3FD1B47A9E7482A8",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "SYY",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T23:03:10Z",
+      "fundamentalsResponseHash": "98486E1F9CA94C2CB017C78A3428D0351DA4D477A53D61B712D8A8DF40CA8632",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "T",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T23:03:10Z",
+      "fundamentalsResponseHash": "AED2CCDFBEEB43072F7E1009752F6D8C819FD62048D077BF37A0FAC97BDE4B88",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "TGT",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T23:13:23Z",
+      "fundamentalsResponseHash": "D23B7EF4CC765DC7F966E1C0C04E5168A2D0B653A1AFEF9BBB4BCD25F2E4F74B",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "TJX",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T23:13:23Z",
+      "fundamentalsResponseHash": "427D86FD9903F7CE2FADB26A3BC6EC1652E9038941D74466179D5A77829E88DD",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "TKO",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T23:13:23Z",
+      "fundamentalsResponseHash": "433493FEBD29027174213C6039A4C0796FF239FDDCCCAF492E91F020DB498B76",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "TMUS",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T23:13:23Z",
+      "fundamentalsResponseHash": "9343DC20AD4668E4CD64FA365E95001222B5FF8DB9D0F5BDB821384507F79011",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "TSN",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T23:13:23Z",
+      "fundamentalsResponseHash": "2F2C0ACC89FFC00E948AE5C9A212A1983E18B327D9C61C9C2678C7A8E22ACA74",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "TTC",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T23:13:23Z",
+      "fundamentalsResponseHash": "975EAEA0CF2AB9DD236FF4D05FDDF9CB33DBF601B3C481548B0D3DAFEEE4F255",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "TTD",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-17",
+      "fundamentalsLastFetchedAt": "2026-07-27T23:13:23Z",
+      "fundamentalsResponseHash": "BB433CA8380E121B83598D39623B867974A862C0943E4C38D8DC4CE6F3A885AC",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "TTWO",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T23:13:23Z",
+      "fundamentalsResponseHash": "98A63571BCEBE0EB1AAF36C52252EECD0539BF30C4DCFB7D981D1F069C949B18",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "UFPI",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T23:13:23Z",
+      "fundamentalsResponseHash": "23AF085ED284BA51772E3F8A0AAA4DC90B35C9BA07F05BB94C9ED3764C5F2C82",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "UNP",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T23:13:23Z",
+      "fundamentalsResponseHash": "FA9B663B2A2CA4A8170800D57C4CCB11B0DEA06B6D2CE6FCD30F69852FA327E5",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "UPS",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T23:13:23Z",
+      "fundamentalsResponseHash": "E8B0F105B583A7311A624CEE709F54DBE3312408663CBAE8CE0A6D62B346D169",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "VMC",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T23:13:23Z",
+      "fundamentalsResponseHash": "CD3E0A8C588C6F7F9185E3261488A1EE5327297740C7A351D247203CAC3453FE",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "WBD",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T23:13:23Z",
+      "fundamentalsResponseHash": "9382878C9B730A79085BB57BA42E89B2D3F9A2766D71BC8B532EE11A35E0F07A",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "WDFC",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T23:13:23Z",
+      "fundamentalsResponseHash": "4F5451D543984CE812998E331832CFE3B896B6AAA62693F6C8B3DF732826C7C7",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "WM",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T23:13:23Z",
+      "fundamentalsResponseHash": "C2C272D9F95F6A8F6AB627FFD4F35EECE59B3D46AB1338257AF6994CB2165CB4",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "WMT",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T23:13:23Z",
+      "fundamentalsResponseHash": "9734642697128189A603514232B4852A465B93DA5C7ADDF86F63DB90D53F4778",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "XEL",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T23:13:23Z",
+      "fundamentalsResponseHash": "54983550620745FEC44CA4992A5B8C75C20430F7E1851B0C62D52ED9BEE42EA6",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "YUM",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T23:13:23Z",
+      "fundamentalsResponseHash": "DF8D238D2D8A247F2432DDD055551C51393DFD8B8980D0F68EC9CE0B502D82DF",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    },
+    {
+      "symbol": "ZBH",
+      "dailyPriceLastObservationDate": "2026-07-27",
+      "marketCapLastObservationDate": "2026-07-24",
+      "fundamentalsLastFetchedAt": "2026-07-27T23:13:23Z",
+      "fundamentalsResponseHash": "A9E4EB8CE7CA76F07DE07BEA5D65F39919A880D4EF98EC85F4ACDA6190A2D4B0",
+      "corporateActionsLastCheckedAt": null,
+      "identityLastCheckedAt": null
+    }
+  ],
+  "signalsEnrolled": 0,
+  "networkRequestsExecuted": false,
+  "databaseWritesExecuted": false,
+  "automaticTradingAuthorized": false,
+  "formalHistoricalPitClaim": false,
+  "artifactContentHash": "21CA573B4BAEEFE7EA8225BCA3547EA31BD895007F5BF7AB57DE1CB54630F457"
+}

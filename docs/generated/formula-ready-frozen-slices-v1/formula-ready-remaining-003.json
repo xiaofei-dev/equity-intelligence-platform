@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "formula-ready-frozen-slice-v1.0.0",
+  "sourceManifestContentHash": "856CF4C3C1174D258CB69D758BBE7740EE04A92E398E7A0841BAB3EBD7652EBC",
+  "sliceId": "formula-ready-remaining-003",
+  "sequence": 3,
+  "symbols": [
+    "BR",
+    "BSX",
+    "CALM",
+    "CARR",
+    "CASY",
+    "CCL",
+    "CDNS",
+    "CDW",
+    "CEG",
+    "CF",
+    "CHD",
+    "CHRW",
+    "CHTR",
+    "CI",
+    "CIEN",
+    "CL",
+    "CLX",
+    "CMCSA",
+    "CMG",
+    "CMI"
+  ],
+  "automaticSelection": false,
+  "automaticReplacement": false,
+  "contentHash": "F0553470CF418306AC521C70CA4A2660211C749C18504F6E846C3DBB362B4A90"
+}

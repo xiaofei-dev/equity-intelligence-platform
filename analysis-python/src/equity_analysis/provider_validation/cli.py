@@ -4,6 +4,9 @@ import os
 from datetime import date
 from pathlib import Path
 
+from equity_analysis.market_data.eodhd import EodhdProvider
+from equity_analysis.market_data.yfinance_provider import YFinanceProvider
+from equity_analysis.provider_validation.market_data import MarketDataValidationClient
 from equity_analysis.provider_validation.models import AcceptanceUniverse
 from equity_analysis.provider_validation.sec_edgar import SecEdgarClient
 from equity_analysis.provider_validation.service import ProviderAcceptanceService
@@ -41,7 +44,7 @@ def _arguments() -> argparse.Namespace:
     parser.add_argument(
         "--providers",
         nargs="+",
-        choices=("sec_edgar", "twelve_data"),
+        choices=("sec_edgar", "twelve_data", "yfinance", "eodhd"),
         default=("sec_edgar", "twelve_data"),
         help="Providers to validate. Use --providers sec_edgar for an SEC-only run.",
     )
@@ -63,8 +66,24 @@ def main() -> None:
     arguments = _arguments()
     local_environment = _load_local_environment(Path(".env"))
     api_key = os.getenv("TWELVE_DATA_API_KEY") or local_environment.get("TWELVE_DATA_API_KEY", "")
+    eodhd_api_key = os.getenv("EODHD_API_KEY") or local_environment.get("EODHD_API_KEY", "")
     user_agent = os.getenv("SEC_USER_AGENT") or local_environment.get("SEC_USER_AGENT", "")
     selected_providers = set(arguments.providers)
+    neutral_clients = []
+    unavailable_providers = []
+    if "yfinance" in selected_providers:
+        yfinance_provider = YFinanceProvider()
+        neutral_clients.append(
+            MarketDataValidationClient(yfinance_provider, yfinance_provider)
+        )
+    if "eodhd" in selected_providers:
+        if eodhd_api_key:
+            eodhd_provider = EodhdProvider(api_key=eodhd_api_key)
+            neutral_clients.append(
+                MarketDataValidationClient(eodhd_provider, eodhd_provider)
+            )
+        else:
+            unavailable_providers.append("eodhd")
     universe = AcceptanceUniverse.model_validate_json(arguments.fixture.read_text(encoding="utf-8"))
     symbols = (
         DEFAULT_REPRESENTATIVE_SYMBOLS
@@ -87,6 +106,9 @@ def main() -> None:
             if api_key and "twelve_data" in selected_providers
             else None
         ),
+        market_data_clients=tuple(neutral_clients),
+        unavailable_market_providers=tuple(unavailable_providers),
+        validate_twelve_data="twelve_data" in selected_providers,
     )
     report = service.validate(
         universe=universe,
