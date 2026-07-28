@@ -27,7 +27,7 @@ FastAPI analytics service
 
 This structure combines enterprise business-system practices in Java with the Python data and quantitative ecosystem.
 
-## Implemented Vertical Slice
+## Implemented Vertical Slices
 
 The current Phase 1 path is:
 
@@ -50,8 +50,6 @@ Next.js /market-data
 
 The browser receives normalized records from Spring Boot. It never receives
 provider credentials and does not call FastAPI or PostgreSQL directly.
-The provider-validation and quantitative candidate paths remain the next
-unimplemented analytics slices.
 
 The screening integration adds a second backend slice:
 
@@ -66,6 +64,30 @@ Immutable SEC and price observations
 FastAPI owns snapshot construction, point-in-time observation selection,
 rating execution, recovery, and result persistence. Spring Boot is an HTTP
 gateway for the versioned contract and does not query screening result tables.
+
+Market Intelligence adds an implemented internal composition and persistence
+slice:
+
+```text
+Provider-neutral observations and explicit coverage states
+    -> deterministic objective, tactical, valuation, and horizon inputs
+    -> durable FastAPI Market Intelligence profile
+    -> PostgreSQL V17 immutable profile and screening result
+```
+
+Daily Refresh v1 adds a separate V16 operational slice:
+
+```text
+Dataset-specific freshness
+    -> bounded refresh plan
+    -> resumable per-security tasks and checkpoints
+    -> append-only observations and corporate actions
+    -> usage telemetry and updated freshness
+```
+
+These two paths are implemented behind internal Python contracts. Publishing
+Market Intelligence through Spring Boot and rendering it in Next.js is the
+next product vertical slice; it is not yet a public API.
 
 ## Component Responsibilities
 
@@ -218,13 +240,19 @@ Docker Compose will coordinate:
 
 ### Initial Public Deployment
 
-Render is the planned initial platform:
+Render is the planned initial closed-test platform:
 
 - Web service for Next.js
 - Web service for Spring Boot
 - Private service or worker for Python
-- Managed PostgreSQL
+- Managed PostgreSQL on a private connection
 - Scheduled jobs for daily updates
+
+The first database deployment uses one managed PostgreSQL database with
+separate `app.*` and `analytics.*` ownership boundaries, encrypted deployment
+secrets, TLS, automated backups, and one migration authority. Runtime database
+credentials must not own DDL. See
+[Database Deployment v1](database-deployment-v1.md).
 
 ### Later Production Deployment
 

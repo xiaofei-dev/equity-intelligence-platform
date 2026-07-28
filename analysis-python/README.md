@@ -15,6 +15,18 @@ analysis, screening, backtesting, and later AI evidence preparation.
   versioned `LONG-HORIZON-RESEARCH-v1.0.0` model boundary
 - `POST /internal/v1/analytics/models/tactical/evaluate`: stable, versioned
   `TACTICAL-SIGNAL-v2.1.0` model boundary
+- `POST /internal/v1/market-intelligence/profiles/build`: assemble a
+  non-durable versioned research profile
+- `POST /internal/v1/market-intelligence/profiles/build-durable`: assemble and
+  persist an immutable V17 research profile
+- `GET /internal/v1/market-intelligence/profiles/{profileId}`: reconstruct one
+  durable research profile
+- `POST /internal/v1/market-intelligence/screen`: run an in-memory sector,
+  industry, or security screen
+- `POST /internal/v1/market-intelligence/screen-durable`: persist an immutable
+  V17 screening run and results
+- `GET /internal/v1/market-intelligence/screening-runs/{runId}`: read one
+  durable screening result set
 
 The market-data ingestion service selects `twelve_data`, `yfinance`, or `eodhd` with
 `MARKET_DATA_PROVIDER`. Twelve Data reads `TWELVE_DATA_API_KEY`, EODHD reads
@@ -87,9 +99,16 @@ signal has yet matured through the 5-, 20-, or 60-trading-day horizon, and no
 statistical edge is claimed.
 
 The next analytical responsibility is to create a fresh synchronized objective
-and tactical decision snapshot after a completed session, pass the
-identity/corporate-action/benchmark gates, and then append prospective
-outcomes without changing the frozen model contracts.
+and tactical decision snapshot through the V16 refresh and V17 Market
+Intelligence persistence boundaries, then publish that result through Spring
+Boot. After a completed session passes identity, corporate-action, and
+benchmark gates, Forward Validation may append prospective outcomes without
+changing the frozen model contracts.
+
+`equity_analysis.daily_refresh` is implemented as a provider-neutral planner,
+runner, scheduler boundary, and PostgreSQL persistence adapter. It is not
+automatically started by the FastAPI process. Production scheduling remains a
+deployment responsibility with explicit quota and full-refresh safety limits.
 
 Do not force banks, insurers, REITs, resource companies, biotechnology, or
 special situations through the initial general-company model.
@@ -105,8 +124,10 @@ The `equity_analysis.screening` package now provides:
 - Separate near-term, undefined medium-term, and long-term assessments
 - Exact factor contributions, missing reasons, risk flags, and lineage
 
-This is an executable calculation and contract fixture, not a full-market
-ingestion job or persisted screening-run API. See the
+This calculation package is the frozen formula boundary used by the persisted
+screening and Market Intelligence composition layers. It is not a claim that
+every security has sufficient data or that a full-market historical backtest
+has passed. See the
 [v1 validation report](../docs/objective-rating-v1-validation.md).
 
 ## Provider Acceptance CLI

@@ -3,6 +3,10 @@
 PostgreSQL migrations live in `migrations/` and are packaged into the Spring
 Boot application. Flyway applies them during backend startup.
 
+The current schema level is V17. The managed-database topology, credential
+separation, migration release procedure, backups, and recovery targets are
+defined in [Database Deployment v1](../docs/database-deployment-v1.md).
+
 ## Forward Validation
 
 `V11__create_forward_validation.sql` adds the prospective decision-quality

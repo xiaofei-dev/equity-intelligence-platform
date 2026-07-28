@@ -2,9 +2,11 @@
 
 ## Purpose
 
-This guide explains how to run and verify the Phase 0 foundation and the
-current Phase 1 market-data slice. Health checks do not require third-party
-credentials, but real Twelve Data ingestion requires a local API key.
+This guide explains how to run and verify the current V17 foundation, market
+data, analytics, screening, portfolio-context, and Market Intelligence
+contracts. Health checks and pure contract tests do not require third-party
+credentials. A real provider operation requires only the credential for the
+explicitly selected provider and capability.
 
 ## Prerequisites
 
@@ -132,6 +134,20 @@ Current migrations:
   six-symbol engineering universe.
 - `V3` consolidates duplicate United States ticker identities and enforces a
   unique normalized symbol.
+- `V4-V10` add immutable provider lineage, observations, snapshots, universes,
+  screening results, access roles, and idempotency.
+- `V11` adds Forward Decision-Quality experiment records.
+- `V12` adds user and portfolio context.
+- `V13` seals provider and adjustment-mode identity into snapshots.
+- `V14-V15` add Market Intelligence reference, profile, metric, and
+  sector/industry screening structures.
+- `V16` adds daily refresh tasks, checkpoints, freshness, and provider usage
+  telemetry.
+- `V17` persists assembled Market Intelligence profiles and screening results.
+
+See [Database Assets](../database/README.md) for the migration-by-migration
+contract and [Database Deployment v1](database-deployment-v1.md) for the
+managed deployment procedure.
 
 ## Health and Status Contracts
 
@@ -179,6 +195,29 @@ http://localhost:3000/market-data
 The page should show `AAPL`, `MSFT`, `JPM`, `XOM`, `JNJ`, and benchmark `SPY`
 with a trading date, close, volume, provider, and ingestion timestamp.
 
+## Daily Refresh and Market Intelligence
+
+Daily Refresh v1 is an internal Python library, not an active daemon or public
+endpoint. It plans only stale datasets, writes V16 task and checkpoint state,
+and appends observations through the existing immutable data model. A deployed
+scheduler must provide a versioned refresh plan, dataset codes, safety limits,
+and a PostgreSQL connection.
+
+Market Intelligence v1 exposes internal FastAPI contracts under:
+
+```text
+POST /internal/v1/market-intelligence/profiles/build
+POST /internal/v1/market-intelligence/profiles/build-durable
+GET  /internal/v1/market-intelligence/profiles/{profileId}
+POST /internal/v1/market-intelligence/screen
+POST /internal/v1/market-intelligence/screen-durable
+GET  /internal/v1/market-intelligence/screening-runs/{runId}
+```
+
+The durable endpoints require the V17 database contract. They remain internal:
+the browser must wait for the Spring Boot public contract rather than calling
+FastAPI directly.
+
 ## Continuous Integration
 
 GitHub Actions validates every pull request targeting `main` and every push to
@@ -187,6 +226,7 @@ GitHub Actions validates every pull request targeting `main` and every push to
 - Frontend dependency installation, linting, and production build
 - Spring Boot tests with Java 21
 - FastAPI linting and tests with Python 3.14
+- PostgreSQL clean and upgrade migration acceptance
 - Full-history secret scanning with Gitleaks
 
 The workflow can also be started manually from the GitHub Actions page. A

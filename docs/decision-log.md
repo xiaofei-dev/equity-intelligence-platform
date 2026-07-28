@@ -1249,3 +1249,37 @@ append-only `ingestion_batch`, `source_record`, `daily_price_observation`, and
 `corporate_action` structures. Repeated source content is idempotent; changed
 content appends a revision. Never update immutable evidence, freshness events,
 checkpoints, usage events, or terminal V16 tasks/runs.
+
+## 2026-07-28: Establish the authoritative current-state documentation boundary
+
+- Decision: use `docs/current-state.md` as the authoritative implementation
+  and operational status entry point.
+- Lifecycle: keep dated methodology reports and Git-safe generated acceptance
+  artifacts immutable. A newer implementation updates the current-state,
+  architecture, roadmap, module, decision, and development documentation
+  rather than rewriting historical evidence.
+- Rationale: the repository now contains many versioned gates and historical
+  reports. Separating current intent from immutable evidence prevents an old
+  run from being mistaken for the active production state.
+- Current next gate: complete the Market Intelligence end-to-end vertical
+  slice from bounded refresh through PostgreSQL, Python, Spring Boot, and
+  Next.js before expanding model scope.
+
+## 2026-07-28: Use managed PostgreSQL for the first closed-test deployment
+
+- Decision: deploy one managed PostgreSQL database in the same private region
+  and network as the Spring Boot and FastAPI services. Retain separate
+  `app.*` and `analytics.*` ownership boundaries.
+- Initial platform: Render managed services are the preferred first closed-test
+  path. Amazon RDS remains the later production-learning target.
+- Migration boundary: Flyway is the only DDL authority. A controlled
+  single-instance release may initially run Flyway, but horizontal deployment
+  requires a one-off migration release job and non-DDL runtime credentials.
+- Security: the database is not public; connections require TLS; credentials
+  live in encrypted deployment secrets; frontend code never receives a
+  database URL.
+- Recovery: enable managed daily backups, take an on-demand backup before
+  migrations, retain at least 14 days when the selected plan permits it, and
+  rehearse restoration before deployed user portfolio state becomes unique.
+- Deployment status: design only. No cloud resource, billing, scheduler, or
+  production database has been activated.

@@ -26,10 +26,12 @@ Deliver a usable daily equity research workflow that can be demonstrated, evalua
 - Daily or end-of-day data
 - A clearly defined investable universe
 
-The initial market is United States listed equities. Twelve Data is the
-development provider for the bounded Phase 1 slice; the provider interface
-must remain replaceable because broader coverage and commercial use require a
-separate data and licensing decision.
+The initial market is United States listed equities. EODHD is the current
+bounded licensed source for accepted fundamental capabilities. yfinance may
+support no-key daily price development and bounded closed-test refreshes,
+subject to licensing review before public or commercial use. Twelve Data
+remains supported through the same provider-neutral boundary. No provider is
+allowed to change the model contract or convert missing evidence into a value.
 
 ### Quantitative Screening
 

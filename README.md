@@ -19,8 +19,9 @@ The platform is not intended to guarantee returns, replace human judgment, or ex
 - Analytics service: Python and FastAPI
 - Database: PostgreSQL
 - Local orchestration: Docker Compose
-- Initial deployment: Render
-- Later deployment: Amazon ECS Fargate and Amazon RDS
+- Initial closed-test deployment: Render managed services and managed
+  PostgreSQL
+- Later production-learning deployment: Amazon ECS Fargate and Amazon RDS
 
 ## Repository Structure
 
@@ -65,8 +66,10 @@ Performance tracking and strategy evaluation
 ## Documentation
 
 - [Product Vision](docs/product-vision.md)
+- [Current Project State](docs/current-state.md)
 - [MVP Scope](docs/mvp-scope.md)
 - [System Architecture](docs/architecture.md)
+- [Database Deployment v1](docs/database-deployment-v1.md)
 - [Local Development](docs/development.md)
 - [Investment Methodology](docs/investment-methodology.md)
 - [Tactical Signal v2.1 Methodology](docs/tactical-signal-v2-1-methodology-2026-07-28.md)
@@ -92,10 +95,11 @@ Performance tracking and strategy evaluation
 
 ## Current Status
 
-Phase 0 is complete and Phase 1 analytics has reached an engineering
-acceptance checkpoint. The complete local stack runs through Docker Compose,
-and GitHub Actions validates the frontend, backend, analytics service, and full
-Git history for secrets.
+Phase 0 and the data, model, persistence, and internal Market Intelligence
+foundations are complete through PostgreSQL migration V17. The complete local
+stack runs through Docker Compose, and GitHub Actions validates the frontend,
+backend, analytics service, database migration paths, and full Git history for
+secrets.
 
 The current analytics foundation includes:
 
@@ -107,7 +111,11 @@ The current analytics foundation includes:
 - daily tactical one-week, one-month, and three-month opportunity states with
   separate entry value, extension risk, actionability, expiry, and risk caps;
 - a source-backed AI review contract that remains separate from deterministic
-  scores; and
+  scores;
+- durable Market Intelligence profiles and sector, industry, and
+  security-level screening contracts;
+- a provider-neutral daily refresh planner with resumable PostgreSQL tasks,
+  checkpoints, freshness states, and usage telemetry; and
 - an accepted Forward Decision-Quality framework with transaction costs,
   slippage, cash, sector ETF, and SPY counterfactuals.
 
@@ -121,6 +129,14 @@ remain separate gates.
 Forward Validation is operationally ready but not a performance result. No
 prospective signal has yet matured through the 5-, 20-, or 60-trading-day
 horizon, and `statisticalEdgeProven` remains `NOT_ESTABLISHED`.
+
+The next gate is the
+[Market Intelligence End-to-End Vertical Slice](docs/current-state.md#next-product-gate):
+activate one bounded refresh plan, build durable profiles and screening
+results, expose them through Spring Boot, and render them in Next.js. No cloud
+database, production scheduler, public registration, or automatic trading is
+active. See [Database Deployment v1](docs/database-deployment-v1.md) for the
+approved deployment preparation.
 
 ## Quick Start
 

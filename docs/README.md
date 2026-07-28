@@ -3,6 +3,7 @@
 ## Product and Scope
 
 - [Product Vision](product-vision.md)
+- [Current Project State](current-state.md)
 - [MVP Scope](mvp-scope.md)
 - [Roadmap](roadmap.md)
 
@@ -10,6 +11,7 @@
 
 - [System Architecture](architecture.md)
 - [Local Development](development.md)
+- [Database Deployment v1](database-deployment-v1.md)
 - [Data and Backtesting](data-and-backtesting.md)
 - [User and Portfolio Data Model](user-portfolio-data-model.md)
 - [Quantitative Screening Design](quantitative-screening.md)
@@ -39,3 +41,7 @@
 Product or architecture changes must be reflected in the relevant document and
 appended to the decision log. Implementation milestones, verification evidence,
 and unresolved issues belong in the dated development log.
+
+`current-state.md` is the authoritative status entry point. Dated methodology
+reports and files under `generated/` are historical or immutable evidence and
+are not rewritten to resemble the newest implementation.

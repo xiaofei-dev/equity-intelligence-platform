@@ -2,15 +2,18 @@
 
 ## Current Position
 
-Phase 0 and the first end-to-end market-data slice are complete. The current
-analytics checkpoint includes a bounded EODHD current-decision route,
-provider-neutral model interfaces, a 136-security QC snapshot, Tactical Signal
-v2.1, and an accepted Forward Decision-Quality framework.
+Phase 0, the first end-to-end market-data slice, and the internal Market
+Intelligence data and screening foundation are complete. The current
+checkpoint includes PostgreSQL V17, provider-neutral model and refresh
+interfaces, durable security profiles, sector/industry/security screening, a
+136-security QC snapshot, Tactical Signal v2.1, and an accepted Forward
+Decision-Quality framework.
 
 Historical point-in-time UQ validation, prospective outcome maturation,
-source-verified AI operation, and portfolio recommendation workflows remain
-separate later gates. The current engineering acceptance is not a claim of
-proven excess returns.
+source-verified AI operation, public Market Intelligence APIs, frontend
+research workflows, a deployed scheduler, and portfolio recommendation
+workflows remain separate later gates. The current engineering acceptance is
+not a claim of proven excess returns.
 
 ## Phase 0: Foundation - Complete
 
@@ -73,6 +76,38 @@ Current status: deterministic current-decision rankings are reproducible and
 explainable. Historical leakage and survivorship claims remain unproven;
 prospective Forward evidence is `PENDING_FUTURE_OUTCOMES`.
 
+## Phase 2B: Market Intelligence Persistence - Complete
+
+- [x] Define versioned company and security profile contracts
+- [x] Compose objective, tactical, valuation, and evidence statuses without
+  changing their source models
+- [x] Add sector, industry, and security filters and rankings
+- [x] Persist immutable profiles, horizon views, exclusions, and screening
+  results through PostgreSQL V17
+- [x] Keep AI narrative records isolated from deterministic ranking
+- [x] Add provider-neutral daily refresh plans, tasks, checkpoints, freshness,
+  and usage telemetry
+- [x] Validate clean and upgrade migration paths through V17
+
+Exit status: achieved for internal Python and database contracts.
+
+## Phase 2C: End-to-End Market Intelligence Productization - Next
+
+- [ ] Activate a bounded 50-100-security daily refresh plan
+- [ ] Use yfinance for permitted closed-test daily prices and EODHD only for
+  datasets whose accepted capability requires it
+- [ ] Publish Market Intelligence profile and screening contracts through
+  Spring Boot
+- [ ] Build the Next.js candidate list, filters, and stock detail view
+- [ ] Display data timestamps, missing states, exclusions, and model versions
+- [ ] Seal synchronized daily decision snapshots
+- [ ] Begin prospective Forward enrollment without changing frozen models
+
+Exit condition: a completed market session can be refreshed once, persisted,
+screened, exposed through Java, and reviewed in the frontend with complete
+lineage and no direct browser access to Python, PostgreSQL, or provider
+credentials.
+
 ## Phase 3: AI Evidence Review
 
 - Retrieve SEC and other approved source documents
@@ -119,7 +154,9 @@ honest performance evaluation.
 - Add monitoring and structured logs
 - Add secure secret handling
 - Confirm commercial data and AI licensing
-- Deploy to Render
+- Deploy the closed-test architecture to Render
+- Use managed PostgreSQL with private networking, separated credentials,
+  automated backups, and a one-off migration release step
 - Add a public project overview and demonstration flow
 
 Exit condition: a reviewer can access and understand the product without local

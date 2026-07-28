@@ -67,9 +67,16 @@ is unavailable, the same validation can run in a Java 21 development container.
 
 ## Next Responsibility
 
-After the Python candidate contract exists, the backend will coordinate
-analysis tasks and expose stable public candidate and coverage APIs. It must not
-own or duplicate the quantitative formulas.
+The next backend responsibility is to consume the implemented internal Market
+Intelligence profile and screening contracts and expose stable public
+candidate, profile, coverage, and freshness APIs. It must not own or duplicate
+the quantitative formulas, read Python-owned ranking tables as an alternative
+contract, or expose the Python service directly to the browser.
+
+The public contract must preserve profile/run identifiers, model versions,
+data timestamps, explicit missing and exclusion states, deterministic
+contributions, and the separation between deterministic output and AI
+narrative.
 
 The user and portfolio foundation now includes the `app.*` schema, closed-test
 identity resolution, account and liability snapshots, versioned profiles,
