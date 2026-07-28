@@ -9,6 +9,7 @@ from equity_analysis.analytics_interface.routes import (
 )
 from equity_analysis.forward_validation.routes import router as forward_validation_router
 from equity_analysis.market_data.routes import router as market_data_router
+from equity_analysis.market_intelligence.routes import router as market_intelligence_router
 from equity_analysis.screening.routes import recover_pending_runs
 from equity_analysis.screening.routes import router as screening_router
 from equity_analysis.tactical.routes import router as tactical_router
@@ -32,6 +33,7 @@ app = FastAPI(
     lifespan=lifespan,
 )
 app.include_router(market_data_router)
+app.include_router(market_intelligence_router)
 app.include_router(screening_router)
 app.include_router(forward_validation_router)
 app.include_router(tactical_router)

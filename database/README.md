@@ -82,6 +82,16 @@ Cross-schema changes require an explicit contract and migration.
 - `V12`: add user, identity, portfolio-context, constraint, and decision records
 - `V13`: seal the selected market-data provider and normalized adjustment mode
   into every data snapshot
+- `V14`: add exchange/taxonomy references, point-in-time company profiles and
+  security lifecycle evidence, and provider-neutral dataset releases
+- `V15`: add explicit-status metric observations plus sector/industry
+  screening scopes and aggregate ranks
+- `V16`: add idempotent daily refresh orchestration, checkpoints, per-security
+  freshness, provider usage telemetry, analytics audit records, and
+  full-universe workload indexes
+- `V17`: persist immutable assembled market-intelligence profiles, selected
+  fact lineage, cohorts, four horizon views, valuation evidence, ranking
+  exclusions, profile-screening runs/results, and isolated AI narratives
 
 Migration files are append-only after they have been applied to a shared
 environment. Corrections require a new migration rather than editing deployed
@@ -120,7 +130,8 @@ The acceptance script verifies required objects, strategy-weight totals,
 legacy price backfill, append-only guards, role isolation, missing-value
 behavior, and the two-cutoff point-in-time selection rule.
 
-The CI-compatible runner creates isolated empty and upgrade-path databases,
+The CI-compatible runner creates isolated empty, legacy V3, V12, and V16
+upgrade-path databases,
 executes the acceptance script against both, verifies a representative legacy
 price backfill, and removes the databases afterward:
 

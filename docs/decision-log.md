@@ -1148,3 +1148,104 @@ abstention reporting, contamination controls, and immutable evidence hashes.
 Historical walk-forward diagnostics remain descriptive and cannot satisfy
 prospective sample requirements. Keep
 `statisticalEdgeProven=NOT_ESTABLISHED` until real future episodes mature.
+
+## 2026-07-28: Extend analytics with Market Intelligence Data Model v1
+
+- Decision: add append-only V14-V16 migrations for reference/profile history,
+  provider-neutral dataset metadata, explicit-status reusable metrics,
+  sector/industry screening aggregates, and idempotent daily refresh
+  operations.
+- Ownership: Python owns all new `analytics.*` records; Spring Boot retains
+  exclusive ownership of `app.*` and consumes new capabilities only through a
+  separately versioned HTTP contract.
+- Rationale: the existing V1-V13 structures already represent canonical
+  securities, source lineage, normalized observations, sealed snapshots, and
+  security-level deterministic ratings. Extending those structures avoids
+  parallel identities and scoring models.
+- Data safety: non-valid values remain explicit states rather than zero;
+  economic, availability, and ingestion time remain separate; no raw licensed
+  payloads or credentials are stored.
+- Operations: PostgreSQL-backed plans, tasks, leases, checkpoints, freshness,
+  quota telemetry, and audit records are sufficient for the current MVP.
+  Partitioning and external queues are deferred until measured workloads
+  require them.
+
+# 2026-07-28: Adopt Daily Market Data Refresh v1
+
+Run daily US price and corporate-action refreshes in the deployed Python
+analytics worker against an explicit, versioned universe. Use provider-neutral
+normalized contracts; make yfinance the default free adapter only where
+licensing and quality permit, while retaining EODHD and future commercial
+adapters as replaceable implementations.
+
+Plan incremental overlapping windows by market session and persist separate
+per-security cursors for unadjusted prices, total-return-adjusted prices, and
+corporate actions. Record content lineage and explicit current, late, stale,
+missing, inactive, and failed states. Price freshness does not refresh
+fundamentals or establish scoring readiness.
+
+Use PostgreSQL for the single-run advisory lock, idempotent run/item identity,
+resumable checkpoints, quota usage, and structured status. Reserve worst-case
+retry cost before EODHD work and reject plans that can exceed the configured
+allowance. Keep live calls subject to a separately bounded preflight and
+explicit approval. The required database tables are an integration handoff and
+are not created by this implementation task.
+
+# 2026-07-28: Add Market Intelligence and Screening v1 as a composition layer
+
+Adopt `MARKET-INTELLIGENCE-SCREENING-v1.0.0` as the versioned durable security
+profile and research-screening contract. Keep observed facts, classifications,
+cohorts, deterministic model results, valuation evidence, and AI narrative
+separate. Do not change Objective Rating v1, `TACTICAL-SIGNAL-v2.1.0`, or
+`LONG-HORIZON-RESEARCH-v1.0.0`.
+
+Require explicit missing, invalid, not-applicable, stale, cohort, and formula
+eligibility states. Provider acceptance must not imply ranking eligibility.
+AI may explain cited evidence but cannot set facts, scores, ranks, portfolio
+weights, or trades. Defer persistence to the field-level database handoff in
+`docs/market-intelligence-screening-v1.md`.
+
+# 2026-07-28: Persist Market Intelligence profiles and screens through Python
+
+Use the Python analytics service as the sole writer and reader of V17 Market
+Intelligence profile and screening records. Resolve security, source, metric,
+snapshot, provider, ingestion, and classification identities through existing
+V1-V16 tables. Write a profile and all children in one transaction and treat
+an identical canonical profile hash as an idempotent replay.
+
+Seal screening runs with idempotency, request, input-snapshot, methodology, and
+result hashes. Durable reads reconstruct the versioned contract from immutable
+records without rerunning formulas. Keep all endpoints internal; Spring Boot
+continues to own user-facing authorization and workflows. AI narrative remains
+optional, cited, versioned, and constrained from deterministic fields.
+
+## 2026-07-28: Persist the Market Intelligence Screening v1 profile layer
+
+- Decision: add append-only V17 for immutable assembled profiles, selected
+  fact/source lineage, cohort sufficiency, four versioned horizon views,
+  valuation evidence, ranking exclusions, profile screening runs/results, and
+  optional cited AI narratives.
+- Reuse: canonical securities, identifiers, classifications, normalized
+  observations, source records, snapshots, Objective Rating calculation
+  results, group screening results, and freshness events remain in V1-V16.
+- Boundary: the V17 profile-screening run ranks already assembled profiles; it
+  does not replace the existing Objective Rating `screening_run`.
+- AI safety: narrative records are physically separate and constrained never
+  to affect deterministic facts, eligibility, scores, or ranks.
+- Integration: the committed Python screening service still requires an
+  idempotent persistence adapter. No `app.*`, Spring Boot, formula, provider,
+  or live-data behavior changes are authorized by this migration.
+
+# 2026-07-28: Bind Daily Market Data Refresh v1 to the V16 operations schema
+
+Replace the provisional refresh persistence contract with the database-owned
+V16 contract. Use `refresh_plan`, `refresh_run`, `refresh_task`,
+`refresh_checkpoint`, `security_dataset_freshness`, and
+`provider_usage_event` directly. Resolve configured public security identities,
+providers, and dataset codes through existing reference tables.
+
+Write normalized prices and corporate actions only through the existing
+append-only `ingestion_batch`, `source_record`, `daily_price_observation`, and
+`corporate_action` structures. Repeated source content is idempotent; changed
+content appends a revision. Never update immutable evidence, freshness events,
+checkpoints, usage events, or terminal V16 tasks/runs.

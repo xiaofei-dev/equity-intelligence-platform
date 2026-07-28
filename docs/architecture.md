@@ -159,6 +159,14 @@ market-data provider and one normalized adjustment mode, so price selection
 cannot silently mix configured market providers. SEC EDGAR remains the primary
 financial filing and revision-lineage authority.
 
+Market Intelligence Data Model v1 extends this boundary with normalized
+exchange and taxonomy references, point-in-time company profiles and lifecycle
+evidence, explicit-status reusable metrics, sector/industry screening
+aggregates, and PostgreSQL-backed daily refresh operations. These are all
+Python-owned `analytics.*` objects. Spring Boot continues to own `app.*` and
+must use a versioned HTTP contract before exposing refresh or group-screening
+state.
+
 The initial United States security master treats normalized ticker symbols as
 unique ingestion identities and exchange labels as mutable metadata. A future
 multi-market expansion requires a durable global identity design.
@@ -183,6 +191,12 @@ Every task should have:
 - Failure details
 - Strategy and model versions
 - Result location or result payload
+
+Daily market-data updates use the provider-neutral
+`Daily Market Data Refresh v1` planner and worker. PostgreSQL owns its
+cross-process advisory lock, resumable checkpoints, dataset-specific freshness,
+and structured run status. Price freshness is never reused as fundamental-data
+freshness or scoring eligibility.
 
 Screening tasks use PostgreSQL as their queue. Workers acquire advisory locks,
 recover pending or stale-running tasks after restart, and seal results in one

@@ -14,7 +14,7 @@ class Settings:
     @classmethod
     def from_environment(cls) -> "Settings":
         return cls(
-            market_data_provider=os.getenv("MARKET_DATA_PROVIDER", "twelve_data"),
+            market_data_provider=os.getenv("MARKET_DATA_PROVIDER", "yfinance"),
             twelve_data_api_key=os.getenv("TWELVE_DATA_API_KEY", ""),
             eodhd_api_key=os.getenv("EODHD_API_KEY", ""),
             analytics_database_url=os.getenv("ANALYTICS_DATABASE_URL", ""),

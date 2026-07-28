@@ -1,0 +1,45 @@
+{
+  "asOf": "2026-07-28T21:00:00Z",
+  "profiles": [
+    {
+      "securityId": "sec-aapl",
+      "symbol": "AAPL",
+      "issuerName": "Apple Inc.",
+      "sectorCode": "45",
+      "sectorName": "Information Technology",
+      "industryCode": "45202030",
+      "industryName": "Technology Hardware, Storage and Peripherals",
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "marketCap": "3200000000000",
+      "qualityScore": "82.50",
+      "valuationScore": "61.00",
+      "tacticalScores": {
+        "ONE_WEEK": "68.00",
+        "ONE_MONTH": "72.00",
+        "THREE_MONTHS": "70.00"
+      },
+      "longHorizonScore": "74.00",
+      "ownHistoryPercentile": "58.00"
+    },
+    {
+      "securityId": "sec-msft",
+      "symbol": "MSFT",
+      "issuerName": "Microsoft Corporation",
+      "sectorCode": "45",
+      "sectorName": "Information Technology",
+      "industryCode": "45103020",
+      "industryName": "Systems Software",
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "marketCap": "3000000000000",
+      "qualityScore": "88.00",
+      "valuationScore": "55.00",
+      "tacticalScores": {
+        "ONE_WEEK": "64.00",
+        "ONE_MONTH": "69.00",
+        "THREE_MONTHS": "73.00"
+      },
+      "longHorizonScore": "79.00",
+      "ownHistoryPercentile": "52.00"
+    }
+  ]
+}

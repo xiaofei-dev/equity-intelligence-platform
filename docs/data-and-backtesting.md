@@ -14,6 +14,10 @@ Every stored dataset should identify:
 - Schema version
 - Quality status
 
+Provider-neutral dataset releases also record schema and normalization
+versions, an availability-lag policy, a definition hash, and a retention
+class. See [Market Intelligence Data Model v1](market-intelligence-data-model-v1.md).
+
 ## Required Data Categories
 
 The MVP may require:
@@ -35,11 +39,13 @@ The MVP may require:
 ## Initial Market Data Source
 
 The Phase 1 vertical slice covers United States listed equities using daily
-data. Twelve Data is the initial provider because its time-series contract,
-reference metadata, and free development quota support a small internal
-universe without coupling the platform to a brokerage account.
+data. The default no-key development adapter is Yahoo Finance through
+`yfinance`, subject to licensing and quality review. EODHD is the bounded
+licensed source and Twelve Data remains a replaceable adapter. No provider is
+allowed to change normalized adjustment, lineage, or point-in-time semantics.
 
-The first integration uses split-adjusted daily OHLCV data. Every stored row
+The first integration uses explicit unadjusted and adjusted daily OHLCV data.
+Every stored row
 records the provider, adjustment mode, source timezone, trading date, and
 ingestion timestamp. Provider responses are normalized behind an internal
 interface so a licensed commercial source can replace Twelve Data without

@@ -21,6 +21,34 @@ BEGIN
         ('coverage_result'),
         ('factor_result'),
         ('strategy_rating')
+        ,('exchange')
+        ,('classification_node')
+        ,('company_profile_observation')
+        ,('security_status_observation')
+        ,('dataset_definition')
+        ,('dataset_release')
+        ,('metric_definition')
+        ,('metric_observation')
+        ,('screening_scope')
+        ,('screening_group_result')
+        ,('refresh_plan')
+        ,('refresh_run')
+        ,('refresh_task')
+        ,('refresh_checkpoint')
+        ,('security_dataset_freshness')
+        ,('provider_usage_event')
+        ,('analytics_audit_event')
+        ,('security_profile_snapshot')
+        ,('security_profile_classification_lineage')
+        ,('security_profile_fact')
+        ,('security_profile_fact_lineage')
+        ,('comparable_cohort_snapshot')
+        ,('market_intelligence_horizon_view')
+        ,('market_intelligence_valuation_evidence')
+        ,('market_intelligence_ranking_exclusion')
+        ,('market_intelligence_screening_run')
+        ,('market_intelligence_screening_result')
+        ,('market_intelligence_ai_narrative')
     ) expected(table_name)
     WHERE to_regclass('analytics.' || expected.table_name) IS NULL;
 
@@ -94,6 +122,276 @@ BEGIN
 
     IF has_schema_privilege('analytics_writer', 'app', 'USAGE') THEN
         RAISE EXCEPTION 'analytics_writer must not have app schema usage';
+    END IF;
+END;
+$$;
+
+DO $$
+DECLARE
+    profile_id UUID;
+    second_profile_id UUID;
+    observation_id BIGINT;
+BEGIN
+    INSERT INTO analytics.metric_definition (
+        metric_code, metric_version, value_type, unit_policy,
+        description, definition_hash
+    )
+    VALUES (
+        'TEST_PROFILE_MISSING', 'v1', 'NUMERIC', 'USD',
+        'Acceptance-only profile missing state',
+        'sha256:test-profile-missing-v1'
+    );
+
+    INSERT INTO analytics.metric_observation (
+        security_id, metric_code, metric_version, observation_date,
+        status, reason_code, effective_at, available_at, ingested_at
+    )
+    SELECT
+        id, 'TEST_PROFILE_MISSING', 'v1', DATE '2026-07-28',
+        'MISSING', 'SOURCE_FIELD_ABSENT',
+        TIMESTAMPTZ '2026-07-28 20:00:00Z',
+        TIMESTAMPTZ '2026-07-28 20:01:00Z',
+        TIMESTAMPTZ '2026-07-28 20:02:00Z'
+    FROM analytics.security
+    LIMIT 1
+    RETURNING id INTO observation_id;
+
+    INSERT INTO analytics.security_profile_snapshot (
+        contract_version,
+        security_id,
+        snapshot_as_of,
+        symbol,
+        issuer_name,
+        exchange_mic,
+        currency,
+        instrument_type,
+        profile_state,
+        ranking_state,
+        objective_rating_status,
+        objective_rating_version,
+        explainability,
+        input_payload_hash
+    )
+    SELECT
+        'MARKET-INTELLIGENCE-SCREENING-v1.0.0',
+        id,
+        TIMESTAMPTZ '2026-07-28 21:00:00Z',
+        symbol,
+        name,
+        CASE exchange
+            WHEN 'NASDAQ' THEN 'XNAS'
+            WHEN 'NYSE' THEN 'XNYS'
+            ELSE 'ARCX'
+        END,
+        currency,
+        instrument_type,
+        'PARTIAL',
+        'NOT_ELIGIBLE',
+        'INSUFFICIENT_DATA',
+        'Objective-Rating-v1',
+        '["Explicit missing values remain non-numeric."]'::jsonb,
+        'sha256:test-market-intelligence-profile'
+    FROM analytics.security
+    LIMIT 1
+    RETURNING id INTO profile_id;
+
+    INSERT INTO analytics.security_profile_fact (
+        profile_id, fact_name, metric_observation_id
+    )
+    VALUES (profile_id, 'market_cap', observation_id);
+
+    INSERT INTO analytics.market_intelligence_ranking_exclusion (
+        profile_id, reason_ordinal, reason_code, exclusion_category
+    )
+    VALUES (
+        profile_id, 1, 'REQUIRED_FACT_MARKET_CAP_NOT_VALID', 'FACT'
+    );
+
+    INSERT INTO analytics.market_intelligence_ai_narrative (
+        profile_id, status, source_references,
+        may_affect_deterministic_fields
+    )
+    VALUES (profile_id, 'NOT_EXECUTED', '[]'::jsonb, FALSE);
+
+    INSERT INTO analytics.security_profile_snapshot (
+        contract_version,
+        security_id,
+        snapshot_as_of,
+        symbol,
+        issuer_name,
+        exchange_mic,
+        currency,
+        instrument_type,
+        profile_state,
+        ranking_state,
+        objective_rating_status,
+        objective_rating_version,
+        explainability,
+        input_payload_hash
+    )
+    SELECT
+        'MARKET-INTELLIGENCE-SCREENING-v1.0.0',
+        id,
+        TIMESTAMPTZ '2026-07-28 21:00:00Z',
+        symbol,
+        name,
+        CASE exchange
+            WHEN 'NASDAQ' THEN 'XNAS'
+            WHEN 'NYSE' THEN 'XNYS'
+            ELSE 'ARCX'
+        END,
+        currency,
+        instrument_type,
+        'PARTIAL',
+        'NOT_ELIGIBLE',
+        'INSUFFICIENT_DATA',
+        'Objective-Rating-v1',
+        '["AI remains separate from deterministic fields."]'::jsonb,
+        'sha256:test-market-intelligence-profile-two'
+    FROM analytics.security
+    ORDER BY id
+    OFFSET 1
+    LIMIT 1
+    RETURNING id INTO second_profile_id;
+
+    BEGIN
+        INSERT INTO analytics.market_intelligence_horizon_view (
+            profile_id, horizon, model_id, model_version, view_state,
+            model_as_of, effective_at, score, label, input_hash,
+            evidence_hash, missing_inputs, explanation
+        )
+        VALUES (
+            profile_id, 'ONE_WEEK', 'TACTICAL-SIGNAL', 'v2.1.0',
+            'INSUFFICIENT_DATA',
+            TIMESTAMPTZ '2026-07-28 20:00:00Z',
+            TIMESTAMPTZ '2026-07-28 20:00:00Z',
+            0, 'INSUFFICIENT_DATA',
+            'sha256:test-input', 'sha256:test-evidence',
+            '["latest_price"]'::jsonb, '[]'::jsonb
+        );
+        RAISE EXCEPTION 'An unassessed horizon accepted a numeric score';
+    EXCEPTION
+        WHEN check_violation THEN
+            NULL;
+    END;
+
+    BEGIN
+        INSERT INTO analytics.market_intelligence_ai_narrative (
+            profile_id, status, source_references,
+            may_affect_deterministic_fields
+        )
+        VALUES (second_profile_id, 'NOT_EXECUTED', '[]'::jsonb, TRUE);
+        RAISE EXCEPTION 'AI narrative was allowed to affect deterministic fields';
+    EXCEPTION
+        WHEN check_violation THEN
+            NULL;
+    END;
+END;
+$$;
+
+DO $$
+DECLARE
+    v17_trigger_count INTEGER;
+BEGIN
+    SELECT COUNT(*) INTO v17_trigger_count
+    FROM pg_trigger
+    WHERE NOT tgisinternal
+      AND tgname IN (
+          'tr_security_profile_snapshot_append_only',
+          'tr_security_profile_fact_append_only',
+          'tr_comparable_cohort_snapshot_append_only',
+          'tr_market_intelligence_horizon_append_only',
+          'tr_market_intelligence_valuation_append_only',
+          'tr_market_intelligence_exclusion_append_only',
+          'tr_market_intelligence_run_append_only',
+          'tr_market_intelligence_result_append_only',
+          'tr_market_intelligence_ai_append_only'
+      );
+
+    IF v17_trigger_count <> 9 THEN
+        RAISE EXCEPTION 'V17 immutable profile contract triggers are incomplete';
+    END IF;
+END;
+$$;
+
+DO $$
+DECLARE
+    market_intelligence_trigger_count INTEGER;
+BEGIN
+    SELECT COUNT(*) INTO market_intelligence_trigger_count
+    FROM pg_trigger
+    WHERE NOT tgisinternal
+      AND tgname IN (
+          'tr_company_profile_append_only',
+          'tr_security_status_append_only',
+          'tr_metric_observation_append_only',
+          'tr_refresh_run_terminal_immutable',
+          'tr_refresh_task_terminal_immutable',
+          'tr_refresh_checkpoint_append_only',
+          'tr_security_freshness_append_only',
+          'tr_provider_usage_append_only',
+          'tr_analytics_audit_append_only'
+      );
+
+    IF market_intelligence_trigger_count <> 9 THEN
+        RAISE EXCEPTION 'Market-intelligence immutability triggers are incomplete';
+    END IF;
+
+    IF EXISTS (
+        SELECT 1
+        FROM information_schema.tables
+        WHERE table_schema = 'app'
+          AND table_name IN (
+              'refresh_plan', 'refresh_run', 'refresh_task',
+              'metric_observation', 'screening_group_result'
+          )
+    ) THEN
+        RAISE EXCEPTION 'Analytics-owned market-intelligence tables leaked into app schema';
+    END IF;
+
+    IF NOT EXISTS (
+        SELECT 1
+        FROM pg_indexes
+        WHERE schemaname = 'analytics'
+          AND indexname = 'ix_daily_price_observation_daily_workload'
+    ) THEN
+        RAISE EXCEPTION 'Daily full-universe price workload index is missing';
+    END IF;
+END;
+$$;
+
+DO $$
+BEGIN
+    INSERT INTO analytics.metric_definition (
+        metric_code, metric_version, value_type, unit_policy,
+        description, definition_hash
+    )
+    VALUES (
+        'TEST_EXPLICIT_MISSING', 'v1', 'NUMERIC', 'USD',
+        'Acceptance-only explicit missing state',
+        'sha256:test-explicit-missing-v1'
+    );
+
+    INSERT INTO analytics.metric_observation (
+        security_id, metric_code, metric_version, observation_date,
+        status, reason_code, effective_at, available_at, ingested_at
+    )
+    SELECT
+        id, 'TEST_EXPLICIT_MISSING', 'v1', DATE '2026-07-28',
+        'MISSING', 'SOURCE_FIELD_ABSENT',
+        TIMESTAMPTZ '2026-07-28 20:00:00Z',
+        TIMESTAMPTZ '2026-07-28 20:01:00Z',
+        TIMESTAMPTZ '2026-07-28 20:02:00Z'
+    FROM analytics.security
+    LIMIT 1;
+
+    IF EXISTS (
+        SELECT 1
+        FROM analytics.metric_observation
+        WHERE metric_code = 'TEST_EXPLICIT_MISSING'
+          AND (numeric_value IS NOT NULL OR status <> 'MISSING')
+    ) THEN
+        RAISE EXCEPTION 'Explicit missing metric state was coerced to a value';
     END IF;
 END;
 $$;

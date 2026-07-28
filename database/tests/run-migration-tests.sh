@@ -9,10 +9,14 @@ ACCEPTANCE_SCRIPT="${SCRIPT_DIR}/analytics_schema_acceptance.sql"
 APP_ACCEPTANCE_SCRIPT="${SCRIPT_DIR}/app_schema_acceptance.sql"
 EMPTY_DATABASE="equity_schema_empty_test"
 UPGRADE_DATABASE="equity_schema_upgrade_test"
+V12_UPGRADE_DATABASE="equity_schema_v12_upgrade_test"
+V16_UPGRADE_DATABASE="equity_schema_v16_upgrade_test"
 
 cleanup() {
   dropdb --if-exists "${EMPTY_DATABASE}" >/dev/null
   dropdb --if-exists "${UPGRADE_DATABASE}" >/dev/null
+  dropdb --if-exists "${V12_UPGRADE_DATABASE}" >/dev/null
+  dropdb --if-exists "${V16_UPGRADE_DATABASE}" >/dev/null
 }
 
 apply_migrations() {
@@ -112,5 +116,29 @@ if [ "${legacy_counts}" != "1:1" ]; then
   echo "Expected one legacy row and one backfilled row, got ${legacy_counts}" >&2
   exit 1
 fi
+
+createdb "${V12_UPGRADE_DATABASE}"
+apply_migrations "${V12_UPGRADE_DATABASE}" 1 12
+apply_migrations "${V12_UPGRADE_DATABASE}" 13 999
+psql \
+  --dbname="${V12_UPGRADE_DATABASE}" \
+  --set=ON_ERROR_STOP=1 \
+  --file="${ACCEPTANCE_SCRIPT}"
+psql \
+  --dbname="${V12_UPGRADE_DATABASE}" \
+  --set=ON_ERROR_STOP=1 \
+  --file="${APP_ACCEPTANCE_SCRIPT}"
+
+createdb "${V16_UPGRADE_DATABASE}"
+apply_migrations "${V16_UPGRADE_DATABASE}" 1 16
+apply_migrations "${V16_UPGRADE_DATABASE}" 17 999
+psql \
+  --dbname="${V16_UPGRADE_DATABASE}" \
+  --set=ON_ERROR_STOP=1 \
+  --file="${ACCEPTANCE_SCRIPT}"
+psql \
+  --dbname="${V16_UPGRADE_DATABASE}" \
+  --set=ON_ERROR_STOP=1 \
+  --file="${APP_ACCEPTANCE_SCRIPT}"
 
 echo "Database migration acceptance passed."

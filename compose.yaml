@@ -26,7 +26,7 @@ services:
       context: ./analysis-python
     environment:
       OPENAI_API_KEY: ${OPENAI_API_KEY:-}
-      MARKET_DATA_PROVIDER: ${MARKET_DATA_PROVIDER:-twelve_data}
+      MARKET_DATA_PROVIDER: ${MARKET_DATA_PROVIDER:-yfinance}
       TWELVE_DATA_API_KEY: ${TWELVE_DATA_API_KEY:-}
       ANALYTICS_DATABASE_URL: postgresql://${POSTGRES_USER:-equity_app}:${POSTGRES_PASSWORD:?POSTGRES_PASSWORD must be set in .env}@postgres:5432/${POSTGRES_DB:-equity_intelligence}
     ports:
