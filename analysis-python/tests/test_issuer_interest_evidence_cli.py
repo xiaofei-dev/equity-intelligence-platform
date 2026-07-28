@@ -19,8 +19,7 @@ def test_accession_sets_are_frozen_from_source_audit() -> None:
     repository_root = Path(__file__).resolve().parents[2]
     audit = json.loads(
         (
-            repository_root
-            / "docs/generated/sec-issuer-interest-consistency-audit-v1-3.json"
+            repository_root / "docs/generated/sec-issuer-interest-consistency-audit-v1-3.json"
         ).read_text(encoding="utf-8")
     )
 
@@ -35,6 +34,13 @@ def test_accession_sets_are_frozen_from_source_audit() -> None:
 
 def test_preflight_is_offline_bounded_and_excludes_cached_core_endpoints() -> None:
     repository_root = Path(__file__).resolve().parents[2]
+    controlled_journal_root = (
+        repository_root / "storage/provider-validation/scoring-inputs-v2/physical-request-journals"
+    )
+    if not controlled_journal_root.is_dir() or not any(
+        controlled_journal_root.rglob("*-COMPLETED.json")
+    ):
+        pytest.skip("CONTROLLED_EVIDENCE_NOT_AVAILABLE")
 
     preflight = build_preflight(
         run_id="20990101T000000Z-offline-test",
@@ -51,9 +57,7 @@ def test_preflight_is_offline_bounded_and_excludes_cached_core_endpoints() -> No
     assert preflight["eodhdRequests"] == 0
     assert preflight["maximumRetries"] == 0
     assert preflight["networkAccessedDuringPreflight"] is False
-    assert sum(preflight["endpointPlan"].values()) == preflight[
-        "plannedPhysicalHttpAttempts"
-    ]
+    assert sum(preflight["endpointPlan"].values()) == preflight["plannedPhysicalHttpAttempts"]
     assert set(preflight["endpointPlan"]) <= {
         "filing_index",
         "inline_xbrl",
@@ -71,10 +75,7 @@ def test_request_identity_is_stable_and_excludes_query_or_credentials() -> None:
     second = _request_identity(
         symbol="AMAT",
         endpoint="filing_index",
-        url=(
-            "https://www.sec.gov/Archives/edgar/data/6951/"
-            "accession/index.json?ignored=true"
-        ),
+        url=("https://www.sec.gov/Archives/edgar/data/6951/accession/index.json?ignored=true"),
     )
 
     assert first == second
@@ -89,14 +90,11 @@ def test_accession_set_drift_is_rejected() -> None:
     repository_root = Path(__file__).resolve().parents[2]
     audit = json.loads(
         (
-            repository_root
-            / "docs/generated/sec-issuer-interest-consistency-audit-v1-3.json"
+            repository_root / "docs/generated/sec-issuer-interest-consistency-audit-v1-3.json"
         ).read_text(encoding="utf-8")
     )
     record = next(item for item in audit["records"] if item["symbol"] == "AMAT")
-    evidence = next(
-        item for item in record["minimumMissingEvidence"] if item.get("accessions")
-    )
+    evidence = next(item for item in record["minimumMissingEvidence"] if item.get("accessions"))
     evidence["accessions"] = evidence["accessions"][:-1]
 
     with pytest.raises(

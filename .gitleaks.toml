@@ -1,0 +1,17 @@
+title = "Equity Intelligence Platform Gitleaks configuration"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "square-access-token"
+
+[[rules.allowlists]]
+description = "Ignore SHA-256 evidence hashes misidentified as Square tokens."
+condition = "AND"
+regexTarget = "secret"
+regexes = ['''^EAAA[0-9A-F]{60}$''']
+paths = [
+  '''^docs/generated/objective-rating-v1-qc-cohort-completion-feasibility-v1\.json$''',
+  '''^docs/generated/objective-rating-v1-qc-cohort-completion-feasibility-v1-1\.json$''',
+]

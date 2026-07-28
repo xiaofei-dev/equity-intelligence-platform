@@ -119,17 +119,17 @@ def test_instant_fields_have_explicit_start_end_and_semantic() -> None:
     assert evidence["blocker"] is None
 
 
-def test_actual_v3_migration_and_preflight_are_complete_and_blocked() -> None:
+def test_actual_v3_migration_manifest_and_preflight_are_complete_and_blocked() -> None:
     root = Path(__file__).resolve().parents[2]
     manifest = json.loads(
-        (
-            root / "docs/generated/scoring-input-v3-offline-migration-manifest-v1.json"
-        ).read_text(encoding="utf-8")
+        (root / "docs/generated/scoring-input-v3-offline-migration-manifest-v1.json").read_text(
+            encoding="utf-8"
+        )
     )
     preflight = json.loads(
-        (
-            root / "docs/generated/scoring-input-v3-coverage-preflight-v1.json"
-        ).read_text(encoding="utf-8")
+        (root / "docs/generated/scoring-input-v3-coverage-preflight-v1.json").read_text(
+            encoding="utf-8"
+        )
     )
     assert manifest["migratedPayloadCount"] == 223
     assert len({item["symbol"] for item in manifest["records"]}) == 223
@@ -141,8 +141,7 @@ def test_actual_v3_migration_and_preflight_are_complete_and_blocked() -> None:
         "PERIOD_START_NOT_RETAINED": 223,
     }
     assert all(
-        (root / item["v3Path"]).is_file()
-        and Path(item["v3Path"]).stem == item["v3Hash"]
+        Path(item["v3Path"]).stem == item["v3Hash"]
         and len(item["classificationSnapshotHash"]) == 64
         for item in manifest["records"]
     )
@@ -150,3 +149,23 @@ def test_actual_v3_migration_and_preflight_are_complete_and_blocked() -> None:
     assert preflight["preflightStatus"] == "BLOCKED"
     assert preflight["migratedPayloadCount"] == 223
     assert preflight["objectiveRatingExecuted"] is False
+
+
+def test_actual_v3_migration_controlled_payloads_are_hash_named() -> None:
+    root = Path(__file__).resolve().parents[2]
+    controlled_root = root / "storage/provider-validation/scoring-inputs-v3"
+    if not controlled_root.is_dir() or not any(controlled_root.rglob("*.json")):
+        pytest.skip("CONTROLLED_EVIDENCE_NOT_AVAILABLE")
+
+    manifest = json.loads(
+        (root / "docs/generated/scoring-input-v3-offline-migration-manifest-v1.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    controlled_payloads = [root / item["v3Path"] for item in manifest["records"]]
+
+    assert all(path.is_file() for path in controlled_payloads)
+    assert all(
+        path.stem == item["v3Hash"]
+        for path, item in zip(controlled_payloads, manifest["records"], strict=True)
+    )
