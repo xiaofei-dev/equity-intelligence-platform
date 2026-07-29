@@ -1,4 +1,5 @@
-from datetime import date, timedelta
+from datetime import UTC, date, datetime, time, timedelta
+from zoneinfo import ZoneInfo
 
 
 class UnitedStatesMarketCalendar:
@@ -40,6 +41,42 @@ class UnitedStatesMarketCalendar:
             if self.is_session(candidate):
                 count += 1
         return count
+
+    def latest_completed_session(
+        self,
+        as_of: datetime,
+        *,
+        grace_minutes: int = 90,
+    ) -> date:
+        if as_of.tzinfo is None or as_of.utcoffset() is None:
+            raise ValueError("as_of must include a timezone")
+        current = as_of.astimezone(UTC)
+        candidate = current.astimezone(ZoneInfo("America/New_York")).date()
+        if self.is_session(candidate):
+            close = self.session_close(candidate) + timedelta(minutes=grace_minutes)
+            if current >= close:
+                return candidate
+        return self.previous_session(candidate)
+
+    def session_close(self, session: date) -> datetime:
+        if not self.is_session(session):
+            raise ValueError("Session close requires a trading session")
+        close_time = time(13, 0) if self._is_early_close(session) else time(16, 0)
+        return datetime.combine(
+            session,
+            close_time,
+            tzinfo=ZoneInfo("America/New_York"),
+        ).astimezone(UTC)
+
+    def _is_early_close(self, value: date) -> bool:
+        thanksgiving = self._nth_weekday(value.year, 11, 3, 4)
+        if value == thanksgiving + timedelta(days=1):
+            return True
+        observed_independence_day = self._observed(date(value.year, 7, 4))
+        independence_eve_session = self.previous_session(observed_independence_day)
+        if value == independence_eve_session:
+            return True
+        return value.month == 12 and value.day == 24 and value.weekday() < 5
 
     def _holidays(self, year: int) -> frozenset[date]:
         fixed = {

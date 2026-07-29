@@ -197,11 +197,12 @@ with a trading date, close, volume, provider, and ingestion timestamp.
 
 ## Daily Refresh and Market Intelligence
 
-Daily Refresh v1 is an internal Python library, not an active daemon or public
-endpoint. It plans only stale datasets, writes V16 task and checkpoint state,
-and appends observations through the existing immutable data model. A deployed
-scheduler must provide a versioned refresh plan, dataset codes, safety limits,
-and a PostgreSQL connection.
+Daily Refresh v1 is a Python operator workflow, not an active daemon or public
+endpoint. The versioned 66-security CLI bootstraps reference data, prints an
+exact no-network preflight, and can execute prices, actions, and fundamentals
+sequentially with one confirmation token. It writes V16 tasks, checkpoints,
+freshness, usage, and immutable observations. A deployed scheduler must invoke
+the CLI explicitly; FastAPI startup never performs provider fetches.
 
 Market Intelligence v1 exposes internal FastAPI contracts under:
 
@@ -214,16 +215,17 @@ POST /internal/v1/market-intelligence/screen-durable
 GET  /internal/v1/market-intelligence/screening-runs/{runId}
 ```
 
-The durable endpoints require the V17 database contract. They remain internal:
-the browser must wait for the Spring Boot public contract rather than calling
-FastAPI directly.
+The durable endpoints require the V17 database contract and remain internal.
+Spring Boot now publishes the supported subset under
+`/api/v1/market-intelligence/*`; the browser calls that Java boundary only.
 
 ## Continuous Integration
 
 GitHub Actions validates every pull request targeting `main` and every push to
 `main`. The workflow performs these independent checks:
 
-- Frontend dependency installation, linting, and production build
+- Frontend dependency installation, contract tests, production dependency
+  audit, linting, and production build
 - Spring Boot tests with Java 21
 - FastAPI linting and tests with Python 3.14
 - PostgreSQL clean and upgrade migration acceptance

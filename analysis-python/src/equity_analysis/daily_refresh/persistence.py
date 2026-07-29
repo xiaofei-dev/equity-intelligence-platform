@@ -27,6 +27,7 @@ from equity_analysis.market_data.models import (
     CorporateActionSeries,
     DailyPriceSeries,
 )
+from equity_analysis.provider_validation.models import NormalizedFinancialObservation
 
 NORMALIZATION_VERSION = "market-normalization-v1.0.0"
 
@@ -37,10 +38,13 @@ class DatasetCodes:
     unadjusted_price: str
     total_return_adjusted_price: str
     corporate_action: str
+    fundamentals: str = "fundamentals_v1"
 
     def for_item(self, item: WorkItem) -> str:
         if item.dataset == Dataset.CORPORATE_ACTION:
             return self.corporate_action
+        if item.dataset == Dataset.FUNDAMENTALS:
+            return self.fundamentals
         if item.adjustment_mode == AdjustmentMode.UNADJUSTED:
             return self.unadjusted_price
         return self.total_return_adjusted_price
@@ -50,6 +54,8 @@ class DatasetCodes:
     ) -> str:
         if dataset == Dataset.CORPORATE_ACTION:
             return self.corporate_action
+        if dataset == Dataset.FUNDAMENTALS:
+            return self.fundamentals
         if adjustment_mode == AdjustmentMode.UNADJUSTED:
             return self.unadjusted_price
         return self.total_return_adjusted_price
@@ -93,6 +99,12 @@ class RefreshStore(Protocol):
     def record_result(self, run_id: str, result: WorkResult) -> None: ...
 
     def complete_run(self, result: RunResult) -> None: ...
+
+
+class RefreshExecutionBlocked(RuntimeError):
+    def __init__(self, message: str, code: str) -> None:
+        super().__init__(message)
+        self.code = code
 
 
 class PostgresRefreshPersistence:
@@ -162,6 +174,7 @@ class PostgresRefreshPersistence:
                 AdjustmentMode.TOTAL_RETURN_ADJUSTED,
             ),
             self._dataset_codes.corporate_action: (Dataset.CORPORATE_ACTION, None),
+            self._dataset_codes.fundamentals: (Dataset.FUNDAMENTALS, None),
         }
         with self._connect(self._database_url, row_factory=dict_row) as connection:
             rows = connection.execute(
@@ -224,10 +237,7 @@ class PostgresRefreshPersistence:
             ).fetchone()
             if plan_row is None:
                 raise RuntimeError("Configured V16 refresh plan is not active")
-            idempotency_key = (
-                f"{plan.provider_code}:{plan.universe_version}:"
-                f"{plan.expected_session_date}:v1"
-            )
+            idempotency_key = _refresh_run_idempotency_key(plan)
             run_row = connection.execute(
                 """
                 INSERT INTO analytics.refresh_run (
@@ -242,7 +252,8 @@ class PostgresRefreshPersistence:
             if run_row is None:
                 run_row = connection.execute(
                     """
-                    SELECT id FROM analytics.refresh_run
+                    SELECT id, canonical_request_hash
+                    FROM analytics.refresh_run
                     WHERE refresh_plan_id = %s AND idempotency_key = %s
                     """,
                     (plan_row[0], idempotency_key),
@@ -250,6 +261,11 @@ class PostgresRefreshPersistence:
             if run_row is None:
                 raise RuntimeError("V16 refresh run did not return an identifier")
             run_id = str(run_row[0])
+            if len(run_row) > 1 and run_row[1] != plan.configuration_hash:
+                raise RefreshExecutionBlocked(
+                    "Refresh idempotency key is bound to a different request",
+                    "IDEMPOTENCY_KEY_CONFLICT",
+                )
             run_status = connection.execute(
                 "SELECT status FROM analytics.refresh_run WHERE id = %s", (run_id,)
             ).fetchone()[0]
@@ -288,41 +304,52 @@ class PostgresRefreshPersistence:
                 """,
                 (run_id,),
             ).fetchall()
-        pending = {
-            row[0]
-            for row in rows
-            if row[1] in {"PENDING", "RUNNING", "FAILED"}
-        }
+        unknown = [row[0] for row in rows if row[1] == "RUNNING"]
+        if unknown:
+            raise RefreshExecutionBlocked(
+                "A prior provider request has an unresolved RUNNING task: "
+                + ", ".join(sorted(unknown)),
+                "UNKNOWN_PROVIDER_REQUEST",
+            )
+        failed = [row[0] for row in rows if row[1] == "FAILED"]
+        if failed:
+            raise RefreshExecutionBlocked(
+                "A prior terminal provider failure requires operator review: "
+                + ", ".join(sorted(failed)),
+                "TERMINAL_PROVIDER_FAILURE",
+            )
+        pending = {row[0] for row in rows if row[1] == "PENDING"}
         return tuple(item for item in plan.items if item.key in pending)
 
     def start_item(self, run_id: str, item: WorkItem) -> None:
         with self._connect(self._database_url) as connection:
             latest = self._latest_task(connection, run_id, item.key)
             if latest["status"] == "FAILED":
-                row = connection.execute(
-                    """
-                    INSERT INTO analytics.refresh_task (
-                        refresh_run_id, security_id, partition_key, task_type,
-                        status, attempt_number, available_at
-                    ) SELECT refresh_run_id, security_id, partition_key, task_type,
-                             'PENDING', attempt_number + 1, CURRENT_TIMESTAMP
-                      FROM analytics.refresh_task WHERE id = %s
-                    RETURNING id
-                    """,
-                    (latest["id"],),
-                ).fetchone()
-                task_id = row[0]
-            else:
-                task_id = latest["id"]
-            connection.execute(
+                raise RefreshExecutionBlocked(
+                    f"Failed task {item.key} has no scheduled retry",
+                    "TERMINAL_PROVIDER_FAILURE",
+                )
+            if latest["status"] == "RUNNING":
+                raise RefreshExecutionBlocked(
+                    f"Task {item.key} has unresolved provider intent",
+                    "UNKNOWN_PROVIDER_REQUEST",
+                )
+            task_id = latest["id"]
+            claimed = connection.execute(
                 """
                 UPDATE analytics.refresh_task
                 SET status = 'RUNNING', claimed_at = CURRENT_TIMESTAMP,
                     lease_expires_at = CURRENT_TIMESTAMP + INTERVAL '15 minutes'
                 WHERE id = %s AND status = 'PENDING'
+                RETURNING id
                 """,
                 (task_id,),
-            )
+            ).fetchone()
+            if claimed is None:
+                raise RefreshExecutionBlocked(
+                    f"Task {item.key} could not be claimed",
+                    "TASK_CLAIM_FAILED",
+                )
 
     def fail_attempt(
         self, run_id: str, item: WorkItem, error_code: str, retry_at: datetime | None
@@ -344,7 +371,11 @@ class PostgresRefreshPersistence:
                     INSERT INTO analytics.refresh_task (
                         refresh_run_id, security_id, partition_key, task_type,
                         status, attempt_number, available_at
-                    ) VALUES (%s, %s, %s, %s, 'PENDING', %s, %s)
+                    )
+                    SELECT %s, %s, %s, %s, 'PENDING', %s, %s
+                    FROM analytics.refresh_run run
+                    JOIN analytics.refresh_plan plan ON plan.id = run.refresh_plan_id
+                    WHERE run.id = %s AND %s <= plan.maximum_attempts
                     ON CONFLICT (
                         refresh_run_id, partition_key, task_type, attempt_number
                     ) DO NOTHING
@@ -356,6 +387,8 @@ class PostgresRefreshPersistence:
                         latest["task_type"],
                         latest["attempt_number"] + 1,
                         retry_at,
+                        run_id,
+                        latest["attempt_number"] + 1,
                     ),
                 )
 
@@ -381,6 +414,7 @@ class PostgresRefreshPersistence:
                 ),
             )
             freshness_status, reason = self._freshness_values(result)
+            has_successful_observation = freshness_status in {"CURRENT", "STALE"}
             security_id = latest["security_id"]
             connection.execute(
                 """
@@ -392,8 +426,8 @@ class PostgresRefreshPersistence:
                 )
                 SELECT %s, %s, provider.id, %s, %s, %s, %s, %s,
                        CURRENT_TIMESTAMP,
-                       CASE WHEN %s IS NULL THEN NULL
-                            ELSE %s + plan.freshness_target END,
+                       CASE WHEN %s::timestamptz IS NULL THEN NULL
+                            ELSE %s::timestamptz + plan.freshness_target END,
                        %s
                 FROM analytics.data_provider provider
                 JOIN analytics.refresh_task task ON task.id = %s
@@ -408,11 +442,11 @@ class PostgresRefreshPersistence:
                     latest["task_type"],
                     latest["id"],
                     freshness_status,
-                    result.effective_at if reason is None else None,
-                    result.available_at if reason is None else None,
-                    result.ingested_at if reason is None else None,
-                    result.ingested_at if reason is None else None,
-                    result.ingested_at if reason is None else None,
+                    result.effective_at if has_successful_observation else None,
+                    result.available_at if has_successful_observation else None,
+                    result.ingested_at if has_successful_observation else None,
+                    result.ingested_at if has_successful_observation else None,
+                    result.ingested_at if has_successful_observation else None,
                     reason,
                     latest["id"],
                     result.provider_code,
@@ -503,12 +537,426 @@ class PostgresRefreshPersistence:
                     (
                         provider[0],
                         result.run_id,
-                        sum(item.attempts for item in result.results),
+                        sum(item.physical_requests for item in result.results),
                         Decimal(result.weighted_calls_used),
                         result.completed_at,
                         f"daily-refresh-v1:{result.run_id}",
                     ),
                 )
+
+    def stop_run_after_terminal_failure(
+        self, run_id: str, expected_error_code: str
+    ) -> dict[str, int | str]:
+        return self._stop_run_after_terminal_evidence(
+            run_id,
+            expected_error_code,
+            terminal_phase="FAILED",
+            expected_content_hashes={},
+        )
+
+    def stop_run_after_persistence_failure(
+        self,
+        run_id: str,
+        expected_error_code: str,
+        expected_content_hashes: Mapping[str, str],
+    ) -> dict[str, int | str]:
+        """Close a run whose provider request completed before persistence failed.
+
+        Every RUNNING task must have one immutable COMPLETED request event whose
+        content hash matches both the reviewed input and a successful durable
+        source record. No provider request is repeated by this recovery path.
+        """
+
+        if not expected_content_hashes:
+            raise ValueError("Persistence recovery requires expected content hashes")
+        return self._stop_run_after_terminal_evidence(
+            run_id,
+            expected_error_code,
+            terminal_phase="COMPLETED",
+            expected_content_hashes=expected_content_hashes,
+        )
+
+    def _stop_run_after_terminal_evidence(
+        self,
+        run_id: str,
+        expected_error_code: str,
+        *,
+        terminal_phase: str,
+        expected_content_hashes: Mapping[str, str],
+    ) -> dict[str, int | str]:
+        """Close a stopped run without repeating any provider request.
+
+        A RUNNING task can be recovered only when its immutable request journal
+        contains the required terminal evidence. A task without terminal
+        evidence remains UNKNOWN and blocks closeout.
+        """
+
+        if terminal_phase not in {"COMPLETED", "FAILED"}:
+            raise ValueError("Unsupported terminal request phase")
+        completed_at = self._now()
+        with self._connect(self._database_url) as connection:
+            run = connection.execute(
+                """
+                SELECT run.status, plan.provider_id, provider.code
+                FROM analytics.refresh_run run
+                JOIN analytics.refresh_plan plan ON plan.id = run.refresh_plan_id
+                JOIN analytics.data_provider provider ON provider.id = plan.provider_id
+                WHERE run.id = %s
+                FOR UPDATE
+                """,
+                (run_id,),
+            ).fetchone()
+            if run is None:
+                raise ValueError(f"Unknown refresh run {run_id}")
+            if run[0] != "RUNNING":
+                raise RefreshExecutionBlocked(
+                    f"Refresh run {run_id} is already terminal",
+                    "RUN_ALREADY_TERMINAL",
+                )
+            running_tasks = connection.execute(
+                """
+                SELECT id, security_id, partition_key, task_type
+                FROM analytics.refresh_task
+                WHERE refresh_run_id = %s AND status = 'RUNNING'
+                ORDER BY partition_key
+                """,
+                (run_id,),
+            ).fetchall()
+            for task_id, security_id, partition_key, task_type in running_tasks:
+                terminal_event = connection.execute(
+                    """
+                    SELECT detail
+                    FROM analytics.analytics_audit_event
+                    WHERE event_type = 'PROVIDER_REQUEST_JOURNAL'
+                      AND correlation_id = %s
+                      AND detail->>'partitionKey' = %s
+                      AND detail->>'phase' = %s
+                    ORDER BY occurred_at DESC, id DESC
+                    LIMIT 1
+                    """,
+                    (run_id, partition_key, terminal_phase),
+                ).fetchone()
+                if terminal_event is None:
+                    raise RefreshExecutionBlocked(
+                        f"Task {partition_key} has no matching terminal request evidence",
+                        "UNKNOWN_PROVIDER_REQUEST",
+                    )
+                detail = terminal_event[0]
+                if terminal_phase == "FAILED":
+                    if detail.get("errorCode") != expected_error_code:
+                        raise RefreshExecutionBlocked(
+                            f"Task {partition_key} has mismatched failure evidence",
+                            "UNKNOWN_PROVIDER_REQUEST",
+                        )
+                else:
+                    expected_hash = expected_content_hashes.get(partition_key)
+                    if not expected_hash or detail.get("contentHash") != expected_hash:
+                        raise RefreshExecutionBlocked(
+                            f"Task {partition_key} has mismatched completion evidence",
+                            "UNKNOWN_PROVIDER_REQUEST",
+                        )
+                    durable_source = connection.execute(
+                        """
+                        SELECT 1
+                        FROM analytics.source_record source
+                        JOIN analytics.ingestion_batch batch
+                          ON batch.id = source.ingestion_batch_id
+                        WHERE source.provider_id = %s
+                          AND source.content_hash = %s
+                          AND batch.status = 'SUCCEEDED'
+                        LIMIT 1
+                        """,
+                        (run[1], expected_hash),
+                    ).fetchone()
+                    if durable_source is None:
+                        raise RefreshExecutionBlocked(
+                            f"Task {partition_key} has no matching durable source record",
+                            "PERSISTENCE_EVIDENCE_MISSING",
+                        )
+                connection.execute(
+                    """
+                    UPDATE analytics.refresh_task
+                    SET status = 'FAILED', completed_at = %s,
+                        lease_expires_at = NULL, error_code = %s
+                    WHERE id = %s AND status = 'RUNNING'
+                    """,
+                    (completed_at, expected_error_code, task_id),
+                )
+                connection.execute(
+                    """
+                    INSERT INTO analytics.security_dataset_freshness (
+                        security_id, dataset_code, provider_id, refresh_task_id,
+                        status, evaluated_at, stale_after, reason_code
+                    ) VALUES (%s, %s, %s, %s, 'INVALID', %s, NULL, %s)
+                    ON CONFLICT ON CONSTRAINT uq_security_dataset_freshness_event
+                    DO NOTHING
+                    """,
+                    (
+                        security_id,
+                        task_type,
+                        run[1],
+                        task_id,
+                        completed_at,
+                        expected_error_code,
+                    ),
+                )
+            connection.execute(
+                """
+                UPDATE analytics.refresh_task
+                SET status = 'SKIPPED', completed_at = %s,
+                    lease_expires_at = NULL, error_code = %s
+                WHERE refresh_run_id = %s AND status = 'PENDING'
+                """,
+                (
+                    completed_at,
+                    (
+                        "RUN_STOPPED_AFTER_PROVIDER_FAILURE"
+                        if terminal_phase == "FAILED"
+                        else "RUN_STOPPED_AFTER_PERSISTENCE_FAILURE"
+                    ),
+                    run_id,
+                ),
+            )
+            counts = {
+                str(status): int(count)
+                for status, count in connection.execute(
+                    """
+                    SELECT status, COUNT(*)
+                    FROM analytics.refresh_task
+                    WHERE refresh_run_id = %s
+                    GROUP BY status
+                    """,
+                    (run_id,),
+                ).fetchall()
+            }
+            terminal_events = [
+                event[0]
+                for event in connection.execute(
+                    """
+                    SELECT detail
+                    FROM analytics.analytics_audit_event
+                    WHERE event_type = 'PROVIDER_REQUEST_JOURNAL'
+                      AND correlation_id = %s
+                      AND detail->>'phase' IN ('COMPLETED', 'FAILED')
+                    ORDER BY occurred_at, id
+                    """,
+                    (run_id,),
+                ).fetchall()
+            ]
+            terminal_keys: set[tuple[str, int]] = set()
+            physical_requests = 0
+            weighted_calls = 0
+            for detail in terminal_events:
+                terminal_key = (str(detail["requestKey"]), int(detail["attempt"]))
+                if terminal_key in terminal_keys:
+                    raise RefreshExecutionBlocked(
+                        "A provider request has multiple terminal journal events",
+                        "REQUEST_JOURNAL_CONFLICT",
+                    )
+                terminal_keys.add(terminal_key)
+                physical_requests += len(detail["endpointCodes"])
+                weighted_calls += (
+                    10
+                    if detail["dataset"] == Dataset.FUNDAMENTALS.value
+                    else 2
+                    if detail["dataset"] == Dataset.CORPORATE_ACTION.value
+                    else 1
+                )
+            outcome = "PARTIAL" if counts.get("SUCCEEDED", 0) else "FAILED"
+            result_payload = {
+                "outcome": outcome,
+                "succeeded": counts.get("SUCCEEDED", 0),
+                "failed": counts.get("FAILED", 0),
+                "skipped": counts.get("SKIPPED", 0),
+                "physicalRequests": physical_requests,
+                "weightedCalls": weighted_calls,
+                "errorCode": expected_error_code,
+            }
+            result_hash = _canonical_hash(result_payload)
+            connection.execute(
+                """
+                UPDATE analytics.refresh_run
+                SET status = %s, completed_at = %s, result_hash = %s, error_code = %s
+                WHERE id = %s AND status = 'RUNNING'
+                """,
+                (outcome, completed_at, result_hash, expected_error_code, run_id),
+            )
+            if weighted_calls:
+                connection.execute(
+                    """
+                    INSERT INTO analytics.provider_usage_event (
+                        provider_id, refresh_run_id, endpoint_code,
+                        request_count, unit_count, observed_at, idempotency_key
+                    ) VALUES (%s, %s, 'daily-refresh-v1', %s, %s, %s, %s)
+                    ON CONFLICT (provider_id, idempotency_key) DO NOTHING
+                    """,
+                    (
+                        run[1],
+                        run_id,
+                        physical_requests,
+                        Decimal(weighted_calls),
+                        completed_at,
+                        f"daily-refresh-v1:{run_id}",
+                    ),
+                )
+            stop_detail = json.dumps(
+                {
+                    **result_payload,
+                    "runId": run_id,
+                    "provider": run[2],
+                    "resultHash": result_hash,
+                },
+                sort_keys=True,
+                separators=(",", ":"),
+            )
+            connection.execute(
+                """
+                INSERT INTO analytics.analytics_audit_event (
+                    event_type, entity_type, entity_id, actor_service,
+                    occurred_at, correlation_id, event_hash, detail
+                ) VALUES (
+                    'REFRESH_RUN_STOPPED', 'REFRESH_RUN', %s,
+                    'PYTHON_ANALYTICS', %s, %s, %s, %s::jsonb
+                )
+                ON CONFLICT (event_hash) DO NOTHING
+                """,
+                (
+                    run_id,
+                    completed_at,
+                    run_id,
+                    _canonical_hash(
+                        {
+                            "runId": run_id,
+                            "resultHash": result_hash,
+                            "errorCode": expected_error_code,
+                        }
+                    ),
+                    stop_detail,
+                ),
+            )
+        return {
+            "runId": run_id,
+            "status": outcome,
+            "succeeded": counts.get("SUCCEEDED", 0),
+            "failed": counts.get("FAILED", 0),
+            "skipped": counts.get("SKIPPED", 0),
+            "physicalRequests": physical_requests,
+            "weightedCalls": weighted_calls,
+            "resultHash": result_hash,
+        }
+
+    def request_intent(
+        self,
+        run_id: str,
+        item: WorkItem,
+        attempt: int,
+        *,
+        content_hash: str | None = None,
+        error_code: str | None = None,
+    ) -> None:
+        self._request_event(
+            run_id,
+            item,
+            attempt,
+            phase="INTENT",
+            content_hash=content_hash,
+            error_code=error_code,
+        )
+
+    def request_completed(
+        self,
+        run_id: str,
+        item: WorkItem,
+        attempt: int,
+        *,
+        content_hash: str | None = None,
+        error_code: str | None = None,
+    ) -> None:
+        self._request_event(
+            run_id,
+            item,
+            attempt,
+            phase="COMPLETED",
+            content_hash=content_hash,
+            error_code=error_code,
+        )
+
+    def request_failed(
+        self,
+        run_id: str,
+        item: WorkItem,
+        attempt: int,
+        *,
+        content_hash: str | None = None,
+        error_code: str | None = None,
+    ) -> None:
+        self._request_event(
+            run_id,
+            item,
+            attempt,
+            phase="FAILED",
+            content_hash=content_hash,
+            error_code=error_code,
+        )
+
+    def _request_event(
+        self,
+        run_id: str,
+        item: WorkItem,
+        attempt: int,
+        *,
+        phase: str,
+        content_hash: str | None,
+        error_code: str | None,
+    ) -> None:
+        endpoint_codes = {
+            Dataset.DAILY_PRICE: ("yahoo.download.daily",),
+            Dataset.CORPORATE_ACTION: ("eodhd.dividends", "eodhd.splits"),
+            Dataset.FUNDAMENTALS: ("eodhd.fundamentals",),
+        }[item.dataset]
+        detail = {
+            "phase": phase,
+            "requestKey": item.request_key,
+            "partitionKey": item.key,
+            "provider": item.provider_code,
+            "dataset": item.dataset.value,
+            "symbol": item.security.symbol,
+            "startDate": item.start_date.isoformat(),
+            "endDate": item.end_date.isoformat(),
+            "attempt": attempt,
+            "endpointCodes": endpoint_codes,
+            "contentHash": content_hash,
+            "errorCode": error_code,
+        }
+        event_hash = _canonical_hash(
+            {
+                "runId": run_id,
+                "requestKey": item.request_key,
+                "attempt": attempt,
+                "phase": phase,
+            }
+        )
+        detail_json = json.dumps(detail, sort_keys=True, separators=(",", ":"))
+        with self._connect(self._database_url) as connection:
+            connection.execute(
+                """
+                INSERT INTO analytics.analytics_audit_event (
+                    event_type, entity_type, entity_id, actor_service,
+                    occurred_at, correlation_id, event_hash, detail
+                ) VALUES (
+                    'PROVIDER_REQUEST_JOURNAL', 'REFRESH_REQUEST', %s,
+                    'PYTHON_ANALYTICS', %s, %s, %s, %s::jsonb
+                )
+                ON CONFLICT (event_hash) DO NOTHING
+                """,
+                (
+                    item.request_key,
+                    self._now(),
+                    run_id,
+                    event_hash,
+                    detail_json,
+                ),
+            )
 
     def write_prices(self, series: DailyPriceSeries, mode: str) -> WriteResult:
         adjustment_mode = AdjustmentMode.from_storage(mode)
@@ -528,6 +976,129 @@ class PostgresRefreshPersistence:
             ),
         )
         return self._write_price_series(persisted)
+
+    def write_fundamentals(
+        self,
+        security_public_id: str,
+        observations: tuple[NormalizedFinancialObservation, ...],
+    ) -> WriteResult:
+        if not observations:
+            raise ValueError("Cannot persist empty normalized fundamentals")
+        symbols = {item.symbol for item in observations}
+        if len(symbols) != 1:
+            raise ValueError("Fundamental observations must belong to one security")
+        ingested_at = max(max(item.ingested_at for item in observations), self._now())
+        available_at = max(
+            (item.available_at or item.ingested_at for item in observations),
+        )
+        source_reference = f"eodhd:fundamentals:{next(iter(symbols))}:aggregate"
+        content_hash = _canonical_hash(
+            {
+                "securityPublicId": security_public_id,
+                "observationHashes": sorted(item.content_hash for item in observations),
+            }
+        )
+        rejected = sum(
+            value is None
+            for observation in observations
+            for value in observation.values.values()
+        )
+        inserted = 0
+        with self._connect(self._database_url) as connection:
+            security = connection.execute(
+                "SELECT id FROM analytics.security WHERE public_id = %s",
+                (UUID(security_public_id),),
+            ).fetchone()
+            if security is None:
+                raise ValueError(f"Unknown security public ID {security_public_id}")
+            provider = connection.execute(
+                """
+                INSERT INTO analytics.data_provider (
+                    code, name, provider_schema_version
+                ) VALUES ('eodhd', 'EODHD', %s)
+                ON CONFLICT (code) DO UPDATE SET
+                    name = EXCLUDED.name,
+                    provider_schema_version = EXCLUDED.provider_schema_version
+                RETURNING id
+                """,
+                (observations[0].provider_schema_version,),
+            ).fetchone()
+            batch_id, source_id = self._lineage(
+                connection,
+                int(provider[0]),
+                observations[0].parser_version,
+                source_reference,
+                content_hash,
+                available_at,
+                ingested_at,
+            )
+            for observation in observations:
+                fiscal_period = (
+                    "FY"
+                    if observation.period_type == "ANNUAL"
+                    else "Q_UNPROVEN"
+                )
+                for metric_code, value in sorted(observation.values.items()):
+                    if value is None:
+                        continue
+                    unit = (
+                        "shares"
+                        if metric_code
+                        in {
+                            "shares_outstanding",
+                            "diluted_weighted_average_shares",
+                        }
+                        else observation.currency
+                    )
+                    row = connection.execute(
+                        """
+                        INSERT INTO analytics.fundamental_fact (
+                            security_id, metric_code, numeric_value, unit,
+                            currency, period_start, period_end, fiscal_year,
+                            fiscal_period, form_type, accession_number, filed_at,
+                            available_at, ingested_at, mapping_version,
+                            normalization_version, revision_status,
+                            quality_status, source_record_id
+                        ) VALUES (
+                            %s, %s, %s, %s, %s, NULL, %s, %s, %s,
+                            'EODHD_NORMALIZED', %s, %s, %s, %s,
+                            'eodhd-financial-map-v1.3.0', %s, 'AS_REPORTED',
+                            'NOT_VERIFIED', %s
+                        )
+                        ON CONFLICT ON CONSTRAINT uq_fundamental_fact_source
+                        DO NOTHING RETURNING id
+                        """,
+                        (
+                            security[0],
+                            metric_code,
+                            value,
+                            unit,
+                            None if unit == "shares" else observation.currency,
+                            observation.fiscal_period_end,
+                            observation.fiscal_period_end.year,
+                            fiscal_period,
+                            observation.content_hash.removeprefix("sha256:")[:32],
+                            available_at,
+                            available_at,
+                            ingested_at,
+                            NORMALIZATION_VERSION,
+                            source_id,
+                        ),
+                    ).fetchone()
+                    inserted += row is not None
+        latest = max(item.fiscal_period_end for item in observations)
+        return WriteResult(
+            rows_written=inserted,
+            rows_rejected=rejected,
+            ingestion_batch_id=batch_id,
+            effective_at=datetime.combine(latest, datetime.min.time(), tzinfo=UTC),
+            available_at=available_at,
+            ingested_at=ingested_at,
+            source_reference=source_reference,
+            content_hash=content_hash,
+            provider_schema_version=observations[0].provider_schema_version,
+            parser_version=observations[0].parser_version,
+        )
 
     def write_actions(self, series: CorporateActionSeries) -> WriteResult:
         if series.available_at.tzinfo is None:
@@ -915,6 +1486,14 @@ def require_v16_contract(connection: Any) -> None:
     ]
     if missing:
         raise RuntimeError("Missing required V16 refresh contract: " + ", ".join(missing))
+
+
+def _refresh_run_idempotency_key(plan: RefreshPlan) -> str:
+    """Bind a run to the exact plan scope, policy, and completed session."""
+    return (
+        f"{plan.provider_code}:{plan.universe_version}:"
+        f"{plan.expected_session_date}:{plan.configuration_hash}:v2"
+    )
 
 
 def _action_payload(action: CorporateAction) -> dict[str, str | None]:

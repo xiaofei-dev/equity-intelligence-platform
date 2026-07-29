@@ -1,9 +1,10 @@
 from __future__ import annotations
 
-from datetime import datetime
+from datetime import date, datetime
 from decimal import Decimal
 from enum import StrEnum
 from typing import Any
+from uuid import UUID
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 from pydantic.alias_generators import to_camel
@@ -272,3 +273,126 @@ class ScreeningResult(ContractModel):
     items: tuple[RankedSecurity, ...]
     exclusions: dict[str, tuple[str, ...]]
     acceptance: dict[str, Any]
+
+
+class MarketIntelligenceErrorCode(StrEnum):
+    PROFILE_NOT_FOUND = "MARKET_INTELLIGENCE_PROFILE_NOT_FOUND"
+    RUN_NOT_FOUND = "MARKET_INTELLIGENCE_RUN_NOT_FOUND"
+    SNAPSHOT_NOT_READY = "MARKET_INTELLIGENCE_SNAPSHOT_NOT_READY"
+    UNIVERSE_MISMATCH = "MARKET_INTELLIGENCE_UNIVERSE_MISMATCH"
+    IDEMPOTENCY_KEY_CONFLICT = "IDEMPOTENCY_KEY_CONFLICT"
+    INVALID_REQUEST = "INVALID_MARKET_INTELLIGENCE_REQUEST"
+    INVALID_CURSOR = "INVALID_CURSOR"
+
+
+class SnapshotScreeningRequest(ScreeningRequest):
+    model_config = ConfigDict(extra="forbid")
+
+    data_snapshot_id: UUID
+    universe_version: str = Field(min_length=1)
+
+
+class CurrentMarketData(ContractModel):
+    state: FactState
+    price: Decimal | None = None
+    currency: str
+    trading_date: date | None = None
+    provider_code: str | None = None
+    available_at: datetime | None = None
+    ingested_at: datetime | None = None
+    adjustment_mode: str | None = None
+    reason: str | None = None
+
+    @model_validator(mode="after")
+    def enforce_market_data_state(self) -> CurrentMarketData:
+        if self.state == FactState.VALID and (
+            self.price is None
+            or self.trading_date is None
+            or not self.provider_code
+            or self.available_at is None
+            or self.ingested_at is None
+        ):
+            raise ValueError("VALID current market data requires complete provenance")
+        if self.state != FactState.VALID and self.price is not None:
+            raise ValueError("Non-VALID current market data cannot carry a price")
+        if self.state != FactState.VALID and not self.reason:
+            raise ValueError("Non-VALID current market data requires a reason")
+        return self
+
+
+class DatasetFreshness(ContractModel):
+    dataset_code: str
+    state: str
+    provider_code: str | None = None
+    effective_at: datetime | None = None
+    available_at: datetime | None = None
+    ingested_at: datetime | None = None
+    evaluated_at: datetime
+    stale_after: datetime | None = None
+    reason_code: str | None = None
+
+
+class MarketIntelligenceProfileEnvelope(ContractModel):
+    profile_id: UUID
+    security_id: str
+    profile: SecurityProfile
+    current_market_data: CurrentMarketData
+    freshness: tuple[DatasetFreshness, ...]
+    model_versions: dict[str, str]
+
+
+class DurableProfileItem(MarketIntelligenceProfileEnvelope):
+    pass
+
+
+class ScreeningRunMetadata(ContractModel):
+    run_id: UUID
+    state: str = "SEALED"
+    data_snapshot_id: UUID
+    universe_version: str
+    as_of: datetime
+    rank_by: RankMetric
+    direction: SortDirection
+    eligible_count: int = Field(ge=0)
+    excluded_count: int = Field(ge=0)
+    gate_status: str
+    profile_set_hash: str = Field(pattern=r"^sha256:[0-9a-f]{64}$")
+    result_hash: str = Field(pattern=r"^sha256:[0-9a-f]{64}$")
+    sealed_at: datetime
+
+
+class ScreeningResultPage(ContractModel):
+    run: ScreeningRunMetadata
+    items: tuple[DurableProfileItem, ...]
+    next_cursor: str | None = None
+
+
+class SecuritySearchItem(ContractModel):
+    security_id: str
+    symbol: str
+    issuer_name: str
+    exchange_mic: str
+    membership_status: str
+    company_type: str
+    sector: str | None = None
+    industry: str | None = None
+    latest_profile_id: UUID | None = None
+    current_market_data: CurrentMarketData
+    freshness: tuple[DatasetFreshness, ...] = ()
+    model_versions: dict[str, str] = Field(default_factory=dict)
+
+
+class SecuritySearchPage(ContractModel):
+    data_snapshot_id: UUID
+    universe_version: str
+    items: tuple[SecuritySearchItem, ...]
+    next_cursor: str | None = None
+
+
+class MarketIntelligenceFacets(ContractModel):
+    data_snapshot_id: UUID
+    universe_version: str
+    sectors: tuple[str, ...]
+    industries: tuple[str, ...]
+    company_types: tuple[str, ...]
+    membership_statuses: tuple[str, ...]

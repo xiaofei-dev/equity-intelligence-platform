@@ -1,0 +1,30 @@
+{
+  "universeVersion": "market-intelligence-closed-test-us-v1.0.0",
+  "sourceFixture": "provider_acceptance_universe_v2.json",
+  "sourceFixtureSha256": "1C53948F5CD0D1E74F870DEF6B34A619DE1845B9DA2B3170B4712427DE43A033",
+  "market": "US",
+  "roles": {
+    "PRIMARY": [
+      "AAPL", "MSFT", "META", "WMT", "MCD", "CAT", "ADP", "NKE",
+      "TGT", "PLAB", "NVDA", "AVGO", "ORCL", "CSCO", "ACN", "IBM",
+      "GOOGL", "NFLX", "DIS", "AMZN", "HD", "LOW", "SBUX", "COST",
+      "PG", "KO", "PEP", "CL", "JNJ", "ABT", "MDT", "SYK", "TMO",
+      "MCK", "HON", "UPS", "UNP", "DE", "ETN", "NEE", "DUK", "SO",
+      "LIN", "SHW", "ECL", "APD", "CROX", "OLED"
+    ],
+    "RESERVE": ["EXPO", "CALM", "UFPI", "WDFC", "FIX", "SAIA", "ELF"],
+    "REFERENCE_ONLY": ["SPY", "XLK"],
+    "EXCLUDED": ["GE", "JPM", "PGR", "O", "XOM", "MRNA", "LCID", "TWTR", "NBN"]
+  },
+  "excludedReasons": {
+    "GE": "SPECIAL_SITUATION",
+    "JPM": "FINANCIAL",
+    "PGR": "FINANCIAL",
+    "O": "REIT",
+    "XOM": "RESOURCE",
+    "MRNA": "BIOTECHNOLOGY",
+    "LCID": "EMERGING_GROWTH",
+    "TWTR": "DELISTED_SPECIAL_SITUATION",
+    "NBN": "FINANCIAL"
+  }
+}

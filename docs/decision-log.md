@@ -1283,3 +1283,61 @@ checkpoints, usage events, or terminal V16 tasks/runs.
   rehearse restoration before deployed user portfolio state becomes unique.
 - Deployment status: design only. No cloud resource, billing, scheduler, or
   production database has been activated.
+
+## 2026-07-28: Freeze Market Intelligence Vertical Slice v1
+
+- Decision: use the versioned
+  `market-intelligence-closed-test-us-v1.0.0` 66-security universe with 48
+  primary, 7 reserve, 2 reference-only, and 9 excluded members.
+- Provider boundary: use Yahoo/yfinance for bounded closed-test daily prices
+  and EODHD for separately approved corporate actions and fundamentals.
+  Provider acceptance remains separate from factor readiness and ranking.
+- Execution boundary: require a no-network preflight and exact confirmation
+  token. The aggregate operator workflow runs prices, actions, and fundamentals
+  sequentially and stops before constructing the next provider after any
+  non-success state.
+- Persistence boundary: reuse V14-V17. No V18 is required. Python remains the
+  owner of `analytics.*`, evidence selection, formulas, profiles, and screens.
+  Spring Boot remains the public workflow boundary.
+- API boundary: publish `/api/v1/market-intelligence/*` through Spring Boot.
+  The browser calls Spring only; Java does not reimplement Python formulas or
+  query Python-owned rating tables as a substitute for the versioned contract.
+- UI boundary: provide a Next.js `/research` workspace with search, facets,
+  pagination, durable profiles, current price/freshness, four horizons,
+  valuation, exclusions, model versions, and a visibly separate AI narrative.
+- Forward boundary: sealing a screen emits an idempotent decision-snapshot
+  audit handoff. It does not create a trade, fill a missing rank, or claim
+  future performance.
+- Live result: accept the first 57-security Yahoo run as a safety-stop
+  `PARTIAL` after an ACN `MALFORMED_RESPONSE`. Do not retry it or start EODHD
+  stages without a new explicit authorization.
+- Recovery result: after separate approval, retain ACN's 259 valid sessions,
+  reject the malformed 2026-07-28 bar, and expose its price freshness as
+  `STALE/LATE_DATA`. Complete the remaining Yahoo price scope and the bounded
+  EODHD corporate-action and fundamental scopes without relaxing data-quality
+  rules.
+- Snapshot result: seal the refreshed 66-profile snapshot and preserve
+  `NO_ELIGIBLE_RESULTS` with 66 explicit exclusions. Provider completion is
+  not scoring eligibility.
+- Deployment status: local implementation and verification only. No commit,
+  push, cloud resource, scheduler, or deployment is authorized by this
+  decision.
+
+## 2026-07-28: Keep Gitleaks exceptions narrowly evidence-bound
+
+- Preserve the existing rule/path/format-scoped exception for SHA-256 evidence
+  hashes.
+- For Gitleaks 8.30.1, ignore only the two complete historical fingerprints
+  where the public fixture plan key `daily-market-v1` is misclassified as a
+  generic API key.
+- Do not add a directory-wide ignore, a generic secret regex, or an exception
+  that could hide a different commit, file, rule, or line.
+
+## 2026-07-28: Apply a minimal frontend production security update
+
+- Update Next.js and its matching ESLint configuration from 16.2.0 to 16.2.12.
+- Pin patched PostCSS 8.5.24 and Sharp 0.35.3 through npm overrides because
+  Next.js otherwise resolves vulnerable transitive versions.
+- Require frontend contract tests and `npm audit --omit=dev` in CI.
+- Keep this as a non-major dependency repair; do not use
+  `npm audit fix --force`.

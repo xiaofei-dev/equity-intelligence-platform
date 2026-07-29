@@ -23,6 +23,7 @@ class SnapshotRequest:
     action_normalization_version: str
     market_data_provider: str = "twelve_data"
     market_adjustment_mode: str = "SPLIT_ADJUSTED"
+    supplemental_provider_codes: tuple[str, ...] = ("eodhd",)
 
 
 class DataSnapshotRepository:
@@ -45,6 +46,9 @@ class DataSnapshotRepository:
             },
             "marketDataProvider": request.market_data_provider,
             "marketAdjustmentMode": request.market_adjustment_mode,
+            "approvedProviderCodes": sorted(
+                {request.market_data_provider, *request.supplemental_provider_codes}
+            ),
             "sources": sorted(
                 (
                     str(item["batch_id"]),
@@ -78,14 +82,19 @@ class DataSnapshotRepository:
                   AND source.ingested_at <= %s
                   AND (
                     provider.code NOT IN ('twelve_data', 'yfinance', 'eodhd')
-                    OR provider.code = %s
+                    OR provider.code = ANY(%s::text[])
                   )
                 ORDER BY batch.id, source.content_hash, source.source_reference
                 """,
                 (
                     request.as_of_time,
                     request.ingestion_cutoff,
-                    request.market_data_provider,
+                    sorted(
+                        {
+                            request.market_data_provider,
+                            *request.supplemental_provider_codes,
+                        }
+                    ),
                 ),
             ).fetchall()
             batch_items = [

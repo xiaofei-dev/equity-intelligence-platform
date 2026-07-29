@@ -65,7 +65,7 @@ FastAPI owns snapshot construction, point-in-time observation selection,
 rating execution, recovery, and result persistence. Spring Boot is an HTTP
 gateway for the versioned contract and does not query screening result tables.
 
-Market Intelligence adds an implemented internal composition and persistence
+Market Intelligence adds an implemented end-to-end composition and persistence
 slice:
 
 ```text
@@ -73,6 +73,8 @@ Provider-neutral observations and explicit coverage states
     -> deterministic objective, tactical, valuation, and horizon inputs
     -> durable FastAPI Market Intelligence profile
     -> PostgreSQL V17 immutable profile and screening result
+    -> Spring Boot /api/v1/market-intelligence/*
+    -> Next.js /research
 ```
 
 Daily Refresh v1 adds a separate V16 operational slice:
@@ -85,9 +87,20 @@ Dataset-specific freshness
     -> usage telemetry and updated freshness
 ```
 
-These two paths are implemented behind internal Python contracts. Publishing
-Market Intelligence through Spring Boot and rendering it in Next.js is the
-next product vertical slice; it is not yet a public API.
+Python remains the formula and analytics owner. Spring Boot publishes stable
+DTOs, resolves the closed-test identity, and translates sanitized errors.
+Next.js calls Spring Boot only and never receives provider or database
+credentials.
+
+The 66-universe Daily Refresh operator adds an aggregate no-network preflight
+and confirmed workflow:
+
+```text
+workflow-preflight
+    -> exact universe/session/configuration/budget token
+    -> workflow-run: prices -> actions -> fundamentals
+    -> stop before the next provider on any non-success result
+```
 
 ## Component Responsibilities
 

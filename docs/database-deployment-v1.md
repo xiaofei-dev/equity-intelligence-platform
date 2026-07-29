@@ -60,6 +60,11 @@ The current local stack uses a shared development credential. Separate runtime
 logins and grants are a deployment prerequisite, not an assumption that is
 already satisfied.
 
+The vertical slice revalidated PostgreSQL 17 clean, V3, V12, and V16 upgrade
+paths through V17 and an isolated V17 Market Intelligence profile/screening
+integration test. This is migration evidence only; it does not provision or
+approve a managed database.
+
 ## Secret and Network Controls
 
 - Store database credentials in the deployment platform's encrypted secret

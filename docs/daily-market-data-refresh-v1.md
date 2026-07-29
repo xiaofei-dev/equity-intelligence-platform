@@ -4,8 +4,8 @@
 
 Daily Market Data Refresh v1 is a provider-neutral Python analytics-worker
 workflow for an explicitly configured United States equity universe. It
-refreshes daily prices and corporate actions. It does not refresh fundamentals,
-make a security scoreable, run a model, or authorize a trade.
+refreshes daily prices, corporate actions, and bounded fundamental snapshots.
+It does not make a security scoreable, run a model, or authorize a trade.
 
 Yahoo Finance through `yfinance` is the default no-key adapter for development
 and internal evaluation where its terms and data quality permit. It is not a
@@ -15,8 +15,9 @@ must be reviewed before deployment. EODHD remains the bounded licensed
 alternative. Intrinio or another provider must implement the normalized
 price/action protocols rather than changing refresh or scoring contracts.
 
-No production provider request is authorized by this implementation. Every
-live run requires a separately bounded preflight and explicit approval.
+Every live run requires an exact bounded preflight and confirmation token.
+Provider execution is never started by importing the package or starting the
+FastAPI web service.
 
 ## Implemented persistence contract
 
@@ -46,7 +47,7 @@ Existing tables used:
   bigint `security.id`.
 - `analytics.data_provider` supplies the existing provider identifier.
 - `analytics.dataset_definition` supplies configured plan, unadjusted-price,
-  total-return-adjusted-price, and corporate-action dataset codes.
+  total-return-adjusted-price, corporate-action, and fundamental dataset codes.
 - `analytics.ingestion_batch` and `analytics.source_record` retain provider
   schema/parser/normalization versions, source reference, content hash, and
   availability/ingestion lineage.
@@ -70,9 +71,10 @@ starts.
 4. PostgreSQL `pg_try_advisory_lock` permits only one refresh process.
 5. The runtime creates or resumes an idempotent V16 run and its deterministic
    task partitions.
-6. Provider retries terminally fail the current task attempt and create a
-   higher attempt. Restart recovery resumes partitions whose latest task is
-   pending, leased/running, or failed.
+6. Provider-internal retries remain disabled. A separately approved second
+   runner attempt creates a higher task attempt. Restart recovery never
+   replays an `UNKNOWN` request and requires matching immutable journal
+   evidence before terminal recovery.
 7. The writer creates an idempotent ingestion batch and source record, then
    appends only unseen immutable observations. A changed source content hash
    creates a higher observation/action revision. Replaying the same source
@@ -87,9 +89,9 @@ Price datasets remain distinct:
   normalized adjustment-mode identifier.
 - Corporate actions preserve dividends and splits independently of prices.
 
-Price freshness is scoped only to price datasets. It cannot update a
-fundamental timestamp or imply that SEC/provider fundamental evidence is
-current or scoring-ready.
+Price, corporate-action, and fundamental freshness are independent. A price
+refresh cannot update a fundamental timestamp or imply that provider
+fundamental evidence is current or scoring-ready.
 
 ## Time and lineage semantics
 
@@ -119,31 +121,88 @@ Friday, and explicit exceptional-closure overrides. Early closes are sessions.
 Operations must configure unexpected exchange closures.
 
 One missing expected session is `LATE`; a wider gap is `STALE`; an empty result
-is `MISSING`. Retryable transport, rate-limit, server, and temporarily empty
-responses use bounded exponential backoff. Malformed data and entitlement
-errors fail without unbounded retries.
+is `MISSING`. Provider rate limiting, authentication failure, malformed data,
+entitlement failure, an unknown request state, or a journal/lease mismatch is
+a hard stop. Provider-internal retries are disabled.
 
 Inactive securities and listings ending before the expected session are
 excluded and counted. Delisting evidence closes a listing through the
 security-master workflow; a missing price never silently deactivates a
 security.
 
+## Closed-test operator workflow
+
+Bootstrap the immutable universe once:
+
+```powershell
+.\analysis-python\.venv\Scripts\python.exe -m `
+  equity_analysis.daily_refresh.cli bootstrap
+```
+
+Generate one no-network preflight for prices, actions, and fundamentals:
+
+```powershell
+.\analysis-python\.venv\Scripts\python.exe -m `
+  equity_analysis.daily_refresh.cli workflow-preflight `
+  --scheduled-for 2026-07-28T23:00:00Z `
+  --eodhd-dashboard-used 26647 `
+  --runner-max-attempts 1 `
+  --allow-initial-backfill
+```
+
+Execute the exact frozen workflow with the printed token:
+
+```powershell
+.\analysis-python\.venv\Scripts\python.exe -m `
+  equity_analysis.daily_refresh.cli workflow-run `
+  --scheduled-for 2026-07-28T23:00:00Z `
+  --eodhd-dashboard-used 26647 `
+  --runner-max-attempts 1 `
+  --allow-initial-backfill `
+  --confirm "I_CONFIRM_66_UNIVERSE_DAILY_REFRESH:<SHA256>"
+```
+
+The v1 universe contains 57 price/action targets and 55 fundamental targets.
+The accepted offline aggregate preflight contains 226 task partitions and a
+226-physical-request ceiling at one runner attempt. EODHD hard weight is 664,
+including shared action and fundamental budget reservation.
+
 ## EODHD quota math
 
 The planner reserves 10,000 of the 100,000 daily allowance. It conservatively
-charges one logical request for each price mode and one for actions, and
-reserves all three allowed attempts.
+charges the selected datasets and reserves the configured one- or two-attempt
+hard ceiling before constructing the provider.
 
-| Universe | Logical requests | Worst case: 3 attempts | Allowance used | Capacity after 10k reserve |
+| Universe | Logical requests | Worst case: 2 attempts | Allowance used | Capacity after 10k reserve |
 |---:|---:|---:|---:|---:|
-| 300 | 900 | 2,700 | 2.7% | 87,300 |
-| 500 | 1,500 | 4,500 | 4.5% | 85,500 |
-| Full-US example: 8,000 | 24,000 | 72,000 | 72.0% | 18,000 |
+| 300 | 900 | 1,800 | 1.8% | 88,200 |
+| 500 | 1,500 | 3,000 | 3.0% | 87,000 |
+| Full-US example: 8,000 | 24,000 | 48,000 | 48.0% | 42,000 |
 
 The 8,000-security example is quota math, not a current listing count. Every
-plan uses the exact manifest size. An initial refresh above 1,000 active
-securities requires `allow_large_full_refresh`. If prior V16 usage plus the
-worst-case plan exceeds 90,000, planning fails before a provider call.
+plan uses the exact manifest size. If prior V16 usage plus the worst-case plan
+exceeds 90,000, planning fails before a provider call.
+
+## 2026-07-28 bounded live result
+
+The six-symbol Yahoo canary passed. The first 57-security price attempt stopped
+safely after ACN supplied one internally inconsistent 2026-07-28 OHLC bar.
+Offline remediation made invalid rows non-fatal to otherwise valid history,
+made the yfinance cache location explicitly writable, prevented adjusted and
+unadjusted partitions from double-counting one failed transport, and corrected
+`STALE` freshness persistence.
+
+The approved bounded recovery then completed:
+
+- ACN plus ABT canary: two Yahoo requests; ABT `CURRENT`; ACN retained 259 valid
+  sessions and is `STALE/LATE_DATA` through 2026-07-27;
+- remaining price scope: 41 Yahoo requests and 82 successful partitions;
+- corporate actions: 57 securities, 114 EODHD requests/weight units; and
+- fundamentals: 55 securities, 55 EODHD requests and 550 weight units.
+
+All terminal journals, usage events, and task states are persisted; no active
+refresh run, task lease, or `UNKNOWN` request remains. The invalid ACN bar was
+not coerced, repaired, or labeled as a completed daily observation.
 
 ## Deployment requirements
 
@@ -158,7 +217,7 @@ Required runtime configuration:
 - selected provider credential when applicable
 - versioned universe source
 - V16 refresh `plan_key` and `plan_version`
-- four existing `dataset_definition.dataset_code` values
+- the configured plan and observation `dataset_definition.dataset_code` values
 - provider timeout/retry and EODHD budget/reserve settings
 
 Render can invoke the analytics image as a Cron Job. AWS can use EventBridge

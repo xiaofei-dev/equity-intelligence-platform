@@ -1,13 +1,19 @@
 import os
 from dataclasses import replace
-from datetime import UTC, date, datetime
+from datetime import UTC, date, datetime, timedelta
 from decimal import Decimal
 
 import psycopg
 import pytest
 
 from equity_analysis.daily_refresh.calendar import UnitedStatesMarketCalendar
-from equity_analysis.daily_refresh.models import SecurityTarget
+from equity_analysis.daily_refresh.models import (
+    Dataset,
+    FreshnessState,
+    SecurityTarget,
+    WorkResult,
+    WorkStatus,
+)
 from equity_analysis.daily_refresh.persistence import (
     DatasetCodes,
     PostgresRefreshPersistence,
@@ -160,6 +166,8 @@ def test_v16_refresh_and_immutable_writer_are_idempotent() -> None:
         provider_code=DESCRIPTOR.code,
         universe_version="fixture-universe-v1",
         as_of=NOW,
+        datasets=(Dataset.DAILY_PRICE, Dataset.CORPORATE_ACTION),
+        enforce_provider_policy=False,
     )
     provider = FixtureProvider()
     runner = DailyRefreshRunner(
@@ -169,7 +177,7 @@ def test_v16_refresh_and_immutable_writer_are_idempotent() -> None:
         store=persistence,
         calendar=UnitedStatesMarketCalendar(),
         sleeper=lambda _: None,
-        now=lambda: NOW,
+        now=lambda: NOW + timedelta(days=1),
     )
     first = runner.run(plan)
     second = runner.run(plan)
@@ -243,3 +251,83 @@ def test_v16_refresh_and_immutable_writer_are_idempotent() -> None:
             WHERE plan.plan_key = 'plan'
             """,
         ).fetchone()[0] == 3
+
+
+def test_v16_failed_result_persists_invalid_freshness_without_stale_timestamp() -> None:
+    assert DATABASE_URL is not None
+    with psycopg.connect(DATABASE_URL) as connection:
+        security = connection.execute(
+            "SELECT public_id FROM analytics.security WHERE symbol = 'AAPL'"
+        ).fetchone()
+    target = SecurityTarget(str(security[0]), "AAPL")
+    persistence = PostgresRefreshPersistence(
+        DATABASE_URL,
+        refresh_plan_key="plan",
+        refresh_plan_version=1,
+        dataset_codes=CODES,
+        now=lambda: NOW + timedelta(days=1),
+    )
+    plan = DailyRefreshPlanner(UnitedStatesMarketCalendar()).plan(
+        universe=[target],
+        cursors={},
+        provider_code=DESCRIPTOR.code,
+        universe_version="fixture-failure-universe-v1",
+        as_of=NOW + timedelta(days=1),
+        datasets=(Dataset.DAILY_PRICE,),
+        enforce_provider_policy=False,
+    )
+    item = plan.items[0]
+    run_id = persistence.start_run(plan)
+    persistence.start_item(run_id, item)
+    persistence.request_intent(run_id, item, 1)
+    persistence.request_failed(
+        run_id,
+        item,
+        1,
+        error_code="MALFORMED_RESPONSE",
+    )
+    persistence.record_result(
+        run_id,
+        WorkResult(
+            key=item.key,
+            status=WorkStatus.FAILED,
+            attempts=1,
+            rows_written=0,
+            rows_rejected=0,
+            freshness_state=FreshnessState.FAILED,
+            market_session_date=None,
+            as_of_date=item.end_date,
+            provider_code=DESCRIPTOR.code,
+            error_code="MALFORMED_RESPONSE",
+            physical_requests=1,
+            weighted_calls_used=1,
+        ),
+    )
+    closeout = persistence.stop_run_after_terminal_failure(
+        run_id, "MALFORMED_RESPONSE"
+    )
+    with psycopg.connect(DATABASE_URL) as connection:
+        task = connection.execute(
+            """
+            SELECT status, error_code
+            FROM analytics.refresh_task
+            WHERE refresh_run_id = %s AND partition_key = %s
+            """,
+            (run_id, item.key),
+        ).fetchone()
+        freshness = connection.execute(
+            """
+            SELECT status, stale_after, reason_code
+            FROM analytics.security_dataset_freshness
+            WHERE refresh_task_id = (
+                SELECT id FROM analytics.refresh_task
+                WHERE refresh_run_id = %s AND partition_key = %s
+            )
+            """,
+            (run_id, item.key),
+        ).fetchone()
+    assert task == ("FAILED", "MALFORMED_RESPONSE")
+    assert freshness == ("INVALID", None, "MALFORMED_RESPONSE")
+    assert closeout["status"] == "FAILED"
+    assert closeout["physicalRequests"] == 1
+    assert closeout["weightedCalls"] == 1

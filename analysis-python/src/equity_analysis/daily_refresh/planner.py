@@ -40,6 +40,8 @@ class DailyRefreshPlanner:
         as_of: datetime,
         weighted_calls_used_today: int = 0,
         allow_large_full_refresh: bool = False,
+        datasets: Sequence[Dataset] | None = None,
+        enforce_provider_policy: bool = True,
     ) -> RefreshPlan:
         if as_of.tzinfo is None or as_of.utcoffset() is None:
             raise RefreshPlanningError("as_of must include a timezone", "NAIVE_AS_OF")
@@ -48,7 +50,10 @@ class DailyRefreshPlanner:
             raise RefreshPlanningError(
                 "universe_version is required", "UNIVERSE_VERSION_REQUIRED"
             )
-        expected = self._calendar.previous_session(normalized_as_of.date(), inclusive=True)
+        expected = self._calendar.latest_completed_session(
+            normalized_as_of,
+            grace_minutes=self._policy.completed_session_grace_minutes,
+        )
         active = tuple(
             item
             for item in universe
@@ -63,41 +68,91 @@ class DailyRefreshPlanner:
                 "Initial refresh exceeds the explicit full-refresh safety limit",
                 "FULL_REFRESH_APPROVAL_REQUIRED",
             )
+        requested_datasets = frozenset(
+            datasets
+            if datasets is not None
+            else (
+                (Dataset.DAILY_PRICE,)
+                if provider_code == "yfinance"
+                else (Dataset.CORPORATE_ACTION, Dataset.FUNDAMENTALS)
+            )
+        )
+        if not requested_datasets:
+            raise RefreshPlanningError("At least one dataset is required", "DATASET_REQUIRED")
+        if (
+            enforce_provider_policy
+            and Dataset.DAILY_PRICE in requested_datasets
+            and provider_code != "yfinance"
+        ):
+            raise RefreshPlanningError(
+                "Daily Price v1 is restricted to yfinance",
+                "PRICE_PROVIDER_NOT_APPROVED",
+            )
+        if (
+            enforce_provider_policy
+            and (
+                Dataset.CORPORATE_ACTION in requested_datasets
+                or Dataset.FUNDAMENTALS in requested_datasets
+            )
+            and provider_code != "eodhd"
+        ):
+            raise RefreshPlanningError(
+                "Corporate actions and fundamentals v1 are restricted to EODHD",
+                "DATASET_PROVIDER_NOT_APPROVED",
+            )
         modes = (AdjustmentMode.UNADJUSTED, AdjustmentMode.TOTAL_RETURN_ADJUSTED)
         items = []
         for security in active:
-            for mode in modes:
-                cursor = cursors.get((security.security_id, Dataset.DAILY_PRICE, mode))
-                start = self._start_date(cursor, expected)
+            if Dataset.DAILY_PRICE in requested_datasets:
+                for mode in modes:
+                    cursor = cursors.get((security.security_id, Dataset.DAILY_PRICE, mode))
+                    start = self._start_date(cursor, expected)
+                    items.append(
+                        WorkItem(
+                            security=security,
+                            dataset=Dataset.DAILY_PRICE,
+                            provider_code=provider_code,
+                            adjustment_mode=mode,
+                            start_date=start,
+                            end_date=expected,
+                            expected_session_date=expected,
+                            estimated_weighted_calls=self._price_item_weight(mode),
+                        )
+                    )
+            if Dataset.CORPORATE_ACTION in requested_datasets:
+                cursor = cursors.get((security.security_id, Dataset.CORPORATE_ACTION, None))
                 items.append(
                     WorkItem(
                         security=security,
-                        dataset=Dataset.DAILY_PRICE,
+                        dataset=Dataset.CORPORATE_ACTION,
                         provider_code=provider_code,
-                        adjustment_mode=mode,
-                        start_date=start,
+                        adjustment_mode=None,
+                        start_date=self._start_date(cursor, expected),
                         end_date=expected,
                         expected_session_date=expected,
                         estimated_weighted_calls=(
-                            self._price_weight(provider_code) * self._policy.max_attempts
+                            self._action_weight(provider_code) * self._policy.max_attempts
                         ),
                     )
                 )
-            cursor = cursors.get((security.security_id, Dataset.CORPORATE_ACTION, None))
-            items.append(
-                WorkItem(
-                    security=security,
-                    dataset=Dataset.CORPORATE_ACTION,
-                    provider_code=provider_code,
-                    adjustment_mode=None,
-                    start_date=self._start_date(cursor, expected),
-                    end_date=expected,
-                    expected_session_date=expected,
-                    estimated_weighted_calls=(
-                        self._action_weight(provider_code) * self._policy.max_attempts
-                    ),
-                )
-            )
+            if Dataset.FUNDAMENTALS in requested_datasets:
+                cursor = cursors.get((security.security_id, Dataset.FUNDAMENTALS, None))
+                if self._fundamentals_due(cursor, normalized_as_of):
+                    items.append(
+                        WorkItem(
+                            security=security,
+                            dataset=Dataset.FUNDAMENTALS,
+                            provider_code=provider_code,
+                            adjustment_mode=None,
+                            start_date=expected,
+                            end_date=expected,
+                            expected_session_date=expected,
+                            estimated_weighted_calls=(
+                                self._fundamentals_weight(provider_code)
+                                * self._policy.max_attempts
+                            ),
+                        )
+                    )
         estimate = sum(item.estimated_weighted_calls for item in items)
         available = None
         if provider_code == "eodhd":
@@ -121,7 +176,9 @@ class DailyRefreshPlanner:
                     {
                         "provider": provider_code,
                         "universeVersion": universe_version,
+                        "datasets": sorted(item.value for item in requested_datasets),
                         "policy": self._policy.__dict__,
+                        "items": [item.key for item in items],
                     },
                     sort_keys=True,
                     separators=(",", ":"),
@@ -148,6 +205,26 @@ class DailyRefreshPlanner:
     def _price_weight(provider_code: str) -> int:
         return 1
 
+    def _price_item_weight(self, mode: AdjustmentMode) -> int:
+        if mode == AdjustmentMode.TOTAL_RETURN_ADJUSTED:
+            return 0
+        return self._price_weight("yfinance") * self._policy.max_attempts
+
     @staticmethod
     def _action_weight(provider_code: str) -> int:
-        return 1
+        return 2
+
+    @staticmethod
+    def _fundamentals_weight(provider_code: str) -> int:
+        return 10
+
+    def _fundamentals_due(
+        self,
+        cursor: DatasetCursor | None,
+        as_of: datetime,
+    ) -> bool:
+        if cursor is None or cursor.last_successful_update is None:
+            return True
+        return (
+            as_of.date() - cursor.last_successful_update.astimezone(UTC).date()
+        ).days >= self._policy.fundamentals_refresh_days

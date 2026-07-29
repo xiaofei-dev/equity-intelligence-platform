@@ -171,8 +171,8 @@ def test_environment_path_is_repository_root_not_current_directory(monkeypatch, 
     monkeypatch.chdir(tmp_path)
     path = repository_root_env_path()
     assert path.name == ".env"
-    assert path.parent.name == "equity-intelligence-platform"
     assert path == Path(__file__).resolve().parents[2] / ".env"
+    assert (path.parent / "analysis-python" / "pyproject.toml").is_file()
 
 
 class _Response:

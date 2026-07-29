@@ -194,6 +194,63 @@ def test_yfinance_preserves_valid_rows_and_counts_rejected_rows() -> None:
     assert series.rejected_bar_count == 1
 
 
+def test_yfinance_rejects_invalid_ohlc_rows_without_discarding_valid_history() -> None:
+    columns = ("Open", "High", "Low", "Close", "Adj Close", "Volume")
+    frame = FakeFrame(
+        columns,
+        (
+            (
+                datetime(2026, 7, 22),
+                {
+                    "Open": 210.0,
+                    "High": 214.5,
+                    "Low": 209.25,
+                    "Close": 213.75,
+                    "Adj Close": 212.5,
+                    "Volume": 50_000_000,
+                },
+            ),
+            (
+                datetime(2026, 7, 23),
+                {
+                    "Open": 212.0,
+                    "High": 213.0,
+                    "Low": 211.0,
+                    "Close": 210.5,
+                    "Adj Close": 210.5,
+                    "Volume": 40_000_000,
+                },
+            ),
+        ),
+    )
+    provider = YFinanceProvider(
+        downloader=lambda *args, **kwargs: frame,
+        ticker_factory=lambda _symbol: FakeTicker(),
+    )
+
+    series = provider.fetch_daily_prices(
+        "AAPL", date(2026, 7, 22), date(2026, 7, 23)
+    )
+
+    assert tuple(bar.trading_date for bar in series.bars) == (date(2026, 7, 22),)
+    assert series.rejected_bar_count == 1
+
+
+def test_yfinance_configures_an_explicit_writable_cache(
+    monkeypatch: pytest.MonkeyPatch, tmp_path
+) -> None:
+    import yfinance as yf
+
+    observed = []
+    monkeypatch.setattr(yf, "set_tz_cache_location", observed.append)
+    cache_directory = tmp_path / "yfinance-cache"
+
+    YFinanceProvider(cache_directory=cache_directory)
+
+    assert cache_directory.is_dir()
+    assert observed == [str(cache_directory)]
+
+
 def test_eodhd_maps_symbol_and_redacts_key_from_lineage() -> None:
     captured: list[Request] = []
 

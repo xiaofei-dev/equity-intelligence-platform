@@ -1,0 +1,6 @@
+{
+  "detail": {
+    "code": "MARKET_INTELLIGENCE_SNAPSHOT_NOT_READY",
+    "message": "Data snapshot must exist and be READY"
+  }
+}

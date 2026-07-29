@@ -55,6 +55,53 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m uvicorn equity_analysis.main:app --reload
 ```
 
+## Daily Refresh Operator CLI
+
+Daily Refresh is operator-triggered and is never started by FastAPI startup.
+Bootstrap and preflight access PostgreSQL only; they do not construct a
+provider client or make a provider request.
+
+Bootstrap the versioned closed-test universe once:
+
+```powershell
+.\.venv\Scripts\python.exe -m equity_analysis.daily_refresh.cli bootstrap
+```
+
+Print one aggregate, no-network preflight for the bounded 66-security workflow:
+
+```powershell
+.\.venv\Scripts\python.exe -m equity_analysis.daily_refresh.cli `
+  workflow-preflight `
+  --scheduled-for 2026-07-28T23:00:00Z `
+  --eodhd-dashboard-used 26647 `
+  --runner-max-attempts 1 `
+  --allow-initial-backfill
+```
+
+The preflight freezes the exact prices, actions, and fundamentals plans,
+configuration hashes, completed session, symbols, physical-request ceilings,
+and the shared EODHD weighted-call ceiling. Execute that same workflow with the
+printed aggregate token:
+
+```powershell
+.\.venv\Scripts\python.exe -m equity_analysis.daily_refresh.cli `
+  workflow-run `
+  --scheduled-for 2026-07-28T23:00:00Z `
+  --eodhd-dashboard-used 26647 `
+  --runner-max-attempts 1 `
+  --allow-initial-backfill `
+  --confirm "I_CONFIRM_66_UNIVERSE_DAILY_REFRESH:<SHA256>"
+```
+
+`workflow-run` executes prices, actions, then fundamentals. It continues only
+after a `SUCCEEDED` result. A partial, failed, locked, budget-skipped, unknown,
+or terminal result stops the workflow before the next provider is constructed.
+Provider adapters retain zero internal retries; `--runner-max-attempts 2` is
+the absolute operator-approved cumulative ceiling.
+
+The existing per-plan `preflight --plan ...` and `run --plan ...` commands
+remain available for canaries and isolated recovery.
+
 ## Validation
 
 ```powershell
@@ -98,12 +145,12 @@ Its performance status remains `PENDING_FUTURE_OUTCOMES`: no prospective
 signal has yet matured through the 5-, 20-, or 60-trading-day horizon, and no
 statistical edge is claimed.
 
-The next analytical responsibility is to create a fresh synchronized objective
-and tactical decision snapshot through the V16 refresh and V17 Market
-Intelligence persistence boundaries, then publish that result through Spring
-Boot. After a completed session passes identity, corporate-action, and
-benchmark gates, Forward Validation may append prospective outcomes without
-changing the frozen model contracts.
+The V16 refresh and V17 Market Intelligence boundaries now create synchronized
+durable profiles and sealed screening handoffs that Spring Boot publishes.
+After a completed session passes identity, corporate-action, benchmark, and
+ranking-eligibility gates, Forward Validation may append prospective outcomes
+without changing the frozen model contracts. A partial/no-eligible screen
+remains valid evidence but is not enrolled as a ranked decision.
 
 `equity_analysis.daily_refresh` is implemented as a provider-neutral planner,
 runner, scheduler boundary, and PostgreSQL persistence adapter. It is not

@@ -1,3 +1,4 @@
+from dataclasses import replace
 from datetime import UTC, datetime
 from uuid import UUID
 
@@ -50,3 +51,23 @@ def test_snapshot_manifest_is_deterministic_for_source_order() -> None:
     assert DataSnapshotRepository._identity(request, sources) == DataSnapshotRepository._identity(
         request, list(reversed(sources))
     )
+
+
+def test_snapshot_identity_binds_market_and_supplemental_provider_scope() -> None:
+    request = SnapshotRequest(
+        snapshot_key="snapshot-2026-07-25",
+        as_of_time=AS_OF,
+        ingestion_cutoff=datetime(2026, 7, 26, 20, 0, tzinfo=UTC),
+        universe_version="universe-us-general-company-v1.0.0",
+        market_normalization_version="market-v1",
+        fundamental_normalization_version="fundamental-v1",
+        action_normalization_version="action-v1",
+        market_data_provider="yfinance",
+        supplemental_provider_codes=("eodhd",),
+    )
+
+    without_fundamentals = replace(request, supplemental_provider_codes=())
+
+    assert DataSnapshotRepository._identity(
+        request, []
+    ) != DataSnapshotRepository._identity(without_fundamentals, [])

@@ -1,0 +1,16 @@
+{
+  "dataSnapshotId": "11111111-1111-4111-8111-111111111111",
+  "universeVersion": "market-intelligence-closed-test-us-v1.0.0",
+  "asOf": "2026-07-28T21:00:00Z",
+  "filters": {
+    "sectors": ["45"],
+    "industries": [],
+    "companyTypes": ["MATURE_OPERATING_COMPANY"],
+    "symbols": [],
+    "horizons": ["ONE_WEEK", "ONE_MONTH", "THREE_MONTHS", "TWELVE_MONTHS_PLUS"],
+    "requireRankingEligible": true
+  },
+  "rankBy": "BUYING_OPPORTUNITY",
+  "direction": "DESCENDING",
+  "limit": 50
+}

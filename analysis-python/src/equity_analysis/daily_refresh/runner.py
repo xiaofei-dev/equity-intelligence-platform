@@ -22,8 +22,10 @@ from equity_analysis.market_data.models import CorporateActionSeries, DailyPrice
 from equity_analysis.market_data.provider import (
     CorporateActionProvider,
     DailyPriceProvider,
+    FundamentalsProvider,
     MarketDataProviderError,
 )
+from equity_analysis.provider_validation.models import NormalizedFinancialObservation
 
 LOGGER = logging.getLogger("equity_analysis.daily_refresh")
 
@@ -33,6 +35,12 @@ class RefreshWriter(Protocol):
 
     def write_actions(self, series: CorporateActionSeries) -> WriteResult: ...
 
+    def write_fundamentals(
+        self,
+        security_id: str,
+        observations: tuple[NormalizedFinancialObservation, ...],
+    ) -> WriteResult: ...
+
 
 class DailyRefreshRunner:
     def __init__(
@@ -40,6 +48,7 @@ class DailyRefreshRunner:
         *,
         price_provider: DailyPriceProvider,
         action_provider: CorporateActionProvider,
+        fundamentals_provider: FundamentalsProvider | None = None,
         writer: RefreshWriter,
         store: RefreshStore,
         calendar: UnitedStatesMarketCalendar,
@@ -49,15 +58,20 @@ class DailyRefreshRunner:
     ) -> None:
         self._price_provider = price_provider
         self._action_provider = action_provider
+        self._fundamentals_provider = fundamentals_provider
         self._writer = writer
         self._store = store
         self._calendar = calendar
         self._policy = policy or RefreshPolicy()
         self._sleeper = sleeper
         self._now = now
+        self._price_cache: dict[str, DailyPriceSeries] = {}
+        self._price_failure_cache: dict[str, str] = {}
 
     def run(self, plan: RefreshPlan) -> RunResult:
         started = self._now()
+        self._price_cache = {}
+        self._price_failure_cache = {}
         with self._store.single_run_lock() as acquired:
             if not acquired:
                 return RunResult(
@@ -98,7 +112,7 @@ class DailyRefreshRunner:
                 completed_items=len(results) - failed,
                 failed_items=failed,
                 late_or_missing_items=late,
-                weighted_calls_used=sum(item.attempts for item in results),
+                weighted_calls_used=sum(item.weighted_calls_used for item in results),
                 results=results,
             )
             self._store.complete_run(final)
@@ -106,14 +120,58 @@ class DailyRefreshRunner:
             return final
 
     def _execute(self, run_id: str, item: WorkItem) -> WorkResult:
+        cached_price_error = (
+            self._price_failure_cache.get(item.request_key)
+            if item.dataset == Dataset.DAILY_PRICE
+            else None
+        )
+        if cached_price_error is not None:
+            self._store.start_item(run_id, item)
+            result = WorkResult(
+                key=item.key,
+                status=WorkStatus.FAILED,
+                attempts=1,
+                rows_written=0,
+                rows_rejected=0,
+                freshness_state=FreshnessState.FAILED,
+                market_session_date=None,
+                as_of_date=item.end_date,
+                provider_code=item.provider_code,
+                error_code=cached_price_error,
+                physical_requests=0,
+                weighted_calls_used=0,
+            )
+            self._store.record_result(run_id, result)
+            return result
         error_code = None
         for attempt in range(1, self._policy.max_attempts + 1):
             self._store.start_item(run_id, item)
             try:
+                is_replay = (
+                    item.dataset == Dataset.DAILY_PRICE
+                    and item.request_key in self._price_cache
+                )
+                if not is_replay:
+                    self._request_event("request_intent", run_id, item, attempt)
                 result = self._fetch_and_write(item, attempt)
+                if not is_replay:
+                    self._request_event(
+                        "request_completed",
+                        run_id,
+                        item,
+                        attempt,
+                        content_hash=result.content_hash,
+                    )
                 self._store.record_result(run_id, result)
                 return result
             except MarketDataProviderError as error:
+                self._request_event(
+                    "request_failed",
+                    run_id,
+                    item,
+                    attempt,
+                    error_code=error.code,
+                )
                 error_code = error.code
                 if attempt < self._policy.max_attempts and self._retryable(error.code):
                     delay = self._policy.base_backoff_seconds * (2 ** (attempt - 1))
@@ -126,6 +184,10 @@ class DailyRefreshRunner:
                     self._sleeper(delay)
                     continue
                 break
+        if item.dataset == Dataset.DAILY_PRICE:
+            self._price_failure_cache[item.request_key] = (
+                error_code or "UNEXPECTED_PROVIDER_FAILURE"
+            )
         result = WorkResult(
             key=item.key,
             status=WorkStatus.FAILED,
@@ -137,15 +199,29 @@ class DailyRefreshRunner:
             as_of_date=item.end_date,
             provider_code=item.provider_code,
             error_code=error_code or "UNEXPECTED_PROVIDER_FAILURE",
+            physical_requests=(
+                attempt * 2
+                if item.dataset == Dataset.CORPORATE_ACTION
+                else attempt
+            ),
+            weighted_calls_used=(
+                attempt * 10
+                if item.dataset == Dataset.FUNDAMENTALS
+                else attempt * 2
+                if item.dataset == Dataset.CORPORATE_ACTION
+                else attempt
+            ),
         )
         self._store.record_result(run_id, result)
         return result
 
     def _fetch_and_write(self, item: WorkItem, attempt: int) -> WorkResult:
         if item.dataset == Dataset.DAILY_PRICE:
-            series = self._price_provider.fetch_daily_prices(
+            cached = self._price_cache.get(item.request_key)
+            series = cached or self._price_provider.fetch_daily_prices(
                 item.security.symbol, item.start_date, item.end_date
             )
+            self._price_cache[item.request_key] = series
             bars = tuple(
                 bar for bar in series.bars if item.start_date <= bar.trading_date <= item.end_date
             )
@@ -170,6 +246,8 @@ class DailyRefreshRunner:
                     parser_version=series.provider_descriptor.parser_version,
                     provider_code=item.provider_code,
                     error_code="NO_OBSERVATION",
+                    physical_requests=0 if cached else attempt,
+                    weighted_calls_used=0 if cached else attempt,
                 )
             write = self._writer.write_prices(series, item.adjustment_mode.value)
             return WorkResult(
@@ -191,11 +269,45 @@ class DailyRefreshRunner:
                 effective_at=write.effective_at,
                 available_at=write.available_at,
                 ingested_at=write.ingested_at,
+                physical_requests=0 if cached else attempt,
+                weighted_calls_used=0 if cached else attempt,
             )
-        series = self._action_provider.fetch_corporate_actions(
-            item.security.symbol, item.start_date, item.end_date
+        if item.dataset == Dataset.CORPORATE_ACTION:
+            series = self._action_provider.fetch_corporate_actions(
+                item.security.symbol, item.start_date, item.end_date
+            )
+            write = self._writer.write_actions(series)
+            return WorkResult(
+                key=item.key,
+                status=WorkStatus.SUCCEEDED,
+                attempts=attempt,
+                rows_written=write.rows_written,
+                rows_rejected=write.rows_rejected,
+                freshness_state=FreshnessState.CURRENT,
+                market_session_date=item.expected_session_date,
+                as_of_date=item.end_date,
+                source_reference=write.source_reference,
+                content_hash=write.content_hash,
+                provider_schema_version=write.provider_schema_version,
+                parser_version=write.parser_version,
+                normalization_version=write.normalization_version,
+                provider_code=item.provider_code,
+                ingestion_batch_id=str(write.ingestion_batch_id),
+                effective_at=write.effective_at,
+                available_at=write.available_at,
+                ingested_at=write.ingested_at,
+                physical_requests=attempt * 2,
+                weighted_calls_used=attempt * 2,
+            )
+        if self._fundamentals_provider is None:
+            raise MarketDataProviderError(
+                "Fundamentals provider is not configured",
+                "FUNDAMENTALS_PROVIDER_NOT_CONFIGURED",
+            )
+        observations = self._fundamentals_provider.fetch_financial_statements(
+            item.security.symbol
         )
-        write = self._writer.write_actions(series)
+        write = self._writer.write_fundamentals(item.security.security_id, observations)
         return WorkResult(
             key=item.key,
             status=WorkStatus.SUCCEEDED,
@@ -203,7 +315,7 @@ class DailyRefreshRunner:
             rows_written=write.rows_written,
             rows_rejected=write.rows_rejected,
             freshness_state=FreshnessState.CURRENT,
-            market_session_date=item.expected_session_date,
+            market_session_date=None,
             as_of_date=item.end_date,
             source_reference=write.source_reference,
             content_hash=write.content_hash,
@@ -215,7 +327,29 @@ class DailyRefreshRunner:
             effective_at=write.effective_at,
             available_at=write.available_at,
             ingested_at=write.ingested_at,
+            physical_requests=attempt,
+            weighted_calls_used=attempt * 10,
         )
+
+    def _request_event(
+        self,
+        method: str,
+        run_id: str,
+        item: WorkItem,
+        attempt: int,
+        *,
+        content_hash: str | None = None,
+        error_code: str | None = None,
+    ) -> None:
+        callback = getattr(self._store, method, None)
+        if callback is not None:
+            callback(
+                run_id,
+                item,
+                attempt,
+                content_hash=content_hash,
+                error_code=error_code,
+            )
 
     def _freshness(self, latest: date | None, expected: date) -> FreshnessState:
         if latest is None:

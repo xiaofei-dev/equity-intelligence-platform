@@ -1,7 +1,10 @@
 import math
+import os
+import tempfile
 from collections.abc import Callable
 from datetime import UTC, date, datetime, timedelta
 from decimal import Decimal, InvalidOperation
+from pathlib import Path
 from typing import Any
 
 from equity_analysis.market_data.models import (
@@ -38,16 +41,31 @@ class YFinanceProvider:
         self,
         downloader: Callable[..., Any] | None = None,
         ticker_factory: Callable[[str], Any] | None = None,
+        metadata_resolver: Callable[[str], SecurityMetadata] | None = None,
+        cache_directory: str | Path | None = None,
     ) -> None:
         if downloader is None or ticker_factory is None:
             try:
                 import yfinance as yf
             except ImportError as error:
                 raise ValueError("yfinance is required for the yfinance provider") from error
+            resolved_cache_directory = Path(
+                cache_directory
+                or os.getenv("YFINANCE_CACHE_DIR", "")
+                or Path(tempfile.gettempdir())
+                / "equity-intelligence-platform"
+                / "yfinance-cache"
+            )
+            try:
+                resolved_cache_directory.mkdir(parents=True, exist_ok=True)
+            except OSError as error:
+                raise ValueError("yfinance cache directory is not writable") from error
+            yf.set_tz_cache_location(str(resolved_cache_directory))
             downloader = downloader or yf.download
             ticker_factory = ticker_factory or yf.Ticker
         self._downloader = downloader
         self._ticker_factory = ticker_factory
+        self._metadata_resolver = metadata_resolver
 
     @property
     def descriptor(self) -> ProviderDescriptor:
@@ -114,7 +132,11 @@ class YFinanceProvider:
                         else Decimal(str(values["Adj Close"]))
                     ),
                 )
-                self._validate_bar(bar)
+                try:
+                    self._validate_bar(bar)
+                except ValueError:
+                    rejected_bar_count += 1
+                    continue
                 bars.append(bar)
         except (InvalidOperation, TypeError, ValueError, OverflowError) as error:
             raise MarketDataProviderError(
@@ -126,8 +148,20 @@ class YFinanceProvider:
                 f"yfinance returned no daily prices for {requested_symbol}", "EMPTY_RESULT"
             )
         now = datetime.now(UTC)
+        security = (
+            self._metadata_resolver(requested_symbol)
+            if self._metadata_resolver is not None
+            else SecurityMetadata(
+                symbol=requested_symbol,
+                name=requested_symbol,
+                exchange="UNKNOWN",
+                instrument_type="COMMON_STOCK",
+                currency="USD",
+                exchange_timezone="America/New_York",
+            )
+        )
         return DailyPriceSeries(
-            security=self.fetch_security_metadata(requested_symbol),
+            security=security,
             provider_descriptor=self.descriptor,
             requested_symbol=requested_symbol,
             provider_symbol=requested_symbol,

@@ -28,6 +28,7 @@ services:
       OPENAI_API_KEY: ${OPENAI_API_KEY:-}
       MARKET_DATA_PROVIDER: ${MARKET_DATA_PROVIDER:-yfinance}
       TWELVE_DATA_API_KEY: ${TWELVE_DATA_API_KEY:-}
+      EODHD_API_KEY: ${EODHD_API_KEY:-}
       ANALYTICS_DATABASE_URL: postgresql://${POSTGRES_USER:-equity_app}:${POSTGRES_PASSWORD:?POSTGRES_PASSWORD must be set in .env}@postgres:5432/${POSTGRES_DB:-equity_intelligence}
     ports:
       - "8000:8000"
@@ -52,6 +53,8 @@ services:
       SPRING_DATASOURCE_USERNAME: ${POSTGRES_USER:-equity_app}
       SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD must be set in .env}
       ANALYTICS_BASE_URL: http://analysis-python:8000
+      CLOSED_TEST_IDENTITY_ENABLED: ${CLOSED_TEST_IDENTITY_ENABLED:-false}
+      CLOSED_TEST_IDENTITY_ISSUER: ${CLOSED_TEST_IDENTITY_ISSUER:-equity-local}
     ports:
       - "8080:8080"
     depends_on:
@@ -76,7 +79,11 @@ services:
     build:
       context: ./frontend
     environment:
-      BACKEND_INTERNAL_URL: http://backend-java:8080
+      BACKEND_BASE_URL: http://backend-java:8080
+      CLOSED_TEST_IDENTITY: ${CLOSED_TEST_IDENTITY:-}
+      RESEARCH_DATA_SNAPSHOT_ID: ${RESEARCH_DATA_SNAPSHOT_ID:-}
+      RESEARCH_SNAPSHOT_AS_OF: ${RESEARCH_SNAPSHOT_AS_OF:-}
+      RESEARCH_SCREENING_RUN_ID: ${RESEARCH_SCREENING_RUN_ID:-}
       NEXT_PUBLIC_API_BASE_URL: http://localhost:8080
     ports:
       - "3000:3000"

@@ -76,6 +76,7 @@ Performance tracking and strategy evaluation
 - [Long-Horizon Research Rating v1](docs/long-horizon-research-rating-v1-2026-07-28.md)
 - [Analytics Model Interface v1](docs/analytics-model-interface-v1.md)
 - [Market Intelligence and Screening v1](docs/market-intelligence-screening-v1.md)
+- [Market Intelligence Vertical Slice v1 Closeout](docs/market-intelligence-vertical-slice-v1-closeout-2026-07-28.md)
 - [Forward Decision-Quality Final Offline Acceptance](docs/forward-decision-quality-final-acceptance-2026-07-28.md)
 - [Analytics Stage Closeout](docs/analytics-stage-closeout-2026-07-28.md)
 - [AI Analysis](docs/ai-analysis.md)
@@ -95,11 +96,11 @@ Performance tracking and strategy evaluation
 
 ## Current Status
 
-Phase 0 and the data, model, persistence, and internal Market Intelligence
-foundations are complete through PostgreSQL migration V17. The complete local
-stack runs through Docker Compose, and GitHub Actions validates the frontend,
-backend, analytics service, database migration paths, and full Git history for
-secrets.
+Phase 0 and the local Market Intelligence end-to-end engineering slice are
+implemented through PostgreSQL migration V17. The complete local stack runs
+through Docker Compose. Spring Boot now publishes the versioned Market
+Intelligence API, and Next.js provides the `/research` screening and durable
+profile workspace.
 
 The current analytics foundation includes:
 
@@ -116,13 +117,20 @@ The current analytics foundation includes:
   security-level screening contracts;
 - a provider-neutral daily refresh planner with resumable PostgreSQL tasks,
   checkpoints, freshness states, and usage telemetry; and
+- a versioned 66-security universe plus aggregate no-network preflight and
+  one-command confirmed daily refresh workflow;
+- public Spring Boot screening, profile, search, and facets endpoints;
+- a Next.js research list and security/profile detail workspace; and
 - an accepted Forward Decision-Quality framework with transaction costs,
   slippage, cash, sector ETF, and SPY counterfactuals.
 
-Market-data ingestion remains replaceable through `MARKET_DATA_PROVIDER`.
-EODHD is the current bounded licensed source, yfinance is used only for
-development or bounded cross-checking, and Twelve Data remains supported
-through the same normalized boundary. Provider acceptance does not by itself
+Market-data ingestion remains replaceable through versioned provider adapters.
+The closed-test vertical slice uses yfinance for bounded daily prices and EODHD
+for bounded fundamentals and corporate actions. The approved recovery completed
+the 57-security price scope, 57-security corporate-action scope, and 55-security
+fundamental scope. ACN retained 259 valid completed sessions while its malformed
+2026-07-28 bar was rejected; its latest price freshness is explicitly
+`STALE/LATE_DATA` rather than fabricated. Provider acceptance does not by itself
 make a security scoreable; formula readiness and explicit missing-data states
 remain separate gates.
 
@@ -130,13 +138,14 @@ Forward Validation is operationally ready but not a performance result. No
 prospective signal has yet matured through the 5-, 20-, or 60-trading-day
 horizon, and `statisticalEdgeProven` remains `NOT_ESTABLISHED`.
 
-The next gate is the
-[Market Intelligence End-to-End Vertical Slice](docs/current-state.md#next-product-gate):
-activate one bounded refresh plan, build durable profiles and screening
-results, expose them through Spring Boot, and render them in Next.js. No cloud
-database, production scheduler, public registration, or automatic trading is
-active. See [Database Deployment v1](docs/database-deployment-v1.md) for the
-approved deployment preparation.
+The local engineering path is described in the
+[Vertical Slice closeout](docs/market-intelligence-vertical-slice-v1-closeout-2026-07-28.md).
+Its real-data acceptance is deliberately `PARTIAL`: 66 durable profiles and an
+honest `NO_ELIGIBLE_RESULTS` screen were produced after the bounded provider
+refresh completed. `PARTIAL` describes product eligibility, not an unfinished
+provider run: all 66 profiles remain explicitly excluded from deterministic
+ranking until their required evidence is ready. No cloud database, production
+scheduler, public registration, or automatic trading is active.
 
 ## Quick Start
 

@@ -23,15 +23,66 @@ type MarketDataResult =
   | { state: "ready"; data: MarketDataResponse }
   | { state: "error"; message: string };
 
+function decodeMarketData(value: unknown): MarketDataResponse {
+  if (typeof value !== "object" || value === null || Array.isArray(value)) {
+    throw new Error("Market data response must be an object.");
+  }
+  const source = value as Record<string, unknown>;
+  if (
+    typeof source.generatedAt !== "string" ||
+    Number.isNaN(Date.parse(source.generatedAt)) ||
+    !Array.isArray(source.items)
+  ) {
+    throw new Error("Market data response metadata is invalid.");
+  }
+  const items = source.items.map((item) => {
+    if (typeof item !== "object" || item === null || Array.isArray(item)) {
+      throw new Error("Market data item must be an object.");
+    }
+    const row = item as Record<string, unknown>;
+    for (const key of ["symbol", "name", "exchange", "instrumentType"]) {
+      if (typeof row[key] !== "string" || row[key].length === 0) {
+        throw new Error(`Market data item ${key} is invalid.`);
+      }
+    }
+    for (const key of ["closePrice", "volume"]) {
+      if (
+        row[key] !== null &&
+        (typeof row[key] !== "number" || !Number.isFinite(row[key]))
+      ) {
+        throw new Error(`Market data item ${key} is invalid.`);
+      }
+    }
+    for (const key of ["tradingDate", "provider", "ingestedAt"]) {
+      if (row[key] !== null && typeof row[key] !== "string") {
+        throw new Error(`Market data item ${key} is invalid.`);
+      }
+    }
+    if (
+      typeof row.ingestedAt === "string" &&
+      Number.isNaN(Date.parse(row.ingestedAt))
+    ) {
+      throw new Error("Market data ingestion timestamp is invalid.");
+    }
+    return row as MarketDataItem;
+  });
+  return { generatedAt: source.generatedAt, items };
+}
+
 async function loadMarketData(): Promise<MarketDataResult> {
-  const baseUrl =
-    process.env.BACKEND_INTERNAL_URL ??
-    process.env.NEXT_PUBLIC_API_BASE_URL ??
-    "http://localhost:8080";
+  const baseUrl = process.env.BACKEND_BASE_URL;
+  if (!baseUrl) {
+    return {
+      state: "error",
+      message: "BACKEND_BASE_URL is not configured on the server.",
+    };
+  }
 
   try {
-    const response = await fetch(`${baseUrl}/api/v1/market-data/latest`, {
+    const url = new URL("/api/v1/market-data/latest", baseUrl);
+    const response = await fetch(url, {
       cache: "no-store",
+      signal: AbortSignal.timeout(10_000),
     });
 
     if (!response.ok) {
@@ -43,7 +94,7 @@ async function loadMarketData(): Promise<MarketDataResult> {
 
     return {
       state: "ready",
-      data: (await response.json()) as MarketDataResponse,
+      data: decodeMarketData(await response.json()),
     };
   } catch {
     return {
@@ -159,13 +210,19 @@ export default async function MarketDataPage() {
                                 {item.tradingDate}
                               </td>
                               <td className="px-5 py-5 text-right font-mono text-sm text-slate-100">
-                                {priceFormatter.format(item.closePrice ?? 0)}
+                                {item.closePrice === null
+                                  ? "Missing"
+                                  : priceFormatter.format(item.closePrice)}
                               </td>
                               <td className="px-5 py-5 text-right font-mono text-sm text-slate-300">
-                                {volumeFormatter.format(item.volume ?? 0)}
+                                {item.volume === null
+                                  ? "Missing"
+                                  : volumeFormatter.format(item.volume)}
                               </td>
                               <td className="px-5 py-5 text-sm text-cyan-300">
-                                {item.provider === "twelve_data"
+                                {item.provider === null
+                                  ? "Missing"
+                                  : item.provider === "twelve_data"
                                   ? "Twelve Data"
                                   : item.provider}
                               </td>
@@ -174,7 +231,7 @@ export default async function MarketDataPage() {
                                   ? timestampFormatter.format(
                                       new Date(item.ingestedAt),
                                     )
-                                  : "Unknown"}
+                                  : "Not available"}
                               </td>
                             </>
                           ) : (

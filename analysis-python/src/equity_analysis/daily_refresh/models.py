@@ -8,6 +8,7 @@ from equity_analysis.market_data.models import AdjustmentMode
 class Dataset(StrEnum):
     DAILY_PRICE = "DAILY_PRICE"
     CORPORATE_ACTION = "CORPORATE_ACTION"
+    FUNDAMENTALS = "FUNDAMENTALS"
 
 
 class FreshnessState(StrEnum):
@@ -58,11 +59,13 @@ class DatasetCursor:
 
 @dataclass(frozen=True)
 class RefreshPolicy:
-    initial_lookback_sessions: int = 5
+    initial_lookback_sessions: int = 260
     overlap_sessions: int = 5
     late_grace_sessions: int = 1
     stale_after_sessions: int = 2
-    max_attempts: int = 3
+    fundamentals_refresh_days: int = 90
+    completed_session_grace_minutes: int = 90
+    max_attempts: int = 2
     base_backoff_seconds: float = 2.0
     eodhd_daily_budget: int = 100_000
     eodhd_reserve: int = 10_000
@@ -79,6 +82,20 @@ class WorkItem:
     end_date: date
     expected_session_date: date
     estimated_weighted_calls: int
+
+    @property
+    def request_key(self) -> str:
+        """Physical provider request identity.
+
+        Both price adjustment projections intentionally share one provider
+        response and therefore one request key.
+        """
+        mode = "SHARED" if self.dataset == Dataset.DAILY_PRICE else "NA"
+        return (
+            f"{self.security.security_id}:{self.dataset.value}:"
+            f"{self.provider_code}:{mode}:{self.start_date.isoformat()}:"
+            f"{self.end_date.isoformat()}"
+        )
 
     @property
     def key(self) -> str:
@@ -123,6 +140,8 @@ class WorkResult:
     available_at: datetime | None = None
     ingested_at: datetime | None = None
     error_code: str | None = None
+    physical_requests: int = 0
+    weighted_calls_used: int = 0
 
 
 @dataclass(frozen=True)

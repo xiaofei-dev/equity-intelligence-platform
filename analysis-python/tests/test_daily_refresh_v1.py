@@ -69,7 +69,7 @@ def test_planner_uses_overlap_and_separates_price_adjustment_modes() -> None:
         universe_version="fixture-v1",
         as_of=NOW,
     )
-    assert len(plan.items) == 3
+    assert len(plan.items) == 2
     unadjusted = next(
         item for item in plan.items if item.adjustment_mode == AdjustmentMode.UNADJUSTED
     )
@@ -77,8 +77,8 @@ def test_planner_uses_overlap_and_separates_price_adjustment_modes() -> None:
     assert {item.adjustment_mode for item in plan.items} == {
         AdjustmentMode.UNADJUSTED,
         AdjustmentMode.TOTAL_RETURN_ADJUSTED,
-        None,
     }
+    assert plan.estimated_weighted_calls == 2
 
 
 def test_planner_fails_closed_before_eodhd_budget_can_be_exceeded() -> None:
@@ -237,7 +237,7 @@ def test_runner_retries_and_records_explicit_current_outcome() -> None:
     )
     result = runner.run(_plan())
     assert result.outcome == RefreshOutcome.SUCCEEDED
-    assert provider.calls == 3
+    assert provider.calls == 2
     assert all(item.freshness_state == FreshnessState.CURRENT for item in result.results)
     assert store.final == result
 
@@ -295,4 +295,4 @@ def test_scheduler_loads_durable_state_before_planning() -> None:
     )
     result = scheduler.invoke()
     assert result.outcome == RefreshOutcome.SUCCEEDED
-    assert result.planned_items == 3
+    assert result.planned_items == 2

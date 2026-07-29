@@ -8,7 +8,9 @@ immutable evidence of the state that existed when they were produced.
 
 ## Verified Baseline
 
-- Git baseline: `9237cc4b368727f12ad9d50985c9478c6d188746`
+- Working-tree baseline: local `main@c5e9d66`; no commit or push for the
+  vertical-slice implementation
+- Remote baseline before this task: `origin/main@9237cc4`
 - Database migration level: `V17`
 - Primary market: United States listed equities
 - Data cadence: completed daily or end-of-day sessions
@@ -18,10 +20,10 @@ immutable evidence of the state that existed when they were produced.
 - CI result: Backend, Frontend, Analytics, Database migrations, and Secret scan
   passed
 
-The clean-clone-equivalent analytics run completed with 469 passing tests and
-10 controlled-data or database-dependent skips. PostgreSQL 17 migration
-acceptance passed for clean `V1 -> V17`, populated `V3 -> V17`, `V12 -> V17`,
-and `V16 -> V17` paths.
+The current task revalidated a clean-clone-equivalent analytics run, the
+isolated PostgreSQL V17 Market Intelligence integration path, and PostgreSQL
+17 clean `V1 -> V17`, populated `V3 -> V17`, `V12 -> V17`, and `V16 -> V17`
+paths. Final counts are recorded in the development log.
 
 ## Capability Status
 
@@ -29,9 +31,9 @@ and `V16 -> V17` paths.
 | --- | --- | --- |
 | Local four-service stack | Implemented and tested | Available through Docker Compose |
 | Provider-neutral daily price ingestion | Implemented | Bounded manual use only |
-| Daily refresh planning and persistence | Implemented through V16 | No deployed scheduler is active |
-| Market Intelligence profiles | Implemented through Python and V17 | Internal API only |
-| Sector, industry, and security screening | Implemented through Python and V17 | Not yet exposed through Spring Boot or the frontend |
+| Daily refresh planning and persistence | Implemented through V16 with a 66-universe CLI | Manual confirmed execution; no deployed scheduler |
+| Market Intelligence profiles | Implemented through Python and V17 | Published through Spring Boot closed-test API |
+| Sector, industry, and security screening | Implemented through Python and V17 | Spring Boot and Next.js `/research` implemented |
 | Objective Rating v1 | Versioned and reproducible | Limited by explicit data eligibility |
 | Tactical Signal v2.1 | Versioned and reproducible | Completed-session research only |
 | AI research contract | Defined and simulated | No production AI evidence pipeline is active |
@@ -59,22 +61,25 @@ Daily prices may be refreshed every completed session. Fundamentals, identity,
 and classifications use independent freshness policies and must not be fetched
 merely because a price is stale.
 
-## Next Product Gate
+## Current Product Gate Result
 
-The next gate is **Market Intelligence End-to-End Vertical Slice v1**:
+**Market Intelligence End-to-End Vertical Slice v1** is locally implemented:
 
-1. activate one bounded daily refresh plan for a 50-100-security closed-test
-   universe;
-2. write normalized observations and freshness states to PostgreSQL;
-3. build durable Market Intelligence profiles and screening results;
-4. expose the versioned results through Spring Boot;
-5. render a candidate list and stock-detail research view in Next.js; and
-6. seal daily decision snapshots for prospective Forward Decision-Quality
-   evaluation.
+1. a versioned 66-security universe and bounded Daily Refresh CLI exist;
+2. normalized observations and freshness states are written to PostgreSQL;
+3. durable profiles and sealed screening runs are built from `READY` snapshots;
+4. Spring Boot exposes the versioned public contract;
+5. Next.js renders search, filters, results, and profile detail; and
+6. sealing a screen emits an idempotent Forward decision-snapshot handoff.
 
-The vertical slice must display explicit stale, missing, invalid, excluded, and
-not-applicable states. It must not activate brokerage execution or infer
-missing values.
+The bounded provider refresh is complete for the v1 scope: Yahoo prices for 57
+securities, EODHD corporate actions for 57, and EODHD fundamentals for 55.
+ACN's malformed 2026-07-28 Yahoo bar was rejected while 259 prior valid
+sessions were retained, so its price status is explicitly `STALE/LATE_DATA`.
+A new `READY` snapshot produced 66 durable profiles, zero eligible results,
+and all 66 explicit exclusions. The real product result therefore remains
+`PARTIAL` without implying that the provider workflow is unfinished. See the
+[closeout](market-intelligence-vertical-slice-v1-closeout-2026-07-28.md).
 
 ## Deliberately Inactive
 

@@ -7,6 +7,7 @@ from equity_analysis.market_data.models import (
     ProviderDescriptor,
     SecurityMetadata,
 )
+from equity_analysis.provider_validation.models import NormalizedFinancialObservation
 
 
 class MarketDataProviderError(RuntimeError):
@@ -46,3 +47,12 @@ class SecurityReferenceProvider(Protocol):
     def descriptor(self) -> ProviderDescriptor: ...
 
     def fetch_security_metadata(self, symbol: str) -> SecurityMetadata: ...
+
+
+class FundamentalsProvider(Protocol):
+    @property
+    def descriptor(self) -> ProviderDescriptor: ...
+
+    def fetch_financial_statements(
+        self, symbol: str
+    ) -> tuple[NormalizedFinancialObservation, ...]: ...

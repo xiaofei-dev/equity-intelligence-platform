@@ -32,16 +32,21 @@ zero or a neutral score.
 
 ## Internal API and Ranking
 
-Python exposes:
+Python exposes versioned internal durable endpoints for:
 
-- `POST /internal/v1/market-intelligence/profiles/build`
-- `POST /internal/v1/market-intelligence/screen`
+- snapshot profile assembly;
+- sealed screening-run creation and result pagination;
+- immutable and latest profile reads;
+- security search; and
+- facets.
 
-Spring Boot remains the owner of user-facing workflows. These endpoints accept
-normalized evidence and model results and perform no provider calls. Filters
-cover sector, industry, company type, symbol, and horizon. Ranking metrics are
-Objective quality, Objective valuation, the three tactical horizons,
-12-month-plus long horizon, and buying opportunity.
+Spring Boot owns user-facing workflows and publishes these under
+`/api/v1/market-intelligence`. The browser never calls the Python service
+directly. These endpoints accept stored normalized evidence and model results
+and perform no provider calls. Filters cover sector, industry, company type,
+symbol, and horizon. Ranking metrics are Objective quality, Objective
+valuation, the three tactical horizons, 12-month-plus long horizon, and buying
+opportunity.
 
 Buying opportunity v1 is the unweighted arithmetic mean of three explicitly
 available components: Objective Rating valuation, long-horizon valuation, and
@@ -179,7 +184,7 @@ deterministic ranking calculations.
 
 ## Deferred Work
 
-- Spring Boot forwarding and user authorization.
-- Frontend profile and screening experiences.
-- Production-universe targets and scheduled snapshot orchestration.
+- Production authentication replacing closed-test identity.
+- Deployed scheduled snapshot orchestration.
+- Completion of the stopped bounded provider refresh.
 - Any new industry-specific scoring methodology.

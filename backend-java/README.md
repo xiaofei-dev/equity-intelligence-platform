@@ -10,6 +10,16 @@ must not call the Python analytics service directly.
 - `GET /api/v1/system/status`: stable application status
 - `GET /api/v1/market-data/latest`: latest stored daily observation for every
   active security
+- `POST /api/v1/market-intelligence/screening-runs`: create or replay an
+  idempotent sealed-snapshot screen
+- `GET /api/v1/market-intelligence/screening-runs/{runId}`: screening metadata
+- `GET /api/v1/market-intelligence/screening-runs/{runId}/results`: paginated
+  immutable results
+- `GET /api/v1/market-intelligence/profiles/{profileId}`: immutable profile
+- `GET /api/v1/market-intelligence/securities/{securityId}/profiles/latest`:
+  latest available durable profile
+- `GET /api/v1/market-intelligence/securities`: paginated security search
+- `GET /api/v1/market-intelligence/facets`: snapshot-bound filter facets
 - `GET/POST /api/v1/me/accounts`: list or create accounts for the resolved
   closed-test identity
 - `POST /api/v1/me/accounts/{accountId}/snapshots`: record an immutable cash
@@ -65,18 +75,19 @@ from the repository root.
 CI runs the backend tests with Java 21. When local Maven or Java configuration
 is unavailable, the same validation can run in a Java 21 development container.
 
-## Next Responsibility
+## Market Intelligence Boundary
 
-The next backend responsibility is to consume the implemented internal Market
-Intelligence profile and screening contracts and expose stable public
-candidate, profile, coverage, and freshness APIs. It must not own or duplicate
-the quantitative formulas, read Python-owned ranking tables as an alternative
-contract, or expose the Python service directly to the browser.
+The backend consumes the internal Market Intelligence HTTP contract and
+publishes stable public candidate, profile, coverage, freshness, search, and
+facets APIs. It does not own or duplicate quantitative formulas, read
+Python-owned ranking tables as an alternative contract, or expose the Python
+service directly to the browser.
 
-The public contract must preserve profile/run identifiers, model versions,
-data timestamps, explicit missing and exclusion states, deterministic
+The public contract preserves profile/run identifiers, model versions, data
+timestamps, explicit missing and exclusion states, deterministic
 contributions, and the separation between deterministic output and AI
-narrative.
+narrative. Closed-test routes require `X-Test-Identity`; screening creation
+also requires `Idempotency-Key`.
 
 The user and portfolio foundation now includes the `app.*` schema, closed-test
 identity resolution, account and liability snapshots, versioned profiles,

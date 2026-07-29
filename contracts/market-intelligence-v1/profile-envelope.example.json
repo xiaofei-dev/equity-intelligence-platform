@@ -1,0 +1,184 @@
+{
+  "profileId": "22222222-2222-4222-8222-222222222222",
+  "securityId": "33333333-3333-4333-8333-333333333333",
+  "profile": {
+    "contractVersion": "MARKET-INTELLIGENCE-SCREENING-v1.0.0",
+    "security": {
+      "securityId": "33333333-3333-4333-8333-333333333333",
+      "symbol": "NBN",
+      "issuerName": "Northeast Bank",
+      "exchangeMic": "XNAS",
+      "currency": "USD",
+      "instrumentType": "COMMON_STOCK",
+      "cik": null,
+      "durableProviderId": null
+    },
+    "classification": null,
+    "comparableCohorts": [],
+    "facts": [
+      {
+        "name": "market_cap",
+        "metricVersion": "MARKET-INTELLIGENCE-INPUT-v1.0.0",
+        "state": "MISSING",
+        "value": null,
+        "reason": "MARKET_CAP_OBSERVATION_MISSING",
+        "lineage": []
+      },
+      {
+        "name": "latest_price",
+        "metricVersion": "MARKET-INTELLIGENCE-INPUT-v1.0.0",
+        "state": "MISSING",
+        "value": null,
+        "reason": "PRICE_OBSERVATION_MISSING",
+        "lineage": []
+      },
+      {
+        "name": "average_daily_dollar_volume",
+        "metricVersion": "MARKET-INTELLIGENCE-INPUT-v1.0.0",
+        "state": "MISSING",
+        "value": null,
+        "reason": "INSUFFICIENT_COMPLETED_PRICE_SESSIONS",
+        "lineage": []
+      }
+    ],
+    "objectiveQualityScore": null,
+    "objectiveValuationScore": null,
+    "objectiveRatingStatus": "NOT_APPLICABLE",
+    "objectiveRatingVersion": "Objective-Rating-v1",
+    "horizons": [
+      {
+        "horizon": "ONE_WEEK",
+        "deterministicView": {
+          "modelId": "DAILY_TACTICAL_SIGNAL",
+          "modelVersion": "TACTICAL-SIGNAL-v2.1.0",
+          "state": "INSUFFICIENT_DATA",
+          "asOf": "2026-07-28T21:00:00Z",
+          "effectiveAt": "2026-07-28T21:00:00Z",
+          "expiresAt": null,
+          "score": null,
+          "label": "INSUFFICIENT_DATA",
+          "inputHash": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceHash": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "missingInputs": ["UNIVERSE_MEMBERSHIP_NOT_RANKABLE"],
+          "explanation": ["Missing inputs are not converted to a neutral score."]
+        }
+      },
+      {
+        "horizon": "ONE_MONTH",
+        "deterministicView": {
+          "modelId": "DAILY_TACTICAL_SIGNAL",
+          "modelVersion": "TACTICAL-SIGNAL-v2.1.0",
+          "state": "INSUFFICIENT_DATA",
+          "asOf": "2026-07-28T21:00:00Z",
+          "effectiveAt": "2026-07-28T21:00:00Z",
+          "expiresAt": null,
+          "score": null,
+          "label": "INSUFFICIENT_DATA",
+          "inputHash": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceHash": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "missingInputs": ["UNIVERSE_MEMBERSHIP_NOT_RANKABLE"],
+          "explanation": ["Missing inputs are not converted to a neutral score."]
+        }
+      },
+      {
+        "horizon": "THREE_MONTHS",
+        "deterministicView": {
+          "modelId": "DAILY_TACTICAL_SIGNAL",
+          "modelVersion": "TACTICAL-SIGNAL-v2.1.0",
+          "state": "INSUFFICIENT_DATA",
+          "asOf": "2026-07-28T21:00:00Z",
+          "effectiveAt": "2026-07-28T21:00:00Z",
+          "expiresAt": null,
+          "score": null,
+          "label": "INSUFFICIENT_DATA",
+          "inputHash": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceHash": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "missingInputs": ["UNIVERSE_MEMBERSHIP_NOT_RANKABLE"],
+          "explanation": ["Missing inputs are not converted to a neutral score."]
+        }
+      },
+      {
+        "horizon": "TWELVE_MONTHS_PLUS",
+        "deterministicView": {
+          "modelId": "LONG_HORIZON_RESEARCH",
+          "modelVersion": "LONG-HORIZON-RESEARCH-v1.0.0",
+          "state": "INSUFFICIENT_DATA",
+          "asOf": "2026-07-28T21:00:00Z",
+          "effectiveAt": "2026-07-28T21:00:00Z",
+          "expiresAt": null,
+          "score": null,
+          "label": "INSUFFICIENT_DATA",
+          "inputHash": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceHash": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "missingInputs": ["UNIVERSE_MEMBERSHIP_NOT_RANKABLE"],
+          "explanation": ["Missing inputs are not converted to a neutral score."]
+        }
+      }
+    ],
+    "valuation": {
+      "state": "NOT_APPLICABLE",
+      "asOf": "2026-07-28T21:00:00Z",
+      "objectiveValuationScore": null,
+      "longHorizonValuationScore": null,
+      "ownHistoryPercentile": null,
+      "evidence": [],
+      "limitations": ["SPECIALIZED_MODEL_REQUIRED"]
+    },
+    "profileState": "PARTIAL",
+    "rankingState": "NOT_ELIGIBLE",
+    "rankingExclusions": [
+      "CLASSIFICATION_MISSING",
+      "REQUIRED_FACT_MARKET_CAP_NOT_VALID",
+      "REQUIRED_FACT_LATEST_PRICE_NOT_VALID",
+      "REQUIRED_FACT_AVERAGE_DAILY_DOLLAR_VOLUME_NOT_VALID",
+      "OBJECTIVE_RATING_NOT_SCORE_ELIGIBLE",
+      "OBJECTIVE_DIMENSION_SCORE_MISSING",
+      "VALUATION_EVIDENCE_NOT_VALID"
+    ],
+    "explainability": [
+      "Missing, invalid, stale, and not-applicable states are never converted to zero.",
+      "AI narrative is explanatory only and cannot set scores or ranks."
+    ],
+    "aiNarrative": {
+      "status": "NOT_EXECUTED",
+      "narrative": null,
+      "sourceReferences": [],
+      "generatedAt": null,
+      "promptVersion": null,
+      "modelVersion": null,
+      "confidence": null,
+      "mayAffectDeterministicFields": false
+    }
+  },
+  "currentMarketData": {
+    "state": "MISSING",
+    "price": null,
+    "currency": "USD",
+    "tradingDate": null,
+    "providerCode": null,
+    "availableAt": null,
+    "ingestedAt": null,
+    "adjustmentMode": null,
+    "reason": "PRICE_OBSERVATION_MISSING"
+  },
+  "freshness": [
+    {
+      "datasetCode": "daily-price-total-return-adjusted-v1",
+      "state": "MISSING",
+      "providerCode": "yfinance",
+      "effectiveAt": null,
+      "availableAt": null,
+      "ingestedAt": null,
+      "evaluatedAt": "2026-07-28T21:00:00Z",
+      "staleAfter": null,
+      "reasonCode": "NO_SUCCESSFUL_REFRESH"
+    }
+  ],
+  "modelVersions": {
+    "objectiveRating": "Objective-Rating-v1",
+    "ONE_WEEK": "TACTICAL-SIGNAL-v2.1.0",
+    "ONE_MONTH": "TACTICAL-SIGNAL-v2.1.0",
+    "THREE_MONTHS": "TACTICAL-SIGNAL-v2.1.0",
+    "TWELVE_MONTHS_PLUS": "LONG-HORIZON-RESEARCH-v1.0.0"
+  }
+}

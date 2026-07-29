@@ -11,6 +11,18 @@ REPORT_PATHS = (
     "docs/generated/objective-rating-v1-qc-cohort-completion-feasibility-v1-1.json",
 )
 SQUARE_LIKE_SHA256 = re.compile(r"^EAAA[0-9A-F]{60}$")
+EXPECTED_FALSE_POSITIVE_FINGERPRINTS = [
+    (
+        "bfbb13d874b07fee0f347f2b9bc9d452c9042c56:"
+        "analysis-python/tests/test_daily_refresh_postgres_v16.py:"
+        "generic-api-key:152"
+    ),
+    (
+        "bfbb13d874b07fee0f347f2b9bc9d452c9042c56:"
+        "analysis-python/tests/test_daily_refresh_postgres_v16.py:"
+        "generic-api-key:243"
+    ),
+]
 
 
 def _strings(
@@ -60,3 +72,14 @@ def test_allowlisted_square_like_hashes_are_only_candidate_source_hashes() -> No
         assert all(
             len(path) >= 2 and path[-2] == "candidateSourceContentHashes" for path in matches
         )
+
+
+def test_historical_false_positive_fingerprints_are_exact_and_file_scoped() -> None:
+    fingerprints = (ROOT / ".gitleaksignore").read_text(encoding="utf-8").splitlines()
+
+    assert fingerprints == EXPECTED_FALSE_POSITIVE_FINGERPRINTS
+    assert all(
+        ":analysis-python/tests/test_daily_refresh_postgres_v16.py:"
+        "generic-api-key:" in fingerprint
+        for fingerprint in fingerprints
+    )

@@ -10,10 +10,11 @@ interfaces, durable security profiles, sector/industry/security screening, a
 Decision-Quality framework.
 
 Historical point-in-time UQ validation, prospective outcome maturation,
-source-verified AI operation, public Market Intelligence APIs, frontend
-research workflows, a deployed scheduler, and portfolio recommendation
-workflows remain separate later gates. The current engineering acceptance is
-not a claim of proven excess returns.
+source-verified AI operation, a deployed scheduler, production authentication,
+and portfolio recommendation workflows remain separate later gates. Public
+Market Intelligence API code and the local frontend research workflow are now
+implemented for closed-test use. The current engineering acceptance is not a
+claim of proven excess returns.
 
 ## Phase 0: Foundation - Complete
 
@@ -91,22 +92,25 @@ prospective Forward evidence is `PENDING_FUTURE_OUTCOMES`.
 
 Exit status: achieved for internal Python and database contracts.
 
-## Phase 2C: End-to-End Market Intelligence Productization - Next
+## Phase 2C: End-to-End Market Intelligence Productization - Implemented Locally
 
-- [ ] Activate a bounded 50-100-security daily refresh plan
-- [ ] Use yfinance for permitted closed-test daily prices and EODHD only for
+- [x] Freeze a bounded 66-security daily refresh plan
+- [x] Use yfinance for permitted closed-test daily prices and EODHD only for
   datasets whose accepted capability requires it
-- [ ] Publish Market Intelligence profile and screening contracts through
+- [x] Publish Market Intelligence profile and screening contracts through
   Spring Boot
-- [ ] Build the Next.js candidate list, filters, and stock detail view
-- [ ] Display data timestamps, missing states, exclusions, and model versions
-- [ ] Seal synchronized daily decision snapshots
+- [x] Build the Next.js candidate list, filters, and stock detail view
+- [x] Display data timestamps, missing states, exclusions, and model versions
+- [x] Seal synchronized daily decision-snapshot handoffs
 - [ ] Begin prospective Forward enrollment without changing frozen models
+- [ ] Complete a clean approved 57-price/57-action/55-fundamental live refresh;
+  the first price run stopped safely on a malformed provider response
 
 Exit condition: a completed market session can be refreshed once, persisted,
 screened, exposed through Java, and reviewed in the frontend with complete
 lineage and no direct browser access to Python, PostgreSQL, or provider
-credentials.
+credentials. The fixture path meets the engineering condition; the bounded
+real path remains partial under the provider stop rule.
 
 ## Phase 3: AI Evidence Review
 

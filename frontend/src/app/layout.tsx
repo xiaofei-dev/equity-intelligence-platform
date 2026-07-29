@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Equity Intelligence Platform",
+  title: {
+    default: "Equity Intelligence",
+    template: "%s · Equity Intelligence",
+  },
   description:
     "Explainable equity research and portfolio decision support with explicit risk controls.",
 };

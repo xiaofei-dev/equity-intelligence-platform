@@ -2,6 +2,7 @@ from collections.abc import Callable, Sequence
 from datetime import UTC, datetime
 
 from equity_analysis.daily_refresh.models import (
+    Dataset,
     RefreshOutcome,
     RunResult,
     SecurityTarget,
@@ -23,6 +24,7 @@ class DailyRefreshScheduler:
         planner: DailyRefreshPlanner,
         runner: DailyRefreshRunner,
         store: RefreshStore,
+        datasets: Sequence[Dataset] | None = None,
         now: Callable[[], datetime] = lambda: datetime.now(UTC),
     ) -> None:
         self._provider_code = provider_code
@@ -31,6 +33,7 @@ class DailyRefreshScheduler:
         self._planner = planner
         self._runner = runner
         self._store = store
+        self._datasets = tuple(datasets) if datasets is not None else None
         self._now = now
 
     def invoke(self, allow_large_full_refresh: bool = False) -> RunResult:
@@ -45,6 +48,7 @@ class DailyRefreshScheduler:
                 self._provider_code, as_of.astimezone(UTC).date()
             ),
             allow_large_full_refresh=allow_large_full_refresh,
+            datasets=self._datasets,
         )
         if not plan.items:
             return RunResult(

@@ -54,4 +54,5 @@ def test_preflight_refuses_existing_immutable_output(tmp_path: Path) -> None:
 def test_live_environment_path_uses_repository_root_not_calling_cwd() -> None:
     path = repository_root_env_path()
     assert path.name == ".env"
-    assert path.parent.name == "equity-intelligence-platform"
+    assert path == Path(__file__).resolve().parents[2] / ".env"
+    assert (path.parent / "analysis-python" / "pyproject.toml").is_file()

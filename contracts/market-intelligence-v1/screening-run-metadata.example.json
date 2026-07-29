@@ -1,0 +1,15 @@
+{
+  "runId": "44444444-4444-4444-8444-444444444444",
+  "state": "SEALED",
+  "dataSnapshotId": "11111111-1111-4111-8111-111111111111",
+  "universeVersion": "market-intelligence-closed-test-us-v1.0.0",
+  "asOf": "2026-07-28T21:00:00Z",
+  "rankBy": "BUYING_OPPORTUNITY",
+  "direction": "DESCENDING",
+  "eligibleCount": 0,
+  "excludedCount": 66,
+  "gateStatus": "NO_ELIGIBLE_RESULTS",
+  "profileSetHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "resultHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "sealedAt": "2026-07-28T21:01:00Z"
+}
