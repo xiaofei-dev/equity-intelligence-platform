@@ -1,0 +1,52 @@
+{
+  "artifactType": "PROSPECTIVE_ENROLLMENT_ADAPTER_PREFLIGHT",
+  "schemaVersion": "PROSPECTIVE-ENROLLMENT-PREFLIGHT-v2.2.1",
+  "status": "BLOCKED_BY_TIME_OR_EVIDENCE",
+  "blockedReasons": [
+    "EXPLICIT_ENROLLMENT_NOT_AUTHORIZED",
+    "PRODUCTION_66_MODEL_INPUT_EVIDENCE_MISSING",
+    "REAL_CONTROLLED_BENCHMARK_LEDGER_MISSING",
+    "REAL_PROSPECTIVE_DECISION_SNAPSHOT_MISSING",
+    "SUCCESSOR_READINESS_MISSING"
+  ],
+  "securityCount": 66,
+  "requiredBenchmarkFamilies": [
+    "SPY",
+    "SECTOR",
+    "EQUAL_WEIGHT",
+    "PURE_MOMENTUM",
+    "PURE_VALUE",
+    "PURE_QUALITY"
+  ],
+  "v20ActivationAcceptanceHash": "sha256:a4e7715b8c97d1c6d132d141da39cad49c15f6d3102678106a97db633121d440",
+  "legacyPreflightSuperseded": {
+    "path": "docs/generated/prospective-enrollment-adapter-v2-2-v19-preflight-v2.json",
+    "artifactContentHash": "sha256:6e2f46ae32b5c8b2d1fe4de27169f9f798dd47a14e9020bd4afd5666834f87db",
+    "fileSha256": "sha256:5f6aec478b30b29d95a4b69f5f8cad43317c192eaa405efc5e7ae3ffe840cc00",
+    "reason": "V20_SUCCESSOR_SCHEMA_AND_CURRENT_SOURCE_BINDINGS"
+  },
+  "infrastructureState": "READY",
+  "realControlledBenchmarkLedgerState": "NOT_EXECUTED",
+  "realDecisionControlledCompositeState": "NOT_EXECUTED",
+  "realEnrollmentState": "NOT_EXECUTED",
+  "modelEvidenceLabels": {
+    "path": "docs/generated/model-validation-terminal-closeout-v1.json",
+    "fileSha256": "sha256:6036a54d64ce0a4093258cf8ace85f923406faad556fde39af5be35a92131af4",
+    "declaredArtifactContentHash": "E414C070746738AC1830F6E3ABCFDF871E6F68269DFA08AD603195B50719BCD9",
+    "terminalConclusion": "TACTICAL_RANKING_PARTIAL_DIAGNOSTIC_ONLY;TACTICAL_ENTRY_NOT_VALIDATED;LONG_HORIZON_NOT_VALIDATED",
+    "unchangedByActivation": true
+  },
+  "executionBoundary": {
+    "providerNetworkRequests": 0,
+    "databaseReads": 0,
+    "businessDatabaseWrites": 0,
+    "scoresOrRanksComputed": false,
+    "enrollmentExecuted": false,
+    "outcomesComputed": false,
+    "maturityExecuted": false,
+    "commitCreated": false,
+    "pushExecuted": false,
+    "deploymentExecuted": false
+  },
+  "artifactContentHash": "sha256:352d2d534ae8c7c87f2bfd1aeaa14b9fa0497dd35be0d9e9c4619d28af16c0f3"
+}

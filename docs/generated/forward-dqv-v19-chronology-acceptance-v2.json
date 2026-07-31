@@ -1,0 +1,99 @@
+{
+  "acceptedEnrollmentContract": "FORWARD-DQV-ENROLLMENT-v2.1.1",
+  "artifactContentHash": "sha256:a013330f4f571976b53e96b1d89763df042c81c0e99fbbeb0891246d62da70c3",
+  "artifactType": "FORWARD_DQV_V19_CHRONOLOGY_ACCEPTANCE",
+  "chronology": {
+    "decisionNoLaterThanSeal": true,
+    "expression": "decision_as_of <= sealed_at AND sealed_at <= effective_at_completed_session_open",
+    "sealNoLaterThanEntryOpen": true
+  },
+  "chronologyConstraintValidated": true,
+  "effectiveDate": "2026-07-30",
+  "enrollmentStatus": "NOT_EXECUTED",
+  "executionBoundary": {
+    "businessDatabaseWrites": 0,
+    "commitCreated": false,
+    "credentialsIncluded": false,
+    "deploymentExecuted": false,
+    "enrollmentExecuted": false,
+    "networkRequests": 0,
+    "outcomesComputed": false,
+    "providerRequests": 0,
+    "pushExecuted": false,
+    "scoresComputed": false
+  },
+  "existingEnrollmentUpgradeAllowed": false,
+  "implementationStatus": "READY",
+  "legacyEnrollmentAdapterReady": false,
+  "migrationAppliedToTestDatabases": true,
+  "migrationVersion": 19,
+  "oldContractSuperseded": true,
+  "postgresql17Acceptance": {
+    "legacyContractRejected": true,
+    "preexistingEnrollmentMigrationRejected": true,
+    "sealedAfterEntryRejected": true,
+    "status": "PASS",
+    "upgradeMatrix": [
+      {
+        "fromVersion": "V1",
+        "status": "PASS",
+        "toVersion": "V19"
+      },
+      {
+        "fromVersion": "V18",
+        "status": "PASS",
+        "toVersion": "V19"
+      }
+    ]
+  },
+  "prospectiveEnrollmentAdapterV211Ready": true,
+  "rejectedEnrollmentContract": "FORWARD-DQV-ENROLLMENT-v2.1.0",
+  "schemaVersion": "FORWARD-DQV-V19-CHRONOLOGY-ACCEPTANCE-v2.0.0",
+  "sourceContractHash": "sha256:6692cd10690a2ba118e7e998d491172de5b4bd4be2307bee48dd3dc080e1e7da",
+  "sourceFiles": {
+    "enrollmentV211": {
+      "fileSha256": "sha256:450a6292f4b0f85936830d9fcd7fe03da2d121e0e1607e4596f8a312ddad6a60",
+      "path": "analysis-python/src/equity_analysis/forward_validation/outcomes_v211.py"
+    },
+    "migration": {
+      "fileSha256": "sha256:fc76371dae2294c542c2e6a8f6ef254dbb820338dff51cc9951a84831af0ffb0",
+      "path": "database/migrations/V19__repair_forward_dqv_enrollment_chronology.sql"
+    },
+    "prospectiveAdapterV22": {
+      "fileSha256": "sha256:7c5e10e17465c4145ed54ea13d11ad13d511d46a5f84d147397402c7e59e2ede",
+      "path": "analysis-python/src/equity_analysis/forward_validation/prospective_enrollment_adapter_v22.py"
+    },
+    "repositoryV211": {
+      "fileSha256": "sha256:a9f4883850e2d06e3535cef2da590fbeb964bcdd85769974e1585a882da24d11",
+      "path": "analysis-python/src/equity_analysis/forward_validation/outcome_persistence_v211.py"
+    }
+  },
+  "status": "READY",
+  "supersedes": {
+    "artifactContentHash": "sha256:53835fb8a9cb123541ec3dfa82778439608107553dce9a421e1bf68456ea5b66",
+    "fileSha256": "sha256:04a51e92dea71c5679b4931f4bf4f262e168262a8b2eab8ec9da6c9f3d48d817",
+    "path": "docs/generated/forward-dqv-v19-chronology-acceptance-v1.json",
+    "schemaVersion": "FORWARD-DQV-V19-CHRONOLOGY-ACCEPTANCE-v1.0.0",
+    "supersessionReason": "CURRENT_SOURCE_HASH_BINDING_DRIFT"
+  },
+  "testAcceptance": {
+    "focusedPythonSuite": {
+      "passed": 3,
+      "status": "PASS"
+    },
+    "fullRepositorySuite": {
+      "claim": "NOT_CLAIMED_BY_GATE_ACCEPTANCE",
+      "status": "PENDING_FINAL_CLOSEOUT"
+    },
+    "gitDiffCheck": {
+      "status": "PASS"
+    },
+    "postgresTests": {
+      "passed": 3,
+      "status": "PASS"
+    },
+    "ruff": {
+      "status": "PASS"
+    }
+  }
+}

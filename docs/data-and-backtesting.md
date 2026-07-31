@@ -4,6 +4,26 @@
 
 Investment results are only as reliable as the historical data and availability assumptions behind them.
 
+## Practical Tier-1 Current-Revision Evidence
+
+The repository now permits a bounded Practical Tier-1 retrospective when
+strict point-in-time history is unavailable. This route must execute the frozen
+model, use completed-session outcomes, apply costs, compare first with SPY,
+preserve missing states, and label current-universe survivorship and provider
+revision risk. It is directional development evidence, not a strict PIT
+backtest or an untouched holdout.
+
+Controlled Tactical v2.2 and Long Horizon v1.1 runs preserve their frozen
+horizons, target-specific histories, provider revisions, and evidence limits.
+Numeric observations and performance results remain in Git-ignored storage.
+Git contains value-free manifests and reproducible contracts only.
+
+See
+[Practical Tactical v2.2](practical-tactical-v2-2-backtest-v1.md) and
+[Practical Long Horizon v1.1](practical-long-horizon-v1-1-tier1-backtest-2026-07-30.md).
+See also the
+[Licensed Market Data Publication Policy](licensed-market-data-publication-policy.md).
+
 Every stored dataset should identify:
 
 - Provider
@@ -87,10 +107,12 @@ currencies, null handling, identifier stability, SEC consistency, endpoint
 cost, and licensing. A 300-to-500-security stratified sample follows only after
 acceptance.
 
-Twelve Data remains the current development price provider. SEC EDGAR is the
-preferred primary-source filing and XBRL evidence provider. EODHD is the current
-leading paid candidate for a one-month personal research validation, not a
-final vendor commitment.
+The current bounded workflow uses Yahoo-derived daily price evidence for
+development and Practical Tier-1 validation, EODHD for approved fundamentals
+and corporate-action capabilities, and SEC EDGAR for primary-source filing and
+XBRL evidence. Provider use remains capability-specific rather than a permanent
+single-vendor commitment. Licensed values stay in controlled, Git-ignored
+storage.
 
 ## Point-in-Time Correctness
 
@@ -133,6 +155,55 @@ Recommended stages:
 6. Limited-capital observation
 
 The same holdout data must not be repeatedly used to tune the strategy.
+
+The concrete historical time-slice contract, evidence grades, minimum sample,
+and claim limits are defined in
+[Historical Decision-Quality Validation v1](historical-decision-quality-validation-v1.md).
+It permits explicitly labeled conservative availability assumptions for early
+engineering validation while preventing those assumptions from being
+relabeled as verified point-in-time evidence.
+
+The first expanded execution now covers 2014-2026 using sealed stratified
+random and month-end dates. It found no reliable tactical edge and an
+unfavorable ranking-discrimination result for the approximate long-horizon
+rubric. The exact Objective historical replay remains blocked by cohort,
+period-semantics, historical valuation, and membership evidence. These are
+model and evidence findings, not provider-fetch failures.
+
+The observed dates are development or validation evidence. They must not be
+repeatedly mined to tune the same model version.
+
+The current validation program is governed by the
+[Model Validation Master Plan v2](model-validation-master-plan-v2.md) and the
+[Historical Walk-Forward Validation v2](historical-walk-forward-validation-v2.md)
+protocol. Previously observed Tactical v2.1 and Long Horizon v1.0 results are
+`DEVELOPMENT_OBSERVED`; they are not an untouched holdout for Tactical v2.2 or
+Long Horizon v1.1.
+
+Formal v2 evaluation requires chronological folds, purge and embargo,
+non-overlapping outcome windows, and dependent-outcome-aware inference.
+Overlapping windows may be reported only as diagnostics. Every run must retain
+all six benchmark states: SPY, dated sector, equal-weight universe,
+pure-momentum, pure-value, and pure-quality. Unavailable evidence remains `MISSING`,
+`STALE`, `INVALID`, or `NOT_APPLICABLE`; it is never replaced by zero, cash, or
+SPY. The same frozen liquidity-sensitive cost policy applies to model and
+benchmark returns.
+
+The accepted Tactical v2.2 and Long Horizon v1.1 historical readiness runs
+both terminate `BLOCKED_BY_DATA` with a complete population of 55 `MISSING`, 2
+`NOT_APPLICABLE`, and 9 `EXCLUDED` securities. That terminal is the correct
+result until the missing historical decision-time evidence exists. It is not
+permission to reuse current revisions, drop missing securities, or tune the
+models against already observed outcomes.
+
+Prospective evidence is defined by
+[Forward Decision Snapshot v2](forward-decision-snapshot-v2.md) and
+[Forward Decision-Quality Validation v2](forward-decision-quality-validation-v2.md).
+Its immutable contracts cover 5-, 20-, 60-, 126-, and
+252-completed-session outcomes. The first real local snapshot handoff is
+sealed, but required benchmark evidence remains unavailable, so it is not
+prospective-ready and has no enrollment or matured outcome. Current quality
+therefore remains `INSUFFICIENT_EVIDENCE`.
 
 ## Metrics
 

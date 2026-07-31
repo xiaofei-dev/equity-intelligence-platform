@@ -1,0 +1,62 @@
+{
+  "artifactContentHash": "sha256:6f03ed3c092983d691ef8f32a71384ef329528b0a69a85e84579587901ee69d8",
+  "candidateRules": [
+    {
+      "benchmarkKind": "PURE_VALUE",
+      "denominatorOperand": "enterprise_value",
+      "direction": "DESCENDING",
+      "formula": "Highlights.EBITDA / Valuation.EnterpriseValue",
+      "numeratorOperand": "ebitda_ttm",
+      "providerPaths": [
+        "Highlights.EBITDA",
+        "Valuation.EnterpriseValue"
+      ],
+      "ruleVersion": "PURE-VALUE-EBITDA-TO-EV-v2.2.0",
+      "validityRules": [
+        "ENTERPRISE_VALUE_STRICTLY_POSITIVE",
+        "NEGATIVE_EBITDA_REMAINS_VALID_NEGATIVE_YIELD",
+        "SAME_CURRENCY_UNIT_AND_CUTOFF",
+        "CURRENT_SNAPSHOT_ONLY"
+      ]
+    },
+    {
+      "benchmarkKind": "PURE_QUALITY",
+      "denominatorOperand": "revenue_ttm",
+      "direction": "DESCENDING",
+      "formula": "Highlights.GrossProfitTTM / Highlights.RevenueTTM",
+      "numeratorOperand": "gross_profit_ttm",
+      "providerPaths": [
+        "Highlights.GrossProfitTTM",
+        "Highlights.RevenueTTM"
+      ],
+      "ruleVersion": "PURE-QUALITY-GROSS-MARGIN-v2.2.0",
+      "validityRules": [
+        "REVENUE_TTM_STRICTLY_POSITIVE",
+        "NEGATIVE_GROSS_PROFIT_REMAINS_VALID",
+        "SAME_CURRENCY_UNIT_AND_CUTOFF",
+        "CURRENT_SNAPSHOT_ONLY"
+      ]
+    }
+  ],
+  "evaluatedPopulationChanged": false,
+  "evaluatedPopulationSecurityCount": 66,
+  "includedPopulationCount": 55,
+  "interpolation": false,
+  "minimumEligibleCount": 20,
+  "minimumIncludedCoverage": "0.80",
+  "minimumRequiredOf55": 44,
+  "missingOrStaleOrConflictingInputs": "EXCLUDE_AND_COUNT_IN_COVERAGE",
+  "objectiveRatingScoreDependency": false,
+  "priceLiquidityAndCostPolicy": "UNCHANGED_FROM_FORWARD_BENCHMARK_v2.1",
+  "rawNumericValuesGitSafe": false,
+  "resultOrOutcomeObserved": false,
+  "ruleFrozenAt": "2026-07-30T03:55:37.171620Z",
+  "schemaVersion": "FORWARD-BENCHMARK-CANDIDATE-POLICY-v2.2.0",
+  "selectedCountAtFullCoverage": 11,
+  "selectedCountAtMinimumCoverage": 9,
+  "selectionCountFormula": "CEILING(VALID_CANDIDATE_COUNT * 0.20)",
+  "selectionFraction": "0.20",
+  "selectionRule": "TOP_QUINTILE_OF_VALID_CANDIDATES_ONLY",
+  "tieBreak": "PUBLIC_SECURITY_ID_ASCENDING",
+  "winsorization": false
+}

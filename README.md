@@ -69,18 +69,31 @@ Performance tracking and strategy evaluation
 - [Current Project State](docs/current-state.md)
 - [MVP Scope](docs/mvp-scope.md)
 - [System Architecture](docs/architecture.md)
+- [Dual-System Architecture Contract v1](docs/dual-system-architecture-contract-v1.md)
+- [Unified Market Data and Evidence Foundation v1](docs/unified-market-data-evidence-foundation-v1.md)
 - [Database Deployment v1](docs/database-deployment-v1.md)
 - [Local Development](docs/development.md)
 - [Investment Methodology](docs/investment-methodology.md)
-- [Tactical Signal v2.1 Methodology](docs/tactical-signal-v2-1-methodology-2026-07-28.md)
-- [Long-Horizon Research Rating v1](docs/long-horizon-research-rating-v1-2026-07-28.md)
+- [Model Validation Master Plan v2](docs/model-validation-master-plan-v2.md)
+- [Tactical Signal v2.2 Methodology](docs/tactical-signal-v2-2-methodology-2026-07-29.md)
+- [Long-Horizon Research Rating v1.1](docs/long-horizon-research-rating-v1-1.md)
+- [Historical Walk-Forward Validation v2](docs/historical-walk-forward-validation-v2.md)
+- [Practical Tactical v2.2 Tier-1 Backtest](docs/practical-tactical-v2-2-backtest-v1.md)
+- [Practical Long Horizon v1.1 Tier-1 Backtest](docs/practical-long-horizon-v1-1-tier1-backtest-2026-07-30.md)
+- [Forward Decision Snapshot v2](docs/forward-decision-snapshot-v2.md)
+- [Forward Decision-Quality Validation v2](docs/forward-decision-quality-validation-v2.md)
+- [End-to-End Validation Completion Gap Audit](docs/end-to-end-validation-completion-gap-audit-2026-07-29.md)
+- [Forward Validation v2 Persistence Decision](docs/forward-validation-v2-persistence-decision.md)
 - [Analytics Model Interface v1](docs/analytics-model-interface-v1.md)
 - [Market Intelligence and Screening v1](docs/market-intelligence-screening-v1.md)
 - [Market Intelligence Vertical Slice v1 Closeout](docs/market-intelligence-vertical-slice-v1-closeout-2026-07-28.md)
+- [Forward Prospective Enrollment v1 Closeout](docs/forward-prospective-enrollment-v1-closeout-2026-07-28.md)
 - [Forward Decision-Quality Final Offline Acceptance](docs/forward-decision-quality-final-acceptance-2026-07-28.md)
 - [Analytics Stage Closeout](docs/analytics-stage-closeout-2026-07-28.md)
 - [AI Analysis](docs/ai-analysis.md)
 - [Data and Backtesting](docs/data-and-backtesting.md)
+- [Licensed Market Data Publication Policy](docs/licensed-market-data-publication-policy.md)
+- [Historical Decision-Quality Validation v1](docs/historical-decision-quality-validation-v1.md)
 - [Market Intelligence Data Model v1](docs/market-intelligence-data-model-v1.md)
 - [Market Intelligence Screening v1 Persistence Mapping](docs/market-intelligence-screening-persistence-v1.md)
 - [Quantitative Screening Design](docs/quantitative-screening.md)
@@ -97,17 +110,43 @@ Performance tracking and strategy evaluation
 ## Current Status
 
 Phase 0 and the local Market Intelligence end-to-end engineering slice are
-implemented through PostgreSQL migration V17. The complete local stack runs
-through Docker Compose. Spring Boot now publishes the versioned Market
+implemented through their PostgreSQL V17 boundary. The append-only migration
+chain continues with the V18-V21 Forward DQV and portfolio lineage and the V22
+Unified Market Data and Evidence Foundation. The complete local stack runs
+through Docker Compose. Spring Boot publishes the versioned Market
 Intelligence API, and Next.js provides the `/research` screening and durable
 profile workspace.
+
+Task 1 Stage 3A carries an exact, curated V18-V21 Forward/portfolio migration
+lineage from reachable commit `87e2a88`; its PostgreSQL 17 matrix is accepted.
+V21 remains legacy and unwired: its `CORE`/`TACTICAL` lanes are not the
+accepted `LONG_TERM_CORE` and `QUANT_TRADING` sleeves. Stage 3B adds the
+append-only V22 Unified Market Data and Evidence Foundation successor with
+durable identity, completed-session, lineage, canonical evidence, selector,
+and specialized-model applicability persistence. V22 does not reinterpret or
+wire V21. The controller accepted its exact PostgreSQL 17 migration matrix
+and fresh-database typed Python round trips.
+
+Migration-free Stage 3C adds internal-only FastAPI selection/readback and
+model-applicability projections plus an offline provider-adapter refresh
+coordinator. It reuses the existing lease, journal, checkpoint, and resume
+controls and performs no provider fetch at service startup. No public Spring
+API is replaced. Task 1 is accepted: the final adapter module passed 33 tests
+and Ruff, and all three typed Python/PostgreSQL integration tests passed on a
+fresh disposable PostgreSQL 17 database migrated from V1 to V22. This is
+bounded test evidence, not a business-database deployment or provider run.
+
+V23 is deferred for the MVP. Governed raw-payload deletion remains
+unimplemented because V22 lacks retention-policy, deadline/jurisdiction,
+legal-hold, disposition-event, proof, and chain-cardinality state. No V23
+migration or deletion operation has been created.
 
 The current analytics foundation includes:
 
 - provider-neutral, point-in-time-aware market and fundamental evidence
   boundaries;
-- deterministic `LONG-HORIZON-RESEARCH-v1.0.0` and
-  `TACTICAL-SIGNAL-v2.1.0` models behind one stable versioned interface;
+- deterministic `LONG-HORIZON-RESEARCH-v1.1.0` and
+  `TACTICAL-SIGNAL-v2.2.0` models with accepted immutable freeze records;
 - a sealed current-decision-only `QC-v1.0.0` snapshot for 136 securities;
 - daily tactical one-week, one-month, and three-month opportunity states with
   separate entry value, extension risk, actionability, expiry, and risk caps;
@@ -134,9 +173,46 @@ fundamental scope. ACN retained 259 valid completed sessions while its malformed
 make a security scoreable; formula readiness and explicit missing-data states
 remain separate gates.
 
-Forward Validation is operationally ready but not a performance result. No
+The existing V11 Forward bridge is operationally ready but not a performance
+result. No
 prospective signal has yet matured through the 5-, 20-, or 60-trading-day
-horizon, and `statisticalEdgeProven` remains `NOT_ESTABLISHED`.
+horizon, and `statisticalEdgeProven` remains `NOT_ESTABLISHED`. The typed
+V17-to-V11 bridge has recorded an idempotent `NO_ELIGIBLE_SIGNALS` attempt for
+the current screen; it created no signal or outcome row. The 12-month-plus
+model remains context only.
+
+The strict historical terminals remain blocked where complete PIT inputs
+cannot be reconstructed. A separate Practical Tier-1 current-universe
+retrospective now executes the frozen models instead of stopping at engineering
+readiness. Tactical v2.2 is unsupported at five sessions, mixed at 20
+sessions, and modestly directionally positive at 60 sessions. Long Horizon
+v1.1 shows modest one-year SPY-relative association for its Business Quality
+top cohort, but not validated score ordering; Security Attractiveness remains
+unvalidated. These claims retain survivorship and provider-revision
+limitations and are deliberately weaker than repeatable excess-return proof.
+
+The local Forward v2 infrastructure now includes the append-only V18 outcome
+ledger, the accepted V19/v2.1.1 chronology boundary, the V20 benchmark-outcome
+successor, the offline Gate H maturity evaluator, a strict
+maturity-to-statistics adapter, and the frozen Forward DQV statistics engine.
+These are offline engineering capabilities, not a performance result. The
+target post-close session has not completed, the real 66-security inputs and
+six-family controlled benchmark ledger are not sealed, no prospective
+v2.1.1 enrollment or naturally matured outcome exists, and no statistics run
+has occurred. The authoritative prospective Gate Z conclusion is
+`CRITICAL_BLOCKED_NOT_VALIDATED`; neither model is Forward-validated.
+
+The separately named
+[Dual-System Architecture Contract v1](docs/dual-system-architecture-contract-v1.md)
+is now frozen. It defines independent Fundamental Value and Quantitative
+Trading systems, isolated `LONG_TERM_CORE` and `QUANT_TRADING` sleeves, and a
+Unified Portfolio/Risk View that never averages their scores. This is a
+contract milestone. Completed Task 1 adds the deterministic provider-neutral
+evidence-selection kernel, canonical Git-safe fixtures for prices, actions,
+fundamentals, classifications, benchmarks, and liquidity, V22 persistence,
+and internal-only FastAPI selection, readback, applicability, and offline
+refresh coordination. It does not change scoring behavior, expose a public
+Spring selector API, or enable brokerage execution.
 
 The local engineering path is described in the
 [Vertical Slice closeout](docs/market-intelligence-vertical-slice-v1-closeout-2026-07-28.md).

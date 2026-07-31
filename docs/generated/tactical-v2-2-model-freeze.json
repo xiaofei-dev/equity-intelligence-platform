@@ -1,0 +1,233 @@
+{
+  "artifactType": "MODEL_FREEZE",
+  "schemaVersion": "MODEL-FREEZE-ARTIFACT-v1.0.0",
+  "generatorVersion": "MODEL-FREEZE-GENERATOR-v1.0.0",
+  "modelTrack": "TACTICAL",
+  "modelVersion": "TACTICAL-SIGNAL-v2.2.0",
+  "freezeRecord": {
+    "model_version": "TACTICAL-SIGNAL-v2.2.0",
+    "validation_protocol_version": "HISTORICAL-VALIDATION-PROTOCOL-v2.0.0",
+    "frozen_at": "2026-07-30T00:45:00+00:00",
+    "observed_evidence_cutoff": "2026-07-29T23:59:59+00:00",
+    "formulas_hash": "70EF6683140D7CC7EA5A86AD7D62E84FB8C1B4016138669B5B5123DDE66E8E03",
+    "weights_hash": "6C26E9095493A2A9DC4BE1CBD1AA981ABA2FA9B3A8F7F93EBFB88D50567E17D9",
+    "input_schema_hash": "61A82F1EE2633813AC0A0A054C52D1CA9BCCA55ABE4716C8B65A857A414FC6F5",
+    "applicability_hash": "E0E1806AF20D363F5DBF9A40F3C02E4A672DC8A7087F606ABBDBB2196CADBA06",
+    "missing_data_policy_hash": "160330BDF6601105651838C6977B4BE0B03E53D000FE6283503D36222C947B6D",
+    "benchmark_contract_hash": "F217F27E424BD75422F2402153FDB4498DB28AB2CD4A8AACA426382A11B23438",
+    "cost_model_hash": "B07F5C5AD4B2F13D0C81A48B2EAB4E722DA9B0E43143E013BEDCC155FABA96BB",
+    "universe_hash": "2B4AA32F7FC4F8360B6E45B025D35A5046B9416BEB47873870084993D069F1C6",
+    "sampling_hash": "56060D5D455F5CD59509D4CF250595D8F4E973FDCE43E744E2B78EE4891A460D",
+    "acceptance_threshold_hash": "726ACA576B1A67939C26BE25CAB21EE6F6AE78A74361C1E3118E85D52CB2DD3D",
+    "source_artifact_hashes": [
+      "24BC4F64A417B9A3569FD7C9A9770FBA3A992C5784D2D25A3779779DFE74B496",
+      "847760846D7932DCC9E15C9B74DAAE4AE6895019FBCB8475D8E25FCADFB60345",
+      "76855B9883B77405532C1FA1518ECA4014E46E34B9B962DE39C9BDFDF4AD5119",
+      "9242B6FD502F5468ED3CD0FD79606BB430A26243DC276BC7925878B20F35848A",
+      "03E26D230D5C37C5FC233FDA4439C8F42A0FE1E364E4DB62BCB83EF57BAE5D92",
+      "A6B5030437258E2E64DFEAD2892ACEC7A57BA68E16F875611206D1C2F0CDBCC0",
+      "45D4DBDD0E7A643658B160AE5B044C15A4A07113DC33382A3DE87DDFF3D72F0F",
+      "4B1F2B65EB17190C54DE9BF784777BAE14575D78A7DADE90B17AB1F5639E9A72",
+      "EF6829121B6B3E491DC9089A4968D85113EDE71A8AD78381D3F7A1742431C83A",
+      "C942DBBE201C08F19323113E8813C70A9CAB7715D5C798849C504B4FA98AF310",
+      "E322AC57C00BB4018AC883A2F0EF3461299D7D97725B0791C75EA01846D08E27",
+      "90A93563A9B4B087FF71FF33074D4D16C160476450E423E02A20976AAB298880"
+    ],
+    "random_seed": 20260729,
+    "maximum_horizon_sessions": 60,
+    "purge_sessions": 60,
+    "embargo_sessions": 60,
+    "version": "MODEL-VALIDATION-GOVERNANCE-v1.0.0"
+  },
+  "freezeHash": "D6E3EDB1160856ADE700C37D42A4C9E2CDDA3B88A4080DBC8ED73354B4C5BF99",
+  "contracts": {
+    "applicability": {
+      "decisionDomain": "SHORT_TERM_SPECULATION",
+      "cadence": "COMPLETED_DAILY_SESSION",
+      "horizonsCompletedSessions": [
+        5,
+        20,
+        60
+      ],
+      "effectiveFrom": "NEXT_COMPLETED_SESSION_OPEN",
+      "signalTtlCompletedSessions": 1,
+      "requiredEvidence": [
+        "securityAdjustedOHLCV",
+        "marketBenchmarkAdjustedOHLCV",
+        "sectorBenchmarkAdjustedOHLCV",
+        "deterministicEventRisk"
+      ],
+      "automaticTradingAuthorized": false
+    },
+    "missingDataPolicy": {
+      "states": [
+        "VALID",
+        "MISSING",
+        "STALE",
+        "INVALID",
+        "NOT_APPLICABLE"
+      ],
+      "neutralSubstitutionAllowed": false,
+      "requiredInvalidEvidenceOutcome": "INSUFFICIENT_DATA",
+      "eventUncertaintyActionabilityCeiling": "WATCH_ONLY"
+    },
+    "benchmark": {
+      "version": "FORMAL-BENCHMARK-CONTRACT-v1.0.0",
+      "required": [
+        "SPY",
+        "SECTOR",
+        "EQUAL_WEIGHT",
+        "PURE_MOMENTUM",
+        "PURE_VALUE",
+        "PURE_QUALITY"
+      ],
+      "datedEvidenceHashRequired": true,
+      "sameExecutionAndCostPolicyRequired": true,
+      "formalGateStopsOnUnavailableBenchmark": true
+    },
+    "cost": {
+      "version": "LIQUIDITY-SENSITIVE-COST-v1.0.0",
+      "fixedRoundTripBps": "2",
+      "baseSlippageOneWayBps": "1",
+      "impactBpsAtFullParticipation": "25",
+      "maximumImpactOneWayBps": "50",
+      "averageDailyDollarVolumeRequired": true,
+      "costsAppliedBeforeAcceptance": true
+    },
+    "universe": {
+      "version": "COMPLETE-FROZEN-POPULATION-v1.0.0",
+      "identity": "STABLE_PUBLIC_SECURITY_ID",
+      "completePopulationRequiredAtEveryDecision": true,
+      "historicalMembershipRequiredForHistoricalValidation": true,
+      "prospectiveFrozenUniverseAllowed": true,
+      "currentUniverseRetrospectiveRole": "DEVELOPMENT_OBSERVED",
+      "terminalStatesRequired": [
+        "ASSESSED",
+        "MISSING",
+        "INVALID",
+        "STALE",
+        "NOT_APPLICABLE",
+        "SPECIALIZED_MODEL_REQUIRED",
+        "EXCLUDED"
+      ],
+      "survivorshipSubstitutionAllowed": false
+    },
+    "sampling": {
+      "version": "PURGED-NESTED-WALK-FORWARD-v1.0.0",
+      "roles": [
+        "DEVELOPMENT_OBSERVED",
+        "SEALED_VALIDATION",
+        "WALK_FORWARD_OUTER_FOLD",
+        "PROSPECTIVE_FORWARD"
+      ],
+      "chronologicalOuterFolds": true,
+      "nestedDevelopmentSelection": true,
+      "ordinaryIidBootstrapFormalGateAllowed": false,
+      "formalResampling": "BLOCK_BOOTSTRAP",
+      "overlappingOutcomesRole": "OVERLAPPING_DIAGNOSTIC",
+      "randomSeed": 20260729,
+      "maximumHorizonSessions": 60,
+      "purgeSessions": 60,
+      "embargoSessions": 60
+    },
+    "acceptance": {
+      "target": "TACTICAL_DECISION_QUALITY",
+      "aggregateModelScoreIsReturnForecast": false,
+      "minimumEligibleDecisions": 100,
+      "minimumCoverageRatio": "0.80",
+      "requiredNetComparisons": [
+        "SPY",
+        "SECTOR",
+        "EQUAL_WEIGHT",
+        "PURE_MOMENTUM"
+      ],
+      "requiredPositiveLowerConfidenceBounds": [
+        "TOP_MINUS_BOTTOM",
+        "TOP_VERSUS_BENCHMARK"
+      ],
+      "maximumDownsideCapture": "1.00",
+      "drawdownMustNotBeWorseThanBenchmark": true,
+      "regimeAndSectorBreakdownsRequired": true
+    }
+  },
+  "sourceFiles": [
+    {
+      "path": "analysis-python/src/equity_analysis/tactical/contracts_v22.py",
+      "fileSha256": "24BC4F64A417B9A3569FD7C9A9770FBA3A992C5784D2D25A3779779DFE74B496"
+    },
+    {
+      "path": "analysis-python/src/equity_analysis/tactical/features_v22.py",
+      "fileSha256": "847760846D7932DCC9E15C9B74DAAE4AE6895019FBCB8475D8E25FCADFB60345"
+    },
+    {
+      "path": "analysis-python/src/equity_analysis/tactical/signal_v22.py",
+      "fileSha256": "76855B9883B77405532C1FA1518ECA4014E46E34B9B962DE39C9BDFDF4AD5119"
+    },
+    {
+      "path": "docs/tactical-signal-v2-2-methodology-2026-07-29.md",
+      "fileSha256": "9242B6FD502F5468ED3CD0FD79606BB430A26243DC276BC7925878B20F35848A"
+    },
+    {
+      "path": "analysis-python/src/equity_analysis/historical_validation/governance_v1.py",
+      "fileSha256": "03E26D230D5C37C5FC233FDA4439C8F42A0FE1E364E4DB62BCB83EF57BAE5D92"
+    },
+    {
+      "path": "analysis-python/src/equity_analysis/historical_validation/protocol_v2.py",
+      "fileSha256": "A6B5030437258E2E64DFEAD2892ACEC7A57BA68E16F875611206D1C2F0CDBCC0"
+    },
+    {
+      "path": "analysis-python/src/equity_analysis/historical_validation/walk_forward_v2.py",
+      "fileSha256": "45D4DBDD0E7A643658B160AE5B044C15A4A07113DC33382A3DE87DDFF3D72F0F"
+    },
+    {
+      "path": "docs/model-validation-governance-v1.md",
+      "fileSha256": "4B1F2B65EB17190C54DE9BF784777BAE14575D78A7DADE90B17AB1F5639E9A72"
+    },
+    {
+      "path": "docs/historical-walk-forward-validation-v2.md",
+      "fileSha256": "EF6829121B6B3E491DC9089A4968D85113EDE71A8AD78381D3F7A1742431C83A"
+    },
+    {
+      "path": "docs/generated/model-validation-governance-v1.json",
+      "fileSha256": "C942DBBE201C08F19323113E8813C70A9CAB7715D5C798849C504B4FA98AF310"
+    },
+    {
+      "path": "docs/generated/historical-yahoo-price-cache-20260729T-HISTORICAL-V1-R2-manifest.json",
+      "fileSha256": "E322AC57C00BB4018AC883A2F0EF3461299D7D97725B0791C75EA01846D08E27"
+    },
+    {
+      "path": "docs/generated/tactical-historical-stratified-validation-v1-1-2026-07-29.json",
+      "fileSha256": "90A93563A9B4B087FF71FF33074D4D16C160476450E423E02A20976AAB298880"
+    }
+  ],
+  "freezeChronology": {
+    "observedEvidenceCutoff": "2026-07-29T23:59:59+00:00",
+    "sourceFinalizationObservedAt": "2026-07-30T00:40:54.609680+00:00",
+    "frozenAt": "2026-07-30T00:45:00+00:00",
+    "derivation": "The fixed UTC freeze time is the next five-minute boundary after the maximum bound-source mtime observed during initial generation.",
+    "generationChronologyChecked": true,
+    "stableVerificationUsesContentHashesNotCheckoutMtime": true
+  },
+  "observedHistoricalEvidence": {
+    "evaluationRole": "DEVELOPMENT_OBSERVED",
+    "observedEvidenceCutoff": "2026-07-29T23:59:59+00:00",
+    "untouchedHoldoutAvailable": false,
+    "artifacts": [
+      {
+        "path": "docs/generated/tactical-historical-stratified-validation-v1-1-2026-07-29.json",
+        "role": "DEVELOPMENT_OBSERVED",
+        "modelVersion": "TACTICAL-SIGNAL-v2.1.0",
+        "fileSha256": "90A93563A9B4B087FF71FF33074D4D16C160476450E423E02A20976AAB298880",
+        "untouchedHoldout": false
+      }
+    ],
+    "claimBoundary": "Observed retrospective evidence is diagnostic development evidence and cannot become an untouched holdout."
+  },
+  "execution": {
+    "networkRequestsExecuted": false,
+    "historicalScoringExecuted": false,
+    "forwardValidationExecuted": false,
+    "databaseMigrationExecuted": false
+  },
+  "artifactContentHash": "A596080CD7936A6881A38E759C597934DAE1125EC83026DF6DB0434F6FE31910"
+}

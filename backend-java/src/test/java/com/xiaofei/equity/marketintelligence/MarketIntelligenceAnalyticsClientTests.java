@@ -193,4 +193,74 @@ class MarketIntelligenceAnalyticsClientTests {
 					});
 		server.verify();
 	}
+
+	@Test
+	void readsDbBackedEligibilityRecoveryStatusWithCanonicalParameters() {
+		RestClient.Builder builder = RestClient.builder()
+			.baseUrl("http://analytics.test");
+		MockRestServiceServer server = MockRestServiceServer.bindTo(builder).build();
+		MarketIntelligenceAnalyticsClient client =
+				new MarketIntelligenceAnalyticsClient(builder.build());
+		Instant asOf = Instant.parse("2026-07-29T02:57:08.988871Z");
+		server.expect(once(), request -> {
+			assertThat(request.getMethod()).isEqualTo(HttpMethod.GET);
+			assertThat(request.getURI().getPath()).isEqualTo(
+					"/internal/v1/market-intelligence/"
+							+ "eligibility-recovery/status/latest");
+			assertThat(request.getURI().getQuery())
+				.contains(
+						"data_snapshot_id=" + SNAPSHOT_ID,
+						"universe_version=market-intelligence-closed-test-us-v1.0.0",
+						"as_of=2026-07-29T02:57:08.988871Z");
+			assertThat(request.getHeaders().get("X-Test-Identity")).isNull();
+		}).andRespond(withSuccess(
+				MarketIntelligenceContractTests.eligibilityResponseJson(),
+				MediaType.APPLICATION_JSON));
+
+		var response = client.getLatestEligibilityRecoveryStatus(
+				SNAPSHOT_ID,
+				"market-intelligence-closed-test-us-v1.0.0",
+				asOf);
+
+		assertThat(response.status().name()).isEqualTo("READY_FOR_CONFIRMATION");
+		assertThat(response.currentEligibleCount()).isEqualTo(6);
+		assertThat(response.blockerSummary()).hasSize(1);
+		server.verify();
+	}
+
+	@Test
+	void preservesAllowListedEligibilityConflictWithoutExposingDetails() {
+		RestClient.Builder builder = RestClient.builder()
+			.baseUrl("http://analytics.test");
+		MockRestServiceServer server = MockRestServiceServer.bindTo(builder).build();
+		MarketIntelligenceAnalyticsClient client =
+				new MarketIntelligenceAnalyticsClient(builder.build());
+		server.expect(once(), requestTo(
+					"http://analytics.test/internal/v1/market-intelligence/"
+							+ "eligibility-recovery/status/latest"
+							+ "?data_snapshot_id=" + SNAPSHOT_ID
+							+ "&universe_version=wrong"
+							+ "&as_of=2026-07-29T02:57:08Z"))
+			.andRespond(withStatus(HttpStatus.CONFLICT).body("""
+					{"detail":{
+					  "code":"ELIGIBILITY_RECOVERY_UNIVERSE_MISMATCH",
+					  "message":"provider payload C:/secret/raw.json"
+					}}
+					"""));
+
+		assertThatThrownBy(() -> client.getLatestEligibilityRecoveryStatus(
+				SNAPSHOT_ID,
+				"wrong",
+				Instant.parse("2026-07-29T02:57:08Z")))
+			.isInstanceOfSatisfying(
+					MarketIntelligenceGatewayException.class,
+					exception -> {
+						assertThat(exception.code())
+							.isEqualTo("ELIGIBILITY_RECOVERY_UNIVERSE_MISMATCH");
+						assertThat(exception.status()).isEqualTo(409);
+						assertThat(exception.getMessage())
+							.doesNotContain("provider", "secret", "raw.json");
+					});
+		server.verify();
+	}
 }

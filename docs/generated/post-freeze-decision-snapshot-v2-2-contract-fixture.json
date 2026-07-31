@@ -1,0 +1,1015 @@
+{
+  "aiNarrative": {
+    "mayAffectDeterministicFields": false,
+    "narrativeHash": null,
+    "schemaVersion": "POST-FREEZE-AI-BOUNDARY-v2.2.0",
+    "status": "NOT_EXECUTED"
+  },
+  "artifactContentHash": "sha256:427dbeb78aaa4d52c8b96f6fd5a72a0924d10765cbf15a43fe5f956534f7520b",
+  "artifactType": "POST_FREEZE_DECISION_SNAPSHOT_GIT_SAFE_MANIFEST",
+  "benchmarkEvidence": [
+    {
+      "benchmarkKind": "EQUAL_WEIGHT",
+      "completedSession": "2026-07-30",
+      "contractHash": "sha256:a4d429271836362b32813310bf8ea4ed08e2754d798197d10971f3411451ebf9",
+      "evidenceHash": null,
+      "reasonCodes": [
+        "OFFLINE_CONTRACT_FIXTURE_NO_CONSTRUCTION"
+      ],
+      "schemaVersion": "POST-FREEZE-BENCHMARK-EVIDENCE-v2.2.0",
+      "sourceBindingHash": "sha256:a83cb475cc5a9695076e08c25ce19ff73f971fcb44e9b04eb0c123360d27ab06",
+      "terminalState": "MISSING"
+    },
+    {
+      "benchmarkKind": "PURE_MOMENTUM",
+      "completedSession": "2026-07-30",
+      "contractHash": "sha256:97de2882d32e19df7c8a39893f39bfe9eb2b3df197113d729ae6d2bc6a1ef79c",
+      "evidenceHash": null,
+      "reasonCodes": [
+        "OFFLINE_CONTRACT_FIXTURE_NO_CONSTRUCTION"
+      ],
+      "schemaVersion": "POST-FREEZE-BENCHMARK-EVIDENCE-v2.2.0",
+      "sourceBindingHash": "sha256:ceb0a493747e31f6aec75138ecd419855659d256be52a0aded6ba1cac018ccc1",
+      "terminalState": "MISSING"
+    },
+    {
+      "benchmarkKind": "PURE_QUALITY",
+      "completedSession": "2026-07-30",
+      "contractHash": "sha256:ad9a4987c171b9f1e5a0cb0be07058824a026ff905c7a2a7b2eb48637bd42730",
+      "evidenceHash": null,
+      "reasonCodes": [
+        "OFFLINE_CONTRACT_FIXTURE_NO_CONSTRUCTION"
+      ],
+      "schemaVersion": "POST-FREEZE-BENCHMARK-EVIDENCE-v2.2.0",
+      "sourceBindingHash": "sha256:2609f8735d3f6fae1dd96a6a066b8676011efa72895b73356a43ecc04f271e8f",
+      "terminalState": "MISSING"
+    },
+    {
+      "benchmarkKind": "PURE_VALUE",
+      "completedSession": "2026-07-30",
+      "contractHash": "sha256:c1f53b7812db729a3bbe1bb3a2f8e135c1579c25a5a9e86ebf5054d725efc565",
+      "evidenceHash": null,
+      "reasonCodes": [
+        "OFFLINE_CONTRACT_FIXTURE_NO_CONSTRUCTION"
+      ],
+      "schemaVersion": "POST-FREEZE-BENCHMARK-EVIDENCE-v2.2.0",
+      "sourceBindingHash": "sha256:12507105970d058e737c3536a0c3ad53009331923b50241d8740db47624d2109",
+      "terminalState": "MISSING"
+    },
+    {
+      "benchmarkKind": "SECTOR",
+      "completedSession": "2026-07-30",
+      "contractHash": "sha256:93467629abebb1306de704ce004b1df9509d2ef4e422e3e51b8387298aeb74b0",
+      "evidenceHash": null,
+      "reasonCodes": [
+        "OFFLINE_CONTRACT_FIXTURE_NO_CONSTRUCTION"
+      ],
+      "schemaVersion": "POST-FREEZE-BENCHMARK-EVIDENCE-v2.2.0",
+      "sourceBindingHash": "sha256:a51f17f6cf3d24cac4e1d6368da7ba385208493a6d6632e7de0ed7be5855929b",
+      "terminalState": "MISSING"
+    },
+    {
+      "benchmarkKind": "SPY",
+      "completedSession": "2026-07-30",
+      "contractHash": "sha256:d00ae21fe77f5db4d33b8220bb8f04239e04d4a22aec89e479548baa50ff4677",
+      "evidenceHash": null,
+      "reasonCodes": [
+        "OFFLINE_CONTRACT_FIXTURE_NO_CONSTRUCTION"
+      ],
+      "schemaVersion": "POST-FREEZE-BENCHMARK-EVIDENCE-v2.2.0",
+      "sourceBindingHash": "sha256:070f0c2f9dc9d203804a2118958810216da3d7da533c9208baf56a6cc5dc0fed",
+      "terminalState": "MISSING"
+    }
+  ],
+  "completedSession": "2026-07-30",
+  "completedSessionPriceEvidence": {
+    "actionAdjustmentBindingHash": "sha256:a504fcfe8739e2cc496f20e43e12bea438c05ee03411ad73df7f2fc369d72889",
+    "evidenceHash": "sha256:cc5d5870fa65a275dec1e680fe7fb0533111eea24e254e3bde921e96a8403206",
+    "schemaVersion": "POST-FREEZE-PRICE-EVIDENCE-v2.2.0",
+    "sourceHashes": [
+      "sha256:c38081ddc654e3984aa70e8e3bfb1eabb3eb966c2b72d63a938dd20a06f835da",
+      "sha256:03356ed6f4c652aa33d6b1188f78b9ce651cdcca197911a36c74ec519895bdd0",
+      "sha256:7a498347fd2515e3f54d1c721e0e3446f6768fdbc22bbe90242e49b4ad00826d"
+    ]
+  },
+  "controlledSnapshotContentHash": "sha256:4d032a75cbf74541cd19c102437ee8c7ade84c7e8bad684e07241f909bb24c2a",
+  "costPolicyHash": "sha256:b07f5c5ad4b2f13d0c81a48b2eab4e722da9b0e43143e013bedcc155faba96bb",
+  "databaseWrites": 0,
+  "decisionCutoff": "2026-07-30T22:30:00Z",
+  "decisionRows": [
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "041b73ca-4c7a-56c4-8502-166daed08ebc",
+      "role": "PRIMARY",
+      "rowHash": "sha256:bb810e67f1bb6fd1005f8a3aaa49a07fc5941ec40fdbebcdcdf06619153bb81b",
+      "symbol": "ECL",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": "FINANCIAL",
+      "longHorizonTerminalState": "EXCLUDED",
+      "publicSecurityId": "0601b932-472b-5abb-a969-834b9d64d281",
+      "role": "EXCLUDED",
+      "rowHash": "sha256:d993baa79bb3ace453d07a363ceb5407929a03d34dab66e28f1a4a54ed464b9a",
+      "symbol": "PGR",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "EXCLUDED",
+        "ONE_WEEK": "EXCLUDED",
+        "THREE_MONTHS": "EXCLUDED"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "06297dd5-c150-5360-8cbb-c6341aa01dae",
+      "role": "PRIMARY",
+      "rowHash": "sha256:62f7305074f3b4674b59e1e1bb55e20db150fe2de5e9b9113089e42fc3b0e9f3",
+      "symbol": "META",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "07e78ba6-4943-581d-8588-29860f42df97",
+      "role": "PRIMARY",
+      "rowHash": "sha256:b8a21bbb96db38272d8384a18d6dc308809be93783dbdfc3485cc9f6f9c0ad00",
+      "symbol": "DE",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "0ad69d1c-35c0-54ec-bed9-db54a6f0bcd0",
+      "role": "PRIMARY",
+      "rowHash": "sha256:838fc93e3aeb271b7480f65dd240d79ccdde7d4cf7571c9a0af00d060b61a226",
+      "symbol": "TMO",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "0e9cc7f3-1e1a-5cc5-9093-a7233697986e",
+      "role": "PRIMARY",
+      "rowHash": "sha256:1072284f8bfa16e2de3f4d004203cfa15786fdb7bc55d0a1c9d7ac6923813e0b",
+      "symbol": "MCK",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "11a5a36e-831f-5550-a28b-7e6f6c817009",
+      "role": "PRIMARY",
+      "rowHash": "sha256:b3fd4e5376cda831a83a5529c6d54176e327f2a004e99201653c8b0a4d04d07a",
+      "symbol": "NKE",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "13371d22-6a81-5d12-a37c-f32b791c1639",
+      "role": "PRIMARY",
+      "rowHash": "sha256:7092b9ab7fe4fe3530ea020ed63f7d49fce8746505d3eed667b57164c060dc39",
+      "symbol": "PLAB",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": "DELISTED_SPECIAL_SITUATION",
+      "longHorizonTerminalState": "EXCLUDED",
+      "publicSecurityId": "166f2fd0-2895-5b6a-8fe7-6bebd60fc058",
+      "role": "EXCLUDED",
+      "rowHash": "sha256:f8908890b48c1cb2b51b9707fe672892c4473d3c106459c66f24481b5668e854",
+      "symbol": "TWTR",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "EXCLUDED",
+        "ONE_WEEK": "EXCLUDED",
+        "THREE_MONTHS": "EXCLUDED"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "179b3a37-5c71-545a-901c-508038ede4e9",
+      "role": "PRIMARY",
+      "rowHash": "sha256:af97d2e9f58ae5cac9f8afc8b39af3da3071066692fb77bda666f25c92f03c7e",
+      "symbol": "ACN",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "1b373ef1-1213-5215-9411-e683babcce3e",
+      "role": "PRIMARY",
+      "rowHash": "sha256:b6307f29ae99796185f0731c3b23d9676dd5c043e8e3b0f14a0b4db54d8fac1a",
+      "symbol": "APD",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "1d3e4e20-f35a-512d-a51d-71e218a1102a",
+      "role": "PRIMARY",
+      "rowHash": "sha256:7bf26250a2d81dc1956f09072cbce05f20c393cdcae006a85625349700850ddf",
+      "symbol": "ORCL",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "1fab244e-4f55-52c4-b79c-8773f2097ab9",
+      "role": "RESERVE",
+      "rowHash": "sha256:50706b2755ec635e23646674f78a50857f028920a6fbc57e7a2b02f2e1231b5b",
+      "symbol": "ELF",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "2020eb4c-563a-5293-8b52-e35b044772c0",
+      "role": "PRIMARY",
+      "rowHash": "sha256:a07e1bb17097c80d7cc74e3baf9c01052a07f64944b6780f8c62a58c26db0e1a",
+      "symbol": "CAT",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "2d4a0d15-2f0c-5c6e-acaf-10a647855fb1",
+      "role": "PRIMARY",
+      "rowHash": "sha256:9a3fc6836346fbdca7561b25adf45b4bbd196655a21ab83d48264364840dc577",
+      "symbol": "WMT",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "2ddf3749-9afb-5a0e-8325-bf6e7ecaccaf",
+      "role": "PRIMARY",
+      "rowHash": "sha256:80f3bf8786c106167a8605d14c46788378050e2fda7417248ac9de7b214c94ec",
+      "symbol": "NEE",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "2ec39042-6cbf-53d0-a121-03e4dd705cc0",
+      "role": "RESERVE",
+      "rowHash": "sha256:cc8f0243bda3e51426de5207084211d6c0971e8e890a4364b8a9a47e03b5ef8e",
+      "symbol": "EXPO",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "2f57cfe5-52f7-5afc-beb5-3bc1564710a0",
+      "role": "PRIMARY",
+      "rowHash": "sha256:35b60575002be2ecc88528861ee32e5a57a4c4b541609f67d48103b77a713147",
+      "symbol": "CROX",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "3126a093-d76e-552c-9b40-bd6e37f2d0f5",
+      "role": "PRIMARY",
+      "rowHash": "sha256:f51e509642c6d563bdd9200da8d151f31ed9f0d0719dcc9160bfa405f04d6e7e",
+      "symbol": "ADP",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "347e531f-97ea-51b2-8ca6-aaaa878f6407",
+      "role": "PRIMARY",
+      "rowHash": "sha256:d636f101e04b8335081bdf3db56d50ab42b61074fe2474be794a58e9f831689b",
+      "symbol": "KO",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "34ad83b5-4b28-5af8-a21b-20c3aa837c2f",
+      "role": "PRIMARY",
+      "rowHash": "sha256:c15417365b567bc52424f57afc684e1d8b7f74e219ba99ad5fa6797ac7ff9bdb",
+      "symbol": "LIN",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "37c45c45-1973-5ca0-a81a-a65cf45359a2",
+      "role": "PRIMARY",
+      "rowHash": "sha256:c70ac5c1ff976182ea54170efb5fa1757d2bf0b43d9a9bed55114407d258430c",
+      "symbol": "GOOGL",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": "FINANCIAL",
+      "longHorizonTerminalState": "EXCLUDED",
+      "publicSecurityId": "3f94be03-3479-54a4-aec6-3fe3a4f3845a",
+      "role": "EXCLUDED",
+      "rowHash": "sha256:dec095766ff297428a673cc40819bbf9435504e3daaefdba4c63f97abf18819a",
+      "symbol": "JPM",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "EXCLUDED",
+        "ONE_WEEK": "EXCLUDED",
+        "THREE_MONTHS": "EXCLUDED"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "426c12ec-91f8-55c9-85fb-76a55a0fd3ed",
+      "role": "PRIMARY",
+      "rowHash": "sha256:b00f9e6e139590554b06635d4f85cccc5f2b7b18f5ed4659d44390c86e6930e2",
+      "symbol": "AMZN",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "42b3f426-7956-53fa-b0e9-706c25fb808d",
+      "role": "PRIMARY",
+      "rowHash": "sha256:6c455999b2d1297ad1d4d0295c0ef21ff056d2e002bae2eec683bbdceaa2c157",
+      "symbol": "LOW",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "48919d38-e65c-55d7-a910-1beda2cc09fe",
+      "role": "PRIMARY",
+      "rowHash": "sha256:8c450031e7600819257d40c281b00a13bb9e5721aa2169a48f6728303b52b146",
+      "symbol": "SYK",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": "FINANCIAL",
+      "longHorizonTerminalState": "EXCLUDED",
+      "publicSecurityId": "4caaacbd-870a-59ed-b27d-d6af478af0fb",
+      "role": "EXCLUDED",
+      "rowHash": "sha256:ce00a73eedde3c47919f4fba2d5425859e93aaf21428971ad56322823de1ff8f",
+      "symbol": "NBN",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "EXCLUDED",
+        "ONE_WEEK": "EXCLUDED",
+        "THREE_MONTHS": "EXCLUDED"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "5148f419-992c-5470-ba14-b7d612193b92",
+      "role": "PRIMARY",
+      "rowHash": "sha256:4ed4ea62d422b2f2293bbdde1ce87fcf0fc628ce23b0dede52c1d02cc0ae4acc",
+      "symbol": "HON",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "529b9520-ffb4-55d3-87dc-ef66ad8811f9",
+      "role": "PRIMARY",
+      "rowHash": "sha256:1c4cdf9da4e39a02d47a3285d9bed1c0a98ba6e2ed3c38b4258d4fec808650d2",
+      "symbol": "PEP",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "580cbcd9-264d-51f4-bbdc-cae9116fa05d",
+      "role": "PRIMARY",
+      "rowHash": "sha256:f6f894d729d79e1ebd81c3ecbea1c306cdcd45c6119cb7dbb5985d71a1ff0305",
+      "symbol": "NVDA",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "62d95825-6ce5-5184-bf7a-692777a3e328",
+      "role": "PRIMARY",
+      "rowHash": "sha256:3129607b71727485c23aabdcba4e638df3504323f5e41150c279308be94ec029",
+      "symbol": "DIS",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "640f3d4e-7841-567b-b8aa-163c73d20567",
+      "role": "PRIMARY",
+      "rowHash": "sha256:741c42ba97ae17104c4f53aa3a77527701fe7ec516a64c0e4d7619091737a466",
+      "symbol": "OLED",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": "SPECIAL_SITUATION",
+      "longHorizonTerminalState": "EXCLUDED",
+      "publicSecurityId": "69692f09-d399-5486-9332-1d50fd438275",
+      "role": "EXCLUDED",
+      "rowHash": "sha256:1cebd0bd0d75dcfe41a780f04e726b103ca70bb1373cae8915b685a1b5700837",
+      "symbol": "GE",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "EXCLUDED",
+        "ONE_WEEK": "EXCLUDED",
+        "THREE_MONTHS": "EXCLUDED"
+      }
+    },
+    {
+      "exclusionReason": "BIOTECHNOLOGY",
+      "longHorizonTerminalState": "EXCLUDED",
+      "publicSecurityId": "748396c9-9ad1-5335-8cb3-c83bc7ad4be4",
+      "role": "EXCLUDED",
+      "rowHash": "sha256:5848dceac91c4a0b703d5e0e16aef0ec8b13803e62a3fef235da182b78d998b0",
+      "symbol": "MRNA",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "EXCLUDED",
+        "ONE_WEEK": "EXCLUDED",
+        "THREE_MONTHS": "EXCLUDED"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "NOT_APPLICABLE",
+      "publicSecurityId": "78578a05-4d92-5cb6-afd7-6a72f157ae05",
+      "role": "REFERENCE_ONLY",
+      "rowHash": "sha256:82722cbe206bfac521648cad5388b138f02f5bdca2d7179d5757d5832169c5e2",
+      "symbol": "XLK",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "NOT_APPLICABLE",
+        "ONE_WEEK": "NOT_APPLICABLE",
+        "THREE_MONTHS": "NOT_APPLICABLE"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "7d091a87-f1c3-546a-adee-3e69ff9daeb1",
+      "role": "PRIMARY",
+      "rowHash": "sha256:49bc20ee7abc65c55aa2930bd129381c1132f28080ce9f9cba091bf58a343af2",
+      "symbol": "CL",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "8916acf0-b2ce-55ba-a1bf-d323132b744a",
+      "role": "RESERVE",
+      "rowHash": "sha256:7df8464725d802a85c180ebb3d0504905d2f1ba908700b95530c68113f0dbada",
+      "symbol": "FIX",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "8f5d16c8-8417-5374-9fd4-5aa90e1430f5",
+      "role": "PRIMARY",
+      "rowHash": "sha256:356b258dab06d0175feb220c84f87ac440f589ec63c3547d5636285ac2341296",
+      "symbol": "IBM",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "920d82bc-d5f6-52d9-8f79-4ce539d3481d",
+      "role": "PRIMARY",
+      "rowHash": "sha256:50950a79a6e4377c70495cbcb9a904b198c9de06fc498a1db456cfeab7330f16",
+      "symbol": "AVGO",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "a26d692c-90b9-5207-894f-cea19e46cfa4",
+      "role": "PRIMARY",
+      "rowHash": "sha256:dde3affb39de9c743bbbf1b5e254b4a0ec30ac523fad4017e9bb62db269d44c0",
+      "symbol": "SHW",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "a29d6c6c-dede-5e1d-a8cd-ad174e88dc4d",
+      "role": "PRIMARY",
+      "rowHash": "sha256:df6972c3a10fa85acdc8baa1b21a7dedaa322bb77f9d4c166f22e7bcb5abad10",
+      "symbol": "PG",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "a908303b-63ee-55e2-ac33-7b1625c7ab33",
+      "role": "PRIMARY",
+      "rowHash": "sha256:06bc4ae8797edfb22dd108fa9c6be7e85f57669adddc0eb743ab6a6dd2b5dc60",
+      "symbol": "MCD",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": "REIT",
+      "longHorizonTerminalState": "EXCLUDED",
+      "publicSecurityId": "b294a8ac-4a79-59b4-bac0-2ce343b0b8f9",
+      "role": "EXCLUDED",
+      "rowHash": "sha256:9c021a9708996a38519ac0613de8112512f111e8367fff053b416a2b60b5e86b",
+      "symbol": "O",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "EXCLUDED",
+        "ONE_WEEK": "EXCLUDED",
+        "THREE_MONTHS": "EXCLUDED"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "b649ccea-1e7f-5a90-9a07-3b08614ff51e",
+      "role": "PRIMARY",
+      "rowHash": "sha256:be7d163cd42f68d1e5af59d29e0b3e0eac8483490bcd866ddc07d8444f319d90",
+      "symbol": "TGT",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "b8deed89-848c-56a5-8323-80ed14b62215",
+      "role": "RESERVE",
+      "rowHash": "sha256:c3cbf06f6acffacf830d242499a0cc6396f727bb77ef5957d18c43341d62946e",
+      "symbol": "UFPI",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "b8e66b25-90e2-55f8-95bf-8a6135af8e3f",
+      "role": "PRIMARY",
+      "rowHash": "sha256:0404deb02e14b7d7ed8574cae7dcc1634cd45b06528125aa442a716f42cdd293",
+      "symbol": "DUK",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": "RESOURCE",
+      "longHorizonTerminalState": "EXCLUDED",
+      "publicSecurityId": "c04f9fd4-7377-5c12-8f7c-feaa29258ec7",
+      "role": "EXCLUDED",
+      "rowHash": "sha256:f01cdd3d1d15d15cf0bb542aada38e67d2eea9bc501b107a10d73bd359d9d05c",
+      "symbol": "XOM",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "EXCLUDED",
+        "ONE_WEEK": "EXCLUDED",
+        "THREE_MONTHS": "EXCLUDED"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "c0d54251-ff4c-52d6-aba4-274471b471a9",
+      "role": "RESERVE",
+      "rowHash": "sha256:0ba25ae2e6f961f0cf3c7de9b10dc9b12a473b7713bc31cf1e037d8f669752aa",
+      "symbol": "SAIA",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "c12a95ce-5e86-5520-8c33-5f8bc6605dd7",
+      "role": "PRIMARY",
+      "rowHash": "sha256:a5b84ecb60f19daf04260ce7f2d36355d6922299def1b1428a095bb3eaf7a129",
+      "symbol": "JNJ",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": "EMERGING_GROWTH",
+      "longHorizonTerminalState": "EXCLUDED",
+      "publicSecurityId": "c6b35887-cc54-51d0-bf27-fe29e555cb8c",
+      "role": "EXCLUDED",
+      "rowHash": "sha256:6923ac4f687b1c18bcc9691e7a43fcaca2cf42d69710401ff221e60f2e45df23",
+      "symbol": "LCID",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "EXCLUDED",
+        "ONE_WEEK": "EXCLUDED",
+        "THREE_MONTHS": "EXCLUDED"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "c6e9c6a3-b6a0-5e57-b0be-a104bb0c4a5a",
+      "role": "PRIMARY",
+      "rowHash": "sha256:8bf72e65cbf793617dff9cdd921f4a06abc2956b7d468135d8c83d06aa8d983c",
+      "symbol": "CSCO",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "c84db089-efaf-5597-a44a-892bef95fd87",
+      "role": "PRIMARY",
+      "rowHash": "sha256:294e3a736a8a621163be12e7879357f2403c07c1b6a6288547db56494ad0f65d",
+      "symbol": "MDT",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "c919870a-589c-5744-9077-1aaf3eb09c35",
+      "role": "PRIMARY",
+      "rowHash": "sha256:1ed08e6db5730a769751cf8793a9be4b16ba198c76d86580cb4cb5ed4eaf1917",
+      "symbol": "SBUX",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "cb41680b-064a-5052-97c6-f90288b009fe",
+      "role": "PRIMARY",
+      "rowHash": "sha256:fceb2013530f585fc49ac5099299a231f24719fcab5f0a86cabfce64986d8b5b",
+      "symbol": "SO",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "ce622392-309d-57c2-81da-6a5a5155684e",
+      "role": "PRIMARY",
+      "rowHash": "sha256:30c7a707b8f121acf09d397aecf94b47f37b6623cde518d23c83db01ab4825fd",
+      "symbol": "ETN",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "cf0d4c88-d578-5369-9cd1-3d42c1d94aab",
+      "role": "PRIMARY",
+      "rowHash": "sha256:bf14c0538d41217845dd416a73de3563755f5082600886a7b908043e8ed1afe0",
+      "symbol": "NFLX",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "d2e4553a-700e-547d-b1b7-9aa6be8dd4a7",
+      "role": "PRIMARY",
+      "rowHash": "sha256:1130834d89ccd00346b6a41065fad5b22cb52b8c6ab9ee573420aac43bad8fae",
+      "symbol": "ABT",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "d70f5294-34ee-5758-9268-9ca8877d6193",
+      "role": "PRIMARY",
+      "rowHash": "sha256:97b585a44c68bf9b13bd97a8008caf3d0e60051ec34aa84f595fe2e818cc8729",
+      "symbol": "UNP",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "d8a14843-961a-5406-a372-b69d46f7512f",
+      "role": "PRIMARY",
+      "rowHash": "sha256:872d7711d2912c3f0feca4e08e3057b75795a1e41f6da769bd8c2c375d7377f1",
+      "symbol": "AAPL",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "e65f41aa-f7bc-56ea-9d58-7fc05a62c7f5",
+      "role": "PRIMARY",
+      "rowHash": "sha256:78a1f441f66ff00f2d454e289aa9a6eec23191e6ab0e52d554c578085361b37a",
+      "symbol": "UPS",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "NOT_APPLICABLE",
+      "publicSecurityId": "e8e8fe9b-dc95-5a64-86b1-41b00e7569c5",
+      "role": "REFERENCE_ONLY",
+      "rowHash": "sha256:0aec23dfc57f30689484aaa996c9b6810490594bd1ebcb5e38f3830a4fd6df5d",
+      "symbol": "SPY",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "NOT_APPLICABLE",
+        "ONE_WEEK": "NOT_APPLICABLE",
+        "THREE_MONTHS": "NOT_APPLICABLE"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "ea503902-9cbd-5ca3-82a4-00214f655ab2",
+      "role": "PRIMARY",
+      "rowHash": "sha256:88515ce2a4fe25415965adc9e685ab57f781c04f85519bd9772fa2c35fbd9e27",
+      "symbol": "MSFT",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "f6cbe650-b724-5091-9097-df108a561c27",
+      "role": "RESERVE",
+      "rowHash": "sha256:d468a6cc437342c8a29c5a75920a60bd65677325f3c8e4e182bfb2ba1992258a",
+      "symbol": "CALM",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "f91871f9-3a89-58d4-a969-c1086da0acc6",
+      "role": "RESERVE",
+      "rowHash": "sha256:6f309f5ef909ce01d0e607ea65dc33b0fde1774a36c455a27c4dc80f843e49c8",
+      "symbol": "WDFC",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "fa14b2bf-1e71-5fe7-8ea2-d000c1c0db57",
+      "role": "PRIMARY",
+      "rowHash": "sha256:93464e8670adb18e4b282f7368f57f3f3bc93ae4dd7fba21b9258ac90781c30e",
+      "symbol": "HD",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    },
+    {
+      "exclusionReason": null,
+      "longHorizonTerminalState": "MISSING",
+      "publicSecurityId": "fc24ce00-afe0-5f5b-b75c-5aaeef8d1c9d",
+      "role": "PRIMARY",
+      "rowHash": "sha256:2afcc1f31248d7423bf279d7ceb4a13ba105e1d17bb9efa622a40a1f0121b2cb",
+      "symbol": "COST",
+      "tacticalTerminalStates": {
+        "ONE_MONTH": "MISSING",
+        "ONE_WEEK": "MISSING",
+        "THREE_MONTHS": "MISSING"
+      }
+    }
+  ],
+  "enrollmentAuthorized": false,
+  "legacyDecisionUpgradeAllowed": false,
+  "legacyResultUpgradeAllowed": false,
+  "modelFreezes": [
+    {
+      "artifactContentHash": "sha256:233271457387a5d7212379ae2c77d69c743dc69f7345fe2d834ff7dc98d4fa59",
+      "fileSha256": "sha256:e208c280355077009c4af102383881d89d3139242086e859b5eec4beb6873024",
+      "freezeRecordHash": "sha256:8f8e7fb671a8c35e771fdad6b9e3ed5d90950135acc9297bbff571f27780e6c3",
+      "modelVersion": "LONG-HORIZON-RESEARCH-v1.1.0",
+      "track": "LONG_HORIZON"
+    },
+    {
+      "artifactContentHash": "sha256:a596080cd7936a6881a38e759c597934dae1125ec83026df6db0434f6fe31910",
+      "fileSha256": "sha256:5d541315f62990bc5f44a4e421f404d737f6ffcf039e586b18ba362a113dc49f",
+      "freezeRecordHash": "sha256:d6e3edb1160856ade700c37d42a4c9e2cdda3b88a4080dbc8ed73354b4c5bf99",
+      "modelVersion": "TACTICAL-SIGNAL-v2.2.0",
+      "track": "TACTICAL"
+    }
+  ],
+  "populationCount": 66,
+  "populationIdentityBindingHash": "sha256:ed5ce0a4a587ce8c18e24b9f9d9d4194ac21257e9fde4d10a63d4e34b3b3e42d",
+  "providerNetworkRequests": 0,
+  "purpose": "CONTRACT_FIXTURE",
+  "rawProviderValuesIncluded": false,
+  "roleCounts": {
+    "EXCLUDED": 9,
+    "PRIMARY": 48,
+    "REFERENCE_ONLY": 2,
+    "RESERVE": 7
+  },
+  "schemaVersion": "POST-FREEZE-DECISION-SNAPSHOT-v2.2.0",
+  "scoresOrRanksComputed": false,
+  "seal": {
+    "contentHash": "sha256:ed3e796290c3509c94429b7273346612c40f2b4db4b94889e0db7d583c7c8e0d",
+    "cutoff": "2026-07-30T03:55:37.171621Z",
+    "fileSha256": "sha256:b97b91b2c3f063eae4ff6f23a6f4db6a2c8130d4ab3725b861d911db697f53fc",
+    "path": "docs/generated/forward-preregistration-seal-v2-2.json"
+  },
+  "sectorClassificationHash": "sha256:3214d941c86abee8a16c271876f743072dc592beeda67f5edffced870e1f586d",
+  "sourceInputContractVersion": "POST-FREEZE-DECISION-INPUT-v2.2.0",
+  "sourceSnapshotHash": "sha256:1b244ea9f141816d597702607b7a23fc4347de2b8654aceb81bb4cbfb77308bf",
+  "status": "BLOCKED_CONTRACT_FIXTURE",
+  "terminalCounts": {
+    "LONG_HORIZON:TWELVE_MONTHS_PLUS:EXCLUDED": 9,
+    "LONG_HORIZON:TWELVE_MONTHS_PLUS:MISSING": 55,
+    "LONG_HORIZON:TWELVE_MONTHS_PLUS:NOT_APPLICABLE": 2,
+    "TACTICAL:ONE_MONTH:EXCLUDED": 9,
+    "TACTICAL:ONE_MONTH:MISSING": 55,
+    "TACTICAL:ONE_MONTH:NOT_APPLICABLE": 2,
+    "TACTICAL:ONE_WEEK:EXCLUDED": 9,
+    "TACTICAL:ONE_WEEK:MISSING": 55,
+    "TACTICAL:ONE_WEEK:NOT_APPLICABLE": 2,
+    "TACTICAL:THREE_MONTHS:EXCLUDED": 9,
+    "TACTICAL:THREE_MONTHS:MISSING": 55,
+    "TACTICAL:THREE_MONTHS:NOT_APPLICABLE": 2
+  }
+}

@@ -1341,3 +1341,760 @@ checkpoints, usage events, or terminal V16 tasks/runs.
 - Require frontend contract tests and `npm audit --omit=dev` in CI.
 - Keep this as a non-major dependency repair; do not use
   `npm audit fix --force`.
+
+## 2026-07-28: Bridge sealed V17 decisions to prospective V11 attempts
+
+- Decision: add an idempotent prospective-enrollment bridge from sealed V17
+  Market Intelligence screening decisions to the existing V11 Forward ledger.
+- Audit boundary: record every accepted attempt as one append-only
+  `FORWARD_PROSPECTIVE_ENROLLMENT_ATTEMPT_SEALED` audit event. Create V11
+  enrollment, candidate-signal, and outcome rows only for genuinely eligible
+  deterministic results.
+- Current result: the 66-security screen contains 0 eligible results, 55
+  `INSUFFICIENT_DATA` Objective outcomes, and 11
+  `SPECIALIZED_MODEL_REQUIRED` outcomes. Preserve `NO_ELIGIBLE_SIGNALS` and
+  create no V11 signal or outcome row.
+- Maturity boundary: retain exact 5-, 20-, and 60-trading-session prospective
+  checkpoints. Treat 12-month-plus model output as context only.
+- API boundary: Spring Boot owns typed public create, latest, and detail routes;
+  Next.js consumes the typed latest contract and does not call Python or the
+  database directly.
+- Evidence boundary: transform persisted raw fundamentals into frozen factor
+  inputs only when period semantics, units, PIT availability, ingestion
+  cutoff, revision, freshness, continuity, quality, and lineage are proven.
+  Preserve `Q_UNPROVEN`, `NOT_VERIFIED`, missing cohort valuation, and missing
+  historical PIT evidence as explicit non-eligible states.
+- Safety boundary: do not change Objective or Forward formulas, weights,
+  thresholds, PIT rules, or missing-data behavior. Do not treat provider
+  completion as scoring eligibility.
+- Operational status: local implementation and verification only. This phase
+  made no provider request, outcome or performance claim, commit, push, cloud
+  resource, scheduler activation, or deployment.
+
+## 2026-07-28: Refuse provider work that cannot recover the frozen cohort
+
+- Decision: expose a versioned, read-only eligibility-recovery status derived
+  from a sealed READY snapshot and PostgreSQL V1-V17 evidence.
+- The preflight reports exact missing Objective factor operands, independent
+  freshness, blocker categories, persisted-evidence reuse, and the maximum
+  eligible count after any approved request plan.
+- Current EODHD fundamentals cannot prove missing discrete-quarter or TTM
+  semantics by repeating the same endpoint, Yahoo prices cannot supply
+  Objective fundamentals, and neither route supplies historical PIT FCF-yield
+  evidence.
+- Because the approved bounded routes cannot reach the frozen minimum cohort
+  of 20, return `BLOCKED_COHORT_UNREACHABLE` with an empty request plan and
+  execute zero provider requests.
+- Do not read historical generated artifacts at runtime and do not weaken
+  formulas, PIT rules, cohort thresholds, or explicit missing states.
+
+## 2026-07-29: Separate Objective coverage from non-rankable universe members
+
+- Decision: version the corrected PostgreSQL replay as
+  `objective-current-gate-replay-v1.1.0`.
+- Keep all 66 members in the derived immutable snapshot, but write Objective
+  `coverage_result` rows only for the 55 members whose snapshot membership is
+  `INCLUDED`.
+- Preserve the 11 reference-only or excluded members through immutable
+  membership, membership reason, and Market Intelligence `NOT_APPLICABLE`
+  views. Do not manufacture a market-cap cohort merely to satisfy the V8
+  coverage-row constraint.
+- Reuse V1-V17. This correction does not justify V18 because the V8 table
+  remains valid for the population to which the Objective model applies.
+- Version batch, snapshot, run, request, and manifest identities so the
+  corrected replay cannot conflict with the retained v1.0 evidence chain.
+- Preserve the previously created v1.0 snapshot and run as append-only,
+  non-authoritative historical evidence.
+- Require a current market-cap observation for every `INCLUDED`
+  `INSUFFICIENT_DATA` member. Missing market cap remains a transactional stop;
+  it is never replaced with zero or a guessed cohort.
+- Authorize no implicit network work. The remaining 11-security Fundamentals
+  repair is a separate bounded operation and requires the ignored local
+  `EODHD_API_KEY`.
+
+## 2026-07-29: Add historical time-slice validation without weakening PIT
+
+- Decision: add `HISTORICAL-DECISION-QUALITY-VALIDATION-v1.0.0` as a pure
+  offline evaluator that measures whether frozen deterministic ranks
+  discriminate later relative returns across repeated historical cutoffs.
+- Accept imperfect historical data only through explicit `PIT_VERIFIED` or
+  `CONSERVATIVE_LAG` evidence modes. Conservative assumptions can support a
+  directional engineering result but cannot be relabeled strict PIT.
+- Keep current-universe retrospective runs explicitly survivorship-limited.
+  Only dated historical membership plus verified PIT evidence can reach the
+  strongest historical conclusion.
+- Require next-session outcomes, costs, benchmark-relative returns, coverage,
+  rank information coefficient, top-minus-bottom spread, chronological
+  holdout partitions, and immutable versions.
+- Do not paste the current Objective score onto an earlier date. Rebuild the
+  score and normalization cohort from the evidence accepted at each slice.
+- Keep historical diagnostics separate from prospective V11 events and
+  continue prospective Forward Decision-Quality Validation.
+- Reuse V1-V17. The offline evaluator does not justify V18 and does not change
+  Objective, tactical, missing-data, PIT, or AI contracts.
+
+## 2026-07-29: Treat the first expanded historical results as adverse evidence
+
+- Freeze one deterministic 2014-2026 plan with six random dates per recent,
+  medium, and older band plus a repeated month-end schedule.
+- Keep the fixed 55-security primary/reserve denominator. Missing fundamental
+  evidence removes a signal, not the security from coverage.
+- Use adjusted OHLC only for total-return outcomes and raw historical close for
+  price-to-share valuation. Bind both price bases, derived model inputs, score,
+  policy, and source hashes into the controlled snapshot identity.
+- Preserve the strict Objective historical gate as blocked. Do not paste a
+  current score backward or relax cohort, duration, valuation, membership, PIT,
+  or missing-data requirements.
+- Permit `LONG-HORIZON-RESEARCH-v1.0.0` only as a separately labeled
+  current-revision retrospective diagnostic with a conservative 150-day lag.
+  It is not Objective Rating v1 and cannot become a PIT claim.
+- Accept the observed tactical result as `MIXED_OR_UNFAVORABLE` and the
+  approximate long-horizon rank result as `UNFAVORABLE`. Do not reinterpret
+  positive top-bucket benchmark excess as a successful ranking when the
+  bottom bucket performs better or has lower maximum drawdown.
+- Do not tune the same model against the observed older holdout. Any algorithm
+  change requires a new model version and new holdout or prospective evidence.
+
+## 2026-07-29: Freeze Tactical v2.2 and Long Horizon v1.1 without reusing observed history as a holdout
+
+- Replace the current tactical research contract with
+  `TACTICAL-SIGNAL-v2.2.0`, which evaluates 1-week, 1-month, and 3-month
+  continuation and mean-reversion theses independently and applies
+  non-compensating falling-knife, chase, volatility, liquidity, and event-risk
+  gates.
+- Add `LONG-HORIZON-RESEARCH-v1.1.0` as a research-classification contract that
+  separates company quality, financial strength, capital allocation,
+  valuation and entry, expected-return range, permanent-loss and downside
+  risk, sector-relative evidence, and confidence.
+- Do not authorize a default Long Horizon ranking score. A good company and an
+  attractively priced security are separate conclusions.
+- Bind both models to immutable freeze records, source hashes, the validation
+  governance contract, six-benchmark protocol, cost policy, and observed
+  evidence cutoff.
+- Classify every prior Tactical v2.1 and Long Horizon v1.0 result as
+  `DEVELOPMENT_OBSERVED`. Because those dates and outcomes were inspected
+  before the new freezes, they cannot be called an untouched holdout.
+- Keep AI narrative outside every deterministic score, risk gate,
+  classification, eligibility decision, and outcome.
+
+## 2026-07-29: Accept blocked historical terminals as the honest current-model result
+
+- Require every historical run to account for the complete frozen population,
+  including explicit `MISSING`, `NOT_APPLICABLE`, and `EXCLUDED` rows.
+- Require cash, SPY, dated sector, equal-weight universe, pure-value, and
+  pure-quality benchmark records. Missing benchmark evidence must not become
+  zero, cash, or SPY.
+- Use chronological folds, purge and embargo, non-overlapping formal outcome
+  schedules, separately labeled overlapping diagnostics, dependent-outcome
+  block bootstrap, realistic liquidity-sensitive costs, turnover, coverage,
+  drawdown, downside, and benchmark-relative metrics.
+- Accept Tactical v2.2 historical status `BLOCKED_BY_DATA`, with 55 `MISSING`,
+  2 `NOT_APPLICABLE`, and 9 `EXCLUDED`. The terminal artifact SHA-256 is
+  `43FCFCFB4066BDFCF530308C8B04DDC409B6D6E6CFDB4DA0098424A9A207B7A0`.
+- Accept Long Horizon v1.1 historical readiness `BLOCKED_BY_DATA`, with the
+  same complete-population 55/2/9 states and no computed score. The readiness
+  artifact SHA-256 is
+  `46352B1539D475F15ABA9B4E8CFE5D8E4E5D4E33AAB2313030578612F1563773`.
+- Do not request provider data, relax missing-data or PIT rules, or produce a
+  partial performance claim merely to avoid a blocked result.
+
+## 2026-07-29: Implement Forward v2 contracts and defer its structured ledger to V18
+
+- Implement local immutable contracts for dual-model decision snapshots,
+  preregistration, enrollment, and terminal outcomes at 5, 20, 60, 126, and
+  252 completed sessions.
+- Require exact model-freeze, governance, protocol, benchmark, cost, universe,
+  source, and controlled-record hashes. Preserve a terminal row for every
+  enrolled security and every benchmark; no missing return may become neutral.
+- Separate operational completeness from model quality. With no real
+  post-freeze snapshot or matured outcomes, model quality is
+  `INSUFFICIENT_EVIDENCE`, not favorable or validated.
+- Permit V16 `analytics.analytics_audit_event` only as an append-only,
+  content-addressed handoff. It is not the canonical structured Forward v2
+  ledger.
+- Record that V11 cannot represent dual-model snapshots or 126/252-session
+  outcomes, and V17 is a product projection rather than the Forward ledger.
+- Require a separately approved append-only V18 for durable model freezes,
+  daily decisions, enrollment, 5/20/60/126/252 outcomes, and superseding
+  validation reports. Do not create V18 in this phase.
+- Do not claim production routes, Java or frontend integration, a real
+  prospective snapshot, provider traffic, commit, push, or deployment from
+  the local contract implementation.
+
+## 2026-07-29: Seal the first real local Forward v2 snapshot and stop before enrollment
+
+- Seal READY snapshot `beaa9952-9852-4088-9dc3-92047824414b` from universe
+  `market-intelligence-closed-test-us-v1.0.0` at
+  `2026-07-29T02:57:08.988871Z`.
+- Preserve the complete frozen population: 55 included, 2 reference-only, and
+  9 excluded securities.
+- Bind controlled artifact hash
+  `sha256:b00971fee0500a8d02f22e28b5402b8db36322127dc6500b6e354c60eb9d839c`
+  and Git-safe manifest content hash
+  `sha256:6afcfa078cafaa16dacf302d9cd71a63c586f0f1d8b5a157eaf7f0aab3247b30`.
+- Record V16 audit event hash
+  `sha256:eff628373f0c4a354cf761e30387713db1a2cb5acb41ce7fef61862a2e034542`
+  and require an exact replay to preserve the same event and evidence.
+- Record zero provider requests and
+  `aiUsedForDeterministicDecisions=false`.
+- Keep `prospectiveReady=false` because the sole readiness blocker is
+  `REQUIRED_BENCHMARK_EVIDENCE_UNAVAILABLE`. Do not enroll the snapshot or
+  create outcome rows without that frozen evidence.
+- Preserve model quality as `INSUFFICIENT_EVIDENCE`. A sealed decision is
+  operational evidence, not a favorable model-quality result.
+- Keep V16 as the audit handoff only. Do not add V18, Forward v2 public
+  API or UI integration, commit, push, or deployment in this step.
+
+## 2026-07-29: Seal Forward DQV v2 and benchmark v2.1 preregistrations
+
+- Seal `FORWARD-DQV-PREREGISTRATION-v2.0.0` at
+  `2026-07-30T03:12:23.237045Z`, strictly after both accepted model freezes at
+  `2026-07-30T00:45:00Z`.
+- Seal `FORWARD-BENCHMARK-PREREGISTRATION-v2.1.0` at
+  `2026-07-30T03:12:23.237053Z`, strictly after its parent.
+- Bind the complete 66-security universe and deterministic stable public IDs,
+  PIT availability, independent freshness, explicit missing states, no neutral
+  substitution, liquidity-sensitive costs, and the exact six formal benchmark
+  families.
+- Freeze distinct `DEVELOPMENT_OBSERVED`,
+  `SEALED_HISTORICAL_VALIDATION`, and `PROSPECTIVE_FORWARD` evidence
+  boundaries. Previously observed evidence cannot be upgraded.
+- Record decision snapshot `beaa9952-9852-4088-9dc3-92047824414b` as
+  ineligible because its `2026-07-29T02:57:08.988871Z` decision timestamp
+  precedes formal preregistration. It cannot be bound or upgraded.
+- Require every future prospective decision to be strictly later than
+  `2026-07-30T03:12:23.237053Z`.
+- Preserve immutable exact replay and reject any conflicting bytes. Generate
+  the V16 audit-event payload only in memory; do not write PostgreSQL.
+- Execute zero provider requests, scoring runs, database writes, commits,
+  pushes, or deployments.
+
+## 2026-07-29: Keep Objective benchmark families blocked after feasibility audit
+
+- Preserve the formal Objective benchmark requirement at at least 20 scores
+  and at least 80% of the 55 included securities, which means 44 securities.
+- Record formal post-preregistration coverage as zero for both
+  `PURE_QUALITY` (`QC-v1.0.0`) and `PURE_VALUE` (`UQ-v1.0.0`).
+- Retain 32 pre-registration quality diagnostics only as gap evidence:
+  32/55 is 58.18%, below the frozen threshold, and the evidence lacks a
+  complete persisted score-level lineage chain.
+- Keep value coverage at zero. Historical PIT FCF-yield evidence remains
+  missing and no accepted `UQ-v1.0.0` score exists.
+- Reuse V14 identity, V15 observations, V16 freshness, and V17 projections,
+  but require V8 as the authoritative coverage, score, factor, and source
+  lineage ledger. Do not treat V17 as a scoring substitute.
+- Record a separate benchmark blocker: the frozen universe contains only SPY
+  and XLK as reference-only securities, while benchmark v2.1 requires a
+  reference-only sector benchmark assignment for every included sector.
+- Do not relax Objective formulas, PIT rules, missing-data semantics, cohort
+  thresholds, or the frozen universe to clear either blocker.
+
+## 2026-07-29: Register the pre-outcome Forward benchmark v2.2 correction
+
+- Preserve the original 66-security evaluated population, identity-binding
+  hash, roles, costs, liquidity, prices, missing states, and model contracts.
+- Replace the infeasible formal Objective-score dependency for `PURE_VALUE`
+  and `PURE_QUALITY` with two source-independent mechanical current-snapshot
+  rules: EBITDA divided by positive enterprise value, and gross profit TTM
+  divided by positive revenue TTM.
+- Require same-unit, same-currency, same-cutoff, hash-bound evidence; retain
+  valid negative numerators; reject missing, stale, invalid, or conflicting
+  inputs without neutral substitution.
+- Keep the 44-of-55 coverage gate. Rank only `VALID` candidates, select
+  `ceiling(valid_count * 0.20)`, and use ascending `publicSecurityId` to break
+  ties. This yields 9 selections at 44 valid members and 11 at 55.
+- Record existing cache support as diagnostic 42/55 for both rules. Register
+  v2.2 as `DATA_PENDING`; do not construct benchmarks or results.
+- Add a separate SPY plus 11-sector-ETF reference universe. Reuse the frozen
+  SPY and XLK IDs and generate new stable IDs only for the ten new references.
+- Freeze an all-55 EODHD Fundamentals preflight at 55 attempts, configured
+  weight 550, retry zero, with network execution not authorized.
+- Bind and preserve the v2.0/v2.1 preregistrations and seals. Prohibit upgrade
+  of the earlier `beaa9952` decision or any legacy result.
+- Seal v2.2 strictly after v2.1 and require a v2.2 readiness adapter. Execute
+  no provider request, score, database write, commit, push, or deployment.
+
+## 2026-07-29: Accept the bounded Forward benchmark v2.2 input refresh
+
+- Accept exactly one completed post-freeze EODHD Fundamentals capture for the
+  55 included securities under run
+  `20260730T041722Z-02f8ddea2f6e`.
+- Bind the capture to the immutable v2.2 candidate policy, preregistration, and
+  seal. Preserve the original 66-security identities and roles.
+- Record 55 completed physical attempts, configured weight 550, zero failed
+  responses, zero retries, 55 normalized payloads, and 55 checkpoints.
+- Keep all provider values and raw responses in Git-ignored controlled
+  storage; retain only statuses, identities, lineage hashes, and selected
+  identities in Git-safe artifacts.
+- Accept full 55-of-55 current input coverage for both frozen mechanical rules
+  and the resulting 11-member valid-only top-quintile candidate sets.
+- Do not interpret candidate membership as a score, rating, recommendation, or
+  return result.
+- Keep full benchmark construction blocked until synchronized price,
+  liquidity, transaction-cost, and external-reference evidence is available.
+- Do not enroll, calculate outcomes, write PostgreSQL, commit, push, or deploy
+  in this step.
+
+## 2026-07-29: Add a strict v2.2 benchmark and successor-readiness adapter
+
+- Preserve the immutable v1 and v2.1 construction and readiness contracts.
+- Require exact v2.2 preregistration, seal, input-capture, coverage,
+  candidate-policy and external-reference hashes.
+- Require all six formal benchmark families on one completed session with
+  validated prices, action reconciliation, decision-time ADTV, frozen costs
+  and complete source hashes.
+- Preserve the SPY, sector, equal-weight and momentum mechanics from v2.1.
+  Construct v2.2 pure value and pure quality only from the frozen valid-only
+  top-quintile candidate artifact, with at least 44 valid members and stable-ID
+  tie-breaking.
+- Permit the successor controller to return only `READY` or `BLOCKED`. It
+  cannot enroll, score, calculate outcomes, call providers, write a database,
+  or authorize automatic trading.
+- Require a strictly post-freeze 66-security decision manifest and
+  authoritative V18 acceptance evidence before `READY`.
+- Reject any upgrade of the legacy `beaa9952` decision and do not treat the
+  old V18-required audit as V18 acceptance.
+- Record the current repository as `BLOCKED` on missing completed-session
+  price evidence, six-family construction, post-freeze decision manifest and
+  V18 acceptance evidence.
+
+## 2026-07-29: Implement the append-only Forward DQV v2 outcome ledger
+
+- Accept the Prospective Outcome Persistence Readiness Audit conclusion that
+  V1-V17 cannot be reinterpreted as the typed Forward DQV v2 outcome ledger.
+- Add exactly seven Python-owned `analytics.*` tables in V18 for enrollment,
+  five maturities, outcome batches, security outcomes, six benchmark outcomes,
+  typed path metrics, and quality reports.
+- Preserve V1-V17 and create no `app.*` object.
+- Freeze horizons at 5/20/60/126/252, with 126 diagnostic-only, and benchmark
+  kinds at SPY, sector, equal-weight, pure momentum, pure value, and pure
+  quality.
+- Require full frozen-population identity, explicit terminal states, source
+  and version hashes, gross/cost/net arithmetic, MAE, MFE, drawdown, and
+  downside-capture evidence.
+- Reject updates, deletes, missing-to-zero conversion, correction branching,
+  and conflicting idempotent replay.
+- Add Forward outcome v2.1 as a versioned extension. Do not change immutable
+  v2.0 artifacts or claim that benchmark v2.2 `DATA_PENDING` has an outcome.
+- Accept PostgreSQL 17 clean V1-to-V18 and V3/V12/V16/V17 upgrade matrices plus
+  real repository exact replay, conflict, readback, and correction tests.
+- Make no provider request, score, formula change, quality claim, commit, push,
+  deployment, or cloud-resource change.
+
+## 2026-07-29: Seal historical DQV v2.2 slices before outcome replay
+
+- Classify every historical slice as `DEVELOPMENT_OBSERVED`,
+  `DIAGNOSTIC_ONLY`, `formalGateEligible=false`, and
+  `untouchedHoldout=false`.
+- Seal seed `20260729`, six random completed sessions in each of the 3-9
+  month, 1-3 year, and 4-10 year strata, and fixed 3/6/9/12/18/24/48/72/120
+  month offsets before parsing any OHLCV outcome value.
+- Permit controlled benchmark path diagnostics only where hash-verified
+  evidence exists: SPY, current-universe equal weight, and price-only
+  momentum.
+- Keep dated sector, pure value, and pure quality benchmarks explicit
+  `MISSING`; do not substitute SPY or zero.
+- Reject Tactical v2.2 evaluation when historical event and dated sector
+  evidence is absent. Reject Long Horizon v1.1 evaluation when historical PIT
+  fundamentals, revisions, and membership are incomplete.
+- Preserve every current-universe retrospective security as an explicit
+  `MISSING` model outcome. Do not claim historical membership or remove
+  unfavorable or unavailable observations.
+- Keep derived licensed metrics in Git-ignored storage and retain only hashes,
+  statuses, counts, and claim boundaries in Git-safe artifacts.
+- Make no provider request, database write, parameter change, score, commit,
+  push, or deployment.
+
+## 2026-07-30: Accept offline Forward DQV infrastructure without claiming validation
+
+- Accept V19 and `FORWARD-DQV-ENROLLMENT-v2.1.1` as the production chronology
+  boundary: `decisionAsOf <= sealedAt <= effectiveEntryOpen`. Preserve
+  v2.1.0 only as immutable history and reject its production writes.
+- Accept Gate H, the maturity-to-statistics adapter, and the Forward DQV
+  statistics engine as `IMPLEMENTED_OFFLINE`. Their contracts cover all frozen
+  horizons, six benchmarks, cost and path-risk evidence, timing and
+  expected-return evaluation, Holm-adjusted inference, strata, and typed
+  AI/human provenance.
+- Do not treat a migration acceptance, fixture, preflight, unit test, or
+  historical diagnostic as prospective execution or model-quality evidence.
+- Keep target-session capture and natural maturity `BLOCKED_BY_TIME`; keep the
+  real 66 inputs, six benchmarks, immutable per-security decision values,
+  decision-session index, liquidity, and formal Gate H evidence
+  `BLOCKED_BY_EVIDENCE`.
+- Record real model execution, snapshot creation, v2.1.1 enrollment, repeated
+  cohort accumulation, and statistical evaluation as `NOT_EXECUTED`.
+- Retain the Gate Z terminal truth
+  `CRITICAL_BLOCKED_NOT_VALIDATED`. Tactical v2.2 and Long Horizon v1.1 remain
+  `NOT_VALIDATED` until naturally matured prospective evidence supports an
+  honest terminal conclusion.
+
+## 2026-07-30: Require horizon-specific evidence for repeated-date cohorts
+
+- Accumulate repeated prospective decision dates only through
+  `FORWARD-DQV-ENROLLMENT-v2.1.1`; reject v2.1.0 and any changed same-date
+  replay.
+- Bind every date to the preregistered exact-66 stable UUID population,
+  universe, model freezes, benchmark contract, cost policy, and V19
+  chronology.
+- Treat decision-time terminal counts as planning evidence only. Calculate
+  eligibility from per-security matured outcomes separately for
+  5/20/60/126/252 completed sessions.
+- Require at least 80% coverage, 100 assessed security decisions, two
+  distinct dates, at least two horizons of matured calendar span, and a
+  horizon-specific purged/embargoed independent schedule.
+- Do not count overlapping dates as independent observations. Keep 126
+  sessions diagnostic-only.
+- Reuse V18/V19 persistence for read-only cohort input. Do not add V20 merely
+  to prepare a derived cohort plan.
+- Keep formal artifact generation blocked until a versioned superseding V19
+  acceptance binds the final additive v2.1.1 repository source. Do not
+  overwrite or bypass the old immutable V19 acceptance.
+
+## 2026-07-30: Seal deterministic post-freeze results once
+
+- Produce one content-addressed controlled result payload per stable UUID from
+  the same Tactical and Long Horizon execution pass.
+- Bind every payload directly to both model-freeze artifact hashes, the
+  post-freeze row, classification, inputs, results, evidence, decision cutoff,
+  completed session, and source snapshot.
+- Define `inputEvidenceAvailableAt` as input chronology, never as output seal
+  time.
+- Let the snapshot, post-close orchestrator, and maturity statistics adapter
+  consume the same sealed output set. They must not rerun model formulas.
+- Keep deterministic result values in controlled Git-ignored storage and the
+  Git-safe manifest limited to identities, states, reasons, and hashes.
+- Keep production blocked until real exact-66 model inputs/classifications and
+  a controlled benchmark constituent/weight ledger are available.
+
+## 2026-07-30: Read naturally matured Forward DQV paths without a new migration
+
+- Discover due schedules only from hash-verified
+  `FORWARD-DQV-ENROLLMENT-v2.1.1` and official completed-session evidence.
+- Reject legacy v2.1.0 enrollments, natural-day fallback, nearest-session
+  substitution, missing-state imputation, and unsealed benchmark membership.
+- Load validated total-return-adjusted prices, action reconciliation, and
+  decision-time ADTV only from existing persisted analytics evidence.
+- Require exactly six benchmark paths. Use SPY through the same stored path
+  rules and load synthetic benchmarks only from a future sealed
+  constituent/weight ledger bound by reference and hash. Keep them explicitly
+  `MISSING` while that ledger is absent.
+- Use V19 for due discovery and the existing V18/V19 outcome lineage. Do not
+  add V20 for a read-only adapter.
+- Keep 126 sessions diagnostic-only and preserve append-only outcome
+  correction lineage.
+- Permit only manual read-only execution with an immutable request, exclusive
+  lease, hash-verified checkpoints, exact replay, and zero provider requests,
+  database writes, model runs, or outcome calculations.
+
+## 2026-07-30: Evaluate model usefulness without an accuracy-tuning loop
+
+- Tactical v2.2 and Long Horizon v1.1 validation targets measurable decision
+  usefulness rather than perfect prediction accuracy.
+- A frozen version is evaluated once under its preregistered historical plan.
+  An unfavorable or imperfect result does not trigger repeated tuning on the
+  same observed outcomes.
+- A successor requires a demonstrated implementation or methodology defect, a
+  justified missing factor, or evidence of a systematically harmful design
+  assumption, followed by later walk-forward or prospective evidence.
+- Tier 1 current-universe retrospective evidence must be executed and labeled
+  with its survivorship, current-classification, and non-PIT limitations; those
+  limitations reduce the claim ceiling but do not justify skipping all model
+  value assessment.
+- The main controller must decompose independent validation work into bounded
+  project tasks and independently accept their evidence before advancing.
+- Engineering tests prove implementation behavior, not investment-model value.
+
+## 2026-07-30: Activate Forward DQV on V20 without claiming real evidence
+
+- Accept V20 as the append-only successor for dated per-security sector
+  bindings, benchmark variants and holdings, holding-level nonlinear costs,
+  typed benchmark outcomes, human-decision evidence, and the separate
+  portfolio-suitability boundary.
+- Treat the controlled six-family ledger and decision-controlled composite as
+  implementation-ready, but do not infer that a real 66-security ledger or
+  composite has been executed.
+- Supersede the stale
+  `CONTROLLED_BENCHMARK_CONSTITUENT_LEDGER_NOT_IMPLEMENTED` blocker with
+  `REAL_CONTROLLED_BENCHMARK_LEDGER_MISSING`.
+- Preserve V18/V19 and all earlier preflights as immutable historical evidence.
+  Use versioned V20 acceptance and successor preflight artifacts for current
+  evaluation.
+- Keep enrollment explicitly authorized and chronology-safe. Offline
+  activation cannot run providers, scores, enrollment, outcomes, or maturity.
+- Keep model labels unchanged, human decisions post-model and append-only,
+  portfolio suitability `NOT_ASSESSED_BY_MODEL`, and automatic trading
+  prohibited.
+
+## 2026-07-30: Close the frozen historical validation pass without retuning
+
+- Accept the Tactical v2.2 Tier 1 statistical closeout as the terminal
+  retrospective result for the frozen version.
+- Label 5-session ranking `NOT_VALIDATED`; label 20- and 60-session ranking
+  `PARTIALLY_SUPPORTED` only as constrained diagnostic evidence because the
+  key ranking and excess-return intervals include zero.
+- Keep every Tactical entry-timing horizon `NOT_VALIDATED` because no
+  executable entry episode could be established from the available
+  historical evidence.
+- Keep Long Horizon v1.1 company quality, security attractiveness, expected
+  return, and downside risk `NOT_VALIDATED` at 252, 504, 756, and 1,260
+  sessions because no complete PIT target input was reconstructed.
+- Do not start another observed-outcome optimization loop. A successor model
+  requires a documented defect or new preregistered evidence and must be
+  evaluated on later walk-forward or prospective observations.
+- Distinguish these historical labels from Forward validation. V20 is ready
+  as infrastructure, while real enrollment and naturally matured outcomes
+  remain unexecuted.
+
+## 2026-07-30: Accept Practical Tier-1 evidence without replacing strict PIT validation
+
+- Execute frozen model scores against hash-verified current-revision history
+  when strict PIT history is unavailable, rather than treating engineering
+  readiness as model-value evidence.
+- Keep the claim ceiling at current-universe retrospective evidence with
+  survivorship and provider-revision risk. Do not relabel it as an untouched
+  holdout, strict PIT backtest, or proof of future returns.
+- Retain all numerical Tactical and Long Horizon retrospective outputs as
+  controlled local evidence. Public Git records only value-free manifests,
+  hashes, versions, counts, evidence labels, and limitations.
+- Do not infer validated score ordering or future performance from
+  retrospective development evidence.
+- Keep target-level missing and abstention states explicit; no default
+  aggregate Long Horizon rank is authorized.
+- Use non-overlapping April decision blocks for primary long-horizon
+  statistics; retain October and dense overlapping slices as descriptive
+  diagnostics only.
+- Do not tune model weights to improve these observed results. Continue
+  prospective Forward Decision-Quality Validation for independent evidence.
+
+## 2026-07-30: Freeze Dual-System Architecture Contract v1
+
+- Decision: adopt `dual-system-architecture-v1.0.0` as a separately named
+  contract milestone rather than reusing the legacy Phase 0 label.
+- Systems: keep Fundamental Value Investment and Quantitative Trading
+  independent; the Unified Portfolio/Risk View consumes immutable outputs and
+  never averages their scores.
+- Sleeves: use `LONG_TERM_CORE` and `QUANT_TRADING`. The same security may
+  appear in both, but holdings, cash, basis, thesis, exits, constraints,
+  benchmarks, risk, and attribution remain isolated. Cash transfers require an
+  explicit human decision.
+- Value boundary: retain central fair value and a fair-value range, emphasize
+  range and margin of safety, and return a cap rather than a final weight.
+- Quant boundary: v1 is US-equity, daily, completed-session, long-only research
+  without leverage, shorting, options, brokerage orders, or execution.
+- Compatibility: preserve `BUYING_OPPORTUNITY` as legacy long-term valuation
+  evidence and use `VALUATION_OPPORTUNITY` as the successor name. Preserve
+  legacy public market-data APIs until a separately approved replacement.
+- Evidence: provider identity is audit provenance, never a scoring input.
+  Freeze strict identity/chronology, domain-tolerant numeric, and approximate
+  historical research classes. Tolerances are field-specific, versioned, and
+  evaluated only after semantic alignment. Approximate evidence cannot be
+  promoted to strict PIT or sealed prospective evidence.
+- Provider boundary: models consume canonical concepts, not provider names or
+  native fields. Provider fallback is deterministic and versioned, never
+  selected for a favorable score.
+- Safety: preserve explicit conflicts/missing states, claim ceilings, AI
+  narrative-only isolation, immutable human decisions, and no automatic
+  execution.
+- Scope: this freeze adds no migration, scoring/PIT change, live/provider
+  request, cloud resource, deployment, or Task 1 implementation.
+
+## 2026-07-30: Start Unified Market Data and Evidence Foundation v1 safely
+
+- Decision: begin Task 1 with a migration-free deterministic evidence-selection
+  kernel over the accepted Dual-System Architecture Contract v1.
+- Preflight: the active checkout is detached at `57fa7ed`, equal to
+  `origin/main`, with migration head V17 and the accepted Phase 0 changes
+  uncommitted.
+- Migration boundary: do not claim V18. Reachable snapshot commit `87e2a88`
+  already assigns V18 through V21 to Forward Decision-Quality and portfolio
+  responsibilities. V22 is separately reserved for the future Task 1
+  successor and has not been created. That successor requires an explicit
+  integrated upgrade path before implementation.
+- Contract boundary: require durable identity tuples, completed-session
+  chronology, raw/normalized/derived separation, provider lineage, versioned
+  deterministic fallback, explicit freshness/conflict states, and
+  specialized-model applicability.
+- Raw-data boundary: licensed payloads remain in Git-ignored private storage;
+  Git-safe contracts contain only allowed manifests, references, and hashes.
+- Safety: selection never consumes scores or provider-native fields, never
+  upgrades evidence claims, and does not change formulas, sleeve isolation, AI
+  isolation, human control, or execution prohibitions.
+- Scope: local code, fixtures, documentation, and offline tests only. No
+  provider request, migration, cloud resource, commit, push, or deployment.
+- Stage 2: add strict canonical contracts for prices/adjustments, corporate
+  actions, fundamentals/periods, classifications, dated market/sector
+  benchmarks, and engine-derived liquidity. Reuse V1-V17 and bind derived
+  outputs to parent evidence hashes without adding a table.
+
+## 2026-07-30: Adopt curated V18-V21 lineage without reinterpreting V21
+
+- Evidence decision: V21 application or publication cannot be proven. Preserve
+  the historical V18-V21 versions, contents, and checksums exactly rather than
+  rewriting or reusing any of those migration numbers.
+- Adoption boundary: copy only the reviewed V18, V19, V20, and V21 migration
+  SQL and necessary PostgreSQL acceptance assets from reachable commit
+  `87e2a88`; do not cherry-pick its larger snapshot.
+- Acceptance-asset boundary: byte identity applies to the four migration SQL
+  files. The V21 acceptance asset was later strengthened as test-only coverage
+  for five append-only tables and is intentionally not claimed to remain
+  byte-identical to the snapshot.
+- V19 safety: retain its intentional refusal when a v2.1.0 enrollment already
+  exists. Do not weaken the refusal to make an upgrade pass.
+- V21 boundary: classify V21 as legacy and unwired. Its `CORE` and `TACTICAL`
+  lanes are not `LONG_TERM_CORE` and `QUANT_TRADING`, and no current
+  application contract may bind them to Dual-System Architecture Contract v1.
+- Successor: reserve the not-yet-created V22 for a separately approved
+  append-only Task 1 persistence design. Never reinterpret V21 as that design.
+- Acceptance: require exact migration-blob verification and dedicated clean
+  V1-to-V21, V17-to-V21, empty V18-to-V19, populated-v2.1.0 V18-to-V19
+  refusal, V19-to-V21, V20-to-V21, and V21 schema/immutability paths.
+- Static acceptance detail: continue the empty V18 path through V21; require
+  the exact V19 refusal reason and unchanged V18 data/constraints; seed
+  representative V19 and V20 rows before later migrations and verify their
+  hashes afterward; and prove both update and delete rejection for all five
+  V21 append-only tables and trigger bindings.
+- Scope: database migration lineage, database acceptance assets, and
+  documentation only. No application wiring, provider request, production
+  database write, commit, push, or deployment.
+
+## 2026-07-30: Implement V22 Unified Market Data and Evidence persistence
+
+- Decision: use V22 as the append-only analytics-owned successor for Unified
+  Market Data and Evidence Foundation v1 after accepting the exact V18-V21
+  lineage.
+- Legacy boundary: preserve V18-V21 byte-for-byte. V21 remains legacy and
+  unwired; its `CORE` and `TACTICAL` lanes are not Dual-System Architecture v1
+  sleeves and are not referenced by V22.
+- Persistence: store hierarchical stable identity, completed-session
+  calendars, private raw-manifest lineage, normalized/derived canonical
+  evidence, ordered selector policies and immutable results, and
+  classification-bound model applicability.
+- Correction boundary: all V22 tables are append-only. Later evidence
+  revisions must supersede the latest same-stream predecessor with monotonic
+  chronology; model-applicability corrections also use explicit supersession.
+- Aggregate boundary: derived parents, selector provider priorities, and
+  selector candidates/results/rejections use explicit immutable seals.
+  Transaction-level locks serialize child insertion with sealing, so late
+  inserts cannot mutate an effective aggregate. Every supplied selector
+  candidate, including request-mismatch evidence, must receive either the
+  selected role or a deterministic rejection reason.
+- Safety: non-valid evidence cannot carry canonical values; derived evidence
+  requires sealed parent IDs and hashes; liquidity parent count, distinct
+  completed sessions, and window end must match the canonical declaration;
+  selected evidence must satisfy cutoff, freshness, conflict, ambiguity, and
+  requested-field rules; canonical data cannot carry provider-native or
+  deterministic score fields.
+- Non-valid derived boundary: a non-`VALID` engine-derived liquidity envelope
+  is an explicit zero-parent record. It retains derivation lineage, state, and
+  reason, but cannot carry canonical values, parent references, parent rows, or
+  a parent seal. Only `VALID` derived evidence seals parents.
+- Canonical time and selector precedence: normalize every instant to UTC `Z`
+  for wire serialization and hashing. After cutoff, dependent-conflict, and
+  freshness checks, preserve an explicit non-`VALID` state/reason before
+  evaluating tolerance or domain mismatch.
+- Conflict shape: `affectedFactors` is an array of nonblank strings. Null,
+  blank, numeric, and object elements are rejected so malformed provider data
+  cannot bypass dependent-field conflict handling.
+- Calendar and routing boundary: completed-session dates must match scheduled
+  local timestamps in the declared IANA timezone. Applicability routing must
+  follow the frozen company-type map, carry a deterministic content hash, and
+  supersede exactly the latest route with monotonic revision and chronology.
+- Adapter: Python validates the frozen provider-neutral contract before write
+  and after readback for evidence, complete selector aggregates, and
+  applicability routing. Policy, request, result, and routing hashes are
+  recomputed on read. Explicit parent IDs plus hashes replace unsafe
+  hash-only lookup. Provider identity remains provenance and ordered fallback
+  only.
+- Acceptance: require clean V1-to-V22, V17-to-V22, prepopulated V21-to-V22,
+  V19 refusal preservation, V18-V21 row/hash preservation, and negative
+  ambiguity/binding/cutoff/hash/mutation/missing/score-leakage cases.
+- Scope: no provider request, model formula, PIT or missing-state change,
+  portfolio wiring, brokerage execution, cloud resource, commit, push, or
+  deployment.
+
+## 2026-07-30: Add migration-free internal V22 operational integration
+
+- Stage 3B acceptance: record only the controller's bounded PostgreSQL 17
+  evidence. The exact V1-to-V22 matrix reported
+  `Database migration acceptance passed.`, `TEST_EXIT=0`, and container exit
+  code zero. Two typed tests passed on a fresh schema-only V22 database, and
+  the rejection test passed alone on another fresh database. Independent
+  relational and Python/persistence audits found no residual blocker.
+- Internal query boundary: add versioned FastAPI contracts for selecting from
+  persisted evidence IDs, reading a sealed selector aggregate, and resolving
+  the single unsuperseded applicability route for a company and routing
+  version. These endpoints are internal-only and do not replace Spring Boot
+  public APIs.
+- Replay boundary: derive selector request identity from canonical content.
+  An exact duplicate loads and revalidates the existing sealed aggregate;
+  conflicting uniqueness failures remain errors. Result hashes bind request
+  and policy identity, selector output, and the full deterministic rejection
+  map, preventing collisions between distinct requests with equal outcomes.
+  A fully verified exact HTTP replay returns 200. A request identity that
+  resolves to incomplete, invalid, unreadable, or mismatching durable state
+  returns the stable 409 integrity contract; clean malformed input remains
+  422.
+- Refresh boundary: bind canonical V22 persistence to the existing execution
+  lease, immutable journal, content-hashed checkpoint, and resume controls.
+  Deterministically project the existing daily refresh plan into canonical
+  adapter requests and preserve its shared price-transport identity. Request,
+  item, run, plan, and checkpoint identity binds the complete durable security
+  and completed-session context. Exact canonical evidence replay reuses its
+  existing immutable row; conflicting reuse fails closed.
+  Fake adapters prove duplicate invocation, partial failure recovery, and
+  `UNKNOWN` fail-closed behavior. FastAPI startup performs no adapter fetch.
+- Provider boundary: Yahoo, EODHD, and future replacements implement one
+  provider-neutral adapter contract. Native field names and licensed payloads
+  terminate inside adapters; downstream selectors and models receive only
+  canonical evidence concepts and Git-safe lineage. Adapter success is
+  nonempty and UUID-unique, every envelope is strictly reparsed, and daily
+  overlap/backfill evidence must fall within the request range whose end is
+  the completed session. Corporate actions bind `effectiveDate`,
+  fundamentals use snapshot/as-of semantics by binding requested `metricCode`
+  and requiring `periodEnd <= endDate` without treating `startDate` as a
+  fiscal-period lower bound, and classification uses explicit field mapping
+  with snapshot semantics: `effectiveFrom` may predate `startDate` but not
+  exceed `endDate`. Non-VALID evidence uses local `effectiveAt` scope without
+  fabricating canonical data; fundamental and classification absence may
+  predate `startDate` but not `endDate`, while event-range absence remains
+  bounded on both sides.
+- Fail-closed domain boundary: Stage 3C provider adapters reject unimplemented
+  domains by default. Market benchmark, sector benchmark, and liquidity
+  evidence must use a separately implemented governed adapter or engine path;
+  listing one of those domains in a descriptor does not authorize pass-through.
+  Request field collections and descriptor domain collections must be immutable
+  tuples, and descriptor members must be canonical `EvidenceDomain` values.
+- Retention decision: defer V23 for the MVP. V22 is sufficient for immutable
+  Git-safe raw lineage and private storage references but does not claim
+  governed physical raw-payload deletion. A future V23 is required only if the
+  product owns retention/deletion governance, including policy binding,
+  deadlines/jurisdiction, legal holds, append-only disposition events, proofs,
+  and chain cardinality. Stage 3C performs no deletion and creates no V23.
+- Verification: the final Stage 3C adapter module reported `33 passed`, and
+  Ruff passed. A fresh disposable PostgreSQL 17 database migrated V1-to-V22
+  from the final deep-immutability snapshot passed all three typed
+  Python/PostgreSQL integration tests in 5.05 seconds and was removed. The
+  complete migration, upgrade, refusal, base, and advanced matrix had already
+  passed on the same unchanged V22 schema. Independent relational and
+  Python/provider/refresh/persistence/API audits reported PASS with no residual
+  blocker. This is bounded test evidence, not business-database deployment or
+  provider execution. A broader run found five unrelated generated-artifact
+  hash-chain failures, and those dated artifacts were not rewritten.
+- Scope: no provider request, public API replacement, business-database
+  deployment, scoring/PIT/missing/conflict change, portfolio or brokerage
+  operation, cloud resource, commit, push, or deployment.
+
+## 2026-07-31: Keep licensed market-data derivatives out of public Git
+
+- Treat access to a personal-use market-data API as insufficient evidence of
+  redistribution or public-display rights.
+- Keep raw provider payloads, provider-native values, reconstructed paths, and
+  numeric performance derivatives in Git-ignored controlled storage.
+- Publish only code, methodology, synthetic fixtures, hashes, versions,
+  timestamps, counts, explicit evidence states, and value-free manifests.
+- Make controlled-data tests skip explicitly in clean clones while preserving
+  pure contract, formula, chronology, and hashing tests.
+- Quarantine prior numeric historical artifacts locally and publish future
+  Tactical manifests under separately named value-free paths.
+- Require a separate commercial license review before any external product
+  displays market data or derived analytics.

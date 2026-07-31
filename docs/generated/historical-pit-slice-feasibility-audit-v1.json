@@ -1,0 +1,1729 @@
+{
+  "artifactType": "HISTORICAL_PIT_SLICE_FEASIBILITY_AUDIT",
+  "schemaVersion": "HISTORICAL-PIT-SLICE-FEASIBILITY-v1.0.0",
+  "auditMode": "STRICTLY_OFFLINE_READ_ONLY",
+  "dataSnapshotId": "beaa9952-9852-4088-9dc3-92047824414b",
+  "snapshotAsOf": "2026-07-29T02:57:08.988871+00:00",
+  "snapshotIngestionCutoff": "2026-07-29T02:57:08.988871+00:00",
+  "universeVersion": "market-intelligence-closed-test-us-v1.0.0",
+  "universeConfigurationHash": "sha256:be29d2c5ae5f1b2f6611d1fc5050782debebe0474574e61fb434077244c15c4d",
+  "closedPool": {
+    "securityCount": 66,
+    "roleCounts": {
+      "INCLUDED": 55,
+      "REFERENCE_ONLY": 2,
+      "EXCLUDED": 9
+    },
+    "survivorshipBiasPresent": true,
+    "claimBoundary": "Historical tests over the current 66-security pool are closed-pool diagnostics and are not survivorship-bias-free."
+  },
+  "evidenceSources": {
+    "historicalPriceCache": {
+      "path": "docs/generated/historical-yahoo-price-cache-20260729T-HISTORICAL-V1-R2-manifest.json",
+      "fileSha256": "E322AC57C00BB4018AC883A2F0EF3461299D7D97725B0791C75EA01846D08E27",
+      "artifactContentHash": "CF50A3994AB3660029AC56F586F8B6CA572EA1654B6B5DF5549152D191B1A0D9",
+      "status": "COMPLETE",
+      "universeVersion": "market-intelligence-closed-test-us-v1.0.0",
+      "verifiedPayloadCount": 56,
+      "plannedSecurityCount": 56,
+      "firstTradingDate": "2014-01-02",
+      "lastTradingDate": "2026-07-28",
+      "adjustmentPolicyVersion": "YAHOO-ADJCLOSE-RATIO-OHLC-v1.0.0",
+      "earliestPayloadAvailableAt": "2026-07-29T22:43:06.150797+00:00",
+      "latestPayloadRetrievedAt": "2026-07-29T22:44:08.605923+00:00",
+      "rawProviderValuesIncluded": false,
+      "evidenceHash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053"
+    },
+    "scoringV3CoveragePreflight": {
+      "path": "docs/generated/scoring-input-v3-coverage-preflight-v1.json",
+      "fileSha256": "19610287140C68D4929C011CCF2E06CB82CF735B4ECF725C1B39F9738EDAFDDF",
+      "artifactContentHash": "68F095D00A576D878EBA0B72216E5CF4E8A57664BFC2425603AAC171DB72EAA7"
+    },
+    "scoringV4OfflineManifest": {
+      "path": "docs/generated/scoring-input-v4-sec-offline-manifest-v2.json",
+      "fileSha256": "DB6698F81EB629A435837A2E13D0729B623CAF6B1FE13C7C3C3F183DDB91344D",
+      "artifactContentHash": "7A125F6B07DC3661965336D05F76A9657EC8C657AA94C9DA6E8E9D652CAF35B0"
+    },
+    "longHorizonV11Readiness": {
+      "path": "docs/generated/long-horizon-v1-1-historical-readiness-2026-07-29.json",
+      "fileSha256": "46352B1539D475F15ABA9B4E8CFE5D8E4E5D4E33AAB2313030578612F1563773",
+      "artifactContentHash": "10ED9DA2C0DD5128361D49860CA55B42BBF44A936598BB42A89A0182F657A390"
+    }
+  },
+  "evidenceSourcesHash": "sha256:5cebb7b538071d9bc5a561863e6d5bd225411d1845d24cdcab091cf4aa19881f",
+  "databaseInventory": {
+    "prices": {
+      "row_count": 33002,
+      "security_count": 61,
+      "earliest_observation": "2025-07-16",
+      "latest_observation": "2026-07-28",
+      "earliest_available_at": "2026-07-26T06:14:28.325159+00:00",
+      "latest_ingested_at": "2026-07-29T02:51:14.320335+00:00",
+      "maximum_revision": 2,
+      "validated_count": 0,
+      "provisional_count": 32906
+    },
+    "classifications": {
+      "row_count": 196,
+      "security_count": 66,
+      "earliest_observation": "1970-01-01",
+      "latest_observation": "2026-07-27",
+      "earliest_available_at": "2026-07-27T21:20:36.777692+00:00",
+      "latest_ingested_at": "2026-07-29T10:04:09.100265+00:00",
+      "missing_lineage_count": 152
+    },
+    "companyProfiles": {
+      "row_count": 44,
+      "security_count": 44,
+      "earliest_observation": "2026-07-27",
+      "latest_observation": "2026-07-27",
+      "earliest_available_at": "2026-07-27T21:20:36.777692+00:00",
+      "latest_ingested_at": "2026-07-29T10:04:09.100265+00:00",
+      "maximum_revision": 1
+    },
+    "listings": {
+      "row_count": 66,
+      "security_count": 66,
+      "earliest_observation": "1970-01-01",
+      "latest_observation": "1970-01-01",
+      "missing_lineage_count": 66,
+      "ticker_change_risk_count": 0
+    },
+    "identifiers": {
+      "row_count": 8,
+      "security_count": 8,
+      "earliest_observation": "1970-01-01",
+      "latest_observation": "1970-01-01",
+      "missing_lineage_count": 8
+    },
+    "corporateActions": {
+      "row_count": 212,
+      "security_count": 52,
+      "earliest_observation": "2025-07-18",
+      "latest_observation": "2026-07-24",
+      "earliest_available_at": "2026-07-29T02:51:56.603411+00:00",
+      "latest_ingested_at": "2026-07-29T02:52:17.771891+00:00",
+      "maximum_revision": 1
+    },
+    "fundamentals": {
+      "row_count": 157641,
+      "security_count": 56,
+      "earliest_observation": "1985-05-31",
+      "latest_observation": "2026-06-30",
+      "earliest_available_at": "2026-07-27T00:39:57.478304+00:00",
+      "latest_ingested_at": "2026-07-29T02:55:19.617893+00:00",
+      "distinct_metric_count": 18,
+      "revised_count": 0
+    },
+    "metrics": {
+      "row_count": 362,
+      "security_count": 66,
+      "earliest_observation": "2026-07-27",
+      "latest_observation": "2026-07-29",
+      "earliest_available_at": "2026-07-28T00:00:00+00:00",
+      "latest_ingested_at": "2026-07-29T02:51:14.320335+00:00",
+      "maximum_revision": 2,
+      "distinct_metric_count": 3
+    },
+    "objectiveProfiles": {
+      "row_count": 187,
+      "security_count": 66,
+      "earliest_observation": "2026-07-28T23:00:00+00:00",
+      "latest_observation": "2026-07-29T02:57:08.988871+00:00",
+      "scored_count": 32
+    },
+    "statuses": {
+      "row_count": 0,
+      "security_count": 0,
+      "earliest_observation": null,
+      "latest_observation": null,
+      "earliest_available_at": null,
+      "latest_ingested_at": null,
+      "maximum_revision": null,
+      "terminal_status_count": 0
+    },
+    "membershipSnapshots": {
+      "snapshot_count": 5,
+      "earliest_snapshot_as_of": "2026-07-25T20:00:00+00:00",
+      "latest_snapshot_as_of": "2026-07-29T02:57:08.988871+00:00"
+    },
+    "inventoryHash": "sha256:7a648879737160b90e2b4c617e52c2591138278985d2ad48e094e3a60c5c688c"
+  },
+  "pitCapability": {
+    "historicalPricePayloadsHashVerified": true,
+    "historicalObservationAvailabilityProvenAtCutoff": false,
+    "historicalMembershipPit": false,
+    "historicalClassificationPit": false,
+    "historicalIdentityAndStatusPit": false,
+    "historicalCorporateActionsPit": false,
+    "historicalObjectiveAndFundamentalsPit": false,
+    "tickerChangeRiskCount": 0,
+    "terminalStatusEvidenceCount": 0
+  },
+  "candidateSliceManifest": {
+    "version": "HISTORICAL-PIT-CANDIDATE-SLICE-MANIFEST-v1.0.0",
+    "seed": 20260729,
+    "selectionPolicy": "FIXED_SEED_STRATIFIED_SESSION_CALENDAR_ONLY_NO_OUTCOME_ACCESS",
+    "sourceSlicePlanVersion": "HISTORICAL-TIME-SLICE-PLAN-v1.1.0",
+    "sourceSlicePlanHash": "EDC98D1BACCAB5ADDCC3D103C18F558EFA0805BBB576695300B33589F5D98C7B",
+    "sourcePriceEvidenceHash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+    "candidateCount": 72,
+    "earliestCandidateCutoff": "2017-06-08",
+    "latestCandidateCutoff": "2026-04-13",
+    "candidates": [
+      {
+        "slice_id": "sha256:b7c0f7f31136678b423d997c",
+        "sample_id": "RANDOM-RECENT_3_TO_9_MONTHS-01",
+        "decision_cutoff": "2025-11-14",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_1W",
+        "horizon_completed_sessions": 5,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:b7c0f7f31136678b423d997c35a323efa88edea7ae1e7807810e5989009241c4"
+      },
+      {
+        "slice_id": "sha256:4b9c32c1e4ae76e81bee3cd6",
+        "sample_id": "RANDOM-RECENT_3_TO_9_MONTHS-01",
+        "decision_cutoff": "2025-11-14",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_1M",
+        "horizon_completed_sessions": 20,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:4b9c32c1e4ae76e81bee3cd66950257e54137819c421ce60fe0f6f876fbc48ed"
+      },
+      {
+        "slice_id": "sha256:576580f0a9cc91d4d06560b6",
+        "sample_id": "RANDOM-RECENT_3_TO_9_MONTHS-01",
+        "decision_cutoff": "2025-11-14",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_3M",
+        "horizon_completed_sessions": 60,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:576580f0a9cc91d4d06560b6ada516aa0c5c5f6aef230a71fe1c7014efca2850"
+      },
+      {
+        "slice_id": "sha256:1170f70d2e4e205da8dd8330",
+        "sample_id": "RANDOM-RECENT_3_TO_9_MONTHS-01",
+        "decision_cutoff": "2025-11-14",
+        "track": "LONG",
+        "horizon_label": "LONG_12M_PLUS",
+        "horizon_completed_sessions": 252,
+        "status": "BLOCKED",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT",
+          "OBJECTIVE_AND_FUNDAMENTAL_INPUTS_NOT_PIT_READY",
+          "OUTCOME_HORIZON_NOT_MATURED"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:1170f70d2e4e205da8dd833087dcc9c966ad81010b7bec37fb02dbbcd9bc66ab"
+      },
+      {
+        "slice_id": "sha256:a3651e4fc491a1688b2dd964",
+        "sample_id": "RANDOM-RECENT_3_TO_9_MONTHS-02",
+        "decision_cutoff": "2025-12-08",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_1W",
+        "horizon_completed_sessions": 5,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:a3651e4fc491a1688b2dd964161c4fc20a346f940d5f0a640f849df59c3801cd"
+      },
+      {
+        "slice_id": "sha256:0c75113a9ab10da223a3ec3f",
+        "sample_id": "RANDOM-RECENT_3_TO_9_MONTHS-02",
+        "decision_cutoff": "2025-12-08",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_1M",
+        "horizon_completed_sessions": 20,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:0c75113a9ab10da223a3ec3f49132f335f1e1b1d18a725e98b2ae6fd83a2b18f"
+      },
+      {
+        "slice_id": "sha256:75bfce25601ab9699f2c8f53",
+        "sample_id": "RANDOM-RECENT_3_TO_9_MONTHS-02",
+        "decision_cutoff": "2025-12-08",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_3M",
+        "horizon_completed_sessions": 60,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:75bfce25601ab9699f2c8f5339c1a6ff6b2bc2b4e254530531d41e888f732bc5"
+      },
+      {
+        "slice_id": "sha256:4ea79a2e1f307e4c02d3086e",
+        "sample_id": "RANDOM-RECENT_3_TO_9_MONTHS-02",
+        "decision_cutoff": "2025-12-08",
+        "track": "LONG",
+        "horizon_label": "LONG_12M_PLUS",
+        "horizon_completed_sessions": 252,
+        "status": "BLOCKED",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT",
+          "OBJECTIVE_AND_FUNDAMENTAL_INPUTS_NOT_PIT_READY",
+          "OUTCOME_HORIZON_NOT_MATURED"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:4ea79a2e1f307e4c02d3086ed1875b82cacbec649e54f15bbfb64d506ba60507"
+      },
+      {
+        "slice_id": "sha256:e7b9eb31a90d7806d77b6d75",
+        "sample_id": "RANDOM-RECENT_3_TO_9_MONTHS-03",
+        "decision_cutoff": "2026-01-14",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_1W",
+        "horizon_completed_sessions": 5,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:e7b9eb31a90d7806d77b6d75e9dc1e100832c608d9176eb90da8f3558836fcb2"
+      },
+      {
+        "slice_id": "sha256:75fe419eec465aaf71f5c911",
+        "sample_id": "RANDOM-RECENT_3_TO_9_MONTHS-03",
+        "decision_cutoff": "2026-01-14",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_1M",
+        "horizon_completed_sessions": 20,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:75fe419eec465aaf71f5c91196737f90ca3abf9214bf5f5fdf28de0fe2d4fa36"
+      },
+      {
+        "slice_id": "sha256:bb397737700a0173488a1b7f",
+        "sample_id": "RANDOM-RECENT_3_TO_9_MONTHS-03",
+        "decision_cutoff": "2026-01-14",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_3M",
+        "horizon_completed_sessions": 60,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:bb397737700a0173488a1b7f344dd6d1bd7341b90a6fa0a1f4c88fa1624a3555"
+      },
+      {
+        "slice_id": "sha256:295d946c7fce3c9c3f717238",
+        "sample_id": "RANDOM-RECENT_3_TO_9_MONTHS-03",
+        "decision_cutoff": "2026-01-14",
+        "track": "LONG",
+        "horizon_label": "LONG_12M_PLUS",
+        "horizon_completed_sessions": 252,
+        "status": "BLOCKED",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT",
+          "OBJECTIVE_AND_FUNDAMENTAL_INPUTS_NOT_PIT_READY",
+          "OUTCOME_HORIZON_NOT_MATURED"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:295d946c7fce3c9c3f71723858b20b83a2262d5f34fc91e3a24671b6ad4add81"
+      },
+      {
+        "slice_id": "sha256:6f2eca55d5719525dab48e10",
+        "sample_id": "RANDOM-RECENT_3_TO_9_MONTHS-04",
+        "decision_cutoff": "2026-02-13",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_1W",
+        "horizon_completed_sessions": 5,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:6f2eca55d5719525dab48e10454467e6aae4f1261194003a807538dde49204c2"
+      },
+      {
+        "slice_id": "sha256:b6e2f8ac60ff42b87205a3a4",
+        "sample_id": "RANDOM-RECENT_3_TO_9_MONTHS-04",
+        "decision_cutoff": "2026-02-13",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_1M",
+        "horizon_completed_sessions": 20,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:b6e2f8ac60ff42b87205a3a4efe600df052aa51b9efa97e43a86db14cf3b6538"
+      },
+      {
+        "slice_id": "sha256:b0024b1dadf61becf37b654f",
+        "sample_id": "RANDOM-RECENT_3_TO_9_MONTHS-04",
+        "decision_cutoff": "2026-02-13",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_3M",
+        "horizon_completed_sessions": 60,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:b0024b1dadf61becf37b654f17e930abf6d7685014300ec5f4837989038e5a38"
+      },
+      {
+        "slice_id": "sha256:f794b4f2f611de114ed93db1",
+        "sample_id": "RANDOM-RECENT_3_TO_9_MONTHS-04",
+        "decision_cutoff": "2026-02-13",
+        "track": "LONG",
+        "horizon_label": "LONG_12M_PLUS",
+        "horizon_completed_sessions": 252,
+        "status": "BLOCKED",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT",
+          "OBJECTIVE_AND_FUNDAMENTAL_INPUTS_NOT_PIT_READY",
+          "OUTCOME_HORIZON_NOT_MATURED"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:f794b4f2f611de114ed93db16a3c7914b419aa4b5af168bc40bc7cccf1c14759"
+      },
+      {
+        "slice_id": "sha256:558078ca8b15d4cb07e625e1",
+        "sample_id": "RANDOM-RECENT_3_TO_9_MONTHS-05",
+        "decision_cutoff": "2026-03-13",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_1W",
+        "horizon_completed_sessions": 5,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:558078ca8b15d4cb07e625e10bef756a12f3c3bfc85e8941a0737ae0a0206ccd"
+      },
+      {
+        "slice_id": "sha256:3ca94d299acaafde981a98c6",
+        "sample_id": "RANDOM-RECENT_3_TO_9_MONTHS-05",
+        "decision_cutoff": "2026-03-13",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_1M",
+        "horizon_completed_sessions": 20,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:3ca94d299acaafde981a98c697b139aedcfcdd5a913017a4ae6076320821e998"
+      },
+      {
+        "slice_id": "sha256:cbb428ac1b0666ea3122f802",
+        "sample_id": "RANDOM-RECENT_3_TO_9_MONTHS-05",
+        "decision_cutoff": "2026-03-13",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_3M",
+        "horizon_completed_sessions": 60,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:cbb428ac1b0666ea3122f802dd8a97f660505f664713d753678ed493e73a38d2"
+      },
+      {
+        "slice_id": "sha256:c27c4720dfe050b7273a24bd",
+        "sample_id": "RANDOM-RECENT_3_TO_9_MONTHS-05",
+        "decision_cutoff": "2026-03-13",
+        "track": "LONG",
+        "horizon_label": "LONG_12M_PLUS",
+        "horizon_completed_sessions": 252,
+        "status": "BLOCKED",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT",
+          "OBJECTIVE_AND_FUNDAMENTAL_INPUTS_NOT_PIT_READY",
+          "OUTCOME_HORIZON_NOT_MATURED"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:c27c4720dfe050b7273a24bd1f253b7cd28740d5ea7f72b0c40d5ab87278f0ec"
+      },
+      {
+        "slice_id": "sha256:ad5ab5256ecfaf5232f64a85",
+        "sample_id": "RANDOM-RECENT_3_TO_9_MONTHS-06",
+        "decision_cutoff": "2026-04-13",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_1W",
+        "horizon_completed_sessions": 5,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:ad5ab5256ecfaf5232f64a85da9ef931af1ccfed1cdc535648c05dc594ea4c1c"
+      },
+      {
+        "slice_id": "sha256:207d0acc1681108abd3b4049",
+        "sample_id": "RANDOM-RECENT_3_TO_9_MONTHS-06",
+        "decision_cutoff": "2026-04-13",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_1M",
+        "horizon_completed_sessions": 20,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:207d0acc1681108abd3b4049767e80d5ea009c59cffe9f6b4edb5f1f7b07e8e6"
+      },
+      {
+        "slice_id": "sha256:736492e8e866271a1fe7a50f",
+        "sample_id": "RANDOM-RECENT_3_TO_9_MONTHS-06",
+        "decision_cutoff": "2026-04-13",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_3M",
+        "horizon_completed_sessions": 60,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:736492e8e866271a1fe7a50faba95b48cf59387a61324790fc4bb9a012610b00"
+      },
+      {
+        "slice_id": "sha256:a5efaed2843e94a4c198b205",
+        "sample_id": "RANDOM-RECENT_3_TO_9_MONTHS-06",
+        "decision_cutoff": "2026-04-13",
+        "track": "LONG",
+        "horizon_label": "LONG_12M_PLUS",
+        "horizon_completed_sessions": 252,
+        "status": "BLOCKED",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT",
+          "OBJECTIVE_AND_FUNDAMENTAL_INPUTS_NOT_PIT_READY",
+          "OUTCOME_HORIZON_NOT_MATURED"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:a5efaed2843e94a4c198b2058f09d02bfe61e9553aca03c33fbddb6c98838ce6"
+      },
+      {
+        "slice_id": "sha256:1b5277052e3cd99e62da5d45",
+        "sample_id": "RANDOM-MEDIUM_1_TO_3_YEARS-01",
+        "decision_cutoff": "2024-01-08",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_1W",
+        "horizon_completed_sessions": 5,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:1b5277052e3cd99e62da5d4566cbeb91367fd475f211e2e7896e65168895d5a2"
+      },
+      {
+        "slice_id": "sha256:8ef9a61068d1ad573dbbffa1",
+        "sample_id": "RANDOM-MEDIUM_1_TO_3_YEARS-01",
+        "decision_cutoff": "2024-01-08",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_1M",
+        "horizon_completed_sessions": 20,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:8ef9a61068d1ad573dbbffa1099cd862b5797af3953d404c82c354aaee2e5e56"
+      },
+      {
+        "slice_id": "sha256:cbe30c6cb85bf02c81165512",
+        "sample_id": "RANDOM-MEDIUM_1_TO_3_YEARS-01",
+        "decision_cutoff": "2024-01-08",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_3M",
+        "horizon_completed_sessions": 60,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:cbe30c6cb85bf02c8116551289122ff3b9785fea2434d9d004acab783b979567"
+      },
+      {
+        "slice_id": "sha256:f402996604742fedd4ca52da",
+        "sample_id": "RANDOM-MEDIUM_1_TO_3_YEARS-01",
+        "decision_cutoff": "2024-01-08",
+        "track": "LONG",
+        "horizon_label": "LONG_12M_PLUS",
+        "horizon_completed_sessions": 252,
+        "status": "BLOCKED",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT",
+          "OBJECTIVE_AND_FUNDAMENTAL_INPUTS_NOT_PIT_READY"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:f402996604742fedd4ca52da4a061f9b3c2f95e940c05b506a56d146c5ef08cc"
+      },
+      {
+        "slice_id": "sha256:fa26c8d5b8dc61d987c79a51",
+        "sample_id": "RANDOM-MEDIUM_1_TO_3_YEARS-02",
+        "decision_cutoff": "2024-05-14",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_1W",
+        "horizon_completed_sessions": 5,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:fa26c8d5b8dc61d987c79a510c4fbf4d47d3d96ff96fc23872f3bf417153e151"
+      },
+      {
+        "slice_id": "sha256:9152256f9b5d586855716ea4",
+        "sample_id": "RANDOM-MEDIUM_1_TO_3_YEARS-02",
+        "decision_cutoff": "2024-05-14",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_1M",
+        "horizon_completed_sessions": 20,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:9152256f9b5d586855716ea40c4e8b5df2b078a43e507fb05e697e5681bdc104"
+      },
+      {
+        "slice_id": "sha256:737d8a2abddc8d4288bfe17e",
+        "sample_id": "RANDOM-MEDIUM_1_TO_3_YEARS-02",
+        "decision_cutoff": "2024-05-14",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_3M",
+        "horizon_completed_sessions": 60,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:737d8a2abddc8d4288bfe17e19172f45671720b224989d141e08f769df9207de"
+      },
+      {
+        "slice_id": "sha256:e0b297478c30b92194a4ea8e",
+        "sample_id": "RANDOM-MEDIUM_1_TO_3_YEARS-02",
+        "decision_cutoff": "2024-05-14",
+        "track": "LONG",
+        "horizon_label": "LONG_12M_PLUS",
+        "horizon_completed_sessions": 252,
+        "status": "BLOCKED",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT",
+          "OBJECTIVE_AND_FUNDAMENTAL_INPUTS_NOT_PIT_READY"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:e0b297478c30b92194a4ea8e7918fe78441e529205e3e70f95a40ca6a5feb666"
+      },
+      {
+        "slice_id": "sha256:acd3673f6b3790ed852fc2a0",
+        "sample_id": "RANDOM-MEDIUM_1_TO_3_YEARS-03",
+        "decision_cutoff": "2024-07-18",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_1W",
+        "horizon_completed_sessions": 5,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:acd3673f6b3790ed852fc2a053a9247881e8a66829053df4cda064a6da663056"
+      },
+      {
+        "slice_id": "sha256:ae12a1848289ab1bc5a493c7",
+        "sample_id": "RANDOM-MEDIUM_1_TO_3_YEARS-03",
+        "decision_cutoff": "2024-07-18",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_1M",
+        "horizon_completed_sessions": 20,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:ae12a1848289ab1bc5a493c7aeca1d170aaa6b1b344a90bb0fdb65b75779080e"
+      },
+      {
+        "slice_id": "sha256:3ea6798a23f68417a7415535",
+        "sample_id": "RANDOM-MEDIUM_1_TO_3_YEARS-03",
+        "decision_cutoff": "2024-07-18",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_3M",
+        "horizon_completed_sessions": 60,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:3ea6798a23f68417a741553511d6d7fe0a2ba18d691a525bef014c08908f0791"
+      },
+      {
+        "slice_id": "sha256:625ab777056f92d3c41fe9b3",
+        "sample_id": "RANDOM-MEDIUM_1_TO_3_YEARS-03",
+        "decision_cutoff": "2024-07-18",
+        "track": "LONG",
+        "horizon_label": "LONG_12M_PLUS",
+        "horizon_completed_sessions": 252,
+        "status": "BLOCKED",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT",
+          "OBJECTIVE_AND_FUNDAMENTAL_INPUTS_NOT_PIT_READY"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:625ab777056f92d3c41fe9b394fbd34dd8dde83a647b238dad8c3e3a510c6132"
+      },
+      {
+        "slice_id": "sha256:6af4029727e1277ff7a57e96",
+        "sample_id": "RANDOM-MEDIUM_1_TO_3_YEARS-04",
+        "decision_cutoff": "2024-10-16",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_1W",
+        "horizon_completed_sessions": 5,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:6af4029727e1277ff7a57e96e30f4e80e2276ba86935d9504243bfd5b9ea053f"
+      },
+      {
+        "slice_id": "sha256:bfffd74420ef0dae32afe622",
+        "sample_id": "RANDOM-MEDIUM_1_TO_3_YEARS-04",
+        "decision_cutoff": "2024-10-16",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_1M",
+        "horizon_completed_sessions": 20,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:bfffd74420ef0dae32afe6221823a891779d4e785017425774cfe9036998f2fd"
+      },
+      {
+        "slice_id": "sha256:8c338f2b7a3648e7eb7e1ae1",
+        "sample_id": "RANDOM-MEDIUM_1_TO_3_YEARS-04",
+        "decision_cutoff": "2024-10-16",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_3M",
+        "horizon_completed_sessions": 60,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:8c338f2b7a3648e7eb7e1ae10feb1a078214871b1989b17af5d7f0d8c5132866"
+      },
+      {
+        "slice_id": "sha256:12b18ac166552f7fdf98275d",
+        "sample_id": "RANDOM-MEDIUM_1_TO_3_YEARS-04",
+        "decision_cutoff": "2024-10-16",
+        "track": "LONG",
+        "horizon_label": "LONG_12M_PLUS",
+        "horizon_completed_sessions": 252,
+        "status": "BLOCKED",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT",
+          "OBJECTIVE_AND_FUNDAMENTAL_INPUTS_NOT_PIT_READY"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:12b18ac166552f7fdf98275d93b5c24f402af3bc4fa0ff47d3b4dd9786a8fc0c"
+      },
+      {
+        "slice_id": "sha256:63c7806cbe0fa06e33044171",
+        "sample_id": "RANDOM-MEDIUM_1_TO_3_YEARS-05",
+        "decision_cutoff": "2025-04-11",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_1W",
+        "horizon_completed_sessions": 5,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:63c7806cbe0fa06e3304417139e2135cccbfb7fd73e0be51b4636004b21db5d9"
+      },
+      {
+        "slice_id": "sha256:dbb599a44829ebcea7a8b59a",
+        "sample_id": "RANDOM-MEDIUM_1_TO_3_YEARS-05",
+        "decision_cutoff": "2025-04-11",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_1M",
+        "horizon_completed_sessions": 20,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:dbb599a44829ebcea7a8b59aef03cb6fa82525d8e53c014b8e4d023aeb34b291"
+      },
+      {
+        "slice_id": "sha256:f1e06afa25ce83339ca0c573",
+        "sample_id": "RANDOM-MEDIUM_1_TO_3_YEARS-05",
+        "decision_cutoff": "2025-04-11",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_3M",
+        "horizon_completed_sessions": 60,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:f1e06afa25ce83339ca0c5730e06a0ed83c402c377eddd4896a82fce497075cf"
+      },
+      {
+        "slice_id": "sha256:29439ec0dbd1678118fbff9d",
+        "sample_id": "RANDOM-MEDIUM_1_TO_3_YEARS-05",
+        "decision_cutoff": "2025-04-11",
+        "track": "LONG",
+        "horizon_label": "LONG_12M_PLUS",
+        "horizon_completed_sessions": 252,
+        "status": "BLOCKED",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT",
+          "OBJECTIVE_AND_FUNDAMENTAL_INPUTS_NOT_PIT_READY"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:29439ec0dbd1678118fbff9d8fb78329ffa3615ced190e8010f61e32d2817a08"
+      },
+      {
+        "slice_id": "sha256:147720ca56e95d64653918da",
+        "sample_id": "RANDOM-MEDIUM_1_TO_3_YEARS-06",
+        "decision_cutoff": "2025-06-02",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_1W",
+        "horizon_completed_sessions": 5,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:147720ca56e95d64653918da766892ff7c2a699c8092d94551d93acd66afe9a6"
+      },
+      {
+        "slice_id": "sha256:0bb152e9c198400004c40c02",
+        "sample_id": "RANDOM-MEDIUM_1_TO_3_YEARS-06",
+        "decision_cutoff": "2025-06-02",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_1M",
+        "horizon_completed_sessions": 20,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:0bb152e9c198400004c40c025e938c9434e66126cf25c4cba99b48b97f225157"
+      },
+      {
+        "slice_id": "sha256:f421173d4a3dd66f2943d2cc",
+        "sample_id": "RANDOM-MEDIUM_1_TO_3_YEARS-06",
+        "decision_cutoff": "2025-06-02",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_3M",
+        "horizon_completed_sessions": 60,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:f421173d4a3dd66f2943d2cc8df97acabd98464a50e440dbce93cce3616f2a39"
+      },
+      {
+        "slice_id": "sha256:be032c75e6ebe01f09051afa",
+        "sample_id": "RANDOM-MEDIUM_1_TO_3_YEARS-06",
+        "decision_cutoff": "2025-06-02",
+        "track": "LONG",
+        "horizon_label": "LONG_12M_PLUS",
+        "horizon_completed_sessions": 252,
+        "status": "BLOCKED",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT",
+          "OBJECTIVE_AND_FUNDAMENTAL_INPUTS_NOT_PIT_READY"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:be032c75e6ebe01f09051afa80a3a923f6e2537ed1961ee27ff641b8a0e68c21"
+      },
+      {
+        "slice_id": "sha256:c87cebe3a74819d3d8dbb44b",
+        "sample_id": "RANDOM-OLDER_4_TO_10_YEARS-01",
+        "decision_cutoff": "2017-06-08",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_1W",
+        "horizon_completed_sessions": 5,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:c87cebe3a74819d3d8dbb44beed27fb8d8a3add42979a391402a811d3630e249"
+      },
+      {
+        "slice_id": "sha256:c799597e5ceea5e4814882e5",
+        "sample_id": "RANDOM-OLDER_4_TO_10_YEARS-01",
+        "decision_cutoff": "2017-06-08",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_1M",
+        "horizon_completed_sessions": 20,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:c799597e5ceea5e4814882e5df3ff161b5acdc82f078283f79d12812af390235"
+      },
+      {
+        "slice_id": "sha256:31fc7c0d4f65636775b995f7",
+        "sample_id": "RANDOM-OLDER_4_TO_10_YEARS-01",
+        "decision_cutoff": "2017-06-08",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_3M",
+        "horizon_completed_sessions": 60,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:31fc7c0d4f65636775b995f77286988d73a3b3458211f6deb0fc4b28931b8391"
+      },
+      {
+        "slice_id": "sha256:5fd5e8cdd06ee8082c4324be",
+        "sample_id": "RANDOM-OLDER_4_TO_10_YEARS-01",
+        "decision_cutoff": "2017-06-08",
+        "track": "LONG",
+        "horizon_label": "LONG_12M_PLUS",
+        "horizon_completed_sessions": 252,
+        "status": "BLOCKED",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT",
+          "OBJECTIVE_AND_FUNDAMENTAL_INPUTS_NOT_PIT_READY"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:5fd5e8cdd06ee8082c4324be2fd10db34358a7fc2511bfd498b9b84fe3257869"
+      },
+      {
+        "slice_id": "sha256:e192a58ac24130262c616bcc",
+        "sample_id": "RANDOM-OLDER_4_TO_10_YEARS-02",
+        "decision_cutoff": "2017-10-16",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_1W",
+        "horizon_completed_sessions": 5,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:e192a58ac24130262c616bcccc35bedac98ce33877a527abcb775113f77b4456"
+      },
+      {
+        "slice_id": "sha256:03a1f33451dce70df318e1b5",
+        "sample_id": "RANDOM-OLDER_4_TO_10_YEARS-02",
+        "decision_cutoff": "2017-10-16",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_1M",
+        "horizon_completed_sessions": 20,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:03a1f33451dce70df318e1b5a613ef453dc6c2d349fc1922101c824aa02ef042"
+      },
+      {
+        "slice_id": "sha256:c27d9a3e295ba2dfdb9f075c",
+        "sample_id": "RANDOM-OLDER_4_TO_10_YEARS-02",
+        "decision_cutoff": "2017-10-16",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_3M",
+        "horizon_completed_sessions": 60,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:c27d9a3e295ba2dfdb9f075cc543a4f0e2de2138bbf427ed817559306a97e9dc"
+      },
+      {
+        "slice_id": "sha256:b88eaf7a5303167ed50df179",
+        "sample_id": "RANDOM-OLDER_4_TO_10_YEARS-02",
+        "decision_cutoff": "2017-10-16",
+        "track": "LONG",
+        "horizon_label": "LONG_12M_PLUS",
+        "horizon_completed_sessions": 252,
+        "status": "BLOCKED",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT",
+          "OBJECTIVE_AND_FUNDAMENTAL_INPUTS_NOT_PIT_READY"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:b88eaf7a5303167ed50df179fcb85494085dd3cd0198d18e000db24690eb28fd"
+      },
+      {
+        "slice_id": "sha256:3ddf2bda491bdc6769140d42",
+        "sample_id": "RANDOM-OLDER_4_TO_10_YEARS-03",
+        "decision_cutoff": "2017-11-24",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_1W",
+        "horizon_completed_sessions": 5,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:3ddf2bda491bdc6769140d420b9c0cdbaf7b1139a368efa58856a77017771f00"
+      },
+      {
+        "slice_id": "sha256:c557c93a585e21cea3e37b10",
+        "sample_id": "RANDOM-OLDER_4_TO_10_YEARS-03",
+        "decision_cutoff": "2017-11-24",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_1M",
+        "horizon_completed_sessions": 20,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:c557c93a585e21cea3e37b10292a14a9f57f112e37dd145b5780910ceb7021bb"
+      },
+      {
+        "slice_id": "sha256:8ccfba9bccefbc21c5cd0294",
+        "sample_id": "RANDOM-OLDER_4_TO_10_YEARS-03",
+        "decision_cutoff": "2017-11-24",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_3M",
+        "horizon_completed_sessions": 60,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:8ccfba9bccefbc21c5cd029429ce1f1db0a29c68d41e917b9d8e7af79b122925"
+      },
+      {
+        "slice_id": "sha256:0e196ab7d151665be2ab5c38",
+        "sample_id": "RANDOM-OLDER_4_TO_10_YEARS-03",
+        "decision_cutoff": "2017-11-24",
+        "track": "LONG",
+        "horizon_label": "LONG_12M_PLUS",
+        "horizon_completed_sessions": 252,
+        "status": "BLOCKED",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT",
+          "OBJECTIVE_AND_FUNDAMENTAL_INPUTS_NOT_PIT_READY"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:0e196ab7d151665be2ab5c381a7a6433623dc118070c6cd48a2f079846cb8393"
+      },
+      {
+        "slice_id": "sha256:02e4f747af02794381e34537",
+        "sample_id": "RANDOM-OLDER_4_TO_10_YEARS-04",
+        "decision_cutoff": "2019-03-20",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_1W",
+        "horizon_completed_sessions": 5,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:02e4f747af02794381e34537807f23c00c4064d3dfc37a6f4bc7e782aedb6732"
+      },
+      {
+        "slice_id": "sha256:3ba0bd668ce99c7a68567733",
+        "sample_id": "RANDOM-OLDER_4_TO_10_YEARS-04",
+        "decision_cutoff": "2019-03-20",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_1M",
+        "horizon_completed_sessions": 20,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:3ba0bd668ce99c7a68567733217f4f435323a56bd1567c1471f9fbbd308086d0"
+      },
+      {
+        "slice_id": "sha256:7dbf6636c099def3b304bafa",
+        "sample_id": "RANDOM-OLDER_4_TO_10_YEARS-04",
+        "decision_cutoff": "2019-03-20",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_3M",
+        "horizon_completed_sessions": 60,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:7dbf6636c099def3b304bafaef43cc39a0e1590a3f62e3c17ba1280613181e60"
+      },
+      {
+        "slice_id": "sha256:c34d5ee7111b2b2662a958d4",
+        "sample_id": "RANDOM-OLDER_4_TO_10_YEARS-04",
+        "decision_cutoff": "2019-03-20",
+        "track": "LONG",
+        "horizon_label": "LONG_12M_PLUS",
+        "horizon_completed_sessions": 252,
+        "status": "BLOCKED",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT",
+          "OBJECTIVE_AND_FUNDAMENTAL_INPUTS_NOT_PIT_READY"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:c34d5ee7111b2b2662a958d4f3e37730ee990475bf4af73551d7b52b2c535b8f"
+      },
+      {
+        "slice_id": "sha256:30d33e7fc870b2fd86b0c90d",
+        "sample_id": "RANDOM-OLDER_4_TO_10_YEARS-05",
+        "decision_cutoff": "2019-11-27",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_1W",
+        "horizon_completed_sessions": 5,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:30d33e7fc870b2fd86b0c90dd6a259ad3cf7c15f1ebbeb85f08ac6dd975836e8"
+      },
+      {
+        "slice_id": "sha256:f0742732aed50d05ff0dde80",
+        "sample_id": "RANDOM-OLDER_4_TO_10_YEARS-05",
+        "decision_cutoff": "2019-11-27",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_1M",
+        "horizon_completed_sessions": 20,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:f0742732aed50d05ff0dde80576252485610a44ce6f681e4ff40962b72c46b80"
+      },
+      {
+        "slice_id": "sha256:0a3a7946e873a761f4881714",
+        "sample_id": "RANDOM-OLDER_4_TO_10_YEARS-05",
+        "decision_cutoff": "2019-11-27",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_3M",
+        "horizon_completed_sessions": 60,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:0a3a7946e873a761f4881714b414eb8dfd860d15b3d3f114b046d33c266a4ee3"
+      },
+      {
+        "slice_id": "sha256:e081c1bc2bcd22eeb46d2475",
+        "sample_id": "RANDOM-OLDER_4_TO_10_YEARS-05",
+        "decision_cutoff": "2019-11-27",
+        "track": "LONG",
+        "horizon_label": "LONG_12M_PLUS",
+        "horizon_completed_sessions": 252,
+        "status": "BLOCKED",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT",
+          "OBJECTIVE_AND_FUNDAMENTAL_INPUTS_NOT_PIT_READY"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:e081c1bc2bcd22eeb46d2475953918675297e05c7883c6c201938a92b6a5f028"
+      },
+      {
+        "slice_id": "sha256:1e3f09bdaf1cc83eb659eb06",
+        "sample_id": "RANDOM-OLDER_4_TO_10_YEARS-06",
+        "decision_cutoff": "2021-11-02",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_1W",
+        "horizon_completed_sessions": 5,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:1e3f09bdaf1cc83eb659eb063cf607c61b17306ef7836f6cc24b585f014095d4"
+      },
+      {
+        "slice_id": "sha256:85921fdae2eccb87a96b9a6c",
+        "sample_id": "RANDOM-OLDER_4_TO_10_YEARS-06",
+        "decision_cutoff": "2021-11-02",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_1M",
+        "horizon_completed_sessions": 20,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:85921fdae2eccb87a96b9a6c2d0b18ca20d3c18f662add4a1d0990b8a2f04f07"
+      },
+      {
+        "slice_id": "sha256:12043728d77ea9fa6044ce45",
+        "sample_id": "RANDOM-OLDER_4_TO_10_YEARS-06",
+        "decision_cutoff": "2021-11-02",
+        "track": "TACTICAL",
+        "horizon_label": "TACTICAL_3M",
+        "horizon_completed_sessions": 60,
+        "status": "DIAGNOSTIC_ONLY",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "EX_POST_PRICE_ONLY_CLOSED_POOL_DIAGNOSTIC",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:12043728d77ea9fa6044ce45c005ecd49aca19f540ea15b07b0bc7748797fedc"
+      },
+      {
+        "slice_id": "sha256:b710fa28680732eae5203c98",
+        "sample_id": "RANDOM-OLDER_4_TO_10_YEARS-06",
+        "decision_cutoff": "2021-11-02",
+        "track": "LONG",
+        "horizon_label": "LONG_12M_PLUS",
+        "horizon_completed_sessions": 252,
+        "status": "BLOCKED",
+        "reason_codes": [
+          "CLOSED_POOL_SURVIVORSHIP_BIAS",
+          "CORPORATE_ACTION_PUBLICATION_LINEAGE_NOT_PIT",
+          "DELISTING_AND_TICKER_CHANGE_RISK_INCOMPLETE",
+          "HISTORICAL_CLASSIFICATION_COHORT_NOT_PIT",
+          "HISTORICAL_IDENTITY_LINEAGE_INCOMPLETE",
+          "HISTORICAL_PRICE_AVAILABILITY_NOT_PIT",
+          "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_PIT",
+          "OBJECTIVE_AND_FUNDAMENTAL_INPUTS_NOT_PIT_READY"
+        ],
+        "source_evidence_hash": "sha256:5b69c434be4327d998299cf164b5f36f206aa28bdc755fcf0885d8848bfbd053",
+        "slice_hash": "sha256:b710fa28680732eae5203c98acb956ca54ef7baa6beaab13c09e20e7ff4b9ed1"
+      }
+    ],
+    "manifestHash": "sha256:621e261957c5caf1153aa718d352905d7b052ff97891251d225944307a53f44b"
+  },
+  "summary": {
+    "statusCounts": {
+      "FORMAL_PIT_ELIGIBLE": 0,
+      "DIAGNOSTIC_ONLY": 54,
+      "BLOCKED": 18
+    },
+    "trackStatusCounts": {
+      "TACTICAL": {
+        "FORMAL_PIT_ELIGIBLE": 0,
+        "DIAGNOSTIC_ONLY": 54,
+        "BLOCKED": 0
+      },
+      "LONG": {
+        "FORMAL_PIT_ELIGIBLE": 0,
+        "DIAGNOSTIC_ONLY": 0,
+        "BLOCKED": 18
+      }
+    },
+    "formalPitEligibleSliceCount": 0,
+    "earliestAvailableCandidateCutoff": "2017-06-08",
+    "latestAvailableCandidateCutoff": "2026-04-13",
+    "priceEvidenceFirstDate": "2014-01-02",
+    "priceEvidenceLastDate": "2026-07-28"
+  },
+  "methodologyBoundaries": {
+    "modelExecuted": false,
+    "scoresOrRanksComputed": false,
+    "futureOutcomeValuesReadForSelection": false,
+    "providerNetworkRequests": 0,
+    "databaseWrites": 0,
+    "automaticTradingAuthorized": false,
+    "rawProviderValuesIncluded": false
+  },
+  "artifactContentHash": "sha256:1e2ba049eb94c8a87cd72f0b07df8a8716c838561bdc1b027fde6ad9a6fdfa13"
+}

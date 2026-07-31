@@ -1,0 +1,85 @@
+{
+  "artifactType": "MODEL_VALIDATION_GOVERNANCE",
+  "schemaVersion": "MODEL-VALIDATION-GOVERNANCE-v1.0.0",
+  "effectiveDate": "2026-07-29",
+  "observedHistoricalEvidence": {
+    "evaluationRole": "DEVELOPMENT_OBSERVED",
+    "untouchedHoldoutAvailable": false,
+    "tacticalArtifact": {
+      "path": "docs/generated/tactical-historical-stratified-validation-v1-1-2026-07-29.json",
+      "fileSha256": "90A93563A9B4B087FF71FF33074D4D16C160476450E423E02A20976AAB298880",
+      "terminalStatus": "MIXED_OR_UNFAVORABLE"
+    },
+    "longHorizonArtifact": {
+      "path": "docs/generated/long-horizon-historical-stratified-validation-v1-4-2026-07-29.json",
+      "fileSha256": "B88253CF9F04FF33C25EFD2DE79BE6A516AF03DC3A44271A26B1236E7941F058",
+      "terminalStatus": "UNFAVORABLE"
+    },
+    "sourceManifest": {
+      "path": "docs/generated/historical-yahoo-price-cache-20260729T-HISTORICAL-V1-R2-manifest.json",
+      "fileSha256": "E322AC57C00BB4018AC883A2F0EF3461299D7D97725B0791C75EA01846D08E27"
+    }
+  },
+  "evidenceDimensions": {
+    "availability": [
+      "PROSPECTIVE_SEALED",
+      "PIT_VERIFIED",
+      "CONSERVATIVE_LAG_CURRENT_REVISION",
+      "CURRENT_REVISION_RETROSPECTIVE",
+      "UNPROVEN"
+    ],
+    "universe": [
+      "HISTORICAL_MEMBERSHIP",
+      "PROSPECTIVE_FROZEN_UNIVERSE",
+      "CURRENT_UNIVERSE_RETROSPECTIVE",
+      "UNPROVEN"
+    ],
+    "outcomeDependence": [
+      "NON_OVERLAPPING",
+      "PURGED_BLOCK",
+      "OVERLAPPING_DIAGNOSTIC"
+    ],
+    "evaluationRole": [
+      "DEVELOPMENT_OBSERVED",
+      "WALK_FORWARD_OUTER_FOLD",
+      "SEALED_VALIDATION",
+      "UNTOUCHED_HOLDOUT",
+      "PROSPECTIVE_FORWARD"
+    ],
+    "priceAction": [
+      "AS_OF_ACTION_LEDGER",
+      "EX_POST_TOTAL_RETURN_ADJUSTED",
+      "UNPROVEN"
+    ]
+  },
+  "claimCeilings": [
+    "BLOCKED",
+    "DIAGNOSTIC_ONLY",
+    "PROVISIONAL_ONLY",
+    "VALIDATION_ELIGIBLE"
+  ],
+  "allowedTerminalStatuses": [
+    "VALIDATED",
+    "PROVISIONALLY_VALIDATED",
+    "MIXED",
+    "NOT_VALIDATED",
+    "INSUFFICIENT_EVIDENCE",
+    "BLOCKED_BY_DATA"
+  ],
+  "freezeRequirements": {
+    "completeFrozenPopulationRequired": true,
+    "ordinaryIidBootstrapOnOverlappingOutcomesFormal": false,
+    "tacticalMaximumHorizonSessions": 60,
+    "longHorizonMaximumHorizonSessions": 252,
+    "purgeAtLeastMaximumHorizon": true,
+    "embargoAtLeastMaximumHorizon": true,
+    "newVersionRequiredAfterContractChange": true,
+    "aiMayAffectDeterministicFields": false
+  },
+  "forwardBoundary": {
+    "existingForwardV1RemainsImmutable": true,
+    "newForwardV2PreregistrationRequired": true,
+    "prospectiveOutcomesMayRewritePriorDecisions": false
+  },
+  "artifactContentHash": "27453FCE7EF859E0EAADBF4426D0D26C142EE2118EDD9CACF9F0462A05031752"
+}

@@ -1,0 +1,53 @@
+{
+  "artifactType": "PROSPECTIVE_READINESS_AND_ENROLLMENT_CONTROLLER",
+  "schemaVersion": "PROSPECTIVE-READINESS-AND-ENROLLMENT-CONTROLLER-v1.0.0",
+  "status": "BLOCKED",
+  "blockedReasons": [
+    "ACTION_ADJUSTMENT_RECONCILIATION_INCOMPLETE",
+    "COMMON_COMPLETED_SESSION_MISMATCH",
+    "COMPLETED_SESSION_DUAL_CALENDAR_EVIDENCE_MISSING",
+    "DECISION_MANIFEST_NOT_READY",
+    "DECISION_NOT_STRICTLY_POST_PREREGISTRATION",
+    "DECISION_TIME_ADTV_EVIDENCE_INCOMPLETE",
+    "EXECUTION_EVIDENCE_PREFLIGHT_ONLY",
+    "FUTURE_PRICE_EXECUTION_NOT_COMPLETE",
+    "LEGACY_PRE_PREREG_DECISION_UPGRADE_FORBIDDEN",
+    "PRICE_PROMOTION_DECISIONS_INCOMPLETE",
+    "PURE_QUALITY_OBJECTIVE_COVERAGE_INSUFFICIENT",
+    "PURE_VALUE_OBJECTIVE_COVERAGE_INSUFFICIENT",
+    "RAW_TRANSPORT_BINDING_INCOMPLETE",
+    "SECTOR_BENCHMARK_MAPPING_INCOMPLETE",
+    "SIX_BENCHMARK_V2_1_NOT_ALL_AVAILABLE"
+  ],
+  "parentPreregistrationHash": "sha256:cb63d2600b42c9003be8a99a76de967e5921ef68440bcd3a0d6dd8934efac966",
+  "benchmarkPreregistrationHash": "sha256:5356f9ad16ff246e4f5565daee8316a9fae56f94bc126593bd10adec7c62d5a4",
+  "preregistrationSealHash": "sha256:8f6c3232f9ca5f2ace25f770c447c1d3bae2b17205151dc93fcc9b30cf15e889",
+  "decisionManifestHash": "sha256:6afcfa078cafaa16dacf302d9cd71a63c586f0f1d8b5a157eaf7f0aab3247b30",
+  "futurePriceExecutionHash": "sha256:e591f754a32cc1f1425cb5430978782096a12bba4d1dcc29e4eefc2ef12ad44e",
+  "benchmarkManifestHash": "sha256:4a54add24c36bb5c63821f5228bb392c354719f9a501e9d710d270412d26910b",
+  "benchmarkBundleHash": "sha256:4a54add24c36bb5c63821f5228bb392c354719f9a501e9d710d270412d26910b",
+  "objectiveCoverageAuditHash": "sha256:e81249cc0b12114f22e0737546f576a2539ada9d5888aa0c012c829076a89cf5",
+  "commonCompletedSession": "2026-07-30",
+  "stableSecurityCount": 66,
+  "refreshableSecurityCount": 57,
+  "referenceOnlySymbols": [
+    "SPY",
+    "XLK"
+  ],
+  "benchmarkKindsObserved": [
+    "EQUAL_WEIGHT",
+    "PURE_MOMENTUM",
+    "PURE_QUALITY",
+    "PURE_VALUE",
+    "SECTOR",
+    "SPY"
+  ],
+  "aiUsedForDeterministicFields": false,
+  "providerNetworkRequestsExecuted": 0,
+  "databaseWritesExecuted": 0,
+  "enrollmentExecuted": false,
+  "scoresOrRanksComputed": false,
+  "automaticTradingAuthorized": false,
+  "rawProviderValuesIncluded": false,
+  "artifactContentHash": "sha256:b2228bf54a3e5c3cfda10e99e27fdfe016ed83329c2b3fd59217de28566b691e"
+}

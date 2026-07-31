@@ -17,6 +17,7 @@ import java.util.List;
 import java.util.UUID;
 
 import com.xiaofei.equity.marketintelligence.MarketIntelligenceContract.MarketIntelligenceFacets;
+import com.xiaofei.equity.marketintelligence.MarketIntelligenceContract.EligibilityRecoveryStatusResponse;
 import com.xiaofei.equity.marketintelligence.MarketIntelligenceContract.ProfileResponse;
 import com.xiaofei.equity.marketintelligence.MarketIntelligenceContract.RankMetric;
 import com.xiaofei.equity.marketintelligence.MarketIntelligenceContract.RunState;
@@ -236,6 +237,51 @@ class MarketIntelligenceControllerTests {
 		verify(analyticsClient).getLatestProfile(SECURITY_ID, asOf);
 		verify(analyticsClient).searchSecurities(
 				"AAP", SNAPSHOT_ID, "cursor-2", 25);
+	}
+
+	@Test
+	void exposesEligibilityRecoveryStatusOnlyAfterClosedTestIdentityResolution()
+			throws Exception {
+		Instant asOf = Instant.parse("2026-07-29T02:57:08.988871Z");
+		var mapper = JsonMapper.builder().findAndAddModules().build();
+		EligibilityRecoveryStatusResponse response = mapper.readValue(
+				MarketIntelligenceContractTests.eligibilityResponseJson(),
+				EligibilityRecoveryStatusResponse.class);
+		when(analyticsClient.getLatestEligibilityRecoveryStatus(
+				SNAPSHOT_ID,
+				"market-intelligence-closed-test-us-v1.0.0",
+				asOf))
+			.thenReturn(response);
+
+		mockMvc.perform(get(
+					"/api/v1/market-intelligence/"
+							+ "eligibility-recovery/status/latest")
+				.header(ClosedTestIdentityResolver.IDENTITY_HEADER, "tester-one")
+				.queryParam("dataSnapshotId", SNAPSHOT_ID.toString())
+				.queryParam(
+						"universeVersion",
+						"market-intelligence-closed-test-us-v1.0.0")
+				.queryParam("asOf", asOf.toString()))
+			.andExpect(status().isOk())
+			.andExpect(jsonPath("$.status").value("READY_FOR_CONFIRMATION"))
+			.andExpect(jsonPath("$.currentEligibleCount").value(6))
+			.andExpect(jsonPath("$.frozenMinimumEligibleCount").value(20))
+			.andExpect(jsonPath("$.profileCount").value(66))
+			.andExpect(jsonPath("$.resultCount").value(66))
+			.andExpect(jsonPath("$.blockerSummary[0].category")
+					.value("MISSING_REQUIRED_EVIDENCE"))
+			.andExpect(jsonPath("$.freshness[0].datasetCode")
+					.value("FUNDAMENTALS"))
+			.andExpect(jsonPath("$.objectiveRatingVersion")
+					.value("Objective-Rating-v1"))
+			.andExpect(jsonPath("$.networkRequestsExecuted").value(false))
+			.andExpect(jsonPath("$.scoresOrRanksGenerated").value(false));
+
+		verify(identityResolver).resolve("tester-one");
+		verify(analyticsClient).getLatestEligibilityRecoveryStatus(
+				SNAPSHOT_ID,
+				"market-intelligence-closed-test-us-v1.0.0",
+				asOf);
 	}
 
 	@Test

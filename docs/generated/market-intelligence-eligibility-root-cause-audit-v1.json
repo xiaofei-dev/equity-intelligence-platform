@@ -1,0 +1,3852 @@
+{
+  "actionability": {
+    "actionableSymbols": [
+      "AAPL",
+      "ABT",
+      "ACN",
+      "ADP",
+      "AMZN",
+      "APD",
+      "AVGO",
+      "CALM",
+      "CAT",
+      "CL",
+      "COST",
+      "CROX",
+      "CSCO",
+      "DE",
+      "DIS",
+      "DUK",
+      "ECL",
+      "ELF",
+      "ETN",
+      "EXPO",
+      "FIX",
+      "GOOGL",
+      "HD",
+      "HON",
+      "IBM",
+      "JNJ",
+      "KO",
+      "LIN",
+      "LOW",
+      "MCD",
+      "MCK",
+      "MDT",
+      "META",
+      "MSFT",
+      "NEE",
+      "NFLX",
+      "NKE",
+      "NVDA",
+      "OLED",
+      "ORCL",
+      "PEP",
+      "PG",
+      "PLAB",
+      "SAIA",
+      "SBUX",
+      "SHW",
+      "SO",
+      "SYK",
+      "TGT",
+      "TMO",
+      "UFPI",
+      "UNP",
+      "UPS",
+      "WDFC",
+      "WMT"
+    ],
+    "nonActionableTerminalSymbols": [
+      "AAPL",
+      "ABT",
+      "ACN",
+      "ADP",
+      "AMZN",
+      "APD",
+      "AVGO",
+      "CALM",
+      "CAT",
+      "CL",
+      "COST",
+      "CROX",
+      "CSCO",
+      "DE",
+      "DIS",
+      "DUK",
+      "ECL",
+      "ELF",
+      "ETN",
+      "EXPO",
+      "FIX",
+      "GE",
+      "GOOGL",
+      "HD",
+      "HON",
+      "IBM",
+      "JNJ",
+      "JPM",
+      "KO",
+      "LCID",
+      "LIN",
+      "LOW",
+      "MCD",
+      "MCK",
+      "MDT",
+      "META",
+      "MRNA",
+      "MSFT",
+      "NBN",
+      "NEE",
+      "NFLX",
+      "NKE",
+      "NVDA",
+      "O",
+      "OLED",
+      "ORCL",
+      "PEP",
+      "PG",
+      "PGR",
+      "PLAB",
+      "SAIA",
+      "SBUX",
+      "SHW",
+      "SO",
+      "SPY",
+      "SYK",
+      "TGT",
+      "TMO",
+      "TWTR",
+      "UFPI",
+      "UNP",
+      "UPS",
+      "WDFC",
+      "WMT",
+      "XLK",
+      "XOM"
+    ],
+    "profilesWithActionableBlockers": 55,
+    "profilesWithNonActionableTerminalCondition": 66
+  },
+  "artifactContentHash": "sha256:4871644c8feeac321ccd905c7475204135c94cad32a3d44a65171e563ec88bf3",
+  "artifactType": "MARKET_INTELLIGENCE_ELIGIBILITY_ROOT_CAUSE_AUDIT",
+  "blockerSummary": [
+    {
+      "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+      "affectedSecurityCount": 55,
+      "category": "COHORT_INSUFFICIENCY",
+      "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM"
+    },
+    {
+      "actionability": "ACTIONABLE_IMPLEMENTATION",
+      "affectedSecurityCount": 55,
+      "category": "INTEGRATION_WIRING_DEFECT",
+      "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT"
+    },
+    {
+      "actionability": "ACTIONABLE_IMPLEMENTATION",
+      "affectedSecurityCount": 55,
+      "category": "INTEGRATION_WIRING_DEFECT",
+      "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS"
+    },
+    {
+      "actionability": "ACTIONABLE_IMPLEMENTATION",
+      "affectedSecurityCount": 1,
+      "category": "INTEGRATION_WIRING_DEFECT",
+      "reasonCode": "STALE_FRESHNESS_NOT_PROPAGATED_TO_PROFILE"
+    },
+    {
+      "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+      "affectedSecurityCount": 55,
+      "category": "MISSING_REQUIRED_EVIDENCE",
+      "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED"
+    },
+    {
+      "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+      "affectedSecurityCount": 55,
+      "category": "MISSING_REQUIRED_EVIDENCE",
+      "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED"
+    },
+    {
+      "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+      "affectedSecurityCount": 55,
+      "category": "MISSING_REQUIRED_EVIDENCE",
+      "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE"
+    },
+    {
+      "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+      "affectedSecurityCount": 55,
+      "category": "MISSING_REQUIRED_EVIDENCE",
+      "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT"
+    },
+    {
+      "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+      "affectedSecurityCount": 55,
+      "category": "MISSING_REQUIRED_EVIDENCE",
+      "reasonCode": "VALUATION_EVIDENCE_NOT_VALID"
+    },
+    {
+      "actionability": "NON_ACTIONABLE_BY_DESIGN",
+      "affectedSecurityCount": 2,
+      "category": "NOT_APPLICABLE_SPECIALIZED_MODEL",
+      "reasonCode": "REFERENCE_SECURITY"
+    },
+    {
+      "actionability": "NON_ACTIONABLE_BY_DESIGN",
+      "affectedSecurityCount": 9,
+      "category": "NOT_APPLICABLE_SPECIALIZED_MODEL",
+      "reasonCode": "SPECIALIZED_MODEL_REQUIRED"
+    },
+    {
+      "actionability": "ACTIONABLE_DATA_REFRESH",
+      "affectedSecurityCount": 1,
+      "category": "STALE_DATA",
+      "reasonCode": "STALE_REQUIRED_MARKET_DATA"
+    }
+  ],
+  "categoryAffectedSecurityCounts": {
+    "COHORT_INSUFFICIENCY": 55,
+    "INTEGRATION_WIRING_DEFECT": 55,
+    "INVALID_EVIDENCE": 0,
+    "MISSING_REQUIRED_EVIDENCE": 55,
+    "NOT_APPLICABLE_SPECIALIZED_MODEL": 11,
+    "STALE_DATA": 1
+  },
+  "conclusion": {
+    "integrationRepairsAloneCanReachEligibility": false,
+    "networkRequestsExecuted": false,
+    "reason": "The included universe has no current Objective Rating input-ready security and remains below the frozen cohort minimum. Integration repairs and evidence completion are necessary but not sufficient.",
+    "scoresOrRanksGenerated": false,
+    "status": "NO_ELIGIBLE_RESULTS_CONFIRMED"
+  },
+  "frozenContracts": {
+    "formulaChanged": false,
+    "generalCompanyMinimum": 100,
+    "missingStateCoerced": false,
+    "objectiveRatingVersion": "Objective-Rating-v1",
+    "sectorCompanyTypeMinimum": 30,
+    "sectorSizeCompanyTypeMinimum": 20,
+    "thresholdChanged": false
+  },
+  "objectiveEvidence": {
+    "exactSnapshotObjectiveRunCount": 0,
+    "includedUniverseCurrentQcReadyCount": 0,
+    "includedUniverseCurrentQcReadySymbols": [],
+    "includedUniverseNotAuditedCount": 41,
+    "includedUniverseOverlapCount": 14,
+    "manifestFileSha256": "AA70CECE3A24C4E127F20BA063A4AD9FC704394E94124064F482A933A7A38F5B",
+    "manifestPath": "docs/generated/objective-rating-v1-current-factor-input-manifest-v1-7.json",
+    "manifestSchemaVersion": "objective-rating-current-factor-input-manifest-v1.7.0",
+    "manifestSecurityCount": 55
+  },
+  "observedExclusionCounts": {
+    "CLASSIFICATION_MISSING": 66,
+    "OBJECTIVE_DIMENSION_SCORE_MISSING": 66,
+    "OBJECTIVE_RATING_NOT_SCORE_ELIGIBLE": 66,
+    "REQUIRED_FACT_AVERAGE_DAILY_DOLLAR_VOLUME_NOT_VALID": 7,
+    "REQUIRED_FACT_LATEST_PRICE_NOT_VALID": 7,
+    "REQUIRED_FACT_MARKET_CAP_NOT_VALID": 66,
+    "VALUATION_EVIDENCE_NOT_VALID": 66
+  },
+  "observedFactStateCounts": {
+    "average_daily_dollar_volume": {
+      "MISSING": 7,
+      "VALID": 59
+    },
+    "latest_price": {
+      "MISSING": 7,
+      "VALID": 59
+    },
+    "market_cap": {
+      "MISSING": 66
+    }
+  },
+  "persistenceEvidence": {
+    "boundCompanyProfileObservationSecurityCount": 0,
+    "boundCorporateActionRowCount": 212,
+    "boundCorporateActionSecurityCount": 52,
+    "boundDailyPriceRowCount": 30994,
+    "boundDailyPriceSecurityCount": 61,
+    "boundFundamentalFactRowCount": 157641,
+    "boundFundamentalFactSecurityCount": 56,
+    "boundMarketCapObservationSecurityCount": 0,
+    "directMetricFactorCodeIntersection": [],
+    "factorDefinitionCodes": [
+      "cash_conversion",
+      "dilution",
+      "earnings_yield",
+      "eps_growth",
+      "fcf_margin",
+      "fcf_per_share_growth",
+      "fcf_yield",
+      "historical_fcf_yield_percentile",
+      "interest_coverage",
+      "margin_quality",
+      "max_drawdown_120d",
+      "net_debt_to_ebitda",
+      "operating_margin",
+      "relative_strength_60d",
+      "return_120d",
+      "return_20d",
+      "return_60d",
+      "roic",
+      "stability",
+      "trend_stability",
+      "valuation_guardrail",
+      "volatility_60d"
+    ],
+    "factorInputMappingPresent": false,
+    "persistedFundamentalMetricCodes": [
+      "TEST_INSTANT_FACT",
+      "capital_expenditure",
+      "cash_and_equivalents",
+      "ebitda",
+      "gross_profit",
+      "income_tax",
+      "interest_expense",
+      "long_term_debt",
+      "net_income",
+      "operating_cash_flow",
+      "operating_income",
+      "pretax_income",
+      "revenue",
+      "shares_outstanding",
+      "stockholders_equity",
+      "total_assets",
+      "total_debt",
+      "total_liabilities"
+    ],
+    "screeningRepositoryReadsFactorCodesDirectly": true
+  },
+  "primaryCategoryCounts": {
+    "COHORT_INSUFFICIENCY": 0,
+    "INTEGRATION_WIRING_DEFECT": 0,
+    "INVALID_EVIDENCE": 0,
+    "MISSING_REQUIRED_EVIDENCE": 54,
+    "NOT_APPLICABLE_SPECIALIZED_MODEL": 11,
+    "STALE_DATA": 1
+  },
+  "profiles": [
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "04098119-39c3-4b95-9613-30b5020689fe",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "418f4fa2-4530-4c39-986a-57036f1de794",
+      "symbol": "AAPL"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "c1230a10-9e5e-4dc9-8dfb-84bd725604b4",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "ca15e531-7fae-4baa-b05f-1164425e6fca",
+      "symbol": "ABT"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_DATA_REFRESH",
+          "category": "STALE_DATA",
+          "reasonCode": "STALE_REQUIRED_MARKET_DATA",
+          "sourceState": "market_intelligence.daily_price.total_return.v1,market_intelligence.daily_price.unadjusted.v1"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "STALE_FRESHNESS_NOT_PROPAGATED_TO_PROFILE",
+          "sourceState": "V16_STALE_V17_EXCLUSION_ABSENT"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "STALE_DATA",
+      "profileId": "bcaf9d23-14af-4928-9d9f-2a90edebc2ca",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "0a1bc3b4-cf70-453d-a923-bdb6e78e43b5",
+      "symbol": "ACN"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "5c874255-8ab6-4d0e-b6ae-fa55602a3018",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "9e23a70f-4cb2-4e95-9d8c-fbb2c9f98d48",
+      "symbol": "ADP"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "3b036a96-ffeb-4775-bee3-c59866f00547",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "634f1888-e395-41e2-a17b-22750b25e934",
+      "symbol": "AMZN"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "ae3f78b2-bf1e-4d4c-ad2f-adaf5f4c67f9",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "0e082b20-3e62-413d-8f1d-ab0d166822bc",
+      "symbol": "APD"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "e6266d76-86ed-4dd6-b6ce-f4e159a6650c",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "0d70d97c-1c7a-4889-ba58-23d029aab8d2",
+      "symbol": "AVGO"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "228852a4-ed91-4dd4-8872-545ad687da87",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "f3137c56-26ac-472d-ad3d-62e70545ee63",
+      "symbol": "CALM"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "70a54ecf-fa34-4bad-962f-e49db319db68",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "46b9c947-135b-4883-8e5a-d8241252665f",
+      "symbol": "CAT"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "31e05c53-356e-4074-a7ef-1c1d9329ccf4",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "eae6e652-df8e-4d51-a0c2-0102adb84b48",
+      "symbol": "CL"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "41228a6f-6397-4de4-a496-91a8a0c11901",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "22edb31e-5a9e-4472-b166-6e77751453a7",
+      "symbol": "COST"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "080b431b-a573-40d3-bf51-165e17f75a6b",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "18888501-43a8-4e32-9556-15bbe7e7abb9",
+      "symbol": "CROX"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "d17434af-c82b-41a1-94e3-f00d5d06dde6",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "e6ea03b4-b7c7-484d-81f3-b4f8d3311855",
+      "symbol": "CSCO"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "89135147-30a9-46ab-b64a-6d90f0d7aaae",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "ce60e0ae-d43c-43ae-b4d7-77b6cb6fdb11",
+      "symbol": "DE"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "8bf805ed-541d-4858-a79e-3c2efdbc4e5a",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "98fb2948-2ba3-421c-827b-3412a5922af1",
+      "symbol": "DIS"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "81e88e8d-2fe6-4ba7-92d9-ef021ef9069f",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "0168a332-44f2-4a2e-bb99-b5d3948d97e8",
+      "symbol": "DUK"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "11dd9f85-71d2-4093-8f95-852c0de1e2c5",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "0f2bf0b2-28e8-4ece-97a7-811b5927afde",
+      "symbol": "ECL"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "b3d2845c-059b-4633-ab5f-bf59106f9f7b",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "a3adc4cc-5207-4509-89f0-e49ad21d8f64",
+      "symbol": "ELF"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "78ea8320-0258-48b6-92b0-93e697c276ec",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "4411680c-0fd5-41b2-bf11-57d0effad86d",
+      "symbol": "ETN"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "4a9d9316-0aee-4363-9eb7-075b3a3061e8",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "26c796cb-9c20-4894-9fa0-2ef1f8acc086",
+      "symbol": "EXPO"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "5507deab-f9f9-4d04-a76e-9face361dd68",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "9e04506d-35de-46e4-867c-2c4676b26fe8",
+      "symbol": "FIX"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "NON_ACTIONABLE_BY_DESIGN",
+          "category": "NOT_APPLICABLE_SPECIALIZED_MODEL",
+          "reasonCode": "SPECIALIZED_MODEL_REQUIRED",
+          "sourceState": "SPECIAL_SITUATION"
+        }
+      ],
+      "companyType": "SPECIAL_SITUATION",
+      "membershipStatus": "EXCLUDED",
+      "primaryCategory": "NOT_APPLICABLE_SPECIALIZED_MODEL",
+      "profileId": "7fcde7cb-18d4-424c-9388-65a2c5effc27",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "3ded4034-5273-4b68-928a-b41f15aa2007",
+      "symbol": "GE"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "28c3c51f-169e-4eb9-b3e1-476f31e2dd39",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "9d0ec24e-4a3f-442d-81ab-1085d7318d23",
+      "symbol": "GOOGL"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "a4ef0788-efb3-4c42-bd6f-7da3923d0703",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "afcbf7c9-e819-4e75-99b2-88cb6adfe770",
+      "symbol": "HD"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "35e7de77-56e1-4664-8916-9ecf0888be16",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "64b3624e-1365-4891-9170-1a45249a48dd",
+      "symbol": "HON"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "7f786064-3024-4216-9df4-55b08f8bba79",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "1bbc84ae-fece-4ab6-9d48-c902179d0568",
+      "symbol": "IBM"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "926e1e91-c750-4972-b201-774adcf99e09",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "383dabfa-e687-4a9b-80a3-5a99356c6178",
+      "symbol": "JNJ"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "NON_ACTIONABLE_BY_DESIGN",
+          "category": "NOT_APPLICABLE_SPECIALIZED_MODEL",
+          "reasonCode": "SPECIALIZED_MODEL_REQUIRED",
+          "sourceState": "FINANCIAL"
+        }
+      ],
+      "companyType": "FINANCIAL",
+      "membershipStatus": "EXCLUDED",
+      "primaryCategory": "NOT_APPLICABLE_SPECIALIZED_MODEL",
+      "profileId": "80ff71ae-bdaf-43c1-88fc-13a855cbd430",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "ac365a67-a678-4203-b0fa-c08bffbabcec",
+      "symbol": "JPM"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "da8838da-265c-47e7-9770-10fcabf50bec",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "358c87b7-b5ea-4d8b-8b43-4e72b27da810",
+      "symbol": "KO"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "NON_ACTIONABLE_BY_DESIGN",
+          "category": "NOT_APPLICABLE_SPECIALIZED_MODEL",
+          "reasonCode": "SPECIALIZED_MODEL_REQUIRED",
+          "sourceState": "EMERGING_GROWTH"
+        }
+      ],
+      "companyType": "EMERGING_GROWTH",
+      "membershipStatus": "EXCLUDED",
+      "primaryCategory": "NOT_APPLICABLE_SPECIALIZED_MODEL",
+      "profileId": "5301491e-bba1-47c9-bfeb-1b0137f7347c",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "5115c508-68cc-4682-beeb-20ba77b8714d",
+      "symbol": "LCID"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "3f721c03-bb2d-4fb2-8e1f-ae9857338aea",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "19b1e6ec-4946-4a5d-8369-59f4f08ddd1e",
+      "symbol": "LIN"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "8ed75255-c744-4c68-8f0d-c24cb9f9d3ea",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "91ea87b5-0b39-4383-9a57-527065bb62c1",
+      "symbol": "LOW"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "f820a980-9a76-489d-acff-56d924858501",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "f072c235-86b8-4ec0-b253-8a40f2eb1606",
+      "symbol": "MCD"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "8ca787f0-2cb0-4660-b27c-8329f0ee4fb4",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "59d9b52d-85ff-446d-b641-59951bcbd82b",
+      "symbol": "MCK"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "75e68910-e5e8-4c29-ba80-df4293b82d2e",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "bafb3099-079b-454a-81c1-a93b78e165a3",
+      "symbol": "MDT"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "db00d6e2-3f56-4aed-8b0f-13f821cdb7c3",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "a7a2916e-6379-4857-a599-57ae284f4374",
+      "symbol": "META"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "NON_ACTIONABLE_BY_DESIGN",
+          "category": "NOT_APPLICABLE_SPECIALIZED_MODEL",
+          "reasonCode": "SPECIALIZED_MODEL_REQUIRED",
+          "sourceState": "BIOTECHNOLOGY"
+        }
+      ],
+      "companyType": "BIOTECHNOLOGY",
+      "membershipStatus": "EXCLUDED",
+      "primaryCategory": "NOT_APPLICABLE_SPECIALIZED_MODEL",
+      "profileId": "0cc15308-be99-4d37-9afd-c7f8bc92b564",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "46a1ee66-96c4-4512-99da-f2f61e36cf7f",
+      "symbol": "MRNA"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "53af2356-821a-4ccc-91ab-f3ab4440d23d",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "08618c07-7979-49cb-abad-ce43305952c6",
+      "symbol": "MSFT"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "NON_ACTIONABLE_BY_DESIGN",
+          "category": "NOT_APPLICABLE_SPECIALIZED_MODEL",
+          "reasonCode": "SPECIALIZED_MODEL_REQUIRED",
+          "sourceState": "FINANCIAL"
+        }
+      ],
+      "companyType": "FINANCIAL",
+      "membershipStatus": "EXCLUDED",
+      "primaryCategory": "NOT_APPLICABLE_SPECIALIZED_MODEL",
+      "profileId": "6e142a28-7501-424e-98b7-01e5105c9d14",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "a210732f-3119-4389-a92a-8fe32c1e60c1",
+      "symbol": "NBN"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "e2ae4482-485a-4c0b-a0af-f0ec6027cc68",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "9013327e-ab4e-470e-8543-c862f8e2719d",
+      "symbol": "NEE"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "b8beb8aa-1ab3-446b-8ce1-e418ebb322fb",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "49d817c2-b44b-4599-816e-8c9bf37ac352",
+      "symbol": "NFLX"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "63dcd6b6-f936-415e-b84a-b9bd10967dd7",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "91d13e33-a979-493c-a041-a84893c8bc42",
+      "symbol": "NKE"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "92450d27-6ee6-48c6-b3df-d0212fb48602",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "249c8315-cbea-447a-8701-8990e099beeb",
+      "symbol": "NVDA"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "NON_ACTIONABLE_BY_DESIGN",
+          "category": "NOT_APPLICABLE_SPECIALIZED_MODEL",
+          "reasonCode": "SPECIALIZED_MODEL_REQUIRED",
+          "sourceState": "REIT"
+        }
+      ],
+      "companyType": "REIT",
+      "membershipStatus": "EXCLUDED",
+      "primaryCategory": "NOT_APPLICABLE_SPECIALIZED_MODEL",
+      "profileId": "6a75dda7-3892-46f6-960d-938cb4b42469",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "6d1d764f-2cb6-4c81-98a5-def2464df361",
+      "symbol": "O"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "e33e2f11-ec61-482f-aeaa-2962d044e806",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "42bf1c70-94b4-49d9-9b76-52eabd8080c8",
+      "symbol": "OLED"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "ce0e3297-f12e-4e31-80f7-c47675a0ffc1",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "4ba4439c-d30c-4890-8107-437de8c60208",
+      "symbol": "ORCL"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "c18bf8eb-7488-470d-bccd-2bf67283f192",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "d63daf9b-c16c-4597-8663-1d3acef54ebf",
+      "symbol": "PEP"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "718e994a-0b03-40d0-884c-c09ebe6bea64",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "ccab4f19-4636-45d8-9391-34876cf35119",
+      "symbol": "PG"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "NON_ACTIONABLE_BY_DESIGN",
+          "category": "NOT_APPLICABLE_SPECIALIZED_MODEL",
+          "reasonCode": "SPECIALIZED_MODEL_REQUIRED",
+          "sourceState": "FINANCIAL"
+        }
+      ],
+      "companyType": "FINANCIAL",
+      "membershipStatus": "EXCLUDED",
+      "primaryCategory": "NOT_APPLICABLE_SPECIALIZED_MODEL",
+      "profileId": "a0545ed8-ab89-45b5-b22e-65f1bd8c24b7",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "7e5a2734-087f-477b-9606-4a25c5e12b01",
+      "symbol": "PGR"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "58f27efc-85c7-43ef-9919-26a3be4031d8",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "045c4fcf-49ae-4096-9e13-b7595935de2c",
+      "symbol": "PLAB"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "3de1cc4a-faeb-487e-bcbe-a85e01016ebe",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "7a0b2fa9-ddef-4072-8210-b10ab701506a",
+      "symbol": "SAIA"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "1bed4c65-67c2-43e3-b629-a7c9780c7cc2",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "cc6e0fe2-6b5c-4eb1-906e-020d37464214",
+      "symbol": "SBUX"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "47f81ddf-6425-4032-a064-e40d37365ad1",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "e90ecfe1-cfdf-4df6-be81-b8f86c3a8246",
+      "symbol": "SHW"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "bc08f78c-9e54-496c-acc7-eedc77797880",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "05c124b7-bcd9-4bdd-90ad-322b69f65e11",
+      "symbol": "SO"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "NON_ACTIONABLE_BY_DESIGN",
+          "category": "NOT_APPLICABLE_SPECIALIZED_MODEL",
+          "reasonCode": "REFERENCE_SECURITY",
+          "sourceState": "BENCHMARK"
+        }
+      ],
+      "companyType": "BENCHMARK",
+      "membershipStatus": "REFERENCE_ONLY",
+      "primaryCategory": "NOT_APPLICABLE_SPECIALIZED_MODEL",
+      "profileId": "41a81fc4-0af9-479d-90d5-99bca74b84f5",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "248bf9cd-3b97-42be-a9e8-75684a158cb1",
+      "symbol": "SPY"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "3e58f626-84d0-40a0-8d97-e1f2d6d98398",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "22edd15c-5a6d-47a1-a51b-769b2c02c78e",
+      "symbol": "SYK"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "1aa5788d-d104-4a3b-be68-754c132304ec",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "5469f5aa-4e43-4008-8c04-6f1bee977e72",
+      "symbol": "TGT"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "f406a9c3-c2b3-40ce-9922-a8df16ab41fb",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "e2cc80f2-437d-4951-8707-34bb811cfd45",
+      "symbol": "TMO"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "NON_ACTIONABLE_BY_DESIGN",
+          "category": "NOT_APPLICABLE_SPECIALIZED_MODEL",
+          "reasonCode": "SPECIALIZED_MODEL_REQUIRED",
+          "sourceState": "SPECIAL_SITUATION"
+        }
+      ],
+      "companyType": "SPECIAL_SITUATION",
+      "membershipStatus": "EXCLUDED",
+      "primaryCategory": "NOT_APPLICABLE_SPECIALIZED_MODEL",
+      "profileId": "29c039e8-e1c6-4c34-b13e-fea2736521c7",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "9e7066db-916b-4bd5-ab4c-cbe8b46391c2",
+      "symbol": "TWTR"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "5b2018d1-70d8-409c-8cf9-f26c9b3b2930",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "66ff4d86-0035-43fe-aa76-721f02ad92bf",
+      "symbol": "UFPI"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "395694f0-a9b4-4ef4-9d9f-0b5b71a66541",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "301a287a-542d-48cb-b798-0e07e5c4cea0",
+      "symbol": "UNP"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "0c898802-1668-4498-b9fb-80512b70de57",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "2a29fa46-695c-48ea-98b2-3ba17c89a50b",
+      "symbol": "UPS"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "491eaa31-c074-4c9f-88f8-6b1b2d613551",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "52107d02-d2cc-474f-bcb3-b9044c6e32a0",
+      "symbol": "WDFC"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "BOOTSTRAP_CLASSIFICATION_PLACEHOLDER_LEAKED_INTO_SNAPSHOT",
+          "sourceState": "VALIDATION_IS_NOT_AUTHORITATIVE_CLASSIFICATION"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "AUTHORITATIVE_CLASSIFICATION_NOT_PERSISTED",
+          "sourceState": "PLACEHOLDER_ONLY"
+        },
+        {
+          "actionability": "ACTIONABLE_IMPLEMENTATION",
+          "category": "INTEGRATION_WIRING_DEFECT",
+          "reasonCode": "RAW_FINANCIAL_METRICS_NOT_TRANSFORMED_TO_FACTOR_INPUTS",
+          "sourceState": "FUNDAMENTAL_METRIC_FACTOR_CODE_INTERSECTION_EMPTY"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "CURRENT_MARKET_CAP_NOT_PERSISTED",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+          "sourceState": "CURRENT_QC_INPUT_NOT_READY_OR_NOT_AUDITED"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "LONG_HORIZON_ASSESSMENT_NOT_AVAILABLE",
+          "sourceState": "INSUFFICIENT_DATA"
+        },
+        {
+          "actionability": "ACTIONABLE_EVIDENCE_ACQUISITION",
+          "category": "MISSING_REQUIRED_EVIDENCE",
+          "reasonCode": "VALUATION_EVIDENCE_NOT_VALID",
+          "sourceState": "MISSING"
+        },
+        {
+          "actionability": "NON_ACTIONABLE_WITHIN_FROZEN_V1",
+          "category": "COHORT_INSUFFICIENCY",
+          "reasonCode": "OBJECTIVE_READY_COHORT_BELOW_FROZEN_MINIMUM",
+          "sourceState": "0_OF_20"
+        }
+      ],
+      "companyType": "MATURE_OPERATING_COMPANY",
+      "membershipStatus": "INCLUDED",
+      "primaryCategory": "MISSING_REQUIRED_EVIDENCE",
+      "profileId": "5b979b6c-cbed-4b91-a6b5-cf62a5874a9d",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "98249af7-a69c-448c-8a0d-eeddf55c063a",
+      "symbol": "WMT"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "NON_ACTIONABLE_BY_DESIGN",
+          "category": "NOT_APPLICABLE_SPECIALIZED_MODEL",
+          "reasonCode": "REFERENCE_SECURITY",
+          "sourceState": "BENCHMARK"
+        }
+      ],
+      "companyType": "BENCHMARK",
+      "membershipStatus": "REFERENCE_ONLY",
+      "primaryCategory": "NOT_APPLICABLE_SPECIALIZED_MODEL",
+      "profileId": "4301e3a2-b406-4b5e-87dc-f0be5bdb07be",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "f5d0515b-9a4b-42ad-85a6-89dce3fd8f92",
+      "symbol": "XLK"
+    },
+    {
+      "blockers": [
+        {
+          "actionability": "NON_ACTIONABLE_BY_DESIGN",
+          "category": "NOT_APPLICABLE_SPECIALIZED_MODEL",
+          "reasonCode": "SPECIALIZED_MODEL_REQUIRED",
+          "sourceState": "RESOURCE"
+        }
+      ],
+      "companyType": "RESOURCE",
+      "membershipStatus": "EXCLUDED",
+      "primaryCategory": "NOT_APPLICABLE_SPECIALIZED_MODEL",
+      "profileId": "ef6e1134-e397-4321-a691-ff3c81301780",
+      "profileState": "PARTIAL",
+      "rankingState": "NOT_ELIGIBLE",
+      "securityId": "98a135a0-dfe7-4707-891a-804b7a7135b5",
+      "symbol": "XOM"
+    }
+  ],
+  "schemaVersion": "market-intelligence-eligibility-root-cause-audit-v1.0.0",
+  "scope": {
+    "dataSnapshotId": "beaa9952-9852-4088-9dc3-92047824414b",
+    "includedCount": 55,
+    "nonRankableByDesignCount": 11,
+    "profileCount": 66,
+    "rankingEligibleCount": 0,
+    "snapshotAsOf": "2026-07-29T02:57:08.988871+00:00",
+    "snapshotStatus": "READY",
+    "universeVersion": "market-intelligence-closed-test-us-v1.0.0"
+  }
+}

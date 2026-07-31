@@ -1,0 +1,116 @@
+{
+  "acceptedEnrollmentContract": "FORWARD-DQV-ENROLLMENT-v2.1.1",
+  "artifactContentHash": "sha256:a4e7715b8c97d1c6d132d141da39cad49c15f6d3102678106a97db633121d440",
+  "artifactType": "FORWARD_DQV_V20_ACTIVATION_ACCEPTANCE",
+  "chronologyAcceptance": {
+    "artifactContentHash": "sha256:a013330f4f571976b53e96b1d89763df042c81c0e99fbbeb0891246d62da70c3",
+    "fileSha256": "sha256:b0d4def16cee0731fa6a7ac24bbeaa9b0ad4de0a5f165b90eb8157320140f380",
+    "path": "docs/generated/forward-dqv-v19-chronology-acceptance-v2.json",
+    "schemaVersion": "FORWARD-DQV-V19-CHRONOLOGY-ACCEPTANCE-v2.0.0"
+  },
+  "effectiveDate": "2026-07-30",
+  "executionBoundary": {
+    "businessDatabaseWrites": 0,
+    "commitCreated": false,
+    "databaseReads": 0,
+    "deploymentExecuted": false,
+    "enrollmentExecuted": false,
+    "maturityExecuted": false,
+    "outcomesComputed": false,
+    "providerNetworkRequests": 0,
+    "pushExecuted": false,
+    "scoresOrRanksComputed": false
+  },
+  "humanAndPortfolioGovernance": {
+    "automaticTradingAuthorized": false,
+    "humanDecisionMayMutateEvidenceLabel": false,
+    "humanDecisionMayMutateModelOutput": false,
+    "policyArtifactContentHash": "sha256:0ad6b3d6c48eb712e19b304b50685742e86bd50e329c23780984ce53cdd0c8e4",
+    "policyFileSha256": "sha256:3d88769c925a128844b0b628498de768938edb2a58c2dc6bd1c7f4cfc025a49f",
+    "policyPath": "docs/generated/forward-human-decision-governance-policy-v1.json",
+    "portfolioSuitabilityState": "NOT_ASSESSED_BY_MODEL",
+    "portfolioWeightsIncluded": false,
+    "tradeDecisionIncluded": false
+  },
+  "infrastructure": {
+    "decisionControlledCompositeHashChain": "READY",
+    "holdingLevelNonlinearCostEvidence": "READY",
+    "humanDecisionAppendOnlySidecar": "READY",
+    "perSecurityDatedSectorBinding": "READY",
+    "portfolioSuitabilityBoundary": "READY",
+    "postgresql17AppendOnlySuccessorSchema": "READY",
+    "sixFamilyControlledLedgerContract": "READY",
+    "typedBenchmarkPersistence": "READY"
+  },
+  "migrationVersion": 20,
+  "postgresql17Acceptance": {
+    "cleanAndUpgradePaths": [
+      "V1_TO_V20",
+      "V18_TO_V20",
+      "V19_TO_V20"
+    ],
+    "legacyV19RefusalPreserved": true,
+    "passed": 3,
+    "status": "PASS"
+  },
+  "realExecutionState": {
+    "controlledBenchmarkLedger": "NOT_EXECUTED",
+    "decisionControlledComposite": "NOT_EXECUTED",
+    "maturityOutcomes": "NOT_AVAILABLE",
+    "modelScoring": "NOT_EXECUTED",
+    "naturallyMaturedOutcomes": "NOT_AVAILABLE",
+    "prospectiveEnrollment": "NOT_EXECUTED"
+  },
+  "schemaVersion": "FORWARD-DQV-V20-ACTIVATION-ACCEPTANCE-v1.0.0",
+  "sourceContractHash": "sha256:4dc0ca725d9318df0fa8382b1daee60a16881217c9a275d5cb4d0c4b5a9dc4a9",
+  "sourceFiles": {
+    "benchmarkLedgerContract": {
+      "fileSha256": "sha256:96e8f4f566e6fd5d15973e9d49624f8dbdb5aa893d7d02ab2f4af028e986bd97",
+      "path": "analysis-python/src/equity_analysis/forward_validation/benchmark_controlled_ledger_v22.py"
+    },
+    "benchmarkPersistence": {
+      "fileSha256": "sha256:ae16e0f9ad5390e7ced9dd969dc0d078710ec257f538a84be407b42a4c0355d3",
+      "path": "analysis-python/src/equity_analysis/forward_validation/benchmark_outcome_persistence_v3.py"
+    },
+    "controlledCompositeTests": {
+      "fileSha256": "sha256:7a112b15d8bf9cec49f2d590f5f99ae1aaff2e05876c7e98b63b896ce0f084ef",
+      "path": "analysis-python/tests/test_decision_controlled_composite_v22.py"
+    },
+    "decisionControlledComposite": {
+      "fileSha256": "sha256:a683f3310602a8ec402629d5007d176017d1854595793c2ce7920df7928d0d20",
+      "path": "analysis-python/src/equity_analysis/forward_validation/decision_controlled_composite_v22.py"
+    },
+    "governancePersistence": {
+      "fileSha256": "sha256:1e307c791c94b3905287c15fbc64d66a0752993c5fbd46ca92a1d16c43b13eb8",
+      "path": "analysis-python/src/equity_analysis/forward_validation/governance_persistence_v3.py"
+    },
+    "humanDecisionGovernance": {
+      "fileSha256": "sha256:d6be5b08cffe95d06b4a6846e4cfdc0690fa30a5728df26729a07f974ec86408",
+      "path": "analysis-python/src/equity_analysis/forward_validation/human_decision_governance_v1.py"
+    },
+    "postgresql17TypedRoundTripTests": {
+      "fileSha256": "sha256:3c7f3b20fbc3bd5eee0ded1f35ff7e2f571b3318f3c3d8dedddece165a1e2dd3",
+      "path": "analysis-python/tests/test_benchmark_outcome_postgres_v20.py"
+    },
+    "typedBenchmarkPersistenceTests": {
+      "fileSha256": "sha256:bf03f9f938a3d30752714f410b5376ede23395b5ad3effcfdd2e3fb38d90cedb",
+      "path": "analysis-python/tests/test_benchmark_outcome_persistence_v3.py"
+    },
+    "v20DatabaseAcceptance": {
+      "fileSha256": "sha256:36abc54a32c6054378499c3ba99213000ca8a149315f8cf1c31e59c1edb1fb20",
+      "path": "database/tests/forward_dqv_v20_acceptance.sql"
+    },
+    "v20Migration": {
+      "fileSha256": "sha256:3cf67134a6abb5737a540a2ccf01b9cc40ea4e557556d2dee36701473c826037",
+      "path": "database/migrations/V20__create_forward_dqv_benchmark_outcome_v3.sql"
+    }
+  },
+  "status": "INFRASTRUCTURE_READY",
+  "testAcceptance": {
+    "focusedPython": {
+      "passed": 67,
+      "status": "PASS"
+    },
+    "fullRepositorySuite": "PENDING_FINAL_CLOSEOUT"
+  }
+}

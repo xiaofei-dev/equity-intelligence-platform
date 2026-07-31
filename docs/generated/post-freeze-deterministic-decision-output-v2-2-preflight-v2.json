@@ -1,0 +1,27 @@
+{
+  "artifactContentHash": "sha256:12a58bdc5d828f29aafce40494fc71d11ea555b2f4c3e0654f4dfcae1f106892",
+  "artifactType": "POST_FREEZE_DETERMINISTIC_DECISION_OUTPUT_PREFLIGHT",
+  "blockers": [
+    "REAL_66_CLASSIFICATION_BINDINGS_NOT_AVAILABLE",
+    "REAL_CONTROLLED_BENCHMARK_LEDGER_MISSING",
+    "REAL_POST_FREEZE_MODEL_EXECUTION_NOT_AVAILABLE"
+  ],
+  "controlledLedgerInfrastructureState": "READY",
+  "decisionControlledCompositeInfrastructureState": "READY",
+  "executionBoundary": {
+    "businessDatabaseWrites": 0,
+    "commitCreated": false,
+    "databaseReads": 0,
+    "deploymentExecuted": false,
+    "enrollmentExecuted": false,
+    "maturityExecuted": false,
+    "outcomesComputed": false,
+    "providerNetworkRequests": 0,
+    "pushExecuted": false,
+    "scoresOrRanksComputed": false
+  },
+  "realScoresComputed": false,
+  "schemaVersion": "POST-FREEZE-DETERMINISTIC-DECISION-OUTPUT-PREFLIGHT-v2.2.1",
+  "status": "BLOCKED",
+  "v20ActivationAcceptanceHash": "sha256:a4e7715b8c97d1c6d132d141da39cad49c15f6d3102678106a97db633121d440"
+}

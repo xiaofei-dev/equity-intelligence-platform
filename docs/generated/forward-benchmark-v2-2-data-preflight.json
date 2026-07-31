@@ -1,0 +1,352 @@
+{
+  "artifactContentHash": "sha256:e9492ca18e4a1c6a17025a12c6d55953199d33313451943a86c7344f66e8814e",
+  "configuredWeightCeiling": 550,
+  "endpointAttemptCeiling": 55,
+  "identityBindingHash": "sha256:ed5ce0a4a587ce8c18e24b9f9d9d4194ac21257e9fde4d10a63d4e34b3b3e42d",
+  "networkExecutionAuthorized": false,
+  "plannedAt": "2026-07-30T03:55:37.171620Z",
+  "retryCount": 0,
+  "schemaVersion": "FORWARD-BENCHMARK-DATA-PREFLIGHT-v2.2.0",
+  "scopeSecurityCount": 55,
+  "stopConditions": [
+    "AUTHENTICATION_OR_ENTITLEMENT_FAILURE",
+    "RATE_LIMIT",
+    "RESPONSE_SCHEMA_OR_SEMANTIC_DRIFT",
+    "REQUEST_JOURNAL_OR_LEASE_INCONSISTENCY",
+    "UNIVERSE_OR_POLICY_HASH_CHANGE",
+    "ATTEMPT_OR_WEIGHT_CEILING_EXCEEDED"
+  ],
+  "symbols": [
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "d8a14843-961a-5406-a372-b69d46f7512f",
+      "symbol": "AAPL"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "ea503902-9cbd-5ca3-82a4-00214f655ab2",
+      "symbol": "MSFT"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "06297dd5-c150-5360-8cbb-c6341aa01dae",
+      "symbol": "META"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "2d4a0d15-2f0c-5c6e-acaf-10a647855fb1",
+      "symbol": "WMT"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "a908303b-63ee-55e2-ac33-7b1625c7ab33",
+      "symbol": "MCD"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "2020eb4c-563a-5293-8b52-e35b044772c0",
+      "symbol": "CAT"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "3126a093-d76e-552c-9b40-bd6e37f2d0f5",
+      "symbol": "ADP"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "11a5a36e-831f-5550-a28b-7e6f6c817009",
+      "symbol": "NKE"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "b649ccea-1e7f-5a90-9a07-3b08614ff51e",
+      "symbol": "TGT"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "13371d22-6a81-5d12-a37c-f32b791c1639",
+      "symbol": "PLAB"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "580cbcd9-264d-51f4-bbdc-cae9116fa05d",
+      "symbol": "NVDA"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "920d82bc-d5f6-52d9-8f79-4ce539d3481d",
+      "symbol": "AVGO"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "1d3e4e20-f35a-512d-a51d-71e218a1102a",
+      "symbol": "ORCL"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "c6e9c6a3-b6a0-5e57-b0be-a104bb0c4a5a",
+      "symbol": "CSCO"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "179b3a37-5c71-545a-901c-508038ede4e9",
+      "symbol": "ACN"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "8f5d16c8-8417-5374-9fd4-5aa90e1430f5",
+      "symbol": "IBM"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "37c45c45-1973-5ca0-a81a-a65cf45359a2",
+      "symbol": "GOOGL"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "cf0d4c88-d578-5369-9cd1-3d42c1d94aab",
+      "symbol": "NFLX"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "62d95825-6ce5-5184-bf7a-692777a3e328",
+      "symbol": "DIS"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "426c12ec-91f8-55c9-85fb-76a55a0fd3ed",
+      "symbol": "AMZN"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "fa14b2bf-1e71-5fe7-8ea2-d000c1c0db57",
+      "symbol": "HD"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "42b3f426-7956-53fa-b0e9-706c25fb808d",
+      "symbol": "LOW"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "c919870a-589c-5744-9077-1aaf3eb09c35",
+      "symbol": "SBUX"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "fc24ce00-afe0-5f5b-b75c-5aaeef8d1c9d",
+      "symbol": "COST"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "a29d6c6c-dede-5e1d-a8cd-ad174e88dc4d",
+      "symbol": "PG"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "347e531f-97ea-51b2-8ca6-aaaa878f6407",
+      "symbol": "KO"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "529b9520-ffb4-55d3-87dc-ef66ad8811f9",
+      "symbol": "PEP"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "7d091a87-f1c3-546a-adee-3e69ff9daeb1",
+      "symbol": "CL"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "c12a95ce-5e86-5520-8c33-5f8bc6605dd7",
+      "symbol": "JNJ"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "d2e4553a-700e-547d-b1b7-9aa6be8dd4a7",
+      "symbol": "ABT"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "c84db089-efaf-5597-a44a-892bef95fd87",
+      "symbol": "MDT"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "48919d38-e65c-55d7-a910-1beda2cc09fe",
+      "symbol": "SYK"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "0ad69d1c-35c0-54ec-bed9-db54a6f0bcd0",
+      "symbol": "TMO"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "0e9cc7f3-1e1a-5cc5-9093-a7233697986e",
+      "symbol": "MCK"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "5148f419-992c-5470-ba14-b7d612193b92",
+      "symbol": "HON"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "e65f41aa-f7bc-56ea-9d58-7fc05a62c7f5",
+      "symbol": "UPS"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "d70f5294-34ee-5758-9268-9ca8877d6193",
+      "symbol": "UNP"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "07e78ba6-4943-581d-8588-29860f42df97",
+      "symbol": "DE"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "ce622392-309d-57c2-81da-6a5a5155684e",
+      "symbol": "ETN"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "2ddf3749-9afb-5a0e-8325-bf6e7ecaccaf",
+      "symbol": "NEE"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "b8e66b25-90e2-55f8-95bf-8a6135af8e3f",
+      "symbol": "DUK"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "cb41680b-064a-5052-97c6-f90288b009fe",
+      "symbol": "SO"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "34ad83b5-4b28-5af8-a21b-20c3aa837c2f",
+      "symbol": "LIN"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "a26d692c-90b9-5207-894f-cea19e46cfa4",
+      "symbol": "SHW"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "041b73ca-4c7a-56c4-8502-166daed08ebc",
+      "symbol": "ECL"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "1b373ef1-1213-5215-9411-e683babcce3e",
+      "symbol": "APD"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "2f57cfe5-52f7-5afc-beb5-3bc1564710a0",
+      "symbol": "CROX"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "640f3d4e-7841-567b-b8aa-163c73d20567",
+      "symbol": "OLED"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "2ec39042-6cbf-53d0-a121-03e4dd705cc0",
+      "symbol": "EXPO"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "f6cbe650-b724-5091-9097-df108a561c27",
+      "symbol": "CALM"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "b8deed89-848c-56a5-8323-80ed14b62215",
+      "symbol": "UFPI"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "f91871f9-3a89-58d4-a969-c1086da0acc6",
+      "symbol": "WDFC"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "8916acf0-b2ce-55ba-a1bf-d323132b744a",
+      "symbol": "FIX"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "c0d54251-ff4c-52d6-aba4-274471b471a9",
+      "symbol": "SAIA"
+    },
+    {
+      "configuredWeight": 10,
+      "endpoint": "EODHD Fundamentals",
+      "publicSecurityId": "1fab244e-4f55-52c4-b79c-8773f2097ab9",
+      "symbol": "ELF"
+    }
+  ],
+  "universeVersion": "market-intelligence-closed-test-us-v1.0.0"
+}

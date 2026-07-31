@@ -1,0 +1,67 @@
+{
+  "adapterVersion": "PROSPECTIVE-ENROLLMENT-ADAPTER-v2.2.0",
+  "aiUsedForDeterministicFields": false,
+  "artifactContentHash": "sha256:9ee3aad961f66a26cf152f82c0d84f65ad12e8b8da95665926097971834ead2e",
+  "artifactType": "PROSPECTIVE_ENROLLMENT_ADAPTER_PREFLIGHT",
+  "automaticTradingAuthorized": false,
+  "benchmarkKinds": [
+    "EQUAL_WEIGHT",
+    "PURE_MOMENTUM",
+    "PURE_QUALITY",
+    "PURE_VALUE",
+    "SECTOR",
+    "SPY"
+  ],
+  "benchmarkManifestHash": null,
+  "blockedReasons": [
+    "BENCHMARK_MANIFEST_MISSING",
+    "POST_FREEZE_DECISION_NOT_PROSPECTIVE",
+    "POST_FREEZE_DECISION_SIX_BENCHMARKS_NOT_AVAILABLE",
+    "SUCCESSOR_READINESS_CONTROLLER_MISSING",
+    "V18_PERSISTENCE_BINDING_MISSING"
+  ],
+  "candidateEnrollmentContentHash": null,
+  "candidateEnrollmentId": null,
+  "completedSessionHorizons": [
+    5,
+    20,
+    60,
+    126,
+    252
+  ],
+  "databaseReadsExecuted": 0,
+  "databaseWritesExecuted": 0,
+  "decisionPurpose": "CONTRACT_FIXTURE",
+  "enrollmentExecuted": false,
+  "horizonPolicy": {
+    "126": "LONG_HORIZON_INTERIM_DIAGNOSTIC",
+    "20": "TACTICAL_FORMAL",
+    "252": "LONG_HORIZON_FORMAL",
+    "5": "TACTICAL_FORMAL",
+    "60": "TACTICAL_FORMAL"
+  },
+  "outcomesComputed": false,
+  "populationTerminalCounts": {
+    "ABSTAINED": 2,
+    "ASSESSED": 0,
+    "EXCLUDED": 9,
+    "INVALID": 0,
+    "MISSING": 55,
+    "STALE": 0
+  },
+  "postFreezeDecisionManifestHash": "sha256:4d032a75cbf74541cd19c102437ee8c7ade84c7e8bad684e07241f909bb24c2a",
+  "providerNetworkRequestsExecuted": 0,
+  "rawProviderValuesIncluded": false,
+  "roleCounts": {
+    "EXCLUDED": 9,
+    "PRIMARY": 48,
+    "REFERENCE_ONLY": 2,
+    "RESERVE": 7
+  },
+  "schemaVersion": "PROSPECTIVE-ENROLLMENT-PREFLIGHT-v2.2.0",
+  "scoresOrRanksComputed": false,
+  "securityCount": 66,
+  "status": "BLOCKED",
+  "successorReadinessHash": null,
+  "v18AcceptanceHash": "sha256:e5ce27f66981d8341ed0d88f33fc72d380999b3d68360d53ce83f908f51a5f1e"
+}

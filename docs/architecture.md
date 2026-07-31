@@ -27,6 +27,13 @@ FastAPI analytics service
 
 This structure combines enterprise business-system practices in Java with the Python data and quantitative ecosystem.
 
+The normative future engine and sleeve boundaries are frozen separately in
+[Dual-System Architecture Contract v1](dual-system-architecture-contract-v1.md).
+The Fundamental Value and Quantitative Trading systems produce independent
+outputs for `LONG_TERM_CORE` and `QUANT_TRADING`. The Unified Portfolio/Risk
+View consumes those outputs by immutable reference and never averages their
+scores.
+
 ## Implemented Vertical Slices
 
 The current Phase 1 path is:
@@ -202,9 +209,128 @@ Python-owned `analytics.*` objects. Spring Boot continues to own `app.*` and
 must use a versioned HTTP contract before exposing refresh or group-screening
 state.
 
-The initial United States security master treats normalized ticker symbols as
-unique ingestion identities and exchange labels as mutable metadata. A future
-multi-market expansion requires a durable global identity design.
+The current compatibility implementation treats normalized ticker symbols as
+unique ingestion identities and exchange labels as mutable metadata. This is
+not the frozen identity target. Task 1 must introduce durable company,
+instrument, share-class, listing, ticker-assignment, and provider-mapping
+identities while retaining `analytics.security.public_id` as the compatibility
+anchor. Ambiguous identities must remain unresolved rather than being inferred.
+
+Task 1 Stage 1 now carries and validates that complete durable identity tuple
+through a migration-free internal evidence-selection contract. It also
+requires completed-session chronology, full provider lineage, explicit
+freshness/conflict states, and versioned deterministic fallback. This is an
+input contract that V22 now persists through a separate append-only
+successor. Stage 3A adopts the exact reachable Forward/portfolio V18-V21
+lineage without rewriting its versions or checksums because V21 application is
+not provable. Stage 3B implements V22 as the separate append-only Task 1
+successor.
+
+V21 is legacy and unwired. Its historical `CORE` and `TACTICAL` lanes are not
+aliases for `LONG_TERM_CORE` and `QUANT_TRADING`, and no application may bind
+V21 records to the accepted dual-system contract. Future dual-system
+persistence requires an append-only successor migration rather than a
+reinterpretation of V21.
+
+V22 is analytics-owned and persists:
+
+- company, instrument, share-class, listing, and ticker-assignment identity;
+- versioned trading calendars and completed sessions;
+- private raw-manifest lineage without licensed payloads;
+- normalized and engine-derived canonical evidence with revisions, hashes,
+  freshness, conflicts, tolerances, explicit non-valid states, explicit
+  parent IDs and hashes, sealed parent sets, and mandatory successor
+  corrections;
+- sealed versioned selector policies, provider priority, requests, candidates,
+  per-candidate rejection reasons, and immutable results; and
+- classification-bound Fundamental Value applicability routing without a
+  valuation formula or score.
+
+The Python V22 adapter revalidates evidence, complete selector aggregates, and
+applicability routing on both write and read, including recomputation of
+policy, request, result, and routing content hashes. Provider codes remain audit and
+deterministic-priority inputs, never model-score inputs. Recursive canonical
+and policy JSON validation rejects provider score, rank, and recommendation
+leakage.
+
+Selector result hashes bind the request identifier and verified request hash,
+policy identity and hash, selector output, and the complete canonical
+per-candidate rejection map. This permits distinct requests with equal
+outcomes while preserving exact replay and rejecting a changed rejection
+classification.
+
+Completed sessions bind their declared date to scheduled open and close in the
+declared IANA timezone. Derived liquidity binds one distinct completed-session
+parent per valid observation and binds the latest parent to the declared
+window end. Selector seals classify every supplied candidate, including
+request-mismatch candidates, with a deterministic rejection reason.
+Applicability routing follows the frozen company-type map and permits only a
+hash-verified, monotonic successor of the latest route.
+
+Stage 3C exposes V22 through internal-only FastAPI projections. Selection
+commands carry canonical decision context and persisted evidence IDs; Python
+hydrates and revalidates each candidate before running and sealing the
+deterministic selector. Readback recomputes aggregate hashes, and
+applicability lookup returns the single unsuperseded route for a company and
+governed routing version. These endpoints do not replace Spring Boot public
+APIs.
+
+The provider evidence adapter contract is the terminal boundary for Yahoo,
+EODHD, and future replacements. Provider-native fields and licensed raw
+payloads remain inside an adapter and private Git-ignored storage. The
+provider-neutral refresh coordinator receives only canonical typed evidence,
+then reuses the existing execution lease, immutable journals, content-hashed
+checkpoints, and fail-closed resume rules before V22 persistence. It is not
+started by FastAPI lifespan and has no automatic provider-execution path.
+Canonical adapter requests derive their UUID from the complete durable
+security identity, listing presentation, completed-session/calendar context,
+domain, fields, and requested date range. Daily overlap and backfill rows may
+span that range, whose end remains the completed session. Batches are
+nonempty, UUID-unique, strictly reparsed, and exactly bound; exact evidence
+replay across refresh runs reuses the immutable row while content drift under
+the same evidence identity fails closed.
+
+Corporate-action adapter output binds its canonical action to the generic
+`CORPORATE_ACTION` request field and keeps `effectiveDate` inside the inclusive
+request range. Fundamental output binds `metricCode` to a requested field and
+uses snapshot/as-of semantics: `periodEnd` may precede `startDate` but must not
+exceed `endDate`; `startDate` is transport and planning context, not a fiscal
+period lower bound. Classification is also a snapshot: requested classification
+fields map explicitly to canonical fields, and
+`effectiveFrom` may precede `startDate` but must not exceed `endDate`.
+Non-VALID evidence carries no fabricated canonical data. Daily-price and
+corporate-action scopes use the local date of `effectiveAt` inside the inclusive
+range. Fundamental and classification absence may predate `startDate` but must
+not exceed `endDate`; adapters should normally timestamp snapshot absence at
+`endDate`.
+
+The Stage 3C provider-adapter scope checker rejects unimplemented domains by
+default. In particular, market benchmarks, sector benchmarks, and
+engine-derived liquidity cannot pass through a descriptor merely because it
+advertises the domain; they require a separately implemented governed adapter
+or engine path with explicit field and chronology binding.
+
+Task 1 Stage 3C is accepted on bounded local evidence. The final adapter module
+reported 33 passing tests and Ruff passed. A fresh disposable PostgreSQL 17
+database migrated from V1 to V22 passed all three typed Python/PostgreSQL
+integration tests; the complete migration, upgrade, refusal, base, and
+advanced matrix had already passed on the unchanged V22 schema. This does not
+claim a business-database deployment or provider execution.
+
+V22 does not contain enough state for governed raw-payload deletion. A future
+append-only successor must bind each raw manifest to a versioned retention
+policy and legal-hold state and record an ordered immutable disposition-event
+chain with proofs and enforced cardinality. V23 is deferred for the MVP and
+becomes necessary only if the product assumes physical raw-object
+retention/deletion governance. Stage 3C does not create that migration or
+delete raw payloads.
+
+Stage 2 adds exact canonical payload contracts for prices and adjustment
+modes, corporate actions, fundamental periods, classifications, dated market
+and sector benchmarks, and engine-derived liquidity. Normalized observations
+bind to private raw manifests by source hash. Derived liquidity binds to
+ordered parent evidence IDs and hashes plus a versioned output hash.
+Provider-native payload fields cannot cross this boundary.
 
 ## Initial Communication Pattern
 

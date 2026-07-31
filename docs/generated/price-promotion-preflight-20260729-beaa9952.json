@@ -1,0 +1,3851 @@
+{
+  "artifactContentHash": "sha256:2ae15376ab81b01e9b925980822f61cb10e811c0e7509846bd8d1c3f334d828e",
+  "completedSessionCalendar": {
+    "agreementRequired": true,
+    "agreementState": "MISSING",
+    "authorities": [
+      {
+        "accessedAt": null,
+        "authority": "NYSE",
+        "reasonCode": "SOURCE_BODY_MISSING",
+        "sessionState": "MISSING",
+        "sourceContentHash": null,
+        "sourceUrl": "https://www.nyse.com/markets/hours-calendars"
+      },
+      {
+        "accessedAt": null,
+        "authority": "NASDAQ",
+        "reasonCode": "SOURCE_BODY_MISSING",
+        "sessionState": "MISSING",
+        "sourceContentHash": null,
+        "sourceUrl": "https://www.nasdaq.com/market-activity/stock-market-holiday-schedule"
+      }
+    ],
+    "calendarEvidenceVersion": "US-EQUITIES-COMPLETED-SESSION-CALENDAR-v1.0.0",
+    "evidenceHash": null,
+    "reasonCodes": [
+      "SOURCE_BODY_MISSING",
+      "REVIEWER_MISSING"
+    ],
+    "reviewedAt": null,
+    "reviewer": null,
+    "state": "MISSING",
+    "targetSession": "2026-07-28"
+  },
+  "databaseWritePerformed": false,
+  "dryRunOnly": true,
+  "evidenceSummary": {
+    "calendarAuthorityState": "MISSING",
+    "corporateActionCheckpointReconciledCount": 57,
+    "dualModeStructuralReconciledCount": 57,
+    "promotionAdjustmentReconciledCount": 0,
+    "rawTransportProvenCount": 0,
+    "reviewerState": "MISSING"
+  },
+  "formalPopulation": {
+    "commonCutoff": "2026-07-29T02:57:08.988871Z",
+    "coveredSecurityCount": 56,
+    "excludedMemberCount": 9,
+    "excludedSymbols": [
+      "GE",
+      "MRNA",
+      "LCID",
+      "O",
+      "PGR",
+      "XOM",
+      "TWTR",
+      "NBN",
+      "JPM"
+    ],
+    "frozenPopulationHash": "sha256:18dc39c7b1a91659ae3969e887d7b4b1ffd484f01ef23c08231adf601c65b640",
+    "missingSecurityCount": 0,
+    "populationSize": 57,
+    "staleSecurityCount": 1,
+    "targetSession": "2026-07-28"
+  },
+  "globalBlockers": [
+    "ACTION_TO_ADJUSTED_PRICE_BINDING_MISSING",
+    "COMPLETED_SESSION_CALENDAR_AUTHORITY_MISSING",
+    "FORMAL_POPULATION_COMMON_SESSION_INCOMPLETE",
+    "RAW_TRANSPORT_PROOF_MISSING",
+    "REVIEWER_MISSING"
+  ],
+  "preflightVersion": "PRICE-PROMOTION-EVIDENCE-PREFLIGHT-v1.0.0",
+  "promotableSecurityCount": 0,
+  "promotionAuthorized": false,
+  "promotionPolicyHash": "sha256:7b5194ddc69af163ae769c26716f006a5c686c5231141d636b717d8e813f5d1a",
+  "promotionPolicyVersion": "PRICE-QUALITY-PROMOTION-v1.0.0",
+  "securities": [
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:6f4e895941aaabd535f9923d277b1b4f8dce9b8240a208b4c0793b7ef5b34b9f",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:a63bfb760fb033a13d57f34ce7e80af06f3f3c40838178e4dfb9b2c4a07d5fb8",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:78debfbcb407679f5ae154dabede5af6c5f3bfc7c98b335f8a776173745cb680",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:d700428c1daf5d8d9fa7ac54863b7117697ec6fa38a9e4dba1d7c12af8874efe",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:9b3ee8ef9084a1e45fce3041ebba5e2d30d2604b096d3d4d8874f0479bf8e30a",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:c6bfe8f21351ea866a9f3dc01b6a91edeb9cc311f510f5667d0829b4769f8807",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "0168a332-44f2-4a2e-bb99-b5d3948d97e8",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "DUK",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:d52d655c396f06e580cafd96e7951b489b7949c00c9dd0db53cb282d14ff5b45",
+        "reasonCodes": [],
+        "selectedActionCount": 0,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:6924e34ea69b8e6c702031fad584ffe4b4780f20ce5062012ec342e9605b0027",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:52e8f950f03046df2e5a18828ffcd16c0fbe43b6926973bb29421819912539b8",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:342828b2996d2d71c99ef8de447c5d01a8c51f6e45ce6f33b82f4a6ef4b1dad6",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:1b74542742b1e4398464b66abaaafbe09a46c4b2774d21bed919af3c0fae6cc0",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:21ecd3c5c38f15082d2266ffdf4159e1632e829e38001fd4e12ef29355959969",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "045c4fcf-49ae-4096-9e13-b7595935de2c",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "PLAB",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:8f22adb7cc0375dc7bc4ed71c0ce458884caa0ebc257561bfb5358c6993155aa",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:c456d06a0565256642e3d69544b94f36a797b0bb72477be395be93361284c057",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:983a4c7d6377a5f16c06b49e9a17371aea67318283957729d7be40f8a6a41538",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:3560500e1ef7608c57aed458ba2986efd12b2b8c4d362426bfa3d98afc51d725",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:45799b7bf9d4ee24b2b68f52c22e3858de16fd04c5b0d0c645b211a26252721b",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:447a683dea8359e4daa49754739c7a81a023df585c7f698e169ed17976ff22f1",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "05c124b7-bcd9-4bdd-90ad-322b69f65e11",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "SO",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:f0f3003d07d3763a5d680306b5cdb65dd978642e0e0bf679f4c7be020dfc58e3",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:c5f2e51f13b29086d9b7334d19b799db3bc4c331b8154bb317f72dfc204108c2",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:cadc2937ef82e254850411ceb8cba4d13d97ebcf8e1d18a640e5f989bdb025eb",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:a9de8971f2d0297345efb59c00ea8899803759d5ef846b921bbb6a0a99dcc08e",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 2,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:491c550e8433ae4ceec61625f27b84f71865404f1912e87c8c1e68adaa36d073",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:1dbb9780ae28d49d6f16e78fc979ad87915d8f3add415cd9f1e7c49b1d063b71",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 2,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "08618c07-7979-49cb-abad-ce43305952c6",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "MSFT",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:a4f0635bd7b8f324990ddca6c9bbb38a3cd405657fcc6ff41d9cf92a52383bd3",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "STALE",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:57576a1d34c8c0f146f9602a5ba08f643e1af6af856c48f037e2541dfcbd6508",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-27",
+          "revisionSelectionManifestHash": "sha256:f1d4185dba880164b9d487ce85a950f65a528f3e91734a6c9ab8527277958685",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:e31c1ac779bb801c3ca8ca7c4f4208b95afa06f62a851b45013753bd0b5ce773",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "STALE"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-27",
+          "revisionSelectionManifestHash": "sha256:e70802ee9aa094bd54483885918bf4d5206b4ef05cb611186e1a70e97a407f3e",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:833eec9c3fe508e5ddfbe7a25022b784281813cda5492dc9b8aa419cac4c0554",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "STALE"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "0a1bc3b4-cf70-453d-a923-bdb6e78e43b5",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "ACN",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:7f1b7365ad4e84f84701aa8d5fa8a1fd8aa4747f29275e45d8b7b1a232e1355e",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:5a6208b95ddefda269e290abbbb6d3ff35604fd0edc223e0f46df60ce3c3690f",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:59c8dc3d8b4e9d478408aa278efbb00bd2a83ef78c046b830ff6a3253191f00a",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:83018ea40ab8d39ef99fccfd89d5c47d8d94b745faa757fa3c0245e6f38c38ef",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:1370b0fb7912de9970898894c307ed5e6e77e305082be7edd3216b01bc94108b",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:182966ea5efd7a29d26af96d22c74e07da004a4c5607c12e32cdbe95bb41f5fb",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "0d70d97c-1c7a-4889-ba58-23d029aab8d2",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "AVGO",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:975d8dbc1f77fd0b8bcc0f7c40de4978ff5dfbf63faaa46b3e51a7c383bab636",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:97a0583a9f9d2e1fb4cc24728ea1ce3d3837c55236f03e70e45d5ea1a6272d6a",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:a53e1302852068ff189cc07315e78491b750f95ac69f3f2f82ff6c7f4c4ec50a",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:b1dc320d14f41bbf9d121d3ab3e899520277ff8dd6584d25b24f956ce0403c2a",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:3b631117d964451235a22eb7042f97eedaf0abed094c9e553c2f327673f4b6d7",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:11b4d225ce25225b9e006ffaea3039663a65a6d22b75c660b8dd979942aa8a7c",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "0e082b20-3e62-413d-8f1d-ab0d166822bc",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "APD",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:a05821e4fa45bc985f1a89eb4bbbe96f7edf7ab392ae442c07c14848eec04256",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:536678020d7350148cac0a7e500acd71a502671c811925986799ebd1dad34338",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:087f368c2e497ee8334fd323f91350009f7f0843f7c312c34af10f07f83c18a1",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:73ca4acff589180ac1eabcf59a2b1c2cf6a6d44612c926474d075e4521109027",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:e2800b7f15bbc28e4b979b4444ab06a2e51116141b7a429ad29fa0e25b9199f7",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:59ff7c5256d25097eeb475c6a7e531c48a9e39e1079d7efecdc2d601aa12d581",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "0f2bf0b2-28e8-4ece-97a7-811b5927afde",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "ECL",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:7babacd555f8f43bed42386e9f33fab89adda795bf81ae4cca624abff5258a3c",
+        "reasonCodes": [],
+        "selectedActionCount": 0,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:147f61f6cccad3f344d4906b45e27240baa1ec3c0a24d9e094af2fe3ef9248b5",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:e2c14d2fe972a65005b7ce932167971b44e3f9013bab8f28920fb80661f78d84",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:092df2e1f1291cd84eea32a4b5a33d9cf619bcbe9b4f76f4d66269fb461387b2",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:628df8974970601ee09434a247257aab6f3e22037a9afc4f22afff44256ec1be",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:6bf546ad49ed048cbea2a3e157e344d24330a0652e6567e3823fdf4da89d7c06",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "18888501-43a8-4e32-9556-15bbe7e7abb9",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "CROX",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:ed01164d9def4fac3a2a5bd4d83c24a0ee0bec63a690e09a923f9702a0beebda",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:683850af329ee65c1cac99ab6b7e94f779ad9c4500ee91c4f1c9e1a136d47106",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:a7a022bd6d4176d0420fd50b892821efb88f736808130ffe6c48cf1d23981bde",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:cce6a28339cc21b38a5a0b36914aa2ac85ec1796bf481587e38d6ea765cdf688",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:d1be6682a0d99c1ba7f5cf738a4a991f15105035c065d8dc0b24d39b6a6582e9",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:7c43d402035b05b030993eb200a1a15127e0962464c4f010480301455a8ae78a",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "19b1e6ec-4946-4a5d-8369-59f4f08ddd1e",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "LIN",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:520d9bbecb8af51a79c75ab5935f39c05db60a68cfd260730555cc2c21f00939",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:bfa66d5d3f4230f1d2c5eebdfc36205139417bc4e7b6496dbb3e6833b6d2c18b",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:1b04c3759a48fe3e7da6e5f82c5c78791dc694a6eff44b449c91b8ecee33df58",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:79a0a6ecefb18cbbf54290e7d224607fe3bad6f039be64227235e28c5de0dba7",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:885f5d9ec574e22d0c8a5d9394bc7dce7fc66cb7036ee64f5e26c08cb13cba0e",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:b5661ef04d71a2924b2a4cc1d1f4871b740551af7b2e6a43154953cb07f645b0",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "1bbc84ae-fece-4ab6-9d48-c902179d0568",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "IBM",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:95dd716b3bd192327b3fb8efc4ab68a33953df6284c5c36e6bb17a319afe5739",
+        "reasonCodes": [],
+        "selectedActionCount": 5,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:9ce00ec2ea9f87a42f35b840ca10c39e18818845b889c2420b09cb9e5f422946",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:10ef4bb6b475a726dbbd90dac87447b2b2eff263454cfff0af8a11d94568262f",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:4dc54eca5aba4d2d58ae1da567f7a786455333f1d57449fa7f6acaec4f696bbc",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:0ec7d7b0cc3bb2b1f96c7b35cc7b0474dedf35a3971d8667748d5aefe9a36f1c",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:2b53464dd14b4751ae9e32ca7609342b59fd0e60f28b6ea856b69c576485ea20",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "22edb31e-5a9e-4472-b166-6e77751453a7",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "COST",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:d48eb654fa781c6c3d968f867bdb8f78f068256b9c2285f3d849e8a9e868b9ea",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:5561c6c861fd491b95d5f785bf6201a47d17e6c80216de2c7efa156a6fb84555",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:74a78c2b96149939e2931e16af0166aa7696c2d9e00c648555a4082a3e7986e1",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:9726e992e1668854d5900d37a7b61731fb35dcb2635a11c4fe290cadb05caa46",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:e3d29e4e2f84badefc30b57a3ac2dbf6d449066c86bb74072f203c506308097d",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:c1dfe8a98e7fb31a75cb7d13caa97cbf318d37339b8137b92e85001ff7b5b7dd",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "22edd15c-5a6d-47a1-a51b-769b2c02c78e",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "SYK",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:7ccb219ba210509123a23538a0f68a3e64bf42b2fbd7362dd63071a63995c99c",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:6a8301245c2584dc1935c9cfc30c54f5d9194fa1e3cb1265dddb11192994ce58",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "REFERENCE_SECURITY",
+      "membershipStatus": "REFERENCE_ONLY",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:49958fbe40349c2502c737cee9f27f3bdd4fb698c08ca8a9383bcbb8dbac3b55",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:ff934e95b599a99c9a9adec5a37da1f0b376824d607a4d58223d9ca9c5b429eb",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:36112b96e25523f963ae719bca1b74e29eafc69726b5c77b9f5a6b77894e3c88",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:508260401ee6765e8a6b3d6129103d89d77c9ee99e0c9741f1ada185c30a9b22",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "248bf9cd-3b97-42be-a9e8-75684a158cb1",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "SPY",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:b5c9f54ed97bd9172f4a7f69dd52ef7eb37a51d6b164f88ecfc7173b772d57ba",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:c1e5523164fbf48b9c7885b690061f82ad1181cad32a68fbecac71d93476fb37",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:d76912e729bfc6852c8b467f5b49f6b6da9d40100b178cdab0fb87971f292eba",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:43366c2d84f977b117656c2b1ca9dfe57d3d6ea3c5eff961aa5a2a6c4a15be8b",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:409d210d736d0cfc6796c453903124d5eae065116cfbd0e08b86e6115454322a",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:d2c13a7f26c33058a40c1817e6060a1d494df0f5e7e1c586627ebdce5b0e5d56",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "249c8315-cbea-447a-8701-8990e099beeb",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "NVDA",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:8e567dfddf75cb378dce980f3fecc099d1161e2a3ba806eb49157ab6bc899cea",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:f152dd80a401a4dec58e07317f1e153472a938b10f3177c1ddf00cb39768804d",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:6abbb0723323bcf337ff2db176493cd4bf9f1659770c3f5b2c6bf29edb6b4dc8",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:f7bcce6d333e881642c6d905ac100df92091c6e8b1ebd2d3429f90919b40a021",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:b83d0e1a57d1b38ea2308204f1016e32dc2d7de3a9dada6032dfea92ff37ecb3",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:7d237c3980a326811968307645b1dfd987e2832b006871645bb42afd9d129df1",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "26c796cb-9c20-4894-9fa0-2ef1f8acc086",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "EXPO",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:6fe6aa9719d8f916fe67f72f3f7ed0725f5ca5ac8f93c6d88b5b31955b90cf2c",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:55c3550cd8986eb0be3d6bbe8eb0b4f403d0505230301d167fed35e17f1c7bbf",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:8e3887558b3a601613a37cb8de2ffda95f7c49337165df98e2657fd06dace027",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:9351478fa206b18d529036c2119c3f9cbb9de02d6a5831eba919c1bc88c9e226",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:305ef6109efe9948bbbb23330569bc007ce44601b3dea80624e95217459f1831",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:8cef43a6c04ec56d53f7fa1e459ebaf3f2e5065d8b592bbc4fdd611889d7adc0",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "2a29fa46-695c-48ea-98b2-3ba17c89a50b",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "UPS",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:c1b72e6ab96820395d3350eb9d311a1e598858bc4f627bb462d9f24f2801cba5",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:65c7a0ad04f9434be485bffd59f67e2366160b3598e8da6868c8ef3e69018809",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:7e6f63ecf37893f0dec78f0a7b7c2b58093d541c5041692ea852e7fbbb3128e7",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:23e2d40b6b2084a343c54f8df834cef157f814f62f5b073d9dcd3bc43e32980e",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:b0c6522994c4c706ccd704cc5dbd2a72beae7e9b2480180d47aa94b5a96836e3",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:0230bb8f062b1fcdbce712352b21df90ba5592de316d6b87e8efa1a7bb2354e5",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "301a287a-542d-48cb-b798-0e07e5c4cea0",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "UNP",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:02e06481ebcf22fba85c1e7ebf9b74fcc5bdcdc9005fab2dcfd1f316ca0d9c5e",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:b8472eeb4652235c85da89c9156b1794aae507c883d01b9dece1520b0cbca978",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:d8155624227a5a3be5b9fd62c888eee65ce0004b41ea10e12a26a99b2a4e36fc",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:34ea510e2aade5dfa9ac4cd07a3b4ec271109a64df2a2c3b3ea1cb948e72fa4b",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:0da788e437d20113f51aebb72c8a80f7aaeb49c90a4715b8f5ea096bf6a70480",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:e99701695efd3104e9f7043e851892f3637dd7ed26388c1fde20779d64a61d12",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "358c87b7-b5ea-4d8b-8b43-4e72b27da810",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "KO",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:4a8b2619c5af5e8d7fab60ec9a86b8b6251db4cc000c830a0155a662212ef66b",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:0014c1217a2628a9941b89a7bb71ca514f0bffa3c69c39cf98af183cbdd907c4",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:e1cc3a18f75397e9641a71fb926f51b2138d3bda457be74ff279688a943a08ab",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:8cceb64d27dde28cd39072c628c8c057f852a5ad53e23dd7be28ab9ec5a3ea12",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:080de230c0126dbcd1d2a615071268da357aecbc5d673ce6d0c4115ec709a12e",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:4a5d6376e6d574c9c46c153b7e969a82cc9bf1a20b84d6facb905785b55d52e1",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "383dabfa-e687-4a9b-80a3-5a99356c6178",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "JNJ",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:777d46b5d01661cde16810a9dd39f63d965f6feba39dc8b886954daef029e4d1",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:14f58115d17504f93aabd7f0e393780657928464ae80181b5fffe3c8a3977d59",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:2b4c65c6e879a63ef0bc9fe0420bda0055ddc435e398727fd681f139104d5f08",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:ed57bb146823ec26d9d3d06b9cd6e032b5f3910eb83edb549d528bb8ad9f412f",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 2,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:60e19b5a713b31c7b9762ab30689e8756321682037ac7bdbccce6a71625e7892",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:45614b6f5976b4bd66a4082304a72fd21a94ae9b3ab4291f4f39b17d7375545e",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 2,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "418f4fa2-4530-4c39-986a-57036f1de794",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "AAPL",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:ff2b430462350321424348e07f406ae082ca7c1c6f28713ff4a6e8fb14bdf349",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:b76c603fe631d16c4949db037851e83f76cb3a9e3d05f26863b5fac35d6ceb6e",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:b8e11da71e95cd8b9568843ba67ae94e2c05a6717938fefa91ee2be2aadb0507",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:6be27b618b7be2c1f1ec5039dd2aa30aa506f832fbe358e0a7e147d6e0a8baa9",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:db774116847a6e93a887a1b85d75bcc6e99d4d27ce7e529d5f3ed69e3a00ea51",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:aa6570aa0d273403a89e1601496aeabe8475e970c516b04a4cfb85f62bddec75",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "42bf1c70-94b4-49d9-9b76-52eabd8080c8",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "OLED",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:fdad24b46ede2d28171db0303637eabb415fa63d82771802689edd53d735a649",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:bb15d76b828693185e3ca1a10fad416433f49ef08917194614e1e63cd857a31b",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:dae773681f1090d9351f8c93fc5cd869f7e7d27366ccdd623abbf34cac42bf08",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:5ae0b78863fa03bab4dc87cf0c281b20be5a7b84babdeb07039772793c4e1aed",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:08d86239fd020c4921e44e99fd086b74dae6db6c6ee4ece062eb92f2656d495b",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:826672c70b1867602d28f75c88580f0d1e079e8d759a210528ee790b34426e52",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "4411680c-0fd5-41b2-bf11-57d0effad86d",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "ETN",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:41f8e594c5823006aafc84f47a542428f3e400e9be032f800eccaacc49834f6a",
+        "reasonCodes": [],
+        "selectedActionCount": 5,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:3a7366e2e9d7a27a91b1b6ff41f64b5f92f9b32ae90532962d5db14b71294654",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:a56398a1be1319bbfd8f2bd68868980ea209690b0ffe6e2acdc510d615662548",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:d4618b0edf6930c8365640c5937eff4952a6a081a8587332b8a3ce8873c8d1ec",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:7051b706ec9e6756e0ed18b034e1520df47de192d8fdebd27ffd1479478c4c27",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:064c62ddd098ebb87e8bf089fb02ce368b3c537a6cfab7f13e7557d9a726cc73",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "46b9c947-135b-4883-8e5a-d8241252665f",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "CAT",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:7e648f3455d618e370f0463c163bc216df0558c9dc4f72c206d21626f20a02bd",
+        "reasonCodes": [],
+        "selectedActionCount": 1,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:2aa938a7cc13d5deb8f4da129f32ddabdb4de0da66bd7ebf18d3e96b83998a6f",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:72afcc505539218d56da427e94adebd3aad12848d6a680cd0d636ad70e76e473",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:269c749ec263a1a857331f34a833529c041a52e0c6b4aec05fe48551c1fe09e8",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:795e5ad1fc6e6d8da98975da1c02c2b5c32e9daf976672c1f8c7e849961e3645",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:ea5abe27654e57907e91347d153c3b7ce46fab4f95c5b60f71d217e9353b0a4b",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "49d817c2-b44b-4599-816e-8c9bf37ac352",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "NFLX",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:59eb737aba1f2713ccaea92142f86a48f5e4779b6c3960cc385ca4cc05696690",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:72cd34d1940ab3e471d5f2bab8baf2156d322921d6ab2a9667cc6ecc6ec6f42b",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:56ee0d4c600e312c2525c6687d3e8833a92d00c6dfb98cd285b0b760e32d92b6",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:43d421bff01635606a59ec536c3057802b6831ff599d7fa83db6da0dce32825d",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:d2cc44b760ef6d25496d2c87c3083f5791b3b9fab6d6490c8ac45bde28b893b2",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:3b156b9ad113db00f19e839a4fdf20721a6f82eec36ac298d1512335f3fa42f3",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "4ba4439c-d30c-4890-8107-437de8c60208",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "ORCL",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:b7c1cb02252a3a615ca6ffcb07e76aa387dfd506540aab3f8868b4045d46856f",
+        "reasonCodes": [],
+        "selectedActionCount": 5,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:12c8a8d804e03f1acd507e9105ae5812b1f7f34ef3ee1a37d2aed0653a3f7609",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:0c264597a3677e8f2b81caaea793b631af3bb46af3e8d93d0b826577f45a0ff2",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:74ad3de5ccd234475494db5bd1f80d38f64cae3ba4f959bd7c531025be6b0400",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:5d198387f62e0aae2c680ae2c4656674336bf2f8d3285f7958239f2e8a0cff10",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:a4be91e096ec7564648a112b4efd9eb278a70b94ff6b44ac743e0a9859cfeb81",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "52107d02-d2cc-474f-bcb3-b9044c6e32a0",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "WDFC",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:8d6048bd32df4eda459b64a91ffa644fbdc74aaef2fa9f90e2b631b1bc44d69f",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:5ee2752f868ba984a27ed9ce047b676aa203a0f032716929850301207c4088e8",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:d15f6e82da4d82f0f1fd97e83259c3a380ecd28beff8c2088f86a54d4964757e",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:09b446680060ffe43bcd66b3f20d38aa59df73be38a5edc4603d138fe8b6ff64",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:8946a88af0c5c1d2b2c2c2137cf550dbef00222c5b26fa47da2a3ff6665e38ca",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:3035edc1154f16076633ec65f3822ed23a1c1d7da2ae8d36ab5a27813d725bdb",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "5469f5aa-4e43-4008-8c04-6f1bee977e72",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "TGT",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:a72c9c27fbe868cfe9a80b887ccd22bf736a178bf727f9e462fa3ec382cb7e17",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:a80d609bdb2c36f52f1b474df3993909aea3a2b3efb88b5508cb3aba9e457830",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:3dde0d5f4eb36b028a764f85b6297726afeb7e2f47007d7b6de3610ac6a9e556",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:63918c309af35e5883c809503b45c68caeeadf65d5989f0dd5cf2b7e54d153b9",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:ebb1e32e1a6ddf566681e42e95f497676a313ca124c7acd38739259486960a6b",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:6397c026b2463df29558517bf65145d5e773aa9b25079a8fe1a88c0933fddbb7",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "59d9b52d-85ff-446d-b641-59951bcbd82b",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "MCK",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:f0f70b75c03ea868544bcb10519a394d7849135729c627ad2386c51cb7f214a7",
+        "reasonCodes": [],
+        "selectedActionCount": 0,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:16ccaa9bc2e6b0a2bd6ae8008c716dfa605d89a9af20a11a3a129feee8882c42",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:83ccd3e86a6ace3270c2cd52b64bf1f42ab14d7c538565481e8270e205090f78",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:e0bd4db6786b96e3c53ec8b11ab0dfbf29303fdead76f583895848835c3a4402",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:4f412254c924fd0d532ea812e444b1d7bea8e9e01792c16fd17496bccf1ef704",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:9bb532369d3ebaf488abeb90f69d4cc416cff9832e6788829a48526fe7f9effc",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "634f1888-e395-41e2-a17b-22750b25e934",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "AMZN",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:4ab5eb7ba1d96e741a6634398ddf037411430da871899cde1e2c5c5a1cbae158",
+        "reasonCodes": [],
+        "selectedActionCount": 6,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:cd2fa82e505a939185abed1897993e69598b68b245f02d042ec2f23eb8abd3ea",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:4e6cc0001ec4a38584db3eb4e4d4c5803e7df2fc8afb1570807c8a3edfe08ed2",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:f085cf1973079f3bb6f551e083d860a71866e3c7f0afe859618b36bd7701957d",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:752915fc745a65dfc6049630134b130122e6c5f155ff82d484ea5a658445becf",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:723a12a8cdfd34fbf1c0adad7ff0208ca6cd9e7d50b8dbb1becf301e1599f20b",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "64b3624e-1365-4891-9170-1a45249a48dd",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "HON",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:e6ce8cc44e2ae88b4a5f4889c05bf5ad65fc7db31337ee686ff8b5a7e2146e34",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:cee4f5c310115afa751fb42ae2acdd83a97fc86d8569f3abfb6f7a659212bd98",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:bc7c2eb00f2109f21939501ee5929efbc42ac237c29c7e145dd6fdfc2d231a4d",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:8de8341c57c5c83fd98ecebe7285f2e3256e962fcc1359b56b4e1e525dcbbb83",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:5932c8f60d9e3595c8d5157715aca91cbdc30d2054d8456b9edc1f75f34d97e0",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:f0fbde86a035e368d32d613f92d29819c865e4944a15fb19148de0927ac634f2",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "66ff4d86-0035-43fe-aa76-721f02ad92bf",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "UFPI",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:2bdc6461a84dbdd07f4686d021782c837b737f16e99647916c8e0592f63f0d84",
+        "reasonCodes": [],
+        "selectedActionCount": 0,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:407b28381a3edda3b22d1afa0ac26e168cba404d41c42b9616ec2585f3c00399",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:fad8317caf08f130beb8c169f77649b70a608375aa82d59e0eeff4fdcd5ec10e",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:ce730b3fcaccf6eb49be443ecec84ecbf3fbe860cabcce3441fb77d593c719f1",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:18f83a6a8accc49cedaed132ac5d5db1bf57897ac1ec8a6ba705f80cccccfca2",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:701e1c6ebf2311561018327b1c00201407289da9d4cf73287da3c06a4b9063a3",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "7a0b2fa9-ddef-4072-8210-b10ab701506a",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "SAIA",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:56c1aa7b605e32c2acbfaf2c6284957eafb1e4dc03af338b346cb28db2b997ea",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:4bbc0667e83ec33c1419cc0f22979acbbd87e636798b1eb4f37c4d5f671f3f34",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:b9fdb06831b42e531c2474b501b3f1483925cb6eb3a904108ba298f6020d6930",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:3b07485009ec68ca449d58c05eff730b10934e506ad6ea2e5f3eef52f8074356",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:30b187fd757b3f52b26a2006d8d567ea5c0c9149f315d254689ed45a9e89fc3c",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:f63de45cc9c1677d62c994844fe67dc5f3d2ff2b370632b22472deb446c60bb1",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "9013327e-ab4e-470e-8543-c862f8e2719d",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "NEE",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:cbe8af1b5cee2f7396764bf9ad4be69aaaedb84e404f26819d8ea510a4891229",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:c055a0a631319e345520affd3488251243727a894a12a187f4a87b13d7c3f7d9",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:26d69df6fba907d4d79f06518fae42f0f30d3199d580d7be960a5f5cd999c56a",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:6359ff6f8914cba2cbc5e8eff79aad30ba3783d2802a84d33b0840eb2759adef",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:f663e2f1ebf40d9922ab15663793bccc803e408dd9b31c3c2e9d0dad972f2091",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:72edc6de141fa3c496aa18ad7cc39efd21d016503f0af22e48d7c0b4b3e2e738",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "91d13e33-a979-493c-a041-a84893c8bc42",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "NKE",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:ccbaf1fb2b48aea1a0df1975e7811cb546590beb1a64cf7cd5ce69edb2ff24d7",
+        "reasonCodes": [],
+        "selectedActionCount": 5,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:cacb80fff9f1f1af50bc1cbdf0e82dd1cc2f81ed2f8bdbff7de0a7b5566ac0b1",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:f7ef2635f413bdb438d7548da5b1a1d645db59a7f03775ef34b75f2e86599665",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:d0fe6c5cecc1412a26a3cb5d5bf04e6d5be6ccc532dbfbc5e8084bb0ffa862ba",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:4f7cfd2925cfaf49bbe5ca471e3f7ad6deeea8504e81d338af5c3a30514e375f",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:0e2b99078896ad10da7aa48b66ba1c53244245a356493a1eabdacf6a3b7e3d09",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "91ea87b5-0b39-4383-9a57-527065bb62c1",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "LOW",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:249f9c1b358b6dc9583f96582eca00bf210baff6f4cc403bb800afbcedba448e",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:a7a8a6e297ce57485198af614d24ec2f25027a674a16f78811d09db3c2be7387",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:16c62ee6a1dbb494c95d6560b7c5368eb87dfcf333a2461323ab078b82e27ad5",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:5d7e91a64fc8b2cbc4e028850320f25d6c215f1b16a94b2fd9a89685812672a4",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:df4c22c27db717f8ed80ef2ac8e9d53dbe4b0f2eabc1413053781e8c6fe6f7e5",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:6447c4a526fc2d3f3b0dfcd15777fe242733e72030ba589b7bed139f79767270",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "98249af7-a69c-448c-8a0d-eeddf55c063a",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "WMT",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:91a8051f316053ac1bd5fe2724d614b551068f6ddb19522cbb55fb8f0dbf5b13",
+        "reasonCodes": [],
+        "selectedActionCount": 2,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:6225ed9b251188d870a7544aee6e7c5f5fe4105e62feb56ba0ae470a4b9a7c1f",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:59df3e59dcaac0ea8fef0ccdd5fd9ecfd55600af21944f8bf05dccb5edfa7b2a",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:6234f4ac91fb60ebb3dfb18f89be7a6fee748cdb09fa6972e796532d2114c1c5",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:aa94f514e402f2cd4462e5a8b11b2b415298312e90aeb095898a1069c4c92bd6",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:d55d72d6791d49a084a9929d65afcc1a870a0c5e3d27b7f02fb64bc68b4a89ff",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "98fb2948-2ba3-421c-827b-3412a5922af1",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "DIS",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:a07ea49afac882dc24fbba98febdb1e1159ec21b35927af154c8edddd9ba20f5",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:fb1501bea5400837b4e8fe458fe839d3b616049ca14730a49acdeff13d284313",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:0a75b6f9f99f557537d27afce44835273a54d86aed58e961625a479fb2abb910",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:967907a5c235174848627edab1b8c8c46f8888d04374546a1bfd4dd87abc9a86",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:277c03c8a333fafec6ac598cc090577c91505735ddbcdbf712add29a35b651be",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:168ebc439e3beb5534dd8facfbe00e2ca31e678b7f6919389b5c620d83907d5b",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "9d0ec24e-4a3f-442d-81ab-1085d7318d23",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "GOOGL",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:fe5596fc25ef44d2b7107614c64aaea5777baa9f69237c1fbad8812e1da6aa76",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:c5e31497c0648c04683e4e122b5abf37c1550d18b4982f9f1e2a60651d25086c",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:22feafe74e3624a9dae4f07f3710575bb211fa69523ac356f268d425751cf2dc",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:101bac581d01545a1d04a0f649247687d60bc859de21cbe1a0db853f8d962017",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:f57cd47203cb8a93eea1cc908661dfc6ace0fcb3c48fc228dbd1dde801210bbf",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:e5e35aaea9d9cc906abfef225dd691043babe2dfe91b8a11db4bac08d6615e58",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "9e04506d-35de-46e4-867c-2c4676b26fe8",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "FIX",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:f685136e94d1f6abcae7ab5e142b558ad92d23085847b910adb01cdcfa3bdb0b",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:90e5a74c2a963b160b9aba384c2ac4cccc1b0485c55cccc10ce8a7afb5e6dfdc",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:9c4657a649d68ca319765325c34c52e5dd11b7971ea466557cf4f174ebd18b2f",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:7eabdf0c633389276429684c8f5b3997736831dc40e8f7a56e1ca65766650726",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:785241fa377d243c0255871f85e56891a15f564e8881268634787c8fec316a0e",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:782cdd298232106e8138d00358719ea788b3cb93b40a46b0c6aa159a2d15ea26",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "9e23a70f-4cb2-4e95-9d8c-fbb2c9f98d48",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "ADP",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:6e86a1446170397fdea51b39a79e55db9cb540dae3837a5d80026fa49f281b09",
+        "reasonCodes": [],
+        "selectedActionCount": 0,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:1f0333440b3c7ecb398a1625bbed55c45491a92fbaef49308f15f333c37df627",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:c922fd16cc6ceb3d165f536f46fecc2a876832bf122ae70171c2cc7838ab07d5",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:5f74abdfacab29cfb38b9eebcb5e1390fe327d6eea9c419c1c7751b92201df8d",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:950c305484de444fd37702940225e912258b91c86e9263d582039e5c954200e0",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:7548d434ce88a1b68f47ca9d4cbcf6adffe370361c6a1d130a97202eb5d36ef2",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "a3adc4cc-5207-4509-89f0-e49ad21d8f64",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "ELF",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:2cb2d8babadf15439d83ed443532d5eeb432362a866c5622bdaa3e54b71cacb0",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:88f55cbce881df5fb0b4205c22ea1dc262bd0476bc17e715224fbbf8cb92f3e4",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:b8c1e36229cbb1c028a10c7e7535d0b57dbcba361e2a949ada5f0e4180938150",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:fd9ccbb1ef4a258ae3894609b9cf706e11796ddfd297526a279adce5d02e8883",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:aae3e0ac8129fac06d328113df081ff4c5f383ce2b1ac90ea786364859a7b1e6",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:91a6f20e71cc999b7ae1a3c3aa02427f04ae85464c653000618cb008dbc1628c",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "a7a2916e-6379-4857-a599-57ae284f4374",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "META",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:b077f0c69f80de65c841f82d3c4be30a8703423a0959e62efa25bb6f85528c76",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:44acd239d5b072a6bf1d7a11fb88ff8f70275b54d1dec8037b1f61241fb8e596",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:f372e17ec8ec3129cfa2f46d7bee031f625daf2d42861c00c37a4bac5be7e071",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:25edf3af5eff3097724ad65336ff2ae383e85e22bcf481a698d51b49d9f22180",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:df917c0bf1e50afcdfbf8d80d50058434c8a378c4ba0b3f1d9c5a4b0ed14ad68",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:cb07f9446e2d86a2759c0802a274c3212d379b44f7c11f02a7136993b4bb3da5",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "afcbf7c9-e819-4e75-99b2-88cb6adfe770",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "HD",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:5c520ae5c4340e7193ce424e5d01660c68579fcaa38fedd0fc8354781ae32ef5",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:d225ed769947bf661c00c6a97d52bf5fdd6691473b14428d8fa122a05b335643",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:6b0199e24348826049cf183d840e629df9521ad3d1889a28717d7cbd7f079679",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:753a152cbaf266776e55bc5ccfc4df85492fc82b2355feddfc9cc8f41ead3273",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:8e86e500f8ca559c44bec6b91b8b74c8423ecf1cab713f200a0b8996a0f8fb5e",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:6f4d05d4dbd223a7a4aaedead2341fe85b9285a5f3428bdc6852daa696483527",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "bafb3099-079b-454a-81c1-a93b78e165a3",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "MDT",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:16b48fff8458aeff6195256a50269eabf1f64fcd2adf30fc223310debb1d1b40",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:e96676ffa787faec042c0193c846ea9c4eb98933fc5283f81eb823363b26638b",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:43a289576467bb8f645281e10e96d56d99ff9711376b96ef139a532f8f7030d1",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:71ef65402f8d4f2856f973c7fb37892c600846fac11688d4e227e6992e0e6764",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:1959c7cd5268158880615bb991dea2c2f39d03d6ad853f4ae8c51fedc7c7851c",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:91fcec551060c069ee83efbc7a6e22b447784534bdd2ad8d02c72ebdf0ff711a",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "ca15e531-7fae-4baa-b05f-1164425e6fca",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "ABT",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:e29a8b09bae0d344397fc5dbb65b0e32e9597fefbf2edcf55d6a112bae0ae16a",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:2ce9e994a1136872e96e3bd7a939d8dba1c7b468771e013e7ece74daf9c4d0b3",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:03c1a31614361c59dd7b6e46e8cf8ae98ef4d277a4f194689a657a61c9fb2985",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:1341a6c0a32e55a09f1e03942a09c2f28416d5e1f4d8cf49c5fd5c0198ebc51f",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:559308bdb10420d84098a0355441da5b7db36de6c0af713527693e1ae687535e",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:d3bf41e790949920bd68b75e12d895f5240bbb15e630a565024b5c22de4adc16",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "cc6e0fe2-6b5c-4eb1-906e-020d37464214",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "SBUX",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:29b670c2138fb70adcb01131de23a8cc1aa1c757d4748338c397f868f004ea9f",
+        "reasonCodes": [],
+        "selectedActionCount": 5,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:1a3089d12eac70663ff85ffeccc012a51aa2aa0bc8f2e04377491d0bccd702d6",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:387102b0168ee175c4960f788a6ad4bd17df16323b2b70e07b56018200992849",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:0d75f9a19e583ddd869ee22b443cf4a27827e656ff979ef6f7ed4299d84a3fac",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:0b5779590484adb99ed593ce17f2ff5cece334a40d84e7ae66d6c67dfc7e8e3c",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:7829c1d16ffbc08d0fa39ad5708a32a5b4e932bd0769745b527b56523fd5b996",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "ccab4f19-4636-45d8-9391-34876cf35119",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "PG",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:b1c7b2a7f5436eac32dc1b65cccdbcc7aca682914cee9c6e3f8bbc8b8d4bab13",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:2bc66a11ae54a14411ea374be25ea6852e6f0a557460d0edf2fe9e5510496f86",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:e8cc103d95a38a223d10b614eee0ad24ff88c433957047fad1ea6768a77209fb",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:2095fc918748577e9d65806987ad6f9e57c000bc4e5cd316698b21f3d665932e",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:6ade14a7a10f15b7edb816105dfd66440514eb37ae812b52e8763221b3fb8dc6",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:768b18ffb0da5a4fcf351e22464f63a7da12b64e48f90971edca23adafd5a02b",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "ce60e0ae-d43c-43ae-b4d7-77b6cb6fdb11",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "DE",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:0b12b9e6f2ab6ef52319cf2edba486106953e13d990677931484fa98b7f4b937",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:4c323f5053e37c9d2b9bb5dd9c9f7659f623e69dcd881e00d933d24eb8927a13",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:bdbac453a3c6fd60487bb7af07e45c76a100f0477357f0c099804b6f4380783e",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:f92f2e9043411877b820e356776179bdac3ece7a94dd8ef87d4d4565e4c712d8",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:c7f795944f30c1c2e99c756a61d7ad2471db13b0ce086d1c5b3a2cddc6853044",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:ec1bf060de95e228f4e5652f5e1812b951734c996f742f9b65ba2116c20116ce",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "d63daf9b-c16c-4597-8663-1d3acef54ebf",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "PEP",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:53d6a237b3c3b4ebbe53409f69e31bddc4650cb634bee12dd8927876afb21ad0",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:569a0cfd2154e651c08bda31e05886a8bf91b6ca183c5fdf317a09330b6f9413",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:11e6d5cc0960b26f9b94cd773903f887a4ed08b16771b1a8c3a4f9669612ae9f",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:5723d6f66fc77352762e2b630b14c111cdb5b95b60e51b33c352998b1bef543c",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:8299001ff74e570013c14d8e8661dbbb9f9eb399cb648c1a52ede9fda95d61f9",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:590273b0b76717d57916ffbfc4f5f2168601ca16fb7484a2ab0b6ce57e5227bb",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "e2cc80f2-437d-4951-8707-34bb811cfd45",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "TMO",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:9a8143171e9437bb5227a51a1eecee07a91e98905a4f36ae5403cf075a9d6501",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:54c918ffe43096659f164e07bc38f84c71dc897daf016dabe6cea9c41790fff7",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:26fa785a5881ef0987961d31f92356a86f9a19cb774770541d8f01864c5699b6",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:bb573fed20d69ca61282957bbe2f48ee0c4989d06e7d5ea2230ef2a9e6f3ae16",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:e333ff173122422873f52c2f5853aad61ea35570b8084b82a887fdfab64ea7b4",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:29ee9afd02a75856ef0dcdb9149257b65981c774f9aab6223e9b17934b0331bf",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "e6ea03b4-b7c7-484d-81f3-b4f8d3311855",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "CSCO",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:0263377df87e1786f89558433ef0a6cd1efffe0cbc97da09446b192a703408f5",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:f9acaa4f2d9c5880bbfc1a45c22e8d3479c96bf365e01dd8604de1942d7c6825",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:ddaebc76cb38976de671a06afbff2be10e1c6cacaa7493a4e8a04b951157c6c8",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:39197df95b33bb889afe78d276025ab1657f4c81db388a1c741ea14b56c8cb3a",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:04bf07546d94ff6da82974b0a8a7d7557809b9888d1dc7694632aaa24564e67d",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:f2ce86a125e8922a926c1b6b90cd90f825c875cba5e3d8d46b0d759d0de99585",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "e90ecfe1-cfdf-4df6-be81-b8f86c3a8246",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "SHW",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:c23d7bea49254c7b3497d9ef54b3399b10185f27d9e30d28a8d2daeb3ff91142",
+        "reasonCodes": [],
+        "selectedActionCount": 5,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:1a83615f73010446559402f0580fbcee5dffb467d177856917f45637d636304c",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:fcace2314d25394816378322e04082a24a52c66b5dd881abbc1d465b699712ce",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:98e06e6bd64597ee1c2a3987015b6f3d64ddc6e050063d5c97c63765a67ec28c",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:f0b8be21b0c4dac22c440900a2fa5f072c605ddd9286c75d077db2ffe48afda5",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:9baf7fad8ad5cca6b6c0a15c3ddb8a5bd947b105ac324c33da1fd637c9ae3936",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "eae6e652-df8e-4d51-a0c2-0102adb84b48",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "CL",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:d0b125c45e5662c9dd9b656e8dca8dc27b48a9732c6ff5d189a38545bcb3a4b1",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:704acf79198803bacb2a189c8fe94364a321bdfc974b57a7c83862ebdf0f3280",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:0b3c829da9db514bb8ccfbe59af0979413e7ea64930631485f4f3601cdb5d1a9",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:e48cb772683f0a656e54e5151eb053912af613901016b4b0206f4de860d18081",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:d7df73de1b1d265aab44133ecea215f246677739f73b7332664a833ec24e4793",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:c986f9e06cb316616a679ebce91370b68ea4102982ee1c5085ff1ccea7d38f0e",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "f072c235-86b8-4ec0-b253-8a40f2eb1606",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "MCD",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:6e51217a9252180e206a6be9f338ab2bb95a8e8fe148319b16faf8c795f8f645",
+        "reasonCodes": [],
+        "selectedActionCount": 4,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:bf8ff86b7efcebd1782d01a1dcf34b12f87b8a9a050b6805a73fa083dde41745",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "GENERAL_COMPANY_CANDIDATE",
+      "membershipStatus": "INCLUDED",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:646dddf839a5f2435f76ba35697078306f5622f5258efc1e9bd4fecb9bc3f938",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:f52949c0a563e0d052b1b67e7ac7025866899802a6f535165ee32a9f29c784da",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:cc6140a9aa63056f553ba3750d97cda0c2c4f6ec1a8b2677b63c40eff53a7bed",
+          "sessionCount": 259,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:ac2570f916e657c024bc15fff3f6660e3b2ab8931b6c15661dad63893d656949",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "f3137c56-26ac-472d-ad3d-62e70545ee63",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "CALM",
+      "targetSession": "2026-07-28"
+    },
+    {
+      "corporateActionReconciliation": {
+        "evidenceHash": "sha256:2be17a0a74f5d574340dc3e1cf2b896f9561c3ad16cd23ae289e8357e4f0ae36",
+        "reasonCodes": [],
+        "selectedActionCount": 5,
+        "state": "RECONCILED"
+      },
+      "coverageState": "CURRENT",
+      "dualModeAdjustmentReconciliation": {
+        "evidenceHash": "sha256:d2c017de990af1eddddd37cc16ece5ad552d2ffbd76b47b3eb17e7a5d3fcd4c8",
+        "reasonCodes": [],
+        "state": "RECONCILED"
+      },
+      "membershipReason": "REFERENCE_SECURITY",
+      "membershipStatus": "REFERENCE_ONLY",
+      "modes": {
+        "TOTAL_RETURN_ADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:092a6660448303f65b1a3baff0907d25b848ddeeb233bb4daebf602bd3e19813",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:8d80c789a46389de191817519640683765770f3762c830e5314b724a4b4c00fb",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        },
+        "UNADJUSTED": {
+          "firstSession": "2025-07-16",
+          "latestRevisionAtCutoffProven": true,
+          "latestSession": "2026-07-28",
+          "revisionSelectionManifestHash": "sha256:2033f38f8f62d84e2e1aeb77ce9ce9f11580147a1a9ab1c2ceeb1597b25264b9",
+          "sessionCount": 260,
+          "sourceContentHashesValid": true,
+          "sourceManifestHash": "sha256:d7d1000f5b225b6ad8d17894c7aa56c06e5d5221ec3b3d016380617d09af85b5",
+          "sourceQualityStatuses": [
+            "PROVISIONAL"
+          ],
+          "sourceRecordCount": 1,
+          "state": "CURRENT"
+        }
+      },
+      "promotionAdjustmentReconciliation": {
+        "evidenceHash": null,
+        "reasonCodes": [
+          "SCHEMA_HAS_NO_ACTION_TO_ADJUSTED_PRICE_BINDING"
+        ],
+        "state": "MISSING"
+      },
+      "publicSecurityId": "f5d0515b-9a4b-42ad-85a6-89dce3fd8f92",
+      "rawTransportEvidence": {
+        "durableSourceReferenceCount": 0,
+        "normalizedSourceHashesAreNotTransportHashes": true,
+        "reasonCodes": [
+          "RAW_TRANSPORT_BODY_OR_DURABLE_STORAGE_REFERENCE_MISSING",
+          "SCHEMA_HAS_NO_RAW_TRANSPORT_BODY_HASH_FIELD"
+        ],
+        "state": "MISSING",
+        "transportManifestHash": null
+      },
+      "symbol": "XLK",
+      "targetSession": "2026-07-28"
+    }
+  ],
+  "snapshot": {
+    "asOf": "2026-07-29T02:57:08.988871Z",
+    "id": "beaa9952-9852-4088-9dc3-92047824414b",
+    "ingestionCutoff": "2026-07-29T02:57:08.988871Z",
+    "manifestHash": "sha256:2030d4489591f0b65a8320a4db497b0f7a1878193edcd033669c7bcd3d600ca0",
+    "universeConfigurationHash": "sha256:be29d2c5ae5f1b2f6611d1fc5050782debebe0474574e61fb434077244c15c4d",
+    "universeVersion": "market-intelligence-closed-test-us-v1.0.0"
+  },
+  "state": "BLOCKED"
+}

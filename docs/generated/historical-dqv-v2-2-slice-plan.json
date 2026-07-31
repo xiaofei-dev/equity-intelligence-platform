@@ -1,0 +1,413 @@
+{
+  "artifactContentHash": "sha256:4e9f1d64b0ccf13c355c4cddcabda5a97a597cd97a0717c6b22c76015fce13e0",
+  "artifactType": "HISTORICAL_DQV_SLICE_PLAN",
+  "asOfCompletedSession": "2026-07-28",
+  "claimCeiling": "DIAGNOSTIC_ONLY",
+  "evaluationRole": "DEVELOPMENT_OBSERVED",
+  "firstSession": "2014-01-02",
+  "fixedOffsetAnchors": [
+    {
+      "decision_date": "2026-04-28",
+      "matured_horizons": [
+        5,
+        20,
+        60
+      ],
+      "sample_id": "OFFSET-003-MONTHS",
+      "selection_method": "LAST_COMPLETED_SESSION_ON_OR_BEFORE_OFFSET",
+      "session_index": 3097,
+      "stratum": "OFFSET_3_MONTHS"
+    },
+    {
+      "decision_date": "2026-01-28",
+      "matured_horizons": [
+        5,
+        20,
+        60
+      ],
+      "sample_id": "OFFSET-006-MONTHS",
+      "selection_method": "LAST_COMPLETED_SESSION_ON_OR_BEFORE_OFFSET",
+      "session_index": 3035,
+      "stratum": "OFFSET_6_MONTHS"
+    },
+    {
+      "decision_date": "2025-10-28",
+      "matured_horizons": [
+        5,
+        20,
+        60,
+        126
+      ],
+      "sample_id": "OFFSET-009-MONTHS",
+      "selection_method": "LAST_COMPLETED_SESSION_ON_OR_BEFORE_OFFSET",
+      "session_index": 2973,
+      "stratum": "OFFSET_9_MONTHS"
+    },
+    {
+      "decision_date": "2025-07-28",
+      "matured_horizons": [
+        5,
+        20,
+        60,
+        126
+      ],
+      "sample_id": "OFFSET-012-MONTHS",
+      "selection_method": "LAST_COMPLETED_SESSION_ON_OR_BEFORE_OFFSET",
+      "session_index": 2908,
+      "stratum": "OFFSET_12_MONTHS"
+    },
+    {
+      "decision_date": "2025-01-28",
+      "matured_horizons": [
+        5,
+        20,
+        60,
+        126,
+        252
+      ],
+      "sample_id": "OFFSET-018-MONTHS",
+      "selection_method": "LAST_COMPLETED_SESSION_ON_OR_BEFORE_OFFSET",
+      "session_index": 2784,
+      "stratum": "OFFSET_18_MONTHS"
+    },
+    {
+      "decision_date": "2024-07-26",
+      "matured_horizons": [
+        5,
+        20,
+        60,
+        126,
+        252
+      ],
+      "sample_id": "OFFSET-024-MONTHS",
+      "selection_method": "LAST_COMPLETED_SESSION_ON_OR_BEFORE_OFFSET",
+      "session_index": 2658,
+      "stratum": "OFFSET_24_MONTHS"
+    },
+    {
+      "decision_date": "2022-07-28",
+      "matured_horizons": [
+        5,
+        20,
+        60,
+        126,
+        252
+      ],
+      "sample_id": "OFFSET-048-MONTHS",
+      "selection_method": "LAST_COMPLETED_SESSION_ON_OR_BEFORE_OFFSET",
+      "session_index": 2157,
+      "stratum": "OFFSET_48_MONTHS"
+    },
+    {
+      "decision_date": "2020-07-28",
+      "matured_horizons": [
+        5,
+        20,
+        60,
+        126,
+        252
+      ],
+      "sample_id": "OFFSET-072-MONTHS",
+      "selection_method": "LAST_COMPLETED_SESSION_ON_OR_BEFORE_OFFSET",
+      "session_index": 1653,
+      "stratum": "OFFSET_72_MONTHS"
+    },
+    {
+      "decision_date": "2016-07-28",
+      "matured_horizons": [
+        5,
+        20,
+        60,
+        126,
+        252
+      ],
+      "sample_id": "OFFSET-120-MONTHS",
+      "selection_method": "LAST_COMPLETED_SESSION_ON_OR_BEFORE_OFFSET",
+      "session_index": 647,
+      "stratum": "OFFSET_120_MONTHS"
+    }
+  ],
+  "formalGateEligible": false,
+  "horizonsCompletedSessions": [
+    5,
+    20,
+    60,
+    126,
+    252
+  ],
+  "lastSession": "2026-07-28",
+  "minimumRandomSessionSpacing": 15,
+  "outcomesWereObservableBeforePlan": true,
+  "protocolVersion": "FORWARD-DQV-EVALUATION-PROTOCOL-v2.2.0",
+  "randomAnchors": [
+    {
+      "decision_date": "2025-11-14",
+      "matured_horizons": [
+        5,
+        20,
+        60,
+        126
+      ],
+      "sample_id": "RANDOM-RECENT_3_TO_9_MONTHS-01",
+      "selection_method": "STRATIFIED_RANDOM_COMPLETED_SESSION",
+      "session_index": 2986,
+      "stratum": "RECENT_3_TO_9_MONTHS"
+    },
+    {
+      "decision_date": "2025-12-08",
+      "matured_horizons": [
+        5,
+        20,
+        60,
+        126
+      ],
+      "sample_id": "RANDOM-RECENT_3_TO_9_MONTHS-02",
+      "selection_method": "STRATIFIED_RANDOM_COMPLETED_SESSION",
+      "session_index": 3001,
+      "stratum": "RECENT_3_TO_9_MONTHS"
+    },
+    {
+      "decision_date": "2026-01-14",
+      "matured_horizons": [
+        5,
+        20,
+        60,
+        126
+      ],
+      "sample_id": "RANDOM-RECENT_3_TO_9_MONTHS-03",
+      "selection_method": "STRATIFIED_RANDOM_COMPLETED_SESSION",
+      "session_index": 3026,
+      "stratum": "RECENT_3_TO_9_MONTHS"
+    },
+    {
+      "decision_date": "2026-02-13",
+      "matured_horizons": [
+        5,
+        20,
+        60
+      ],
+      "sample_id": "RANDOM-RECENT_3_TO_9_MONTHS-04",
+      "selection_method": "STRATIFIED_RANDOM_COMPLETED_SESSION",
+      "session_index": 3047,
+      "stratum": "RECENT_3_TO_9_MONTHS"
+    },
+    {
+      "decision_date": "2026-03-13",
+      "matured_horizons": [
+        5,
+        20,
+        60
+      ],
+      "sample_id": "RANDOM-RECENT_3_TO_9_MONTHS-05",
+      "selection_method": "STRATIFIED_RANDOM_COMPLETED_SESSION",
+      "session_index": 3066,
+      "stratum": "RECENT_3_TO_9_MONTHS"
+    },
+    {
+      "decision_date": "2026-04-13",
+      "matured_horizons": [
+        5,
+        20,
+        60
+      ],
+      "sample_id": "RANDOM-RECENT_3_TO_9_MONTHS-06",
+      "selection_method": "STRATIFIED_RANDOM_COMPLETED_SESSION",
+      "session_index": 3086,
+      "stratum": "RECENT_3_TO_9_MONTHS"
+    },
+    {
+      "decision_date": "2024-01-08",
+      "matured_horizons": [
+        5,
+        20,
+        60,
+        126,
+        252
+      ],
+      "sample_id": "RANDOM-PRIOR_1_TO_3_YEARS-01",
+      "selection_method": "STRATIFIED_RANDOM_COMPLETED_SESSION",
+      "session_index": 2520,
+      "stratum": "PRIOR_1_TO_3_YEARS"
+    },
+    {
+      "decision_date": "2024-05-14",
+      "matured_horizons": [
+        5,
+        20,
+        60,
+        126,
+        252
+      ],
+      "sample_id": "RANDOM-PRIOR_1_TO_3_YEARS-02",
+      "selection_method": "STRATIFIED_RANDOM_COMPLETED_SESSION",
+      "session_index": 2608,
+      "stratum": "PRIOR_1_TO_3_YEARS"
+    },
+    {
+      "decision_date": "2024-07-18",
+      "matured_horizons": [
+        5,
+        20,
+        60,
+        126,
+        252
+      ],
+      "sample_id": "RANDOM-PRIOR_1_TO_3_YEARS-03",
+      "selection_method": "STRATIFIED_RANDOM_COMPLETED_SESSION",
+      "session_index": 2652,
+      "stratum": "PRIOR_1_TO_3_YEARS"
+    },
+    {
+      "decision_date": "2024-10-16",
+      "matured_horizons": [
+        5,
+        20,
+        60,
+        126,
+        252
+      ],
+      "sample_id": "RANDOM-PRIOR_1_TO_3_YEARS-04",
+      "selection_method": "STRATIFIED_RANDOM_COMPLETED_SESSION",
+      "session_index": 2715,
+      "stratum": "PRIOR_1_TO_3_YEARS"
+    },
+    {
+      "decision_date": "2025-04-11",
+      "matured_horizons": [
+        5,
+        20,
+        60,
+        126,
+        252
+      ],
+      "sample_id": "RANDOM-PRIOR_1_TO_3_YEARS-05",
+      "selection_method": "STRATIFIED_RANDOM_COMPLETED_SESSION",
+      "session_index": 2836,
+      "stratum": "PRIOR_1_TO_3_YEARS"
+    },
+    {
+      "decision_date": "2025-06-02",
+      "matured_horizons": [
+        5,
+        20,
+        60,
+        126,
+        252
+      ],
+      "sample_id": "RANDOM-PRIOR_1_TO_3_YEARS-06",
+      "selection_method": "STRATIFIED_RANDOM_COMPLETED_SESSION",
+      "session_index": 2870,
+      "stratum": "PRIOR_1_TO_3_YEARS"
+    },
+    {
+      "decision_date": "2017-06-08",
+      "matured_horizons": [
+        5,
+        20,
+        60,
+        126,
+        252
+      ],
+      "sample_id": "RANDOM-OLDER_4_TO_10_YEARS-01",
+      "selection_method": "STRATIFIED_RANDOM_COMPLETED_SESSION",
+      "session_index": 864,
+      "stratum": "OLDER_4_TO_10_YEARS"
+    },
+    {
+      "decision_date": "2017-10-16",
+      "matured_horizons": [
+        5,
+        20,
+        60,
+        126,
+        252
+      ],
+      "sample_id": "RANDOM-OLDER_4_TO_10_YEARS-02",
+      "selection_method": "STRATIFIED_RANDOM_COMPLETED_SESSION",
+      "session_index": 954,
+      "stratum": "OLDER_4_TO_10_YEARS"
+    },
+    {
+      "decision_date": "2017-11-24",
+      "matured_horizons": [
+        5,
+        20,
+        60,
+        126,
+        252
+      ],
+      "sample_id": "RANDOM-OLDER_4_TO_10_YEARS-03",
+      "selection_method": "STRATIFIED_RANDOM_COMPLETED_SESSION",
+      "session_index": 982,
+      "stratum": "OLDER_4_TO_10_YEARS"
+    },
+    {
+      "decision_date": "2019-03-20",
+      "matured_horizons": [
+        5,
+        20,
+        60,
+        126,
+        252
+      ],
+      "sample_id": "RANDOM-OLDER_4_TO_10_YEARS-04",
+      "selection_method": "STRATIFIED_RANDOM_COMPLETED_SESSION",
+      "session_index": 1311,
+      "stratum": "OLDER_4_TO_10_YEARS"
+    },
+    {
+      "decision_date": "2019-11-27",
+      "matured_horizons": [
+        5,
+        20,
+        60,
+        126,
+        252
+      ],
+      "sample_id": "RANDOM-OLDER_4_TO_10_YEARS-05",
+      "selection_method": "STRATIFIED_RANDOM_COMPLETED_SESSION",
+      "session_index": 1487,
+      "stratum": "OLDER_4_TO_10_YEARS"
+    },
+    {
+      "decision_date": "2021-11-02",
+      "matured_horizons": [
+        5,
+        20,
+        60,
+        126,
+        252
+      ],
+      "sample_id": "RANDOM-OLDER_4_TO_10_YEARS-06",
+      "selection_method": "STRATIFIED_RANDOM_COMPLETED_SESSION",
+      "session_index": 1973,
+      "stratum": "OLDER_4_TO_10_YEARS"
+    }
+  ],
+  "samplesPerRandomBand": 6,
+  "schemaVersion": "HISTORICAL-DQV-SLICE-PLAN-v2.2.0",
+  "seed": 20260729,
+  "selectionBoundary": {
+    "dateOnlyFieldsReadBeforeSeal": [
+      "tradingDate"
+    ],
+    "ohlcvOrOutcomeValuesLoadedBeforeSeal": false,
+    "planHashGeneratedBeforeOutcomeLoad": true,
+    "selectionAfterReplayAllowed": false
+  },
+  "sessionCount": 3160,
+  "sourceBindings": {
+    "dateOnlySpyPayload": {
+      "barCount": 3160,
+      "fileSha256": "55D03E8905FB41D104569EB5FF322E7AC78E1D3D10CB606DC9D14630E0661CD2",
+      "path": "storage/historical-validation/yahoo-daily-price-cache-v1/payloads/SPY/C7CACA3C798121C2386B5FD251047CFF54DC45B0B829E6238B892F9310909089.json",
+      "payloadContentHash": "C7CACA3C798121C2386B5FD251047CFF54DC45B0B829E6238B892F9310909089"
+    },
+    "historicalPriceManifest": {
+      "artifactContentHash": "CF50A3994AB3660029AC56F586F8B6CA572EA1654B6B5DF5549152D191B1A0D9",
+      "fileSha256": "E322AC57C00BB4018AC883A2F0EF3461299D7D97725B0791C75EA01846D08E27",
+      "path": "docs/generated/historical-yahoo-price-cache-20260729T-HISTORICAL-V1-R2-manifest.json"
+    }
+  },
+  "untouchedHoldout": false
+}

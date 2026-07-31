@@ -1,0 +1,267 @@
+{
+  "artifactType": "PROSPECTIVE_OUTCOME_PERSISTENCE_READINESS_AUDIT",
+  "schemaVersion": "PROSPECTIVE-OUTCOME-PERSISTENCE-READINESS-AUDIT-v1.0.0",
+  "effectiveDate": "2026-07-29",
+  "auditMode": "STRICTLY_OFFLINE_READ_ONLY",
+  "status": "V18_REQUIRED_NOT_IMPLEMENTED",
+  "scope": "Durable PostgreSQL representation of Forward DQV v2 enrollment, outcomes, corrections and quality evidence. This does not supersede the earlier V14-V17 runtime-evidence audit.",
+  "evidence": {
+    "migrations": [
+      {
+        "path": "database/migrations/V1__create_application_schemas.sql",
+        "fileSha256": "sha256:4f7917ef00f5f2356196d31f5c188d8410611064e2322e15fbec6f35300ab1e1"
+      },
+      {
+        "path": "database/migrations/V2__create_market_data_tables.sql",
+        "fileSha256": "sha256:cd540aa318e0cbfcdff2bfb369d53a1b2fa6898000eba0584725cec27e3f88f9"
+      },
+      {
+        "path": "database/migrations/V3__enforce_unique_security_symbols.sql",
+        "fileSha256": "sha256:9d771b3efdd20484f6022c81d48c8eaf8cc0ca76eac46048916a3addcfa680bc"
+      },
+      {
+        "path": "database/migrations/V4__create_source_and_security_history.sql",
+        "fileSha256": "sha256:e571a15e6ac04854af65b450cbc2d97651f9c23b0ca95d7c10053ff8c630bbc6"
+      },
+      {
+        "path": "database/migrations/V5__create_immutable_analytics_observations.sql",
+        "fileSha256": "sha256:1c35d9d37b87c5121330ac6793aeae1323ac11cf2f40596cdf4690b851b49236"
+      },
+      {
+        "path": "database/migrations/V6__create_snapshots_and_universes.sql",
+        "fileSha256": "sha256:bc3728cff7b47e4ae260d0c4e0911b3b2c7ffcb9c432f090a671f9eb2599d754"
+      },
+      {
+        "path": "database/migrations/V7__create_strategy_metadata_and_screening_runs.sql",
+        "fileSha256": "sha256:a33fdb037241c9daf2fc486418a102d915a0acaa1d49c45a4fde8a3ff7e65cd3"
+      },
+      {
+        "path": "database/migrations/V8__create_screening_results.sql",
+        "fileSha256": "sha256:dd000cd5eec4a397951a0841f4c33b8e73cfcc9c9caa5772a7b54428622f0ebc"
+      },
+      {
+        "path": "database/migrations/V9__create_analytics_access_roles_and_views.sql",
+        "fileSha256": "sha256:b064a23f73616d34d69437f74436b2c6e11319ab6e6cf78c1f1951071d190a32"
+      },
+      {
+        "path": "database/migrations/V10__enforce_fundamental_fact_idempotency.sql",
+        "fileSha256": "sha256:51f62140ea2b1c88fecd0c72e697af6e11cf0569496641b57d1337b95525478d"
+      },
+      {
+        "path": "database/migrations/V11__create_forward_validation.sql",
+        "fileSha256": "sha256:613698c7ec5f405961da63090bd7c0436949d9257fdd04a069293a6f64e7696b"
+      },
+      {
+        "path": "database/migrations/V12__create_user_and_portfolio_context.sql",
+        "fileSha256": "sha256:4936ef6b25e401149beb7d6f4d923ea296e4eecc440c69b4d787906f04115c35"
+      },
+      {
+        "path": "database/migrations/V13__seal_market_provider_in_snapshots.sql",
+        "fileSha256": "sha256:b835a45a9fd1e040f845cc140d1cc761eff5f6c0d5555f8df712b5d7feb3cbb5"
+      },
+      {
+        "path": "database/migrations/V14__create_market_intelligence_reference_data.sql",
+        "fileSha256": "sha256:3fc70fe44cc18db414f191b5633bbc5ed615cc3aaf6d4576230b60c668893eda"
+      },
+      {
+        "path": "database/migrations/V15__create_market_intelligence_observations_and_screening.sql",
+        "fileSha256": "sha256:58c0cfd9c94ddbe43f4a077f7cafb82a074cf4d8e783d94034fe2d29625eea03"
+      },
+      {
+        "path": "database/migrations/V16__create_market_intelligence_refresh_operations.sql",
+        "fileSha256": "sha256:f7f4a6a68bb9de962782bad0fcb2aa181d542b2c98ad49addf056ed996f40e6c"
+      },
+      {
+        "path": "database/migrations/V17__persist_market_intelligence_screening_contract.sql",
+        "fileSha256": "sha256:0dd19070c26c87986952cb4859c9c7d3510c0d742186ac9435b9ab69c1d50c33"
+      }
+    ],
+    "contractsAndRepositories": [
+      {
+        "path": "analysis-python/src/equity_analysis/forward_validation/prospective_protocol_v2.py",
+        "fileSha256": "sha256:d0d6e5b84992f2a221d9a9828fbe3029e133dc5b4b76b4aceb2c751dfc6a9831"
+      },
+      {
+        "path": "analysis-python/src/equity_analysis/forward_validation/outcomes_v2.py",
+        "fileSha256": "sha256:d9b1ab789ae70bd11f5a4a81b29a31526c22c9a2ff46534c1716a9eabe811c96"
+      },
+      {
+        "path": "analysis-python/src/equity_analysis/forward_validation/prospective_enrollment_v1.py",
+        "fileSha256": "sha256:c999fdc43dd2b9c24e1ce3cd19f279a3644aa14458b47c50fc2a0e3987e2565d"
+      },
+      {
+        "path": "analysis-python/src/equity_analysis/forward_validation/persistence.py",
+        "fileSha256": "sha256:eab7402be36d3422818826dc0c350b7e27fcce1f0b470027f848e1040152a1ca"
+      },
+      {
+        "path": "analysis-python/src/equity_analysis/forward_validation/ledger.py",
+        "fileSha256": "sha256:1900c29f21ae102a5e8431d9c506aa871a0f76077f03ccb43988f3b6bd234cff"
+      },
+      {
+        "path": "analysis-python/src/equity_analysis/forward_validation/models.py",
+        "fileSha256": "sha256:1d9761f4c5b2cdbc79aabd8c25288a42035da88f671b85128eebba8bcf438c46"
+      }
+    ],
+    "evidenceHash": "sha256:28314ec5388495d80a698fc804f342a163bf342e0f077a61bd0ae172fc044947"
+  },
+  "capabilityMatrix": [
+    {
+      "requirement": "IMMUTABLE_FORWARD_V2_ENROLLMENT",
+      "currentDisposition": "PARTIAL_LEGACY_ONLY",
+      "existingStructures": [
+        "analytics.forward_enrollment",
+        "analytics.analytics_audit_event"
+      ],
+      "supported": "Append-only legacy enrollment identity, idempotency and input hash",
+      "gap": "No typed binding for preregistration hash, v2 decision manifest and controlled artifact, five-horizon schedule, frozen population hash, both model freezes, or complete terminal population.",
+      "v18Required": true
+    },
+    {
+      "requirement": "FIVE_MATURITY_HORIZONS",
+      "currentDisposition": "HARD_SCHEMA_BLOCK",
+      "existingStructures": [
+        "analytics.forward_observation_result"
+      ],
+      "supported": "5, 20 and 60 completed sessions only",
+      "gap": "The V11 CHECK constraint rejects 126 and 252 completed sessions. The V17 bridge also persists only 5/20/60 and treats Long Horizon as context-only.",
+      "v18Required": true
+    },
+    {
+      "requirement": "SIX_FORMAL_BENCHMARK_ARMS",
+      "currentDisposition": "SEMANTIC_SCHEMA_BLOCK",
+      "existingStructures": [
+        "analytics.forward_shadow_order",
+        "analytics.forward_observation_result"
+      ],
+      "supported": "Legacy sector ETF and SPY trading arms",
+      "gap": "The legacy arm constraint is an entry-policy experiment and has no typed SPY/SECTOR/EQUAL_WEIGHT/PURE_MOMENTUM/PURE_VALUE/PURE_QUALITY outcome identity or one-row-per-kind completeness constraint.",
+      "v18Required": true
+    },
+    {
+      "requirement": "GROSS_NET_COST_AND_PATH_METRICS",
+      "currentDisposition": "PARTIAL_GENERIC_METRICS",
+      "existingStructures": [
+        "analytics.forward_metric_result",
+        "analytics.forward_daily_valuation"
+      ],
+      "supported": "Generic version-bound numeric metrics and immutable daily valuations",
+      "gap": "No typed current Forward v2 persistence contract binds gross return, liquidity-sensitive cost, net return, MAE, MFE, drawdown and downside metrics to the same security or benchmark outcome and source chain. Forward outcomes_v2 has gross/net/cost and aggregate drawdown/downside, but no MAE/MFE fields; the legacy ledger has MAE but not MFE.",
+      "v18Required": true,
+      "contractExtensionRequired": true
+    },
+    {
+      "requirement": "SOURCE_AND_VERSION_BINDINGS",
+      "currentDisposition": "AUDIT_EVENT_ONLY",
+      "existingStructures": [
+        "analytics.source_record",
+        "analytics.analytics_audit_event",
+        "analytics.forward_experiment"
+      ],
+      "supported": "Append-only hashes, generic JSON audit detail and legacy experiment versions",
+      "gap": "No authoritative outcome row enforces preregistration, model freeze, benchmark contract, cost policy, decision manifest, population, calendar, action and price-evidence hashes as one immutable chain.",
+      "v18Required": true
+    },
+    {
+      "requirement": "APPEND_ONLY_CORRECTIONS",
+      "currentDisposition": "PARTIAL_RESULT_CHAIN",
+      "existingStructures": [
+        "analytics.forward_observation_result.result_version",
+        "analytics.forward_observation_result.supersedes_result_id"
+      ],
+      "supported": "Append-only legacy result versions and supersession link",
+      "gap": "The current chain cannot cover 126/252 or bind a corrected batch's complete security population, six benchmark rows and source evidence. Daily valuation and fill primary keys also cannot accept correction revisions because updates are rejected and revision columns are absent.",
+      "v18Required": true
+    },
+    {
+      "requirement": "DURABLE_QUALITY_REPORT_EVIDENCE",
+      "currentDisposition": "LEGACY_REPORT_ONLY",
+      "existingStructures": [
+        "analytics.forward_report_snapshot"
+      ],
+      "supported": "Legacy one-month/two-month immutable report JSON",
+      "gap": "Report types and bindings do not represent Forward v2 targets, 5/20/60/126/252 horizons, block-bootstrap evidence, outcome batch hashes, or model and preregistration versions.",
+      "v18Required": true
+    }
+  ],
+  "decision": {
+    "reuseV1V17WithoutMigration": false,
+    "v18Required": true,
+    "reason": "V11 hard-rejects 126/252 sessions and lacks the six formal benchmark outcome identities and complete Forward v2 hash/version chain. V16 audit JSON is a trace facility, not a typed authoritative numeric outcome ledger. Current v2 enrollment/outcomes are durable only as controlled files and have no PostgreSQL repository.",
+    "migrationCreated": false,
+    "contractExtensionRequiredBeforeImplementation": true,
+    "contractExtensionBoundary": "Add MAE/MFE and their source/metric semantics in a new versioned Forward outcome contract; do not change formulas or silently add them to immutable v2.0 artifacts."
+  },
+  "v18Responsibility": {
+    "proposedMigration": "V18__persist_prospective_forward_dqv_v2.sql",
+    "ownership": "Python Analytics owns new analytics.* objects",
+    "legacyBoundary": "Do not alter or reinterpret V11 records; V1-V17 remain append-only and continue serving the legacy forward experiment.",
+    "tables": [
+      {
+        "name": "analytics.forward_dqv_enrollment_v2",
+        "responsibility": "One immutable v2 enrollment root with idempotency/request hash, preregistration and decision artifact hashes/references, READY snapshot, decision/effective timestamps, frozen universe and population hashes, both model freeze bindings, benchmark/cost contract versions and hashes, terminal counts and enrollment hash."
+      },
+      {
+        "name": "analytics.forward_dqv_maturity_schedule_v2",
+        "responsibility": "Exactly one immutable schedule row per enrollment and completed session in 5/20/60/126/252, with frozen evaluation role, formal eligibility and natural maturity timestamp."
+      },
+      {
+        "name": "analytics.forward_dqv_outcome_batch_v2",
+        "responsibility": "Versioned immutable outcome batch per enrollment/horizon with operational state, observed/matured timestamps, complete source manifest hashes, result hash and single-successor supersession chain."
+      },
+      {
+        "name": "analytics.forward_dqv_security_outcome_v2",
+        "responsibility": "One terminal row per batch and frozen security with explicit state/reasons, gross return, liquidity-sensitive cost, net return, price/action evidence hash and record hash. Missing data remains null."
+      },
+      {
+        "name": "analytics.forward_dqv_benchmark_outcome_v2",
+        "responsibility": "Exactly one row per batch and each of the six formal benchmark kinds, with identifier, state/reason, gross/cost/net return and source evidence hash."
+      },
+      {
+        "name": "analytics.forward_dqv_path_metric_v2",
+        "responsibility": "Versioned metric/status/reason rows for security, benchmark or aggregate subjects, including MAE, MFE, maximum drawdown and downside capture without embedding provider prices in Git-safe data."
+      },
+      {
+        "name": "analytics.forward_dqv_quality_report_v2",
+        "responsibility": "Immutable target-specific Forward v2 quality result bound to outcome batches, decision manifests, preregistration, model, resampling and maturity hashes; no aggregate claim may replace separate Long Horizon targets."
+      }
+    ],
+    "requiredConstraints": [
+      "All new tables reject UPDATE and DELETE.",
+      "Enrollment idempotency key and enrollment content hash are unique.",
+      "Maturity sessions are limited to 5,20,60,126,252 and unique per enrollment.",
+      "126 sessions is diagnostic-only; 5,20,60 and 252 retain frozen formal roles.",
+      "Benchmark kind is limited to SPY, SECTOR, EQUAL_WEIGHT, PURE_MOMENTUM, PURE_VALUE and PURE_QUALITY.",
+      "A terminal complete batch requires the full frozen security population and six benchmark rows.",
+      "ASSESSED/AVAILABLE rows require gross, cost, net and source evidence; other states require null numeric values and explicit reasons.",
+      "Net return must equal gross return minus the stored cost rate within the frozen numeric tolerance.",
+      "A correction is a new result_version with one same-enrollment/same-horizon predecessor; mutation and branching are rejected.",
+      "Content hashes and source hashes are required and uniquely indexed where they define immutable identity.",
+      "Raw licensed prices are not stored in Git-safe audit/report payloads.",
+      "No app.* object, brokerage execution path or AI-controlled deterministic field is introduced."
+    ],
+    "upgradeTests": [
+      "PostgreSQL 17 clean V1-to-V18",
+      "V11-to-V18 upgrade preserving every legacy row and trigger",
+      "V16-to-V18 and V17-to-V18 upgrades",
+      "exact replay and idempotency conflict",
+      "five-horizon completeness and 126-session diagnostic-role enforcement",
+      "six-benchmark completeness and unavailable-state handling",
+      "missing numeric values never become zero",
+      "correction successor accepted; mutation, cycles and branches rejected",
+      "source/model/benchmark/prereg hash mismatch rejected",
+      "full frozen population and terminal-state completeness"
+    ]
+  },
+  "execution": {
+    "networkRequests": 0,
+    "databaseReads": 0,
+    "databaseWrites": 0,
+    "scoringRuns": 0,
+    "formulaChanges": false,
+    "migrationFilesCreated": 0,
+    "commits": 0,
+    "pushes": 0,
+    "deployments": 0
+  },
+  "artifactContentHash": "sha256:d10bb749a893dcb53dc1e3aa1975cd55ec118e7e81825fd595b51a9a1357811e"
+}

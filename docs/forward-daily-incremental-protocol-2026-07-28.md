@@ -61,3 +61,28 @@ security, strategy, and bucket from re-entering for 60 trading days.
 
 This protocol is research-only. It does not authorize automatic trading or
 claim that prospective observations prove future excess returns.
+
+## Implemented vertical-slice bridge
+
+The local Market Intelligence vertical slice now provides an idempotent bridge
+from sealed V17 screening decisions to the V11 prospective ledger. Every
+attempt is recorded as an append-only audit event. V11 enrollment, candidate
+signal, and observation rows are created only when the sealed decision
+contains an eligible deterministic signal.
+
+The verified 66-security snapshot has 0 eligible results, 55
+`INSUFFICIENT_DATA` results, and 11 `SPECIALIZED_MODEL_REQUIRED` results. Its
+bridge attempt is therefore `NO_ELIGIBLE_SIGNALS`, with no V11 signal or
+outcome rows. The 5-, 20-, and 60-session schedules are retained as
+`NOT_APPLICABLE`; the 12-month-plus model remains context only.
+
+Spring Boot exposes typed create, latest, and attempt-detail endpoints. The
+Next.js research workspace displays the typed latest state and clearly
+separates pending or matured prospective outcomes from long-horizon model
+context.
+
+This bridge phase made no provider request. It did not change a formula,
+cohort threshold, PIT rule, missing-data rule, or previously frozen Forward
+schedule. The bounded 57-price/57-action/55-fundamental refresh was completed
+in the preceding vertical-slice phase: ACN's malformed current row was
+rejected, while 259 prior valid sessions were retained.

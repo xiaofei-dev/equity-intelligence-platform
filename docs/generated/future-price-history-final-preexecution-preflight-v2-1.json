@@ -1,0 +1,185 @@
+{
+  "artifactContentHash": "sha256:a63cfe8bfcac0e9e5432e0bee9bb10122c1cebf99c498e599c0c25703b4778fa",
+  "artifactType": "FUTURE_PRICE_HISTORY_FINAL_PREEXECUTION_PREFLIGHT",
+  "blockedReasons": [
+    "TARGET_SESSION_NOT_COMPLETED"
+  ],
+  "currentControlledStateAudit": {
+    "auditPerformedWithoutNetworkOrDatabase": true,
+    "checkpointCount": 0,
+    "journalRunCount": 0,
+    "leaseExists": false,
+    "storageRootExists": false,
+    "unknownPhysicalRequestCount": 0
+  },
+  "evaluatedAt": "2026-07-30T05:11:44.857628+00:00",
+  "evidenceContract": {
+    "actionAdjustmentBindingRequired": true,
+    "actionAdjustmentBindingVersion": "ACTION-ADJUSTED-PRICE-BINDING-v1.0.0",
+    "adjustmentMode": "TOTAL_RETURN_ADJUSTED",
+    "adtvCompletedSessions": 20,
+    "adtvEvidenceRequired": true,
+    "adtvPolicyVersion": "ADTV-20-RAW-CLOSE-X-RAW-VOLUME-v1.0.0",
+    "captureVersion": "FUTURE-PRICE-HISTORY-CAPTURE-v2.0.0",
+    "corporateActionsRequired": true,
+    "coverageVersion": "FUTURE-PRICE-HISTORY-COVERAGE-v2.0.0",
+    "futurePriceEvidenceVersion": "FUTURE-COMPLETED-SESSION-PRICE-EVIDENCE-v1.0.0",
+    "normalizationVersion": "YAHOO-CHART-DAILY-NORMALIZATION-v1.0.0",
+    "providerRevisionStatus": "AS_OBSERVED_AT_CAPTURE",
+    "rawAndAdjustedBarsRequired": true,
+    "rawTransportHashSemantics": "EXACT_HTTP_RESPONSE_BODY_BYTES",
+    "rawTransportVersion": "RAW-HTTP-TRANSPORT-CAPTURE-v1.0.0"
+  },
+  "executionBoundary": {
+    "aiUsedForDeterministicFields": false,
+    "automaticTradingAuthorized": false,
+    "commitCreated": false,
+    "databaseReadsExecuted": 0,
+    "databaseWritesExecuted": 0,
+    "deploymentExecuted": false,
+    "enrollmentExecuted": false,
+    "networkRequestsExecuted": 0,
+    "outcomesComputed": false,
+    "providerRequestsExecuted": 0,
+    "pushExecuted": false,
+    "rawProviderValuesIncluded": false,
+    "scoresOrRanksComputed": false
+  },
+  "executionSafety": {
+    "checkpointRequiredForCompletedReplay": true,
+    "completedReplayPhysicalRequests": 0,
+    "databaseWriteDefault": false,
+    "explicitResumeRequired": true,
+    "heartbeatLeasePath": "storage/future-price-history-capture-v2/.future-price-history-v2.lock",
+    "leaseRequired": true,
+    "physicalRequestJournalRequired": true,
+    "providerRetryLimit": 0,
+    "requestStateSequence": [
+      "INTENT",
+      "COMPLETED_OR_FAILED"
+    ],
+    "unknownStatePolicy": "STOP_NO_AUTOMATIC_RETRY"
+  },
+  "latestCompletedSession": "2026-07-29",
+  "liveConfirmation": {
+    "namedReviewerRequired": true,
+    "nasdaqCloseConfirmationRequired": true,
+    "nasdaqScheduledSessionConfirmationRequired": true,
+    "nyseCloseConfirmationRequired": true,
+    "nyseScheduledSessionConfirmationRequired": true,
+    "singleExecutionOnly": true,
+    "tokenSha256": "sha256:735d134d574bcf6d45cfc35ffec33e67bd63d5eb4498cc411b28ebaefeae7fce"
+  },
+  "onlyApprovedPostCloseCommand": {
+    "argv": [
+      ".\\analysis-python\\.venv\\Scripts\\python.exe",
+      "-m",
+      "equity_analysis.future_price_evidence.history_capture_cli_v2",
+      "--execute-live",
+      "--confirm-live",
+      "I_CONFIRM_FUTURE_PRICE_EVIDENCE_LIVE_CAPTURE",
+      "--reviewed-by",
+      "<named reviewer>",
+      "--confirm-nyse-session",
+      "--confirm-nyse-close",
+      "--confirm-nasdaq-session",
+      "--confirm-nasdaq-close"
+    ],
+    "commandHash": "sha256:9051ecfd7cac4f925ba588816d567de970fdbe763a9d423215f219581c58895f",
+    "databaseFlagPresent": false,
+    "environment": {
+      "PYTHONPATH": "analysis-python/src"
+    },
+    "resumeFlagPresent": false,
+    "workingDirectory": "C:\\Projects\\equity-intelligence-platform"
+  },
+  "plan": {
+    "baseSymbolPlanHash": "sha256:a81177c51c5176e3565221ad9390615d9de3cfa7e1ed9f3cecbf9d42ef437343",
+    "configuredWeightHardCeiling": 69,
+    "externalReferenceRowsHash": "sha256:12bd7f3451a565e0ece035d6488fd5163c4ec15426780b4a6fab4238314a5f36",
+    "externalReferenceUniverseHash": "sha256:20885e4ca21345f152220430966141303b26ff7b49e9361825702471779e7a05",
+    "historyWindowCalendarDays": 420,
+    "minimumParsedCompletedSessionsPerSymbol": 253,
+    "officialCalendarRequestCount": 2,
+    "orderedSymbolsHash": "sha256:c4938baa6ff26b0d4bcf293b4fd57b8bf7993cea6bc59c04d51579f87ae03ccd",
+    "physicalHttpAttemptHardCeiling": 69,
+    "planHash": "sha256:3a1c16085016be13f45972a14b8fc722e4b4324a1cbe7eae2220b3aabeacd871",
+    "preregistrationSealHash": "sha256:ed3e796290c3509c94429b7273346612c40f2b4db4b94889e0db7d583c7c8e0d",
+    "priceSymbolCount": 67,
+    "providerRetryLimit": 0,
+    "symbolPlanHash": "sha256:5f985e3396ce6efd771db47a284a1699eb4a4f7a1f93076ba1a238fb5bea705b",
+    "symbolPlanVersion": "FORWARD-PRICE-SYMBOL-PLAN-v2.0.0",
+    "universeFileSha256": "C977E932EDD5184AABBDE53ACCFF6F480650F96C03C878A9EC7FBE15D2920078",
+    "universeVersion": "market-intelligence-closed-test-us-v1.0.0",
+    "version": "FUTURE-PRICE-HISTORY-PREFLIGHT-v2.0.0",
+    "yahooChartRequestCount": 67
+  },
+  "schemaVersion": "FUTURE-PRICE-HISTORY-FINAL-PREEXECUTION-PREFLIGHT-v2.1.0",
+  "sourceBindings": {
+    "cliSource": {
+      "fileSha256": "sha256:34dc302b05189db75e182f17ed83d3094f83b13e9b6e0ffb1f9472915cc47d3e",
+      "path": "analysis-python/src/equity_analysis/future_price_evidence/history_capture_cli_v2.py"
+    },
+    "closedTestUniverse": {
+      "contentHash": "sha256:55f245e64e04b89bdab3c3ae571ebd5b6d16ace5f87cb7e81de79575ea778db7",
+      "fileSha256": "sha256:c977e932edd5184aabbde53accff6f480650f96c03c878a9ec7fbe15d2920078",
+      "path": "analysis-python/resources/universes/market-intelligence-closed-test-us-v1.json",
+      "sourceFixtureSha256": "1C53948F5CD0D1E74F870DEF6B34A619DE1845B9DA2B3170B4712427DE43A033",
+      "universeVersion": "market-intelligence-closed-test-us-v1.0.0"
+    },
+    "coverageSource": {
+      "fileSha256": "sha256:c7c644ca451b1b53a3ddf2622520153abb7dc372d6c77fdd559859dd400e99a7",
+      "path": "analysis-python/src/equity_analysis/future_price_evidence/history_coverage_v2.py"
+    },
+    "evidenceContractsSource": {
+      "fileSha256": "sha256:0ef51697dd5bffeb6201b9972a37447b03ee9286d6ca10c179b97ba7cc7b2c76",
+      "path": "analysis-python/src/equity_analysis/future_price_evidence/contracts_v1.py"
+    },
+    "externalReferenceUniverse": {
+      "artifactContentHash": "sha256:20885e4ca21345f152220430966141303b26ff7b49e9361825702471779e7a05",
+      "fileSha256": "sha256:fbbb9f9db5eaabc67291259b803196445b099f4a3e7e853fa76e2bbc80a33764",
+      "path": "docs/generated/forward-benchmark-external-reference-universe-v2-2.json"
+    },
+    "finalSuccessorReadinessCloseoutV2": {
+      "artifactContentHash": "sha256:9cec9ef8d31c0946fab292554f38a4305363a4fcd6ab838241b46084fa74b6f0",
+      "fileSha256": "sha256:a1fd5842fa172ed76bb493ba636ade27c426d42323ce21411ccacc57de6833e2",
+      "path": "docs/generated/forward-v2-2-final-successor-readiness-closeout-v2.json"
+    },
+    "historyPreflight": {
+      "artifactContentHash": "sha256:33b587b54f2bc942b1a81557fc239d26903dfef40f0abf9ec21c913620a3a0f7",
+      "fileSha256": "sha256:35162d16712c88a5ba80666c3a2c544b5a767085b5827f5ff9a9b0fe63cbe3ab",
+      "path": "docs/generated/future-price-history-preflight-v2.json"
+    },
+    "runnerSource": {
+      "fileSha256": "sha256:d2a19247d4b59d538f895c7b25b8d7513f012ba5f94410d8a4be4a117c882d0a",
+      "path": "analysis-python/src/equity_analysis/future_price_evidence/history_capture_runner_v2.py"
+    },
+    "v18Acceptance": {
+      "artifactContentHash": "sha256:e5ce27f66981d8341ed0d88f33fc72d380999b3d68360d53ce83f908f51a5f1e",
+      "fileSha256": "sha256:e0f96af0eb0dfc285245a00992b46857ec817379064c2d33a78b27876c4342e6",
+      "path": "docs/generated/forward-dqv-v18-acceptance-v1.json"
+    },
+    "v22PreregistrationSeal": {
+      "fileSha256": "sha256:b97b91b2c3f063eae4ff6f23a6f4db6a2c8130d4ab3725b861d911db697f53fc",
+      "path": "docs/generated/forward-preregistration-seal-v2-2.json",
+      "sealContentHash": "sha256:ed3e796290c3509c94429b7273346612c40f2b4db4b94889e0db7d583c7c8e0d"
+    }
+  },
+  "status": "BLOCKED_AWAITING_TARGET_SESSION_COMPLETION",
+  "stopConditions": [
+    "TARGET_SESSION_NOT_COMPLETED",
+    "NYSE_OR_NASDAQ_CALENDAR_REVIEW_NEGATIVE_OR_MISSING",
+    "PREEXISTING_OR_CONFLICTING_LEASE",
+    "PHYSICAL_REQUEST_STATE_UNKNOWN",
+    "CHECKPOINT_OR_JOURNAL_HASH_MISMATCH",
+    "V2_2_PREREGISTRATION_OR_UNIVERSE_OR_SOURCE_HASH_CHANGED",
+    "REQUEST_COUNT_OR_WEIGHT_ABOVE_69",
+    "HTTP_AUTH_LIMIT_TRANSPORT_FORMAT_OR_SEMANTIC_ANOMALY",
+    "TARGET_COMPLETED_SESSION_BAR_MISSING",
+    "PARSED_COMPLETED_SESSIONS_BELOW_253",
+    "ADJUSTED_RAW_ACTION_OR_ADTV_EVIDENCE_MISSING",
+    "IMMUTABLE_ARTIFACT_CONFLICT"
+  ],
+  "targetSession": "2026-07-30",
+  "targetSessionCompleted": false
+}

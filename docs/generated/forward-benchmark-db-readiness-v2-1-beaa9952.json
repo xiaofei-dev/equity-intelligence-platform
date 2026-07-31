@@ -1,0 +1,140 @@
+{
+  "artifactType": "FORWARD_BENCHMARK_DB_READINESS",
+  "schemaVersion": "FORWARD-BENCHMARK-DB-READINESS-ARTIFACT-v2.1.0",
+  "readinessVersion": "FORWARD-BENCHMARK-DB-READINESS-v2.1.0",
+  "dataSnapshotId": "beaa9952-9852-4088-9dc3-92047824414b",
+  "snapshotAsOf": "2026-07-29T02:57:08.988871+00:00",
+  "ingestionCutoff": "2026-07-29T02:57:08.988871+00:00",
+  "universeVersion": "market-intelligence-closed-test-us-v1.0.0",
+  "universeHash": "sha256:a40a8d2179d3f0eb409fa39e4ea6964fdd0e32ae77bb2c795a1e26071251b237",
+  "declaredSecurityCount": 66,
+  "loadedSecurityCount": 66,
+  "status": "BLOCKED",
+  "schemaBlockers": [
+    "COMPLETED_SESSION_EVIDENCE_NOT_PERSISTED_V17",
+    "OBJECTIVE_SCORE_LINEAGE_AND_TIMING_NOT_PERSISTED_V17",
+    "PRICE_PROMOTION_EVIDENCE_NOT_PERSISTED_V17",
+    "PRICE_VALIDATION_DECISION_HASH_NOT_PERSISTED_V17"
+  ],
+  "evidenceBlockers": [
+    "DECISION_TIME_ADTV_EVIDENCE_MISSING",
+    "PLACEHOLDER_SECTOR_PRESENT",
+    "PRICE_EVIDENCE_NOT_VALIDATED",
+    "PROVISIONAL_PRICE_EVIDENCE"
+  ],
+  "benchmarkFamilies": [
+    {
+      "kind": "SPY",
+      "state": "MISSING",
+      "reasonCodes": [
+        "ADTV_EVIDENCE_MISSING",
+        "PRICE_HISTORY_INCOMPLETE",
+        "PRICE_SERIES_MISSING"
+      ],
+      "evidenceHash": null,
+      "sourceEvidenceHash": null,
+      "constituentSetHash": null,
+      "weightHash": null,
+      "selectionHash": null,
+      "costEvidenceHash": null,
+      "sectorAssignmentHash": null,
+      "terminalHash": "sha256:18fa8a3b4f3b77d9720cdfac278a56df93d98fad1c46d987907ea6c5670e0c37"
+    },
+    {
+      "kind": "SECTOR",
+      "state": "MISSING",
+      "reasonCodes": [
+        "VALIDATION_SECTOR_FORBIDDEN"
+      ],
+      "evidenceHash": null,
+      "sourceEvidenceHash": null,
+      "constituentSetHash": null,
+      "weightHash": null,
+      "selectionHash": null,
+      "costEvidenceHash": null,
+      "sectorAssignmentHash": null,
+      "terminalHash": "sha256:22966d52b9459349dcd3b4de4857f64e75f250663b5f1a5770f3ccf0f4eb03b1"
+    },
+    {
+      "kind": "EQUAL_WEIGHT",
+      "state": "MISSING",
+      "reasonCodes": [
+        "ADTV_EVIDENCE_MISSING",
+        "PRICE_HISTORY_INCOMPLETE",
+        "PRICE_SERIES_MISSING"
+      ],
+      "evidenceHash": null,
+      "sourceEvidenceHash": null,
+      "constituentSetHash": null,
+      "weightHash": null,
+      "selectionHash": null,
+      "costEvidenceHash": null,
+      "sectorAssignmentHash": null,
+      "terminalHash": "sha256:c270324fb38c09f5df28fbf3cf623005d5e1331f960a31b2f69bb36f7dba99b9"
+    },
+    {
+      "kind": "PURE_MOMENTUM",
+      "state": "MISSING",
+      "reasonCodes": [
+        "MOMENTUM_12_1_HISTORY_INCOMPLETE",
+        "MOMENTUM_COMPLETE_INCLUDED_POPULATION_REQUIRED",
+        "PRICE_HISTORY_INCOMPLETE",
+        "PRICE_SERIES_MISSING"
+      ],
+      "evidenceHash": null,
+      "sourceEvidenceHash": null,
+      "constituentSetHash": null,
+      "weightHash": null,
+      "selectionHash": null,
+      "costEvidenceHash": null,
+      "sectorAssignmentHash": null,
+      "terminalHash": "sha256:7818d947235e4652acebb558a4cb9c2af5f8518099fd3f76a5889aca0d2407a6"
+    },
+    {
+      "kind": "PURE_VALUE",
+      "state": "MISSING",
+      "reasonCodes": [
+        "OBJECTIVE_SCORE_CONTRACT_MISSING",
+        "OBJECTIVE_SCORE_COUNT_BELOW_20",
+        "OBJECTIVE_SCORE_COVERAGE_BELOW_80_PERCENT"
+      ],
+      "evidenceHash": null,
+      "sourceEvidenceHash": null,
+      "constituentSetHash": null,
+      "weightHash": null,
+      "selectionHash": null,
+      "costEvidenceHash": null,
+      "sectorAssignmentHash": null,
+      "terminalHash": "sha256:db6bbe602e31727cec3602b4b2cd71e9c654b4f163b61ef098fd032378547855"
+    },
+    {
+      "kind": "PURE_QUALITY",
+      "state": "MISSING",
+      "reasonCodes": [
+        "OBJECTIVE_SCORE_CONTRACT_MISSING",
+        "OBJECTIVE_SCORE_COUNT_BELOW_20",
+        "OBJECTIVE_SCORE_COVERAGE_BELOW_80_PERCENT"
+      ],
+      "evidenceHash": null,
+      "sourceEvidenceHash": null,
+      "constituentSetHash": null,
+      "weightHash": null,
+      "selectionHash": null,
+      "costEvidenceHash": null,
+      "sectorAssignmentHash": null,
+      "terminalHash": "sha256:bfb0cd6a00e2ba528f0c5407b396443763a67e5899a02a053055767754d686f3"
+    }
+  ],
+  "constructionContractHash": "sha256:ee0b1de73e19b8475a056231aa6e03817ae273f40f7ca74e4f693446bc4a62df",
+  "constructionBundleHash": "sha256:8fe73fc3ece75c5668cec8c107e81ce138db5afde8fa6b2ccf19acedcafc4116",
+  "parentLiquidityCostPolicyVersion": "LIQUIDITY-SENSITIVE-COST-v1.0.0",
+  "parentLiquidityCostPolicyHash": "sha256:b07f5c5ad4b2f13d0c81a48b2eab4e722da9b0e43143e013bedcc155faba96bb",
+  "diagnosticContentHash": "sha256:ac9dc20f676efea42dab2c9e2826f9e7f650edb4edb5814a7b49c9030713812e",
+  "prospectiveEnrollmentAllowed": false,
+  "databaseWrites": 0,
+  "providerNetworkRequests": 0,
+  "latestSnapshotSelectionUsed": false,
+  "rawProviderValuesIncluded": false,
+  "automaticTradingAuthorized": false,
+  "artifactContentHash": "sha256:4a54add24c36bb5c63821f5228bb392c354719f9a501e9d710d270412d26910b"
+}

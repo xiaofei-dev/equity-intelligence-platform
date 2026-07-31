@@ -1,0 +1,99 @@
+{
+  "artifactContentHash": "sha256:20885e4ca21345f152220430966141303b26ff7b49e9361825702471779e7a05",
+  "evaluatedPopulationChanged": false,
+  "evaluatedPopulationSecurityCount": 66,
+  "frozenAt": "2026-07-30T03:55:37.171620Z",
+  "identityScheme": "UUID5:US_SYMBOL:EXTERNAL_REFERENCE:v2.2",
+  "priceEvidenceState": "DATA_PENDING",
+  "providerNetworkRequests": 0,
+  "referenceCount": 12,
+  "references": [
+    {
+      "identitySource": "FROZEN_EVALUATED_POPULATION",
+      "publicSecurityId": "e8e8fe9b-dc95-5a64-86b1-41b00e7569c5",
+      "referenceRole": "MARKET",
+      "sector": null,
+      "symbol": "SPY"
+    },
+    {
+      "identitySource": "EXTERNAL_REFERENCE_NAMESPACE",
+      "publicSecurityId": "edf2be54-5fce-53f4-ac7d-076bec6700ec",
+      "referenceRole": "SECTOR",
+      "sector": "COMMUNICATION_SERVICES",
+      "symbol": "XLC"
+    },
+    {
+      "identitySource": "EXTERNAL_REFERENCE_NAMESPACE",
+      "publicSecurityId": "9f7b3128-86e4-5915-9cf6-1c27510556c8",
+      "referenceRole": "SECTOR",
+      "sector": "CONSUMER_DISCRETIONARY",
+      "symbol": "XLY"
+    },
+    {
+      "identitySource": "EXTERNAL_REFERENCE_NAMESPACE",
+      "publicSecurityId": "64ea8dfc-db32-5650-9f30-9fcf123bc58f",
+      "referenceRole": "SECTOR",
+      "sector": "CONSUMER_STAPLES",
+      "symbol": "XLP"
+    },
+    {
+      "identitySource": "EXTERNAL_REFERENCE_NAMESPACE",
+      "publicSecurityId": "969a420a-f895-521b-8edb-19d866e0dbc2",
+      "referenceRole": "SECTOR",
+      "sector": "ENERGY",
+      "symbol": "XLE"
+    },
+    {
+      "identitySource": "EXTERNAL_REFERENCE_NAMESPACE",
+      "publicSecurityId": "a3e0a174-07ff-5c03-844a-2e148779c8db",
+      "referenceRole": "SECTOR",
+      "sector": "FINANCIALS",
+      "symbol": "XLF"
+    },
+    {
+      "identitySource": "EXTERNAL_REFERENCE_NAMESPACE",
+      "publicSecurityId": "f75d628b-72ef-57d8-8120-1848af8f9a6e",
+      "referenceRole": "SECTOR",
+      "sector": "HEALTH_CARE",
+      "symbol": "XLV"
+    },
+    {
+      "identitySource": "EXTERNAL_REFERENCE_NAMESPACE",
+      "publicSecurityId": "890f69cf-8f0a-5404-9134-b5f4985b5b44",
+      "referenceRole": "SECTOR",
+      "sector": "INDUSTRIALS",
+      "symbol": "XLI"
+    },
+    {
+      "identitySource": "FROZEN_EVALUATED_POPULATION",
+      "publicSecurityId": "78578a05-4d92-5cb6-afd7-6a72f157ae05",
+      "referenceRole": "SECTOR",
+      "sector": "INFORMATION_TECHNOLOGY",
+      "symbol": "XLK"
+    },
+    {
+      "identitySource": "EXTERNAL_REFERENCE_NAMESPACE",
+      "publicSecurityId": "5fc13a72-b630-5bd5-9a7f-29ab4911548b",
+      "referenceRole": "SECTOR",
+      "sector": "MATERIALS",
+      "symbol": "XLB"
+    },
+    {
+      "identitySource": "EXTERNAL_REFERENCE_NAMESPACE",
+      "publicSecurityId": "38efea6c-cfa6-57ea-81fe-b8fb6009cd01",
+      "referenceRole": "SECTOR",
+      "sector": "REAL_ESTATE",
+      "symbol": "XLRE"
+    },
+    {
+      "identitySource": "EXTERNAL_REFERENCE_NAMESPACE",
+      "publicSecurityId": "d58768ee-5e2c-55fd-a0db-08549f281bbe",
+      "referenceRole": "SECTOR",
+      "sector": "UTILITIES",
+      "symbol": "XLU"
+    }
+  ],
+  "schemaVersion": "FORWARD-EXTERNAL-BENCHMARK-REFERENCE-UNIVERSE-v2.2.0",
+  "sectorReferenceCount": 11,
+  "stableIdentityNamespace": "c981223d-e09e-5e04-8ae1-410450d432e1"
+}

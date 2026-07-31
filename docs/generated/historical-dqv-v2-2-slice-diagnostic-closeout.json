@@ -1,0 +1,94 @@
+{
+  "artifactContentHash": "sha256:c087760f8d0333ba2ab138cdf5b09a7f11e11f12336d5a7ac8abe10314e8f529",
+  "artifactType": "HISTORICAL_DQV_SLICE_DIAGNOSTIC_CLOSEOUT",
+  "benchmarkAvailability": {
+    "EQUAL_WEIGHT": "AVAILABLE_DIAGNOSTIC_ONLY",
+    "PURE_MOMENTUM": "AVAILABLE_DIAGNOSTIC_ONLY",
+    "PURE_QUALITY": "MISSING",
+    "PURE_VALUE": "MISSING",
+    "SECTOR": "MISSING",
+    "SPY": "AVAILABLE_DIAGNOSTIC_ONLY"
+  },
+  "claimBoundary": {
+    "favorableSliceSelectionAllowed": false,
+    "formalForwardDqvSatisfied": false,
+    "historicalEngineeringDiagnosticsAllowed": true,
+    "historicalModelValidationClaimAllowed": false,
+    "retuningFromObservedOutcomesAllowed": false,
+    "statement": "Only SPY, current-universe equal-weight, and price-only momentum benchmark path diagnostics were constructable. Tactical v2.2 and Long Horizon v1.1 model evaluation was rejected because required historical point-in-time evidence is missing. These already observable outcomes are not an untouched holdout and cannot support a formal validation claim.",
+    "statisticalEdgeProven": false
+  },
+  "claimCeiling": "DIAGNOSTIC_ONLY",
+  "controlledResult": {
+    "artifactContentHash": "sha256:19f949ed14d83cb83f5a57396faa4c25fb1bf840b2f5b83c6dda31768768fd2f",
+    "derivedLicensedMetricsIncluded": true,
+    "fileSha256": "5B6ADF18AD2EB6C56F16B4DB073395902FE71AFF3D43CDC36C5531F600760915",
+    "path": "storage/historical-validation/dqv-v2-2/19f949ed14d83cb83f5a57396faa4c25fb1bf840b2f5b83c6dda31768768fd2f.json",
+    "rawProviderValuesIncluded": false,
+    "storageType": "GITIGNORED_LOCAL"
+  },
+  "evaluationRole": "DEVELOPMENT_OBSERVED",
+  "execution": {
+    "automaticTradingAuthorized": false,
+    "databaseWrites": 0,
+    "modelsExecuted": false,
+    "planHashGeneratedBeforeOutcomeLoad": true,
+    "providerNetworkRequests": 0,
+    "rawProviderValuesIncluded": false,
+    "scoresOrRanksGenerated": false,
+    "weightsOrThresholdsChanged": false
+  },
+  "formalGateEligible": false,
+  "population": {
+    "historicalMembershipClaimed": false,
+    "mode": "CURRENT_UNIVERSE_RETROSPECTIVE",
+    "securityCount": 55,
+    "survivorshipBiasPresent": true
+  },
+  "schemaVersion": "HISTORICAL-DQV-SLICE-DIAGNOSTIC-CLOSEOUT-v2.2.0",
+  "sliceSummary": {
+    "benchmarkMetricSliceCount": 120,
+    "fixedOffsetAnchorCount": 9,
+    "longHorizonModelEvaluatedSliceCount": 0,
+    "longHorizonRejectedSliceCount": 39,
+    "maturedAnchorHorizonCount": 120,
+    "randomAnchorCount": 18,
+    "tacticalModelEvaluatedSliceCount": 0,
+    "tacticalRejectedSliceCount": 81,
+    "totalAnchorCount": 27
+  },
+  "sourceBindings": {
+    "forwardDqvProtocol": {
+      "artifactContentHash": "sha256:20e5701a46c6513f5da609d8d701664fbe669b8ccab589d5d6139f0ce9926ee7",
+      "fileSha256": "30AD2FF4482D6C53134E7ECFD1D95B44DEE7179881585BBD28E5A8539DD31C1D",
+      "path": "docs/generated/forward-decision-quality-validation-v2-2-protocol-fixture.json"
+    },
+    "historicalPriceManifest": {
+      "artifactContentHash": "CF50A3994AB3660029AC56F586F8B6CA572EA1654B6B5DF5549152D191B1A0D9",
+      "fileSha256": "E322AC57C00BB4018AC883A2F0EF3461299D7D97725B0791C75EA01846D08E27",
+      "path": "docs/generated/historical-yahoo-price-cache-20260729T-HISTORICAL-V1-R2-manifest.json"
+    },
+    "longHorizonFreeze": {
+      "artifactContentHash": "233271457387A5D7212379AE2C77D69C743DC69F7345FE2D834FF7DC98D4FA59",
+      "fileSha256": "E208C280355077009C4AF102383881D89D3139242086E859B5EEC4BEB6873024",
+      "path": "docs/generated/long-horizon-v1-1-model-freeze.json"
+    },
+    "slicePlan": {
+      "artifactContentHash": "sha256:4e9f1d64b0ccf13c355c4cddcabda5a97a597cd97a0717c6b22c76015fce13e0",
+      "fileSha256": "1F4FB7FF27BE1E8B653FEA75E184EA7512DCD6F92E8E980920EB7D2CBEF960FB",
+      "path": "docs/generated/historical-dqv-v2-2-slice-plan.json"
+    },
+    "tacticalFreeze": {
+      "artifactContentHash": "A596080CD7936A6881A38E759C597934DAE1125EC83026DF6DB0434F6FE31910",
+      "fileSha256": "5D541315F62990BC5F44A4E421F404D737F6FFCF039E586B18BA362A113DC49F",
+      "path": "docs/generated/tactical-v2-2-model-freeze.json"
+    },
+    "universe": {
+      "fileSha256": "C977E932EDD5184AABBDE53ACCFF6F480650F96C03C878A9EC7FBE15D2920078",
+      "path": "analysis-python/resources/universes/market-intelligence-closed-test-us-v1.json",
+      "universeVersion": "market-intelligence-closed-test-us-v1.0.0"
+    }
+  },
+  "terminalStatus": "CLOSED_WITHOUT_MODEL_VALIDATION",
+  "untouchedHoldout": false
+}

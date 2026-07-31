@@ -1,0 +1,98 @@
+{
+  "aiUsedForDeterministicFields": false,
+  "artifactContentHash": "sha256:26fa028e66e53c3df22fcf0454d99f2b1e189b7f9512f639d255f89d641e09b1",
+  "artifactType": "POST_CLOSE_PIPELINE_PREFLIGHT",
+  "automaticTradingAuthorized": false,
+  "blockedReasons": [
+    "ENROLLMENT_CHRONOLOGY_V19_ACCEPTANCE_MISSING",
+    "TARGET_SESSION_NOT_COMPLETED"
+  ],
+  "databaseReadsExecuted": 0,
+  "databaseWritesExecuted": 0,
+  "enrollmentExecuted": false,
+  "futureLiveCaptureCommandMayBeInvokedByOrchestrator": false,
+  "futureLiveCaptureRequiresExistingDedicatedCli": true,
+  "latestCompletedSession": "2026-07-29",
+  "orchestratorVersion": "POST-CLOSE-PIPELINE-ORCHESTRATOR-v2.2.0",
+  "providerNetworkRequestsExecuted": 0,
+  "rawProviderValuesIncluded": false,
+  "readinessControllerVersion": "PROSPECTIVE-READINESS-CONTROLLER-v2.2.1",
+  "schemaVersion": "POST-CLOSE-PIPELINE-PREFLIGHT-v2.2.0",
+  "scoresOrRanksComputed": false,
+  "sourceBindings": {
+    "finalPricePreexecutionPreflight": {
+      "artifactContentHash": "sha256:a63cfe8bfcac0e9e5432e0bee9bb10122c1cebf99c498e599c0c25703b4778fa",
+      "path": "docs/generated/future-price-history-final-preexecution-preflight-v2-1.json"
+    },
+    "finalSuccessorReadinessCloseout": {
+      "artifactContentHash": "sha256:9cec9ef8d31c0946fab292554f38a4305363a4fcd6ab838241b46084fa74b6f0",
+      "path": "docs/generated/forward-v2-2-final-successor-readiness-closeout-v2.json"
+    }
+  },
+  "stages": [
+    {
+      "artifactContentHash": null,
+      "reasonCodes": [
+        "TARGET_SESSION_NOT_COMPLETED"
+      ],
+      "resumedFromImmutableArtifact": false,
+      "sourceBindingHashes": [
+        "sha256:a63cfe8bfcac0e9e5432e0bee9bb10122c1cebf99c498e599c0c25703b4778fa"
+      ],
+      "stage": "PRICE_CAPTURE_VERIFICATION",
+      "status": "BLOCKED"
+    },
+    {
+      "artifactContentHash": null,
+      "reasonCodes": [
+        "UPSTREAM_STAGE_NOT_COMPLETED"
+      ],
+      "resumedFromImmutableArtifact": false,
+      "sourceBindingHashes": [],
+      "stage": "SIX_BENCHMARK_CONSTRUCTION",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "artifactContentHash": null,
+      "reasonCodes": [
+        "UPSTREAM_STAGE_NOT_COMPLETED"
+      ],
+      "resumedFromImmutableArtifact": false,
+      "sourceBindingHashes": [],
+      "stage": "FROZEN_MODEL_EXECUTION",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "artifactContentHash": null,
+      "reasonCodes": [
+        "UPSTREAM_STAGE_NOT_COMPLETED"
+      ],
+      "resumedFromImmutableArtifact": false,
+      "sourceBindingHashes": [],
+      "stage": "POST_FREEZE_DECISION_SNAPSHOT",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "artifactContentHash": null,
+      "reasonCodes": [
+        "UPSTREAM_STAGE_NOT_COMPLETED"
+      ],
+      "resumedFromImmutableArtifact": false,
+      "sourceBindingHashes": [],
+      "stage": "SUCCESSOR_READINESS",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "artifactContentHash": null,
+      "reasonCodes": [
+        "UPSTREAM_STAGE_NOT_COMPLETED"
+      ],
+      "resumedFromImmutableArtifact": false,
+      "sourceBindingHashes": [],
+      "stage": "PROSPECTIVE_ENROLLMENT",
+      "status": "NOT_EXECUTED"
+    }
+  ],
+  "status": "BLOCKED",
+  "targetSession": "2026-07-30"
+}

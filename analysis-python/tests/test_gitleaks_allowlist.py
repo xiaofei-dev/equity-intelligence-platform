@@ -43,11 +43,11 @@ def test_square_token_allowlist_is_rule_path_and_format_scoped() -> None:
     config = tomllib.loads((ROOT / ".gitleaks.toml").read_text(encoding="utf-8"))
 
     assert config["extend"] == {"useDefault": True}
-    assert len(config["rules"]) == 1
-    rule = config["rules"][0]
-    assert rule["id"] == "square-access-token"
-    assert len(rule["allowlists"]) == 1
-    allowlist = rule["allowlists"][0]
+    assert len(config["rules"]) == 2
+    square_rule, generic_api_key_rule = config["rules"]
+    assert square_rule["id"] == "square-access-token"
+    assert len(square_rule["allowlists"]) == 1
+    allowlist = square_rule["allowlists"][0]
     assert allowlist["condition"] == "AND"
     assert allowlist["regexTarget"] == "secret"
     assert allowlist["regexes"] == [r"^EAAA[0-9A-F]{60}$"]
@@ -60,6 +60,21 @@ def test_square_token_allowlist_is_rule_path_and_format_scoped() -> None:
             r"^docs/generated/"
             r"objective-rating-v1-qc-cohort-completion-feasibility-v1-1\.json$"
         ),
+    ]
+
+    assert generic_api_key_rule["id"] == "generic-api-key"
+    assert len(generic_api_key_rule["allowlists"]) == 1
+    sha256_allowlist = generic_api_key_rule["allowlists"][0]
+    assert sha256_allowlist["condition"] == "AND"
+    assert sha256_allowlist["regexTarget"] == "match"
+    assert sha256_allowlist["regexes"] == [
+        r'''(?i)liveConfirmationTokenSha256["']?\s*:\s*["']?[0-9a-f]{64}["']?'''
+    ]
+    assert sha256_allowlist["paths"] == [
+        (
+            r"^docs/generated/"
+            r"future-completed-session-price-evidence-preflight-v1\.json$"
+        )
     ]
 
 

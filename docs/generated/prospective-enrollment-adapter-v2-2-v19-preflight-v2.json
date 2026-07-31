@@ -1,0 +1,69 @@
+{
+  "adapterVersion": "PROSPECTIVE-ENROLLMENT-ADAPTER-v2.2.0",
+  "aiUsedForDeterministicFields": false,
+  "artifactContentHash": "sha256:6e2f46ae32b5c8b2d1fe4de27169f9f798dd47a14e9020bd4afd5666834f87db",
+  "artifactType": "PROSPECTIVE_ENROLLMENT_ADAPTER_PREFLIGHT",
+  "automaticTradingAuthorized": false,
+  "benchmarkKinds": [
+    "EQUAL_WEIGHT",
+    "PURE_MOMENTUM",
+    "PURE_QUALITY",
+    "PURE_VALUE",
+    "SECTOR",
+    "SPY"
+  ],
+  "benchmarkManifestHash": null,
+  "blockedReasons": [
+    "BENCHMARK_MANIFEST_MISSING",
+    "POST_FREEZE_DECISION_NOT_PROSPECTIVE",
+    "POST_FREEZE_DECISION_SIX_BENCHMARKS_NOT_AVAILABLE",
+    "SUCCESSOR_READINESS_CONTROLLER_MISSING",
+    "V18_PERSISTENCE_BINDING_MISSING",
+    "V19_CHRONOLOGY_ACCEPTANCE_INVALID"
+  ],
+  "candidateEnrollmentContentHash": null,
+  "candidateEnrollmentId": null,
+  "completedSessionHorizons": [
+    5,
+    20,
+    60,
+    126,
+    252
+  ],
+  "databaseReadsExecuted": 0,
+  "databaseWritesExecuted": 0,
+  "decisionPurpose": "CONTRACT_FIXTURE",
+  "enrollmentExecuted": false,
+  "horizonPolicy": {
+    "126": "LONG_HORIZON_INTERIM_DIAGNOSTIC",
+    "20": "TACTICAL_FORMAL",
+    "252": "LONG_HORIZON_FORMAL",
+    "5": "TACTICAL_FORMAL",
+    "60": "TACTICAL_FORMAL"
+  },
+  "outcomesComputed": false,
+  "populationTerminalCounts": {
+    "ABSTAINED": 2,
+    "ASSESSED": 0,
+    "EXCLUDED": 9,
+    "INVALID": 0,
+    "MISSING": 55,
+    "STALE": 0
+  },
+  "postFreezeDecisionManifestHash": "sha256:a5687b3d643a1547af4759ba663e477049e9f5b267bad736443e8315df70cade",
+  "providerNetworkRequestsExecuted": 0,
+  "rawProviderValuesIncluded": false,
+  "roleCounts": {
+    "EXCLUDED": 9,
+    "PRIMARY": 48,
+    "REFERENCE_ONLY": 2,
+    "RESERVE": 7
+  },
+  "schemaVersion": "PROSPECTIVE-ENROLLMENT-PREFLIGHT-v2.2.0",
+  "scoresOrRanksComputed": false,
+  "securityCount": 66,
+  "status": "BLOCKED",
+  "successorReadinessHash": null,
+  "v18AcceptanceHash": "sha256:e5ce27f66981d8341ed0d88f33fc72d380999b3d68360d53ce83f908f51a5f1e",
+  "v19ChronologyAcceptanceHash": null
+}

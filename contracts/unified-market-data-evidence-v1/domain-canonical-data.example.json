@@ -1,0 +1,99 @@
+{
+  "contractVersion": "unified-market-data-evidence-foundation-v1.0.0",
+  "examples": [
+    {
+      "domain": "DAILY_PRICE",
+      "layer": "NORMALIZED_OBSERVATION",
+      "canonicalData": {
+        "sessionDate": "2026-07-29",
+        "adjustmentMode": "TOTAL_RETURN_ADJUSTED",
+        "currency": "USD",
+        "open": "99.00",
+        "high": "102.00",
+        "low": "98.50",
+        "close": "100.00",
+        "adjustedClose": "100.00",
+        "volume": 1000000
+      }
+    },
+    {
+      "domain": "CORPORATE_ACTION",
+      "layer": "NORMALIZED_OBSERVATION",
+      "canonicalData": {
+        "actionType": "SPLIT",
+        "effectiveDate": "2026-06-01",
+        "actionId": "synthetic-action-1",
+        "splitFrom": "1",
+        "splitTo": "2"
+      }
+    },
+    {
+      "domain": "FUNDAMENTAL",
+      "layer": "NORMALIZED_OBSERVATION",
+      "canonicalData": {
+        "metricCode": "REVENUE",
+        "numericValue": "125000000.00",
+        "unit": "CURRENCY",
+        "currency": "USD",
+        "periodStart": "2026-01-01",
+        "periodEnd": "2026-06-30",
+        "fiscalPeriod": "Q2",
+        "formType": "10-Q",
+        "accessionNumber": "0000000000-26-000001",
+        "filedAt": "2026-07-28T20:00:00Z",
+        "mappingVersion": "financial-concepts-v1.0.0"
+      }
+    },
+    {
+      "domain": "CLASSIFICATION",
+      "layer": "NORMALIZED_OBSERVATION",
+      "canonicalData": {
+        "taxonomyCode": "GICS",
+        "taxonomyVersion": "GICS-2025",
+        "sectorCode": "45",
+        "industryCode": "45102010",
+        "companyType": "MATURE_OPERATING_COMPANY",
+        "effectiveFrom": "2026-01-01"
+      }
+    },
+    {
+      "domain": "MARKET_BENCHMARK",
+      "layer": "NORMALIZED_OBSERVATION",
+      "canonicalData": {
+        "benchmarkKind": "MARKET",
+        "benchmarkCode": "SPY",
+        "benchmarkSecurityId": "aaaaaaaa-1111-4111-8111-aaaaaaaaaaaa",
+        "sectorCode": null,
+        "mappingVersion": "dual-sleeve-benchmarks-v1.0.0",
+        "effectiveFrom": "2026-01-01",
+        "effectiveTo": null
+      }
+    },
+    {
+      "domain": "SECTOR_BENCHMARK",
+      "layer": "NORMALIZED_OBSERVATION",
+      "canonicalData": {
+        "benchmarkKind": "SECTOR",
+        "benchmarkCode": "XLK",
+        "benchmarkSecurityId": "bbbbbbbb-2222-4222-8222-bbbbbbbbbbbb",
+        "sectorCode": "45",
+        "mappingVersion": "dual-sleeve-benchmarks-v1.0.0",
+        "effectiveFrom": "2026-01-01",
+        "effectiveTo": null
+      }
+    },
+    {
+      "domain": "LIQUIDITY",
+      "layer": "ENGINE_DERIVED",
+      "canonicalData": {
+        "windowCompletedSessions": 20,
+        "windowEndSessionDate": "2026-07-29",
+        "validObservationCount": 20,
+        "averageDailyDollarVolume": "25000000.00",
+        "averageDailyShareVolume": "250000.00",
+        "currency": "USD",
+        "liquidityPolicyVersion": "daily-liquidity-v1.0.0"
+      }
+    }
+  ]
+}

@@ -1,0 +1,4410 @@
+{
+  "artifactType": "LONG_HORIZON_V11_HISTORICAL_READINESS",
+  "schemaVersion": "LONG-HORIZON-v1.1-HISTORICAL-READINESS-v1.0.0",
+  "modelVersion": "LONG-HORIZON-RESEARCH-v1.1.0",
+  "diagnosticAt": "2026-07-30T01:00:37.664131+00:00",
+  "terminalStatus": "BLOCKED_BY_DATA",
+  "freeze": {
+    "path": "docs/generated/long-horizon-v1-1-model-freeze.json",
+    "fileSha256": "E208C280355077009C4AF102383881D89D3139242086E859B5EEC4BEB6873024",
+    "artifactContentHash": "233271457387A5D7212379AE2C77D69C743DC69F7345FE2D834FF7DC98D4FA59",
+    "freezeHash": "8F8E7FB671A8C35E771FDAD6B9E3ED5D90950135ACC9297BBFF571F27780E6C3"
+  },
+  "sourceEvidence": {
+    "universe": {
+      "path": "analysis-python/resources/universes/market-intelligence-closed-test-us-v1.json",
+      "fileSha256": "C977E932EDD5184AABBDE53ACCFF6F480650F96C03C878A9EC7FBE15D2920078",
+      "version": "market-intelligence-closed-test-us-v1.0.0",
+      "securityCount": 66
+    },
+    "historicalPrices": {
+      "path": "docs/generated/historical-yahoo-price-cache-20260729T-HISTORICAL-V1-R2-manifest.json",
+      "fileSha256": "E322AC57C00BB4018AC883A2F0EF3461299D7D97725B0791C75EA01846D08E27",
+      "artifactContentHash": "CF50A3994AB3660029AC56F586F8B6CA572EA1654B6B5DF5549152D191B1A0D9",
+      "verifiedPayloadCount": 56,
+      "adjustmentMode": "TOTAL_RETURN_ADJUSTED"
+    },
+    "databaseInventory": {
+      "securityCount": 66,
+      "lineageHash": "AA3FF09B23BD754F92A8A8569AA2DA9B8D2A1CF6E2E79FBB3E58BB4E3C8CB9FF",
+      "numericValuesIncluded": false
+    },
+    "runner": {
+      "path": "analysis-python/src/equity_analysis/historical_validation/long_horizon_v11_readiness.py",
+      "fileSha256": "EE5C17AD5FF81BFC3EB7ECD6A71F78F34340AD00D1C5DA30ABCB33D47E13FD8E"
+    }
+  },
+  "observedHistoricalEvidence": {
+    "path": "docs/generated/long-horizon-historical-stratified-validation-v1-4-2026-07-29.json",
+    "fileSha256": "B88253CF9F04FF33C25EFD2DE79BE6A516AF03DC3A44271A26B1236E7941F058",
+    "modelVersion": "LONG-HORIZON-RESEARCH-v1.0.0",
+    "evaluationRole": "DEVELOPMENT_OBSERVED",
+    "untouchedHoldout": false
+  },
+  "requirements": {
+    "requiredV11HistoricalFields": [
+      "return_on_invested_capital",
+      "operating_margin",
+      "free_cash_flow_margin",
+      "earnings_stability",
+      "cash_flow_stability",
+      "net_debt_to_ebitda",
+      "interest_coverage",
+      "current_ratio",
+      "diluted_share_growth",
+      "incremental_return_on_invested_capital",
+      "reinvestment_efficiency",
+      "shareholder_yield",
+      "acquisition_discipline",
+      "free_cash_flow_yield",
+      "earnings_yield",
+      "enterprise_value_to_ebitda",
+      "own_history_valuation_attractiveness",
+      "conservative_fundamental_growth",
+      "annualized_valuation_normalization",
+      "cyclicality_risk",
+      "concentration_risk",
+      "event_risk",
+      "peer_quality_percentile",
+      "peer_valuation_attractiveness_percentile",
+      "evidence_coverage_ratio",
+      "point_in_time_verified_ratio",
+      "revision_lineage_ratio",
+      "semantic_evidence_ratio"
+    ],
+    "pointInTimeAvailabilityRequired": true,
+    "historicalMembershipRequired": true,
+    "historicalSectorAndCohortRequired": true,
+    "minimumPeerCohort": 20,
+    "requiredFormalBenchmarks": [
+      "SPY",
+      "SECTOR",
+      "EQUAL_WEIGHT",
+      "PURE_MOMENTUM",
+      "PURE_VALUE",
+      "PURE_QUALITY"
+    ],
+    "outcomeHorizonSessions": 252
+  },
+  "benchmarkReadiness": {
+    "SPY": "AVAILABLE_DIAGNOSTIC_ONLY",
+    "SECTOR": "MISSING",
+    "EQUAL_WEIGHT": "BLOCKED_HISTORICAL_MEMBERSHIP",
+    "PURE_MOMENTUM": "BLOCKED_HISTORICAL_MEMBERSHIP",
+    "PURE_VALUE": "BLOCKED_V11_PIT_INPUTS",
+    "PURE_QUALITY": "BLOCKED_V11_PIT_INPUTS",
+    "formalSetReady": false
+  },
+  "summary": {
+    "frozenPopulationCount": 66,
+    "modelCandidateCount": 55,
+    "v11HistoricalDecisionReadyCount": 0,
+    "v11ScoreCount": 0,
+    "terminalCounts": {
+      "MISSING": 55,
+      "NOT_APPLICABLE": 2,
+      "EXCLUDED": 9
+    },
+    "hashVerified252SessionOutcomeSeriesCount": 55,
+    "fieldGapCounts": {
+      "return_on_invested_capital": 55,
+      "operating_margin": 55,
+      "free_cash_flow_margin": 55,
+      "earnings_stability": 55,
+      "cash_flow_stability": 55,
+      "net_debt_to_ebitda": 55,
+      "interest_coverage": 55,
+      "current_ratio": 55,
+      "diluted_share_growth": 55,
+      "incremental_return_on_invested_capital": 55,
+      "reinvestment_efficiency": 55,
+      "shareholder_yield": 55,
+      "acquisition_discipline": 55,
+      "free_cash_flow_yield": 55,
+      "earnings_yield": 55,
+      "enterprise_value_to_ebitda": 55,
+      "own_history_valuation_attractiveness": 55,
+      "conservative_fundamental_growth": 55,
+      "annualized_valuation_normalization": 55,
+      "cyclicality_risk": 55,
+      "concentration_risk": 55,
+      "event_risk": 55,
+      "peer_quality_percentile": 55,
+      "peer_valuation_attractiveness_percentile": 55,
+      "evidence_coverage_ratio": 55,
+      "point_in_time_verified_ratio": 55,
+      "revision_lineage_ratio": 55,
+      "semantic_evidence_ratio": 55
+    }
+  },
+  "records": [
+    {
+      "symbol": "AAPL",
+      "role": "PRIMARY",
+      "publicSecurityId": "418f4fa2-4530-4c39-986a-57036f1de794",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "D49BD404FD063EBCF430405D7694FF23DCCAC79A5722FB973F0F7AC241145BE1",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "418f4fa2-4530-4c39-986a-57036f1de794",
+        "fundamentalFactCount": 3180,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1985-09-30",
+          "latest": "2026-03-31"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 0
+      }
+    },
+    {
+      "symbol": "ABT",
+      "role": "PRIMARY",
+      "publicSecurityId": "ca15e531-7fae-4baa-b05f-1164425e6fca",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "5F12CDAD88561410C96340111C233150B0AB9A826AD6F104A3B8493A52FDAD8F",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "ca15e531-7fae-4baa-b05f-1164425e6fca",
+        "fundamentalFactCount": 3201,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1985-09-30",
+          "latest": "2026-06-30"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 0
+      }
+    },
+    {
+      "symbol": "ACN",
+      "role": "PRIMARY",
+      "publicSecurityId": "0a1bc3b4-cf70-453d-a923-bdb6e78e43b5",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "3F6AE3B4625AF89080F1FAAED7DBAA335411BEC26DFEED87FC0915A73CD8BDE6",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "0a1bc3b4-cf70-453d-a923-bdb6e78e43b5",
+        "fundamentalFactCount": 2196,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "2000-02-29",
+          "latest": "2026-05-31"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 0
+      }
+    },
+    {
+      "symbol": "ADP",
+      "role": "PRIMARY",
+      "publicSecurityId": "9e23a70f-4cb2-4e95-9d8c-fbb2c9f98d48",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "1C05F64C48F185835669FD9494C41ADD9AFAB2F67FDFDC7F5A96AE46F83AE859",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "9e23a70f-4cb2-4e95-9d8c-fbb2c9f98d48",
+        "fundamentalFactCount": 3191,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1985-09-30",
+          "latest": "2026-03-31"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "AMZN",
+      "role": "PRIMARY",
+      "publicSecurityId": "634f1888-e395-41e2-a17b-22750b25e934",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "4EF5EE1E1C104E27FC3518D5CD1AD09780D9E3427530F529D128C8CB523F9FE0",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "634f1888-e395-41e2-a17b-22750b25e934",
+        "fundamentalFactCount": 2509,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1995-12-31",
+          "latest": "2026-03-31"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "APD",
+      "role": "PRIMARY",
+      "publicSecurityId": "0e082b20-3e62-413d-8f1d-ab0d166822bc",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "1C911F1865D9C8F31F6BDFCB16C535FBA84683319E6B4870D38EC5B31831B017",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "0e082b20-3e62-413d-8f1d-ab0d166822bc",
+        "fundamentalFactCount": 3212,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1985-09-30",
+          "latest": "2026-03-31"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "AVGO",
+      "role": "PRIMARY",
+      "publicSecurityId": "0d70d97c-1c7a-4889-ba58-23d029aab8d2",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "FCF09DB039F3964425E46263DE2A6F04E5B5E5F91E9B6188D5B83E726ECB629E",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "0d70d97c-1c7a-4889-ba58-23d029aab8d2",
+        "fundamentalFactCount": 1580,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "2006-10-31",
+          "latest": "2026-04-30"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "CALM",
+      "role": "RESERVE",
+      "publicSecurityId": "f3137c56-26ac-472d-ad3d-62e70545ee63",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "42D476D0368E1C68BCE85D81B41BB8BEE60C623D09C375D745022E11FA9CDBC7",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "f3137c56-26ac-472d-ad3d-62e70545ee63",
+        "fundamentalFactCount": 2490,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1996-05-31",
+          "latest": "2026-05-31"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "CAT",
+      "role": "PRIMARY",
+      "publicSecurityId": "46b9c947-135b-4883-8e5a-d8241252665f",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "BC917167D85F91A876E21F18D5DC4E41803B549F61DB7D611707B0AA64DCDBCF",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "46b9c947-135b-4883-8e5a-d8241252665f",
+        "fundamentalFactCount": 3231,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1985-09-30",
+          "latest": "2026-03-31"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 0
+      }
+    },
+    {
+      "symbol": "CL",
+      "role": "PRIMARY",
+      "publicSecurityId": "eae6e652-df8e-4d51-a0c2-0102adb84b48",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "E8A9133DB78097865B10A05DBCC370C3AA49273028DC6F4D1B90BB4526A41214",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "eae6e652-df8e-4d51-a0c2-0102adb84b48",
+        "fundamentalFactCount": 3203,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1985-09-30",
+          "latest": "2026-03-31"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "COST",
+      "role": "PRIMARY",
+      "publicSecurityId": "22edb31e-5a9e-4472-b166-6e77751453a7",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "BA5D78289F51B5D05A6CA3FAF68FB5BBAD7FAD2CD97290F07DD2E67DFA4761DB",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "22edb31e-5a9e-4472-b166-6e77751453a7",
+        "fundamentalFactCount": 3134,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1985-05-31",
+          "latest": "2026-05-31"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 0
+      }
+    },
+    {
+      "symbol": "CROX",
+      "role": "PRIMARY",
+      "publicSecurityId": "18888501-43a8-4e32-9556-15bbe7e7abb9",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "98428FB871A5F825AAAF90A2A41E02DFE515531B7D7FDB7BE2149D709AF13136",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "18888501-43a8-4e32-9556-15bbe7e7abb9",
+        "fundamentalFactCount": 1847,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "2002-12-31",
+          "latest": "2026-03-31"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "CSCO",
+      "role": "PRIMARY",
+      "publicSecurityId": "e6ea03b4-b7c7-484d-81f3-b4f8d3311855",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "7AB247755D076B7ED53F2EE5A531E6112FB20CFD0CE5413CFAD745646BA06FC2",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "e6ea03b4-b7c7-484d-81f3-b4f8d3311855",
+        "fundamentalFactCount": 2997,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1987-10-31",
+          "latest": "2026-04-30"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "DE",
+      "role": "PRIMARY",
+      "publicSecurityId": "ce60e0ae-d43c-43ae-b4d7-77b6cb6fdb11",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "2659CD399B322ABF96FBB2F908FCF70C8F20A53F11DDAEFDCD3E0F53423AFCE3",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "ce60e0ae-d43c-43ae-b4d7-77b6cb6fdb11",
+        "fundamentalFactCount": 3291,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1985-10-31",
+          "latest": "2026-04-30"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "DIS",
+      "role": "PRIMARY",
+      "publicSecurityId": "98fb2948-2ba3-421c-827b-3412a5922af1",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "A099CBDD956F4A391D7921815A9E310E1CE58D548D2A2B6642C956175A259E3F",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "98fb2948-2ba3-421c-827b-3412a5922af1",
+        "fundamentalFactCount": 3207,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1985-09-30",
+          "latest": "2026-03-31"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "DUK",
+      "role": "PRIMARY",
+      "publicSecurityId": "0168a332-44f2-4a2e-bb99-b5d3948d97e8",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "BD3CF1F421FD11C1561F14E5071803058F49DA791743BA2948DAD4EA1871D738",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "0168a332-44f2-4a2e-bb99-b5d3948d97e8",
+        "fundamentalFactCount": 2992,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1985-09-30",
+          "latest": "2026-03-31"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "ECL",
+      "role": "PRIMARY",
+      "publicSecurityId": "0f2bf0b2-28e8-4ece-97a7-811b5927afde",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "289B8B27963AC434893E4E023738DD79FCAFF73CD50FE31CD28C907A1F3ADEB1",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "0f2bf0b2-28e8-4ece-97a7-811b5927afde",
+        "fundamentalFactCount": 3262,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1985-09-30",
+          "latest": "2026-03-31"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "ELF",
+      "role": "RESERVE",
+      "publicSecurityId": "a3adc4cc-5207-4509-89f0-e49ad21d8f64",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 2474,
+        "firstTradingDate": "2016-09-22",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "C0DACAE7541511F57C1E8AE2FDC7D83580CEFF28C0C012A19364CFF12BAC8CDD",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "a3adc4cc-5207-4509-89f0-e49ad21d8f64",
+        "fundamentalFactCount": 1078,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "2014-03-31",
+          "latest": "2026-03-31"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "ETN",
+      "role": "PRIMARY",
+      "publicSecurityId": "4411680c-0fd5-41b2-bf11-57d0effad86d",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "680B00E4767391312596AB9F0C32AE3CF531A75D33867CF476785EBF1D08C2A8",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "4411680c-0fd5-41b2-bf11-57d0effad86d",
+        "fundamentalFactCount": 3212,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1985-09-30",
+          "latest": "2026-03-31"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "EXPO",
+      "role": "RESERVE",
+      "publicSecurityId": "26c796cb-9c20-4894-9fa0-2ef1f8acc086",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "30984BD6C41F1CCE6E684F4F9E6EE31B42D16EA406F3EA4D7F025C23E1FE3E48",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "26c796cb-9c20-4894-9fa0-2ef1f8acc086",
+        "fundamentalFactCount": 3016,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1989-06-30",
+          "latest": "2026-03-31"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 0
+      }
+    },
+    {
+      "symbol": "FIX",
+      "role": "RESERVE",
+      "publicSecurityId": "9e04506d-35de-46e4-867c-2c4676b26fe8",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "B08FD9E6992E3933CBBA469D29E3C9B4C5100D16DE8D9F1DE1E38F6B66E9E5F9",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "9e04506d-35de-46e4-867c-2c4676b26fe8",
+        "fundamentalFactCount": 2438,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1997-03-31",
+          "latest": "2026-06-30"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "GE",
+      "role": "EXCLUDED",
+      "publicSecurityId": "3ded4034-5273-4b68-928a-b41f15aa2007",
+      "terminalState": "EXCLUDED",
+      "readinessStatus": "EXCLUDED_BY_FROZEN_UNIVERSE",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [],
+      "gapCodes": [
+        "SPECIAL_SITUATION"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "NOT_EVALUATED",
+        "horizonSessions": 252
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "3ded4034-5273-4b68-928a-b41f15aa2007",
+        "fundamentalFactCount": 0,
+        "distinctMetricCount": 0,
+        "fundamentalPeriodRange": {
+          "earliest": null,
+          "latest": null
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 0
+      }
+    },
+    {
+      "symbol": "GOOGL",
+      "role": "PRIMARY",
+      "publicSecurityId": "9d0ec24e-4a3f-442d-81ab-1085d7318d23",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "F4EF5149C8A9510A53F9D432A784ECA75336D8DF5594A9B19DF33E30AFE0B7A9",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "9d0ec24e-4a3f-442d-81ab-1085d7318d23",
+        "fundamentalFactCount": 2005,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1999-12-31",
+          "latest": "2026-06-30"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "HD",
+      "role": "PRIMARY",
+      "publicSecurityId": "afcbf7c9-e819-4e75-99b2-88cb6adfe770",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "CACB0B98483376BCCFF6A8FE265EE10A62446A62D0874FAD481CC455E619C84B",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "afcbf7c9-e819-4e75-99b2-88cb6adfe770",
+        "fundamentalFactCount": 3242,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1985-07-31",
+          "latest": "2026-04-30"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "HON",
+      "role": "PRIMARY",
+      "publicSecurityId": "64b3624e-1365-4891-9170-1a45249a48dd",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "8648AF9CC4D0D6598DEA89F1A618830DA8B8A6328B4849951D931429355AE873",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "64b3624e-1365-4891-9170-1a45249a48dd",
+        "fundamentalFactCount": 3236,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1985-09-30",
+          "latest": "2026-06-30"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "IBM",
+      "role": "PRIMARY",
+      "publicSecurityId": "1bbc84ae-fece-4ab6-9d48-c902179d0568",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "B267C641A98900EBF781098BF47496268E171F3225E02B0F7046C5212283B55B",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "1bbc84ae-fece-4ab6-9d48-c902179d0568",
+        "fundamentalFactCount": 3209,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1985-09-30",
+          "latest": "2026-06-30"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "JNJ",
+      "role": "PRIMARY",
+      "publicSecurityId": "383dabfa-e687-4a9b-80a3-5a99356c6178",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "6A86A561A2E796596707EE9BA187DB7E602DEBE3E4D72EF818B4A20B04B6447F",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "383dabfa-e687-4a9b-80a3-5a99356c6178",
+        "fundamentalFactCount": 3215,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1985-09-30",
+          "latest": "2026-06-30"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 0
+      }
+    },
+    {
+      "symbol": "JPM",
+      "role": "EXCLUDED",
+      "publicSecurityId": "ac365a67-a678-4203-b0fa-c08bffbabcec",
+      "terminalState": "EXCLUDED",
+      "readinessStatus": "EXCLUDED_BY_FROZEN_UNIVERSE",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [],
+      "gapCodes": [
+        "FINANCIAL"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "NOT_EVALUATED",
+        "horizonSessions": 252
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "ac365a67-a678-4203-b0fa-c08bffbabcec",
+        "fundamentalFactCount": 0,
+        "distinctMetricCount": 0,
+        "fundamentalPeriodRange": {
+          "earliest": null,
+          "latest": null
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 0
+      }
+    },
+    {
+      "symbol": "KO",
+      "role": "PRIMARY",
+      "publicSecurityId": "358c87b7-b5ea-4d8b-8b43-4e72b27da810",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "944D0D19DB7ECB8FC2373F3DD97BC8A6E7F6FF6FF67FC717DDD086E45C6D1DEF",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "358c87b7-b5ea-4d8b-8b43-4e72b27da810",
+        "fundamentalFactCount": 3237,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1985-09-30",
+          "latest": "2026-03-31"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "LCID",
+      "role": "EXCLUDED",
+      "publicSecurityId": "5115c508-68cc-4682-beeb-20ba77b8714d",
+      "terminalState": "EXCLUDED",
+      "readinessStatus": "EXCLUDED_BY_FROZEN_UNIVERSE",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [],
+      "gapCodes": [
+        "EMERGING_GROWTH"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "NOT_EVALUATED",
+        "horizonSessions": 252
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "5115c508-68cc-4682-beeb-20ba77b8714d",
+        "fundamentalFactCount": 0,
+        "distinctMetricCount": 0,
+        "fundamentalPeriodRange": {
+          "earliest": null,
+          "latest": null
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 0
+      }
+    },
+    {
+      "symbol": "LIN",
+      "role": "PRIMARY",
+      "publicSecurityId": "19b1e6ec-4946-4a5d-8369-59f4f08ddd1e",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "DA1D9F8393B081D41D0B7BB808EEDD9598A3DB68BA0FFE2A9AAFE244917D626F",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "19b1e6ec-4946-4a5d-8369-59f4f08ddd1e",
+        "fundamentalFactCount": 2874,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1991-03-31",
+          "latest": "2026-03-31"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "LOW",
+      "role": "PRIMARY",
+      "publicSecurityId": "91ea87b5-0b39-4383-9a57-527065bb62c1",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "31AF286C960BCB938A1C627E8A6F12D3BDE7625C48EF48F021680FB97410C3A8",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "91ea87b5-0b39-4383-9a57-527065bb62c1",
+        "fundamentalFactCount": 3243,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1985-10-31",
+          "latest": "2026-04-30"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "MCD",
+      "role": "PRIMARY",
+      "publicSecurityId": "f072c235-86b8-4ec0-b253-8a40f2eb1606",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "98B6E997422E728990D2A8586FDEF9E72EDE2212733F0A05684EE646B4494A12",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "f072c235-86b8-4ec0-b253-8a40f2eb1606",
+        "fundamentalFactCount": 3212,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1985-09-30",
+          "latest": "2026-03-31"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "MCK",
+      "role": "PRIMARY",
+      "publicSecurityId": "59d9b52d-85ff-446d-b641-59951bcbd82b",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "BC681FBE7BCA82BAA055E8F9616AB8FE42BD494F6FF064DA6116F2BA00F2A882",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "59d9b52d-85ff-446d-b641-59951bcbd82b",
+        "fundamentalFactCount": 2651,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1994-06-30",
+          "latest": "2026-03-31"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "MDT",
+      "role": "PRIMARY",
+      "publicSecurityId": "bafb3099-079b-454a-81c1-a93b78e165a3",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "C1338958B6EB77D556AD369E9AD45823DD9760C839BB6AAD2E60093A68B3F535",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "bafb3099-079b-454a-81c1-a93b78e165a3",
+        "fundamentalFactCount": 3217,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1985-10-31",
+          "latest": "2026-04-30"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 0
+      }
+    },
+    {
+      "symbol": "META",
+      "role": "PRIMARY",
+      "publicSecurityId": "a7a2916e-6379-4857-a599-57ae284f4374",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "95B6B0165B32A949170BA1E1AE7BB1A3F8656453380E0D70C66E4BC2E6C4912D",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "a7a2916e-6379-4857-a599-57ae284f4374",
+        "fundamentalFactCount": 1332,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "2007-12-31",
+          "latest": "2026-03-31"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "MRNA",
+      "role": "EXCLUDED",
+      "publicSecurityId": "46a1ee66-96c4-4512-99da-f2f61e36cf7f",
+      "terminalState": "EXCLUDED",
+      "readinessStatus": "EXCLUDED_BY_FROZEN_UNIVERSE",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [],
+      "gapCodes": [
+        "BIOTECHNOLOGY"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "NOT_EVALUATED",
+        "horizonSessions": 252
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "46a1ee66-96c4-4512-99da-f2f61e36cf7f",
+        "fundamentalFactCount": 0,
+        "distinctMetricCount": 0,
+        "fundamentalPeriodRange": {
+          "earliest": null,
+          "latest": null
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 0
+      }
+    },
+    {
+      "symbol": "MSFT",
+      "role": "PRIMARY",
+      "publicSecurityId": "08618c07-7979-49cb-abad-ce43305952c6",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "0EA3893B5E5AF3CEF7FDA3059B1E9C1E5A82B0CD95411E3090D5CA3332E96ED1",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "08618c07-7979-49cb-abad-ce43305952c6",
+        "fundamentalFactCount": 3065,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1985-09-30",
+          "latest": "2026-03-31"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "NBN",
+      "role": "EXCLUDED",
+      "publicSecurityId": "a210732f-3119-4389-a92a-8fe32c1e60c1",
+      "terminalState": "EXCLUDED",
+      "readinessStatus": "EXCLUDED_BY_FROZEN_UNIVERSE",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [],
+      "gapCodes": [
+        "FINANCIAL"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "NOT_EVALUATED",
+        "horizonSessions": 252
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "a210732f-3119-4389-a92a-8fe32c1e60c1",
+        "fundamentalFactCount": 0,
+        "distinctMetricCount": 0,
+        "fundamentalPeriodRange": {
+          "earliest": null,
+          "latest": null
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 0
+      }
+    },
+    {
+      "symbol": "NEE",
+      "role": "PRIMARY",
+      "publicSecurityId": "9013327e-ab4e-470e-8543-c862f8e2719d",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "D4C59C72B2578EA537165AEA3887EC71855736AF37DDC7BD473C0B1C938E925B",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "9013327e-ab4e-470e-8543-c862f8e2719d",
+        "fundamentalFactCount": 2995,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1985-09-30",
+          "latest": "2026-06-30"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 0
+      }
+    },
+    {
+      "symbol": "NFLX",
+      "role": "PRIMARY",
+      "publicSecurityId": "49d817c2-b44b-4599-816e-8c9bf37ac352",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "AF8A3267370B621E17C8A6E3BBDDFCC1D9371CE35440ACB9FD79FC7BC4407AF3",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "49d817c2-b44b-4599-816e-8c9bf37ac352",
+        "fundamentalFactCount": 2142,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "2000-03-31",
+          "latest": "2026-06-30"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "NKE",
+      "role": "PRIMARY",
+      "publicSecurityId": "91d13e33-a979-493c-a041-a84893c8bc42",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "0DA20B2567D98329F2063AB322B439A0D76BA0B05A43FB1B3ED15C429D8638C3",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "91d13e33-a979-493c-a041-a84893c8bc42",
+        "fundamentalFactCount": 3217,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1985-08-31",
+          "latest": "2026-05-31"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "NVDA",
+      "role": "PRIMARY",
+      "publicSecurityId": "249c8315-cbea-447a-8701-8990e099beeb",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "D0BD9BDD45242802ECAB4EF23556E97C2EE2C67073E9BD5E497E00184C8A3E58",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "249c8315-cbea-447a-8701-8990e099beeb",
+        "fundamentalFactCount": 2286,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1999-01-31",
+          "latest": "2026-04-30"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "O",
+      "role": "EXCLUDED",
+      "publicSecurityId": "6d1d764f-2cb6-4c81-98a5-def2464df361",
+      "terminalState": "EXCLUDED",
+      "readinessStatus": "EXCLUDED_BY_FROZEN_UNIVERSE",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [],
+      "gapCodes": [
+        "REIT"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "NOT_EVALUATED",
+        "horizonSessions": 252
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "6d1d764f-2cb6-4c81-98a5-def2464df361",
+        "fundamentalFactCount": 0,
+        "distinctMetricCount": 0,
+        "fundamentalPeriodRange": {
+          "earliest": null,
+          "latest": null
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 0
+      }
+    },
+    {
+      "symbol": "OLED",
+      "role": "PRIMARY",
+      "publicSecurityId": "42bf1c70-94b4-49d9-9b76-52eabd8080c8",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "D5C35527C6B9273B5EF201301B6D2AD1686047EFE7856972E08A8C8E70E7C805",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "42bf1c70-94b4-49d9-9b76-52eabd8080c8",
+        "fundamentalFactCount": 2359,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1995-03-31",
+          "latest": "2026-03-31"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "ORCL",
+      "role": "PRIMARY",
+      "publicSecurityId": "4ba4439c-d30c-4890-8107-437de8c60208",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "7056D51A6DB57479B7240D1C896F37D1DC4334BAFA83F450457AA83A83FF29A6",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "4ba4439c-d30c-4890-8107-437de8c60208",
+        "fundamentalFactCount": 3200,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1985-08-31",
+          "latest": "2026-05-31"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "PEP",
+      "role": "PRIMARY",
+      "publicSecurityId": "d63daf9b-c16c-4597-8663-1d3acef54ebf",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "C44A15DBC204693BCA31BABD16EF339907F91461C7CAC6241882387582639CFF",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "d63daf9b-c16c-4597-8663-1d3acef54ebf",
+        "fundamentalFactCount": 3290,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1985-09-30",
+          "latest": "2026-06-30"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 0
+      }
+    },
+    {
+      "symbol": "PG",
+      "role": "PRIMARY",
+      "publicSecurityId": "ccab4f19-4636-45d8-9391-34876cf35119",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "37544F5BAAAC1A307E8FC4615960165CB11F664775D3375ECEB13AE5DE04FBED",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "ccab4f19-4636-45d8-9391-34876cf35119",
+        "fundamentalFactCount": 3195,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1985-09-30",
+          "latest": "2026-03-31"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "PGR",
+      "role": "EXCLUDED",
+      "publicSecurityId": "7e5a2734-087f-477b-9606-4a25c5e12b01",
+      "terminalState": "EXCLUDED",
+      "readinessStatus": "EXCLUDED_BY_FROZEN_UNIVERSE",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [],
+      "gapCodes": [
+        "FINANCIAL"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "NOT_EVALUATED",
+        "horizonSessions": 252
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "7e5a2734-087f-477b-9606-4a25c5e12b01",
+        "fundamentalFactCount": 0,
+        "distinctMetricCount": 0,
+        "fundamentalPeriodRange": {
+          "earliest": null,
+          "latest": null
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 0
+      }
+    },
+    {
+      "symbol": "PLAB",
+      "role": "PRIMARY",
+      "publicSecurityId": "045c4fcf-49ae-4096-9e13-b7595935de2c",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "1DDF9C3F42A3DA777279BD643DE6349DDAA166C4CCB3B2BB3BF0255D337EEBAB",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "045c4fcf-49ae-4096-9e13-b7595935de2c",
+        "fundamentalFactCount": 3221,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1985-10-31",
+          "latest": "2026-04-30"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "SAIA",
+      "role": "RESERVE",
+      "publicSecurityId": "7a0b2fa9-ddef-4072-8210-b10ab701506a",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "2FB51719DD00093BE3E531DB769F542AE8DC0F314578C4C4D0FA652295BE9680",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "7a0b2fa9-ddef-4072-8210-b10ab701506a",
+        "fundamentalFactCount": 2149,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1998-12-31",
+          "latest": "2026-03-31"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "SBUX",
+      "role": "PRIMARY",
+      "publicSecurityId": "cc6e0fe2-6b5c-4eb1-906e-020d37464214",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "36EC3E7880C85C013A94C97D864E308EE5C2A5BFB4EC422C7BC3741E3E6D1793",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "cc6e0fe2-6b5c-4eb1-906e-020d37464214",
+        "fundamentalFactCount": 2899,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1990-12-31",
+          "latest": "2026-03-31"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "SHW",
+      "role": "PRIMARY",
+      "publicSecurityId": "e90ecfe1-cfdf-4df6-be81-b8f86c3a8246",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "AC414CA1CF8BA17BE7978F6CC904AB09AAF2A01055C9EA37E19DD460BCE4DC75",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "e90ecfe1-cfdf-4df6-be81-b8f86c3a8246",
+        "fundamentalFactCount": 3204,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1985-09-30",
+          "latest": "2026-03-31"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "SO",
+      "role": "PRIMARY",
+      "publicSecurityId": "05c124b7-bcd9-4bdd-90ad-322b69f65e11",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "9BAA9C4F65B19771CE0C47433EAAD40699A9C0D5D4E246D9FAA17AB38B7C3BF9",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "05c124b7-bcd9-4bdd-90ad-322b69f65e11",
+        "fundamentalFactCount": 2982,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1985-09-30",
+          "latest": "2026-03-31"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "SPY",
+      "role": "REFERENCE_ONLY",
+      "publicSecurityId": "248bf9cd-3b97-42be-a9e8-75684a158cb1",
+      "terminalState": "NOT_APPLICABLE",
+      "readinessStatus": "REFERENCE_ONLY",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [],
+      "gapCodes": [],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "payloadContentHash": "C7CACA3C798121C2386B5FD251047CFF54DC45B0B829E6238B892F9310909089"
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "248bf9cd-3b97-42be-a9e8-75684a158cb1",
+        "fundamentalFactCount": 1,
+        "distinctMetricCount": 1,
+        "fundamentalPeriodRange": {
+          "earliest": "2025-03-31",
+          "latest": "2025-03-31"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 0
+      }
+    },
+    {
+      "symbol": "SYK",
+      "role": "PRIMARY",
+      "publicSecurityId": "22edd15c-5a6d-47a1-a51b-769b2c02c78e",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "6EE93E32A17E3CE719FFA7E00F4E9A6BDA94834A50F61F7C806D843BA89CEA42",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "22edd15c-5a6d-47a1-a51b-769b2c02c78e",
+        "fundamentalFactCount": 3187,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1985-09-30",
+          "latest": "2026-03-31"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "TGT",
+      "role": "PRIMARY",
+      "publicSecurityId": "5469f5aa-4e43-4008-8c04-6f1bee977e72",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "55CA8E0DB2A67727BF1112C25BF60DB264352D0C47305C682825AC3357629260",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "5469f5aa-4e43-4008-8c04-6f1bee977e72",
+        "fundamentalFactCount": 3139,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1985-10-31",
+          "latest": "2026-04-30"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "TMO",
+      "role": "PRIMARY",
+      "publicSecurityId": "e2cc80f2-437d-4951-8707-34bb811cfd45",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "C178E4A419885A33E915D91911074042923407C50EA336D9CD0B0D68C5045F2E",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "e2cc80f2-437d-4951-8707-34bb811cfd45",
+        "fundamentalFactCount": 3220,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1985-09-30",
+          "latest": "2026-06-30"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 0
+      }
+    },
+    {
+      "symbol": "TWTR",
+      "role": "EXCLUDED",
+      "publicSecurityId": "9e7066db-916b-4bd5-ab4c-cbe8b46391c2",
+      "terminalState": "EXCLUDED",
+      "readinessStatus": "EXCLUDED_BY_FROZEN_UNIVERSE",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [],
+      "gapCodes": [
+        "DELISTED_SPECIAL_SITUATION"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "NOT_EVALUATED",
+        "horizonSessions": 252
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "9e7066db-916b-4bd5-ab4c-cbe8b46391c2",
+        "fundamentalFactCount": 0,
+        "distinctMetricCount": 0,
+        "fundamentalPeriodRange": {
+          "earliest": null,
+          "latest": null
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 0
+      }
+    },
+    {
+      "symbol": "UFPI",
+      "role": "RESERVE",
+      "publicSecurityId": "66ff4d86-0035-43fe-aa76-721f02ad92bf",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "B7B44473E659A65052B084F7C5B0DF2383E998DCA85FFDEE48094DEEB41F059A",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "66ff4d86-0035-43fe-aa76-721f02ad92bf",
+        "fundamentalFactCount": 2752,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1993-03-31",
+          "latest": "2026-03-31"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "UNP",
+      "role": "PRIMARY",
+      "publicSecurityId": "301a287a-542d-48cb-b798-0e07e5c4cea0",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "9BDA12239879F44F2278A9697F9FB63DFD0A1F2C7736223A231A985CEEBF16DC",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "301a287a-542d-48cb-b798-0e07e5c4cea0",
+        "fundamentalFactCount": 3284,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1985-09-30",
+          "latest": "2026-06-30"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "UPS",
+      "role": "PRIMARY",
+      "publicSecurityId": "2a29fa46-695c-48ea-98b2-3ba17c89a50b",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "CFECDE59278A961E02BA834419429F0FE0F6316E2A5A59D8FE5967B43F866EA1",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "2a29fa46-695c-48ea-98b2-3ba17c89a50b",
+        "fundamentalFactCount": 2290,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1998-12-31",
+          "latest": "2026-03-31"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "WDFC",
+      "role": "RESERVE",
+      "publicSecurityId": "52107d02-d2cc-474f-bcb3-b9044c6e32a0",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "11B9D6B0FCCB8CECDACB97CAD6DFAFE665BB2D369309FE04978BCCB2EBEBD007",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "52107d02-d2cc-474f-bcb3-b9044c6e32a0",
+        "fundamentalFactCount": 3183,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1985-08-31",
+          "latest": "2026-05-31"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "WMT",
+      "role": "PRIMARY",
+      "publicSecurityId": "98249af7-a69c-448c-8a0d-eeddf55c063a",
+      "terminalState": "MISSING",
+      "readinessStatus": "BLOCKED_BY_DATA",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [
+        "return_on_invested_capital",
+        "operating_margin",
+        "free_cash_flow_margin",
+        "earnings_stability",
+        "cash_flow_stability",
+        "net_debt_to_ebitda",
+        "interest_coverage",
+        "current_ratio",
+        "diluted_share_growth",
+        "incremental_return_on_invested_capital",
+        "reinvestment_efficiency",
+        "shareholder_yield",
+        "acquisition_discipline",
+        "free_cash_flow_yield",
+        "earnings_yield",
+        "enterprise_value_to_ebitda",
+        "own_history_valuation_attractiveness",
+        "conservative_fundamental_growth",
+        "annualized_valuation_normalization",
+        "cyclicality_risk",
+        "concentration_risk",
+        "event_risk",
+        "peer_quality_percentile",
+        "peer_valuation_attractiveness_percentile",
+        "evidence_coverage_ratio",
+        "point_in_time_verified_ratio",
+        "revision_lineage_ratio",
+        "semantic_evidence_ratio"
+      ],
+      "gapCodes": [
+        "NO_HASH_VERIFIED_V11_HISTORICAL_DECISION_INPUTS",
+        "PIT_AVAILABILITY_NOT_PROVEN_FOR_ALL_V11_INPUTS",
+        "HISTORICAL_UNIVERSE_MEMBERSHIP_NOT_AVAILABLE_AT_DECISION_DATES",
+        "HISTORICAL_SECTOR_AND_PEER_COHORT_NOT_AVAILABLE_AT_DECISION_DATES",
+        "FORMAL_BENCHMARK_SET_INCOMPLETE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "AVAILABLE",
+        "horizonSessions": 252,
+        "barCount": 3160,
+        "firstTradingDate": "2014-01-02",
+        "lastTradingDate": "2026-07-28",
+        "payloadContentHash": "172F2F2DBA8EAAE6EFA1D8B6C9C627816774BE0376F60E74A8DA5C36474591BD",
+        "priceActionEvidence": "EX_POST_TOTAL_RETURN_ADJUSTED",
+        "claimBoundary": "Outcome prices are diagnostic evidence only and cannot repair missing decision-time inputs."
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "98249af7-a69c-448c-8a0d-eeddf55c063a",
+        "fundamentalFactCount": 3241,
+        "distinctMetricCount": 17,
+        "fundamentalPeriodRange": {
+          "earliest": "1985-10-31",
+          "latest": "2026-04-30"
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 1
+      }
+    },
+    {
+      "symbol": "XLK",
+      "role": "REFERENCE_ONLY",
+      "publicSecurityId": "f5d0515b-9a4b-42ad-85a6-89dce3fd8f92",
+      "terminalState": "NOT_APPLICABLE",
+      "readinessStatus": "REFERENCE_ONLY",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [],
+      "gapCodes": [],
+      "priceOutcomeEvidence": {
+        "status": "MISSING",
+        "horizonSessions": 252,
+        "barCount": 0,
+        "payloadContentHash": null
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "f5d0515b-9a4b-42ad-85a6-89dce3fd8f92",
+        "fundamentalFactCount": 0,
+        "distinctMetricCount": 0,
+        "fundamentalPeriodRange": {
+          "earliest": null,
+          "latest": null
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 0
+      }
+    },
+    {
+      "symbol": "XOM",
+      "role": "EXCLUDED",
+      "publicSecurityId": "98a135a0-dfe7-4707-891a-804b7a7135b5",
+      "terminalState": "EXCLUDED",
+      "readinessStatus": "EXCLUDED_BY_FROZEN_UNIVERSE",
+      "v11HistoricalDecisionReady": false,
+      "v11ScoreComputed": false,
+      "missingV11Fields": [],
+      "gapCodes": [
+        "RESOURCE"
+      ],
+      "priceOutcomeEvidence": {
+        "status": "NOT_EVALUATED",
+        "horizonSessions": 252
+      },
+      "databaseEvidenceInventory": {
+        "stablePublicSecurityId": "98a135a0-dfe7-4707-891a-804b7a7135b5",
+        "fundamentalFactCount": 0,
+        "distinctMetricCount": 0,
+        "fundamentalPeriodRange": {
+          "earliest": null,
+          "latest": null
+        },
+        "readyMembershipSnapshotCount": 3,
+        "membershipAsOfRange": {
+          "earliest": "2026-07-28T23:00:00+00:00",
+          "latest": "2026-07-29T02:57:08.988871+00:00"
+        },
+        "classificationObservationCount": 0
+      }
+    }
+  ],
+  "claimBoundary": {
+    "historicalScoringExecuted": false,
+    "proxyFormulaUsed": false,
+    "v10ScoreReused": false,
+    "networkRequestsExecuted": false,
+    "forwardValidationExecuted": false,
+    "databaseWritesExecuted": false,
+    "databaseMigrationExecuted": false,
+    "statement": "The cached outcome series cannot authorize a Long Horizon v1.1 historical decision when decision-time v1.1 inputs, membership, cohorts, and benchmarks are incomplete."
+  },
+  "artifactContentHash": "10ED9DA2C0DD5128361D49860CA55B42BBF44A936598BB42A89A0182F657A390"
+}

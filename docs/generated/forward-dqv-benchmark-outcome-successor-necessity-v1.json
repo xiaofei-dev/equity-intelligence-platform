@@ -1,0 +1,145 @@
+{
+  "artifactContentHash": "sha256:acce2169946e63f99e9d6ef2240e618917674534e2025a61b9c1fb5413d6414b",
+  "artifactType": "FORWARD_DQV_BENCHMARK_OUTCOME_SUCCESSOR_NECESSITY",
+  "databaseReads": 0,
+  "databaseWrites": 0,
+  "formalOutcomeSchemaReadiness": {
+    "blockers": [
+      "V18_SECTOR_OUTCOME_NOT_SECURITY_SPECIFIC",
+      "V18_BENCHMARK_VARIANT_ID_NOT_RETAINED",
+      "GATE_H_MULTI_HOLDING_COST_INPUT_NOT_EXPRESSIBLE",
+      "STATISTICS_SECTOR_RETURN_REUSED_ACROSS_ALL_SECURITIES"
+    ],
+    "status": "BLOCKED"
+  },
+  "formalOutcomesComputed": false,
+  "forwardValidatedClaimed": false,
+  "ledgerReadiness": {
+    "contractVersion": "FORWARD-DQV-BENCHMARK-PATH-LEDGER-v2.2.0",
+    "holdingLevelPriceActionLiquidityAndCostEvidenceRetained": true,
+    "sectorVariantsRetained": true,
+    "sixBenchmarkFamiliesRequired": true,
+    "status": "READY_CONTRACT_IMPLEMENTED"
+  },
+  "migrationCreated": false,
+  "providerNetworkRequests": 0,
+  "requiredSuccessorDesign": {
+    "appendOnlyCorrectionRequired": true,
+    "exact66BySixBindingCompletenessRequired": true,
+    "existingOutcomeBatchHeaderReused": true,
+    "gateHContractTarget": "FORWARD-DQV-GATE-H-v2.3.0",
+    "migrationApplied": false,
+    "minimumTables": [
+      {
+        "key": [
+          "id"
+        ],
+        "name": "analytics.forward_dqv_benchmark_ledger_v3",
+        "responsibility": "Persist the immutable decision-time ledger header, enrollment, cutoff, population, model, benchmark, classification, and cost-policy roots."
+      },
+      {
+        "key": [
+          "ledger_id",
+          "benchmark_kind"
+        ],
+        "name": "analytics.forward_dqv_benchmark_family_v3",
+        "responsibility": "Persist exactly the six frozen benchmark families and each family's terminal evidence state."
+      },
+      {
+        "key": [
+          "ledger_id",
+          "benchmark_kind",
+          "variant_id"
+        ],
+        "name": "analytics.forward_dqv_benchmark_variant_v3",
+        "responsibility": "Persist every sealed benchmark variant, including all dated sector ETF variants."
+      },
+      {
+        "key": [
+          "ledger_id",
+          "benchmark_kind",
+          "variant_id",
+          "holding_security_id"
+        ],
+        "name": "analytics.forward_dqv_benchmark_holding_v3",
+        "responsibility": "Persist decision-time holding weights, notional, ADTV, cost, selection, price, action, and lineage."
+      },
+      {
+        "key": [
+          "outcome_batch_id",
+          "benchmark_kind",
+          "variant_id"
+        ],
+        "name": "analytics.forward_dqv_benchmark_variant_outcome_v3",
+        "responsibility": "Persist each benchmark variant path and its portfolio-level gross, cost, net, and evidence roots."
+      },
+      {
+        "key": [
+          "ledger_id",
+          "security_id",
+          "benchmark_kind"
+        ],
+        "name": "analytics.forward_dqv_security_benchmark_binding_v3",
+        "responsibility": "Bind every frozen security to exactly one variant for each benchmark kind, including its dated sector ETF."
+      },
+      {
+        "key": [
+          "outcome_batch_id",
+          "benchmark_kind",
+          "variant_id",
+          "holding_security_id"
+        ],
+        "name": "analytics.forward_dqv_benchmark_holding_outcome_v3",
+        "responsibility": "Persist each holding weight, notional, ADTV, gross contribution, nonlinear cost result, and evidence hash."
+      }
+    ],
+    "outcomeBatchHeaderRule": "V18 forward_dqv_outcome_batch_v2 remains the maturity-run header and must reference the exact decision-time ledger.",
+    "portfolioCostRule": "Evaluate liquidity-sensitive cost per holding, then divide the sum of holding notional multiplied by holding cost rate by total variant notional; never average ADTV or copy one holding cost to the portfolio.",
+    "portfolioReturnRule": "Compute weighted holding returns for the selected variant.",
+    "requiredUpgradeTests": [
+      "CLEAN_V1_TO_V20",
+      "UPGRADE_V18_TO_V20",
+      "UPGRADE_V19_TO_V20",
+      "EXACT_SIX_FAMILIES_PER_LEDGER",
+      "EXACT_66_BY_SIX_SECURITY_BINDINGS",
+      "SECTOR_BINDING_USES_DATED_CLASSIFICATION",
+      "MULTI_HOLDING_COST_USES_HOLDING_LEVEL_ADTV",
+      "AGGREGATE_ADTV_REJECTED",
+      "APPEND_ONLY_CORRECTION_CHAIN"
+    ],
+    "sectorComparisonRule": "Resolve the SECTOR variant from each security's sealed dated classification binding; never reuse one sector outcome for all securities.",
+    "suggestedMigrationVersion": "V20"
+  },
+  "schemaVersion": "FORWARD-DQV-BENCHMARK-OUTCOME-SUCCESSOR-NECESSITY-v1.0.0",
+  "scoresOrRanksComputed": false,
+  "sourceBindings": [
+    {
+      "fileSha256": "sha256:01a01a2ecd11157a1ecce0ea0ff46bb7d1254b5c13a088ab239db2e8f31b054b",
+      "reference": "database/migrations/V18__create_forward_dqv_v2_outcome_ledger.sql"
+    },
+    {
+      "fileSha256": "sha256:96e8f4f566e6fd5d15973e9d49624f8dbdb5aa893d7d02ab2f4af028e986bd97",
+      "reference": "analysis-python/src/equity_analysis/forward_validation/benchmark_controlled_ledger_v22.py"
+    },
+    {
+      "fileSha256": "sha256:0954de6552099cb2429bb7ca0373153899362e5ae73c5ecfeb3ecf69f3206508",
+      "reference": "analysis-python/src/equity_analysis/forward_validation/maturity_path_loader_v22.py"
+    },
+    {
+      "fileSha256": "sha256:8d982b02f58f8d158a543d192c8438fed90ea94944d6a027a2cac2e89c632c41",
+      "reference": "analysis-python/src/equity_analysis/forward_validation/maturity_statistics_adapter_v22.py"
+    }
+  ],
+  "sourceConstraintChecks": {
+    "gateHPathHasOneAdtv": true,
+    "gateHPathHasOneNotional": true,
+    "ledgerRetainsSectorVariants": true,
+    "loaderBlocksUnboundSectorVariant": true,
+    "loaderBlocksUnprovenLiquidityAggregation": true,
+    "statisticsBuildsOneGlobalBenchmarkMap": true,
+    "v18BenchmarkOutcomeHasNoSecurityId": true,
+    "v18BenchmarkOutcomeHasNoVariantId": true,
+    "v18BenchmarkPrimaryKeyIsBatchAndKind": true
+  },
+  "status": "SUCCESSOR_REQUIRED_BEFORE_FORMAL_OUTCOME"
+}

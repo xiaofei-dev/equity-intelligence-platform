@@ -1,0 +1,1990 @@
+{
+  "artifactType": "OBJECTIVE_BENCHMARK_COVERAGE_LINEAGE_FEASIBILITY",
+  "schemaVersion": "OBJECTIVE-BENCHMARK-COVERAGE-LINEAGE-FEASIBILITY-v1.0.0",
+  "evaluatedAt": "2026-07-30T03:32:13.385274Z",
+  "preregistrationSealContentHash": "sha256:8f6c3232f9ca5f2ace25f770c447c1d3bae2b17205151dc93fcc9b30cf15e889",
+  "futureDecisionMustBeStrictlyAfter": "2026-07-30T03:12:23.237053Z",
+  "dataSnapshotId": "beaa9952-9852-4088-9dc3-92047824414b",
+  "snapshotState": "READY",
+  "snapshotAsOf": "2026-07-29T02:57:08.988871Z",
+  "ingestionCutoff": "2026-07-29T02:57:08.988871Z",
+  "universeVersion": "market-intelligence-closed-test-us-v1.0.0",
+  "universeFileSha256": "C977E932EDD5184AABBDE53ACCFF6F480650F96C03C878A9EC7FBE15D2920078",
+  "includedPopulationCount": 55,
+  "referenceOnlyCount": 2,
+  "excludedCount": 9,
+  "requirements": {
+    "minimumScoreCount": 20,
+    "minimumIncludedCoverage": "0.80",
+    "minimumRequiredOf55": 44,
+    "stablePublicSecurityIdsRequired": true,
+    "postPreregistrationDecisionRequired": true,
+    "completeScoreLineageRequired": true,
+    "providerPassImpliesEligibility": false
+  },
+  "pureQuality": {
+    "state": "MISSING",
+    "modelVersion": "QC-v1.0.0",
+    "formalCandidateCount": 0,
+    "diagnosticPreRegistrationCandidateCount": 32,
+    "diagnosticCoverageRatio": "0.5818",
+    "minimumRequiredCount": 44,
+    "additionalDiagnosticCandidatesRequiredForCoverage": 12,
+    "additionalFormalCandidatesRequired": 44,
+    "reasonCodes": [
+      "NO_POST_PREREGISTRATION_OBJECTIVE_QUALITY_RUN",
+      "DIAGNOSTIC_INCLUDED_COVERAGE_BELOW_80_PERCENT",
+      "SCORE_LEVEL_LINEAGE_INCOMPLETE"
+    ]
+  },
+  "pureValue": {
+    "state": "MISSING",
+    "modelVersion": "UQ-v1.0.0",
+    "formalCandidateCount": 0,
+    "diagnosticInputReadyCount": 0,
+    "diagnosticAcceptedScoreCount": 0,
+    "minimumRequiredCount": 44,
+    "additionalFormalCandidatesRequired": 44,
+    "reasonCodes": [
+      "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE",
+      "NO_POST_PREREGISTRATION_OBJECTIVE_VALUE_RUN",
+      "HISTORICAL_FCF_YIELD_PIT_INPUT_REMAINS_MISSING"
+    ]
+  },
+  "databaseInventory": {
+    "succeededScreeningRunCount": 0,
+    "quantEligibleCount": 0,
+    "coverageQualityScoreCount": 0,
+    "coverageValuationScoreCount": 0,
+    "scoredQualityStrategyCount": 0,
+    "scoredValueStrategyCount": 0,
+    "factorResultCount": 0,
+    "factorResultWithLineageCount": 0,
+    "scoredProfileCount": 0,
+    "profileQualityScoreCount": 0,
+    "profileValuationScoreCount": 0
+  },
+  "controlledCacheInventory": {
+    "includedManifestRowCount": 42,
+    "verifiedControlledInputCount": 42,
+    "operandLineagePresentCount": 42,
+    "uniqueOperandSourceContentHashCount": 249,
+    "qualityDiagnosticSourceContentHashCount": 192,
+    "databaseSourceRecordHashMatchCount": 32,
+    "scoreLevelIngestedAtPresentCount": 0,
+    "rawProviderValuesIncluded": false
+  },
+  "schemaReuse": [
+    {
+      "migration": "V14",
+      "state": "REUSABLE",
+      "responsibility": "Stable security identity, classification, and reference lineage."
+    },
+    {
+      "migration": "V15",
+      "state": "REUSABLE",
+      "responsibility": "PIT metric observations and source-record timestamps/hashes."
+    },
+    {
+      "migration": "V16",
+      "state": "REUSABLE_FRESHNESS_ONLY",
+      "responsibility": "Independent dataset freshness and refresh audit evidence."
+    },
+    {
+      "migration": "V17",
+      "state": "REUSABLE_PROJECTION_ONLY",
+      "responsibility": "Immutable profile projection after a lineage-complete Objective run; it is not an authoritative scoring substitute."
+    },
+    {
+      "migration": "V8",
+      "state": "REQUIRED_AUTHORITATIVE_SCORE_LEDGER",
+      "responsibility": "Screening coverage, strategy scores, factor results, and factor-to-source lineage."
+    }
+  ],
+  "sourceBindings": {
+    "inputManifest": {
+      "path": "docs/generated/objective-rating-v1-current-decision-input-manifest-v1.json",
+      "fileSha256": "408761E325CDF3BC5436E9A0463E6BBB6274E70F6425C9C855B6BE0FB7B25F01",
+      "artifactContentHash": "sha256:19ed019c6b36e9de0ca0c2a17a053851851c5044f6bc6ff2feea90e774fa6d1e"
+    },
+    "algorithmGate": {
+      "path": "docs/generated/objective-rating-v1-current-snapshot-algorithm-gate-v1.json",
+      "fileSha256": "AB438EB24D3D1EF477252E91DE63B46911BDF2FDB66ECB69BB65715F1675B6FC",
+      "artifactContentHash": "sha256:131fd6c59a596056cb6a329fda3bb73404caddf2976826b2cdd211d5cb593f4b"
+    }
+  },
+  "independentProspectiveBlockers": [
+    {
+      "code": "SECTOR_REFERENCE_BENCHMARK_COVERAGE_INCOMPLETE",
+      "state": "BLOCKED",
+      "requiredContract": "Every included sector benchmark assignment must resolve to a REFERENCE_ONLY security in the same frozen universe.",
+      "observedReferenceOnlySymbols": [
+        "SPY",
+        "XLK"
+      ],
+      "impact": "Completing PURE_QUALITY or PURE_VALUE coverage alone cannot authorize prospective enrollment."
+    }
+  ],
+  "securities": [
+    {
+      "symbol": "AAPL",
+      "publicSecurityId": "d8a14843-961a-5406-a372-b69d46f7512f",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "MISSING",
+        "modelVersion": null,
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": null,
+        "lineageEvidenceHash": null,
+        "lineageStatus": "MISSING",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_QUALITY_SCORE"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": null,
+        "lineageEvidenceHash": null,
+        "lineageStatus": "MISSING",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "MSFT",
+      "publicSecurityId": "ea503902-9cbd-5ca3-82a4-00214f655ab2",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "PRESENT_PRE_PREREGISTRATION",
+        "modelVersion": "QC-v1.0.0",
+        "effectiveAt": "2026-07-28T23:59:59Z",
+        "availableAt": "2026-07-27T23:59:59Z",
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:55854bb778a9c87d7488aa64f470b0dd1fd48fcd65cb693ed72c47fbabd7009c",
+        "lineageEvidenceHash": "sha256:2ea5cc3f63f97d74025cb86d97639f35ade81361e85075de801271dad11b4897",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "PRE_REGISTRATION_DEVELOPMENT_EVIDENCE",
+          "SCORE_LEVEL_INGESTED_AT_NOT_RETAINED"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:55854bb778a9c87d7488aa64f470b0dd1fd48fcd65cb693ed72c47fbabd7009c",
+        "lineageEvidenceHash": "sha256:2ea5cc3f63f97d74025cb86d97639f35ade81361e85075de801271dad11b4897",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "META",
+      "publicSecurityId": "06297dd5-c150-5360-8cbb-c6341aa01dae",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "MISSING",
+        "modelVersion": null,
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": null,
+        "lineageEvidenceHash": null,
+        "lineageStatus": "MISSING",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_QUALITY_SCORE"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:ea9df605e9e200669a89be743c2bc8fc1dde7c1d08f2c48b83930754fb29fa16",
+        "lineageEvidenceHash": "sha256:783a31dab6128a030e663840b9d42cc3f0c30f58c07116a43767017d341a0938",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "WMT",
+      "publicSecurityId": "2d4a0d15-2f0c-5c6e-acaf-10a647855fb1",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "PRESENT_PRE_PREREGISTRATION",
+        "modelVersion": "QC-v1.0.0",
+        "effectiveAt": "2026-07-28T23:59:59Z",
+        "availableAt": "2026-07-27T23:59:59Z",
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:51cb206377f249f3a146f5dd56b04b6eed33b8d525f92f82ad1c661ad85814a1",
+        "lineageEvidenceHash": "sha256:e126224d33d0be2e9690396357d8572c28f4401dce5a76d6e801df478b871eb9",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "PRE_REGISTRATION_DEVELOPMENT_EVIDENCE",
+          "SCORE_LEVEL_INGESTED_AT_NOT_RETAINED"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:51cb206377f249f3a146f5dd56b04b6eed33b8d525f92f82ad1c661ad85814a1",
+        "lineageEvidenceHash": "sha256:e126224d33d0be2e9690396357d8572c28f4401dce5a76d6e801df478b871eb9",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "MCD",
+      "publicSecurityId": "a908303b-63ee-55e2-ac33-7b1625c7ab33",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "MISSING",
+        "modelVersion": null,
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": null,
+        "lineageEvidenceHash": null,
+        "lineageStatus": "MISSING",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_QUALITY_SCORE"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:6947a55659c29bb39545dd555e5b45aff468f3a385170a6e2af66a0bbe70a1b3",
+        "lineageEvidenceHash": "sha256:e964b05ffe923773ef98b7da3ec5815da3355a5d54a4267f5fb94840a8524197",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "CAT",
+      "publicSecurityId": "2020eb4c-563a-5293-8b52-e35b044772c0",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "MISSING",
+        "modelVersion": null,
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": null,
+        "lineageEvidenceHash": null,
+        "lineageStatus": "MISSING",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_QUALITY_SCORE"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": null,
+        "lineageEvidenceHash": null,
+        "lineageStatus": "MISSING",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "ADP",
+      "publicSecurityId": "3126a093-d76e-552c-9b40-bd6e37f2d0f5",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "PRESENT_PRE_PREREGISTRATION",
+        "modelVersion": "QC-v1.0.0",
+        "effectiveAt": "2026-07-28T23:59:59Z",
+        "availableAt": "2026-07-27T23:59:59Z",
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:dbf2405ec0f477cf632abcaa035ecb4012bf14dd3dc9f9e7b36ad15e52b13d7b",
+        "lineageEvidenceHash": "sha256:8930c8cae3227ecfbd083646a59dad03fefb2d0b54644b6665d17486e4b23621",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "PRE_REGISTRATION_DEVELOPMENT_EVIDENCE",
+          "SCORE_LEVEL_INGESTED_AT_NOT_RETAINED"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:dbf2405ec0f477cf632abcaa035ecb4012bf14dd3dc9f9e7b36ad15e52b13d7b",
+        "lineageEvidenceHash": "sha256:8930c8cae3227ecfbd083646a59dad03fefb2d0b54644b6665d17486e4b23621",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "NKE",
+      "publicSecurityId": "11a5a36e-831f-5550-a28b-7e6f6c817009",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "PRESENT_PRE_PREREGISTRATION",
+        "modelVersion": "QC-v1.0.0",
+        "effectiveAt": "2026-07-28T23:59:59Z",
+        "availableAt": "2026-07-27T23:59:59Z",
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:2e8d204c0f78e263b268ba900c1069d508c75f77a2230930253cbe161456aa84",
+        "lineageEvidenceHash": "sha256:2c0ef4be90896eaf0ae54b1333d7207e126a2431421c17d9e22552fb985a0c5e",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "PRE_REGISTRATION_DEVELOPMENT_EVIDENCE",
+          "SCORE_LEVEL_INGESTED_AT_NOT_RETAINED"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:2e8d204c0f78e263b268ba900c1069d508c75f77a2230930253cbe161456aa84",
+        "lineageEvidenceHash": "sha256:2c0ef4be90896eaf0ae54b1333d7207e126a2431421c17d9e22552fb985a0c5e",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "TGT",
+      "publicSecurityId": "b649ccea-1e7f-5a90-9a07-3b08614ff51e",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "PRESENT_PRE_PREREGISTRATION",
+        "modelVersion": "QC-v1.0.0",
+        "effectiveAt": "2026-07-28T23:59:59Z",
+        "availableAt": "2026-07-27T23:59:59Z",
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:e9031fa0fc9378abcb1191a93273662f43e36b8d8f5e94613d14609bd05f0f8f",
+        "lineageEvidenceHash": "sha256:0b6d993da83649d5fa3af6e5bee023ff0f6871fa7cd64ca2b83996ff1b41ff50",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "PRE_REGISTRATION_DEVELOPMENT_EVIDENCE",
+          "SCORE_LEVEL_INGESTED_AT_NOT_RETAINED"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:e9031fa0fc9378abcb1191a93273662f43e36b8d8f5e94613d14609bd05f0f8f",
+        "lineageEvidenceHash": "sha256:0b6d993da83649d5fa3af6e5bee023ff0f6871fa7cd64ca2b83996ff1b41ff50",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "PLAB",
+      "publicSecurityId": "13371d22-6a81-5d12-a37c-f32b791c1639",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "PRESENT_PRE_PREREGISTRATION",
+        "modelVersion": "QC-v1.0.0",
+        "effectiveAt": "2026-07-28T23:59:59Z",
+        "availableAt": "2026-07-27T23:59:59Z",
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:6914034aefa7b8a0a0bd37e2309f4fd91066735a98b6b3a47a16e1bf906de73f",
+        "lineageEvidenceHash": "sha256:608af86f2ecbcd694afff9da807992a044fa22d75a2ec7d91510f97bf09961a2",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "PRE_REGISTRATION_DEVELOPMENT_EVIDENCE",
+          "SCORE_LEVEL_INGESTED_AT_NOT_RETAINED"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:6914034aefa7b8a0a0bd37e2309f4fd91066735a98b6b3a47a16e1bf906de73f",
+        "lineageEvidenceHash": "sha256:608af86f2ecbcd694afff9da807992a044fa22d75a2ec7d91510f97bf09961a2",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "NVDA",
+      "publicSecurityId": "580cbcd9-264d-51f4-bbdc-cae9116fa05d",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "PRESENT_PRE_PREREGISTRATION",
+        "modelVersion": "QC-v1.0.0",
+        "effectiveAt": "2026-07-28T23:59:59Z",
+        "availableAt": "2026-07-27T23:59:59Z",
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:d807db8aac16eb7c3d9d13aec40287e448253744a949f5ccd5fefd0c44e8feb5",
+        "lineageEvidenceHash": "sha256:8535e8a3def55e1b4984a86bb462e8dd5dcf19cc9204c45e0054b0b44169bcd8",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "PRE_REGISTRATION_DEVELOPMENT_EVIDENCE",
+          "SCORE_LEVEL_INGESTED_AT_NOT_RETAINED"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:d807db8aac16eb7c3d9d13aec40287e448253744a949f5ccd5fefd0c44e8feb5",
+        "lineageEvidenceHash": "sha256:8535e8a3def55e1b4984a86bb462e8dd5dcf19cc9204c45e0054b0b44169bcd8",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "AVGO",
+      "publicSecurityId": "920d82bc-d5f6-52d9-8f79-4ce539d3481d",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "PRESENT_PRE_PREREGISTRATION",
+        "modelVersion": "QC-v1.0.0",
+        "effectiveAt": "2026-07-28T23:59:59Z",
+        "availableAt": "2026-07-27T23:59:59Z",
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:293cb5731292562b4d492d79d31427827220176cb77231f88cda186bb2a93c75",
+        "lineageEvidenceHash": "sha256:e3a34d1d3b04ab752b5b7002fbccf79cf12a45fdbd394b13d12db45cad8c5dd9",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "PRE_REGISTRATION_DEVELOPMENT_EVIDENCE",
+          "SCORE_LEVEL_INGESTED_AT_NOT_RETAINED"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:293cb5731292562b4d492d79d31427827220176cb77231f88cda186bb2a93c75",
+        "lineageEvidenceHash": "sha256:e3a34d1d3b04ab752b5b7002fbccf79cf12a45fdbd394b13d12db45cad8c5dd9",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "ORCL",
+      "publicSecurityId": "1d3e4e20-f35a-512d-a51d-71e218a1102a",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "MISSING",
+        "modelVersion": null,
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": null,
+        "lineageEvidenceHash": null,
+        "lineageStatus": "MISSING",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_QUALITY_SCORE"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:90e300d7689ec954b0890194c6db43db3e75479171c89f9eea5502eb3640283b",
+        "lineageEvidenceHash": "sha256:a26ac2459db218ae7d181d483e71d11ab6a12d21cd4c14b299f4dac51267726c",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "CSCO",
+      "publicSecurityId": "c6e9c6a3-b6a0-5e57-b0be-a104bb0c4a5a",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "PRESENT_PRE_PREREGISTRATION",
+        "modelVersion": "QC-v1.0.0",
+        "effectiveAt": "2026-07-28T23:59:59Z",
+        "availableAt": "2026-07-27T23:59:59Z",
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:2ab268e3422486427e70e6ce92889e0ce47b2302ee53e88cb94737bc4686c86b",
+        "lineageEvidenceHash": "sha256:e20cfa2983961a3f813b400086a1731f7875e2761f83fc268f5cb4303671aef1",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "PRE_REGISTRATION_DEVELOPMENT_EVIDENCE",
+          "SCORE_LEVEL_INGESTED_AT_NOT_RETAINED"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:2ab268e3422486427e70e6ce92889e0ce47b2302ee53e88cb94737bc4686c86b",
+        "lineageEvidenceHash": "sha256:e20cfa2983961a3f813b400086a1731f7875e2761f83fc268f5cb4303671aef1",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "ACN",
+      "publicSecurityId": "179b3a37-5c71-545a-901c-508038ede4e9",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "MISSING",
+        "modelVersion": null,
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": null,
+        "lineageEvidenceHash": null,
+        "lineageStatus": "MISSING",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_QUALITY_SCORE"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": null,
+        "lineageEvidenceHash": null,
+        "lineageStatus": "MISSING",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "IBM",
+      "publicSecurityId": "8f5d16c8-8417-5374-9fd4-5aa90e1430f5",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "PRESENT_PRE_PREREGISTRATION",
+        "modelVersion": "QC-v1.0.0",
+        "effectiveAt": "2026-07-28T23:59:59Z",
+        "availableAt": "2026-07-27T23:59:59Z",
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:a694434c8e47085bf2f6688580f484f01f6d0d3a54389ba29a0bb0ff53b31b3c",
+        "lineageEvidenceHash": "sha256:aa47d02ecff0baf675b6708352af6b0b067eb0ed1ebef6875bb4730b2d777aa4",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "PRE_REGISTRATION_DEVELOPMENT_EVIDENCE",
+          "SCORE_LEVEL_INGESTED_AT_NOT_RETAINED"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:a694434c8e47085bf2f6688580f484f01f6d0d3a54389ba29a0bb0ff53b31b3c",
+        "lineageEvidenceHash": "sha256:aa47d02ecff0baf675b6708352af6b0b067eb0ed1ebef6875bb4730b2d777aa4",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "GOOGL",
+      "publicSecurityId": "37c45c45-1973-5ca0-a81a-a65cf45359a2",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "MISSING",
+        "modelVersion": null,
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": null,
+        "lineageEvidenceHash": null,
+        "lineageStatus": "MISSING",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_QUALITY_SCORE"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:47d0408796fa903f3ba011b1914aa471dd7900f66b4683ce037b041b30a1212b",
+        "lineageEvidenceHash": "sha256:2094cac048594a2ed94143eee7b6bd38febb74bd0d11804605f0c76d93fcf93e",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "NFLX",
+      "publicSecurityId": "cf0d4c88-d578-5369-9cd1-3d42c1d94aab",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "PRESENT_PRE_PREREGISTRATION",
+        "modelVersion": "QC-v1.0.0",
+        "effectiveAt": "2026-07-28T23:59:59Z",
+        "availableAt": "2026-07-27T23:59:59Z",
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:8a17666d90f2e3c36fdce6b1eba57ed6732768ad0cff4618622b1fc7d3f9c81f",
+        "lineageEvidenceHash": "sha256:cf567798c26a1b2f8e62aeb8b8eced0462fb42ebc1ec6494759137b570195ebc",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "PRE_REGISTRATION_DEVELOPMENT_EVIDENCE",
+          "SCORE_LEVEL_INGESTED_AT_NOT_RETAINED"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:8a17666d90f2e3c36fdce6b1eba57ed6732768ad0cff4618622b1fc7d3f9c81f",
+        "lineageEvidenceHash": "sha256:cf567798c26a1b2f8e62aeb8b8eced0462fb42ebc1ec6494759137b570195ebc",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "DIS",
+      "publicSecurityId": "62d95825-6ce5-5184-bf7a-692777a3e328",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "PRESENT_PRE_PREREGISTRATION",
+        "modelVersion": "QC-v1.0.0",
+        "effectiveAt": "2026-07-28T23:59:59Z",
+        "availableAt": "2026-07-27T23:59:59Z",
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:230b7ed9da4f037f6f187b5dcb9d81ef33249679fafa75e4ce70d4899259cfcb",
+        "lineageEvidenceHash": "sha256:162e567fb21ed8c72d923d2120fcd6a86ef9f974d7f09d6668de79ee6d9c0a9c",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "PRE_REGISTRATION_DEVELOPMENT_EVIDENCE",
+          "SCORE_LEVEL_INGESTED_AT_NOT_RETAINED"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:230b7ed9da4f037f6f187b5dcb9d81ef33249679fafa75e4ce70d4899259cfcb",
+        "lineageEvidenceHash": "sha256:162e567fb21ed8c72d923d2120fcd6a86ef9f974d7f09d6668de79ee6d9c0a9c",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "AMZN",
+      "publicSecurityId": "426c12ec-91f8-55c9-85fb-76a55a0fd3ed",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "MISSING",
+        "modelVersion": null,
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": null,
+        "lineageEvidenceHash": null,
+        "lineageStatus": "MISSING",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_QUALITY_SCORE"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:fa6f5338258d334e2ef796d3ca85f1ef30ac14b388ac91db84edceb67c45bdcc",
+        "lineageEvidenceHash": "sha256:b2550ad49f9826de3d67136f0fc50ca637618d7a302d674a73ef1c4cb853ed78",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "HD",
+      "publicSecurityId": "fa14b2bf-1e71-5fe7-8ea2-d000c1c0db57",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "PRESENT_PRE_PREREGISTRATION",
+        "modelVersion": "QC-v1.0.0",
+        "effectiveAt": "2026-07-28T23:59:59Z",
+        "availableAt": "2026-07-27T23:59:59Z",
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:5b3533fc62ea6f613d9ef6af29f2c46a745af4fb40aa37d8a2aa353d3e92f794",
+        "lineageEvidenceHash": "sha256:e31877544cdad8f2a4d6335b2e4d7ee0e3bb03b8aae6f7d55ef2f3a3a6b409a5",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "PRE_REGISTRATION_DEVELOPMENT_EVIDENCE",
+          "SCORE_LEVEL_INGESTED_AT_NOT_RETAINED"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:5b3533fc62ea6f613d9ef6af29f2c46a745af4fb40aa37d8a2aa353d3e92f794",
+        "lineageEvidenceHash": "sha256:e31877544cdad8f2a4d6335b2e4d7ee0e3bb03b8aae6f7d55ef2f3a3a6b409a5",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "LOW",
+      "publicSecurityId": "42b3f426-7956-53fa-b0e9-706c25fb808d",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "PRESENT_PRE_PREREGISTRATION",
+        "modelVersion": "QC-v1.0.0",
+        "effectiveAt": "2026-07-28T23:59:59Z",
+        "availableAt": "2026-07-27T23:59:59Z",
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:6b27810434e17119deb89990fc8005909f8561999356953d2702026bd156d004",
+        "lineageEvidenceHash": "sha256:09173e1d52efd48ad8b4aa76f81a2419ee5b39d75e5a298e97d28b4c540508bc",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "PRE_REGISTRATION_DEVELOPMENT_EVIDENCE",
+          "SCORE_LEVEL_INGESTED_AT_NOT_RETAINED"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:6b27810434e17119deb89990fc8005909f8561999356953d2702026bd156d004",
+        "lineageEvidenceHash": "sha256:09173e1d52efd48ad8b4aa76f81a2419ee5b39d75e5a298e97d28b4c540508bc",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "SBUX",
+      "publicSecurityId": "c919870a-589c-5744-9077-1aaf3eb09c35",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "PRESENT_PRE_PREREGISTRATION",
+        "modelVersion": "QC-v1.0.0",
+        "effectiveAt": "2026-07-28T23:59:59Z",
+        "availableAt": "2026-07-27T23:59:59Z",
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:6f1db80b9ff6d73ce30f092284946fa5cb748cab86280a5e9b4fb09ff030dec4",
+        "lineageEvidenceHash": "sha256:df098658d87ef05ec39cfd4ad0648592cec3d5aedb4c71ba1c5d0980900371ad",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "PRE_REGISTRATION_DEVELOPMENT_EVIDENCE",
+          "SCORE_LEVEL_INGESTED_AT_NOT_RETAINED"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:6f1db80b9ff6d73ce30f092284946fa5cb748cab86280a5e9b4fb09ff030dec4",
+        "lineageEvidenceHash": "sha256:df098658d87ef05ec39cfd4ad0648592cec3d5aedb4c71ba1c5d0980900371ad",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "COST",
+      "publicSecurityId": "fc24ce00-afe0-5f5b-b75c-5aaeef8d1c9d",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "MISSING",
+        "modelVersion": null,
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": null,
+        "lineageEvidenceHash": null,
+        "lineageStatus": "MISSING",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_QUALITY_SCORE"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": null,
+        "lineageEvidenceHash": null,
+        "lineageStatus": "MISSING",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "PG",
+      "publicSecurityId": "a29d6c6c-dede-5e1d-a8cd-ad174e88dc4d",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "PRESENT_PRE_PREREGISTRATION",
+        "modelVersion": "QC-v1.0.0",
+        "effectiveAt": "2026-07-28T23:59:59Z",
+        "availableAt": "2026-07-27T23:59:59Z",
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:b81f08c58bd7ade98a60b1345a6c0e719d270d4434ad0b8974d553aaf742ece8",
+        "lineageEvidenceHash": "sha256:01e6e89984f74344b9391b79835fc1a02698b205fb2f903907e29e2abdc74caa",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "PRE_REGISTRATION_DEVELOPMENT_EVIDENCE",
+          "SCORE_LEVEL_INGESTED_AT_NOT_RETAINED"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:b81f08c58bd7ade98a60b1345a6c0e719d270d4434ad0b8974d553aaf742ece8",
+        "lineageEvidenceHash": "sha256:01e6e89984f74344b9391b79835fc1a02698b205fb2f903907e29e2abdc74caa",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "KO",
+      "publicSecurityId": "347e531f-97ea-51b2-8ca6-aaaa878f6407",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "PRESENT_PRE_PREREGISTRATION",
+        "modelVersion": "QC-v1.0.0",
+        "effectiveAt": "2026-07-28T23:59:59Z",
+        "availableAt": "2026-07-27T23:59:59Z",
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:5637d5e0adf2ee926b5ec6ec74c03179b40f2f91570bba4dbaea13136d8f646a",
+        "lineageEvidenceHash": "sha256:dcf30e98ca290be5303cc8643eeae7a8478058fe3a42a5602d861fe160fdef62",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "PRE_REGISTRATION_DEVELOPMENT_EVIDENCE",
+          "SCORE_LEVEL_INGESTED_AT_NOT_RETAINED"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:5637d5e0adf2ee926b5ec6ec74c03179b40f2f91570bba4dbaea13136d8f646a",
+        "lineageEvidenceHash": "sha256:dcf30e98ca290be5303cc8643eeae7a8478058fe3a42a5602d861fe160fdef62",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "PEP",
+      "publicSecurityId": "529b9520-ffb4-55d3-87dc-ef66ad8811f9",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "MISSING",
+        "modelVersion": null,
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": null,
+        "lineageEvidenceHash": null,
+        "lineageStatus": "MISSING",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_QUALITY_SCORE"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": null,
+        "lineageEvidenceHash": null,
+        "lineageStatus": "MISSING",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "CL",
+      "publicSecurityId": "7d091a87-f1c3-546a-adee-3e69ff9daeb1",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "PRESENT_PRE_PREREGISTRATION",
+        "modelVersion": "QC-v1.0.0",
+        "effectiveAt": "2026-07-28T23:59:59Z",
+        "availableAt": "2026-07-27T23:59:59Z",
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:d580188a26d559bd9eecc58bb94bc0323b11eb3643d972b98e63b962dfc779d1",
+        "lineageEvidenceHash": "sha256:d58f84b791ba6b6445ffa8e7dab083480972fe1260d9e4f58add4e4062ee5197",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "PRE_REGISTRATION_DEVELOPMENT_EVIDENCE",
+          "SCORE_LEVEL_INGESTED_AT_NOT_RETAINED"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:d580188a26d559bd9eecc58bb94bc0323b11eb3643d972b98e63b962dfc779d1",
+        "lineageEvidenceHash": "sha256:d58f84b791ba6b6445ffa8e7dab083480972fe1260d9e4f58add4e4062ee5197",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "JNJ",
+      "publicSecurityId": "c12a95ce-5e86-5520-8c33-5f8bc6605dd7",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "MISSING",
+        "modelVersion": null,
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": null,
+        "lineageEvidenceHash": null,
+        "lineageStatus": "MISSING",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_QUALITY_SCORE"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": null,
+        "lineageEvidenceHash": null,
+        "lineageStatus": "MISSING",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "ABT",
+      "publicSecurityId": "d2e4553a-700e-547d-b1b7-9aa6be8dd4a7",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "MISSING",
+        "modelVersion": null,
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": null,
+        "lineageEvidenceHash": null,
+        "lineageStatus": "MISSING",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_QUALITY_SCORE"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": null,
+        "lineageEvidenceHash": null,
+        "lineageStatus": "MISSING",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "MDT",
+      "publicSecurityId": "c84db089-efaf-5597-a44a-892bef95fd87",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "MISSING",
+        "modelVersion": null,
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": null,
+        "lineageEvidenceHash": null,
+        "lineageStatus": "MISSING",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_QUALITY_SCORE"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": null,
+        "lineageEvidenceHash": null,
+        "lineageStatus": "MISSING",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "SYK",
+      "publicSecurityId": "48919d38-e65c-55d7-a910-1beda2cc09fe",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "MISSING",
+        "modelVersion": null,
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": null,
+        "lineageEvidenceHash": null,
+        "lineageStatus": "MISSING",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_QUALITY_SCORE"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": null,
+        "lineageEvidenceHash": null,
+        "lineageStatus": "MISSING",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "TMO",
+      "publicSecurityId": "0ad69d1c-35c0-54ec-bed9-db54a6f0bcd0",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "MISSING",
+        "modelVersion": null,
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": null,
+        "lineageEvidenceHash": null,
+        "lineageStatus": "MISSING",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_QUALITY_SCORE"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": null,
+        "lineageEvidenceHash": null,
+        "lineageStatus": "MISSING",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "MCK",
+      "publicSecurityId": "0e9cc7f3-1e1a-5cc5-9093-a7233697986e",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "PRESENT_PRE_PREREGISTRATION",
+        "modelVersion": "QC-v1.0.0",
+        "effectiveAt": "2026-07-28T23:59:59Z",
+        "availableAt": "2026-07-27T23:59:59Z",
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:173fd973a3dc51df26d8ea1635770ab869983821b2a72b73071eade87d48225c",
+        "lineageEvidenceHash": "sha256:212e414ea0e028700114dedfa5eb5455007c1782818ef71719be0367abbbf146",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "PRE_REGISTRATION_DEVELOPMENT_EVIDENCE",
+          "SCORE_LEVEL_INGESTED_AT_NOT_RETAINED"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:173fd973a3dc51df26d8ea1635770ab869983821b2a72b73071eade87d48225c",
+        "lineageEvidenceHash": "sha256:212e414ea0e028700114dedfa5eb5455007c1782818ef71719be0367abbbf146",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "HON",
+      "publicSecurityId": "5148f419-992c-5470-ba14-b7d612193b92",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "PRESENT_PRE_PREREGISTRATION",
+        "modelVersion": "QC-v1.0.0",
+        "effectiveAt": "2026-07-28T23:59:59Z",
+        "availableAt": "2026-07-27T23:59:59Z",
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:cb81fd8463115876129a288b2e7474bf827659b3463b9b55ef906f7166a58032",
+        "lineageEvidenceHash": "sha256:a838b6032652f16bcacfc2144d7637dc08070db475366c40af65c43685195b37",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "PRE_REGISTRATION_DEVELOPMENT_EVIDENCE",
+          "SCORE_LEVEL_INGESTED_AT_NOT_RETAINED"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:cb81fd8463115876129a288b2e7474bf827659b3463b9b55ef906f7166a58032",
+        "lineageEvidenceHash": "sha256:a838b6032652f16bcacfc2144d7637dc08070db475366c40af65c43685195b37",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "UPS",
+      "publicSecurityId": "e65f41aa-f7bc-56ea-9d58-7fc05a62c7f5",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "PRESENT_PRE_PREREGISTRATION",
+        "modelVersion": "QC-v1.0.0",
+        "effectiveAt": "2026-07-28T23:59:59Z",
+        "availableAt": "2026-07-27T23:59:59Z",
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:5fab061a5386051fc8717aa3c07ac7425d1abe70e240339f5c7b8854b723839c",
+        "lineageEvidenceHash": "sha256:c518d0dd0b6f5e9492676bf5cd8ad1c638af2fd0396c080852349e1201d5b4e7",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "PRE_REGISTRATION_DEVELOPMENT_EVIDENCE",
+          "SCORE_LEVEL_INGESTED_AT_NOT_RETAINED"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:5fab061a5386051fc8717aa3c07ac7425d1abe70e240339f5c7b8854b723839c",
+        "lineageEvidenceHash": "sha256:c518d0dd0b6f5e9492676bf5cd8ad1c638af2fd0396c080852349e1201d5b4e7",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "UNP",
+      "publicSecurityId": "d70f5294-34ee-5758-9268-9ca8877d6193",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "PRESENT_PRE_PREREGISTRATION",
+        "modelVersion": "QC-v1.0.0",
+        "effectiveAt": "2026-07-28T23:59:59Z",
+        "availableAt": "2026-07-27T23:59:59Z",
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:c609bf5d6402b1329dc36cbe1710f353e00c09cdc2081bc95db2366d912589c9",
+        "lineageEvidenceHash": "sha256:25f4aaf6030fe45ba35b42bafb1560eff530387b461184f376180f57150ebf1a",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "PRE_REGISTRATION_DEVELOPMENT_EVIDENCE",
+          "SCORE_LEVEL_INGESTED_AT_NOT_RETAINED"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:c609bf5d6402b1329dc36cbe1710f353e00c09cdc2081bc95db2366d912589c9",
+        "lineageEvidenceHash": "sha256:25f4aaf6030fe45ba35b42bafb1560eff530387b461184f376180f57150ebf1a",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "DE",
+      "publicSecurityId": "07e78ba6-4943-581d-8588-29860f42df97",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "PRESENT_PRE_PREREGISTRATION",
+        "modelVersion": "QC-v1.0.0",
+        "effectiveAt": "2026-07-28T23:59:59Z",
+        "availableAt": "2026-07-27T23:59:59Z",
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:a7bed0be5279b0d7590cb86921559a112b2baf7d86bf069155d3f55a96039596",
+        "lineageEvidenceHash": "sha256:b4dd292098229d1bd1cb91ea5e7f82ba79fd3d94b02803a22659ce151e0e6d49",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "PRE_REGISTRATION_DEVELOPMENT_EVIDENCE",
+          "SCORE_LEVEL_INGESTED_AT_NOT_RETAINED"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:a7bed0be5279b0d7590cb86921559a112b2baf7d86bf069155d3f55a96039596",
+        "lineageEvidenceHash": "sha256:b4dd292098229d1bd1cb91ea5e7f82ba79fd3d94b02803a22659ce151e0e6d49",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "ETN",
+      "publicSecurityId": "ce622392-309d-57c2-81da-6a5a5155684e",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "PRESENT_PRE_PREREGISTRATION",
+        "modelVersion": "QC-v1.0.0",
+        "effectiveAt": "2026-07-28T23:59:59Z",
+        "availableAt": "2026-07-27T23:59:59Z",
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:3db0e9f46c1bbed2a77c0da21b56187539e7c4b874b798aec17250869d48290e",
+        "lineageEvidenceHash": "sha256:2229bc2dfbec51ce55ba610aeb35c3b26867d102604d0b60e443318127721580",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "PRE_REGISTRATION_DEVELOPMENT_EVIDENCE",
+          "SCORE_LEVEL_INGESTED_AT_NOT_RETAINED"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:3db0e9f46c1bbed2a77c0da21b56187539e7c4b874b798aec17250869d48290e",
+        "lineageEvidenceHash": "sha256:2229bc2dfbec51ce55ba610aeb35c3b26867d102604d0b60e443318127721580",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "NEE",
+      "publicSecurityId": "2ddf3749-9afb-5a0e-8325-bf6e7ecaccaf",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "MISSING",
+        "modelVersion": null,
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": null,
+        "lineageEvidenceHash": null,
+        "lineageStatus": "MISSING",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_QUALITY_SCORE"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": null,
+        "lineageEvidenceHash": null,
+        "lineageStatus": "MISSING",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "DUK",
+      "publicSecurityId": "b8e66b25-90e2-55f8-95bf-8a6135af8e3f",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "MISSING",
+        "modelVersion": null,
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": null,
+        "lineageEvidenceHash": null,
+        "lineageStatus": "MISSING",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_QUALITY_SCORE"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:1a7169a54e18599d4d78e0a515786e441e74f607d4cd242173233d52f29188e8",
+        "lineageEvidenceHash": "sha256:e4d44e6e3052b5c573f5942410d4e16b691566fcdd9efc786d9f62b63b24977c",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "SO",
+      "publicSecurityId": "cb41680b-064a-5052-97c6-f90288b009fe",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "MISSING",
+        "modelVersion": null,
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": null,
+        "lineageEvidenceHash": null,
+        "lineageStatus": "MISSING",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_QUALITY_SCORE"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:c70a1594e2e5f6907a152964232b027bad884cb2cab5edea9795fbeb8aee3c4e",
+        "lineageEvidenceHash": "sha256:9452fb5ccf66efd8969fd8671311838fa0136573ce3fc08c5ba8c3cf65dab430",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "LIN",
+      "publicSecurityId": "34ad83b5-4b28-5af8-a21b-20c3aa837c2f",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "PRESENT_PRE_PREREGISTRATION",
+        "modelVersion": "QC-v1.0.0",
+        "effectiveAt": "2026-07-28T23:59:59Z",
+        "availableAt": "2026-07-27T23:59:59Z",
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:97e522d078738a17a5e52b03c211a6f4884037361711a5d4a36a3d450f58d375",
+        "lineageEvidenceHash": "sha256:0c58492fbf9e9a27263a412f9eb22b27ae7cdb619f952c8185747bcafaf9d087",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "PRE_REGISTRATION_DEVELOPMENT_EVIDENCE",
+          "SCORE_LEVEL_INGESTED_AT_NOT_RETAINED"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:97e522d078738a17a5e52b03c211a6f4884037361711a5d4a36a3d450f58d375",
+        "lineageEvidenceHash": "sha256:0c58492fbf9e9a27263a412f9eb22b27ae7cdb619f952c8185747bcafaf9d087",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "SHW",
+      "publicSecurityId": "a26d692c-90b9-5207-894f-cea19e46cfa4",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "PRESENT_PRE_PREREGISTRATION",
+        "modelVersion": "QC-v1.0.0",
+        "effectiveAt": "2026-07-28T23:59:59Z",
+        "availableAt": "2026-07-27T23:59:59Z",
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:2368e4ab4be176b30f093bf26add49422b3a791be63038ec99783b49fefc635a",
+        "lineageEvidenceHash": "sha256:272875563a7ceb45f533d1868aee9e9aeb2e7166d9ddd7a426eb754468016886",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "PRE_REGISTRATION_DEVELOPMENT_EVIDENCE",
+          "SCORE_LEVEL_INGESTED_AT_NOT_RETAINED"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:2368e4ab4be176b30f093bf26add49422b3a791be63038ec99783b49fefc635a",
+        "lineageEvidenceHash": "sha256:272875563a7ceb45f533d1868aee9e9aeb2e7166d9ddd7a426eb754468016886",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "ECL",
+      "publicSecurityId": "041b73ca-4c7a-56c4-8502-166daed08ebc",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "PRESENT_PRE_PREREGISTRATION",
+        "modelVersion": "QC-v1.0.0",
+        "effectiveAt": "2026-07-28T23:59:59Z",
+        "availableAt": "2026-07-27T23:59:59Z",
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:1965813ce663b1fe3abad72a980792691319129e6a0e45e04daf12d89ad05f05",
+        "lineageEvidenceHash": "sha256:7b5014206eded91c8a1fab79e16c359cda49717fea897d64945f1f40914cd8c1",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "PRE_REGISTRATION_DEVELOPMENT_EVIDENCE",
+          "SCORE_LEVEL_INGESTED_AT_NOT_RETAINED"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:1965813ce663b1fe3abad72a980792691319129e6a0e45e04daf12d89ad05f05",
+        "lineageEvidenceHash": "sha256:7b5014206eded91c8a1fab79e16c359cda49717fea897d64945f1f40914cd8c1",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "APD",
+      "publicSecurityId": "1b373ef1-1213-5215-9411-e683babcce3e",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "MISSING",
+        "modelVersion": null,
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": null,
+        "lineageEvidenceHash": null,
+        "lineageStatus": "MISSING",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_QUALITY_SCORE"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:33558b146699cc459f5a0d916d9134dfe22df754ce49cec9f492e3ae76ca0fc6",
+        "lineageEvidenceHash": "sha256:55cabc3ff7a75b04f4ee061d44dc45effc175e30c375fe23fb69af8cb5b6a9a3",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "CROX",
+      "publicSecurityId": "2f57cfe5-52f7-5afc-beb5-3bc1564710a0",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "MISSING",
+        "modelVersion": null,
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": null,
+        "lineageEvidenceHash": null,
+        "lineageStatus": "MISSING",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_QUALITY_SCORE"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:7e256295d15e2bc411447220bc31e84a18eada4378283d0f6f6ea7e0ce31ffe5",
+        "lineageEvidenceHash": "sha256:3b9a9b30a2dfe4fc6c1dc641b71bac965a86c2886478ce6e713ad242b3e7b2a3",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "OLED",
+      "publicSecurityId": "640f3d4e-7841-567b-b8aa-163c73d20567",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "MISSING",
+        "modelVersion": null,
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": null,
+        "lineageEvidenceHash": null,
+        "lineageStatus": "MISSING",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_QUALITY_SCORE"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:9965b0b2bbab44297af2f034175ba639d43410894ce180a802e0ca4667ece56b",
+        "lineageEvidenceHash": "sha256:e38c9705c9a3fc55a548f33374f816805bd50d92e54857f107d940858774f40b",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "EXPO",
+      "publicSecurityId": "2ec39042-6cbf-53d0-a121-03e4dd705cc0",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "MISSING",
+        "modelVersion": null,
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": null,
+        "lineageEvidenceHash": null,
+        "lineageStatus": "MISSING",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_QUALITY_SCORE"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": null,
+        "lineageEvidenceHash": null,
+        "lineageStatus": "MISSING",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "CALM",
+      "publicSecurityId": "f6cbe650-b724-5091-9097-df108a561c27",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "MISSING",
+        "modelVersion": null,
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": null,
+        "lineageEvidenceHash": null,
+        "lineageStatus": "MISSING",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_QUALITY_SCORE"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": null,
+        "lineageEvidenceHash": null,
+        "lineageStatus": "MISSING",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "UFPI",
+      "publicSecurityId": "b8deed89-848c-56a5-8323-80ed14b62215",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "PRESENT_PRE_PREREGISTRATION",
+        "modelVersion": "QC-v1.0.0",
+        "effectiveAt": "2026-07-28T23:59:59Z",
+        "availableAt": "2026-07-27T23:59:59Z",
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:e1765ed02333d8738a956cc1cfb63f0280e0bdd4e0fee99a46840ef042f231df",
+        "lineageEvidenceHash": "sha256:9efc2e8dd6f9bd06f937e6476eb40629ec437fa165bbbeb4a7326fc746204699",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "PRE_REGISTRATION_DEVELOPMENT_EVIDENCE",
+          "SCORE_LEVEL_INGESTED_AT_NOT_RETAINED"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:e1765ed02333d8738a956cc1cfb63f0280e0bdd4e0fee99a46840ef042f231df",
+        "lineageEvidenceHash": "sha256:9efc2e8dd6f9bd06f937e6476eb40629ec437fa165bbbeb4a7326fc746204699",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "WDFC",
+      "publicSecurityId": "f91871f9-3a89-58d4-a969-c1086da0acc6",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "PRESENT_PRE_PREREGISTRATION",
+        "modelVersion": "QC-v1.0.0",
+        "effectiveAt": "2026-07-28T23:59:59Z",
+        "availableAt": "2026-07-27T23:59:59Z",
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:98dc98a7486d3c06355d9fafcb51e806332a51547e612b55a0b00464f8f82aa3",
+        "lineageEvidenceHash": "sha256:165c202b04d2ae7e30254662b4eb0c4cb08ed04dce4ed56150d2e37b2f4899dc",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "PRE_REGISTRATION_DEVELOPMENT_EVIDENCE",
+          "SCORE_LEVEL_INGESTED_AT_NOT_RETAINED"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:98dc98a7486d3c06355d9fafcb51e806332a51547e612b55a0b00464f8f82aa3",
+        "lineageEvidenceHash": "sha256:165c202b04d2ae7e30254662b4eb0c4cb08ed04dce4ed56150d2e37b2f4899dc",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "FIX",
+      "publicSecurityId": "8916acf0-b2ce-55ba-a1bf-d323132b744a",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "PRESENT_PRE_PREREGISTRATION",
+        "modelVersion": "QC-v1.0.0",
+        "effectiveAt": "2026-07-28T23:59:59Z",
+        "availableAt": "2026-07-27T23:59:59Z",
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:15e93af692c56ac6a1bb9579f9be4487cc305c456a2c25a124ea3bc4b9b9aaaf",
+        "lineageEvidenceHash": "sha256:a6f9aa35614d953c3b14565c62684ad949aeb04cb11d6d6446dd57b780cce5d8",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "PRE_REGISTRATION_DEVELOPMENT_EVIDENCE",
+          "SCORE_LEVEL_INGESTED_AT_NOT_RETAINED"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:15e93af692c56ac6a1bb9579f9be4487cc305c456a2c25a124ea3bc4b9b9aaaf",
+        "lineageEvidenceHash": "sha256:a6f9aa35614d953c3b14565c62684ad949aeb04cb11d6d6446dd57b780cce5d8",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "SAIA",
+      "publicSecurityId": "c0d54251-ff4c-52d6-aba4-274471b471a9",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "PRESENT_PRE_PREREGISTRATION",
+        "modelVersion": "QC-v1.0.0",
+        "effectiveAt": "2026-07-28T23:59:59Z",
+        "availableAt": "2026-07-27T23:59:59Z",
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:2c6d43695fb08e9cd28f6edc70835fa803dcde1e8957242036f08740f2fc0dbc",
+        "lineageEvidenceHash": "sha256:6d3a2c897d6a56c23f4730fe2097533c301600cbd2e1f2b5905e17d2da4d1a28",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "PRE_REGISTRATION_DEVELOPMENT_EVIDENCE",
+          "SCORE_LEVEL_INGESTED_AT_NOT_RETAINED"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:2c6d43695fb08e9cd28f6edc70835fa803dcde1e8957242036f08740f2fc0dbc",
+        "lineageEvidenceHash": "sha256:6d3a2c897d6a56c23f4730fe2097533c301600cbd2e1f2b5905e17d2da4d1a28",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    },
+    {
+      "symbol": "ELF",
+      "publicSecurityId": "1fab244e-4f55-52c4-b79c-8773f2097ab9",
+      "membershipStatus": "INCLUDED",
+      "pureQuality": {
+        "formalState": "MISSING",
+        "diagnosticEvidenceStatus": "PRESENT_PRE_PREREGISTRATION",
+        "modelVersion": "QC-v1.0.0",
+        "effectiveAt": "2026-07-28T23:59:59Z",
+        "availableAt": "2026-07-27T23:59:59Z",
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:92ac5f331c3005e5a4e097125d59796dd1c36dbc6ed11bf8919ff1c871056a9b",
+        "lineageEvidenceHash": "sha256:93e628479d364afd01d83f398aa03b1c630c6c77dbfe57111e67e67e1b9309f2",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "PRE_REGISTRATION_DEVELOPMENT_EVIDENCE",
+          "SCORE_LEVEL_INGESTED_AT_NOT_RETAINED"
+        ]
+      },
+      "pureValue": {
+        "formalState": "MISSING",
+        "diagnosticInputReady": false,
+        "modelVersion": "UQ-v1.0.0",
+        "effectiveAt": null,
+        "availableAt": null,
+        "ingestedAt": null,
+        "inputPayloadHash": "sha256:92ac5f331c3005e5a4e097125d59796dd1c36dbc6ed11bf8919ff1c871056a9b",
+        "lineageEvidenceHash": "sha256:93e628479d364afd01d83f398aa03b1c630c6c77dbfe57111e67e67e1b9309f2",
+        "lineageStatus": "OPERAND_LINEAGE_PRESENT",
+        "reasonCodes": [
+          "NO_ACCEPTED_OBJECTIVE_VALUE_SCORE"
+        ]
+      }
+    }
+  ],
+  "conclusion": {
+    "status": "NOT_READY_FOR_POST_PREREGISTRATION_CONSTRUCTION",
+    "pureQualityReady": false,
+    "pureValueReady": false,
+    "newScoringExecuted": false,
+    "formulaOrThresholdChanges": false,
+    "pitPolicyChanges": false
+  },
+  "scoresOrRanksIncluded": false,
+  "licensedProviderValuesIncluded": false,
+  "providerNetworkRequests": 0,
+  "databaseWrites": 0,
+  "artifactContentHash": "sha256:e81249cc0b12114f22e0737546f576a2539ada9d5888aa0c012c829076a89cf5"
+}

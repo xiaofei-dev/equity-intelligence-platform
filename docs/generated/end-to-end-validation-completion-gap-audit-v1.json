@@ -1,0 +1,809 @@
+{
+  "artifactContentHash": "sha256:995318b4ec1bf3b2885e1e32e75be48b9cbccc523bab249008c938fe712e8faa",
+  "artifactType": "END_TO_END_VALIDATION_COMPLETION_GAP_AUDIT",
+  "auditMode": "STRICT_READ_ONLY_OFFLINE_CURRENT_WORKTREE",
+  "authoritativeArtifacts": {
+    "benchmarkCandidates": {
+      "artifactContentHash": "sha256:f5c23ad459349a7aa125d0cd492094d016ae3471affc8cce560facea5da91385",
+      "fileSha256": "sha256:a208f2b86d08fd17622634f1a23013f5d3b0fc201cd5d17e64d92aeca6c11de5",
+      "path": "docs/generated/forward-benchmark-candidate-construction-v2-2.json"
+    },
+    "decisionContractFixture": {
+      "artifactContentHash": "sha256:427dbeb78aaa4d52c8b96f6fd5a72a0924d10765cbf15a43fe5f956534f7520b",
+      "fileSha256": "sha256:d984a8b3488b34accba5383f0d0374e60b3aa8200d9a75c833e3e458489b924a",
+      "path": "docs/generated/post-freeze-decision-snapshot-v2-2-contract-fixture.json"
+    },
+    "enrollmentPreflight": {
+      "artifactContentHash": "sha256:9ee3aad961f66a26cf152f82c0d84f65ad12e8b8da95665926097971834ead2e",
+      "fileSha256": "sha256:6f6f00a6a76f50e8e5b673eb8346fa1130728b52dcda9178e8e38df2ceec9702",
+      "path": "docs/generated/prospective-enrollment-adapter-v2-2-preflight.json"
+    },
+    "evaluationProtocolFixture": {
+      "artifactContentHash": "sha256:a89e22615ee298e0f20b649c0134f8e73e641a44f81fb0c6dab8ab19a0215226",
+      "fileSha256": "sha256:c4ce651705fb0bc8657d46008cd82330a40a39a8f7f7e9a31468cd49ccd41906",
+      "path": "docs/generated/forward-decision-quality-validation-v2-2-protocol-fixture.json"
+    },
+    "futurePricePreflight": {
+      "artifactContentHash": "sha256:a63cfe8bfcac0e9e5432e0bee9bb10122c1cebf99c498e599c0c25703b4778fa",
+      "fileSha256": "sha256:4dbac7409d0f370c64e1398557439886bcb239794c87e4c2b0e78e2122cdaa5e",
+      "path": "docs/generated/future-price-history-final-preexecution-preflight-v2-1.json"
+    },
+    "historicalDiagnosticCloseout": {
+      "artifactContentHash": "sha256:c087760f8d0333ba2ab138cdf5b09a7f11e11f12336d5a7ac8abe10314e8f529",
+      "fileSha256": "sha256:cad3ff14152b704f70559af1ce1dd93702265beac4d5886361bcf00eadc159ea",
+      "path": "docs/generated/historical-dqv-v2-2-slice-diagnostic-closeout.json"
+    },
+    "maturityEngineAcceptance": {
+      "artifactContentHash": "sha256:5a6d49da57ec9366c645b226da5f81a85edf72298adfa202976f17987ced24f8",
+      "fileSha256": "sha256:aef8eff658c5fa6be83ff775363deeef26098fcf5ac9845ea60698ed7ef9d4d7",
+      "path": "docs/generated/forward-dqv-maturity-engine-v2-2-acceptance.json"
+    },
+    "maturityStatisticsAdapterPreflight": {
+      "artifactContentHash": "sha256:cfd40b73551d37f50dd489eeaf04ee046059dca73ddb1e0fda5885d8e8cbaeb8",
+      "fileSha256": "sha256:c14c95aae920832ec403e49370a719534ca2df1725374e09bf1fba3ccb784807",
+      "path": "docs/generated/forward-dqv-maturity-statistics-adapter-v2-2-preflight.json"
+    },
+    "modelExecutionPreflight": {
+      "artifactContentHash": "sha256:4749ab9568904e2d7c04de8f7aecceae9e10d20a0d8d7b6606601b009e7c9842",
+      "fileSha256": "sha256:3170684bf62a42f8e22e48138572295016a7a5db9272f2d089396936f81ce873",
+      "path": "docs/generated/post-freeze-model-execution-v2-2-preflight-v2.json"
+    },
+    "postClosePipelinePreflight": {
+      "artifactContentHash": "sha256:cd227538390b16664aa897455b180a894debbcd4bd2fafdc5d08465a8eb64f0f",
+      "fileSha256": "sha256:b9b98ecec595c903462a2a92de1b3c83a3aea297d4bb3b11a874702391678334",
+      "path": "docs/generated/post-close-pipeline-orchestrator-v2-2-preflight-v3.json"
+    },
+    "statisticsEnginePreflight": {
+      "artifactContentHash": "sha256:e59a86a35227db37c580537ea4009e0c7c01bb4c032abf06a21aa7778c5a7077",
+      "fileSha256": "sha256:9a004d35cdd1ef782ca29b182f7d0dd7aceb8938ed649122a73964d6d083b767",
+      "path": "docs/generated/forward-dqv-v2-2-statistical-engine-preflight.json"
+    },
+    "successorReadiness": {
+      "artifactContentHash": "sha256:9cec9ef8d31c0946fab292554f38a4305363a4fcd6ab838241b46084fa74b6f0",
+      "fileSha256": "sha256:a1fd5842fa172ed76bb493ba636ade27c426d42323ce21411ccacc57de6833e2",
+      "path": "docs/generated/forward-v2-2-final-successor-readiness-closeout-v2.json"
+    },
+    "v18Acceptance": {
+      "artifactContentHash": "sha256:e5ce27f66981d8341ed0d88f33fc72d380999b3d68360d53ce83f908f51a5f1e",
+      "fileSha256": "sha256:e0f96af0eb0dfc285245a00992b46857ec817379064c2d33a78b27876c4342e6",
+      "path": "docs/generated/forward-dqv-v18-acceptance-v1.json"
+    },
+    "v19ChronologyAcceptance": {
+      "artifactContentHash": "sha256:53835fb8a9cb123541ec3dfa82778439608107553dce9a421e1bf68456ea5b66",
+      "fileSha256": "sha256:04a51e92dea71c5679b4931f4bf4f262e168262a8b2eab8ec9da6c9f3d48d817",
+      "path": "docs/generated/forward-dqv-v19-chronology-acceptance-v1.json"
+    }
+  },
+  "completionClaimAuthorized": false,
+  "criticalFindings": [
+    {
+      "id": "GATE-Z-002",
+      "requirementId": "IMMUTABLE_DECISION_OUTPUT_PAYLOAD",
+      "severity": "CRITICAL",
+      "title": "Enrolled decision contract does not preserve deterministic outputs"
+    },
+    {
+      "id": "GATE-Z-003",
+      "requirementId": "FINAL_PROSPECTIVE_MODEL_VALIDATION",
+      "severity": "CRITICAL",
+      "title": "No real prospective enrollment, matured outcome or quality report"
+    },
+    {
+      "id": "GATE-Z-004",
+      "requirementId": "POST_FREEZE_66_MODEL_INPUT_ADAPTER",
+      "severity": "HIGH",
+      "title": "The 66-input assembler has no real immutable execution artifact"
+    },
+    {
+      "id": "GATE-Z-005",
+      "requirementId": "REPEATED_PROSPECTIVE_COHORT_ACCUMULATION",
+      "severity": "HIGH",
+      "title": "No repeated enrollment mechanism can reach the minimum cohort"
+    },
+    {
+      "id": "GATE-Z-006",
+      "requirementId": "REAL_NATURALLY_MATURED_OUTCOMES",
+      "severity": "HIGH",
+      "title": "Natural-maturity discovery and stored path loading remain unbound"
+    },
+    {
+      "id": "GATE-Z-007",
+      "requirementId": "MATURITY_TO_STATISTICS_ADAPTER",
+      "severity": "HIGH",
+      "title": "Statistics adapter lacks real frozen per-security evidence"
+    }
+  ],
+  "effectiveDate": "2026-07-30",
+  "executionBoundary": {
+    "commitCreated": false,
+    "databaseReads": 0,
+    "databaseWrites": 0,
+    "deploymentExecuted": false,
+    "enrollmentExecuted": false,
+    "outcomesComputed": false,
+    "providerNetworkRequests": 0,
+    "pushExecuted": false,
+    "scoresOrRanksComputed": false
+  },
+  "externalConditions": [
+    "The target completed trading session must close and be calendar-verified.",
+    "At least two prospective decision dates and 100 eligible decisions must mature.",
+    "The 5, 20, 60, 126 and 252 completed-session horizons must mature naturally.",
+    "Future fundamental observations must exist for business-quality evaluation."
+  ],
+  "fixtureMayProveRealExecution": false,
+  "historicalObservedDataMayBeCalledUntouchedHoldout": false,
+  "modelValidationStatus": {
+    "longHorizonV11": "NOT_VALIDATED",
+    "tacticalV22": "NOT_VALIDATED"
+  },
+  "overallStatus": "CRITICAL_BLOCKED_NOT_VALIDATED",
+  "pipelineStatus": [
+    {
+      "stage": "MODEL_AND_PROTOCOL_FREEZE",
+      "status": "IMPLEMENTED_OFFLINE"
+    },
+    {
+      "stage": "HISTORICAL_DIAGNOSTIC_CLOSEOUT",
+      "status": "IMPLEMENTED_OFFLINE"
+    },
+    {
+      "stage": "POST_CLOSE_CAPTURE",
+      "status": "BLOCKED_BY_TIME"
+    },
+    {
+      "stage": "MODEL_INPUT_ASSEMBLY",
+      "status": "BLOCKED_BY_EVIDENCE"
+    },
+    {
+      "stage": "SIX_BENCHMARK_MANIFEST",
+      "status": "BLOCKED_BY_EVIDENCE"
+    },
+    {
+      "stage": "REAL_MODEL_EXECUTION",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "stage": "IMMUTABLE_DECISION_OUTPUT",
+      "status": "BLOCKED_BY_EVIDENCE"
+    },
+    {
+      "stage": "REAL_PROSPECTIVE_SNAPSHOT",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "stage": "V19_CHRONOLOGY_REPAIR",
+      "status": "IMPLEMENTED_OFFLINE"
+    },
+    {
+      "stage": "V2_1_1_PRODUCTION_WRITE_BOUNDARY",
+      "status": "IMPLEMENTED_OFFLINE"
+    },
+    {
+      "stage": "V2_2_PROSPECTIVE_ENROLLMENT",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "stage": "REPEATED_COHORT_ACCUMULATION",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "stage": "MATURITY_ENGINE",
+      "status": "IMPLEMENTED_OFFLINE"
+    },
+    {
+      "stage": "NATURAL_MATURITY_OUTCOMES",
+      "status": "BLOCKED_BY_TIME"
+    },
+    {
+      "stage": "MATURITY_STATISTICS_ADAPTER",
+      "status": "IMPLEMENTED_OFFLINE"
+    },
+    {
+      "stage": "DQV_STATISTICS_ENGINE",
+      "status": "IMPLEMENTED_OFFLINE"
+    },
+    {
+      "stage": "REAL_DQV_STATISTICS",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "stage": "FINAL_MODEL_VALIDATION",
+      "status": "NOT_VALIDATED"
+    }
+  ],
+  "requirements": [
+    {
+      "evidence": [
+        "historicalDiagnosticCloseout",
+        "evaluationProtocolFixture"
+      ],
+      "finding": "Observed historical slices are reproducibly closed as DIAGNOSTIC_ONLY and are not represented as an untouched holdout.",
+      "id": "GOVERNANCE_HISTORICAL_CLAIM_BOUNDARY",
+      "remaining": [],
+      "scope": "IMPLEMENTATION_AND_REPOSITORY_CURRENT_ARTIFACT",
+      "status": "IMPLEMENTED_OFFLINE"
+    },
+    {
+      "evidence": [
+        "tacticalModel",
+        "modelExecution"
+      ],
+      "finding": "Tactical v2.2 implements three independent horizons and entry actions, but no real post-freeze row has been produced.",
+      "id": "TACTICAL_1W_1M_3M_MODEL_CAPABILITY",
+      "remaining": [
+        "Build real completed-session inputs and execute the frozen model.",
+        "Persist the decision payload required for later timing evaluation."
+      ],
+      "scope": "DETERMINISTIC_IMPLEMENTATION_ONLY",
+      "status": "IMPLEMENTED_OFFLINE"
+    },
+    {
+      "evidence": [
+        "longHorizonModel",
+        "modelExecution"
+      ],
+      "finding": "Long Horizon v1.1 implements separate quality, valuation-entry, expected-return and downside dimensions; no prospective assessment has been produced or validated.",
+      "id": "LONG_12M_QUALITY_VALUATION_EXPECTED_RETURN_DOWNSIDE",
+      "remaining": [
+        "Build real point-in-time Long Horizon inputs.",
+        "Execute and preserve the full deterministic assessment."
+      ],
+      "scope": "DETERMINISTIC_IMPLEMENTATION_ONLY",
+      "status": "IMPLEMENTED_OFFLINE"
+    },
+    {
+      "evidence": [
+        "longHorizonModel",
+        "decisionSnapshot",
+        "evaluationProtocol"
+      ],
+      "finding": "The protocol and statistics engine evaluate BUSINESS_QUALITY, SECURITY_ATTRACTIVENESS and DOWNSIDE_RISK separately. Real frozen per-security values are not yet available.",
+      "id": "GOOD_COMPANY_VS_ATTRACTIVE_SECURITY_SEPARATION",
+      "remaining": [
+        "Persist immutable target-specific output payloads and rank inputs.",
+        "Bind those payloads into enrollment and quality-report evidence."
+      ],
+      "scope": "CONTRACT_ONLY",
+      "status": "IMPLEMENTED_OFFLINE"
+    },
+    {
+      "evidence": [
+        "decisionSnapshot",
+        "evaluationProtocol",
+        "historicalDiagnosticCloseout",
+        "statisticsContracts",
+        "maturityStatisticsAdapter"
+      ],
+      "finding": "Missing terminal states, historical claim ceilings, AI provenance and human provenance are typed. The adapter forbids either AI or human review from changing deterministic results.",
+      "id": "MISSING_AI_HUMAN_AND_EVIDENCE_ROLE_SEPARATION",
+      "remaining": [
+        "Populate the typed provenance only from real immutable decision evidence.",
+        "Analyze AI and human provenance as descriptive strata only."
+      ],
+      "scope": "OFFLINE_TYPED_CONTRACT_AND_ADAPTER",
+      "status": "IMPLEMENTED_OFFLINE"
+    },
+    {
+      "evidence": [
+        "futurePricePreflight"
+      ],
+      "finding": "The bounded capture runner is implemented, but the authoritative preflight is awaiting the target session and no real completed-session evidence artifact exists.",
+      "id": "POST_CLOSE_COMPLETED_SESSION_CAPTURE",
+      "remaining": [
+        "Wait for the target session to complete.",
+        "Execute the bounded 67-price plus two-calendar capture once.",
+        "Verify adjustment, action, liquidity and source hashes."
+      ],
+      "scope": "REAL_EXECUTION",
+      "status": "BLOCKED_BY_TIME"
+    },
+    {
+      "evidence": [
+        "modelInputAssembly",
+        "modelExecution",
+        "modelExecutionPreflight",
+        "postClosePipelinePreflight"
+      ],
+      "finding": "The strict stored-evidence assembler for the exact frozen 66 now exists, but the authoritative post-close preflight has no real 66-member input artifact and therefore cannot prove production use.",
+      "id": "POST_FREEZE_66_MODEL_INPUT_ADAPTER",
+      "remaining": [
+        "Run the assembler only after the completed-session evidence exists.",
+        "Write the immutable post-freeze model-input evidence artifact."
+      ],
+      "scope": "PRODUCTION_IMPLEMENTATION",
+      "status": "BLOCKED_BY_EVIDENCE"
+    },
+    {
+      "evidence": [
+        "benchmarkConstruction",
+        "benchmarkCandidates",
+        "successorReadiness"
+      ],
+      "finding": "The construction contract exists and Value/Quality candidates are frozen, but price, liquidity, cost and external-reference evidence remain pending and no real six-AVAILABLE manifest exists.",
+      "id": "SIX_BENCHMARK_CONSTRUCTION",
+      "remaining": [
+        "Construct SPY, sector, equal-weight, momentum, value and quality from one completed session and one cost policy.",
+        "Persist the real v2.2 benchmark manifest and controlled bundle."
+      ],
+      "scope": "REAL_EXECUTION",
+      "status": "BLOCKED_BY_EVIDENCE"
+    },
+    {
+      "evidence": [
+        "modelExecutionPreflight",
+        "modelExecution"
+      ],
+      "finding": "The authoritative model preflight generated zero rows and identifies both completed-session and model-input evidence as missing.",
+      "id": "REAL_POST_FREEZE_MODEL_EXECUTION",
+      "remaining": [
+        "Close the price and input-adapter blockers.",
+        "Execute Tactical v2.2 and Long Horizon v1.1 exactly once per frozen row."
+      ],
+      "scope": "REAL_EXECUTION",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "evidence": [
+        "decisionSnapshot",
+        "modelExecution"
+      ],
+      "finding": "Assessed terminal rows store input/result hashes but not Tactical scores, entry actions, Long Horizon dimensions, classifications or expected-return ranges. Re-running a model later is not an immutable substitute for the enrolled prediction.",
+      "id": "IMMUTABLE_DECISION_OUTPUT_PAYLOAD",
+      "remaining": [
+        "Store a content-addressed controlled deterministic output payload.",
+        "Bind per-horizon and per-target values to the Git-safe decision manifest.",
+        "Replace the ambiguous scoresOrRanksComputed=false claim for real execution."
+      ],
+      "scope": "PRODUCTION_CONTRACT",
+      "status": "BLOCKED_BY_EVIDENCE"
+    },
+    {
+      "evidence": [
+        "decisionContractFixture",
+        "successorReadiness"
+      ],
+      "finding": "Only a CONTRACT_FIXTURE exists; it is blocked and contains no real model results or six available benchmarks.",
+      "id": "REAL_66_PROSPECTIVE_DECISION_SNAPSHOT",
+      "remaining": [
+        "Assemble a PROSPECTIVE_DECISION snapshot after real model execution.",
+        "Preserve all 66 assessed, missing, stale, invalid, excluded and abstained rows."
+      ],
+      "scope": "REAL_EXECUTION",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "evidence": [
+        "v18Migration",
+        "v19Migration",
+        "outcomeContractsV211",
+        "outcomePersistenceV211",
+        "enrollmentAdapter",
+        "v19AcceptanceBuilder",
+        "v19ChronologyAcceptance",
+        "legacyRouteGuard"
+      ],
+      "finding": "The former V18/v2.1.0 chronology is preserved as immutable history. V19/v2.1.1 enforces decisionAsOf <= sealedAt <= entryOpen, rejects v2.1.0 writes, and has an immutable READY acceptance artifact.",
+      "id": "ENROLLMENT_CHRONOLOGY_LEAKAGE_GUARD",
+      "remaining": [
+        "Regenerate all dependent readiness and enrollment preflights and hashes.",
+        "Keep legacy v2.1.0 source and artifacts read-only historical evidence."
+      ],
+      "scope": "ACCEPTED_IMPLEMENTATION_AND_DATABASE_CONSTRAINT",
+      "status": "IMPLEMENTED_OFFLINE"
+    },
+    {
+      "evidence": [
+        "v18Acceptance",
+        "v18Migration",
+        "legacyOutcomeContracts",
+        "legacyOutcomePersistence"
+      ],
+      "finding": "Seven V18 tables and v2.1 enrollment/outcome/report persistence exist and passed repository acceptance. Enrollment was not executed. The v2.1.0 enrollment writer is superseded and must remain unreachable from production after V19 acceptance.",
+      "id": "V18_OUTCOME_LEDGER_AND_PERSISTENCE",
+      "remaining": [
+        "Preserve v2.1.0 as immutable history, not a production write path."
+      ],
+      "scope": "LEGACY_SCHEMA_AND_REPOSITORY_HISTORY_ONLY",
+      "status": "IMPLEMENTED_OFFLINE"
+    },
+    {
+      "evidence": [
+        "v19Migration",
+        "outcomeContractsV211",
+        "outcomePersistenceV211",
+        "enrollmentAdapter",
+        "legacyRouteGuard",
+        "v19ChronologyAcceptance"
+      ],
+      "finding": "V19 restricts the database to v2.1.1, the v2.1.1 repository overrides enrollment persistence, the adapter creates v2.1.1, and the legacy HTTP writer returns 410. The immutable V19 acceptance confirms clean and upgrade database paths. The v2.1.0 implementation remains historical only.",
+      "id": "V19_V2_1_1_PRODUCTION_REACHABILITY",
+      "remaining": [
+        "Keep future production wiring constrained to v2.1.1 or a stricter successor."
+      ],
+      "scope": "ACCEPTED_PRODUCTION_WRITE_BOUNDARY",
+      "status": "IMPLEMENTED_OFFLINE"
+    },
+    {
+      "evidence": [
+        "v19ChronologyAcceptance",
+        "postClosePipelinePreflight",
+        "enrollmentPreflight",
+        "successorReadiness"
+      ],
+      "finding": "The versioned post-close v3 preflight binds the READY V19 acceptance hash and no longer reports a chronology blocker. It is safe because it blocks execution and cannot authorize enrollment.",
+      "id": "POST_V19_DEPENDENT_ARTIFACT_REGENERATION",
+      "remaining": [],
+      "scope": "CURRENT_ARTIFACT_GRAPH",
+      "status": "IMPLEMENTED_OFFLINE"
+    },
+    {
+      "evidence": [
+        "enrollmentPreflight",
+        "v18Acceptance",
+        "enrollmentAdapter",
+        "postCloseOrchestrator"
+      ],
+      "finding": "The adapter preflight is BLOCKED, enrollmentStatus is NOT_EXECUTED, and the available CLI only writes a blocked fixture preflight.",
+      "id": "REAL_V2_2_PROSPECTIVE_ENROLLMENT",
+      "remaining": [
+        "Close the V19, price, benchmark, output-payload and snapshot blockers.",
+        "Accept and bind the v2.1.1 production repository.",
+        "Execute only through the explicitly authorized bounded orchestrator path."
+      ],
+      "scope": "REAL_EXECUTION",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "evidence": [
+        "evaluationProtocolFixture",
+        "decisionContractFixture"
+      ],
+      "finding": "Formal gates require at least 100 eligible decisions and two distinct decision dates, while one snapshot has at most 55 candidate securities. No repeated post-freeze enrollment scheduler/controller is implemented.",
+      "id": "REPEATED_PROSPECTIVE_COHORT_ACCUMULATION",
+      "remaining": [
+        "Implement idempotent repeated decision-date enrollment.",
+        "Freeze cohort accumulation and overlap/purge/embargo accounting."
+      ],
+      "scope": "PRODUCTION_ORCHESTRATION",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "evidence": [
+        "maturityOutcomeEngine",
+        "maturityEngineAcceptance"
+      ],
+      "finding": "Gate H implements all five horizons, exact six benchmarks, gross/frozen-cost/net returns, MAE, MFE, drawdown, typed downside capture and hash-rooted evidence. No real enrollment has matured.",
+      "id": "MATURED_OUTCOME_AND_PATH_METRIC_EVALUATOR",
+      "remaining": [
+        "Implement natural-maturity discovery and completed-session path loading.",
+        "Execute only after a real v2.1.1 enrollment matures naturally."
+      ],
+      "scope": "OFFLINE_DETERMINISTIC_ENGINE",
+      "status": "IMPLEMENTED_OFFLINE"
+    },
+    {
+      "evidence": [
+        "maturityEngineAcceptance",
+        "maturityStatisticsAdapterPreflight"
+      ],
+      "finding": "No v2.1.1 enrollment exists, so none of the 5, 20, 60, 126 or 252 completed-session outcomes can have matured or been observed.",
+      "id": "REAL_NATURALLY_MATURED_OUTCOMES",
+      "remaining": [
+        "Enroll real prospective snapshots on at least two decision dates.",
+        "Wait for every preregistered horizon to mature naturally."
+      ],
+      "scope": "REAL_PROSPECTIVE_EXECUTION",
+      "status": "BLOCKED_BY_TIME"
+    },
+    {
+      "evidence": [
+        "benchmarkConstruction",
+        "legacyOutcomeContracts",
+        "evaluationProtocol"
+      ],
+      "finding": "Gate H applies the frozen liquidity-sensitive cost policy and computes gross/cost/net plus required path risk with leakage and source-hash guards. No real matured cohort has been evaluated.",
+      "id": "REALISTIC_COST_AND_RISK_EVALUATION",
+      "remaining": [
+        "Execute against immutable adjusted price evidence after natural maturity."
+      ],
+      "scope": "OFFLINE_DETERMINISTIC_ENGINE",
+      "status": "IMPLEMENTED_OFFLINE"
+    },
+    {
+      "evidence": [
+        "tacticalModel",
+        "evaluationProtocol",
+        "statisticsEngine",
+        "maturityStatisticsAdapter"
+      ],
+      "finding": "The final protocol, adapter and statistics engine preserve frozen opportunity score, setup thesis and actionability, report abstention, and evaluate preregistered timing/thesis strata without retuning.",
+      "id": "TACTICAL_ENTRY_TIMING_VALIDATION",
+      "remaining": [
+        "Execute only after naturally matured prospective observations exist."
+      ],
+      "scope": "OFFLINE_STATISTICS_PROTOCOL_AND_ENGINE",
+      "status": "IMPLEMENTED_OFFLINE"
+    },
+    {
+      "evidence": [
+        "longHorizonModel",
+        "evaluationProtocol",
+        "statisticsEngine",
+        "maturityStatisticsAdapter"
+      ],
+      "finding": "The adapter preserves frozen low/base/high values and the statistics engine computes prospective bias, absolute error, empirical range coverage and calibration slope. The range is not a probability interval.",
+      "id": "LONG_EXPECTED_RETURN_CALIBRATION",
+      "remaining": [
+        "Execute only at the formal 252-session prospective horizon."
+      ],
+      "scope": "OFFLINE_STATISTICS_PROTOCOL_AND_ENGINE",
+      "status": "IMPLEMENTED_OFFLINE"
+    },
+    {
+      "evidence": [
+        "evaluationProtocol",
+        "statisticsContracts",
+        "statisticsEngine",
+        "statisticsEnginePreflight"
+      ],
+      "finding": "The offline engine implements deterministic circular block bootstrap, null-centered one-sided inference, Holm families, sector/size strata, target-specific terminal rules, timing, calibration and provenance.",
+      "id": "DQV_STATISTICS_AND_FINAL_QUALITY_REPORT",
+      "remaining": [
+        "Supply 100 eligible naturally matured decisions across at least two dates.",
+        "Execute and persist a real versioned quality report."
+      ],
+      "scope": "OFFLINE_DETERMINISTIC_ENGINE",
+      "status": "IMPLEMENTED_OFFLINE"
+    },
+    {
+      "evidence": [
+        "maturityStatisticsAdapter",
+        "maturityStatisticsAdapterPreflight"
+      ],
+      "finding": "The adapter requires an exact 66-security join and binds enrollment, decision snapshot, per-security frozen outputs, maturity batch, session index, benchmarks, liquidity, AI and human provenance. It rejects contract fixtures and silent imputation.",
+      "id": "MATURITY_TO_STATISTICS_ADAPTER",
+      "remaining": [
+        "Provide real frozen decisions, enrollment, matured Gate H evidence and hash-bound decision-session index evidence."
+      ],
+      "scope": "OFFLINE_HASH_BOUND_ADAPTER",
+      "status": "IMPLEMENTED_OFFLINE"
+    },
+    {
+      "evidence": [
+        "statisticsEnginePreflight",
+        "maturityStatisticsAdapterPreflight"
+      ],
+      "finding": "The statistics and adapter preflights report zero prospective observations and no executed statistics or quality report.",
+      "id": "REAL_DQV_STATISTICS_EXECUTION",
+      "remaining": [
+        "Close frozen-output and natural-maturity evidence blockers.",
+        "Run the engine without threshold or grouping changes."
+      ],
+      "scope": "REAL_PROSPECTIVE_EXECUTION",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "evidence": [
+        "successorReadiness",
+        "enrollmentPreflight",
+        "evaluationProtocolFixture"
+      ],
+      "finding": "No prospective enrollment, matured outcome or quality report exists. Neither model is currently validated; NOT_VALIDATED remains an allowed future conclusion.",
+      "id": "FINAL_PROSPECTIVE_MODEL_VALIDATION",
+      "remaining": [
+        "Close every upstream code and evidence gap.",
+        "Accumulate naturally matured prospective evidence.",
+        "Issue an honest terminal result without optimizing for favorability."
+      ],
+      "scope": "GOAL_COMPLETION",
+      "status": "NOT_VALIDATED"
+    }
+  ],
+  "schemaVersion": "END-TO-END-VALIDATION-COMPLETION-GAP-AUDIT-v1.0.0",
+  "sourceInventory": {
+    "benchmarkConstruction": {
+      "fileSha256": "sha256:f23fbee2dfdf21f0d2839fc7d26613b5719bf014bf9acfb4a3bd758eef10e729",
+      "path": "analysis-python/src/equity_analysis/forward_validation/benchmark_construction_v22.py",
+      "verifiedMarkers": [
+        "build_benchmark_evidence_bundle_v22",
+        "EXACT_SIX_BENCHMARK_KINDS_REQUIRED"
+      ]
+    },
+    "decisionSnapshot": {
+      "fileSha256": "sha256:1eb2ba8a23e2a3fe3ffb1fbbc938bf8e7f66a51c0e1a90594df88117ae917de8",
+      "path": "analysis-python/src/equity_analysis/forward_validation/post_freeze_decision_snapshot_v22.py",
+      "verifiedMarkers": [
+        "PostFreezeDecisionSnapshotV22",
+        "AiNarrativeBoundaryV22",
+        "result_hash",
+        "scores_or_ranks_computed"
+      ]
+    },
+    "enrollmentAdapter": {
+      "fileSha256": "sha256:8c1a3aa9bb534e41905a39d797ea0614f0c8c71af4db8d2e6192cdc449aaa2c8",
+      "path": "analysis-python/src/equity_analysis/forward_validation/prospective_enrollment_adapter_v22.py",
+      "verifiedMarkers": [
+        "prepare_prospective_enrollment_v22",
+        "persist_prepared_enrollment_v22",
+        "ForwardDqvEnrollmentV211",
+        "V19_CHRONOLOGY_ACCEPTANCE_MISSING"
+      ]
+    },
+    "evaluationProtocol": {
+      "fileSha256": "sha256:c16b409be335f924f77ae585df4a95b09528be428cdf8d46c68b10459ff6fd8d",
+      "path": "analysis-python/src/equity_analysis/forward_validation/dqv_evaluation_protocol_v22.py",
+      "verifiedMarkers": [
+        "DETERMINISTIC_CIRCULAR_BLOCK_BOOTSTRAP",
+        "HOLM_BONFERRONI",
+        "BUSINESS_QUALITY",
+        "SECURITY_ATTRACTIVENESS",
+        "DOWNSIDE_RISK"
+      ]
+    },
+    "legacyOutcomeContracts": {
+      "fileSha256": "sha256:0f299b44628e12cfc9f01769fe56c175ecf6280cb25b0aa84939da47000bc393",
+      "path": "analysis-python/src/equity_analysis/forward_validation/outcomes_v21.py",
+      "verifiedMarkers": [
+        "ForwardOutcomeBatchV21",
+        "ForwardQualityReportV21",
+        "PathMetricV21"
+      ]
+    },
+    "legacyOutcomePersistence": {
+      "fileSha256": "sha256:bbe30d0ec017e93bae4474c416e8a0d3df9d7d60f5061333e7c8ced48d14b059",
+      "path": "analysis-python/src/equity_analysis/forward_validation/outcome_persistence_v21.py",
+      "verifiedMarkers": [
+        "persist_enrollment",
+        "persist_outcome_batch",
+        "persist_quality_report"
+      ]
+    },
+    "legacyRouteGuard": {
+      "fileSha256": "sha256:5d649cc29b498d4c5e2881641270d742a6b4eaac10d4491b2c32f7583bc17b18",
+      "path": "analysis-python/src/equity_analysis/forward_validation/routes.py",
+      "verifiedMarkers": [
+        "LEGACY_PROSPECTIVE_ENROLLMENT_DISABLED",
+        "controlled Forward DQV v2.1.1 enrollment workflow"
+      ]
+    },
+    "longHorizonModel": {
+      "fileSha256": "sha256:2c4d7786710d0740cec7f578f05d2f9754c6a57dd4b976bb2dfef96ec919f137",
+      "path": "analysis-python/src/equity_analysis/research_rating/long_horizon_v11.py",
+      "verifiedMarkers": [
+        "_business_quality",
+        "_valuation_entry",
+        "_downside_risk",
+        "_expected_return",
+        "evaluate_long_horizon_v11"
+      ]
+    },
+    "maturityOutcomeEngine": {
+      "fileSha256": "sha256:528be2d129f2c2cd75f7e30d9f9d6b5963427e0892d33b8e99ea88ff1173adbb",
+      "path": "analysis-python/src/equity_analysis/forward_validation/maturity_outcome_engine_v22.py",
+      "verifiedMarkers": [
+        "evaluate_maturity",
+        "Exactly six benchmark paths are required",
+        "MAXIMUM_ADVERSE_EXCURSION",
+        "MAXIMUM_FAVORABLE_EXCURSION",
+        "DOWNSIDE_CAPTURE"
+      ]
+    },
+    "maturityStatisticsAdapter": {
+      "fileSha256": "sha256:728f2e81abca7efd1a4da4178fbc0a79f5d004c6a3dcce130edca9f5905918bb",
+      "path": "analysis-python/src/equity_analysis/forward_validation/maturity_statistics_adapter_v22.py",
+      "verifiedMarkers": [
+        "adapt_maturity_to_statistics_v22",
+        "FROZEN_POPULATION_NOT_66",
+        "CONTRACT_FIXTURE_CANNOT_FEED_STATISTICS",
+        "ai_may_affect_deterministic_result",
+        "human_may_affect_deterministic_result"
+      ]
+    },
+    "modelExecution": {
+      "fileSha256": "sha256:d4de4599de61163be2410b3c67e79b6690259f4a8da28a4e183c051c55c23beb",
+      "path": "analysis-python/src/equity_analysis/forward_validation/post_freeze_model_execution_v22.py",
+      "verifiedMarkers": [
+        "SecurityModelExecutionInputV22",
+        "execute_post_freeze_model_rows_v22",
+        "MODEL_INPUT_EVIDENCE_PATH"
+      ]
+    },
+    "modelInputAssembly": {
+      "fileSha256": "sha256:3b0b80540202c626c524d0f07e69ec5783a4dac8f657c3aef0790f0522696e7d",
+      "path": "analysis-python/src/equity_analysis/forward_validation/post_close_model_input_assembly_v22.py",
+      "verifiedMarkers": [
+        "PostCloseModelInputAssemblyV22",
+        "assemble_post_close_model_inputs_v22",
+        "exact frozen 66 model input rows"
+      ]
+    },
+    "outcomeContractsV211": {
+      "fileSha256": "sha256:450a6292f4b0f85936830d9fcd7fe03da2d121e0e1607e4596f8a312ddad6a60",
+      "path": "analysis-python/src/equity_analysis/forward_validation/outcomes_v211.py",
+      "verifiedMarkers": [
+        "ForwardDqvEnrollmentV211",
+        "FORWARD-DQV-ENROLLMENT-v2.1.1",
+        "verify_enrollment_v211"
+      ]
+    },
+    "outcomePersistenceV211": {
+      "fileSha256": "sha256:3d095bae48bbe248265641180a6385fdbb963acde9e05c6e30e7b43bd35b39e2",
+      "path": "analysis-python/src/equity_analysis/forward_validation/outcome_persistence_v211.py",
+      "verifiedMarkers": [
+        "ForwardDqvOutcomeRepositoryV211",
+        "persist_enrollment",
+        "verify_enrollment_v211"
+      ]
+    },
+    "postCloseOrchestrator": {
+      "fileSha256": "sha256:44275d5fa6a5f606b30c5a927c23c2973088ecaa8fcca032d40dbb0e64dd3fa1",
+      "path": "analysis-python/src/equity_analysis/forward_validation/post_close_pipeline_orchestrator_v22.py",
+      "verifiedMarkers": [
+        "run_post_close_pipeline_v22",
+        "evaluate_successor_readiness_v221",
+        "ENROLLMENT_CHRONOLOGY_V19_ACCEPTANCE_MISSING"
+      ]
+    },
+    "statisticsContracts": {
+      "fileSha256": "sha256:c33c8386653fbfa6f3a2c521d2dd24dbf25b5ad158abef90b2c0bccd5f870cb8",
+      "path": "analysis-python/src/equity_analysis/forward_validation/dqv_statistics_contracts_v22.py",
+      "verifiedMarkers": [
+        "MaturedDecisionObservationV22",
+        "AiProvenance",
+        "HumanProvenance",
+        "expected_return_low",
+        "timing_category"
+      ]
+    },
+    "statisticsEngine": {
+      "fileSha256": "sha256:fb0fee738e1c07f8be6d62f4185645c680030aa7f51c5cb08c3acc0ddbf16e21",
+      "path": "analysis-python/src/equity_analysis/forward_validation/dqv_statistics_engine_v22.py",
+      "verifiedMarkers": [
+        "evaluate_forward_dqv_v22",
+        "_bootstrap_interval",
+        "_apply_holm",
+        "_strata_reports",
+        "_expected_return_calibration",
+        "_tactical_timing_reports"
+      ]
+    },
+    "tacticalModel": {
+      "fileSha256": "sha256:76855b9883b77405532c1fa1518eca4014e46e34b9b962de39c9bdfdf4ad5119",
+      "path": "analysis-python/src/equity_analysis/tactical/signal_v22.py",
+      "verifiedMarkers": [
+        "evaluate_tactical_signal_v22",
+        "_entry_action",
+        "_horizon_assessment"
+      ]
+    },
+    "v18Migration": {
+      "fileSha256": "sha256:01a01a2ecd11157a1ecce0ea0ff46bb7d1254b5c13a088ab239db2e8f31b054b",
+      "path": "database/migrations/V18__create_forward_dqv_v2_outcome_ledger.sql",
+      "verifiedMarkers": [
+        "analytics.forward_dqv_enrollment_v2",
+        "analytics.forward_dqv_maturity_schedule_v2",
+        "analytics.forward_dqv_quality_report_v2",
+        "effective_at_completed_session_open <= sealed_at"
+      ]
+    },
+    "v19AcceptanceBuilder": {
+      "fileSha256": "sha256:8790f083c916dc3b8897195728c26fb7bb792d5f07ce0244ab6d3cf3e2ce016f",
+      "path": "analysis-python/src/equity_analysis/forward_validation/v19_acceptance_v1.py",
+      "verifiedMarkers": [
+        "FORWARD_DQV_V19_CHRONOLOGY_ACCEPTANCE",
+        "acceptedEnrollmentContract",
+        "rejectedEnrollmentContract"
+      ]
+    },
+    "v19Migration": {
+      "fileSha256": "sha256:fc76371dae2294c542c2e6a8f6ef254dbb820338dff51cc9951a84831af0ffb0",
+      "path": "database/migrations/V19__repair_forward_dqv_enrollment_chronology.sql",
+      "verifiedMarkers": [
+        "FORWARD-DQV-ENROLLMENT-v2.1.1",
+        "decision_as_of <= sealed_at",
+        "sealed_at <= effective_at_completed_session_open"
+      ]
+    }
+  }
+}

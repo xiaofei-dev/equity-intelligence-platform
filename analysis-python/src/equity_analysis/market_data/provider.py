@@ -1,13 +1,13 @@
 from datetime import date
 from typing import Protocol
 
+from equity_analysis.market_data.fundamentals import FundamentalsEnvelope
 from equity_analysis.market_data.models import (
     CorporateActionSeries,
     DailyPriceSeries,
     ProviderDescriptor,
     SecurityMetadata,
 )
-from equity_analysis.provider_validation.models import NormalizedFinancialObservation
 
 
 class MarketDataProviderError(RuntimeError):
@@ -53,6 +53,4 @@ class FundamentalsProvider(Protocol):
     @property
     def descriptor(self) -> ProviderDescriptor: ...
 
-    def fetch_financial_statements(
-        self, symbol: str
-    ) -> tuple[NormalizedFinancialObservation, ...]: ...
+    def fetch_fundamentals(self, symbol: str) -> FundamentalsEnvelope: ...

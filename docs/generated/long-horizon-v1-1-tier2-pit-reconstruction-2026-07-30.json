@@ -1,0 +1,633 @@
+{
+  "anchorCount": 4,
+  "anchors": [
+    {
+      "aggregate": {
+        "aggregateRankCount": 0,
+        "candidateCount": 55,
+        "dimensionStateCounts": {
+          "BUSINESS_QUALITY": {
+            "MISSING": 13,
+            "PARTIAL_PRIMITIVES": 42,
+            "RECONSTRUCTABLE_INPUT_SET": 0
+          },
+          "DOWNSIDE_RISK": {
+            "MISSING": 13,
+            "PARTIAL_PRIMITIVES": 42,
+            "RECONSTRUCTABLE_INPUT_SET": 0
+          },
+          "SECURITY_ATTRACTIVENESS": {
+            "MISSING": 13,
+            "PARTIAL_PRIMITIVES": 42,
+            "RECONSTRUCTABLE_INPUT_SET": 0
+          }
+        },
+        "factorStateCounts": {
+          "BUSINESS_QUALITY": {
+            "cash_flow_stability": {
+              "MISSING": 14,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 41
+            },
+            "earnings_stability": {
+              "MISSING": 13,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 42
+            },
+            "free_cash_flow_margin": {
+              "MISSING": 21,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 34
+            },
+            "operating_margin": {
+              "MISSING": 19,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 36
+            },
+            "return_on_invested_capital": {
+              "MISSING": 55,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            }
+          },
+          "DOWNSIDE_RISK": {
+            "cash_flow_stability": {
+              "MISSING": 14,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 41
+            },
+            "concentration_risk": {
+              "MISSING": 55,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            },
+            "cyclicality_risk": {
+              "MISSING": 55,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            },
+            "diluted_share_growth": {
+              "MISSING": 13,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 42
+            },
+            "earnings_stability": {
+              "MISSING": 13,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 42
+            },
+            "event_risk": {
+              "MISSING": 55,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            },
+            "interest_coverage": {
+              "MISSING": 55,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            },
+            "net_debt_to_ebitda": {
+              "MISSING": 55,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            }
+          },
+          "SECURITY_ATTRACTIVENESS": {
+            "earnings_yield": {
+              "MISSING": 13,
+              "PARTIAL_PRIMITIVES": 42,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            },
+            "enterprise_value_to_ebitda": {
+              "MISSING": 55,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            },
+            "free_cash_flow_yield": {
+              "MISSING": 19,
+              "PARTIAL_PRIMITIVES": 36,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            },
+            "own_history_valuation_attractiveness": {
+              "MISSING": 55,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            }
+          }
+        },
+        "hashVerifiedSecTimelineCount": 42,
+        "missingSecTimelineCount": 13,
+        "modelDecisionCount": 0,
+        "reasonCounts": {
+          "HISTORICAL_CONCENTRATION_EVIDENCE_MISSING": 42,
+          "HISTORICAL_CYCLICALITY_EVIDENCE_MISSING": 42,
+          "HISTORICAL_EBITDA_PIT_UNPROVEN": 84,
+          "HISTORICAL_ENTERPRISE_VALUE_PIT_UNPROVEN": 42,
+          "HISTORICAL_EVENT_RISK_EVIDENCE_MISSING": 42,
+          "HISTORICAL_GROSS_INTEREST_TTM_SCOPE_UNPROVEN": 42,
+          "HISTORICAL_MARKET_CAP_SHARE_CLASS_MATCH_NOT_PROVEN": 84,
+          "HISTORICAL_VALUATION_DISTRIBUTION_PIT_UNPROVEN": 42,
+          "INSUFFICIENT_PIT_QUARTERS_CAPITAL_EXPENDITURE": 12,
+          "INSUFFICIENT_PIT_QUARTERS_CASH_AND_EQUIVALENTS": 42,
+          "INSUFFICIENT_PIT_QUARTERS_OPERATING_CASH_FLOW": 2,
+          "INSUFFICIENT_PIT_QUARTERS_OPERATING_INCOME": 8,
+          "INSUFFICIENT_PIT_QUARTERS_REVENUE": 4,
+          "INSUFFICIENT_PIT_QUARTERS_STOCKHOLDERS_EQUITY": 42,
+          "OFFICIAL_SEC_TIMELINE_NOT_CACHED": 68,
+          "SEC_V4_AUTHORITATIVE_MANIFEST_SECURITY_ABSENT": 153,
+          "TOTAL_DEBT_COMPONENT_NON_OVERLAP_NOT_PROVEN": 84
+        }
+      },
+      "anchorTradingDate": "2025-07-25",
+      "cutoff": "2025-07-25T23:59:59+00:00",
+      "cutoffPolicy": "DIAGNOSTIC_ANCHOR_SESSION_END_UTC",
+      "label": "ONE_YEAR_AGO",
+      "sessionsBeforeLatestCompleteSession": 252
+    },
+    {
+      "aggregate": {
+        "aggregateRankCount": 0,
+        "candidateCount": 55,
+        "dimensionStateCounts": {
+          "BUSINESS_QUALITY": {
+            "MISSING": 14,
+            "PARTIAL_PRIMITIVES": 41,
+            "RECONSTRUCTABLE_INPUT_SET": 0
+          },
+          "DOWNSIDE_RISK": {
+            "MISSING": 14,
+            "PARTIAL_PRIMITIVES": 41,
+            "RECONSTRUCTABLE_INPUT_SET": 0
+          },
+          "SECURITY_ATTRACTIVENESS": {
+            "MISSING": 14,
+            "PARTIAL_PRIMITIVES": 41,
+            "RECONSTRUCTABLE_INPUT_SET": 0
+          }
+        },
+        "factorStateCounts": {
+          "BUSINESS_QUALITY": {
+            "cash_flow_stability": {
+              "MISSING": 17,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 38
+            },
+            "earnings_stability": {
+              "MISSING": 14,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 41
+            },
+            "free_cash_flow_margin": {
+              "MISSING": 22,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 33
+            },
+            "operating_margin": {
+              "MISSING": 20,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 35
+            },
+            "return_on_invested_capital": {
+              "MISSING": 55,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            }
+          },
+          "DOWNSIDE_RISK": {
+            "cash_flow_stability": {
+              "MISSING": 17,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 38
+            },
+            "concentration_risk": {
+              "MISSING": 55,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            },
+            "cyclicality_risk": {
+              "MISSING": 55,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            },
+            "diluted_share_growth": {
+              "MISSING": 15,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 40
+            },
+            "earnings_stability": {
+              "MISSING": 14,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 41
+            },
+            "event_risk": {
+              "MISSING": 55,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            },
+            "interest_coverage": {
+              "MISSING": 55,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            },
+            "net_debt_to_ebitda": {
+              "MISSING": 55,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            }
+          },
+          "SECURITY_ATTRACTIVENESS": {
+            "earnings_yield": {
+              "MISSING": 14,
+              "PARTIAL_PRIMITIVES": 41,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            },
+            "enterprise_value_to_ebitda": {
+              "MISSING": 55,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            },
+            "free_cash_flow_yield": {
+              "MISSING": 20,
+              "PARTIAL_PRIMITIVES": 35,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            },
+            "own_history_valuation_attractiveness": {
+              "MISSING": 55,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            }
+          }
+        },
+        "hashVerifiedSecTimelineCount": 42,
+        "missingSecTimelineCount": 13,
+        "modelDecisionCount": 0,
+        "reasonCounts": {
+          "HISTORICAL_CONCENTRATION_EVIDENCE_MISSING": 42,
+          "HISTORICAL_CYCLICALITY_EVIDENCE_MISSING": 42,
+          "HISTORICAL_EBITDA_PIT_UNPROVEN": 84,
+          "HISTORICAL_ENTERPRISE_VALUE_PIT_UNPROVEN": 42,
+          "HISTORICAL_EVENT_RISK_EVIDENCE_MISSING": 42,
+          "HISTORICAL_GROSS_INTEREST_TTM_SCOPE_UNPROVEN": 42,
+          "HISTORICAL_MARKET_CAP_SHARE_CLASS_MATCH_NOT_PROVEN": 84,
+          "HISTORICAL_VALUATION_DISTRIBUTION_PIT_UNPROVEN": 42,
+          "INSUFFICIENT_PIT_QUARTERS_CAPITAL_EXPENDITURE": 14,
+          "INSUFFICIENT_PIT_QUARTERS_CASH_AND_EQUIVALENTS": 42,
+          "INSUFFICIENT_PIT_QUARTERS_DILUTED_WEIGHTED_AVERAGE_SHARES": 2,
+          "INSUFFICIENT_PIT_QUARTERS_INCOME_TAX": 1,
+          "INSUFFICIENT_PIT_QUARTERS_NET_INCOME": 3,
+          "INSUFFICIENT_PIT_QUARTERS_OPERATING_CASH_FLOW": 10,
+          "INSUFFICIENT_PIT_QUARTERS_OPERATING_INCOME": 10,
+          "INSUFFICIENT_PIT_QUARTERS_REVENUE": 6,
+          "INSUFFICIENT_PIT_QUARTERS_STOCKHOLDERS_EQUITY": 42,
+          "OFFICIAL_SEC_TIMELINE_NOT_CACHED": 68,
+          "SEC_V4_AUTHORITATIVE_MANIFEST_SECURITY_ABSENT": 153,
+          "TOTAL_DEBT_COMPONENT_NON_OVERLAP_NOT_PROVEN": 84
+        }
+      },
+      "anchorTradingDate": "2024-07-23",
+      "cutoff": "2024-07-23T23:59:59+00:00",
+      "cutoffPolicy": "DIAGNOSTIC_ANCHOR_SESSION_END_UTC",
+      "label": "TWO_YEARS_AGO",
+      "sessionsBeforeLatestCompleteSession": 504
+    },
+    {
+      "aggregate": {
+        "aggregateRankCount": 0,
+        "candidateCount": 55,
+        "dimensionStateCounts": {
+          "BUSINESS_QUALITY": {
+            "MISSING": 17,
+            "PARTIAL_PRIMITIVES": 38,
+            "RECONSTRUCTABLE_INPUT_SET": 0
+          },
+          "DOWNSIDE_RISK": {
+            "MISSING": 17,
+            "PARTIAL_PRIMITIVES": 38,
+            "RECONSTRUCTABLE_INPUT_SET": 0
+          },
+          "SECURITY_ATTRACTIVENESS": {
+            "MISSING": 17,
+            "PARTIAL_PRIMITIVES": 38,
+            "RECONSTRUCTABLE_INPUT_SET": 0
+          }
+        },
+        "factorStateCounts": {
+          "BUSINESS_QUALITY": {
+            "cash_flow_stability": {
+              "MISSING": 18,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 37
+            },
+            "earnings_stability": {
+              "MISSING": 17,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 38
+            },
+            "free_cash_flow_margin": {
+              "MISSING": 26,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 29
+            },
+            "operating_margin": {
+              "MISSING": 23,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 32
+            },
+            "return_on_invested_capital": {
+              "MISSING": 55,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            }
+          },
+          "DOWNSIDE_RISK": {
+            "cash_flow_stability": {
+              "MISSING": 18,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 37
+            },
+            "concentration_risk": {
+              "MISSING": 55,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            },
+            "cyclicality_risk": {
+              "MISSING": 55,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            },
+            "diluted_share_growth": {
+              "MISSING": 17,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 38
+            },
+            "earnings_stability": {
+              "MISSING": 17,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 38
+            },
+            "event_risk": {
+              "MISSING": 55,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            },
+            "interest_coverage": {
+              "MISSING": 55,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            },
+            "net_debt_to_ebitda": {
+              "MISSING": 55,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            }
+          },
+          "SECURITY_ATTRACTIVENESS": {
+            "earnings_yield": {
+              "MISSING": 17,
+              "PARTIAL_PRIMITIVES": 38,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            },
+            "enterprise_value_to_ebitda": {
+              "MISSING": 55,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            },
+            "free_cash_flow_yield": {
+              "MISSING": 24,
+              "PARTIAL_PRIMITIVES": 31,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            },
+            "own_history_valuation_attractiveness": {
+              "MISSING": 55,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            }
+          }
+        },
+        "hashVerifiedSecTimelineCount": 42,
+        "missingSecTimelineCount": 13,
+        "modelDecisionCount": 0,
+        "reasonCounts": {
+          "HISTORICAL_CONCENTRATION_EVIDENCE_MISSING": 42,
+          "HISTORICAL_CYCLICALITY_EVIDENCE_MISSING": 42,
+          "HISTORICAL_EBITDA_PIT_UNPROVEN": 84,
+          "HISTORICAL_ENTERPRISE_VALUE_PIT_UNPROVEN": 42,
+          "HISTORICAL_EVENT_RISK_EVIDENCE_MISSING": 42,
+          "HISTORICAL_GROSS_INTEREST_TTM_SCOPE_UNPROVEN": 42,
+          "HISTORICAL_MARKET_CAP_SHARE_CLASS_MATCH_NOT_PROVEN": 84,
+          "HISTORICAL_VALUATION_DISTRIBUTION_PIT_UNPROVEN": 42,
+          "INSUFFICIENT_PIT_QUARTERS_CAPITAL_EXPENDITURE": 20,
+          "INSUFFICIENT_PIT_QUARTERS_CASH_AND_EQUIVALENTS": 42,
+          "INSUFFICIENT_PIT_QUARTERS_DILUTED_WEIGHTED_AVERAGE_SHARES": 4,
+          "INSUFFICIENT_PIT_QUARTERS_INCOME_TAX": 4,
+          "INSUFFICIENT_PIT_QUARTERS_NET_INCOME": 12,
+          "INSUFFICIENT_PIT_QUARTERS_OPERATING_CASH_FLOW": 20,
+          "INSUFFICIENT_PIT_QUARTERS_OPERATING_INCOME": 16,
+          "INSUFFICIENT_PIT_QUARTERS_REVENUE": 12,
+          "INSUFFICIENT_PIT_QUARTERS_STOCKHOLDERS_EQUITY": 42,
+          "OFFICIAL_SEC_TIMELINE_NOT_CACHED": 68,
+          "SEC_V4_AUTHORITATIVE_MANIFEST_SECURITY_ABSENT": 153,
+          "TOTAL_DEBT_COMPONENT_NON_OVERLAP_NOT_PROVEN": 84
+        }
+      },
+      "anchorTradingDate": "2023-07-21",
+      "cutoff": "2023-07-21T23:59:59+00:00",
+      "cutoffPolicy": "DIAGNOSTIC_ANCHOR_SESSION_END_UTC",
+      "label": "THREE_YEARS_AGO",
+      "sessionsBeforeLatestCompleteSession": 756
+    },
+    {
+      "aggregate": {
+        "aggregateRankCount": 0,
+        "candidateCount": 55,
+        "dimensionStateCounts": {
+          "BUSINESS_QUALITY": {
+            "MISSING": 20,
+            "PARTIAL_PRIMITIVES": 35,
+            "RECONSTRUCTABLE_INPUT_SET": 0
+          },
+          "DOWNSIDE_RISK": {
+            "MISSING": 22,
+            "PARTIAL_PRIMITIVES": 33,
+            "RECONSTRUCTABLE_INPUT_SET": 0
+          },
+          "SECURITY_ATTRACTIVENESS": {
+            "MISSING": 20,
+            "PARTIAL_PRIMITIVES": 35,
+            "RECONSTRUCTABLE_INPUT_SET": 0
+          }
+        },
+        "factorStateCounts": {
+          "BUSINESS_QUALITY": {
+            "cash_flow_stability": {
+              "MISSING": 30,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 25
+            },
+            "earnings_stability": {
+              "MISSING": 23,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 32
+            },
+            "free_cash_flow_margin": {
+              "MISSING": 30,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 25
+            },
+            "operating_margin": {
+              "MISSING": 26,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 29
+            },
+            "return_on_invested_capital": {
+              "MISSING": 55,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            }
+          },
+          "DOWNSIDE_RISK": {
+            "cash_flow_stability": {
+              "MISSING": 30,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 25
+            },
+            "concentration_risk": {
+              "MISSING": 55,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            },
+            "cyclicality_risk": {
+              "MISSING": 55,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            },
+            "diluted_share_growth": {
+              "MISSING": 22,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 33
+            },
+            "earnings_stability": {
+              "MISSING": 23,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 32
+            },
+            "event_risk": {
+              "MISSING": 55,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            },
+            "interest_coverage": {
+              "MISSING": 55,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            },
+            "net_debt_to_ebitda": {
+              "MISSING": 55,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            }
+          },
+          "SECURITY_ATTRACTIVENESS": {
+            "earnings_yield": {
+              "MISSING": 21,
+              "PARTIAL_PRIMITIVES": 34,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            },
+            "enterprise_value_to_ebitda": {
+              "MISSING": 55,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            },
+            "free_cash_flow_yield": {
+              "MISSING": 29,
+              "PARTIAL_PRIMITIVES": 26,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            },
+            "own_history_valuation_attractiveness": {
+              "MISSING": 55,
+              "PARTIAL_PRIMITIVES": 0,
+              "RECONSTRUCTABLE_INPUT_SET": 0
+            }
+          }
+        },
+        "hashVerifiedSecTimelineCount": 42,
+        "missingSecTimelineCount": 13,
+        "modelDecisionCount": 0,
+        "reasonCounts": {
+          "HISTORICAL_CONCENTRATION_EVIDENCE_MISSING": 42,
+          "HISTORICAL_CYCLICALITY_EVIDENCE_MISSING": 42,
+          "HISTORICAL_EBITDA_PIT_UNPROVEN": 84,
+          "HISTORICAL_ENTERPRISE_VALUE_PIT_UNPROVEN": 42,
+          "HISTORICAL_EVENT_RISK_EVIDENCE_MISSING": 42,
+          "HISTORICAL_GROSS_INTEREST_TTM_SCOPE_UNPROVEN": 42,
+          "HISTORICAL_MARKET_CAP_SHARE_CLASS_MATCH_NOT_PROVEN": 84,
+          "HISTORICAL_VALUATION_DISTRIBUTION_PIT_UNPROVEN": 42,
+          "INSUFFICIENT_PIT_QUARTERS_CAPITAL_EXPENDITURE": 28,
+          "INSUFFICIENT_PIT_QUARTERS_CASH_AND_EQUIVALENTS": 42,
+          "INSUFFICIENT_PIT_QUARTERS_DILUTED_WEIGHTED_AVERAGE_SHARES": 9,
+          "INSUFFICIENT_PIT_QUARTERS_INCOME_TAX": 7,
+          "INSUFFICIENT_PIT_QUARTERS_NET_INCOME": 28,
+          "INSUFFICIENT_PIT_QUARTERS_OPERATING_CASH_FLOW": 56,
+          "INSUFFICIENT_PIT_QUARTERS_OPERATING_INCOME": 24,
+          "INSUFFICIENT_PIT_QUARTERS_REVENUE": 16,
+          "INSUFFICIENT_PIT_QUARTERS_STOCKHOLDERS_EQUITY": 42,
+          "OFFICIAL_SEC_TIMELINE_NOT_CACHED": 68,
+          "SEC_V4_AUTHORITATIVE_MANIFEST_SECURITY_ABSENT": 153,
+          "TOTAL_DEBT_COMPONENT_NON_OVERLAP_NOT_PROVEN": 84
+        }
+      },
+      "anchorTradingDate": "2021-07-20",
+      "cutoff": "2021-07-20T23:59:59+00:00",
+      "cutoffPolicy": "DIAGNOSTIC_ANCHOR_SESSION_END_UTC",
+      "label": "FIVE_YEARS_AGO",
+      "sessionsBeforeLatestCompleteSession": 1260
+    }
+  ],
+  "artifactContentHash": "A2B083238DAA4A97CC4570898CAB70591A701EF3931A305C93006CC10D5BA7D0",
+  "artifactType": "LONG_HORIZON_V11_TIER2_PIT_RECONSTRUCTION",
+  "candidateCount": 55,
+  "claimBoundary": {
+    "statement": "The reconstruction proves which existing SEC primitives were available at four historical anchors. It does not construct complete Long Horizon v1.1 dimensions, rank securities, or validate future decision quality.",
+    "terminalConclusion": "PARTIAL_TIER2_EVIDENCE_MODEL_VALIDATION_NOT_YET_AVAILABLE",
+    "validatedClaimAllowed": false
+  },
+  "controlledPayloadContentHash": "0D7889CF400A50B74DCF695209388CEB755CA3D0D7B53F42F058515E3BDFD9D6",
+  "controlledPayloadReference": "storage/historical-validation/long-horizon-v11-tier2/0d7889cf400a50b74dcf695209388ceb755ca3d0d7b53f42f058515e3bdfd9d6.json",
+  "currentFundamentalsProjectedBackwards": false,
+  "evaluationRole": "DEVELOPMENT_OBSERVED",
+  "evidenceTier": "TIER_2_HISTORICAL_PIT_INPUT_RECONSTRUCTION",
+  "generatedAt": "2026-07-30T16:00:00+00:00",
+  "modelExecuted": false,
+  "modelVersion": "LONG-HORIZON-RESEARCH-v1.1.0",
+  "perSecurityEvidenceIncluded": false,
+  "providerNetworkRequests": 0,
+  "rawProviderValuesIncluded": false,
+  "schemaVersion": "LONG-HORIZON-v1.1-TIER2-PIT-RECONSTRUCTION-v1.0.0",
+  "scoresOrRanksComputed": false,
+  "sourceEvidence": {
+    "historicalPrices": {
+      "artifactContentHash": "CF50A3994AB3660029AC56F586F8B6CA572EA1654B6B5DF5549152D191B1A0D9",
+      "fileSha256": "E322AC57C00BB4018AC883A2F0EF3461299D7D97725B0791C75EA01846D08E27",
+      "path": "docs/generated/historical-yahoo-price-cache-20260729T-HISTORICAL-V1-R2-manifest.json"
+    },
+    "modelFreeze": {
+      "artifactContentHash": "233271457387A5D7212379AE2C77D69C743DC69F7345FE2D834FF7DC98D4FA59",
+      "fileSha256": "E208C280355077009C4AF102383881D89D3139242086E859B5EEC4BEB6873024",
+      "freezeHash": "8F8E7FB671A8C35E771FDAD6B9E3ED5D90950135ACC9297BBFF571F27780E6C3",
+      "path": "docs/generated/long-horizon-v1-1-model-freeze.json"
+    },
+    "secV4Timeline": {
+      "artifactContentHash": "7A125F6B07DC3661965336D05F76A9657EC8C657AA94C9DA6E8E9D652CAF35B0",
+      "fileSha256": "DB6698F81EB629A435837A2E13D0729B623CAF6B1FE13C7C3C3F183DDB91344D",
+      "hashVerifiedCandidatePayloadCount": 42,
+      "missingCandidatePayloadCount": 13,
+      "path": "docs/generated/scoring-input-v4-sec-offline-manifest-v2.json"
+    },
+    "universe": {
+      "fileSha256": "C977E932EDD5184AABBDE53ACCFF6F480650F96C03C878A9EC7FBE15D2920078",
+      "path": "analysis-python/resources/universes/market-intelligence-closed-test-us-v1.json",
+      "version": "market-intelligence-closed-test-us-v1.0.0"
+    }
+  },
+  "status": "COMPLETE_PARTIAL_EVIDENCE_ONLY"
+}

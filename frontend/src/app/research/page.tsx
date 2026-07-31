@@ -1,7 +1,10 @@
 import Link from "next/link";
 import { humanize, formatScore, formatTimestamp } from "@/lib/format";
+import { loadLatestProspectiveEnrollment } from "@/lib/forward-validation/backend";
 import {
   getDefaultScreeningRunId,
+  getSnapshotAsOf,
+  loadLatestEligibilityRecoveryStatus,
   loadResearchFacets,
   loadScreeningResults,
   searchSecurities,
@@ -13,8 +16,10 @@ import type {
   SecuritySearchItem,
 } from "@/lib/market-intelligence/contracts";
 import { runScreening } from "./actions";
+import { EligibilityRecoveryPanel } from "./components/eligibility-recovery-panel";
 import { ErrorPanel } from "./components/error-panel";
 import { MarketDataBlock } from "./components/market-data-block";
+import { ProspectiveEnrollmentPanel } from "./components/prospective-enrollment-panel";
 import { StatusPill } from "./components/status-pill";
 
 export const dynamic = "force-dynamic";
@@ -207,12 +212,28 @@ export default async function ResearchPage({
   const query = single(queryParams.query).slice(0, 80);
   const notice = single(queryParams.notice);
 
-  const [facetsResult, dataResult] = await Promise.all([
+  const [facetsResult, dataResult, prospectiveResult] = await Promise.all([
     loadResearchFacets(),
     runId
       ? loadScreeningResults(runId, cursor)
       : searchSecurities({ query, cursor, limit: 20 }),
+    loadLatestProspectiveEnrollment(),
   ]);
+  const snapshotAsOfResult = getSnapshotAsOf();
+  let eligibilityRecoveryResult: Awaited<
+    ReturnType<typeof loadLatestEligibilityRecoveryStatus>
+  >;
+  if (!facetsResult.ok) {
+    eligibilityRecoveryResult = facetsResult;
+  } else if (!snapshotAsOfResult.ok) {
+    eligibilityRecoveryResult = snapshotAsOfResult;
+  } else {
+    eligibilityRecoveryResult = await loadLatestEligibilityRecoveryStatus({
+      dataSnapshotId: facetsResult.data.dataSnapshotId,
+      universeVersion: facetsResult.data.universeVersion,
+      asOf: snapshotAsOfResult.data,
+    });
+  }
 
   return (
     <div className="space-y-8">
@@ -252,6 +273,10 @@ export default async function ResearchPage({
           {notices[notice]}
         </section>
       )}
+
+      <EligibilityRecoveryPanel result={eligibilityRecoveryResult} />
+
+      <ProspectiveEnrollmentPanel result={prospectiveResult} />
 
       {facetsResult.ok ? (
         <section className="rounded-3xl border border-slate-800 bg-slate-900/50 p-5 shadow-2xl shadow-cyan-950/10 sm:p-6">
@@ -418,7 +443,7 @@ export default async function ResearchPage({
           <ErrorPanel error={dataResult.error} />
         ) : isScreeningPage(dataResult.data) ? (
           <>
-            <div className="mb-5 grid gap-3 rounded-2xl border border-slate-800 bg-slate-900/35 p-4 text-xs sm:grid-cols-2 lg:grid-cols-5">
+            <div className="mb-5 grid gap-3 rounded-2xl border border-slate-800 bg-slate-900/35 p-4 text-xs sm:grid-cols-2 lg:grid-cols-6">
               <div>
                 <p className="text-slate-600">State</p>
                 <div className="mt-2">
@@ -430,6 +455,12 @@ export default async function ResearchPage({
                 <p className="mt-2 text-slate-300">
                   {humanize(dataResult.data.run.rankBy)}
                 </p>
+              </div>
+              <div>
+                <p className="text-slate-600">Gate status</p>
+                <div className="mt-2">
+                  <StatusPill state={dataResult.data.run.gateStatus} />
+                </div>
               </div>
               <div>
                 <p className="text-slate-600">Eligible</p>

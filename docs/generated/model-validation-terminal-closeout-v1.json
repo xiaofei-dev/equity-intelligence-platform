@@ -1,0 +1,492 @@
+{
+  "aiParticipationInDeterministicEvidence": false,
+  "artifactContentHash": "E414C070746738AC1830F6E3ABCFDF871E6F68269DFA08AD603195B50719BCD9",
+  "artifactType": "MODEL_VALIDATION_TERMINAL_CLOSEOUT",
+  "generatedAt": "2026-07-30T00:00:00Z",
+  "historicalModelRerun": false,
+  "modelFormulaOrThresholdChanged": false,
+  "portfolioSuitability": "NOT_ASSESSED_BY_MODEL",
+  "practicalValueThresholdApplicability": "OBSERVED_TIER1_NOT_APPLICABLE",
+  "recordCount": 22,
+  "records": [
+    {
+      "aiMayAffectDeterministicFields": false,
+      "claimCeiling": "DIAGNOSTIC_ONLY",
+      "diagnosticLabel": "UNSUPPORTED_DIAGNOSTIC",
+      "entryDecisionEvidence": "MISSING",
+      "horizonCompletedSessions": 5,
+      "humanJudgmentMayMutateModelSnapshot": false,
+      "limitations": [
+        "CURRENT_UNIVERSE_RETROSPECTIVE",
+        "CURRENT_CLASSIFICATION_SECTOR_NOT_PIT",
+        "CORE_90_PERCENT_INTERVALS_CROSS_ZERO",
+        "VALUE_QUALITY_AND_SIZE_STABILITY_MISSING"
+      ],
+      "modelEvidenceLabel": "NOT_VALIDATED",
+      "modelTrack": "TACTICAL_V22",
+      "modelVersion": "TACTICAL-SIGNAL-v2.2.0",
+      "rankingEvidence": "PRESENT",
+      "runStatus": "COMPLETED",
+      "target": "TACTICAL_RANKING",
+      "targetEvidence": "PRESENT"
+    },
+    {
+      "aiMayAffectDeterministicFields": false,
+      "claimCeiling": "DIAGNOSTIC_ONLY",
+      "diagnosticLabel": "NOT_VALIDATED_NO_EXECUTABLE_EPISODES",
+      "entryDecisionEvidence": "MISSING",
+      "horizonCompletedSessions": 5,
+      "humanJudgmentMayMutateModelSnapshot": false,
+      "limitations": [
+        "NO_EXECUTABLE_ENTRY_OR_LIMITED_ENTRY_EPISODES",
+        "HISTORICAL_EVENT_EVIDENCE_MISSING",
+        "WATCH_ONLY_ACTIONABILITY_CEILING"
+      ],
+      "modelEvidenceLabel": "NOT_VALIDATED",
+      "modelTrack": "TACTICAL_V22",
+      "modelVersion": "TACTICAL-SIGNAL-v2.2.0",
+      "rankingEvidence": "PRESENT",
+      "runStatus": "INSUFFICIENT_EVIDENCE",
+      "target": "TACTICAL_ENTRY_DECISION",
+      "targetEvidence": "MISSING"
+    },
+    {
+      "aiMayAffectDeterministicFields": false,
+      "claimCeiling": "DIAGNOSTIC_ONLY",
+      "diagnosticLabel": "WEAK_MIXED_DIAGNOSTIC",
+      "entryDecisionEvidence": "MISSING",
+      "horizonCompletedSessions": 20,
+      "humanJudgmentMayMutateModelSnapshot": false,
+      "limitations": [
+        "CURRENT_UNIVERSE_RETROSPECTIVE",
+        "CURRENT_CLASSIFICATION_SECTOR_NOT_PIT",
+        "CORE_90_PERCENT_INTERVALS_CROSS_ZERO",
+        "VALUE_QUALITY_AND_SIZE_STABILITY_MISSING"
+      ],
+      "modelEvidenceLabel": "PARTIALLY_SUPPORTED",
+      "modelTrack": "TACTICAL_V22",
+      "modelVersion": "TACTICAL-SIGNAL-v2.2.0",
+      "rankingEvidence": "PRESENT",
+      "runStatus": "COMPLETED",
+      "target": "TACTICAL_RANKING",
+      "targetEvidence": "PRESENT"
+    },
+    {
+      "aiMayAffectDeterministicFields": false,
+      "claimCeiling": "DIAGNOSTIC_ONLY",
+      "diagnosticLabel": "NOT_VALIDATED_NO_EXECUTABLE_EPISODES",
+      "entryDecisionEvidence": "MISSING",
+      "horizonCompletedSessions": 20,
+      "humanJudgmentMayMutateModelSnapshot": false,
+      "limitations": [
+        "NO_EXECUTABLE_ENTRY_OR_LIMITED_ENTRY_EPISODES",
+        "HISTORICAL_EVENT_EVIDENCE_MISSING",
+        "WATCH_ONLY_ACTIONABILITY_CEILING"
+      ],
+      "modelEvidenceLabel": "NOT_VALIDATED",
+      "modelTrack": "TACTICAL_V22",
+      "modelVersion": "TACTICAL-SIGNAL-v2.2.0",
+      "rankingEvidence": "PRESENT",
+      "runStatus": "INSUFFICIENT_EVIDENCE",
+      "target": "TACTICAL_ENTRY_DECISION",
+      "targetEvidence": "MISSING"
+    },
+    {
+      "aiMayAffectDeterministicFields": false,
+      "claimCeiling": "DIAGNOSTIC_ONLY",
+      "diagnosticLabel": "MODEST_INCONCLUSIVE_DIAGNOSTIC",
+      "entryDecisionEvidence": "MISSING",
+      "horizonCompletedSessions": 60,
+      "humanJudgmentMayMutateModelSnapshot": false,
+      "limitations": [
+        "CURRENT_UNIVERSE_RETROSPECTIVE",
+        "CURRENT_CLASSIFICATION_SECTOR_NOT_PIT",
+        "CORE_90_PERCENT_INTERVALS_CROSS_ZERO",
+        "VALUE_QUALITY_AND_SIZE_STABILITY_MISSING"
+      ],
+      "modelEvidenceLabel": "PARTIALLY_SUPPORTED",
+      "modelTrack": "TACTICAL_V22",
+      "modelVersion": "TACTICAL-SIGNAL-v2.2.0",
+      "rankingEvidence": "PRESENT",
+      "runStatus": "COMPLETED",
+      "target": "TACTICAL_RANKING",
+      "targetEvidence": "PRESENT"
+    },
+    {
+      "aiMayAffectDeterministicFields": false,
+      "claimCeiling": "DIAGNOSTIC_ONLY",
+      "diagnosticLabel": "NOT_VALIDATED_NO_EXECUTABLE_EPISODES",
+      "entryDecisionEvidence": "MISSING",
+      "horizonCompletedSessions": 60,
+      "humanJudgmentMayMutateModelSnapshot": false,
+      "limitations": [
+        "NO_EXECUTABLE_ENTRY_OR_LIMITED_ENTRY_EPISODES",
+        "HISTORICAL_EVENT_EVIDENCE_MISSING",
+        "WATCH_ONLY_ACTIONABILITY_CEILING"
+      ],
+      "modelEvidenceLabel": "NOT_VALIDATED",
+      "modelTrack": "TACTICAL_V22",
+      "modelVersion": "TACTICAL-SIGNAL-v2.2.0",
+      "rankingEvidence": "PRESENT",
+      "runStatus": "INSUFFICIENT_EVIDENCE",
+      "target": "TACTICAL_ENTRY_DECISION",
+      "targetEvidence": "MISSING"
+    },
+    {
+      "aiMayAffectDeterministicFields": false,
+      "claimCeiling": "DIAGNOSTIC_ONLY",
+      "diagnosticLabel": "NOT_VALIDATED_INCOMPLETE_PIT_MODEL_INPUTS",
+      "entryDecisionEvidence": "NOT_APPLICABLE",
+      "horizonCompletedSessions": 252,
+      "humanJudgmentMayMutateModelSnapshot": false,
+      "limitations": [
+        "NO_COMPLETE_HISTORICAL_MODEL_INPUT_SET",
+        "NO_HISTORICAL_MODEL_EXECUTION_OR_RANK",
+        "CURRENT_UNIVERSE_SURVIVORSHIP_NOT_CONTROLLED",
+        "HISTORICAL_VALUATION_AND_RISK_EVIDENCE_INCOMPLETE"
+      ],
+      "modelEvidenceLabel": "NOT_VALIDATED",
+      "modelTrack": "LONG_HORIZON_V11",
+      "modelVersion": "LONG-HORIZON-RESEARCH-v1.1.0",
+      "rankingEvidence": "NOT_EVALUATED",
+      "runStatus": "INSUFFICIENT_EVIDENCE",
+      "target": "COMPANY_QUALITY",
+      "targetEvidence": "MISSING"
+    },
+    {
+      "aiMayAffectDeterministicFields": false,
+      "claimCeiling": "DIAGNOSTIC_ONLY",
+      "diagnosticLabel": "NOT_VALIDATED_INCOMPLETE_PIT_MODEL_INPUTS",
+      "entryDecisionEvidence": "NOT_APPLICABLE",
+      "horizonCompletedSessions": 252,
+      "humanJudgmentMayMutateModelSnapshot": false,
+      "limitations": [
+        "NO_COMPLETE_HISTORICAL_MODEL_INPUT_SET",
+        "NO_HISTORICAL_MODEL_EXECUTION_OR_RANK",
+        "CURRENT_UNIVERSE_SURVIVORSHIP_NOT_CONTROLLED",
+        "HISTORICAL_VALUATION_AND_RISK_EVIDENCE_INCOMPLETE"
+      ],
+      "modelEvidenceLabel": "NOT_VALIDATED",
+      "modelTrack": "LONG_HORIZON_V11",
+      "modelVersion": "LONG-HORIZON-RESEARCH-v1.1.0",
+      "rankingEvidence": "NOT_EVALUATED",
+      "runStatus": "INSUFFICIENT_EVIDENCE",
+      "target": "SECURITY_ATTRACTIVENESS",
+      "targetEvidence": "MISSING"
+    },
+    {
+      "aiMayAffectDeterministicFields": false,
+      "claimCeiling": "DIAGNOSTIC_ONLY",
+      "diagnosticLabel": "NOT_VALIDATED_INCOMPLETE_PIT_MODEL_INPUTS",
+      "entryDecisionEvidence": "NOT_APPLICABLE",
+      "horizonCompletedSessions": 252,
+      "humanJudgmentMayMutateModelSnapshot": false,
+      "limitations": [
+        "NO_COMPLETE_HISTORICAL_MODEL_INPUT_SET",
+        "NO_HISTORICAL_MODEL_EXECUTION_OR_RANK",
+        "CURRENT_UNIVERSE_SURVIVORSHIP_NOT_CONTROLLED",
+        "HISTORICAL_VALUATION_AND_RISK_EVIDENCE_INCOMPLETE"
+      ],
+      "modelEvidenceLabel": "NOT_VALIDATED",
+      "modelTrack": "LONG_HORIZON_V11",
+      "modelVersion": "LONG-HORIZON-RESEARCH-v1.1.0",
+      "rankingEvidence": "NOT_EVALUATED",
+      "runStatus": "INSUFFICIENT_EVIDENCE",
+      "target": "EXPECTED_RETURN",
+      "targetEvidence": "MISSING"
+    },
+    {
+      "aiMayAffectDeterministicFields": false,
+      "claimCeiling": "DIAGNOSTIC_ONLY",
+      "diagnosticLabel": "NOT_VALIDATED_INCOMPLETE_PIT_MODEL_INPUTS",
+      "entryDecisionEvidence": "NOT_APPLICABLE",
+      "horizonCompletedSessions": 252,
+      "humanJudgmentMayMutateModelSnapshot": false,
+      "limitations": [
+        "NO_COMPLETE_HISTORICAL_MODEL_INPUT_SET",
+        "NO_HISTORICAL_MODEL_EXECUTION_OR_RANK",
+        "CURRENT_UNIVERSE_SURVIVORSHIP_NOT_CONTROLLED",
+        "HISTORICAL_VALUATION_AND_RISK_EVIDENCE_INCOMPLETE"
+      ],
+      "modelEvidenceLabel": "NOT_VALIDATED",
+      "modelTrack": "LONG_HORIZON_V11",
+      "modelVersion": "LONG-HORIZON-RESEARCH-v1.1.0",
+      "rankingEvidence": "NOT_EVALUATED",
+      "runStatus": "INSUFFICIENT_EVIDENCE",
+      "target": "DOWNSIDE_RISK",
+      "targetEvidence": "MISSING"
+    },
+    {
+      "aiMayAffectDeterministicFields": false,
+      "claimCeiling": "DIAGNOSTIC_ONLY",
+      "diagnosticLabel": "NOT_VALIDATED_INCOMPLETE_PIT_MODEL_INPUTS",
+      "entryDecisionEvidence": "NOT_APPLICABLE",
+      "horizonCompletedSessions": 504,
+      "humanJudgmentMayMutateModelSnapshot": false,
+      "limitations": [
+        "NO_COMPLETE_HISTORICAL_MODEL_INPUT_SET",
+        "NO_HISTORICAL_MODEL_EXECUTION_OR_RANK",
+        "CURRENT_UNIVERSE_SURVIVORSHIP_NOT_CONTROLLED",
+        "HISTORICAL_VALUATION_AND_RISK_EVIDENCE_INCOMPLETE"
+      ],
+      "modelEvidenceLabel": "NOT_VALIDATED",
+      "modelTrack": "LONG_HORIZON_V11",
+      "modelVersion": "LONG-HORIZON-RESEARCH-v1.1.0",
+      "rankingEvidence": "NOT_EVALUATED",
+      "runStatus": "INSUFFICIENT_EVIDENCE",
+      "target": "COMPANY_QUALITY",
+      "targetEvidence": "MISSING"
+    },
+    {
+      "aiMayAffectDeterministicFields": false,
+      "claimCeiling": "DIAGNOSTIC_ONLY",
+      "diagnosticLabel": "NOT_VALIDATED_INCOMPLETE_PIT_MODEL_INPUTS",
+      "entryDecisionEvidence": "NOT_APPLICABLE",
+      "horizonCompletedSessions": 504,
+      "humanJudgmentMayMutateModelSnapshot": false,
+      "limitations": [
+        "NO_COMPLETE_HISTORICAL_MODEL_INPUT_SET",
+        "NO_HISTORICAL_MODEL_EXECUTION_OR_RANK",
+        "CURRENT_UNIVERSE_SURVIVORSHIP_NOT_CONTROLLED",
+        "HISTORICAL_VALUATION_AND_RISK_EVIDENCE_INCOMPLETE"
+      ],
+      "modelEvidenceLabel": "NOT_VALIDATED",
+      "modelTrack": "LONG_HORIZON_V11",
+      "modelVersion": "LONG-HORIZON-RESEARCH-v1.1.0",
+      "rankingEvidence": "NOT_EVALUATED",
+      "runStatus": "INSUFFICIENT_EVIDENCE",
+      "target": "SECURITY_ATTRACTIVENESS",
+      "targetEvidence": "MISSING"
+    },
+    {
+      "aiMayAffectDeterministicFields": false,
+      "claimCeiling": "DIAGNOSTIC_ONLY",
+      "diagnosticLabel": "NOT_VALIDATED_INCOMPLETE_PIT_MODEL_INPUTS",
+      "entryDecisionEvidence": "NOT_APPLICABLE",
+      "horizonCompletedSessions": 504,
+      "humanJudgmentMayMutateModelSnapshot": false,
+      "limitations": [
+        "NO_COMPLETE_HISTORICAL_MODEL_INPUT_SET",
+        "NO_HISTORICAL_MODEL_EXECUTION_OR_RANK",
+        "CURRENT_UNIVERSE_SURVIVORSHIP_NOT_CONTROLLED",
+        "HISTORICAL_VALUATION_AND_RISK_EVIDENCE_INCOMPLETE"
+      ],
+      "modelEvidenceLabel": "NOT_VALIDATED",
+      "modelTrack": "LONG_HORIZON_V11",
+      "modelVersion": "LONG-HORIZON-RESEARCH-v1.1.0",
+      "rankingEvidence": "NOT_EVALUATED",
+      "runStatus": "INSUFFICIENT_EVIDENCE",
+      "target": "EXPECTED_RETURN",
+      "targetEvidence": "MISSING"
+    },
+    {
+      "aiMayAffectDeterministicFields": false,
+      "claimCeiling": "DIAGNOSTIC_ONLY",
+      "diagnosticLabel": "NOT_VALIDATED_INCOMPLETE_PIT_MODEL_INPUTS",
+      "entryDecisionEvidence": "NOT_APPLICABLE",
+      "horizonCompletedSessions": 504,
+      "humanJudgmentMayMutateModelSnapshot": false,
+      "limitations": [
+        "NO_COMPLETE_HISTORICAL_MODEL_INPUT_SET",
+        "NO_HISTORICAL_MODEL_EXECUTION_OR_RANK",
+        "CURRENT_UNIVERSE_SURVIVORSHIP_NOT_CONTROLLED",
+        "HISTORICAL_VALUATION_AND_RISK_EVIDENCE_INCOMPLETE"
+      ],
+      "modelEvidenceLabel": "NOT_VALIDATED",
+      "modelTrack": "LONG_HORIZON_V11",
+      "modelVersion": "LONG-HORIZON-RESEARCH-v1.1.0",
+      "rankingEvidence": "NOT_EVALUATED",
+      "runStatus": "INSUFFICIENT_EVIDENCE",
+      "target": "DOWNSIDE_RISK",
+      "targetEvidence": "MISSING"
+    },
+    {
+      "aiMayAffectDeterministicFields": false,
+      "claimCeiling": "DIAGNOSTIC_ONLY",
+      "diagnosticLabel": "NOT_VALIDATED_INCOMPLETE_PIT_MODEL_INPUTS",
+      "entryDecisionEvidence": "NOT_APPLICABLE",
+      "horizonCompletedSessions": 756,
+      "humanJudgmentMayMutateModelSnapshot": false,
+      "limitations": [
+        "NO_COMPLETE_HISTORICAL_MODEL_INPUT_SET",
+        "NO_HISTORICAL_MODEL_EXECUTION_OR_RANK",
+        "CURRENT_UNIVERSE_SURVIVORSHIP_NOT_CONTROLLED",
+        "HISTORICAL_VALUATION_AND_RISK_EVIDENCE_INCOMPLETE"
+      ],
+      "modelEvidenceLabel": "NOT_VALIDATED",
+      "modelTrack": "LONG_HORIZON_V11",
+      "modelVersion": "LONG-HORIZON-RESEARCH-v1.1.0",
+      "rankingEvidence": "NOT_EVALUATED",
+      "runStatus": "INSUFFICIENT_EVIDENCE",
+      "target": "COMPANY_QUALITY",
+      "targetEvidence": "MISSING"
+    },
+    {
+      "aiMayAffectDeterministicFields": false,
+      "claimCeiling": "DIAGNOSTIC_ONLY",
+      "diagnosticLabel": "NOT_VALIDATED_INCOMPLETE_PIT_MODEL_INPUTS",
+      "entryDecisionEvidence": "NOT_APPLICABLE",
+      "horizonCompletedSessions": 756,
+      "humanJudgmentMayMutateModelSnapshot": false,
+      "limitations": [
+        "NO_COMPLETE_HISTORICAL_MODEL_INPUT_SET",
+        "NO_HISTORICAL_MODEL_EXECUTION_OR_RANK",
+        "CURRENT_UNIVERSE_SURVIVORSHIP_NOT_CONTROLLED",
+        "HISTORICAL_VALUATION_AND_RISK_EVIDENCE_INCOMPLETE"
+      ],
+      "modelEvidenceLabel": "NOT_VALIDATED",
+      "modelTrack": "LONG_HORIZON_V11",
+      "modelVersion": "LONG-HORIZON-RESEARCH-v1.1.0",
+      "rankingEvidence": "NOT_EVALUATED",
+      "runStatus": "INSUFFICIENT_EVIDENCE",
+      "target": "SECURITY_ATTRACTIVENESS",
+      "targetEvidence": "MISSING"
+    },
+    {
+      "aiMayAffectDeterministicFields": false,
+      "claimCeiling": "DIAGNOSTIC_ONLY",
+      "diagnosticLabel": "NOT_VALIDATED_INCOMPLETE_PIT_MODEL_INPUTS",
+      "entryDecisionEvidence": "NOT_APPLICABLE",
+      "horizonCompletedSessions": 756,
+      "humanJudgmentMayMutateModelSnapshot": false,
+      "limitations": [
+        "NO_COMPLETE_HISTORICAL_MODEL_INPUT_SET",
+        "NO_HISTORICAL_MODEL_EXECUTION_OR_RANK",
+        "CURRENT_UNIVERSE_SURVIVORSHIP_NOT_CONTROLLED",
+        "HISTORICAL_VALUATION_AND_RISK_EVIDENCE_INCOMPLETE"
+      ],
+      "modelEvidenceLabel": "NOT_VALIDATED",
+      "modelTrack": "LONG_HORIZON_V11",
+      "modelVersion": "LONG-HORIZON-RESEARCH-v1.1.0",
+      "rankingEvidence": "NOT_EVALUATED",
+      "runStatus": "INSUFFICIENT_EVIDENCE",
+      "target": "EXPECTED_RETURN",
+      "targetEvidence": "MISSING"
+    },
+    {
+      "aiMayAffectDeterministicFields": false,
+      "claimCeiling": "DIAGNOSTIC_ONLY",
+      "diagnosticLabel": "NOT_VALIDATED_INCOMPLETE_PIT_MODEL_INPUTS",
+      "entryDecisionEvidence": "NOT_APPLICABLE",
+      "horizonCompletedSessions": 756,
+      "humanJudgmentMayMutateModelSnapshot": false,
+      "limitations": [
+        "NO_COMPLETE_HISTORICAL_MODEL_INPUT_SET",
+        "NO_HISTORICAL_MODEL_EXECUTION_OR_RANK",
+        "CURRENT_UNIVERSE_SURVIVORSHIP_NOT_CONTROLLED",
+        "HISTORICAL_VALUATION_AND_RISK_EVIDENCE_INCOMPLETE"
+      ],
+      "modelEvidenceLabel": "NOT_VALIDATED",
+      "modelTrack": "LONG_HORIZON_V11",
+      "modelVersion": "LONG-HORIZON-RESEARCH-v1.1.0",
+      "rankingEvidence": "NOT_EVALUATED",
+      "runStatus": "INSUFFICIENT_EVIDENCE",
+      "target": "DOWNSIDE_RISK",
+      "targetEvidence": "MISSING"
+    },
+    {
+      "aiMayAffectDeterministicFields": false,
+      "claimCeiling": "DIAGNOSTIC_ONLY",
+      "diagnosticLabel": "NOT_VALIDATED_INCOMPLETE_PIT_MODEL_INPUTS",
+      "entryDecisionEvidence": "NOT_APPLICABLE",
+      "horizonCompletedSessions": 1260,
+      "humanJudgmentMayMutateModelSnapshot": false,
+      "limitations": [
+        "NO_COMPLETE_HISTORICAL_MODEL_INPUT_SET",
+        "NO_HISTORICAL_MODEL_EXECUTION_OR_RANK",
+        "CURRENT_UNIVERSE_SURVIVORSHIP_NOT_CONTROLLED",
+        "HISTORICAL_VALUATION_AND_RISK_EVIDENCE_INCOMPLETE"
+      ],
+      "modelEvidenceLabel": "NOT_VALIDATED",
+      "modelTrack": "LONG_HORIZON_V11",
+      "modelVersion": "LONG-HORIZON-RESEARCH-v1.1.0",
+      "rankingEvidence": "NOT_EVALUATED",
+      "runStatus": "INSUFFICIENT_EVIDENCE",
+      "target": "COMPANY_QUALITY",
+      "targetEvidence": "MISSING"
+    },
+    {
+      "aiMayAffectDeterministicFields": false,
+      "claimCeiling": "DIAGNOSTIC_ONLY",
+      "diagnosticLabel": "NOT_VALIDATED_INCOMPLETE_PIT_MODEL_INPUTS",
+      "entryDecisionEvidence": "NOT_APPLICABLE",
+      "horizonCompletedSessions": 1260,
+      "humanJudgmentMayMutateModelSnapshot": false,
+      "limitations": [
+        "NO_COMPLETE_HISTORICAL_MODEL_INPUT_SET",
+        "NO_HISTORICAL_MODEL_EXECUTION_OR_RANK",
+        "CURRENT_UNIVERSE_SURVIVORSHIP_NOT_CONTROLLED",
+        "HISTORICAL_VALUATION_AND_RISK_EVIDENCE_INCOMPLETE"
+      ],
+      "modelEvidenceLabel": "NOT_VALIDATED",
+      "modelTrack": "LONG_HORIZON_V11",
+      "modelVersion": "LONG-HORIZON-RESEARCH-v1.1.0",
+      "rankingEvidence": "NOT_EVALUATED",
+      "runStatus": "INSUFFICIENT_EVIDENCE",
+      "target": "SECURITY_ATTRACTIVENESS",
+      "targetEvidence": "MISSING"
+    },
+    {
+      "aiMayAffectDeterministicFields": false,
+      "claimCeiling": "DIAGNOSTIC_ONLY",
+      "diagnosticLabel": "NOT_VALIDATED_INCOMPLETE_PIT_MODEL_INPUTS",
+      "entryDecisionEvidence": "NOT_APPLICABLE",
+      "horizonCompletedSessions": 1260,
+      "humanJudgmentMayMutateModelSnapshot": false,
+      "limitations": [
+        "NO_COMPLETE_HISTORICAL_MODEL_INPUT_SET",
+        "NO_HISTORICAL_MODEL_EXECUTION_OR_RANK",
+        "CURRENT_UNIVERSE_SURVIVORSHIP_NOT_CONTROLLED",
+        "HISTORICAL_VALUATION_AND_RISK_EVIDENCE_INCOMPLETE"
+      ],
+      "modelEvidenceLabel": "NOT_VALIDATED",
+      "modelTrack": "LONG_HORIZON_V11",
+      "modelVersion": "LONG-HORIZON-RESEARCH-v1.1.0",
+      "rankingEvidence": "NOT_EVALUATED",
+      "runStatus": "INSUFFICIENT_EVIDENCE",
+      "target": "EXPECTED_RETURN",
+      "targetEvidence": "MISSING"
+    },
+    {
+      "aiMayAffectDeterministicFields": false,
+      "claimCeiling": "DIAGNOSTIC_ONLY",
+      "diagnosticLabel": "NOT_VALIDATED_INCOMPLETE_PIT_MODEL_INPUTS",
+      "entryDecisionEvidence": "NOT_APPLICABLE",
+      "horizonCompletedSessions": 1260,
+      "humanJudgmentMayMutateModelSnapshot": false,
+      "limitations": [
+        "NO_COMPLETE_HISTORICAL_MODEL_INPUT_SET",
+        "NO_HISTORICAL_MODEL_EXECUTION_OR_RANK",
+        "CURRENT_UNIVERSE_SURVIVORSHIP_NOT_CONTROLLED",
+        "HISTORICAL_VALUATION_AND_RISK_EVIDENCE_INCOMPLETE"
+      ],
+      "modelEvidenceLabel": "NOT_VALIDATED",
+      "modelTrack": "LONG_HORIZON_V11",
+      "modelVersion": "LONG-HORIZON-RESEARCH-v1.1.0",
+      "rankingEvidence": "NOT_EVALUATED",
+      "runStatus": "INSUFFICIENT_EVIDENCE",
+      "target": "DOWNSIDE_RISK",
+      "targetEvidence": "MISSING"
+    }
+  ],
+  "schemaVersion": "MODEL-VALIDATION-TERMINAL-CLOSEOUT-v1.0.0",
+  "sourceArtifacts": [
+    {
+      "artifactContentHash": "sha256:6eafc7f59a3a461a6a4878df3c4f469bf7fb04039ae20005a1796958705717e7",
+      "fileSha256": "C53076C6C25C8498876EBEC7DB534595B1BCD0B3DCD1F5E5B4CB501FD18C458E",
+      "reference": "docs/generated/tactical-v2-2-tier1-statistical-closeout-2026-07-30.json"
+    },
+    {
+      "artifactContentHash": "B89FC3035EF6803D2F31B88B1D946DCF77760EBD8DE57D13C186C18D99E77C57",
+      "fileSha256": "8325054EDD61046A76D236C78229A600AD843D7E82E148983B8EF803E04E80EC",
+      "reference": "docs/generated/long-horizon-v1-1-tier1-retrospective-2026-07-30.json"
+    },
+    {
+      "artifactContentHash": "A2B083238DAA4A97CC4570898CAB70591A701EF3931A305C93006CC10D5BA7D0",
+      "fileSha256": "83142830D9BAD72D935F51EB20357861E48580DD932C2ECF4DFDE190F707D967",
+      "reference": "docs/generated/long-horizon-v1-1-tier2-pit-reconstruction-2026-07-30.json"
+    }
+  ],
+  "tacticalCalibrationState": "NOT_APPLICABLE_UNCALIBRATED_ORDINAL_MODEL",
+  "terminalConclusion": "TACTICAL_RANKING_PARTIAL_DIAGNOSTIC_ONLY;TACTICAL_ENTRY_NOT_VALIDATED;LONG_HORIZON_NOT_VALIDATED"
+}

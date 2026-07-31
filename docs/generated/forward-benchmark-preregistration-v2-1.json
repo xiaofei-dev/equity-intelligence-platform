@@ -1,0 +1,19 @@
+{
+  "completeBenchmarkEvidenceRequired": true,
+  "constructionPolicyHash": "sha256:ee0b1de73e19b8475a056231aa6e03817ae273f40f7ca74e4f693446bc4a62df",
+  "constructionPolicyVersion": "FORWARD-BENCHMARK-CONSTRUCTION-v2.1.0",
+  "controlledBundleRequired": true,
+  "parentBenchmarkContractHash": "sha256:f217f27e424bd75422f2402153fdb4498db28ab2cd4a8aaca426382a11b23438",
+  "parentPreregistrationContentHash": "sha256:cb63d2600b42c9003be8a99a76de967e5921ef68440bcd3a0d6dd8934efac966",
+  "preregistrationContentHash": "sha256:5356f9ad16ff246e4f5565daee8316a9fae56f94bc126593bd10adec7c62d5a4",
+  "registeredAt": "2026-07-30T03:12:23.237053Z",
+  "requiredBenchmarkKinds": [
+    "SPY",
+    "SECTOR",
+    "EQUAL_WEIGHT",
+    "PURE_MOMENTUM",
+    "PURE_VALUE",
+    "PURE_QUALITY"
+  ],
+  "schemaVersion": "FORWARD-BENCHMARK-PREREGISTRATION-v2.1.0"
+}
