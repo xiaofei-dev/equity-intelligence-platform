@@ -1,0 +1,65 @@
+{
+  "appendOnlyPersistenceContract": "FORWARD-DQV-OUTCOME-v2.1.0",
+  "artifactContentHash": "sha256:5a6d49da57ec9366c645b226da5f81a85edf72298adfa202976f17987ced24f8",
+  "completeFrozenPopulationIdentityGuard": true,
+  "diagnosticLongHorizon": 126,
+  "executionBoundary": {
+    "commits": 0,
+    "databaseWrites": 0,
+    "deployments": 0,
+    "networkRequests": 0,
+    "pushes": 0,
+    "realOutcomes": 0,
+    "scores": 0
+  },
+  "focusedTestsPassed": 9,
+  "formalLongHorizon": 252,
+  "fullRepositorySuite": "PENDING_FINAL_CLOSEOUT",
+  "grossCostNetImplemented": true,
+  "leakageGuardsImplemented": true,
+  "liquidityEvidencePreserved": {
+    "averageDailyDollarVolume": true,
+    "downsideCapture": "PER_READY_PATH_RELATIVE_TO_SPY_NEGATIVE_SESSIONS",
+    "downsideCaptureUndefinedState": "NOT_APPLICABLE_NO_SPY_NEGATIVE_SESSIONS",
+    "orderNotional": true,
+    "participationRate": true,
+    "portfolioTurnover": null,
+    "portfolioTurnoverState": "NOT_COMPUTABLE_MISSING_PORTFOLIO_DENOMINATOR"
+  },
+  "pathMetricsImplemented": [
+    "MAXIMUM_ADVERSE_EXCURSION",
+    "MAXIMUM_FAVORABLE_EXCURSION",
+    "MAXIMUM_DRAWDOWN",
+    "DOWNSIDE_CAPTURE",
+    "DOWNSIDE_DEVIATION",
+    "REALIZED_VOLATILITY"
+  ],
+  "productionEvaluatorImplemented": true,
+  "provenanceBoundaryImplemented": true,
+  "realExecutionStatus": "BLOCKED_NO_ENROLLMENT",
+  "schemaVersion": "FORWARD-DQV-MATURITY-ENGINE-ACCEPTANCE-v1.0.0",
+  "sixBenchmarksRequired": true,
+  "sourceFiles": {
+    "documentation": {
+      "fileSha256": "sha256:dd253418f2aa926d01c95b0b1e7843d51431f19c39ca4d7e2e116507463a8017",
+      "path": "docs/forward-dqv-maturity-outcome-engine-v2-2.md"
+    },
+    "engine": {
+      "fileSha256": "sha256:528be2d129f2c2cd75f7e30d9f9d6b5963427e0892d33b8e99ea88ff1173adbb",
+      "path": "analysis-python/src/equity_analysis/forward_validation/maturity_outcome_engine_v22.py"
+    },
+    "tests": {
+      "fileSha256": "sha256:d7c6805865e317b9a18edb106d28ca6bc29237943f5b11c7dab3489fa0ffcfd3",
+      "path": "analysis-python/tests/test_maturity_outcome_engine_v22.py"
+    }
+  },
+  "status": "OFFLINE_ENGINE_READY",
+  "supportedHorizons": [
+    5,
+    20,
+    60,
+    126,
+    252
+  ],
+  "typedStableEvidenceRootsImplemented": true
+}

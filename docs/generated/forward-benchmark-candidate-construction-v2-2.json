@@ -1,0 +1,151 @@
+{
+  "artifactContentHash": "sha256:f5c23ad459349a7aa125d0cd492094d016ae3471affc8cce560facea5da91385",
+  "candidatePolicyHash": "sha256:6f03ed3c092983d691ef8f32a71384ef329528b0a69a85e84579587901ee69d8",
+  "captureArtifactContentHash": "sha256:6421f584a5e1e8adf9e35ee88eb259982f72956dd475bc6897570e5d158b0693",
+  "coverageArtifactContentHash": "sha256:03ec8cfa4a923a5b2c53ce2fef68b80e5a7cad165c97f4259ec0a914411327f1",
+  "deterministicModelScoresIncluded": false,
+  "enrollmentExecuted": false,
+  "fullBenchmarkConstructionStatus": "PRICE_LIQUIDITY_COST_AND_EXTERNAL_REFERENCE_EVIDENCE_PENDING",
+  "minimumCoverage": "44_OF_55",
+  "outcomesObserved": false,
+  "pureQuality": {
+    "benchmarkKind": "PURE_QUALITY",
+    "requiredCandidateCount": 44,
+    "selected": [
+      {
+        "publicSecurityId": "06297dd5-c150-5360-8cbb-c6341aa01dae",
+        "rank": 1,
+        "symbol": "META"
+      },
+      {
+        "publicSecurityId": "920d82bc-d5f6-52d9-8f79-4ce539d3481d",
+        "rank": 2,
+        "symbol": "AVGO"
+      },
+      {
+        "publicSecurityId": "640f3d4e-7841-567b-b8aa-163c73d20567",
+        "rank": 3,
+        "symbol": "OLED"
+      },
+      {
+        "publicSecurityId": "580cbcd9-264d-51f4-bbdc-cae9116fa05d",
+        "rank": 4,
+        "symbol": "NVDA"
+      },
+      {
+        "publicSecurityId": "ea503902-9cbd-5ca3-82a4-00214f655ab2",
+        "rank": 5,
+        "symbol": "MSFT"
+      },
+      {
+        "publicSecurityId": "c12a95ce-5e86-5520-8c33-5f8bc6605dd7",
+        "rank": 6,
+        "symbol": "JNJ"
+      },
+      {
+        "publicSecurityId": "1d3e4e20-f35a-512d-a51d-71e218a1102a",
+        "rank": 7,
+        "symbol": "ORCL"
+      },
+      {
+        "publicSecurityId": "c84db089-efaf-5597-a44a-892bef95fd87",
+        "rank": 8,
+        "symbol": "MDT"
+      },
+      {
+        "publicSecurityId": "48919d38-e65c-55d7-a910-1beda2cc09fe",
+        "rank": 9,
+        "symbol": "SYK"
+      },
+      {
+        "publicSecurityId": "c6e9c6a3-b6a0-5e57-b0be-a104bb0c4a5a",
+        "rank": 10,
+        "symbol": "CSCO"
+      },
+      {
+        "publicSecurityId": "347e531f-97ea-51b2-8ca6-aaaa878f6407",
+        "rank": 11,
+        "symbol": "KO"
+      }
+    ],
+    "selectedCount": 11,
+    "status": "CANDIDATE_SET_READY_PRICE_LIQUIDITY_COST_PENDING",
+    "statusCounts": {
+      "VALID": 55
+    },
+    "validCandidateCount": 55
+  },
+  "pureValue": {
+    "benchmarkKind": "PURE_VALUE",
+    "requiredCandidateCount": 44,
+    "selected": [
+      {
+        "publicSecurityId": "13371d22-6a81-5d12-a37c-f32b791c1639",
+        "rank": 1,
+        "symbol": "PLAB"
+      },
+      {
+        "publicSecurityId": "f6cbe650-b724-5091-9097-df108a561c27",
+        "rank": 2,
+        "symbol": "CALM"
+      },
+      {
+        "publicSecurityId": "179b3a37-5c71-545a-901c-508038ede4e9",
+        "rank": 3,
+        "symbol": "ACN"
+      },
+      {
+        "publicSecurityId": "2f57cfe5-52f7-5afc-beb5-3bc1564710a0",
+        "rank": 4,
+        "symbol": "CROX"
+      },
+      {
+        "publicSecurityId": "b8deed89-848c-56a5-8323-80ed14b62215",
+        "rank": 5,
+        "symbol": "UFPI"
+      },
+      {
+        "publicSecurityId": "b649ccea-1e7f-5a90-9a07-3b08614ff51e",
+        "rank": 6,
+        "symbol": "TGT"
+      },
+      {
+        "publicSecurityId": "e65f41aa-f7bc-56ea-9d58-7fc05a62c7f5",
+        "rank": 7,
+        "symbol": "UPS"
+      },
+      {
+        "publicSecurityId": "62d95825-6ce5-5184-bf7a-692777a3e328",
+        "rank": 8,
+        "symbol": "DIS"
+      },
+      {
+        "publicSecurityId": "b8e66b25-90e2-55f8-95bf-8a6135af8e3f",
+        "rank": 9,
+        "symbol": "DUK"
+      },
+      {
+        "publicSecurityId": "5148f419-992c-5470-ba14-b7d612193b92",
+        "rank": 10,
+        "symbol": "HON"
+      },
+      {
+        "publicSecurityId": "640f3d4e-7841-567b-b8aa-163c73d20567",
+        "rank": 11,
+        "symbol": "OLED"
+      }
+    ],
+    "selectedCount": 11,
+    "status": "CANDIDATE_SET_READY_PRICE_LIQUIDITY_COST_PENDING",
+    "statusCounts": {
+      "VALID": 55
+    },
+    "validCandidateCount": 55
+  },
+  "rawProviderValuesIncluded": false,
+  "runId": "20260730T041722Z-02f8ddea2f6e",
+  "schemaVersion": "FORWARD-BENCHMARK-CANDIDATE-CONSTRUCTION-v2.2.0",
+  "selectionCountFormula": "CEILING(VALID_CANDIDATE_COUNT * 0.20)",
+  "selectionRule": "TOP_QUINTILE_OF_VALID_CANDIDATES_ONLY",
+  "tieBreak": "PUBLIC_SECURITY_ID_ASCENDING"
+}

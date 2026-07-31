@@ -1,0 +1,758 @@
+{
+  "artifactType": "TACTICAL_V22_HISTORICAL_DIAGNOSTIC_TERMINAL",
+  "schemaVersion": "TACTICAL-V2.2-HISTORICAL-DIAGNOSTIC-TERMINAL-v1.0.0",
+  "diagnosticVersion": "TACTICAL-V2.2-HISTORICAL-DIAGNOSTIC-v1.0.0",
+  "modelVersion": "TACTICAL-SIGNAL-v2.2.0",
+  "diagnosticAt": "2026-07-30T02:30:00+00:00",
+  "terminalStatus": "BLOCKED_BY_DATA",
+  "evaluationRole": "DEVELOPMENT_OBSERVED",
+  "untouchedHoldout": false,
+  "claimCeiling": "DIAGNOSTIC_ONLY",
+  "freeze": {
+    "path": "docs/generated/tactical-v2-2-model-freeze.json",
+    "fileSha256": "5D541315F62990BC5F44A4E421F404D737F6FFCF039E586B18BA362A113DC49F",
+    "artifactContentHash": "A596080CD7936A6881A38E759C597934DAE1125EC83026DF6DB0434F6FE31910",
+    "freezeHash": "D6E3EDB1160856ADE700C37D42A4C9E2CDDA3B88A4080DBC8ED73354B4C5BF99"
+  },
+  "protocol": {
+    "protocolHashes": {
+      "NON_OVERLAPPING": "F967A14CCE993578CD9A2C99D093D102AE8F5C2DA0C5C2F5FD73DBFCC58AB935",
+      "OVERLAPPING_DIAGNOSTIC": "E9B5D62695B3C47AC094551D887B1916BE589972635382208A2B27C7B6AB6C7D"
+    },
+    "walkForwardPlanHashes": {
+      "NON_OVERLAPPING": "1697CD647A8242E5D0A23D073B63256D849443989CFC6121D47F5F3DA72A0B6B",
+      "OVERLAPPING_DIAGNOSTIC": "FF8D76679FECC7C2C7B09A0DDC9076C4D1873EF204124078FBEEA34139BC3872"
+    }
+  },
+  "sourceEvidence": {
+    "historicalPriceManifest": {
+      "path": "docs/generated/historical-yahoo-price-cache-20260729T-HISTORICAL-V1-R2-manifest.json",
+      "verificationStatus": "VERIFIED",
+      "fileSha256": "E322AC57C00BB4018AC883A2F0EF3461299D7D97725B0791C75EA01846D08E27",
+      "artifactContentHash": "CF50A3994AB3660029AC56F586F8B6CA572EA1654B6B5DF5549152D191B1A0D9",
+      "universeVersion": "market-intelligence-closed-test-us-v1.0.0",
+      "universeFileSha256": "C977E932EDD5184AABBDE53ACCFF6F480650F96C03C878A9EC7FBE15D2920078",
+      "orderedSymbolSetHash": "8423A28228C6EEBCBF75611EE30BD208E4BBF0F7A11211F7650A6778AC2CB828",
+      "verifiedPayloadCount": 56,
+      "rawProviderValuesIncluded": false
+    },
+    "frozenUniverse": {
+      "path": "analysis-python/resources/universes/market-intelligence-closed-test-us-v1.json",
+      "verificationStatus": "VERIFIED",
+      "fileSha256": "C977E932EDD5184AABBDE53ACCFF6F480650F96C03C878A9EC7FBE15D2920078",
+      "artifactContentHash": "55F245E64E04B89BDAB3C3AE571EBD5B6D16ACE5F87CB7E81DE79575EA778DB7",
+      "version": "market-intelligence-closed-test-us-v1.0.0",
+      "securityCount": 66,
+      "roleCounts": {
+        "PRIMARY": 48,
+        "RESERVE": 7,
+        "REFERENCE_ONLY": 2,
+        "EXCLUDED": 9
+      },
+      "orderedSymbolSetHash": "E128F558D3F13637315398C23AB0823A92B92714F5EB1B9E1FACFB3F6D71F61C"
+    }
+  },
+  "evidenceBoundary": {
+    "priceAction": "EX_POST_TOTAL_RETURN_ADJUSTED",
+    "availability": "CURRENT_REVISION_RETROSPECTIVE",
+    "universe": "CURRENT_UNIVERSE_RETROSPECTIVE"
+  },
+  "benchmarkEvidence": [
+    {
+      "availability_status": "AVAILABLE",
+      "evidence_hash": "CF50A3994AB3660029AC56F586F8B6CA572EA1654B6B5DF5549152D191B1A0D9",
+      "identifier": "SPY-historical-cache-v1",
+      "kind": "SPY",
+      "reason": null
+    },
+    {
+      "availability_status": "MISSING",
+      "evidence_hash": null,
+      "identifier": "SECTOR-historical-cache-v1",
+      "kind": "SECTOR",
+      "reason": "Historical sector ETF series and dated sector mapping are missing"
+    },
+    {
+      "availability_status": "AVAILABLE",
+      "evidence_hash": "CF50A3994AB3660029AC56F586F8B6CA572EA1654B6B5DF5549152D191B1A0D9",
+      "identifier": "EQUAL_WEIGHT-historical-cache-v1",
+      "kind": "EQUAL_WEIGHT",
+      "reason": null
+    },
+    {
+      "availability_status": "AVAILABLE",
+      "evidence_hash": "CF50A3994AB3660029AC56F586F8B6CA572EA1654B6B5DF5549152D191B1A0D9",
+      "identifier": "PURE_MOMENTUM-historical-cache-v1",
+      "kind": "PURE_MOMENTUM",
+      "reason": null
+    },
+    {
+      "availability_status": "MISSING",
+      "evidence_hash": null,
+      "identifier": "PURE_VALUE-historical-cache-v1",
+      "kind": "PURE_VALUE",
+      "reason": "Point-in-time pure-value benchmark evidence is missing"
+    },
+    {
+      "availability_status": "MISSING",
+      "evidence_hash": null,
+      "identifier": "PURE_QUALITY-historical-cache-v1",
+      "kind": "PURE_QUALITY",
+      "reason": "Point-in-time pure-quality benchmark evidence is missing"
+    }
+  ],
+  "missingEvidence": {
+    "historicalSectorMapping": "MISSING",
+    "historicalEventEvidence": "MISSING",
+    "pureValueBenchmark": "MISSING",
+    "pureQualityBenchmark": "MISSING"
+  },
+  "population": {
+    "securityCount": 66,
+    "terminalCounts": {
+      "ASSESSED": 0,
+      "MISSING": 55,
+      "INVALID": 0,
+      "STALE": 0,
+      "NOT_APPLICABLE": 2,
+      "SPECIALIZED_MODEL_REQUIRED": 0,
+      "EXCLUDED": 9
+    },
+    "reasonProfiles": {
+      "CANDIDATE_DATA_BLOCKED": [
+        "HISTORICAL_EVENT_EVIDENCE_MISSING",
+        "SECTOR_MAPPING_MISSING",
+        "BENCHMARK_SECTOR_MISSING",
+        "BENCHMARK_PURE_VALUE_MISSING",
+        "BENCHMARK_PURE_QUALITY_MISSING"
+      ],
+      "REFERENCE_ONLY": [
+        "REFERENCE_ONLY_NOT_SECURITY_SCORE_POPULATION"
+      ],
+      "BIOTECHNOLOGY": [
+        "BIOTECHNOLOGY"
+      ],
+      "DELISTED_SPECIAL_SITUATION": [
+        "DELISTED_SPECIAL_SITUATION"
+      ],
+      "EMERGING_GROWTH": [
+        "EMERGING_GROWTH"
+      ],
+      "FINANCIAL": [
+        "FINANCIAL"
+      ],
+      "REIT": [
+        "REIT"
+      ],
+      "RESOURCE": [
+        "RESOURCE"
+      ],
+      "SPECIAL_SITUATION": [
+        "SPECIAL_SITUATION"
+      ]
+    },
+    "records": [
+      {
+        "publicSecurityId": "d8a14843-961a-5406-a372-b69d46f7512f",
+        "symbol": "AAPL",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "ea503902-9cbd-5ca3-82a4-00214f655ab2",
+        "symbol": "MSFT",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "06297dd5-c150-5360-8cbb-c6341aa01dae",
+        "symbol": "META",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "2d4a0d15-2f0c-5c6e-acaf-10a647855fb1",
+        "symbol": "WMT",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "a908303b-63ee-55e2-ac33-7b1625c7ab33",
+        "symbol": "MCD",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "2020eb4c-563a-5293-8b52-e35b044772c0",
+        "symbol": "CAT",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "3126a093-d76e-552c-9b40-bd6e37f2d0f5",
+        "symbol": "ADP",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "11a5a36e-831f-5550-a28b-7e6f6c817009",
+        "symbol": "NKE",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "b649ccea-1e7f-5a90-9a07-3b08614ff51e",
+        "symbol": "TGT",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "13371d22-6a81-5d12-a37c-f32b791c1639",
+        "symbol": "PLAB",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "580cbcd9-264d-51f4-bbdc-cae9116fa05d",
+        "symbol": "NVDA",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "920d82bc-d5f6-52d9-8f79-4ce539d3481d",
+        "symbol": "AVGO",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "1d3e4e20-f35a-512d-a51d-71e218a1102a",
+        "symbol": "ORCL",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "c6e9c6a3-b6a0-5e57-b0be-a104bb0c4a5a",
+        "symbol": "CSCO",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "179b3a37-5c71-545a-901c-508038ede4e9",
+        "symbol": "ACN",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "8f5d16c8-8417-5374-9fd4-5aa90e1430f5",
+        "symbol": "IBM",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "37c45c45-1973-5ca0-a81a-a65cf45359a2",
+        "symbol": "GOOGL",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "cf0d4c88-d578-5369-9cd1-3d42c1d94aab",
+        "symbol": "NFLX",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "62d95825-6ce5-5184-bf7a-692777a3e328",
+        "symbol": "DIS",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "426c12ec-91f8-55c9-85fb-76a55a0fd3ed",
+        "symbol": "AMZN",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "fa14b2bf-1e71-5fe7-8ea2-d000c1c0db57",
+        "symbol": "HD",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "42b3f426-7956-53fa-b0e9-706c25fb808d",
+        "symbol": "LOW",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "c919870a-589c-5744-9077-1aaf3eb09c35",
+        "symbol": "SBUX",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "fc24ce00-afe0-5f5b-b75c-5aaeef8d1c9d",
+        "symbol": "COST",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "a29d6c6c-dede-5e1d-a8cd-ad174e88dc4d",
+        "symbol": "PG",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "347e531f-97ea-51b2-8ca6-aaaa878f6407",
+        "symbol": "KO",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "529b9520-ffb4-55d3-87dc-ef66ad8811f9",
+        "symbol": "PEP",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "7d091a87-f1c3-546a-adee-3e69ff9daeb1",
+        "symbol": "CL",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "c12a95ce-5e86-5520-8c33-5f8bc6605dd7",
+        "symbol": "JNJ",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "d2e4553a-700e-547d-b1b7-9aa6be8dd4a7",
+        "symbol": "ABT",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "c84db089-efaf-5597-a44a-892bef95fd87",
+        "symbol": "MDT",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "48919d38-e65c-55d7-a910-1beda2cc09fe",
+        "symbol": "SYK",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "0ad69d1c-35c0-54ec-bed9-db54a6f0bcd0",
+        "symbol": "TMO",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "0e9cc7f3-1e1a-5cc5-9093-a7233697986e",
+        "symbol": "MCK",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "5148f419-992c-5470-ba14-b7d612193b92",
+        "symbol": "HON",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "e65f41aa-f7bc-56ea-9d58-7fc05a62c7f5",
+        "symbol": "UPS",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "d70f5294-34ee-5758-9268-9ca8877d6193",
+        "symbol": "UNP",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "07e78ba6-4943-581d-8588-29860f42df97",
+        "symbol": "DE",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "ce622392-309d-57c2-81da-6a5a5155684e",
+        "symbol": "ETN",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "2ddf3749-9afb-5a0e-8325-bf6e7ecaccaf",
+        "symbol": "NEE",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "b8e66b25-90e2-55f8-95bf-8a6135af8e3f",
+        "symbol": "DUK",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "cb41680b-064a-5052-97c6-f90288b009fe",
+        "symbol": "SO",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "34ad83b5-4b28-5af8-a21b-20c3aa837c2f",
+        "symbol": "LIN",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "a26d692c-90b9-5207-894f-cea19e46cfa4",
+        "symbol": "SHW",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "041b73ca-4c7a-56c4-8502-166daed08ebc",
+        "symbol": "ECL",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "1b373ef1-1213-5215-9411-e683babcce3e",
+        "symbol": "APD",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "2f57cfe5-52f7-5afc-beb5-3bc1564710a0",
+        "symbol": "CROX",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "640f3d4e-7841-567b-b8aa-163c73d20567",
+        "symbol": "OLED",
+        "role": "PRIMARY",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "2ec39042-6cbf-53d0-a121-03e4dd705cc0",
+        "symbol": "EXPO",
+        "role": "RESERVE",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "f6cbe650-b724-5091-9097-df108a561c27",
+        "symbol": "CALM",
+        "role": "RESERVE",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "b8deed89-848c-56a5-8323-80ed14b62215",
+        "symbol": "UFPI",
+        "role": "RESERVE",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "f91871f9-3a89-58d4-a969-c1086da0acc6",
+        "symbol": "WDFC",
+        "role": "RESERVE",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "8916acf0-b2ce-55ba-a1bf-d323132b744a",
+        "symbol": "FIX",
+        "role": "RESERVE",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "c0d54251-ff4c-52d6-aba4-274471b471a9",
+        "symbol": "SAIA",
+        "role": "RESERVE",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "1fab244e-4f55-52c4-b79c-8773f2097ab9",
+        "symbol": "ELF",
+        "role": "RESERVE",
+        "terminalState": "MISSING",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "CANDIDATE_DATA_BLOCKED"
+      },
+      {
+        "publicSecurityId": "e8e8fe9b-dc95-5a64-86b1-41b00e7569c5",
+        "symbol": "SPY",
+        "role": "REFERENCE_ONLY",
+        "terminalState": "NOT_APPLICABLE",
+        "historicalPriceCacheStatus": "AVAILABLE",
+        "reasonProfile": "REFERENCE_ONLY"
+      },
+      {
+        "publicSecurityId": "78578a05-4d92-5cb6-afd7-6a72f157ae05",
+        "symbol": "XLK",
+        "role": "REFERENCE_ONLY",
+        "terminalState": "NOT_APPLICABLE",
+        "historicalPriceCacheStatus": "MISSING",
+        "reasonProfile": "REFERENCE_ONLY"
+      },
+      {
+        "publicSecurityId": "69692f09-d399-5486-9332-1d50fd438275",
+        "symbol": "GE",
+        "role": "EXCLUDED",
+        "terminalState": "EXCLUDED",
+        "historicalPriceCacheStatus": "MISSING",
+        "reasonProfile": "SPECIAL_SITUATION"
+      },
+      {
+        "publicSecurityId": "3f94be03-3479-54a4-aec6-3fe3a4f3845a",
+        "symbol": "JPM",
+        "role": "EXCLUDED",
+        "terminalState": "EXCLUDED",
+        "historicalPriceCacheStatus": "MISSING",
+        "reasonProfile": "FINANCIAL"
+      },
+      {
+        "publicSecurityId": "0601b932-472b-5abb-a969-834b9d64d281",
+        "symbol": "PGR",
+        "role": "EXCLUDED",
+        "terminalState": "EXCLUDED",
+        "historicalPriceCacheStatus": "MISSING",
+        "reasonProfile": "FINANCIAL"
+      },
+      {
+        "publicSecurityId": "b294a8ac-4a79-59b4-bac0-2ce343b0b8f9",
+        "symbol": "O",
+        "role": "EXCLUDED",
+        "terminalState": "EXCLUDED",
+        "historicalPriceCacheStatus": "MISSING",
+        "reasonProfile": "REIT"
+      },
+      {
+        "publicSecurityId": "c04f9fd4-7377-5c12-8f7c-feaa29258ec7",
+        "symbol": "XOM",
+        "role": "EXCLUDED",
+        "terminalState": "EXCLUDED",
+        "historicalPriceCacheStatus": "MISSING",
+        "reasonProfile": "RESOURCE"
+      },
+      {
+        "publicSecurityId": "748396c9-9ad1-5335-8cb3-c83bc7ad4be4",
+        "symbol": "MRNA",
+        "role": "EXCLUDED",
+        "terminalState": "EXCLUDED",
+        "historicalPriceCacheStatus": "MISSING",
+        "reasonProfile": "BIOTECHNOLOGY"
+      },
+      {
+        "publicSecurityId": "c6b35887-cc54-51d0-bf27-fe29e555cb8c",
+        "symbol": "LCID",
+        "role": "EXCLUDED",
+        "terminalState": "EXCLUDED",
+        "historicalPriceCacheStatus": "MISSING",
+        "reasonProfile": "EMERGING_GROWTH"
+      },
+      {
+        "publicSecurityId": "166f2fd0-2895-5b6a-8fe7-6bebd60fc058",
+        "symbol": "TWTR",
+        "role": "EXCLUDED",
+        "terminalState": "EXCLUDED",
+        "historicalPriceCacheStatus": "MISSING",
+        "reasonProfile": "DELISTED_SPECIAL_SITUATION"
+      },
+      {
+        "publicSecurityId": "4caaacbd-870a-59ed-b27d-d6af478af0fb",
+        "symbol": "NBN",
+        "role": "EXCLUDED",
+        "terminalState": "EXCLUDED",
+        "historicalPriceCacheStatus": "MISSING",
+        "reasonProfile": "FINANCIAL"
+      }
+    ]
+  },
+  "blockers": [
+    "HISTORICAL_EVENT_EVIDENCE_MISSING",
+    "SECTOR_MAPPING_MISSING[AAPL]",
+    "SECTOR_MAPPING_MISSING[MSFT]",
+    "SECTOR_MAPPING_MISSING[META]",
+    "SECTOR_MAPPING_MISSING[WMT]",
+    "SECTOR_MAPPING_MISSING[MCD]",
+    "SECTOR_MAPPING_MISSING[CAT]",
+    "SECTOR_MAPPING_MISSING[ADP]",
+    "SECTOR_MAPPING_MISSING[NKE]",
+    "SECTOR_MAPPING_MISSING[TGT]",
+    "SECTOR_MAPPING_MISSING[PLAB]",
+    "SECTOR_MAPPING_MISSING[NVDA]",
+    "SECTOR_MAPPING_MISSING[AVGO]",
+    "SECTOR_MAPPING_MISSING[ORCL]",
+    "SECTOR_MAPPING_MISSING[CSCO]",
+    "SECTOR_MAPPING_MISSING[ACN]",
+    "SECTOR_MAPPING_MISSING[IBM]",
+    "SECTOR_MAPPING_MISSING[GOOGL]",
+    "SECTOR_MAPPING_MISSING[NFLX]",
+    "SECTOR_MAPPING_MISSING[DIS]",
+    "SECTOR_MAPPING_MISSING[AMZN]",
+    "SECTOR_MAPPING_MISSING[HD]",
+    "SECTOR_MAPPING_MISSING[LOW]",
+    "SECTOR_MAPPING_MISSING[SBUX]",
+    "SECTOR_MAPPING_MISSING[COST]",
+    "SECTOR_MAPPING_MISSING[PG]",
+    "SECTOR_MAPPING_MISSING[KO]",
+    "SECTOR_MAPPING_MISSING[PEP]",
+    "SECTOR_MAPPING_MISSING[CL]",
+    "SECTOR_MAPPING_MISSING[JNJ]",
+    "SECTOR_MAPPING_MISSING[ABT]",
+    "SECTOR_MAPPING_MISSING[MDT]",
+    "SECTOR_MAPPING_MISSING[SYK]",
+    "SECTOR_MAPPING_MISSING[TMO]",
+    "SECTOR_MAPPING_MISSING[MCK]",
+    "SECTOR_MAPPING_MISSING[HON]",
+    "SECTOR_MAPPING_MISSING[UPS]",
+    "SECTOR_MAPPING_MISSING[UNP]",
+    "SECTOR_MAPPING_MISSING[DE]",
+    "SECTOR_MAPPING_MISSING[ETN]",
+    "SECTOR_MAPPING_MISSING[NEE]",
+    "SECTOR_MAPPING_MISSING[DUK]",
+    "SECTOR_MAPPING_MISSING[SO]",
+    "SECTOR_MAPPING_MISSING[LIN]",
+    "SECTOR_MAPPING_MISSING[SHW]",
+    "SECTOR_MAPPING_MISSING[ECL]",
+    "SECTOR_MAPPING_MISSING[APD]",
+    "SECTOR_MAPPING_MISSING[CROX]",
+    "SECTOR_MAPPING_MISSING[OLED]",
+    "SECTOR_MAPPING_MISSING[EXPO]",
+    "SECTOR_MAPPING_MISSING[CALM]",
+    "SECTOR_MAPPING_MISSING[UFPI]",
+    "SECTOR_MAPPING_MISSING[WDFC]",
+    "SECTOR_MAPPING_MISSING[FIX]",
+    "SECTOR_MAPPING_MISSING[SAIA]",
+    "SECTOR_MAPPING_MISSING[ELF]",
+    "BENCHMARK_SECTOR_MISSING",
+    "BENCHMARK_PURE_VALUE_MISSING",
+    "BENCHMARK_PURE_QUALITY_MISSING"
+  ],
+  "metrics": {
+    "horizons": [],
+    "outcomesIncluded": false,
+    "scoresIncluded": false,
+    "returnClaimsIncluded": false
+  },
+  "execution": {
+    "networkRequests": 0,
+    "tuningPerformed": false,
+    "historicalOutcomeEvaluationExecuted": false
+  },
+  "artifactContentHash": "E389CB70CEAB19854DB13B22652CC547C4618B12F4E28947DB03297D59632C7A"
+}

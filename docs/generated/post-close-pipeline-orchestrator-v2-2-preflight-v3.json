@@ -1,0 +1,142 @@
+{
+  "aiUsedForDeterministicFields": false,
+  "artifactContentHash": "sha256:ed304df17d6debf4f036a1269fbf1fa05eb6abae1fccd05f993cb6975a214cbe",
+  "artifactType": "POST_CLOSE_PIPELINE_PREFLIGHT",
+  "automaticTradingAuthorized": false,
+  "blockedReasons": [
+    "CONTROLLED_BENCHMARK_CONSTITUENT_LEDGER_NOT_IMPLEMENTED",
+    "PRODUCTION_66_MODEL_INPUT_EVIDENCE_MISSING",
+    "TARGET_SESSION_NOT_COMPLETED"
+  ],
+  "databaseReadsExecuted": 0,
+  "databaseWritesExecuted": 0,
+  "enrollmentExecuted": false,
+  "futureLiveCaptureCommandMayBeInvokedByOrchestrator": false,
+  "futureLiveCaptureRequiresExistingDedicatedCli": true,
+  "latestCompletedSession": "2026-07-29",
+  "orchestratorVersion": "POST-CLOSE-PIPELINE-ORCHESTRATOR-v2.2.0",
+  "productionStageBindings": {
+    "benchmarkConstruction": {
+      "callable": "benchmark_construction_v22.build_benchmark_evidence_bundle_v22",
+      "state": "IMPLEMENTED_AWAITING_COMPLETED_PRICE_CAPTURE"
+    },
+    "decisionSnapshot": {
+      "callable": "post_freeze_decision_snapshot_v22.assemble_post_freeze_decision_snapshot_v22",
+      "state": "IMPLEMENTED_AWAITING_UPSTREAM_STAGES"
+    },
+    "deterministicDecisionOutput": {
+      "contract": "deterministic_decision_output_v22.DeterministicDecisionOutputSetV22",
+      "controlledBenchmarkConstituentLedgerSetHash": "REQUIRED",
+      "state": "IMPLEMENTED_AWAITING_REAL_FROZEN_MODEL_EXECUTION"
+    },
+    "frozenModelExecution": {
+      "callable": "post_freeze_model_execution_v22.execute_post_freeze_models_v22",
+      "state": "IMPLEMENTED_AWAITING_MODEL_INPUT_ASSEMBLY"
+    },
+    "modelInputAssembly": {
+      "callable": "post_close_model_input_assembly_v22.assemble_post_close_model_inputs_v22",
+      "currentEvidenceArtifact": null,
+      "state": "IMPLEMENTED_AWAITING_REAL_66_MEMBER_EVIDENCE"
+    },
+    "priceCapture": {
+      "networkEntryPoint": "equity_analysis.future_price_evidence.history_capture_cli_v2",
+      "orchestratorMayInvoke": false,
+      "state": "BLOCKED_TARGET_SESSION_NOT_COMPLETED"
+    },
+    "prospectiveEnrollment": {
+      "explicitExecuteEnrollmentRequired": true,
+      "legacyV18OrV2_1_0ReadyAccepted": false,
+      "state": "IMPLEMENTED_V2_1_1_AWAITING_UPSTREAM_AND_EXPLICIT_EXECUTION",
+      "v19ChronologyAcceptanceHash": "sha256:53835fb8a9cb123541ec3dfa82778439608107553dce9a421e1bf68456ea5b66"
+    },
+    "successorReadiness": {
+      "callable": "evaluate_successor_readiness_v221",
+      "state": "IMPLEMENTED_V2_2_1_BRIDGE_AWAITING_UPSTREAM"
+    }
+  },
+  "providerNetworkRequestsExecuted": 0,
+  "rawProviderValuesIncluded": false,
+  "readinessControllerVersion": "PROSPECTIVE-READINESS-CONTROLLER-v2.2.1",
+  "schemaVersion": "POST-CLOSE-PIPELINE-PREFLIGHT-v2.2.1",
+  "scoresOrRanksComputed": false,
+  "sourceBindings": {
+    "finalPricePreexecutionPreflight": {
+      "artifactContentHash": "sha256:a63cfe8bfcac0e9e5432e0bee9bb10122c1cebf99c498e599c0c25703b4778fa",
+      "path": "docs/generated/future-price-history-final-preexecution-preflight-v2-1.json"
+    },
+    "finalSuccessorReadinessCloseout": {
+      "artifactContentHash": "sha256:9cec9ef8d31c0946fab292554f38a4305363a4fcd6ab838241b46084fa74b6f0",
+      "path": "docs/generated/forward-v2-2-final-successor-readiness-closeout-v2.json"
+    },
+    "v19ChronologyAcceptance": {
+      "artifactContentHash": "sha256:53835fb8a9cb123541ec3dfa82778439608107553dce9a421e1bf68456ea5b66",
+      "path": "docs/generated/forward-dqv-v19-chronology-acceptance-v1.json"
+    }
+  },
+  "stages": [
+    {
+      "artifactContentHash": null,
+      "reasonCodes": [
+        "TARGET_SESSION_NOT_COMPLETED"
+      ],
+      "resumedFromImmutableArtifact": false,
+      "sourceBindingHashes": [
+        "sha256:a63cfe8bfcac0e9e5432e0bee9bb10122c1cebf99c498e599c0c25703b4778fa"
+      ],
+      "stage": "PRICE_CAPTURE_VERIFICATION",
+      "status": "BLOCKED"
+    },
+    {
+      "artifactContentHash": null,
+      "reasonCodes": [
+        "UPSTREAM_STAGE_NOT_COMPLETED"
+      ],
+      "resumedFromImmutableArtifact": false,
+      "sourceBindingHashes": [],
+      "stage": "SIX_BENCHMARK_CONSTRUCTION",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "artifactContentHash": null,
+      "reasonCodes": [
+        "UPSTREAM_STAGE_NOT_COMPLETED"
+      ],
+      "resumedFromImmutableArtifact": false,
+      "sourceBindingHashes": [],
+      "stage": "FROZEN_MODEL_EXECUTION",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "artifactContentHash": null,
+      "reasonCodes": [
+        "UPSTREAM_STAGE_NOT_COMPLETED"
+      ],
+      "resumedFromImmutableArtifact": false,
+      "sourceBindingHashes": [],
+      "stage": "POST_FREEZE_DECISION_SNAPSHOT",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "artifactContentHash": null,
+      "reasonCodes": [
+        "UPSTREAM_STAGE_NOT_COMPLETED"
+      ],
+      "resumedFromImmutableArtifact": false,
+      "sourceBindingHashes": [],
+      "stage": "SUCCESSOR_READINESS",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "artifactContentHash": null,
+      "reasonCodes": [
+        "UPSTREAM_STAGE_NOT_COMPLETED"
+      ],
+      "resumedFromImmutableArtifact": false,
+      "sourceBindingHashes": [],
+      "stage": "PROSPECTIVE_ENROLLMENT",
+      "status": "NOT_EXECUTED"
+    }
+  ],
+  "status": "BLOCKED",
+  "targetSession": "2026-07-30"
+}

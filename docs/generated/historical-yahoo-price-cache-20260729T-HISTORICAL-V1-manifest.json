@@ -1,0 +1,35 @@
+{
+  "artifactType": "HISTORICAL_YAHOO_DAILY_PRICE_CACHE_MANIFEST",
+  "schemaVersion": "HISTORICAL-YAHOO-PRICE-MANIFEST-v1.0.0",
+  "historicalValidationVersion": "HISTORICAL-DECISION-QUALITY-VALIDATION-v1.0.0",
+  "cacheContractVersion": "HISTORICAL-YAHOO-DAILY-PRICE-CACHE-v1.0.0",
+  "runId": "20260729T-HISTORICAL-V1",
+  "planHash": "55F8B5218B1D1C11FFC8AF603D6D1C2D580EAE3928AC87F4D844F7696EB8F05C",
+  "status": "FAILED",
+  "universeVersion": "market-intelligence-closed-test-us-v1.0.0",
+  "universeFileSha256": "C977E932EDD5184AABBDE53ACCFF6F480650F96C03C878A9EC7FBE15D2920078",
+  "orderedSymbolSetHash": "8423A28228C6EEBCBF75611EE30BD208E4BBF0F7A11211F7650A6778AC2CB828",
+  "plannedSecurityCount": 56,
+  "completedSecurityCount": 0,
+  "failedSecurityCount": 1,
+  "unrunSecurityCount": 55,
+  "replayedSecurityCount": 0,
+  "startDate": "2014-01-01",
+  "endDate": "2026-07-28",
+  "physicalWrapperCalls": 1,
+  "newPhysicalWrapperCalls": 1,
+  "executionNewSymbolCeiling": 6,
+  "wrapperCallHardCeiling": 56,
+  "providerRetryLimit": 0,
+  "adjustmentPolicyVersion": "YAHOO-ADJCLOSE-RATIO-OHLC-v1.0.0",
+  "rawProviderValuesIncluded": false,
+  "pricesIncluded": false,
+  "records": [],
+  "failures": [
+    {
+      "symbol": "AAPL",
+      "reasonCode": "EMPTY_RESULT"
+    }
+  ],
+  "artifactContentHash": "869125A4795DA6B08E0304ACB38A82562405745056CA03E07928C84834CE8980"
+}

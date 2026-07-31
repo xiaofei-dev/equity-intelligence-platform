@@ -1,0 +1,575 @@
+{
+  "aiMayAffectDeterministicFields": false,
+  "completePopulationRequired": true,
+  "costPolicyHash": "sha256:b07f5c5ad4b2f13d0c81a48b2eab4e722da9b0e43143e013bedcc155faba96bb",
+  "costPolicyVersion": "LIQUIDITY-SENSITIVE-COST-v1.0.0",
+  "evidenceBoundaries": [
+    {
+      "description": "Evidence or outcomes observed before model freeze or preregistration remain diagnostic and cannot be upgraded.",
+      "formalGateEligible": false,
+      "naturallyMaturedOutcomesOnly": false,
+      "priorArtifactUpgradeAllowed": false,
+      "priorOutcomeObservationAllowed": true,
+      "role": "DEVELOPMENT_OBSERVED"
+    },
+    {
+      "description": "Frozen historical slices require unobserved outcomes, complete point-in-time evidence, and the accepted purged protocol.",
+      "formalGateEligible": true,
+      "naturallyMaturedOutcomesOnly": true,
+      "priorArtifactUpgradeAllowed": false,
+      "priorOutcomeObservationAllowed": false,
+      "role": "SEALED_HISTORICAL_VALIDATION"
+    },
+    {
+      "description": "Only decisions strictly after preregistration may enroll, and outcomes are observed only after natural maturity.",
+      "formalGateEligible": true,
+      "naturallyMaturedOutcomesOnly": true,
+      "priorArtifactUpgradeAllowed": false,
+      "priorOutcomeObservationAllowed": false,
+      "role": "PROSPECTIVE_FORWARD"
+    }
+  ],
+  "governance": {
+    "artifactContentHash": "sha256:27453fce7ef859e0eaadbf4426d0d26c142ee2118edd9cacf9f0462a05031752",
+    "fileSha256": "sha256:c942dbbe201c08f19323113e8813c70a9cab7715d5c798849c504b4fa98af310",
+    "path": "docs/generated/model-validation-governance-v1.json"
+  },
+  "horizons": [
+    {
+      "completedSessions": 5,
+      "embargoSessions": 5,
+      "evaluationRole": "TACTICAL_FORMAL",
+      "formalGateEligible": true,
+      "minimumBootstrapBlockSessions": 5,
+      "minimumCoverageRatio": "0.80",
+      "minimumEligibleSecurityDecisions": 100,
+      "outcomeDependence": "PURGED_BLOCK",
+      "purgeSessions": 5,
+      "resampling": "BLOCK_BOOTSTRAP"
+    },
+    {
+      "completedSessions": 20,
+      "embargoSessions": 20,
+      "evaluationRole": "TACTICAL_FORMAL",
+      "formalGateEligible": true,
+      "minimumBootstrapBlockSessions": 20,
+      "minimumCoverageRatio": "0.80",
+      "minimumEligibleSecurityDecisions": 100,
+      "outcomeDependence": "PURGED_BLOCK",
+      "purgeSessions": 20,
+      "resampling": "BLOCK_BOOTSTRAP"
+    },
+    {
+      "completedSessions": 60,
+      "embargoSessions": 60,
+      "evaluationRole": "TACTICAL_FORMAL",
+      "formalGateEligible": true,
+      "minimumBootstrapBlockSessions": 60,
+      "minimumCoverageRatio": "0.80",
+      "minimumEligibleSecurityDecisions": 100,
+      "outcomeDependence": "PURGED_BLOCK",
+      "purgeSessions": 60,
+      "resampling": "BLOCK_BOOTSTRAP"
+    },
+    {
+      "completedSessions": 126,
+      "embargoSessions": 126,
+      "evaluationRole": "LONG_HORIZON_INTERIM_DIAGNOSTIC",
+      "formalGateEligible": false,
+      "minimumBootstrapBlockSessions": 126,
+      "minimumCoverageRatio": "0.80",
+      "minimumEligibleSecurityDecisions": 100,
+      "outcomeDependence": "PURGED_BLOCK",
+      "purgeSessions": 126,
+      "resampling": "BLOCK_BOOTSTRAP"
+    },
+    {
+      "completedSessions": 252,
+      "embargoSessions": 252,
+      "evaluationRole": "LONG_HORIZON_FORMAL",
+      "formalGateEligible": true,
+      "minimumBootstrapBlockSessions": 252,
+      "minimumCoverageRatio": "0.80",
+      "minimumEligibleSecurityDecisions": 100,
+      "outcomeDependence": "PURGED_BLOCK",
+      "purgeSessions": 252,
+      "resampling": "BLOCK_BOOTSTRAP"
+    }
+  ],
+  "independentDatasetFreshnessRequired": true,
+  "missingDataNeutralSubstitutionAllowed": false,
+  "modelFreezes": [
+    {
+      "applicabilityHash": "sha256:6b6fd2ab364b7e5904908acd884a01463d4598e7f6f54b51b56baf1034d2f841",
+      "benchmarkContractHash": "sha256:f217f27e424bd75422f2402153fdb4498db28ab2cd4a8aaca426382a11b23438",
+      "costModelHash": "sha256:b07f5c5ad4b2f13d0c81a48b2eab4e722da9b0e43143e013bedcc155faba96bb",
+      "freezeArtifactContentHash": "sha256:233271457387a5d7212379ae2c77d69c743dc69f7345fe2d834ff7dc98d4fa59",
+      "freezeFileSha256": "sha256:e208c280355077009c4af102383881d89d3139242086e859b5eec4beb6873024",
+      "freezeRecordHash": "sha256:8f8e7fb671a8c35e771fdad6b9e3ed5d90950135acc9297bbff571f27780e6c3",
+      "frozenAt": "2026-07-30T00:45:00Z",
+      "missingDataPolicyHash": "sha256:3cd731350acbe9d72f37cf772ee1b666b3dd1098e70cdff7ccc9f251af8b10c2",
+      "modelFreezeBindingHash": "sha256:503059755b5a83cc4ccc85ec84dfed327900d85db44333abd3d961331928fb91",
+      "modelVersion": "LONG-HORIZON-RESEARCH-v1.1.0",
+      "observedEvidenceCutoff": "2026-07-29T23:59:59Z",
+      "track": "LONG_HORIZON",
+      "universeContractHash": "sha256:2b4aa32f7fc4f8360b6e45b025d35a5046b9416beb47873870084993d069f1c6"
+    },
+    {
+      "applicabilityHash": "sha256:e0e1806af20d363f5dbf9a40f3c02e4a672dc8a7087f606abbdbb2196cadba06",
+      "benchmarkContractHash": "sha256:f217f27e424bd75422f2402153fdb4498db28ab2cd4a8aaca426382a11b23438",
+      "costModelHash": "sha256:b07f5c5ad4b2f13d0c81a48b2eab4e722da9b0e43143e013bedcc155faba96bb",
+      "freezeArtifactContentHash": "sha256:a596080cd7936a6881a38e759c597934dae1125ec83026df6db0434f6fe31910",
+      "freezeFileSha256": "sha256:5d541315f62990bc5f44a4e421f404d737f6ffcf039e586b18ba362a113dc49f",
+      "freezeRecordHash": "sha256:d6e3edb1160856ade700c37d42a4c9e2cdda3b88a4080dbc8ed73354b4c5bf99",
+      "frozenAt": "2026-07-30T00:45:00Z",
+      "missingDataPolicyHash": "sha256:160330bdf6601105651838c6977b4be0b03e53d000fe6283503d36222c947b6d",
+      "modelFreezeBindingHash": "sha256:1edd29f777d49c3fce8925d89c8d19fcea6146336c03bf91d194bc4dbeef12b6",
+      "modelVersion": "TACTICAL-SIGNAL-v2.2.0",
+      "observedEvidenceCutoff": "2026-07-29T23:59:59Z",
+      "track": "TACTICAL",
+      "universeContractHash": "sha256:2b4aa32f7fc4f8360b6e45b025d35a5046b9416beb47873870084993d069f1c6"
+    }
+  ],
+  "naturallyMaturedOutcomesOnly": true,
+  "ordinaryIidBootstrapAllowed": false,
+  "pointInTimeAvailabilityRequired": true,
+  "preregistrationContentHash": "sha256:cb63d2600b42c9003be8a99a76de967e5921ef68440bcd3a0d6dd8934efac966",
+  "preregistrationId": "bce2d5de-3391-5d7f-a8ec-d2f868b9df34",
+  "priorDecisionsMutable": false,
+  "prospectiveUniverse": {
+    "identityBindingHash": "sha256:ed5ce0a4a587ce8c18e24b9f9d9d4194ac21257e9fde4d10a63d4e34b3b3e42d",
+    "roleCounts": {
+      "EXCLUDED": 9,
+      "PRIMARY": 48,
+      "REFERENCE_ONLY": 2,
+      "RESERVE": 7
+    },
+    "securities": [
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "d8a14843-961a-5406-a372-b69d46f7512f",
+        "role": "PRIMARY",
+        "symbol": "AAPL"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "ea503902-9cbd-5ca3-82a4-00214f655ab2",
+        "role": "PRIMARY",
+        "symbol": "MSFT"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "06297dd5-c150-5360-8cbb-c6341aa01dae",
+        "role": "PRIMARY",
+        "symbol": "META"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "2d4a0d15-2f0c-5c6e-acaf-10a647855fb1",
+        "role": "PRIMARY",
+        "symbol": "WMT"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "a908303b-63ee-55e2-ac33-7b1625c7ab33",
+        "role": "PRIMARY",
+        "symbol": "MCD"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "2020eb4c-563a-5293-8b52-e35b044772c0",
+        "role": "PRIMARY",
+        "symbol": "CAT"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "3126a093-d76e-552c-9b40-bd6e37f2d0f5",
+        "role": "PRIMARY",
+        "symbol": "ADP"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "11a5a36e-831f-5550-a28b-7e6f6c817009",
+        "role": "PRIMARY",
+        "symbol": "NKE"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "b649ccea-1e7f-5a90-9a07-3b08614ff51e",
+        "role": "PRIMARY",
+        "symbol": "TGT"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "13371d22-6a81-5d12-a37c-f32b791c1639",
+        "role": "PRIMARY",
+        "symbol": "PLAB"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "580cbcd9-264d-51f4-bbdc-cae9116fa05d",
+        "role": "PRIMARY",
+        "symbol": "NVDA"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "920d82bc-d5f6-52d9-8f79-4ce539d3481d",
+        "role": "PRIMARY",
+        "symbol": "AVGO"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "1d3e4e20-f35a-512d-a51d-71e218a1102a",
+        "role": "PRIMARY",
+        "symbol": "ORCL"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "c6e9c6a3-b6a0-5e57-b0be-a104bb0c4a5a",
+        "role": "PRIMARY",
+        "symbol": "CSCO"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "179b3a37-5c71-545a-901c-508038ede4e9",
+        "role": "PRIMARY",
+        "symbol": "ACN"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "8f5d16c8-8417-5374-9fd4-5aa90e1430f5",
+        "role": "PRIMARY",
+        "symbol": "IBM"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "37c45c45-1973-5ca0-a81a-a65cf45359a2",
+        "role": "PRIMARY",
+        "symbol": "GOOGL"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "cf0d4c88-d578-5369-9cd1-3d42c1d94aab",
+        "role": "PRIMARY",
+        "symbol": "NFLX"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "62d95825-6ce5-5184-bf7a-692777a3e328",
+        "role": "PRIMARY",
+        "symbol": "DIS"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "426c12ec-91f8-55c9-85fb-76a55a0fd3ed",
+        "role": "PRIMARY",
+        "symbol": "AMZN"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "fa14b2bf-1e71-5fe7-8ea2-d000c1c0db57",
+        "role": "PRIMARY",
+        "symbol": "HD"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "42b3f426-7956-53fa-b0e9-706c25fb808d",
+        "role": "PRIMARY",
+        "symbol": "LOW"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "c919870a-589c-5744-9077-1aaf3eb09c35",
+        "role": "PRIMARY",
+        "symbol": "SBUX"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "fc24ce00-afe0-5f5b-b75c-5aaeef8d1c9d",
+        "role": "PRIMARY",
+        "symbol": "COST"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "a29d6c6c-dede-5e1d-a8cd-ad174e88dc4d",
+        "role": "PRIMARY",
+        "symbol": "PG"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "347e531f-97ea-51b2-8ca6-aaaa878f6407",
+        "role": "PRIMARY",
+        "symbol": "KO"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "529b9520-ffb4-55d3-87dc-ef66ad8811f9",
+        "role": "PRIMARY",
+        "symbol": "PEP"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "7d091a87-f1c3-546a-adee-3e69ff9daeb1",
+        "role": "PRIMARY",
+        "symbol": "CL"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "c12a95ce-5e86-5520-8c33-5f8bc6605dd7",
+        "role": "PRIMARY",
+        "symbol": "JNJ"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "d2e4553a-700e-547d-b1b7-9aa6be8dd4a7",
+        "role": "PRIMARY",
+        "symbol": "ABT"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "c84db089-efaf-5597-a44a-892bef95fd87",
+        "role": "PRIMARY",
+        "symbol": "MDT"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "48919d38-e65c-55d7-a910-1beda2cc09fe",
+        "role": "PRIMARY",
+        "symbol": "SYK"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "0ad69d1c-35c0-54ec-bed9-db54a6f0bcd0",
+        "role": "PRIMARY",
+        "symbol": "TMO"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "0e9cc7f3-1e1a-5cc5-9093-a7233697986e",
+        "role": "PRIMARY",
+        "symbol": "MCK"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "5148f419-992c-5470-ba14-b7d612193b92",
+        "role": "PRIMARY",
+        "symbol": "HON"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "e65f41aa-f7bc-56ea-9d58-7fc05a62c7f5",
+        "role": "PRIMARY",
+        "symbol": "UPS"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "d70f5294-34ee-5758-9268-9ca8877d6193",
+        "role": "PRIMARY",
+        "symbol": "UNP"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "07e78ba6-4943-581d-8588-29860f42df97",
+        "role": "PRIMARY",
+        "symbol": "DE"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "ce622392-309d-57c2-81da-6a5a5155684e",
+        "role": "PRIMARY",
+        "symbol": "ETN"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "2ddf3749-9afb-5a0e-8325-bf6e7ecaccaf",
+        "role": "PRIMARY",
+        "symbol": "NEE"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "b8e66b25-90e2-55f8-95bf-8a6135af8e3f",
+        "role": "PRIMARY",
+        "symbol": "DUK"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "cb41680b-064a-5052-97c6-f90288b009fe",
+        "role": "PRIMARY",
+        "symbol": "SO"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "34ad83b5-4b28-5af8-a21b-20c3aa837c2f",
+        "role": "PRIMARY",
+        "symbol": "LIN"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "a26d692c-90b9-5207-894f-cea19e46cfa4",
+        "role": "PRIMARY",
+        "symbol": "SHW"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "041b73ca-4c7a-56c4-8502-166daed08ebc",
+        "role": "PRIMARY",
+        "symbol": "ECL"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "1b373ef1-1213-5215-9411-e683babcce3e",
+        "role": "PRIMARY",
+        "symbol": "APD"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "2f57cfe5-52f7-5afc-beb5-3bc1564710a0",
+        "role": "PRIMARY",
+        "symbol": "CROX"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "640f3d4e-7841-567b-b8aa-163c73d20567",
+        "role": "PRIMARY",
+        "symbol": "OLED"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "2ec39042-6cbf-53d0-a121-03e4dd705cc0",
+        "role": "RESERVE",
+        "symbol": "EXPO"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "f6cbe650-b724-5091-9097-df108a561c27",
+        "role": "RESERVE",
+        "symbol": "CALM"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "b8deed89-848c-56a5-8323-80ed14b62215",
+        "role": "RESERVE",
+        "symbol": "UFPI"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "f91871f9-3a89-58d4-a969-c1086da0acc6",
+        "role": "RESERVE",
+        "symbol": "WDFC"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "8916acf0-b2ce-55ba-a1bf-d323132b744a",
+        "role": "RESERVE",
+        "symbol": "FIX"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "c0d54251-ff4c-52d6-aba4-274471b471a9",
+        "role": "RESERVE",
+        "symbol": "SAIA"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "1fab244e-4f55-52c4-b79c-8773f2097ab9",
+        "role": "RESERVE",
+        "symbol": "ELF"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "e8e8fe9b-dc95-5a64-86b1-41b00e7569c5",
+        "role": "REFERENCE_ONLY",
+        "symbol": "SPY"
+      },
+      {
+        "exclusionReason": null,
+        "publicSecurityId": "78578a05-4d92-5cb6-afd7-6a72f157ae05",
+        "role": "REFERENCE_ONLY",
+        "symbol": "XLK"
+      },
+      {
+        "exclusionReason": "SPECIAL_SITUATION",
+        "publicSecurityId": "69692f09-d399-5486-9332-1d50fd438275",
+        "role": "EXCLUDED",
+        "symbol": "GE"
+      },
+      {
+        "exclusionReason": "FINANCIAL",
+        "publicSecurityId": "3f94be03-3479-54a4-aec6-3fe3a4f3845a",
+        "role": "EXCLUDED",
+        "symbol": "JPM"
+      },
+      {
+        "exclusionReason": "FINANCIAL",
+        "publicSecurityId": "0601b932-472b-5abb-a969-834b9d64d281",
+        "role": "EXCLUDED",
+        "symbol": "PGR"
+      },
+      {
+        "exclusionReason": "REIT",
+        "publicSecurityId": "b294a8ac-4a79-59b4-bac0-2ce343b0b8f9",
+        "role": "EXCLUDED",
+        "symbol": "O"
+      },
+      {
+        "exclusionReason": "RESOURCE",
+        "publicSecurityId": "c04f9fd4-7377-5c12-8f7c-feaa29258ec7",
+        "role": "EXCLUDED",
+        "symbol": "XOM"
+      },
+      {
+        "exclusionReason": "BIOTECHNOLOGY",
+        "publicSecurityId": "748396c9-9ad1-5335-8cb3-c83bc7ad4be4",
+        "role": "EXCLUDED",
+        "symbol": "MRNA"
+      },
+      {
+        "exclusionReason": "EMERGING_GROWTH",
+        "publicSecurityId": "c6b35887-cc54-51d0-bf27-fe29e555cb8c",
+        "role": "EXCLUDED",
+        "symbol": "LCID"
+      },
+      {
+        "exclusionReason": "DELISTED_SPECIAL_SITUATION",
+        "publicSecurityId": "166f2fd0-2895-5b6a-8fe7-6bebd60fc058",
+        "role": "EXCLUDED",
+        "symbol": "TWTR"
+      },
+      {
+        "exclusionReason": "FINANCIAL",
+        "publicSecurityId": "4caaacbd-870a-59ed-b27d-d6af478af0fb",
+        "role": "EXCLUDED",
+        "symbol": "NBN"
+      }
+    ],
+    "securityCount": 66,
+    "sourceFileSha256": "sha256:c977e932edd5184aabbde53accff6f480650f96c03c878a9ec7fbe15d2920078",
+    "sourceFixtureSha256": "sha256:1c53948f5cd0d1e74f870def6b34a619de1845b9da2b3170b4712427de43a033",
+    "sourcePath": "analysis-python/resources/universes/market-intelligence-closed-test-us-v1.json",
+    "stableIdentityNamespace": "5f2c2d20-58e4-5ad0-a70b-f332458dfaaf",
+    "stableIdentityScheme": "UUID5:US_SYMBOL:v1",
+    "universeVersion": "market-intelligence-closed-test-us-v1.0.0"
+  },
+  "rawProviderValuesIncluded": false,
+  "registeredAt": "2026-07-30T03:12:23.237045Z",
+  "requiredBenchmarkKinds": [
+    "SPY",
+    "SECTOR",
+    "EQUAL_WEIGHT",
+    "PURE_MOMENTUM",
+    "PURE_VALUE",
+    "PURE_QUALITY"
+  ],
+  "schemaVersion": "FORWARD-DQV-PREREGISTRATION-v2.0.0",
+  "stablePublicSecurityIdRequired": true,
+  "validationProtocol": {
+    "artifactContentHash": null,
+    "fileSha256": "sha256:a6b5030437258e2e64dfead2892acec7a57ba68e16f875611206d1c2f0cdbcc0",
+    "path": "analysis-python/src/equity_analysis/historical_validation/protocol_v2.py"
+  },
+  "walkForwardProtocol": {
+    "artifactContentHash": null,
+    "fileSha256": "sha256:45d4dbdd0e7a643658b160ae5b044c15a4a07113dc33382a3de87ddff3d72f0f",
+    "path": "analysis-python/src/equity_analysis/historical_validation/walk_forward_v2.py"
+  }
+}

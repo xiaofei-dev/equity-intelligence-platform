@@ -3,7 +3,9 @@
 PostgreSQL migrations live in `migrations/` and are packaged into the Spring
 Boot application. Flyway applies them during backend startup.
 
-The current schema level is V17. The managed-database topology, credential
+The repository migration source head is V22. The last shared operational
+application baseline remains V17 until a separately controlled release. The
+managed-database topology, credential
 separation, migration release procedure, backups, and recovery targets are
 defined in [Database Deployment v1](../docs/database-deployment-v1.md).
 
@@ -96,6 +98,14 @@ Cross-schema changes require an explicit contract and migration.
 - `V17`: persist immutable assembled market-intelligence profiles, selected
   fact lineage, cohorts, four horizon views, valuation evidence, ranking
   exclusions, profile-screening runs/results, and isolated AI narratives
+- `V18`: add the legacy Forward DQV v2 outcome ledger
+- `V19`: repair Forward DQV enrollment chronology while refusing preexisting
+  v2.1.0 enrollments
+- `V20`: add the legacy Forward DQV benchmark outcome v3 lineage
+- `V21`: add legacy, unwired Core/Tactical portfolio-decision lanes
+- `V22`: add the append-only Unified Market Data and Evidence Foundation v1
+  identity, calendar, lineage, canonical evidence, selector, and
+  applicability contracts
 
 Migration files are append-only after they have been applied to a shared
 environment. Corrections require a new migration rather than editing deployed
@@ -134,11 +144,27 @@ The acceptance script verifies required objects, strategy-weight totals,
 legacy price backfill, append-only guards, role isolation, missing-value
 behavior, and the two-cutoff point-in-time selection rule.
 
-The CI-compatible runner creates isolated empty, legacy V3, V12, and V16
-upgrade-path databases,
-executes the acceptance script against both, verifies a representative legacy
-price backfill, and removes the databases afterward:
+The CI-compatible runner creates isolated clean and populated upgrade-path
+databases through V22, preserves the V19 refusal behavior, verifies V18-V21
+row/hash preservation, executes the base and advanced V22 relational safety
+matrices, and removes every test database afterward:
 
 ```bash
 sh database/tests/run-migration-tests.sh
 ```
+
+The Python-owned typed persistence and internal-query boundary has a real
+PostgreSQL integration test. Run it against a disposable database migrated
+through V22. Its
+module-scoped fixture creates a unique synthetic identity, calendar, provider,
+canonical-evidence, and selector namespace, so it does not depend on either
+V22 SQL acceptance script having seeded rows:
+
+```bash
+TEST_DATABASE_URL=postgresql://... \
+  python -m pytest \
+  analysis-python/tests/integration/test_evidence_persistence_postgres_v1.py -q
+```
+
+The integration test stores only synthetic private-storage references. No
+licensed raw payload is committed to Git.

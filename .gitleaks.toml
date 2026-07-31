@@ -15,3 +15,17 @@ paths = [
   '''^docs/generated/objective-rating-v1-qc-cohort-completion-feasibility-v1\.json$''',
   '''^docs/generated/objective-rating-v1-qc-cohort-completion-feasibility-v1-1\.json$''',
 ]
+
+[[rules]]
+id = "generic-api-key"
+
+[[rules.allowlists]]
+description = "Allow only the named SHA-256 live-confirmation digest in its immutable preflight artifact."
+condition = "AND"
+regexTarget = "match"
+regexes = [
+  '''(?i)liveConfirmationTokenSha256["']?\s*:\s*["']?[0-9a-f]{64}["']?''',
+]
+paths = [
+  '''^docs/generated/future-completed-session-price-evidence-preflight-v1\.json$''',
+]

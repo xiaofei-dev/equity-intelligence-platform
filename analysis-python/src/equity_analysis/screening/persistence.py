@@ -15,6 +15,11 @@ from equity_analysis.screening.factors import (
     total_return,
     trend_stability,
 )
+from equity_analysis.screening.fundamental_factor_adapter import (
+    PersistedFundamentalFact,
+    PersistedMarketValue,
+    assemble_fundamental_factor_inputs,
+)
 from equity_analysis.screening.models import (
     AssessmentStatus,
     CohortLevel,
@@ -197,6 +202,7 @@ class ScreeningRepository:
             run = connection.execute(
                 """
                 SELECT run.as_of_time, snapshot.snapshot_key, run.universe_version,
+                       snapshot.ingestion_cutoff,
                        ARRAY(SELECT strategy_version
                              FROM analytics.screening_run_strategy
                              WHERE run_id = run.id ORDER BY strategy_version)
@@ -243,10 +249,13 @@ class ScreeningRepository:
                 fact_rows = connection.execute(
                     """
                     SELECT fact.metric_code, fact.numeric_value, fact.unit,
-                           fact.period_end, fact.filed_at, fact.available_at,
-                           fact.ingested_at, fact.revision_status,
-                           fact.quality_status, source.source_reference,
-                           source.content_hash, provider.code
+                           fact.currency, fact.period_start, fact.period_end,
+                           fact.fiscal_period, fact.form_type, fact.filed_at,
+                           fact.available_at, fact.ingested_at,
+                           fact.mapping_version, fact.normalization_version,
+                           fact.revision_status, fact.quality_status,
+                           source.source_reference, source.content_hash,
+                           provider.code
                     FROM analytics.fundamental_fact fact
                     JOIN analytics.source_record source ON source.id = fact.source_record_id
                     JOIN analytics.data_provider provider ON provider.id = source.provider_id
@@ -259,61 +268,101 @@ class ScreeningRepository:
                     WHERE run.id = %s AND security.public_id = %s
                       AND fact.available_at <= snapshot.as_of_time
                       AND fact.ingested_at <= snapshot.ingestion_cutoff
-                      AND fact.metric_code IN (
-                        SELECT factor_code FROM analytics.factor_definition
-                        WHERE version = 'v1.0.0'
-                      )
                     ORDER BY fact.metric_code, fact.period_end DESC,
                              fact.available_at DESC
                     """,
                     (run_id, public_id),
                 ).fetchall()
-                by_factor = {}
-                for fact in fact_rows:
-                    by_factor.setdefault(fact[0], fact)
+                market_value_row = connection.execute(
+                    """
+                    SELECT value.numeric_value, value.unit, value.currency,
+                           value.observation_date, value.available_at,
+                           value.ingested_at, source.revision_status,
+                           source.quality_status, provider.code,
+                           source.source_reference, source.content_hash
+                    FROM analytics.market_value_observation value
+                    JOIN analytics.security security
+                      ON security.id = value.security_id
+                    JOIN analytics.source_record source
+                      ON source.id = value.source_record_id
+                    JOIN analytics.data_provider provider
+                      ON provider.id = source.provider_id
+                    JOIN analytics.data_snapshot_source snapshot_source
+                      ON snapshot_source.ingestion_batch_id
+                       = source.ingestion_batch_id
+                    JOIN analytics.screening_run run
+                      ON run.snapshot_id = snapshot_source.snapshot_id
+                    JOIN analytics.data_snapshot snapshot
+                      ON snapshot.id = run.snapshot_id
+                    WHERE run.id = %s AND security.public_id = %s
+                      AND value.metric_code = 'MARKET_CAP'
+                      AND value.observation_date <= snapshot.as_of_time::date
+                      AND value.available_at <= snapshot.as_of_time
+                      AND value.ingested_at <= snapshot.ingestion_cutoff
+                    ORDER BY value.observation_date DESC,
+                             value.available_at DESC,
+                             value.revision_number DESC
+                    LIMIT 1
+                    """,
+                    (run_id, public_id),
+                ).fetchone()
+                persisted_facts = tuple(
+                    PersistedFundamentalFact(
+                        metric_code=fact[0],
+                        value=Decimal(fact[1]),
+                        unit=fact[2],
+                        currency=fact[3],
+                        period_start=fact[4],
+                        period_end=fact[5],
+                        fiscal_period=fact[6],
+                        form_type=fact[7],
+                        filed_at=fact[8],
+                        available_at=fact[9],
+                        ingested_at=fact[10],
+                        mapping_version=fact[11],
+                        normalization_version=fact[12],
+                        revision_status=fact[13],
+                        quality_status=fact[14],
+                        source_reference=fact[15],
+                        content_hash=fact[16],
+                        provider=fact[17],
+                    )
+                    for fact in fact_rows
+                )
+                persisted_market_value = (
+                    PersistedMarketValue(
+                        value=Decimal(market_value_row[0]),
+                        unit=market_value_row[1],
+                        currency=market_value_row[2],
+                        observation_date=market_value_row[3],
+                        available_at=market_value_row[4],
+                        ingested_at=market_value_row[5],
+                        revision_status=market_value_row[6],
+                        quality_status=market_value_row[7],
+                        provider=market_value_row[8],
+                        source_reference=market_value_row[9],
+                        content_hash=market_value_row[10],
+                    )
+                    if market_value_row is not None
+                    else None
+                )
+                fundamental_factors = assemble_fundamental_factor_inputs(
+                    persisted_facts,
+                    market_value=persisted_market_value,
+                    as_of=run[0],
+                    ingestion_cutoff=run[3],
+                )
                 price_factors = self._price_factor_inputs(connection, run_id, public_id)
                 factors = tuple(
                     price_factors[name]
                     if name in price_factors
-                    else FactorInput(
-                        name=name,
-                        value=(
-                            by_factor[name][1]
-                            if market_cap is not None and name in by_factor
-                            else None
-                        ),
-                        status=(
-                            FactorStatus.VALID
-                            if market_cap is not None and name in by_factor
-                            else FactorStatus.MISSING
-                        ),
-                        reason=(
-                            "Point-in-time market capitalization is unavailable"
-                            if market_cap is None
-                            else None
-                            if name in by_factor
-                            else "Snapshot input is unavailable"
-                        ),
-                        lineage=(
-                            (
-                                DataLineage(
-                                    provider=by_factor[name][11],
-                                    source_reference=by_factor[name][9],
-                                    period_end=by_factor[name][3],
-                                    filed_at=by_factor[name][4],
-                                    available_at=by_factor[name][5],
-                                    ingested_at=by_factor[name][6],
-                                    unit=by_factor[name][2],
-                                    currency=(
-                                        by_factor[name][2] if len(by_factor[name][2]) == 3 else None
-                                    ),
-                                    revision_status=by_factor[name][7],
-                                    quality_status=by_factor[name][8],
-                                    content_hash=by_factor[name][10],
-                                ),
-                            )
-                            if market_cap is not None and name in by_factor
-                            else ()
+                    else fundamental_factors.get(
+                        name,
+                        FactorInput(
+                            name=name,
+                            value=None,
+                            status=FactorStatus.MISSING,
+                            reason="Snapshot input is unavailable",
                         ),
                     )
                     for name in self._factor_codes(connection)
@@ -341,7 +390,7 @@ class ScreeningRepository:
             as_of_time=run[0],
             data_snapshot_id=run[1],
             universe_version=run[2],
-            strategy_versions=tuple(run[3]),
+            strategy_versions=tuple(run[4]),
             observations=tuple(observations),
         )
 

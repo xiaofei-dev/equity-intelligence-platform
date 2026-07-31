@@ -21,13 +21,16 @@ from equity_analysis.daily_refresh.models import (
     WorkResult,
     WorkStatus,
 )
+from equity_analysis.market_data.fundamentals import (
+    FundamentalsEnvelope,
+    ObservationState,
+)
 from equity_analysis.market_data.models import (
     AdjustmentMode,
     CorporateAction,
     CorporateActionSeries,
     DailyPriceSeries,
 )
-from equity_analysis.provider_validation.models import NormalizedFinancialObservation
 
 NORMALIZATION_VERSION = "market-normalization-v1.0.0"
 
@@ -980,28 +983,19 @@ class PostgresRefreshPersistence:
     def write_fundamentals(
         self,
         security_public_id: str,
-        observations: tuple[NormalizedFinancialObservation, ...],
+        envelope: FundamentalsEnvelope,
     ) -> WriteResult:
-        if not observations:
-            raise ValueError("Cannot persist empty normalized fundamentals")
-        symbols = {item.symbol for item in observations}
-        if len(symbols) != 1:
-            raise ValueError("Fundamental observations must belong to one security")
-        ingested_at = max(max(item.ingested_at for item in observations), self._now())
-        available_at = max(
-            (item.available_at or item.ingested_at for item in observations),
-        )
-        source_reference = f"eodhd:fundamentals:{next(iter(symbols))}:aggregate"
-        content_hash = _canonical_hash(
-            {
-                "securityPublicId": security_public_id,
-                "observationHashes": sorted(item.content_hash for item in observations),
-            }
-        )
+        observations = envelope.financial_observations
+        ingested_at = max(envelope.retrieved_at, envelope.available_at, self._now())
+        available_at = envelope.available_at
         rejected = sum(
             value is None
             for observation in observations
             for value in observation.values.values()
+        )
+        rejected += int(envelope.company_profile.state != ObservationState.VALID)
+        rejected += int(
+            envelope.market_capitalization.state != ObservationState.VALID
         )
         inserted = 0
         with self._connect(self._database_url) as connection:
@@ -1015,20 +1009,24 @@ class PostgresRefreshPersistence:
                 """
                 INSERT INTO analytics.data_provider (
                     code, name, provider_schema_version
-                ) VALUES ('eodhd', 'EODHD', %s)
+                ) VALUES (%s, %s, %s)
                 ON CONFLICT (code) DO UPDATE SET
                     name = EXCLUDED.name,
                     provider_schema_version = EXCLUDED.provider_schema_version
                 RETURNING id
                 """,
-                (observations[0].provider_schema_version,),
+                (
+                    envelope.provider_descriptor.code,
+                    envelope.provider_descriptor.name,
+                    envelope.provider_descriptor.provider_schema_version,
+                ),
             ).fetchone()
             batch_id, source_id = self._lineage(
                 connection,
                 int(provider[0]),
-                observations[0].parser_version,
-                source_reference,
-                content_hash,
+                envelope.provider_descriptor.parser_version,
+                envelope.source_reference,
+                envelope.content_hash,
                 available_at,
                 ingested_at,
             )
@@ -1061,8 +1059,8 @@ class PostgresRefreshPersistence:
                             quality_status, source_record_id
                         ) VALUES (
                             %s, %s, %s, %s, %s, NULL, %s, %s, %s,
-                            'EODHD_NORMALIZED', %s, %s, %s, %s,
-                            'eodhd-financial-map-v1.3.0', %s, 'AS_REPORTED',
+                            'PROVIDER_NORMALIZED', %s, %s, %s, %s,
+                            %s, %s, 'AS_REPORTED',
                             'NOT_VERIFIED', %s
                         )
                         ON CONFLICT ON CONSTRAINT uq_fundamental_fact_source
@@ -1081,24 +1079,418 @@ class PostgresRefreshPersistence:
                             available_at,
                             available_at,
                             ingested_at,
+                            observation.parser_version,
                             NORMALIZATION_VERSION,
                             source_id,
                         ),
                     ).fetchone()
                     inserted += row is not None
-        latest = max(item.fiscal_period_end for item in observations)
+            inserted += self._write_current_company_profile(
+                connection,
+                security_id=int(security[0]),
+                source_id=source_id,
+                envelope=envelope,
+                available_at=available_at,
+                ingested_at=ingested_at,
+            )
+            inserted += self._write_security_classification_projection(
+                connection,
+                security_id=int(security[0]),
+                source_id=source_id,
+                envelope=envelope,
+            )
+            inserted += self._write_current_market_capitalization(
+                connection,
+                security_id=int(security[0]),
+                provider_id=int(provider[0]),
+                source_id=source_id,
+                envelope=envelope,
+                available_at=available_at,
+                ingested_at=ingested_at,
+            )
         return WriteResult(
             rows_written=inserted,
             rows_rejected=rejected,
             ingestion_batch_id=batch_id,
-            effective_at=datetime.combine(latest, datetime.min.time(), tzinfo=UTC),
+            effective_at=envelope.effective_at,
             available_at=available_at,
             ingested_at=ingested_at,
-            source_reference=source_reference,
-            content_hash=content_hash,
-            provider_schema_version=observations[0].provider_schema_version,
-            parser_version=observations[0].parser_version,
+            source_reference=envelope.source_reference,
+            content_hash=envelope.content_hash,
+            provider_schema_version=envelope.provider_descriptor.provider_schema_version,
+            parser_version=envelope.provider_descriptor.parser_version,
         )
+
+    def write_current_fundamentals_projection(
+        self,
+        security_public_id: str,
+        envelope: FundamentalsEnvelope,
+        *,
+        storage_reference: str,
+    ) -> WriteResult:
+        """Persist only current profile and market-cap facts from captured evidence."""
+        if not storage_reference:
+            raise ValueError("Cached fundamentals projection requires durable storage")
+        ingested_at = max(envelope.retrieved_at, envelope.available_at, self._now())
+        inserted = 0
+        rejected = int(envelope.company_profile.state != ObservationState.VALID)
+        rejected += int(
+            envelope.market_capitalization.state != ObservationState.VALID
+        )
+        with self._connect(self._database_url) as connection:
+            security = connection.execute(
+                "SELECT id FROM analytics.security WHERE public_id = %s",
+                (UUID(security_public_id),),
+            ).fetchone()
+            if security is None:
+                raise ValueError(f"Unknown security public ID {security_public_id}")
+            provider = connection.execute(
+                """
+                INSERT INTO analytics.data_provider (
+                    code, name, provider_schema_version
+                ) VALUES (%s, %s, %s)
+                ON CONFLICT (code) DO UPDATE SET
+                    name = EXCLUDED.name,
+                    provider_schema_version = EXCLUDED.provider_schema_version
+                RETURNING id
+                """,
+                (
+                    envelope.provider_descriptor.code,
+                    envelope.provider_descriptor.name,
+                    envelope.provider_descriptor.provider_schema_version,
+                ),
+            ).fetchone()
+            batch_id, source_id = self._lineage(
+                connection,
+                int(provider[0]),
+                envelope.provider_descriptor.parser_version,
+                envelope.source_reference,
+                envelope.content_hash,
+                envelope.available_at,
+                ingested_at,
+                storage_reference=storage_reference,
+            )
+            inserted += self._write_current_company_profile(
+                connection,
+                security_id=int(security[0]),
+                source_id=source_id,
+                envelope=envelope,
+                available_at=envelope.available_at,
+                ingested_at=ingested_at,
+            )
+            inserted += self._write_security_classification_projection(
+                connection,
+                security_id=int(security[0]),
+                source_id=source_id,
+                envelope=envelope,
+            )
+            replay_detail = {
+                "schemaVersion": "provider-cache-replay-v1.0.0",
+                "securityPublicId": security_public_id,
+                "sourceRecordId": str(source_id),
+                "sourceContentHash": envelope.content_hash,
+                "storageReference": storage_reference,
+                "physicalRequests": 0,
+                "weightedCalls": 0,
+                "networkRequestsExecuted": False,
+            }
+            event_hash = _canonical_hash(replay_detail)
+            connection.execute(
+                """
+                INSERT INTO analytics.analytics_audit_event (
+                    event_type, entity_type, entity_id, actor_service,
+                    occurred_at, event_hash, detail
+                ) VALUES (
+                    'PROVIDER_CACHE_REPLAY', 'SECURITY', %s,
+                    'PYTHON_ANALYTICS', %s, %s, %s::jsonb
+                )
+                ON CONFLICT (event_hash) DO NOTHING
+                """,
+                (
+                    security_public_id,
+                    ingested_at,
+                    event_hash,
+                    json.dumps(
+                        replay_detail, sort_keys=True, separators=(",", ":")
+                    ),
+                ),
+            )
+            inserted += self._write_current_market_capitalization(
+                connection,
+                security_id=int(security[0]),
+                provider_id=int(provider[0]),
+                source_id=source_id,
+                envelope=envelope,
+                available_at=envelope.available_at,
+                ingested_at=ingested_at,
+            )
+        return WriteResult(
+            rows_written=inserted,
+            rows_rejected=rejected,
+            ingestion_batch_id=batch_id,
+            effective_at=envelope.effective_at,
+            available_at=envelope.available_at,
+            ingested_at=ingested_at,
+            source_reference=envelope.source_reference,
+            content_hash=envelope.content_hash,
+            provider_schema_version=envelope.provider_descriptor.provider_schema_version,
+            parser_version=envelope.provider_descriptor.parser_version,
+        )
+
+    @staticmethod
+    def _write_current_company_profile(
+        connection: Any,
+        *,
+        security_id: int,
+        source_id: UUID,
+        envelope: FundamentalsEnvelope,
+        available_at: datetime,
+        ingested_at: datetime,
+    ) -> int:
+        profile = envelope.company_profile
+        if profile.state != ObservationState.VALID:
+            return 0
+        assert profile.taxonomy_code is not None
+        assert profile.taxonomy_version is not None
+        assert profile.sector_code is not None
+        assert profile.sector_name is not None
+        assert profile.industry_code is not None
+        assert profile.industry_name is not None
+        assert profile.legal_name is not None
+        taxonomy_nodes = (
+            (profile.sector_code, None, "SECTOR", profile.sector_name),
+            (
+                profile.industry_code,
+                profile.sector_code,
+                "INDUSTRY",
+                profile.industry_name,
+            ),
+        )
+        for node_code, parent_code, level, name in taxonomy_nodes:
+            connection.execute(
+                """
+                INSERT INTO analytics.classification_node (
+                    taxonomy_code, taxonomy_version, node_code,
+                    parent_node_code, level, name, effective_from
+                ) VALUES (%s, %s, %s, %s, %s, %s, DATE '1970-01-01')
+                ON CONFLICT (taxonomy_code, taxonomy_version, node_code)
+                DO NOTHING
+                """,
+                (
+                    profile.taxonomy_code,
+                    profile.taxonomy_version,
+                    node_code,
+                    parent_code,
+                    level,
+                    name,
+                ),
+            )
+            stored = connection.execute(
+                """
+                SELECT parent_node_code, level, name, effective_from
+                FROM analytics.classification_node
+                WHERE taxonomy_code = %s AND taxonomy_version = %s
+                  AND node_code = %s
+                """,
+                (profile.taxonomy_code, profile.taxonomy_version, node_code),
+            ).fetchone()
+            expected = (parent_code, level, name, date(1970, 1, 1))
+            if stored != expected:
+                raise ValueError(
+                    f"Classification node {node_code} conflicts with its hash identity"
+                )
+        effective_from = profile.effective_at.date()
+        existing = connection.execute(
+            """
+            SELECT id
+            FROM analytics.company_profile_observation
+            WHERE security_id = %s AND effective_from = %s
+              AND source_record_id = %s
+            LIMIT 1
+            """,
+            (security_id, effective_from, source_id),
+        ).fetchone()
+        if existing is not None:
+            return 0
+        revision = connection.execute(
+            """
+            SELECT COALESCE(MAX(revision_number), 0) + 1
+            FROM analytics.company_profile_observation
+            WHERE security_id = %s AND effective_from = %s
+            """,
+            (security_id, effective_from),
+        ).fetchone()[0]
+        row = connection.execute(
+            """
+            INSERT INTO analytics.company_profile_observation (
+                security_id, legal_name, taxonomy_code, taxonomy_version,
+                sector_code, industry_code, effective_from, revision_number,
+                source_record_id, available_at, ingested_at, quality_status
+            ) VALUES (
+                %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, 'PROVISIONAL'
+            )
+            ON CONFLICT ON CONSTRAINT uq_company_profile_revision
+            DO NOTHING RETURNING id
+            """,
+            (
+                security_id,
+                profile.legal_name,
+                profile.taxonomy_code,
+                profile.taxonomy_version,
+                profile.sector_code,
+                profile.industry_code,
+                effective_from,
+                revision,
+                source_id,
+                available_at,
+                ingested_at,
+            ),
+        ).fetchone()
+        return int(row is not None)
+
+    @staticmethod
+    def _write_security_classification_projection(
+        connection: Any,
+        *,
+        security_id: int,
+        source_id: UUID,
+        envelope: FundamentalsEnvelope,
+    ) -> int:
+        profile = envelope.company_profile
+        if profile.state != ObservationState.VALID:
+            return 0
+        assert profile.sector_name is not None
+        assert profile.industry_name is not None
+        effective_from = profile.effective_at.date()
+        company_type_row = connection.execute(
+            """
+            SELECT company_type
+            FROM analytics.security_classification
+            WHERE security_id = %s AND effective_from <= %s
+            ORDER BY effective_from DESC, id DESC
+            LIMIT 1
+            """,
+            (security_id, effective_from),
+        ).fetchone()
+        if company_type_row is None:
+            raise ValueError("Cached profile cannot infer a missing company type")
+        classification_version = "provider-current-replay-v1.0.0"
+        existing = connection.execute(
+            """
+            SELECT raw_sector, raw_industry, normalized_sector,
+                   normalized_industry, company_type, source_record_id
+            FROM analytics.security_classification
+            WHERE security_id = %s AND classification_version = %s
+              AND effective_from = %s
+            """,
+            (security_id, classification_version, effective_from),
+        ).fetchone()
+        expected = (
+            profile.sector_name,
+            profile.industry_name,
+            profile.sector_name,
+            profile.industry_name,
+            company_type_row[0],
+            source_id,
+        )
+        if existing is not None:
+            if tuple(existing) != expected:
+                raise ValueError(
+                    "Cached security classification conflicts with prior replay"
+                )
+            return 0
+        row = connection.execute(
+            """
+            INSERT INTO analytics.security_classification (
+                security_id, classification_version, raw_sector, raw_industry,
+                normalized_sector, normalized_industry, company_type,
+                effective_from, source_record_id
+            ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
+            ON CONFLICT ON CONSTRAINT uq_security_classification_version
+            DO NOTHING RETURNING id
+            """,
+            (
+                security_id,
+                classification_version,
+                profile.sector_name,
+                profile.industry_name,
+                profile.sector_name,
+                profile.industry_name,
+                company_type_row[0],
+                effective_from,
+                source_id,
+            ),
+        ).fetchone()
+        return int(row is not None)
+
+    @staticmethod
+    def _write_current_market_capitalization(
+        connection: Any,
+        *,
+        security_id: int,
+        provider_id: int,
+        source_id: UUID,
+        envelope: FundamentalsEnvelope,
+        available_at: datetime,
+        ingested_at: datetime,
+    ) -> int:
+        market_cap = envelope.market_capitalization
+        if market_cap.state != ObservationState.VALID:
+            return 0
+        assert market_cap.value is not None
+        assert market_cap.currency is not None
+        observation_date = market_cap.effective_at.date()
+        existing = connection.execute(
+            """
+            SELECT id
+            FROM analytics.market_value_observation
+            WHERE security_id = %s AND metric_code = 'MARKET_CAP'
+              AND observation_date = %s AND provider_id = %s
+              AND source_record_id = %s
+            LIMIT 1
+            """,
+            (security_id, observation_date, provider_id, source_id),
+        ).fetchone()
+        if existing is not None:
+            return 0
+        revision = connection.execute(
+            """
+            SELECT COALESCE(MAX(revision_number), 0) + 1
+            FROM analytics.market_value_observation
+            WHERE security_id = %s AND metric_code = 'MARKET_CAP'
+              AND observation_date = %s AND provider_id = %s
+            """,
+            (security_id, observation_date, provider_id),
+        ).fetchone()[0]
+        row = connection.execute(
+            """
+            INSERT INTO analytics.market_value_observation (
+                security_id, metric_code, observation_date, numeric_value,
+                unit, currency, provider_id, revision_number,
+                source_record_id, available_at, ingested_at,
+                normalization_version
+            ) VALUES (
+                %s, 'MARKET_CAP', %s, %s, %s, %s, %s, %s,
+                %s, %s, %s, %s
+            )
+            ON CONFLICT ON CONSTRAINT uq_market_value_observation_revision
+            DO NOTHING RETURNING id
+            """,
+            (
+                security_id,
+                observation_date,
+                market_cap.value,
+                market_cap.currency,
+                market_cap.currency,
+                provider_id,
+                revision,
+                source_id,
+                available_at,
+                ingested_at,
+                NORMALIZATION_VERSION,
+            ),
+        ).fetchone()
+        return int(row is not None)
 
     def write_actions(self, series: CorporateActionSeries) -> WriteResult:
         if series.available_at.tzinfo is None:
@@ -1324,6 +1716,7 @@ class PostgresRefreshPersistence:
         content_hash: str,
         available_at: datetime,
         ingested_at: datetime,
+        storage_reference: str | None = None,
     ) -> tuple[UUID, UUID]:
         request_key = f"daily-refresh:{_canonical_hash([source_reference, content_hash])}"
         batch = connection.execute(
@@ -1356,10 +1749,10 @@ class PostgresRefreshPersistence:
             INSERT INTO analytics.source_record (
                 ingestion_batch_id, provider_id, source_reference, available_at,
                 ingested_at, schema_version, revision_status, quality_status,
-                content_hash
+                content_hash, storage_reference
             )
             SELECT %s, %s, %s, %s, %s, provider_schema_version,
-                   'AS_REPORTED', 'PROVISIONAL', %s
+                   'AS_REPORTED', 'PROVISIONAL', %s, %s
             FROM analytics.data_provider WHERE id = %s
             ON CONFLICT (provider_id, source_reference, content_hash)
             DO NOTHING RETURNING id
@@ -1371,6 +1764,7 @@ class PostgresRefreshPersistence:
                 available_at,
                 ingested_at,
                 content_hash,
+                storage_reference,
                 provider_id,
             ),
         ).fetchone()
@@ -1383,6 +1777,12 @@ class PostgresRefreshPersistence:
                 """,
                 (provider_id, source_reference, content_hash),
             ).fetchone()
+        stored_reference = connection.execute(
+            "SELECT storage_reference FROM analytics.source_record WHERE id = %s",
+            (source[0],),
+        ).fetchone()[0]
+        if storage_reference is not None and stored_reference != storage_reference:
+            raise ValueError("Cached source storage reference conflicts with lineage")
         return batch[0], source[0]
 
     @staticmethod

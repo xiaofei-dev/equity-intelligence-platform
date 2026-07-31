@@ -1,0 +1,92 @@
+{
+  "acceptedEnrollmentContract": "FORWARD-DQV-ENROLLMENT-v2.1.1",
+  "artifactContentHash": "sha256:53835fb8a9cb123541ec3dfa82778439608107553dce9a421e1bf68456ea5b66",
+  "artifactType": "FORWARD_DQV_V19_CHRONOLOGY_ACCEPTANCE",
+  "chronology": {
+    "decisionNoLaterThanSeal": true,
+    "expression": "decision_as_of <= sealed_at AND sealed_at <= effective_at_completed_session_open",
+    "sealNoLaterThanEntryOpen": true
+  },
+  "chronologyConstraintValidated": true,
+  "effectiveDate": "2026-07-30",
+  "enrollmentStatus": "NOT_EXECUTED",
+  "executionBoundary": {
+    "businessDatabaseWrites": 0,
+    "commitCreated": false,
+    "credentialsIncluded": false,
+    "deploymentExecuted": false,
+    "enrollmentExecuted": false,
+    "networkRequests": 0,
+    "outcomesComputed": false,
+    "providerRequests": 0,
+    "pushExecuted": false,
+    "scoresComputed": false
+  },
+  "existingEnrollmentUpgradeAllowed": false,
+  "implementationStatus": "READY",
+  "legacyEnrollmentAdapterReady": false,
+  "migrationAppliedToTestDatabases": true,
+  "migrationVersion": 19,
+  "oldContractSuperseded": true,
+  "postgresql17Acceptance": {
+    "legacyContractRejected": true,
+    "preexistingEnrollmentMigrationRejected": true,
+    "sealedAfterEntryRejected": true,
+    "status": "PASS",
+    "upgradeMatrix": [
+      {
+        "fromVersion": "V1",
+        "status": "PASS",
+        "toVersion": "V19"
+      },
+      {
+        "fromVersion": "V18",
+        "status": "PASS",
+        "toVersion": "V19"
+      }
+    ]
+  },
+  "prospectiveEnrollmentAdapterV211Ready": true,
+  "rejectedEnrollmentContract": "FORWARD-DQV-ENROLLMENT-v2.1.0",
+  "schemaVersion": "FORWARD-DQV-V19-CHRONOLOGY-ACCEPTANCE-v1.0.0",
+  "sourceContractHash": "sha256:7d3951a1ed85652ba8e033e288e1f06ede33ee987016bbcacb541d0b664886cd",
+  "sourceFiles": {
+    "enrollmentV211": {
+      "fileSha256": "sha256:450a6292f4b0f85936830d9fcd7fe03da2d121e0e1607e4596f8a312ddad6a60",
+      "path": "analysis-python/src/equity_analysis/forward_validation/outcomes_v211.py"
+    },
+    "migration": {
+      "fileSha256": "sha256:fc76371dae2294c542c2e6a8f6ef254dbb820338dff51cc9951a84831af0ffb0",
+      "path": "database/migrations/V19__repair_forward_dqv_enrollment_chronology.sql"
+    },
+    "prospectiveAdapterV22": {
+      "fileSha256": "sha256:8c1a3aa9bb534e41905a39d797ea0614f0c8c71af4db8d2e6192cdc449aaa2c8",
+      "path": "analysis-python/src/equity_analysis/forward_validation/prospective_enrollment_adapter_v22.py"
+    },
+    "repositoryV211": {
+      "fileSha256": "sha256:3d095bae48bbe248265641180a6385fdbb963acde9e05c6e30e7b43bd35b39e2",
+      "path": "analysis-python/src/equity_analysis/forward_validation/outcome_persistence_v211.py"
+    }
+  },
+  "status": "READY",
+  "testAcceptance": {
+    "focusedPythonSuite": {
+      "passed": 19,
+      "status": "PASS"
+    },
+    "fullRepositorySuite": {
+      "claim": "NOT_CLAIMED_BY_GATE_ACCEPTANCE",
+      "status": "PENDING_FINAL_CLOSEOUT"
+    },
+    "gitDiffCheck": {
+      "status": "PASS"
+    },
+    "postgresTests": {
+      "passed": 2,
+      "status": "PASS"
+    },
+    "ruff": {
+      "status": "PASS"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "artifactType": "LICENSED_HISTORICAL_ARTIFACT_RECEIPTS",
+  "schemaVersion": "LICENSED-HISTORICAL-ARTIFACT-RECEIPTS-v1.0.0",
+  "purpose": "Preserve immutable model-freeze bindings without publishing licensed historical observations or derived performance metrics.",
+  "entries": [
+    {
+      "path": "docs/generated/long-horizon-historical-stratified-validation-v1-4-2026-07-29.json",
+      "fileSha256": "B88253CF9F04FF33C25EFD2DE79BE6A516AF03DC3A44271A26B1236E7941F058",
+      "artifactContentHash": "3A6FF54B14B5F1A12196770A2395FD299016742D9B6F4738E900973EA4AD3DC2"
+    },
+    {
+      "path": "docs/generated/tactical-historical-stratified-validation-v1-1-2026-07-29.json",
+      "fileSha256": "90A93563A9B4B087FF71FF33074D4D16C160476450E423E02A20976AAB298880",
+      "artifactContentHash": "3CF596473A0C88D91B54CBDA8BF2396EAE2174C03A1950A33B0A72F1EF90D4E9"
+    }
+  ],
+  "rawProviderValuesIncluded": false,
+  "derivedLicensedMetricsIncluded": false,
+  "artifactContentHash": "B5B2C1DC470BD02829F2FC9905EE1E70F38925B986A9A7498330747402E53FEF"
+}

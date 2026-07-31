@@ -1,14 +1,21 @@
 import json
 import time
 from collections.abc import Callable
+from dataclasses import dataclass
 from datetime import UTC, date, datetime
 from decimal import Decimal, InvalidOperation
 from email.message import Message
+from hashlib import sha256
 from typing import Any
 from urllib.error import HTTPError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
+from equity_analysis.market_data.fundamentals import (
+    FundamentalsEnvelope,
+    normalize_current_company_profile,
+    normalize_current_market_capitalization,
+)
 from equity_analysis.market_data.models import (
     AdjustmentMode,
     CorporateAction,
@@ -103,6 +110,13 @@ EODHD_ENDPOINT_WEIGHTS = {
 }
 
 
+@dataclass(frozen=True)
+class _ProviderResponse:
+    payload: Any
+    content_hash: str
+    retrieved_at: datetime
+
+
 class EodhdProvider:
     def __init__(
         self,
@@ -125,7 +139,7 @@ class EodhdProvider:
         self._sleeper = sleeper
         self._request_observer = request_observer
         self._request_authorizer = request_authorizer
-        self._fundamentals_cache: dict[str, dict[str, Any]] = {}
+        self._fundamentals_cache: dict[str, _ProviderResponse] = {}
         self._financial_diagnostics: dict[
             str, tuple[FinancialRecordDiagnostic, ...]
         ] = {}
@@ -191,7 +205,7 @@ class EodhdProvider:
     def fetch_security_metadata(self, symbol: str) -> SecurityMetadata:
         requested = symbol.strip().upper()
         provider_symbol = self.map_symbol(requested)
-        payload = self._fundamentals(provider_symbol)
+        payload = self._fundamentals(provider_symbol).payload
         if not isinstance(payload, dict):
             raise MarketDataProviderError(
                 f"EODHD returned malformed metadata for {requested}", "MALFORMED_RESPONSE"
@@ -252,24 +266,88 @@ class EodhdProvider:
             available_at=now,
         )
 
-    def fetch_financial_statements(
-        self, symbol: str
-    ) -> tuple[NormalizedFinancialObservation, ...]:
+    def fetch_fundamentals(self, symbol: str) -> FundamentalsEnvelope:
         requested = symbol.strip().upper()
         provider_symbol = self.map_symbol(requested)
-        payload = self._fundamentals(provider_symbol)
+        response = self._fundamentals(provider_symbol)
+        return self.parse_fundamentals_payload(
+            symbol=requested,
+            payload=response.payload,
+            content_hash=response.content_hash,
+            retrieved_at=response.retrieved_at,
+            source_reference=f"eodhd:fundamentals:{provider_symbol}:response",
+        )
+
+    def parse_fundamentals_payload(
+        self,
+        *,
+        symbol: str,
+        payload: Any,
+        content_hash: str,
+        retrieved_at: datetime,
+        source_reference: str,
+    ) -> FundamentalsEnvelope:
+        """Normalize one already-captured response without making a network request."""
+        requested = symbol.strip().upper()
+        provider_symbol = self.map_symbol(requested)
         if not isinstance(payload, dict):
             raise MarketDataProviderError(
                 f"EODHD returned malformed fundamentals for {requested}",
                 "MALFORMED_RESPONSE",
             )
+        observations = self._normalize_financial_statements(
+            requested=requested,
+            provider_symbol=provider_symbol,
+            payload=payload,
+            observed_at=retrieved_at,
+        )
+        general = payload.get("General")
+        highlights = payload.get("Highlights")
+        general = general if isinstance(general, dict) else {}
+        highlights = highlights if isinstance(highlights, dict) else {}
+        effective_at = retrieved_at
+        return FundamentalsEnvelope(
+            provider_descriptor=self.descriptor,
+            requested_symbol=requested,
+            provider_symbol=provider_symbol,
+            source_reference=source_reference,
+            content_hash=content_hash,
+            available_at=retrieved_at,
+            retrieved_at=retrieved_at,
+            financial_observations=observations,
+            company_profile=normalize_current_company_profile(
+                legal_name=general.get("Name"),
+                sector=general.get("Sector"),
+                industry=general.get("Industry"),
+                effective_at=effective_at,
+            ),
+            market_capitalization=normalize_current_market_capitalization(
+                value=highlights.get("MarketCapitalization"),
+                currency=general.get("CurrencyCode"),
+                effective_at=effective_at,
+            ),
+        )
+
+    def fetch_financial_statements(
+        self, symbol: str
+    ) -> tuple[NormalizedFinancialObservation, ...]:
+        """Compatibility projection over the single-response envelope."""
+        return self.fetch_fundamentals(symbol).financial_observations
+
+    def _normalize_financial_statements(
+        self,
+        *,
+        requested: str,
+        provider_symbol: str,
+        payload: dict[str, Any],
+        observed_at: datetime,
+    ) -> tuple[NormalizedFinancialObservation, ...]:
         financials = payload.get("Financials")
         if not isinstance(financials, dict):
             raise MarketDataProviderError(
                 f"EODHD returned no financial statements for {requested}",
                 "MISSING_FUNDAMENTALS",
             )
-        now = datetime.now(UTC)
         observations: list[NormalizedFinancialObservation] = []
         diagnostics: list[FinancialRecordDiagnostic] = []
         statement_names = {
@@ -327,7 +405,8 @@ class EodhdProvider:
                                 effective_at=datetime.combine(
                                     period_end, datetime.min.time(), tzinfo=UTC
                                 ),
-                                ingested_at=now,
+                                available_at=None,
+                                ingested_at=observed_at,
                             )
                         )
                         mapped_fields = tuple(
@@ -478,6 +557,11 @@ class EodhdProvider:
         return tuple(observations)
 
     def _request(self, endpoint: str, parameters: dict[str, Any]) -> Any:
+        return self._request_response(endpoint, parameters).payload
+
+    def _request_response(
+        self, endpoint: str, parameters: dict[str, Any]
+    ) -> _ProviderResponse:
         query = urlencode({**parameters, "api_token": self._api_key, "fmt": "json"})
         request = Request(
             f"{EODHD_BASE_URL}/{endpoint}?{query}",
@@ -495,11 +579,17 @@ class EodhdProvider:
             started_at = time.monotonic()
             try:
                 with self._opener(request, timeout=self._timeout_seconds) as response:
-                    payload = json.load(response)
+                    body = response.read()
+                    payload = json.loads(body)
+                    retrieved_at = datetime.now(UTC)
                     self._observe_request(
                         endpoint, attempt + 1, "SUCCESS", started_at
                     )
-                    return payload
+                    return _ProviderResponse(
+                        payload=payload,
+                        content_hash=f"sha256:{sha256(body).hexdigest()}",
+                        retrieved_at=retrieved_at,
+                    )
             except HTTPError as error:
                 self._observe_request(
                     endpoint,
@@ -533,18 +623,18 @@ class EodhdProvider:
                 ) from None
         raise AssertionError("Retry loop did not terminate")
 
-    def _fundamentals(self, provider_symbol: str) -> dict[str, Any]:
+    def _fundamentals(self, provider_symbol: str) -> _ProviderResponse:
         cached = self._fundamentals_cache.get(provider_symbol)
         if cached is not None:
             return cached
-        payload = self._request(f"fundamentals/{provider_symbol}", {})
-        if not isinstance(payload, dict):
+        response = self._request_response(f"fundamentals/{provider_symbol}", {})
+        if not isinstance(response.payload, dict):
             raise MarketDataProviderError(
                 f"EODHD returned malformed fundamentals for {provider_symbol}",
                 "MALFORMED_RESPONSE",
             )
-        self._fundamentals_cache[provider_symbol] = payload
-        return payload
+        self._fundamentals_cache[provider_symbol] = response
+        return response
 
     def _observe_request(
         self,
@@ -580,8 +670,6 @@ class EodhdProvider:
 
     @staticmethod
     def _canonical_hash(value: dict[str, Any]) -> str:
-        from hashlib import sha256
-
         payload = json.dumps(
             value, sort_keys=True, separators=(",", ":"), ensure_ascii=True
         ).encode("utf-8")

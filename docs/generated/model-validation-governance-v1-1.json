@@ -1,0 +1,107 @@
+{
+  "artifactContentHash": "568892E4CB6EEF8391623DFEB6BED1BB1F3750DB0537B2A1CCB056BBAFEB450D",
+  "artifactType": "MODEL_VALIDATION_GOVERNANCE_POLICY",
+  "claimBoundary": {
+    "currentUniverseDiagnosticMayBecomeForwardSupported": false,
+    "currentUniverseDiagnosticMayBecomePitSupported": false,
+    "inheritsEvidenceEnvelopeAndClaimCeilingFrom": "MODEL-VALIDATION-GOVERNANCE-v1.0.0",
+    "prospectiveSealedEvidenceRequiredForForwardSupported": true,
+    "strictPitEvidenceRequiredForPitSupported": true
+  },
+  "effectiveDate": "2026-07-30",
+  "evidenceBoundaries": {
+    "aiMayAffectDeterministicFields": false,
+    "humanJudgmentMayMutateModelSnapshot": false,
+    "humanJudgmentStoredSeparately": true,
+    "missingMayBecomeZeroOrNeutral": false,
+    "missingStatesRemainExplicit": [
+      "MISSING",
+      "STALE",
+      "INVALID",
+      "NOT_APPLICABLE",
+      "EXCLUDED",
+      "ABSTAIN",
+      "WATCH_ONLY"
+    ]
+  },
+  "executionBoundary": {
+    "databaseWritten": false,
+    "existingGovernanceV1Modified": false,
+    "networkRequestsExecuted": false,
+    "scoringExecuted": false
+  },
+  "finiteEvaluation": {
+    "allowedSuccessorReasons": [
+      "IMPLEMENTATION_DEFECT",
+      "METHODOLOGY_DEFECT",
+      "JUSTIFIED_MISSING_FACTOR",
+      "SYSTEMATICALLY_HARMFUL_ASSUMPTION"
+    ],
+    "conflictingReplayAllowed": false,
+    "exactIdempotentReplayAllowed": true,
+    "observedOutcomeTuningAllowed": false,
+    "oneFrozenVersionOnePlannedRetrospective": true,
+    "successorRequiresLaterWindowOrProspectiveEvidence": true,
+    "successorRequiresNewVersionAndFreeze": true
+  },
+  "labelGranularity": {
+    "longHorizonMinimumCompletedSessions": 252,
+    "longHorizonTargets": [
+      "COMPANY_QUALITY",
+      "DOWNSIDE_RISK",
+      "EXPECTED_RETURN",
+      "SECURITY_ATTRACTIVENESS"
+    ],
+    "perHorizon": true,
+    "perModel": true,
+    "perTarget": true,
+    "tacticalHorizonsCompletedSessions": [
+      5,
+      20,
+      60
+    ],
+    "tacticalTargets": [
+      "TACTICAL_ENTRY_DECISION",
+      "TACTICAL_RANKING"
+    ]
+  },
+  "modelBoundaries": {
+    "futureCalibratedProbabilityRequiresSuccessorVersion": true,
+    "longHorizonDefaultAggregateRankAuthorized": false,
+    "longHorizonTargetsRemainSeparate": [
+      "COMPANY_QUALITY",
+      "SECURITY_ATTRACTIVENESS",
+      "EXPECTED_RETURN",
+      "DOWNSIDE_RISK"
+    ],
+    "rankingEvidenceSeparateFromEntryDecisionEvidence": true,
+    "tacticalV22CalibratedProbabilityClaimAllowed": false,
+    "tacticalV22OutputType": "DETERMINISTIC_ORDINAL_SCORE"
+  },
+  "practicalValueThresholds": {
+    "futureNumericThresholdApplicability": "FORWARD_ONLY",
+    "futureThresholdsMustBeFrozenBeforeOutcomes": true,
+    "observedTier1Applicability": "OBSERVED_TIER1_NOT_APPLICABLE",
+    "postObservationNumericThresholdsAllowed": false
+  },
+  "schemaVersion": "MODEL-VALIDATION-GOVERNANCE-v1.1.0",
+  "statusAxes": {
+    "axesMayBeConflated": false,
+    "modelEvidenceLabel": [
+      "BACKTEST_SUPPORTED",
+      "PIT_SUPPORTED",
+      "FORWARD_SUPPORTED",
+      "PARTIALLY_SUPPORTED",
+      "NOT_VALIDATED",
+      "INVALIDATED"
+    ],
+    "operationalRunStatus": [
+      "NOT_STARTED",
+      "RUNNING",
+      "COMPLETED",
+      "BLOCKED_BY_DATA",
+      "INSUFFICIENT_EVIDENCE",
+      "FAILED"
+    ]
+  }
+}

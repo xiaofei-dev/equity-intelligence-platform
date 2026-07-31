@@ -1,0 +1,19 @@
+{
+  "artifactContentHash": "sha256:2672a04df059b5efb6730a2fd5011f973ac330c1585d509d10640a2bdf331a0c",
+  "artifactType": "FUTURE_PRICE_HISTORY_CAPTURE_EXECUTION_STATUS",
+  "configuredWeightHardCeiling": 69,
+  "databaseWritesExecuted": 0,
+  "latestCompletedSession": "2026-07-29",
+  "networkRequestsExecuted": 0,
+  "officialCalendarRequestCount": 2,
+  "physicalHttpAttemptHardCeiling": 69,
+  "planHash": "sha256:3a1c16085016be13f45972a14b8fc722e4b4324a1cbe7eae2220b3aabeacd871",
+  "preflightArtifactContentHash": "sha256:33b587b54f2bc942b1a81557fc239d26903dfef40f0abf9ec21c913620a3a0f7",
+  "priceSymbolCount": 67,
+  "providerRetryLimit": 0,
+  "schemaVersion": "FUTURE-PRICE-HISTORY-CAPTURE-v2.0.0",
+  "status": "BLOCKED_AWAITING_TARGET_SESSION_COMPLETION",
+  "symbolPlanHash": "sha256:5f985e3396ce6efd771db47a284a1699eb4a4f7a1f93076ba1a238fb5bea705b",
+  "targetSession": "2026-07-30",
+  "yahooChartRequestCount": 67
+}

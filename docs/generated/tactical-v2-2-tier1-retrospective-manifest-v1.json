@@ -1,0 +1,249 @@
+{
+  "artifactContentHash": "sha256:e7de83cca9909c3b5ef33ba4a0d6c49c7750b530e105f5f2d81a1db5649e969d",
+  "artifactType": "TACTICAL_V22_TIER1_RETROSPECTIVE_CLOSEOUT",
+  "benchmarkAvailability": {
+    "EQUAL_WEIGHT": "AVAILABLE_DIAGNOSTIC_ONLY",
+    "PURE_MOMENTUM": "AVAILABLE_DIAGNOSTIC_ONLY",
+    "PURE_QUALITY": "MISSING",
+    "PURE_VALUE": "MISSING",
+    "SECTOR": "AVAILABLE_DIAGNOSTIC_ONLY_NON_PIT",
+    "SPY": "AVAILABLE_DIAGNOSTIC_ONLY"
+  },
+  "claimBoundary": {
+    "formalForwardDqvSatisfied": false,
+    "formalHistoricalValidationClaimAllowed": false,
+    "historicalEngineeringSanityEvidenceAllowed": true,
+    "parameterRetuningFromResultsAllowed": false,
+    "scoreRankingEvaluatedDespiteEventAbstention": true,
+    "statement": "Frozen Tactical v2.2 opportunity scores were replayed with only price features dated on or before each decision. Missing historical deterministic-event evidence retained the frozen WATCH_ONLY actionability ceiling. Results test score-ranking sanity, not executable recommendations or an untouched holdout.",
+    "statisticalEdgeProven": false
+  },
+  "claimCeiling": "DIAGNOSTIC_ONLY",
+  "controlledResult": {
+    "artifactContentHash": "sha256:f94cb83d40af68315460e434625044d3dac2b7cac1cf43cfaca4a7c0b0e53e26",
+    "derivedLicensedMetricsIncluded": true,
+    "fileSha256": "F3C9FE5FD0ED38E015B3C2225829A539F75F49E35BEB1AAEDC6D1D7CCACDC4B3",
+    "path": "storage/historical-validation/tactical-v2-2-tier1/f94cb83d40af68315460e434625044d3dac2b7cac1cf43cfaca4a7c0b0e53e26.json",
+    "rawProviderValuesIncluded": false,
+    "storageType": "GITIGNORED_LOCAL"
+  },
+  "derivedLicensedMetricsIncluded": false,
+  "evaluationRole": "DEVELOPMENT_OBSERVED",
+  "execution": {
+    "automaticTradingAuthorized": false,
+    "futurePriceUsedInFeatureInputs": false,
+    "modelExecuted": true,
+    "modelWeightsOrThresholdsChanged": false,
+    "providerNetworkRequests": 0,
+    "rawProviderValuesIncluded": false
+  },
+  "formalGateEligible": false,
+  "horizons": [
+    {
+      "actionabilityCounts": {
+        "NO_SETUP": 755,
+        "RISK_BLOCKED": 20,
+        "WATCH_ONLY": 709
+      },
+      "assessedSecurityObservationCount": 1484,
+      "benchmarks": {
+        "EQUAL_WEIGHT": {
+          "metricValuesStoredInControlledResult": true,
+          "status": "AVAILABLE_DIAGNOSTIC_ONLY"
+        },
+        "PURE_MOMENTUM": {
+          "metricValuesStoredInControlledResult": true,
+          "status": "AVAILABLE_DIAGNOSTIC_ONLY"
+        },
+        "PURE_QUALITY": {
+          "metricValuesStoredInControlledResult": true,
+          "status": "MISSING"
+        },
+        "PURE_VALUE": {
+          "metricValuesStoredInControlledResult": true,
+          "status": "MISSING"
+        },
+        "SECTOR": {
+          "metricValuesStoredInControlledResult": true,
+          "status": "AVAILABLE_DIAGNOSTIC_ONLY_NON_PIT"
+        },
+        "SPY": {
+          "metricValuesStoredInControlledResult": true,
+          "status": "AVAILABLE_DIAGNOSTIC_ONLY"
+        }
+      },
+      "decisionCount": 27,
+      "executableEntryEpisodeCount": 0,
+      "horizonCompletedSessions": 5,
+      "terminalPopulationCounts": {
+        "ASSESSED": 1484,
+        "EXCLUDED": 243,
+        "MISSING": 1,
+        "NOT_APPLICABLE": 54
+      },
+      "thesisCounts": {
+        "CONTINUATION": 663,
+        "MEAN_REVERSION": 66,
+        "NONE": 755
+      }
+    },
+    {
+      "actionabilityCounts": {
+        "NO_SETUP": 817,
+        "RISK_BLOCKED": 7,
+        "WATCH_ONLY": 660
+      },
+      "assessedSecurityObservationCount": 1484,
+      "benchmarks": {
+        "EQUAL_WEIGHT": {
+          "metricValuesStoredInControlledResult": true,
+          "status": "AVAILABLE_DIAGNOSTIC_ONLY"
+        },
+        "PURE_MOMENTUM": {
+          "metricValuesStoredInControlledResult": true,
+          "status": "AVAILABLE_DIAGNOSTIC_ONLY"
+        },
+        "PURE_QUALITY": {
+          "metricValuesStoredInControlledResult": true,
+          "status": "MISSING"
+        },
+        "PURE_VALUE": {
+          "metricValuesStoredInControlledResult": true,
+          "status": "MISSING"
+        },
+        "SECTOR": {
+          "metricValuesStoredInControlledResult": true,
+          "status": "AVAILABLE_DIAGNOSTIC_ONLY_NON_PIT"
+        },
+        "SPY": {
+          "metricValuesStoredInControlledResult": true,
+          "status": "AVAILABLE_DIAGNOSTIC_ONLY"
+        }
+      },
+      "decisionCount": 27,
+      "executableEntryEpisodeCount": 0,
+      "horizonCompletedSessions": 20,
+      "terminalPopulationCounts": {
+        "ASSESSED": 1484,
+        "EXCLUDED": 243,
+        "MISSING": 1,
+        "NOT_APPLICABLE": 54
+      },
+      "thesisCounts": {
+        "CONFLICT": 1,
+        "CONTINUATION": 613,
+        "MEAN_REVERSION": 53,
+        "NONE": 817
+      }
+    },
+    {
+      "actionabilityCounts": {
+        "NO_SETUP": 913,
+        "RISK_BLOCKED": 5,
+        "WATCH_ONLY": 566
+      },
+      "assessedSecurityObservationCount": 1484,
+      "benchmarks": {
+        "EQUAL_WEIGHT": {
+          "metricValuesStoredInControlledResult": true,
+          "status": "AVAILABLE_DIAGNOSTIC_ONLY"
+        },
+        "PURE_MOMENTUM": {
+          "metricValuesStoredInControlledResult": true,
+          "status": "AVAILABLE_DIAGNOSTIC_ONLY"
+        },
+        "PURE_QUALITY": {
+          "metricValuesStoredInControlledResult": true,
+          "status": "MISSING"
+        },
+        "PURE_VALUE": {
+          "metricValuesStoredInControlledResult": true,
+          "status": "MISSING"
+        },
+        "SECTOR": {
+          "metricValuesStoredInControlledResult": true,
+          "status": "AVAILABLE_DIAGNOSTIC_ONLY_NON_PIT"
+        },
+        "SPY": {
+          "metricValuesStoredInControlledResult": true,
+          "status": "AVAILABLE_DIAGNOSTIC_ONLY"
+        }
+      },
+      "decisionCount": 27,
+      "executableEntryEpisodeCount": 0,
+      "horizonCompletedSessions": 60,
+      "terminalPopulationCounts": {
+        "ASSESSED": 1484,
+        "EXCLUDED": 243,
+        "MISSING": 1,
+        "NOT_APPLICABLE": 54
+      },
+      "thesisCounts": {
+        "CONFLICT": 14,
+        "CONTINUATION": 521,
+        "MEAN_REVERSION": 36,
+        "NONE": 913
+      }
+    }
+  ],
+  "knownLimitations": [
+    "CURRENT_UNIVERSE_SURVIVORSHIP_BIAS",
+    "CURRENT_CLASSIFICATION_RETROSPECTIVE_NOT_PIT",
+    "CURRENT_REVISION_TOTAL_RETURN_PRICE",
+    "HISTORICAL_DETERMINISTIC_EVENT_EVIDENCE_MISSING",
+    "HISTORICAL_PIT_VALUE_SCORE_EVIDENCE_MISSING",
+    "HISTORICAL_PIT_QUALITY_SCORE_EVIDENCE_MISSING",
+    "SEALED_ANCHOR_OUTCOMES_ALREADY_OBSERVABLE",
+    "OVERLAPPING_RANDOM_ANCHOR_OUTCOMES_NOT_INDEPENDENT"
+  ],
+  "modelVersion": "TACTICAL-SIGNAL-v2.2.0",
+  "population": {
+    "assessedCandidateCount": 55,
+    "classificationPointInTime": false,
+    "exactUniverseCount": 66,
+    "excludedCount": 9,
+    "historicalMembershipClaimed": false,
+    "mode": "CURRENT_UNIVERSE_RETROSPECTIVE",
+    "referenceOnlyCount": 2,
+    "survivorshipBiasPresent": true
+  },
+  "rawProviderValuesIncluded": false,
+  "schemaVersion": "TACTICAL-V2.2-TIER1-RETROSPECTIVE-v1.0.0",
+  "sliceSummary": {
+    "anchorCount": 27,
+    "firstDecisionDate": "2016-07-28",
+    "lastDecisionDate": "2026-04-28",
+    "maturedDecisionHorizonCount": 81
+  },
+  "sourceBindings": {
+    "closedTestUniverse": {
+      "fileSha256": "C977E932EDD5184AABBDE53ACCFF6F480650F96C03C878A9EC7FBE15D2920078",
+      "path": "analysis-python/resources/universes/market-intelligence-closed-test-us-v1.json"
+    },
+    "currentClassificationFixture": {
+      "fileSha256": "E6B099AF9A2E41CE1922714516850907083F7B031E388566613936739EFAF4C8",
+      "path": "analysis-python/tests/fixtures/provider_acceptance_universe_v3.json"
+    },
+    "historicalPriceManifest": {
+      "artifactContentHash": "CF50A3994AB3660029AC56F586F8B6CA572EA1654B6B5DF5549152D191B1A0D9",
+      "fileSha256": "E322AC57C00BB4018AC883A2F0EF3461299D7D97725B0791C75EA01846D08E27",
+      "path": "docs/generated/historical-yahoo-price-cache-20260729T-HISTORICAL-V1-R2-manifest.json"
+    },
+    "sealedSlicePlan": {
+      "artifactContentHash": "sha256:4e9f1d64b0ccf13c355c4cddcabda5a97a597cd97a0717c6b22c76015fce13e0",
+      "fileSha256": "1F4FB7FF27BE1E8B653FEA75E184EA7512DCD6F92E8E980920EB7D2CBEF960FB",
+      "path": "docs/generated/historical-dqv-v2-2-slice-plan.json"
+    },
+    "tacticalModelFreeze": {
+      "artifactContentHash": "A596080CD7936A6881A38E759C597934DAE1125EC83026DF6DB0434F6FE31910",
+      "fileSha256": "5D541315F62990BC5F44A4E421F404D737F6FFCF039E586B18BA362A113DC49F",
+      "path": "docs/generated/tactical-v2-2-model-freeze.json"
+    },
+    "tier1Runner": {
+      "fileSha256": "1E71CB39042F0FDA7D322FF0C2ACDA38B07A36EA46371D00BEDC8A9CDADB6DE7",
+      "path": "analysis-python/src/equity_analysis/historical_validation/tactical_v22_tier1_retrospective.py"
+    }
+  },
+  "terminalStatus": "COMPLETED_WITH_LIMITATIONS",
+  "untouchedHoldout": false
+}

@@ -1,0 +1,37 @@
+{
+  "aiMayAffectDeterministicResult": false,
+  "artifactContentHash": "sha256:e5fbb1d66ed969bef962711c5f25bd6335f62dd35bd4f82b09f7bc3696e95f1a",
+  "artifactType": "POST_FREEZE_DETERMINISTIC_DECISION_OUTPUT_PREFLIGHT",
+  "blockers": [
+    "REAL_POST_FREEZE_MODEL_EXECUTION_NOT_AVAILABLE",
+    "REAL_66_CLASSIFICATION_BINDINGS_NOT_AVAILABLE",
+    "CONTROLLED_BENCHMARK_CONSTITUENT_LEDGER_NOT_IMPLEMENTED"
+  ],
+  "contentAddressedControlledStorageRequired": true,
+  "controlledPayloadContractVersion": "POST-FREEZE-DETERMINISTIC-DECISION-OUTPUT-v2.2.0",
+  "databaseReads": 0,
+  "databaseWrites": 0,
+  "exactLongFields": [
+    "businessQuality",
+    "securityAttractiveness",
+    "downsideRisk",
+    "expectedReturnLowBaseHigh"
+  ],
+  "exactTacticalFields": [
+    "opportunityScore",
+    "selectedThesis",
+    "actionability"
+  ],
+  "futureSourceBindings": {
+    "controlledBenchmarkConstituentLedgerSetHash": "REQUIRED"
+  },
+  "gitSafeManifestContainsDecisionValues": false,
+  "humanMayAffectDeterministicResult": false,
+  "outputSetContractVersion": "POST-FREEZE-DETERMINISTIC-DECISION-OUTPUT-SET-v2.2.0",
+  "providerNetworkRequests": 0,
+  "rawProviderValuesIncluded": false,
+  "realScoresComputed": false,
+  "requiredPopulationCount": 66,
+  "schemaVersion": "POST-FREEZE-DETERMINISTIC-DECISION-OUTPUT-PREFLIGHT-v2.2.0",
+  "status": "BLOCKED"
+}

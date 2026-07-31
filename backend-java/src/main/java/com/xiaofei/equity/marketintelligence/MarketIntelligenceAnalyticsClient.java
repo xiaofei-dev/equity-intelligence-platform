@@ -14,16 +14,22 @@ import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestClientResponseException;
 
 import com.xiaofei.equity.marketintelligence.MarketIntelligenceContract.MarketIntelligenceFacets;
+import com.xiaofei.equity.marketintelligence.MarketIntelligenceContract.EligibilityRecoveryStatusResponse;
 import com.xiaofei.equity.marketintelligence.MarketIntelligenceContract.ProfileResponse;
 import com.xiaofei.equity.marketintelligence.MarketIntelligenceContract.ScreeningResultPage;
 import com.xiaofei.equity.marketintelligence.MarketIntelligenceContract.ScreeningRunMetadata;
 import com.xiaofei.equity.marketintelligence.MarketIntelligenceContract.ScreeningRunRequest;
 import com.xiaofei.equity.marketintelligence.MarketIntelligenceContract.SecuritySearchPage;
 
+import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.json.JsonMapper;
+
 @Service
 public class MarketIntelligenceAnalyticsClient {
 
 	static final String INTERNAL_ROOT = "/internal/v1/market-intelligence";
+
+	private static final JsonMapper JSON_MAPPER = JsonMapper.builder().build();
 
 	private final RestClient restClient;
 
@@ -142,6 +148,19 @@ public class MarketIntelligenceAnalyticsClient {
 					.body(MarketIntelligenceFacets.class));
 	}
 
+	public EligibilityRecoveryStatusResponse getLatestEligibilityRecoveryStatus(
+			UUID dataSnapshotId, String universeVersion, Instant asOf) {
+		return eligibilityCall(() -> restClient.get()
+				.uri(builder -> builder.path(
+							INTERNAL_ROOT + "/eligibility-recovery/status/latest")
+					.queryParam("data_snapshot_id", dataSnapshotId)
+					.queryParam("universe_version", universeVersion)
+					.queryParam("as_of", asOf)
+					.build())
+				.retrieve()
+				.body(EligibilityRecoveryStatusResponse.class));
+	}
+
 	private <T> T call(
 			String notFoundCode,
 			String invalidRequestCode,
@@ -180,6 +199,65 @@ public class MarketIntelligenceAnalyticsClient {
 					409);
 			default -> unavailable();
 		};
+	}
+
+	private <T> T eligibilityCall(AnalyticsCall<T> call) {
+		try {
+			T response = call.execute();
+			if (response == null) {
+				throw unavailable();
+			}
+			return response;
+		}
+		catch (RestClientResponseException exception) {
+			throw switch (exception.getStatusCode().value()) {
+				case 404 -> new MarketIntelligenceGatewayException(
+						"ELIGIBILITY_RECOVERY_SNAPSHOT_NOT_FOUND",
+						"The eligibility-recovery snapshot was not found.",
+						404);
+				case 409 -> eligibilityConflict(exception);
+				case 400, 422 -> new MarketIntelligenceGatewayException(
+						"ELIGIBILITY_RECOVERY_REQUEST_INVALID",
+						"The eligibility-recovery request is invalid.",
+						400);
+				case 503 -> new MarketIntelligenceGatewayException(
+						"ELIGIBILITY_RECOVERY_DATABASE_UNAVAILABLE",
+						"Eligibility-recovery evidence is temporarily unavailable.",
+						503);
+				default -> unavailable();
+			};
+		}
+		catch (RestClientException exception) {
+			throw unavailable();
+		}
+	}
+
+	private static MarketIntelligenceGatewayException eligibilityConflict(
+			RestClientResponseException exception) {
+		String code = upstreamCode(exception);
+		if ("ELIGIBILITY_RECOVERY_UNIVERSE_MISMATCH".equals(code)) {
+			return new MarketIntelligenceGatewayException(
+					code,
+					"The eligibility-recovery universe does not match the snapshot.",
+					409);
+		}
+		return new MarketIntelligenceGatewayException(
+				"ELIGIBILITY_RECOVERY_SNAPSHOT_NOT_READY",
+				"The eligibility-recovery snapshot is not ready.",
+				409);
+	}
+
+	private static String upstreamCode(RestClientResponseException exception) {
+		try {
+			JsonNode root = JSON_MAPPER.readTree(exception.getResponseBodyAsString());
+			JsonNode detail = root.get("detail");
+			JsonNode code = detail != null && detail.isObject()
+					? detail.get("code") : root.get("code");
+			return code != null && code.isString() ? code.stringValue() : null;
+		}
+		catch (RuntimeException ignored) {
+			return null;
+		}
 	}
 
 	private static MarketIntelligenceGatewayException unavailable() {

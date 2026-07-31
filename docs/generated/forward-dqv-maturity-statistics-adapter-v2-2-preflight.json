@@ -1,0 +1,91 @@
+{
+  "adapterSourceSha256": "sha256:8d982b02f58f8d158a543d192c8438fed90ea94944d6a027a2cac2e89c632c41",
+  "adapterVersion": "FORWARD-DQV-MATURITY-STATISTICS-ADAPTER-v2.2.0",
+  "artifactContentHash": "sha256:8be87f694bf32bb19c5d4d741ecaef06da9ebaef726c4282019bdaa2ef77b947",
+  "artifactType": "FORWARD_DQV_MATURITY_STATISTICS_ADAPTER_PREFLIGHT",
+  "blockers": [
+    "REAL_PROSPECTIVE_DECISION_SNAPSHOT_NOT_AVAILABLE",
+    "PROSPECTIVE_ENROLLMENT_NOT_EXECUTED",
+    "NATURALLY_MATURED_GATE_H_BATCH_NOT_AVAILABLE",
+    "CONTROLLED_PER_SECURITY_DECISION_VALUES_NOT_AVAILABLE",
+    "HASH_BOUND_DECISION_SESSION_INDEX_EVIDENCE_NOT_AVAILABLE",
+    "FORMAL_GATE_H_PER_SECURITY_DOWNSIDE_CAPTURE_NOT_AVAILABLE",
+    "CONTROLLED_BENCHMARK_CONSTITUENT_LEDGER_NOT_IMPLEMENTED"
+  ],
+  "contractCapabilities": {
+    "aggregateDownsideCopiedToSecurities": false,
+    "aiOrHumanMayAlterDeterministicResult": false,
+    "decisionManifestHashBound": true,
+    "decisionSessionIndexEvidenceHashBound": true,
+    "diagnosticOnlyHorizons": [
+      126
+    ],
+    "downsideNotApplicablePreservesOtherRowEvidence": true,
+    "enrollmentHashBound": true,
+    "exactSecurityJoin": 66,
+    "formalGateHSupplementOnly": true,
+    "grossCostNetRequiredForAssessed": true,
+    "hashBoundLiquidityEvidenceRequiredForAssessed": true,
+    "longFieldsRequiredForAssessed": [
+      "BUSINESS_QUALITY",
+      "VALUATION_ATTRACTIVENESS",
+      "DOWNSIDE_RISK",
+      "EXPECTED_RETURN_LOW_BASE_HIGH"
+    ],
+    "maeMfeMddVolatilityAndTypedDownsideStateRequiredForAssessed": true,
+    "maturityBundleHashBound": true,
+    "missingLiquidityDemotesAssessed": true,
+    "outcomeBatchHashBound": true,
+    "silentImputationAllowed": false,
+    "sixBenchmarkDrawdownsRequired": true,
+    "sixBenchmarkReturnsRequired": true,
+    "stablePublicSecurityIdentityJoin": true,
+    "tacticalFieldsRequiredForAssessed": [
+      "OPPORTUNITY_SCORE",
+      "SETUP_THESIS",
+      "ACTIONABILITY"
+    ]
+  },
+  "currentEvidenceAssessment": {
+    "historicalHoldoutClaimed": false,
+    "modelEvaluated": false,
+    "modelValidated": false,
+    "prospectiveOutcomesObserved": false,
+    "realObservationCount": 0,
+    "statisticsExecuted": false
+  },
+  "dependencies": {
+    "decisionContractFixture": {
+      "contentHash": "sha256:427dbeb78aaa4d52c8b96f6fd5a72a0924d10765cbf15a43fe5f956534f7520b",
+      "fileSha256": "sha256:d984a8b3488b34accba5383f0d0374e60b3aa8200d9a75c833e3e458489b924a",
+      "path": "docs/generated/post-freeze-decision-snapshot-v2-2-contract-fixture.json",
+      "schemaVersion": "POST-FREEZE-DECISION-SNAPSHOT-v2.2.0"
+    },
+    "maturityPreflight": {
+      "contentHash": "sha256:2d8077363afd587aae72e212a48c07f55d4457f44b9ccd67c94cb22e612421ac",
+      "fileSha256": "sha256:a878d2cbb10a5ef0231e2f9cbe92d73208c0ceff67cb347271895afa42202f80",
+      "path": "docs/generated/forward-dqv-maturity-engine-v2-2-preflight.json",
+      "schemaVersion": "FORWARD-DQV-MATURITY-ENGINE-v2.2.0"
+    },
+    "statisticsPreflight": {
+      "contentHash": "sha256:e59a86a35227db37c580537ea4009e0c7c01bb4c032abf06a21aa7778c5a7077",
+      "fileSha256": "sha256:9a004d35cdd1ef782ca29b182f7d0dd7aceb8938ed649122a73964d6d083b767",
+      "path": "docs/generated/forward-dqv-v2-2-statistical-engine-preflight.json",
+      "schemaVersion": "FORWARD-DQV-STATISTICS-PREFLIGHT-v2.2.0"
+    }
+  },
+  "executionBoundary": {
+    "commitCreated": false,
+    "databaseReads": 0,
+    "databaseWrites": 0,
+    "deploymentExecuted": false,
+    "networkRequests": 0,
+    "pushExecuted": false,
+    "rawProviderValuesIncluded": false,
+    "scoresOrRanksComputed": false
+  },
+  "purpose": "CONTRACT_FIXTURE",
+  "schemaVersion": "FORWARD-DQV-MATURITY-STATISTICS-ADAPTER-PREFLIGHT-v2.2.0",
+  "statisticsInputVersion": "FORWARD-DQV-STATISTICS-INPUT-v2.2.0",
+  "status": "BLOCKED"
+}

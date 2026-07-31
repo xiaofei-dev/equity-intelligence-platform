@@ -1,0 +1,34 @@
+{
+  "artifactContentHash": "sha256:ea4d3355dfcf3ef53310b4390de6fdb922f56b2606ad931e8b545578097d775a",
+  "blockers": [
+    "NO_REAL_V2_1_1_ENROLLMENT",
+    "NO_NATURALLY_DUE_MATURITY",
+    "NO_COMPLETE_STORED_66_PRICE_ACTION_ADTV_PATHS",
+    "NO_SEALED_SYNTHETIC_BENCHMARK_CONSTITUENT_LEDGER"
+  ],
+  "databaseWrites": 0,
+  "futureBenchmarkLedgerContract": "FORWARD-DQV-BENCHMARK-PATH-LEDGER-v2.2.0",
+  "legacyV210EnrollmentAllowed": false,
+  "longHorizon126FormalGateEligible": false,
+  "naturalCalendarFallbackAllowed": false,
+  "providerNetworkRequests": 0,
+  "realOutcomesComputed": 0,
+  "requiredBenchmarkKinds": [
+    "EQUAL_WEIGHT",
+    "PURE_MOMENTUM",
+    "PURE_QUALITY",
+    "PURE_VALUE",
+    "SECTOR",
+    "SPY"
+  ],
+  "schemaVersion": "FORWARD-DQV-MATURITY-PATH-PREFLIGHT-v2.2.0",
+  "status": "BLOCKED",
+  "supportedEnrollmentContract": "FORWARD-DQV-ENROLLMENT-v2.1.1",
+  "supportedHorizons": [
+    5,
+    20,
+    60,
+    126,
+    252
+  ]
+}

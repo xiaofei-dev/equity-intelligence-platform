@@ -1,0 +1,117 @@
+{
+  "aggregateMetricCoverage": [
+    {
+      "assessedSliceCount": 27,
+      "horizonCompletedSessions": 5,
+      "metricValuesStoredInControlledResult": true,
+      "portfolioKinds": [
+        "BOTTOM",
+        "ELIGIBLE_EQUAL_WEIGHT",
+        "TOP"
+      ]
+    },
+    {
+      "assessedSliceCount": 27,
+      "horizonCompletedSessions": 20,
+      "metricValuesStoredInControlledResult": true,
+      "portfolioKinds": [
+        "BOTTOM",
+        "ELIGIBLE_EQUAL_WEIGHT",
+        "TOP"
+      ]
+    },
+    {
+      "assessedSliceCount": 27,
+      "horizonCompletedSessions": 60,
+      "metricValuesStoredInControlledResult": true,
+      "portfolioKinds": [
+        "BOTTOM",
+        "ELIGIBLE_EQUAL_WEIGHT",
+        "TOP"
+      ]
+    }
+  ],
+  "artifactContentHash": "sha256:a5493b00cb3f23e5fb7b1b4d367e23014c4cb13025c4c115de4ee4de429d7062",
+  "artifactType": "PRACTICAL_TACTICAL_V22_BACKTEST_CLOSEOUT",
+  "claimBoundary": {
+    "currentSectorClassificationNotPointInTime": true,
+    "currentUniverseSurvivorshipBiasPresent": true,
+    "formalForwardValidationSatisfied": false,
+    "futurePerformanceGuaranteed": false,
+    "historicalMembershipPointInTime": false,
+    "outcomesOnlyAnalysis": false,
+    "previouslyObservedHistoryIsUntouchedHoldout": false,
+    "realFrozenHistoricalScoresExecuted": true,
+    "retrospectiveFormulaRetuningPerformed": false
+  },
+  "controlledResult": {
+    "artifactContentHash": "sha256:46de281b30f04e9496047009893a101cdb51a83834b3cf1fea3ec05f3a9a517e",
+    "derivedLicensedMetricsIncluded": true,
+    "fileSha256": "D288232C9E0DBD4E3B0AF8A6276F41B620D31B00D86F0C23A10625A425B2B1C7",
+    "path": "storage/historical-validation/practical-tactical-v2-2/46de281b30f04e9496047009893a101cdb51a83834b3cf1fea3ec05f3a9a517e.json",
+    "rawProviderValuesIncluded": false,
+    "storageType": "GITIGNORED_LOCAL"
+  },
+  "derivedLicensedMetricsIncluded": false,
+  "evaluationRole": "DEVELOPMENT_OBSERVED",
+  "evidenceTier": "CURRENT_UNIVERSE_NON_PIT",
+  "execution": {
+    "aiUsedInRanking": false,
+    "automaticTradingAuthorized": false,
+    "frozenTacticalSignalsExecutedBySource": true,
+    "modelWeightsOrThresholdsChanged": false,
+    "practicalBenchmarkContractExecuted": true,
+    "providerNetworkRequests": 0,
+    "sourceDecisionSliceCount": 81,
+    "sourceSecurityDecisionRowCount": 4452
+  },
+  "horizonLabels": {
+    "20": "ONE_MONTH",
+    "5": "ONE_WEEK",
+    "60": "THREE_MONTHS"
+  },
+  "horizonsCompletedSessions": [
+    5,
+    20,
+    60
+  ],
+  "knownLimitations": [
+    "Tier-1 evidence is practical retrospective evidence, not proof of future returns.",
+    "Previously observed history is not represented as an untouched holdout.",
+    "Scores and model decisions are consumed without retrospective tuning.",
+    "SPY is the mandatory first benchmark; equal-weight and dated sector benchmarks are optional.",
+    "Path-risk metrics are gross path diagnostics; terminal portfolio returns include simple turnover cost.",
+    "Stability groups are diagnostics and must not be used for post-hoc model selection.",
+    "Current-universe membership can introduce survivorship bias.",
+    "Non-PIT or revised fundamentals can introduce look-ahead and revision bias."
+  ],
+  "modelVersion": "TACTICAL-SIGNAL-v2.2.0",
+  "population": {
+    "decisionAnchorCount": 27,
+    "decisionSliceCount": 81,
+    "excludedCount": 9,
+    "frozenUniverseCount": 66,
+    "maximumAssessedPerSlice": 55,
+    "minimumAssessedPerSlice": 54,
+    "referenceOnlyCount": 2,
+    "securityDecisionRowCount": 4452,
+    "targetAssessedPerSlice": 55
+  },
+  "rawProviderValuesIncluded": false,
+  "schemaVersion": "PRACTICAL-TACTICAL-v2.2-BACKTEST-v1.0.0",
+  "sourceVerification": {
+    "allPricePayloadHashesVerified": true,
+    "historicalPriceManifestArtifactContentHash": "CF50A3994AB3660029AC56F586F8B6CA572EA1654B6B5DF5549152D191B1A0D9",
+    "retrospectiveArtifactContentHash": "sha256:e7de83cca9909c3b5ef33ba4a0d6c49c7750b530e105f5f2d81a1db5649e969d",
+    "retrospectiveFileSha256": "4B7B872000534396C31B0A52FFBDB7EFE1E901533E6E61EFFA6E592EF97D2DE6",
+    "sourceControlledArtifactContentHash": "sha256:f94cb83d40af68315460e434625044d3dac2b7cac1cf43cfaca4a7c0b0e53e26",
+    "sourceControlledFileSha256": "F3C9FE5FD0ED38E015B3C2225829A539F75F49E35BEB1AAEDC6D1D7CCACDC4B3"
+  },
+  "terminalStatus": "COMPLETED_WITH_LIMITATIONS",
+  "transactionCostPolicy": {
+    "application": "Applied to model portfolio turnover by practical_benchmark_v1; benchmark gross returns are not reduced, making model excess comparisons conservative.",
+    "policy": "FIXED_ROUND_TRIP_COST_RATE",
+    "roundTripBasisPoints": "40",
+    "roundTripCostRate": "0.004"
+  }
+}

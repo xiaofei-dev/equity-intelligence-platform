@@ -67,6 +67,22 @@ public final class MarketIntelligenceContract {
 		FAILED
 	}
 
+	public enum EligibilityRecoveryStatus {
+		READY_FOR_CONFIRMATION,
+		NO_ACTIONABLE_REQUESTS,
+		BLOCKED_COHORT_UNREACHABLE,
+		BLOCKED_EVIDENCE_SEMANTICS,
+		BLOCKED_BUDGET,
+		BLOCKED_SNAPSHOT
+	}
+
+	public enum EligibilityRecoverySecurityState {
+		ALREADY_ELIGIBLE,
+		RECOVERABLE,
+		BLOCKED,
+		NOT_APPLICABLE
+	}
+
 	public enum SortDirection {
 		ASCENDING,
 		DESCENDING
@@ -362,6 +378,101 @@ public final class MarketIntelligenceContract {
 			companyTypes = immutable(companyTypes);
 			membershipStatuses = immutable(membershipStatuses);
 		}
+	}
+
+	public record EligibilityRecoveryStatusResponse(
+			String schemaVersion,
+			String preflightId,
+			Instant generatedAt,
+			UUID dataSnapshotId,
+			String universeVersion,
+			Instant snapshotAsOf,
+			String objectiveRatingVersion,
+			String recoveryPolicyVersion,
+			EligibilityRecoveryStatus status,
+			int currentEligibleCount,
+			int frozenMinimumEligibleCount,
+			int maximumEligibleAfterPlan,
+			int dueSecurityCount,
+			List<String> dueSymbols,
+			int persistedEvidenceReuseCount,
+			int profileCount,
+			int resultCount,
+			List<EligibilityRecoveryRequestPlan> requestPlan,
+			List<EligibilityBlockerSummary> blockerSummary,
+			List<EligibilityFreshnessSummary> freshness,
+			List<EligibilitySecurityDiagnostic> securityDiagnostics,
+			boolean confirmationRequired,
+			boolean networkRequestsExecuted,
+			boolean scoresOrRanksGenerated,
+			String artifactContentHash) {
+
+		public EligibilityRecoveryStatusResponse {
+			dueSymbols = immutable(dueSymbols);
+			requestPlan = immutable(requestPlan);
+			blockerSummary = immutable(blockerSummary);
+			freshness = immutable(freshness);
+			securityDiagnostics = immutable(securityDiagnostics);
+		}
+	}
+
+	public record EligibilityRecoveryRequestPlan(
+			String provider,
+			String endpointCode,
+			String dataset,
+			List<String> symbols,
+			int physicalRequestHardCeiling,
+			int weightedCallHardCeiling,
+			int runnerMaximumAttempts) {
+
+		public EligibilityRecoveryRequestPlan {
+			symbols = immutable(symbols);
+		}
+	}
+
+	public record EligibilityBlockerSummary(
+			String category,
+			String reasonCode,
+			String actionability,
+			int affectedSecurityCount) {
+	}
+
+	public record EligibilityFreshnessSummary(
+			String datasetCode,
+			String state,
+			Instant evaluatedAt,
+			Instant staleAfter,
+			String reasonCode,
+			int affectedSecurityCount) {
+	}
+
+	public record EligibilitySecurityDiagnostic(
+			UUID securityId,
+			String symbol,
+			EligibilityRecoverySecurityState state,
+			List<EligibilityMissingOperand> missingOperands,
+			List<EligibilitySecurityFreshness> freshness) {
+
+		public EligibilitySecurityDiagnostic {
+			missingOperands = immutable(missingOperands);
+			freshness = immutable(freshness);
+		}
+	}
+
+	public record EligibilityMissingOperand(
+			String factorCode,
+			String operandCode,
+			String reasonCode,
+			String providerRoute,
+			String actionability) {
+	}
+
+	public record EligibilitySecurityFreshness(
+			String datasetCode,
+			String state,
+			Instant evaluatedAt,
+			Instant staleAfter,
+			String reasonCode) {
 	}
 
 	private static <T> List<T> immutable(List<T> values) {

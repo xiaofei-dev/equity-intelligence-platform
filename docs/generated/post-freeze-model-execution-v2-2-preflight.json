@@ -1,0 +1,59 @@
+{
+  "aiExecuted": false,
+  "aiMayAffectDeterministicFields": false,
+  "artifactContentHash": "sha256:557f4534356c2bebfcdf76277f4f957bef6846daf37e0e47ab27899ea516983b",
+  "artifactType": "POST_FREEZE_MODEL_EXECUTION_PREFLIGHT",
+  "blockers": [
+    "COMPLETED_SESSION_PRICE_EVIDENCE_MISSING",
+    "MODEL_INPUT_EVIDENCE_MISSING"
+  ],
+  "databaseReads": 0,
+  "databaseWrites": 0,
+  "decisionRowsGenerated": 0,
+  "enrollmentAuthorized": false,
+  "executionContractVersion": "POST-FREEZE-MODEL-EXECUTION-v2.2.0",
+  "frozenPopulation": {
+    "identityBindingHash": "sha256:ed5ce0a4a587ce8c18e24b9f9d9d4194ac21257e9fde4d10a63d4e34b3b3e42d",
+    "roleCounts": {
+      "EXCLUDED": 9,
+      "PRIMARY": 48,
+      "REFERENCE_ONLY": 2,
+      "RESERVE": 7
+    },
+    "securityCount": 66
+  },
+  "legacyDecisionUpgradeAllowed": false,
+  "legacyResultUpgradeAllowed": false,
+  "modelFreezes": [
+    {
+      "artifactContentHash": "sha256:a596080cd7936a6881a38e759c597934dae1125ec83026df6db0434f6fe31910",
+      "fileSha256": "sha256:5d541315f62990bc5f44a4e421f404d737f6ffcf039e586b18ba362a113dc49f",
+      "freezeHash": "sha256:d6e3edb1160856ade700c37d42a4c9e2cdda3b88a4080dbc8ed73354b4c5bf99",
+      "modelVersion": "TACTICAL-SIGNAL-v2.2.0",
+      "path": "docs/generated/tactical-v2-2-model-freeze.json"
+    },
+    {
+      "artifactContentHash": "sha256:233271457387a5d7212379ae2c77d69c743dc69f7345fe2d834ff7dc98d4fa59",
+      "fileSha256": "sha256:e208c280355077009c4af102383881d89d3139242086e859b5eec4beb6873024",
+      "freezeHash": "sha256:8f8e7fb671a8c35e771fdad6b9e3ed5d90950135acc9297bbff571f27780e6c3",
+      "modelVersion": "LONG-HORIZON-RESEARCH-v1.1.0",
+      "path": "docs/generated/long-horizon-v1-1-model-freeze.json"
+    }
+  ],
+  "providerNetworkRequests": 0,
+  "rawProviderValuesIncluded": false,
+  "realManifestGenerated": false,
+  "requiredEvidence": {
+    "completedSessionPriceEvidencePath": "docs/generated/future-completed-session-price-evidence-v2-2.json",
+    "modelInputEvidencePath": "docs/generated/post-freeze-model-input-evidence-v2-2.json"
+  },
+  "schemaVersion": "POST-FREEZE-MODEL-EXECUTION-PREFLIGHT-v2.2.0",
+  "scoresOrRanksComputed": false,
+  "seal": {
+    "contentHash": "sha256:ed3e796290c3509c94429b7273346612c40f2b4db4b94889e0db7d583c7c8e0d",
+    "futureDecisionMustBeStrictlyAfter": "2026-07-30T03:55:37.171621+00:00",
+    "path": "docs/generated/forward-preregistration-seal-v2-2.json"
+  },
+  "snapshotInputContractVersion": "POST-FREEZE-DECISION-INPUT-v2.2.0",
+  "status": "BLOCKED"
+}

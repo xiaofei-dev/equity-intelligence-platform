@@ -1,0 +1,397 @@
+{
+  "artifactContentHash": "sha256:a89e22615ee298e0f20b649c0134f8e73e641a44f81fb0c6dab8ab19a0215226",
+  "artifactType": "FORWARD_DQV_EVALUATION_PROTOCOL_FIXTURE",
+  "bindings": {
+    "benchmarkPreregistrationV22": {
+      "artifactContentHash": "sha256:cbeaa8e2fbb524a2e16084e80c0e52a47948e4ec208fa20ec37864a7ed2b5444",
+      "fileSha256": "sha256:8e96142e6d876a6681209ecf68a3232115b983a6d51f31a73041a346d9d43987",
+      "path": "docs/generated/forward-benchmark-preregistration-v2-2.json",
+      "schemaVersion": "FORWARD-BENCHMARK-PREREGISTRATION-v2.2.0"
+    },
+    "forwardPreregistrationV2": {
+      "artifactContentHash": "sha256:cb63d2600b42c9003be8a99a76de967e5921ef68440bcd3a0d6dd8934efac966",
+      "fileSha256": "sha256:300cf5d7b6fcbff5ee2a21e4e43ea4d969417586380c8aad3df8b2a13e328ca2",
+      "path": "docs/generated/forward-dqv-preregistration-v2.json",
+      "schemaVersion": "FORWARD-DQV-PREREGISTRATION-v2.0.0"
+    },
+    "longHorizonFreeze": {
+      "artifactContentHash": "233271457387A5D7212379AE2C77D69C743DC69F7345FE2D834FF7DC98D4FA59",
+      "fileSha256": "sha256:e208c280355077009c4af102383881d89d3139242086e859b5eec4beb6873024",
+      "path": "docs/generated/long-horizon-v1-1-model-freeze.json",
+      "schemaVersion": "MODEL-FREEZE-ARTIFACT-v1.0.0"
+    },
+    "outcomeLedgerV18Acceptance": {
+      "artifactContentHash": "sha256:e5ce27f66981d8341ed0d88f33fc72d380999b3d68360d53ce83f908f51a5f1e",
+      "fileSha256": "sha256:e0f96af0eb0dfc285245a00992b46857ec817379064c2d33a78b27876c4342e6",
+      "path": "docs/generated/forward-dqv-v18-acceptance-v1.json",
+      "schemaVersion": "FORWARD-DQV-V18-ACCEPTANCE-v1.0.0"
+    },
+    "tacticalFreeze": {
+      "artifactContentHash": "A596080CD7936A6881A38E759C597934DAE1125EC83026DF6DB0434F6FE31910",
+      "fileSha256": "sha256:5d541315f62990bc5f44a4e421f404d737f6ffcf039e586b18ba362a113dc49f",
+      "path": "docs/generated/tactical-v2-2-model-freeze.json",
+      "schemaVersion": "MODEL-FREEZE-ARTIFACT-v1.0.0"
+    }
+  },
+  "currentBlockers": [
+    "PROSPECTIVE_ENROLLMENT_NOT_EXECUTED",
+    "NATURALLY_MATURED_OUTCOMES_NOT_AVAILABLE"
+  ],
+  "executionBoundary": {
+    "automaticTradingAuthorized": false,
+    "commitCreated": false,
+    "databaseWrites": 0,
+    "deploymentExecuted": false,
+    "historicalScoringExecuted": false,
+    "outcomeObservationExecuted": false,
+    "prospectiveEnrollmentExecuted": false,
+    "providerNetworkRequests": 0,
+    "pushExecuted": false,
+    "rawProviderValuesIncluded": false
+  },
+  "historicalDiagnostics": {
+    "calendarAnchors": {
+      "method": "LAST_COMPLETED_SESSION_ON_OR_BEFORE_OFFSET",
+      "missingAnchorPolicy": "EXPLICIT_MISSING",
+      "monthOffsetsBeforeFreeze": [
+        3,
+        6,
+        9,
+        12,
+        18,
+        24,
+        48,
+        72,
+        120
+      ]
+    },
+    "claimCeiling": "DIAGNOSTIC_ONLY",
+    "evaluationRole": "DEVELOPMENT_OBSERVED",
+    "formalGateEligible": false,
+    "horizonsCompletedSessions": [
+      5,
+      20,
+      60,
+      126,
+      252
+    ],
+    "leakageControls": {
+      "classification": "DATED_SECTOR_AND_SIZE_BINDING_REQUIRED",
+      "corporateActions": "DECISION_FEATURES_USE_ONLY_ACTIONS_KNOWN_AT_CUTOFF;OUTCOME_ADJUSTMENT_EVIDENCE_IS_RECORDED_SEPARATELY",
+      "decisionInputs": "AVAILABLE_AND_INGESTED_NO_LATER_THAN_DECISION_CUTOFF",
+      "delistedSecurities": "RETAIN_WITH_EXPLICIT_TERMINAL_STATE",
+      "membership": "HISTORICAL_MEMBERSHIP_REQUIRED_FOR_PIT_CLAIM;CURRENT_UNIVERSE_RETROSPECTIVE_IS_DIAGNOSTIC_ONLY",
+      "outcomes": "LOADED_ONLY_AFTER_SLICE_PLAN_HASH_IS_SEALED;PRIOR_HUMAN_OBSERVATION_REMAINS_DISCLOSED",
+      "parameterChangesAfterReplay": "NEW_MODEL_AND_PROTOCOL_VERSION_REQUIRED",
+      "revisions": "DECISION_TIME_REVISION_REQUIRED;CURRENT_RESTATEMENT_CANNOT_BE_BACKDATED"
+    },
+    "outcomeAvailabilityPolicy": "EVALUATE_ONLY_HORIZONS_MATURED_WITHIN_THE_FROZEN_HISTORY",
+    "outcomesWereObservableBeforeThisProtocol": true,
+    "randomSelection": {
+      "bands": [
+        {
+          "maximumMonthsBeforeFreeze": 9,
+          "minimumMonthsBeforeFreeze": 3,
+          "name": "RECENT_3_TO_9_MONTHS"
+        },
+        {
+          "maximumMonthsBeforeFreeze": 36,
+          "minimumMonthsBeforeFreeze": 12,
+          "name": "PRIOR_1_TO_3_YEARS"
+        },
+        {
+          "maximumMonthsBeforeFreeze": 120,
+          "minimumMonthsBeforeFreeze": 48,
+          "name": "OLDER_4_TO_10_YEARS"
+        }
+      ],
+      "method": "STRATIFIED_RANDOM_COMPLETED_SESSIONS",
+      "minimumSessionSpacing": 15,
+      "samplesPerBand": 6,
+      "seed": 20260729
+    },
+    "selectionAfterOutcomesExistDoesNotCreateAHoldout": true,
+    "selectionMustBeSealedBeforeReplay": true,
+    "untouchedHoldout": false
+  },
+  "metrics": {
+    "aiMayAffectDeterministicFields": false,
+    "benchmarks": [
+      "SPY",
+      "SECTOR",
+      "EQUAL_WEIGHT",
+      "PURE_MOMENTUM",
+      "PURE_VALUE",
+      "PURE_QUALITY"
+    ],
+    "defaultLongHorizonAggregateRankAuthorized": false,
+    "longHorizonTargetsRemainSeparate": [
+      "BUSINESS_QUALITY",
+      "SECURITY_ATTRACTIVENESS",
+      "DOWNSIDE_RISK"
+    ],
+    "requiredMetrics": [
+      "RANK_INFORMATION_COEFFICIENT",
+      "TOP_MINUS_BOTTOM_NET_RETURN",
+      "TOP_MINUS_EACH_BENCHMARK_NET_RETURN",
+      "MAXIMUM_ADVERSE_EXCURSION",
+      "MAXIMUM_FAVORABLE_EXCURSION",
+      "MAXIMUM_DRAWDOWN",
+      "DOWNSIDE_CAPTURE",
+      "TURNOVER",
+      "LIQUIDITY_PARTICIPATION_RATE",
+      "COVERAGE",
+      "ASSESSED_COUNT",
+      "MISSING_COUNT",
+      "STALE_COUNT",
+      "INVALID_COUNT",
+      "NOT_APPLICABLE_COUNT",
+      "SPECIALIZED_MODEL_REQUIRED_COUNT",
+      "EXCLUDED_COUNT",
+      "ABSTENTION_COUNT"
+    ],
+    "returnAccounting": {
+      "benchmarkComparisonUses": "NET_RETURN",
+      "entry": "NEXT_COMPLETED_SESSION_OPEN",
+      "exit": "PREREGISTERED_HORIZON_COMPLETED_SESSION_CLOSE",
+      "liquiditySensitiveCostRequired": true,
+      "requiredRepresentations": [
+        "GROSS",
+        "COST",
+        "NET"
+      ]
+    }
+  },
+  "prospectiveHorizons": [
+    {
+      "completedSessions": 5,
+      "embargoSessions": 5,
+      "evaluationRole": "TACTICAL_FORMAL",
+      "formalGateEligible": true,
+      "minimumBootstrapBlockSessions": 5,
+      "minimumCoverageRatio": "0.80",
+      "minimumDistinctDecisionDates": 2,
+      "minimumEligibleSecurityDecisions": 100,
+      "minimumMaturedCalendarSpanSessions": 10,
+      "modelTrack": "TACTICAL",
+      "naturalMaturityRequired": true,
+      "outcomeDependence": "PURGED_BLOCK",
+      "purgeSessions": 5,
+      "resampling": "BLOCK_BOOTSTRAP"
+    },
+    {
+      "completedSessions": 20,
+      "embargoSessions": 20,
+      "evaluationRole": "TACTICAL_FORMAL",
+      "formalGateEligible": true,
+      "minimumBootstrapBlockSessions": 20,
+      "minimumCoverageRatio": "0.80",
+      "minimumDistinctDecisionDates": 2,
+      "minimumEligibleSecurityDecisions": 100,
+      "minimumMaturedCalendarSpanSessions": 40,
+      "modelTrack": "TACTICAL",
+      "naturalMaturityRequired": true,
+      "outcomeDependence": "PURGED_BLOCK",
+      "purgeSessions": 20,
+      "resampling": "BLOCK_BOOTSTRAP"
+    },
+    {
+      "completedSessions": 60,
+      "embargoSessions": 60,
+      "evaluationRole": "TACTICAL_FORMAL",
+      "formalGateEligible": true,
+      "minimumBootstrapBlockSessions": 60,
+      "minimumCoverageRatio": "0.80",
+      "minimumDistinctDecisionDates": 2,
+      "minimumEligibleSecurityDecisions": 100,
+      "minimumMaturedCalendarSpanSessions": 120,
+      "modelTrack": "TACTICAL",
+      "naturalMaturityRequired": true,
+      "outcomeDependence": "PURGED_BLOCK",
+      "purgeSessions": 60,
+      "resampling": "BLOCK_BOOTSTRAP"
+    },
+    {
+      "completedSessions": 126,
+      "embargoSessions": 126,
+      "evaluationRole": "LONG_HORIZON_INTERIM_DIAGNOSTIC",
+      "formalGateEligible": false,
+      "minimumBootstrapBlockSessions": 126,
+      "minimumCoverageRatio": "0.80",
+      "minimumDistinctDecisionDates": 2,
+      "minimumEligibleSecurityDecisions": 100,
+      "minimumMaturedCalendarSpanSessions": 252,
+      "modelTrack": "LONG_HORIZON",
+      "naturalMaturityRequired": true,
+      "outcomeDependence": "PURGED_BLOCK",
+      "purgeSessions": 126,
+      "resampling": "BLOCK_BOOTSTRAP"
+    },
+    {
+      "completedSessions": 252,
+      "embargoSessions": 252,
+      "evaluationRole": "LONG_HORIZON_FORMAL",
+      "formalGateEligible": true,
+      "minimumBootstrapBlockSessions": 252,
+      "minimumCoverageRatio": "0.80",
+      "minimumDistinctDecisionDates": 2,
+      "minimumEligibleSecurityDecisions": 100,
+      "minimumMaturedCalendarSpanSessions": 504,
+      "modelTrack": "LONG_HORIZON",
+      "naturalMaturityRequired": true,
+      "outcomeDependence": "PURGED_BLOCK",
+      "purgeSessions": 252,
+      "resampling": "BLOCK_BOOTSTRAP"
+    }
+  ],
+  "protocolVersion": "FORWARD-DQV-EVALUATION-PROTOCOL-v2.2.0",
+  "purpose": "CONTRACT_FIXTURE",
+  "schemaVersion": "FORWARD-DQV-EVALUATION-PROTOCOL-FIXTURE-v2.2.0",
+  "statistics": {
+    "bootstrapIterations": 10000,
+    "bootstrapMethod": "DETERMINISTIC_CIRCULAR_BLOCK_BOOTSTRAP",
+    "bootstrapSeed": 20260729,
+    "confidenceLevel": "0.90",
+    "confirmatoryFamilies": [
+      {
+        "name": "TACTICAL_5_SESSION",
+        "tests": [
+          "DISCRIMINATION",
+          "ACTIONABILITY_PARTICIPATION_MINUS_ABSTENTION",
+          "NET_EXCESS_SPY",
+          "NET_EXCESS_SECTOR",
+          "NET_EXCESS_EQUAL_WEIGHT",
+          "NET_EXCESS_PURE_MOMENTUM",
+          "NET_EXCESS_PURE_VALUE",
+          "NET_EXCESS_PURE_QUALITY"
+        ]
+      },
+      {
+        "name": "TACTICAL_20_SESSION",
+        "tests": [
+          "DISCRIMINATION",
+          "ACTIONABILITY_PARTICIPATION_MINUS_ABSTENTION",
+          "NET_EXCESS_SPY",
+          "NET_EXCESS_SECTOR",
+          "NET_EXCESS_EQUAL_WEIGHT",
+          "NET_EXCESS_PURE_MOMENTUM",
+          "NET_EXCESS_PURE_VALUE",
+          "NET_EXCESS_PURE_QUALITY"
+        ]
+      },
+      {
+        "name": "TACTICAL_60_SESSION",
+        "tests": [
+          "DISCRIMINATION",
+          "ACTIONABILITY_PARTICIPATION_MINUS_ABSTENTION",
+          "NET_EXCESS_SPY",
+          "NET_EXCESS_SECTOR",
+          "NET_EXCESS_EQUAL_WEIGHT",
+          "NET_EXCESS_PURE_MOMENTUM",
+          "NET_EXCESS_PURE_VALUE",
+          "NET_EXCESS_PURE_QUALITY"
+        ]
+      },
+      {
+        "name": "LONG_252_BUSINESS_QUALITY",
+        "tests": [
+          "FUTURE_FUNDAMENTAL_DISCRIMINATION"
+        ]
+      },
+      {
+        "name": "LONG_252_SECURITY_ATTRACTIVENESS",
+        "tests": [
+          "DISCRIMINATION",
+          "NET_EXCESS_SPY",
+          "NET_EXCESS_SECTOR",
+          "NET_EXCESS_EQUAL_WEIGHT",
+          "NET_EXCESS_PURE_MOMENTUM",
+          "NET_EXCESS_PURE_VALUE",
+          "NET_EXCESS_PURE_QUALITY"
+        ]
+      },
+      {
+        "name": "LONG_252_DOWNSIDE_RISK",
+        "tests": [
+          "MAXIMUM_DRAWDOWN_NONINFERIORITY",
+          "DOWNSIDE_CAPTURE_NOT_ABOVE_ONE"
+        ]
+      }
+    ],
+    "familyWiseAlpha": "0.10",
+    "multipleComparisonMethod": "HOLM_BONFERRONI",
+    "ordinaryIidBootstrapAllowed": false,
+    "positiveClaimRule": "EVERY_CONFIRMATORY_TEST_IN_THE_RELEVANT_FAMILY_MUST_PASS_ITS_HOLM_ADJUSTED_BOUND",
+    "tacticalActionabilityPairing": {
+      "comparison": "PAIRED_WITHIN_DECISION_DATE_NET_RETURN_SPREAD",
+      "exactMarketBottomPredictionClaimed": false,
+      "groupingFrozenBeforeOutcome": true,
+      "minimumObservationsPerGroup": 20,
+      "minimumPairedDecisionDates": 2,
+      "outcomeDrivenRegroupingAuthorized": false,
+      "participationCategories": [
+        "ENTRY",
+        "LIMITED_ENTRY"
+      ],
+      "singleGroupDatePolicy": "REPORT_NOT_COMPARABLE_AND_EXCLUDE_FROM_THIS_TEST"
+    }
+  },
+  "status": "BLOCKED_AWAITING_PROSPECTIVE_DATA",
+  "stratification": {
+    "allStrataReportedEvenWhenUnderpowered": true,
+    "consistencyGuardrail": "AN_ADEQUATELY_POWERED_PREDECLARED_STRATUM_WITH_A_HOLM_ADJUSTED_ADVERSE_UPPER_BOUND_CAPS_THE_TRACK_AT_MIXED",
+    "dimensions": [
+      "SECTOR",
+      "MARKET_CAP_SIZE_BAND"
+    ],
+    "minimumDistinctDecisionDatesForInferentialStratum": 2,
+    "minimumEligibleDecisionsForInferentialStratum": 20,
+    "missingClassificationPolicy": "EXPLICIT_MISSING_NOT_IMPUTED",
+    "sectorSourceMustBeDated": true,
+    "sizeBands": [
+      "MEGA",
+      "LARGE",
+      "MID",
+      "SMALL",
+      "MISSING"
+    ],
+    "underpoweredStratumStatus": "INSUFFICIENT_EVIDENCE"
+  },
+  "terminalRules": {
+    "BLOCKED_BY_DATA": [
+      "HASH_OR_VERSION_MISMATCH",
+      "INCOMPLETE_FROZEN_POPULATION",
+      "REQUIRED_BENCHMARK_UNAVAILABLE",
+      "LOOK_AHEAD_OR_REVISION_LEAKAGE",
+      "OUTCOME_NOT_NATURALLY_MATURED",
+      "ORDINARY_IID_BOOTSTRAP_PROPOSED"
+    ],
+    "DIAGNOSTIC_ONLY": [
+      "EVERY_HISTORICAL_SLICE",
+      "126_SESSION_LONG_HORIZON_INTERIM"
+    ],
+    "INSUFFICIENT_EVIDENCE": [
+      "ELIGIBLE_SECURITY_DECISIONS_BELOW_100",
+      "COVERAGE_BELOW_0_80",
+      "DISTINCT_DECISION_DATES_BELOW_2",
+      "MATURED_CALENDAR_SPAN_BELOW_TWO_HORIZONS",
+      "REQUIRED_INTERVAL_OR_PATH_METRIC_MISSING"
+    ],
+    "MIXED": [
+      "LONG_HORIZON_TARGETS_DISAGREE",
+      "ADEQUATELY_POWERED_PREDECLARED_STRATUM_IS_MATERIALLY_ADVERSE"
+    ],
+    "NOT_VALIDATED": [
+      "ANY_REQUIRED_HOLM_ADJUSTED_POSITIVE_LOWER_BOUND_NOT_ABOVE_ZERO",
+      "MAXIMUM_DRAWDOWN_WORSE_THAN_FROZEN_BENCHMARK",
+      "DOWNSIDE_CAPTURE_ABOVE_ONE"
+    ],
+    "VALIDATED": [
+      "ONLY_FORMAL_PROSPECTIVE_HORIZON",
+      "ALL_RELEVANT_CONFIRMATORY_FAMILIES_PASS",
+      "ALL_RISK_AND_EVIDENCE_GUARDRAILS_PASS"
+    ],
+    "favorableConclusionRequired": false,
+    "thresholdOptimizationAfterObservedOutcomeAllowed": false
+  }
+}

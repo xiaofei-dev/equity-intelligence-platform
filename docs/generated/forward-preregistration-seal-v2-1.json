@@ -1,0 +1,37 @@
+{
+  "benchmarkConstructionPolicyHash": "sha256:ee0b1de73e19b8475a056231aa6e03817ae273f40f7ca74e4f693446bc4a62df",
+  "benchmarkConstructionPolicyVersion": "FORWARD-BENCHMARK-CONSTRUCTION-v2.1.0",
+  "benchmarkPreregistration": {
+    "artifactContentHash": "sha256:5356f9ad16ff246e4f5565daee8316a9fae56f94bc126593bd10adec7c62d5a4",
+    "fileSha256": "sha256:25cc20d603476ef186c8ab6577067b3f7e0070b07a8ddaaa064ccff9c71af791",
+    "path": "docs/generated/forward-benchmark-preregistration-v2-1.json"
+  },
+  "commitPushOrDeployExecuted": false,
+  "databaseWriteExecuted": false,
+  "deterministicScoresIncluded": false,
+  "evidenceBoundaryHash": "sha256:b39b17dc0ee54d1db219d10003795f809a98ab5abb06063b5ddecdf7e95d7bc9",
+  "futureDecisionMustBeStrictlyAfter": "2026-07-30T03:12:23.237053Z",
+  "legacyDecision": {
+    "dataSnapshotId": "beaa9952-9852-4088-9dc3-92047824414b",
+    "decisionAsOf": "2026-07-29T02:57:08.988871Z",
+    "fileSha256": "sha256:b4015050c0b47002523a07e3fb8b816aa7cadce29ec6875756e475057aaf1b71",
+    "path": "docs/generated/forward-v2-decision-snapshot-20260729T025708Z-beaa9952.json",
+    "preregistrationEligible": false,
+    "reason": "DECISION_PRECEDES_FORMAL_PREREGISTRATION",
+    "upgradeAllowed": false
+  },
+  "parentPreregistration": {
+    "artifactContentHash": "sha256:cb63d2600b42c9003be8a99a76de967e5921ef68440bcd3a0d6dd8934efac966",
+    "fileSha256": "sha256:300cf5d7b6fcbff5ee2a21e4e43ea4d969417586380c8aad3df8b2a13e328ca2",
+    "path": "docs/generated/forward-dqv-preregistration-v2.json"
+  },
+  "parentV16AuditEventHash": "sha256:3f5b67a0e8683ef5ae42b9a1d2aeeb46ee4376f3ee1e9b4289a8950ac5e2752d",
+  "prospectiveSecurityCount": 66,
+  "prospectiveUniverseIdentityBindingHash": "sha256:ed5ce0a4a587ce8c18e24b9f9d9d4194ac21257e9fde4d10a63d4e34b3b3e42d",
+  "prospectiveUniverseVersion": "market-intelligence-closed-test-us-v1.0.0",
+  "providerNetworkRequests": 0,
+  "rawProviderValuesIncluded": false,
+  "schemaVersion": "FORWARD-PREREGISTRATION-SEAL-v2.1.0",
+  "sealContentHash": "sha256:8f6c3232f9ca5f2ace25f770c447c1d3bae2b17205151dc93fcc9b30cf15e889",
+  "sealedAt": "2026-07-30T03:12:23.237053Z"
+}

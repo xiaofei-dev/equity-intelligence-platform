@@ -1,0 +1,580 @@
+{
+  "artifactContentHash": "sha256:03ec8cfa4a923a5b2c53ce2fef68b80e5a7cad165c97f4259ec0a914411327f1",
+  "candidatePolicyHash": "sha256:6f03ed3c092983d691ef8f32a71384ef329528b0a69a85e84579587901ee69d8",
+  "captureArtifactContentHash": "sha256:6421f584a5e1e8adf9e35ee88eb259982f72956dd475bc6897570e5d158b0693",
+  "includedPopulationCount": 55,
+  "minimumRequiredCount": 44,
+  "missingStaleInvalidConflictRemainExplicit": true,
+  "pureQuality": {
+    "coverageGatePassed": true,
+    "coverageRatio": "1.0000",
+    "statusCounts": {
+      "VALID": 55
+    },
+    "validCount": 55
+  },
+  "pureValue": {
+    "coverageGatePassed": true,
+    "coverageRatio": "1.0000",
+    "statusCounts": {
+      "VALID": 55
+    },
+    "validCount": 55
+  },
+  "rawProviderValuesIncluded": false,
+  "runId": "20260730T041722Z-02f8ddea2f6e",
+  "schemaVersion": "FORWARD-BENCHMARK-INPUT-COVERAGE-v2.2.0",
+  "scoresIncluded": false,
+  "securities": [
+    {
+      "controlledPayloadContentHash": "sha256:783f5bb29727a678ed4ff052c310004bf6f910292c909e393c1255cb727743d8",
+      "publicSecurityId": "d8a14843-961a-5406-a372-b69d46f7512f",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:36cb158f11ef9048d6f6788aa02bfb21920a382a24ed25e0fefd09d422951d26",
+      "symbol": "AAPL",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:bdfe8fd9dce924bb0af3ccb97505dfacb93b8e138897b691a471d6536ea67d18",
+      "publicSecurityId": "ea503902-9cbd-5ca3-82a4-00214f655ab2",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:28665ed226ad8059bc6094623ad75c78e13afda78c4991d44a8b823425e91c5b",
+      "symbol": "MSFT",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:23c1110eef69b94bbcb757761f848a90c3f147d8bc982341300de846b74e4222",
+      "publicSecurityId": "06297dd5-c150-5360-8cbb-c6341aa01dae",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:6e422c4bbe69fb32f3f1708d7b18797377fff6d5bb2a7ac7bbf1174d02b00528",
+      "symbol": "META",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:ffc0817e2a1d5c686c6113831776bfcc22f64861108b0759b303806d47898800",
+      "publicSecurityId": "2d4a0d15-2f0c-5c6e-acaf-10a647855fb1",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:69d5e5b1665605233f7325782f29de0f615dc0b3fe667e1fdc8be0b8e40dd82b",
+      "symbol": "WMT",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:82029fd0816b9ae17a8ee31f9c53482c869c1a05acaaef423becae897d00cc52",
+      "publicSecurityId": "a908303b-63ee-55e2-ac33-7b1625c7ab33",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:b7ac1c7fb5088c6e586a87a7be81eb47a3806ed0e0b3354fce235eb731c47476",
+      "symbol": "MCD",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:4e6ea47ae402a4831db5494d5f03e32e935fe2b353bc917ae440596579812114",
+      "publicSecurityId": "2020eb4c-563a-5293-8b52-e35b044772c0",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:270c852222ee9742f40d6daab6a5b505349f1e7cab84321ebc2f22d4177c361d",
+      "symbol": "CAT",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:e4a514deb92920763b18f5b35d99cb801dfad2fb66d5823e35aec206bf9d00d5",
+      "publicSecurityId": "3126a093-d76e-552c-9b40-bd6e37f2d0f5",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:e67fb0e323982c0f072581a5b994b318213288bfb1567bed328a500cdf452600",
+      "symbol": "ADP",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:6a7ea1135b1c989f19fcddd85b28ece0e66dc6c1c3eb25e7084ff2462906a0fc",
+      "publicSecurityId": "11a5a36e-831f-5550-a28b-7e6f6c817009",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:89e705216bfac6358a16220fd82ce95f11fc9aa7d1d33a217b4a3508c0a57f6c",
+      "symbol": "NKE",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:21be37bca90ba9862d957e5e243e727f2e609df94809714a52c531a4e6560686",
+      "publicSecurityId": "b649ccea-1e7f-5a90-9a07-3b08614ff51e",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:c345eb6baf167b20372783b9d5a4499c187b826727a2d2b22e04c231947e11a2",
+      "symbol": "TGT",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:4c0259dd8879e53133879bdcfca3a9e773f29936aff7f78dd8d2345ed3b455ba",
+      "publicSecurityId": "13371d22-6a81-5d12-a37c-f32b791c1639",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:f9ca20eb68756dc18e57d5a5889d771ab27c9c71e47f70e10cb48c4498b38978",
+      "symbol": "PLAB",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:aba12a97aa9c6253d91d249bb14c2c6287a5c7c9f35bce85897f7f6513e81200",
+      "publicSecurityId": "580cbcd9-264d-51f4-bbdc-cae9116fa05d",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:9dab17ab0999433effd3f66f6fb1fbed26b95d796338ff8f9f476a1b2a6f6c6c",
+      "symbol": "NVDA",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:47cfed1f45b614576e2722024fbb1e54f4086204aca385d8c6d0565b8e815101",
+      "publicSecurityId": "920d82bc-d5f6-52d9-8f79-4ce539d3481d",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:6ec4110977cf8401d1545c13d902fe7a9edf90cf0da36510df4b355a8b793c30",
+      "symbol": "AVGO",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:aca42ecdc063d9341d362fe8de8688ae5671c4449d38008c86c1113e25a9406d",
+      "publicSecurityId": "1d3e4e20-f35a-512d-a51d-71e218a1102a",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:dbb6d355f4b234a6b4734149ddb88de04a1e533287301fd3e623bd0fb38be015",
+      "symbol": "ORCL",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:24a310ab8634616f3a11b51870c220b1f6cc8710b3185dc090c552571039bb8a",
+      "publicSecurityId": "c6e9c6a3-b6a0-5e57-b0be-a104bb0c4a5a",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:dc80922c2ce549985f79e795bb925050cbf6f9ac8b65dd15e10a62f93da1d683",
+      "symbol": "CSCO",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:4dde9cb92972c4a8ca4095f9d3680561a8e4e457801ca00aaacd29217db69df5",
+      "publicSecurityId": "179b3a37-5c71-545a-901c-508038ede4e9",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:c1b455cf2a7d7fc6dc3dcdac5ac6e1c498fd0dbfae06c937a28ee62585e0d496",
+      "symbol": "ACN",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:234ef47d6be18d18dad5c19cb29c64009c63883881fe3ce782169a6a4f740bf1",
+      "publicSecurityId": "8f5d16c8-8417-5374-9fd4-5aa90e1430f5",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:e0b3f02bab1f28752deae8cc82984f02c8f8f02a31f88a936c3e059977c10e33",
+      "symbol": "IBM",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:833d497da29ff54602a6fd806aa4115443ba11c8c6c03e3e7454530db36b8184",
+      "publicSecurityId": "37c45c45-1973-5ca0-a81a-a65cf45359a2",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:d580335fe26bbfc0a4aef7ce09f6387dc88678546e50a8c65c031b174da4c1bd",
+      "symbol": "GOOGL",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:51df23171ee99f246c0f3c4fb2f2c072edc5a1611ef6d8bc4c0ee67905050ecf",
+      "publicSecurityId": "cf0d4c88-d578-5369-9cd1-3d42c1d94aab",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:a0b08b3b59e79529018dc3a464107d06f8584b149d63f9230a863894344e6b70",
+      "symbol": "NFLX",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:f078a17ca1a0861dca3410c86e737c04e67e379b93659deb8532ec8e3a8b0471",
+      "publicSecurityId": "62d95825-6ce5-5184-bf7a-692777a3e328",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:0e860653f72c2c8c9ad5792ec88feb2a47681f3bd0cc6b6a0c187b2d83ffaca7",
+      "symbol": "DIS",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:92ea4461bc9f9afe806ecb45e43a490c519f8c9c257b63738d98ffdf18bfe223",
+      "publicSecurityId": "426c12ec-91f8-55c9-85fb-76a55a0fd3ed",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:1c35361e2ea3a51b9971da6f366bc375c087ea0673337d6d803871c6ede8f69c",
+      "symbol": "AMZN",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:e65c0b396754bcbd801ba27f78ac7f34734551065c238601d6e49b000b99e1b3",
+      "publicSecurityId": "fa14b2bf-1e71-5fe7-8ea2-d000c1c0db57",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:e29a0e30255cb2c641ed5bb15f441e490818342b7642015ab8a421ebbc674a68",
+      "symbol": "HD",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:b39f554b0e0590d21e831d57a357ed0b7030c1c976a80debfbfd2d285bdf6eda",
+      "publicSecurityId": "42b3f426-7956-53fa-b0e9-706c25fb808d",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:a4da536c075ac6fe014a1382626a598b5059d6d5057b1b3b644dfe26f041fd08",
+      "symbol": "LOW",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:05064b69e7ac1deb0f506f0814e25d4b59173503239f690dd272c96b54659c30",
+      "publicSecurityId": "c919870a-589c-5744-9077-1aaf3eb09c35",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:431da3c0513d33264ade316f91cb52b81a0de323a58315ebaa2aadcb25f01592",
+      "symbol": "SBUX",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:8ce786799d11316b77ced5471429eae0de08a4f7041cbdc4152531a672a59ae1",
+      "publicSecurityId": "fc24ce00-afe0-5f5b-b75c-5aaeef8d1c9d",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:ba775e199863d5c4156489817559271339233a35a5e2700aff80602e8919f54e",
+      "symbol": "COST",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:ce0733737c970d638838308ffd2b515de0ce10914487e0c00996b3bfae94049a",
+      "publicSecurityId": "a29d6c6c-dede-5e1d-a8cd-ad174e88dc4d",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:9ca030fb2a80d9ac310f1ae9662d8aae365b76849dd79df543037697809fba03",
+      "symbol": "PG",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:3edaf4bc542336e5ed68bf9b97c644a09ba57c5708ad9a944b2943374e71ab7c",
+      "publicSecurityId": "347e531f-97ea-51b2-8ca6-aaaa878f6407",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:c0a87c23b7110939d0d914b07bda496db5a648bc97be2705c3294e0157902136",
+      "symbol": "KO",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:e145cbc20be381692274903c4cbd14e83b63fc2b44ada11f94bae74926074cdb",
+      "publicSecurityId": "529b9520-ffb4-55d3-87dc-ef66ad8811f9",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:9b0729155287e5a2c71883bc7171435c7f8c4c6c5c85222ea4a4f6a3e6a8a28b",
+      "symbol": "PEP",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:180c4bfcabf55d8c030a92f4d7218f152f3ec7b1c6ea5d9f6fb983473bee2a5c",
+      "publicSecurityId": "7d091a87-f1c3-546a-adee-3e69ff9daeb1",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:ee57422de772a8bf0a908c22199fa7d82fed17483964c9d590b0f707d97fd9f3",
+      "symbol": "CL",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:acd9d5539935cc548a8c11ddd279533c07c8796ae05064cc19a561dfe868c4f9",
+      "publicSecurityId": "c12a95ce-5e86-5520-8c33-5f8bc6605dd7",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:f8d5d6fd6f336bbcb430284ceeeb70f69a33f3cfc8fc9288352fc85ddce8f94e",
+      "symbol": "JNJ",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:a2c8497513ca9a6a57661f0f9f95139e5ad2479ab7315176036c5f8b219024b9",
+      "publicSecurityId": "d2e4553a-700e-547d-b1b7-9aa6be8dd4a7",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:bb50049db9846d4ac88a002aed761afbcb8a79e18f149672c7d847350229f05a",
+      "symbol": "ABT",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:7b9ad3e7d22fa2fc847e2c33c21ca63924b37fdb54c3f0a3524f727d95faff72",
+      "publicSecurityId": "c84db089-efaf-5597-a44a-892bef95fd87",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:8e6c82359264e455973d2b3d1a78a9665775f98070ee857f9557f89bd15b89d7",
+      "symbol": "MDT",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:8505f8ca5d48d3246c13bb3e5d8147baec06a3f47972509a7948a048bf4ba5d6",
+      "publicSecurityId": "48919d38-e65c-55d7-a910-1beda2cc09fe",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:c1603f507055ba56ed349a41c1b44496de198b41f3a6de2e4ce55b3b595812f6",
+      "symbol": "SYK",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:1644a4b2f967f3f09209dccc0de487378883b1d08004460a63790a50456d0992",
+      "publicSecurityId": "0ad69d1c-35c0-54ec-bed9-db54a6f0bcd0",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:4f139fe5e98bf4e71254b98c6bedd192a8fb1525872978ff1918b434d3a53d55",
+      "symbol": "TMO",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:d3cc3d67f62409c4499e61967fa7ab837f18dfce524255547fbc3d587580f408",
+      "publicSecurityId": "0e9cc7f3-1e1a-5cc5-9093-a7233697986e",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:6d7c3e8763e681851ede4af5e29c3ac22959a150b3e487882a0538b1c418b30f",
+      "symbol": "MCK",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:48b795ecfac7a9933176ba69e7731e045a6fa78fa85bc2ecf63d9e5f4a02de04",
+      "publicSecurityId": "5148f419-992c-5470-ba14-b7d612193b92",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:13012722cd5a39628649ab23227f5e1c49b785b20c93e17cf5f3196b560d475a",
+      "symbol": "HON",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:cb0281e3c6bb75fedad75e902dd6cecdc892df8b10612ac01c3c8c3ef73318f8",
+      "publicSecurityId": "e65f41aa-f7bc-56ea-9d58-7fc05a62c7f5",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:db9fb3d629b6c8bb81450fa91b28f8bf161c2c3146203c34adf64530e7b6b19f",
+      "symbol": "UPS",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:0efde1f8b01b29126453f10f8238ace4b9957926bd1ce7fd643eb0257b4287e8",
+      "publicSecurityId": "d70f5294-34ee-5758-9268-9ca8877d6193",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:e0f906d408b2ebd78e2a19c455756acfd7d49df0bc51ac4318861cfddc324a07",
+      "symbol": "UNP",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:bf35b6a1327a73788a61357bb4d6389d300e19019f53dc1153346b1f1dcee21a",
+      "publicSecurityId": "07e78ba6-4943-581d-8588-29860f42df97",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:68e1a0070f806f3f67e5d19b64402eaffe137171f75ad2b2cb4b7ac7b5407a3e",
+      "symbol": "DE",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:10c37a8fc4f97ba0616e703f9e5512b259e1b9c1903f74358045ed29c371dd8d",
+      "publicSecurityId": "ce622392-309d-57c2-81da-6a5a5155684e",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:effc1077340c7e4f2ab5b86291627db7ed1e81d8d386ad1721f53b0528bdc6b4",
+      "symbol": "ETN",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:0f1f4a177c0e4f462aa02ea462006d8f3764ed7f0848d493891d86d94a8a2394",
+      "publicSecurityId": "2ddf3749-9afb-5a0e-8325-bf6e7ecaccaf",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:9ea2c48bc10f2e86a116479113d4a7377fef83201577721ffafae69c00c8b4cf",
+      "symbol": "NEE",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:b0f971851821e12313cecdc75568631409cce05984ff40db64a90de03aa49884",
+      "publicSecurityId": "b8e66b25-90e2-55f8-95bf-8a6135af8e3f",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:01dadec36a0243c8ce2bbb3656683ec44e5029c31c62c992c70f26d554cc3689",
+      "symbol": "DUK",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:c91b329e147dd70035b92144416194184d8e34d62cbbd586c54356e5a787088f",
+      "publicSecurityId": "cb41680b-064a-5052-97c6-f90288b009fe",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:116000962ee5a1847fbb0e2849797991aa7d60906285760335b34dd02fab0789",
+      "symbol": "SO",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:1887071970905dde6a91d5add03b02d5fb4da941d059fb91b226378476b03b9b",
+      "publicSecurityId": "34ad83b5-4b28-5af8-a21b-20c3aa837c2f",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:3ba5d8a1842095cbd1c9bd139be1ecd6bc51e01a7519d34eb740245ab64de70f",
+      "symbol": "LIN",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:e67da8606ea53f767bdfa0b04877fc647950392253090367e2383bc94f8f034f",
+      "publicSecurityId": "a26d692c-90b9-5207-894f-cea19e46cfa4",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:d2bf71a2aa89b2bfb532fc361acbd8377a17a313598c1cd319c00022f85790ee",
+      "symbol": "SHW",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:0cab03fa271d403792cc4f63acec67d3699fcced4c03e0e6b9326cb938c2f383",
+      "publicSecurityId": "041b73ca-4c7a-56c4-8502-166daed08ebc",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:2f929c2bf91ace9991f52c5dd4da595c6ae5399328a4686971620ba593459295",
+      "symbol": "ECL",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:729dca750d5de66182dd324cd3f0d185ea1514ccbb0485f685d74c2b78e3cf20",
+      "publicSecurityId": "1b373ef1-1213-5215-9411-e683babcce3e",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:d17cb9b8fb5b4be1ebc579f5c53c65d47a0c10f2796f669a54b4796c00d3d90f",
+      "symbol": "APD",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:d400d4b82c447ec7c5f847d0154da78ca7c68e235513aaf414a5a2c3831c1220",
+      "publicSecurityId": "2f57cfe5-52f7-5afc-beb5-3bc1564710a0",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:1d3cc4c7c701c0cf1b7cb7e42cdc73f990a32a8ca808c6326a87afb33230a05b",
+      "symbol": "CROX",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:0468ae8eaf85d826e6273e0f9d02b95a775c95e34dad053526d4bb29356345be",
+      "publicSecurityId": "640f3d4e-7841-567b-b8aa-163c73d20567",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:e8c165c57502f6bd05878f8abd0e70f21c10a5596089746afda2c4d191606fb1",
+      "symbol": "OLED",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:9004f362b71cf201cd806998d0d814a489b370b957482fbe59ca06a10f4d3bc5",
+      "publicSecurityId": "2ec39042-6cbf-53d0-a121-03e4dd705cc0",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:80ce61d4a0ea2b1e8e6e81aea5fbd66f5c0dd66b552cd03b4f1c9146f2a4e2b2",
+      "symbol": "EXPO",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:cf69c6f624268f49e5b167706c02eb517daef46cbfc17406a596685ace64a437",
+      "publicSecurityId": "f6cbe650-b724-5091-9097-df108a561c27",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:cfedcaaaa612a83f52a6de498d8bc5f37b93a797df4acfa9025c431c4fe536cb",
+      "symbol": "CALM",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:d4bcd155197d4eeedd12b3c1eeb3859e7f0c241e36b231d7cf0fae8cc3e89020",
+      "publicSecurityId": "b8deed89-848c-56a5-8323-80ed14b62215",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:2b01af07a9f7dad97015cfd3ff30843da5c4bcabb883a5f5d20c21b58246efdd",
+      "symbol": "UFPI",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:691fcd96213845d2b6c63164473b5790ea60c63acbe7ab14bfd4397dd6b67943",
+      "publicSecurityId": "f91871f9-3a89-58d4-a969-c1086da0acc6",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:96a815a0b9e5f3ce4feab7d06c8637fbdb26d0f1ad14c3698058dfa092caf090",
+      "symbol": "WDFC",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:ac0f3dac95db7b04b8ebb56d30a234392a4fb86c75a144877f977196593fe5e8",
+      "publicSecurityId": "8916acf0-b2ce-55ba-a1bf-d323132b744a",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:783f9affec2a834d12f447efa5286b1056cd1938e5db2f4c18f9d55c586daf83",
+      "symbol": "FIX",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:bc3c897e40bcfb0296cb88faa013897fd1b9fe590aba6c0ee36f6f8f0cb64bd1",
+      "publicSecurityId": "c0d54251-ff4c-52d6-aba4-274471b471a9",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:11ea1c4875c2ee5fe736cf82af2ac1d312da63b96573fc632acc5b6f358d262a",
+      "symbol": "SAIA",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    },
+    {
+      "controlledPayloadContentHash": "sha256:8caa2db1b6bf7f7134391b43ae999be99f22432b31a965e829f87a70cd3fe48b",
+      "publicSecurityId": "1fab244e-4f55-52c4-b79c-8773f2097ab9",
+      "qualityReasonCodes": [],
+      "qualityStatus": "VALID",
+      "sourceResponseContentHash": "sha256:ec58be92d659e984a76b38342bb81f008f18dfc21376b7ebc278bd98a07267e0",
+      "symbol": "ELF",
+      "valueReasonCodes": [],
+      "valueStatus": "VALID"
+    }
+  ]
+}

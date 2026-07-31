@@ -18,6 +18,7 @@ from equity_analysis.daily_refresh.models import (
     WorkStatus,
 )
 from equity_analysis.daily_refresh.persistence import RefreshStore, WriteResult
+from equity_analysis.market_data.fundamentals import FundamentalsEnvelope
 from equity_analysis.market_data.models import CorporateActionSeries, DailyPriceSeries
 from equity_analysis.market_data.provider import (
     CorporateActionProvider,
@@ -25,7 +26,6 @@ from equity_analysis.market_data.provider import (
     FundamentalsProvider,
     MarketDataProviderError,
 )
-from equity_analysis.provider_validation.models import NormalizedFinancialObservation
 
 LOGGER = logging.getLogger("equity_analysis.daily_refresh")
 
@@ -38,7 +38,7 @@ class RefreshWriter(Protocol):
     def write_fundamentals(
         self,
         security_id: str,
-        observations: tuple[NormalizedFinancialObservation, ...],
+        envelope: FundamentalsEnvelope,
     ) -> WriteResult: ...
 
 
@@ -304,10 +304,8 @@ class DailyRefreshRunner:
                 "Fundamentals provider is not configured",
                 "FUNDAMENTALS_PROVIDER_NOT_CONFIGURED",
             )
-        observations = self._fundamentals_provider.fetch_financial_statements(
-            item.security.symbol
-        )
-        write = self._writer.write_fundamentals(item.security.security_id, observations)
+        envelope = self._fundamentals_provider.fetch_fundamentals(item.security.symbol)
+        write = self._writer.write_fundamentals(item.security.security_id, envelope)
         return WorkResult(
             key=item.key,
             status=WorkStatus.SUCCEEDED,

@@ -1,0 +1,60 @@
+{
+  "benchmarkEvidenceAvailable": false,
+  "benchmarkPreregistration": {
+    "artifactContentHash": "sha256:cbeaa8e2fbb524a2e16084e80c0e52a47948e4ec208fa20ec37864a7ed2b5444",
+    "fileSha256": "sha256:8e96142e6d876a6681209ecf68a3232115b983a6d51f31a73041a346d9d43987",
+    "path": "docs/generated/forward-benchmark-preregistration-v2-2.json"
+  },
+  "candidatePolicy": {
+    "artifactContentHash": "sha256:6f03ed3c092983d691ef8f32a71384ef329528b0a69a85e84579587901ee69d8",
+    "fileSha256": "sha256:3c498c8d68317e937562c894f60633f16945eb5fb6ac179f1f53131005e84975",
+    "path": "docs/generated/forward-benchmark-candidate-policy-v2-2.json"
+  },
+  "currentDataState": "DATA_PENDING",
+  "dataPreflight": {
+    "artifactContentHash": "sha256:e9492ca18e4a1c6a17025a12c6d55953199d33313451943a86c7344f66e8814e",
+    "fileSha256": "sha256:cde8ee08f047beab1c93026e5acb23bac4f0f60250be42d72a11e9d51a83be4a",
+    "path": "docs/generated/forward-benchmark-v2-2-data-preflight.json"
+  },
+  "databaseWrites": 0,
+  "deterministicResultsIncluded": false,
+  "evaluatedPopulationChanged": false,
+  "evaluatedPopulationIdentityBindingHash": "sha256:ed5ce0a4a587ce8c18e24b9f9d9d4194ac21257e9fde4d10a63d4e34b3b3e42d",
+  "evaluatedPopulationSecurityCount": 66,
+  "externalReferenceUniverse": {
+    "artifactContentHash": "sha256:20885e4ca21345f152220430966141303b26ff7b49e9361825702471779e7a05",
+    "fileSha256": "sha256:fbbb9f9db5eaabc67291259b803196445b099f4a3e7e853fa76e2bbc80a33764",
+    "path": "docs/generated/forward-benchmark-external-reference-universe-v2-2.json"
+  },
+  "feasibility": {
+    "artifactContentHash": "sha256:f606c80e2ca1d6d0ecd62c2ea41ddd680de43d7267d50fc7184f60a14e7f9812",
+    "fileSha256": "sha256:20fe891395400085bb318ad2ec5b5bdcda27b48c4a29ee4d25d10872b0c32531",
+    "path": "docs/generated/forward-benchmark-v2-2-feasibility.json"
+  },
+  "futureDecisionMustBeStrictlyAfter": "2026-07-30T03:55:37.171621Z",
+  "legacyDecisionsUpgradeAllowed": false,
+  "legacyResultsUpgradeAllowed": false,
+  "parentPreregistration": {
+    "artifactContentHash": "sha256:cb63d2600b42c9003be8a99a76de967e5921ef68440bcd3a0d6dd8934efac966",
+    "fileSha256": "sha256:300cf5d7b6fcbff5ee2a21e4e43ea4d969417586380c8aad3df8b2a13e328ca2",
+    "path": "docs/generated/forward-dqv-preregistration-v2.json"
+  },
+  "preOutcomeFeasibilityCorrection": true,
+  "predecessorBenchmarkPreregistration": {
+    "artifactContentHash": "sha256:5356f9ad16ff246e4f5565daee8316a9fae56f94bc126593bd10adec7c62d5a4",
+    "fileSha256": "sha256:25cc20d603476ef186c8ab6577067b3f7e0070b07a8ddaaa064ccff9c71af791",
+    "path": "docs/generated/forward-benchmark-preregistration-v2-1.json"
+  },
+  "predecessorResultsUpgradeAllowed": false,
+  "predecessorSeal": {
+    "artifactContentHash": "sha256:8f6c3232f9ca5f2ace25f770c447c1d3bae2b17205151dc93fcc9b30cf15e889",
+    "fileSha256": "sha256:9d96f6a3fee8b28f81a47d5ce3fe83ffce712c5ae4c90c4a71ff8dbbc6e44553",
+    "path": "docs/generated/forward-preregistration-seal-v2-1.json"
+  },
+  "providerNetworkRequests": 0,
+  "rawProviderValuesIncluded": false,
+  "resultBasedTuning": false,
+  "schemaVersion": "FORWARD-PREREGISTRATION-SEAL-v2.2.0",
+  "sealContentHash": "sha256:ed3e796290c3509c94429b7273346612c40f2b4db4b94889e0db7d583c7c8e0d",
+  "sealedAt": "2026-07-30T03:55:37.171621Z"
+}

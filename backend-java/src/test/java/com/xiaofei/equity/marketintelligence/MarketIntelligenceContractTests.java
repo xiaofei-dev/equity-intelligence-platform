@@ -8,6 +8,8 @@ import java.nio.file.Path;
 import org.junit.jupiter.api.Test;
 
 import com.xiaofei.equity.marketintelligence.MarketIntelligenceContract.AiNarrativeStatus;
+import com.xiaofei.equity.marketintelligence.MarketIntelligenceContract.EligibilityRecoveryStatus;
+import com.xiaofei.equity.marketintelligence.MarketIntelligenceContract.EligibilityRecoveryStatusResponse;
 import com.xiaofei.equity.marketintelligence.MarketIntelligenceContract.FactState;
 import com.xiaofei.equity.marketintelligence.MarketIntelligenceContract.ProfileResponse;
 import com.xiaofei.equity.marketintelligence.MarketIntelligenceContract.ScreeningRunMetadata;
@@ -72,5 +74,112 @@ class MarketIntelligenceContractTests {
 		assertThat(metadata.eligibleCount()).isZero();
 		assertThat(metadata.excludedCount()).isEqualTo(66);
 		assertThat(metadata.gateStatus()).isEqualTo("NO_ELIGIBLE_RESULTS");
+	}
+
+	@Test
+	void eligibilityRecoveryContractPreservesBlockersFreshnessAndSafetyState()
+			throws Exception {
+		var mapper = JsonMapper.builder().findAndAddModules().build();
+
+		EligibilityRecoveryStatusResponse response = mapper.readValue(
+				eligibilityResponseJson(), EligibilityRecoveryStatusResponse.class);
+
+		assertThat(response.status())
+			.isEqualTo(EligibilityRecoveryStatus.READY_FOR_CONFIRMATION);
+		assertThat(response.currentEligibleCount()).isEqualTo(6);
+		assertThat(response.frozenMinimumEligibleCount()).isEqualTo(20);
+		assertThat(response.blockerSummary()).singleElement()
+			.satisfies(blocker -> {
+				assertThat(blocker.category())
+					.isEqualTo("MISSING_REQUIRED_EVIDENCE");
+				assertThat(blocker.affectedSecurityCount()).isEqualTo(49);
+			});
+		assertThat(response.freshness()).singleElement()
+			.satisfies(freshness -> {
+				assertThat(freshness.datasetCode()).isEqualTo("FUNDAMENTALS");
+				assertThat(freshness.staleAfter()).isNull();
+			});
+		assertThat(response.securityDiagnostics()).singleElement()
+			.satisfies(diagnostic -> {
+				assertThat(diagnostic.state().name()).isEqualTo("RECOVERABLE");
+				assertThat(diagnostic.missingOperands()).singleElement()
+					.satisfies(operand -> assertThat(operand.operandCode())
+						.isEqualTo("interest_expense_ttm"));
+			});
+		assertThat(response.confirmationRequired()).isTrue();
+		assertThat(response.networkRequestsExecuted()).isFalse();
+		assertThat(response.scoresOrRanksGenerated()).isFalse();
+	}
+
+	static String eligibilityResponseJson() {
+		return """
+				{
+				  "schemaVersion":"market-intelligence-eligibility-recovery-status-v1.0.0",
+				  "preflightId":"sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+				  "generatedAt":"2026-07-29T03:00:00Z",
+				  "dataSnapshotId":"00000000-0000-0000-0000-000000000010",
+				  "universeVersion":"market-intelligence-closed-test-us-v1.0.0",
+				  "snapshotAsOf":"2026-07-29T02:57:08.988871Z",
+				  "objectiveRatingVersion":"Objective-Rating-v1",
+				  "recoveryPolicyVersion":
+				    "MARKET-INTELLIGENCE-ELIGIBILITY-RECOVERY-v1.0.0",
+				  "status":"READY_FOR_CONFIRMATION",
+				  "currentEligibleCount":6,
+				  "frozenMinimumEligibleCount":20,
+				  "maximumEligibleAfterPlan":20,
+				  "dueSecurityCount":14,
+				  "dueSymbols":["TTC"],
+				  "persistedEvidenceReuseCount":1,
+				  "profileCount":66,
+				  "resultCount":66,
+				  "requestPlan":[{
+				    "provider":"YAHOO",
+				    "endpointCode":"FUNDAMENTALS_TIMESERIES",
+				    "dataset":"FUNDAMENTALS",
+				    "symbols":["TTC"],
+				    "physicalRequestHardCeiling":1,
+				    "weightedCallHardCeiling":0,
+				    "runnerMaximumAttempts":1
+				  }],
+				  "blockerSummary":[{
+				    "category":"MISSING_REQUIRED_EVIDENCE",
+				    "reasonCode":"OBJECTIVE_RATING_V1_NOT_AVAILABLE_FOR_SNAPSHOT",
+				    "actionability":"ACTIONABLE_EVIDENCE_ACQUISITION",
+				    "affectedSecurityCount":49
+				  }],
+				  "freshness":[{
+				    "datasetCode":"FUNDAMENTALS",
+				    "state":"CURRENT",
+				    "evaluatedAt":"2026-07-29T03:00:00Z",
+				    "staleAfter":null,
+				    "reasonCode":null,
+				    "affectedSecurityCount":55
+				  }],
+				  "securityDiagnostics":[{
+				    "securityId":"00000000-0000-0000-0000-000000000011",
+				    "symbol":"TTC",
+				    "state":"RECOVERABLE",
+				    "missingOperands":[{
+				      "factorCode":"interest_coverage",
+				      "operandCode":"interest_expense_ttm",
+				      "reasonCode":"MISSING_REQUIRED_EVIDENCE",
+				      "providerRoute":"YAHOO",
+				      "actionability":"ACTIONABLE_EVIDENCE_ACQUISITION"
+				    }],
+				    "freshness":[{
+				      "datasetCode":"FUNDAMENTALS",
+				      "state":"CURRENT",
+				      "evaluatedAt":"2026-07-29T03:00:00Z",
+				      "staleAfter":null,
+				      "reasonCode":null
+				    }]
+				  }],
+				  "confirmationRequired":true,
+				  "networkRequestsExecuted":false,
+				  "scoresOrRanksGenerated":false,
+				  "artifactContentHash":
+				    "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+				}
+				""";
 	}
 }

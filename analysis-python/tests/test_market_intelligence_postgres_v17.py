@@ -5,8 +5,22 @@ from uuid import UUID, uuid5
 
 import psycopg
 import pytest
+from fastapi.testclient import TestClient
 from psycopg.conninfo import conninfo_to_dict
 
+from equity_analysis import main as analytics_main
+from equity_analysis.forward_validation.prospective_enrollment_v1 import (
+    FROZEN_HORIZONS,
+    PROSPECTIVE_EVENT_TYPE,
+    ProspectiveEnrollmentRepository,
+    ProspectiveEnrollmentRequest,
+    ProspectiveEnrollmentStatus,
+    ProspectiveMaturityStatus,
+)
+from equity_analysis.market_intelligence import routes as market_intelligence_routes
+from equity_analysis.market_intelligence.eligibility_recovery_v1 import (
+    EligibilityRecoveryRepository,
+)
 from equity_analysis.market_intelligence.models import (
     EvidenceLineage,
     RankMetric,
@@ -18,6 +32,12 @@ from equity_analysis.market_intelligence.persistence import (
 )
 from equity_analysis.market_intelligence.pipeline import MarketIntelligenceAssembler
 from equity_analysis.market_intelligence.service import screen_profiles
+from equity_analysis.screening.models import (
+    FactorStatus,
+    RunStatus,
+    ScreeningRunRequest,
+)
+from equity_analysis.screening.persistence import ScreeningRepository
 
 DATABASE_URL = os.getenv("MARKET_INTELLIGENCE_V17_TEST_DATABASE_URL")
 pytestmark = pytest.mark.skipif(
@@ -424,6 +444,49 @@ def test_v17_market_intelligence_snapshot_to_forward_handoff_is_idempotent() -> 
         "NOT_EXECUTED",
     )
 
+    prospective = ProspectiveEnrollmentRepository(DATABASE_URL)
+    enrollment_request = ProspectiveEnrollmentRequest(
+        decision_snapshot_event_hash=event_hash,
+        market_intelligence_screening_run_ids=(run_id,),
+        idempotency_key="market-intelligence-v17-forward-prospective-fixture",
+    )
+    first_attempt = prospective.enroll(enrollment_request)
+    duplicate_attempt = prospective.enroll(enrollment_request)
+    reloaded_attempt = prospective.get(first_attempt.attempt_id)
+
+    assert duplicate_attempt == first_attempt
+    assert reloaded_attempt == first_attempt
+    assert first_attempt.status == ProspectiveEnrollmentStatus.NO_ELIGIBLE_SIGNALS
+    assert first_attempt.profile_count == 66
+    assert first_attempt.eligible_count == 0
+    assert first_attempt.excluded_count == 66
+    assert first_attempt.signal_count == 0
+    assert first_attempt.forward_enrollment_id is None
+    assert {(item.horizon, item.trading_days) for item in first_attempt.maturity_schedule} == set(
+        FROZEN_HORIZONS
+    )
+    assert all(
+        item.status == ProspectiveMaturityStatus.NOT_APPLICABLE
+        for item in first_attempt.maturity_schedule
+    )
+    assert all(item.state.value == "EXCLUDED" for item in first_attempt.decisions)
+    assert all(item.exclusion_reasons for item in first_attempt.decisions)
+    assert first_attempt.long_horizon_is_context_only is True
+
+    with psycopg.connect(DATABASE_URL) as connection:
+        prospective_counts = connection.execute(
+            """
+            SELECT
+              (SELECT COUNT(*) FROM analytics.analytics_audit_event
+               WHERE event_type = %s),
+              (SELECT COUNT(*) FROM analytics.forward_enrollment),
+              (SELECT COUNT(*) FROM analytics.forward_candidate_signal),
+              (SELECT COUNT(*) FROM analytics.forward_observation_result)
+            """,
+            (PROSPECTIVE_EVENT_TYPE,),
+        ).fetchone()
+    assert prospective_counts == (1, 0, 0, 0)
+
 
 def test_metric_materialization_appends_revision_when_missing_becomes_valid() -> None:
     _assert_isolated_database()
@@ -509,3 +572,163 @@ def test_metric_materialization_appends_revision_when_missing_becomes_valid() ->
         (1, "MISSING", None, "PRICE_OBSERVATION_MISSING"),
         (2, "VALID", Decimal("123.450000000000"), None),
     ]
+
+
+def test_objective_run_assembles_proven_facts_and_finishes_without_forced_score() -> None:
+    _assert_isolated_database()
+    assert DATABASE_URL is not None
+    with psycopg.connect(DATABASE_URL) as connection:
+        _reset_fixture_database(connection)
+        _, public_ids = _bootstrap_fixture(connection)
+        security_id = connection.execute(
+            "SELECT id FROM analytics.security WHERE public_id = %s",
+            (public_ids[1],),
+        ).fetchone()[0]
+        source_id = connection.execute(
+            """
+            SELECT source.id
+            FROM analytics.source_record source
+            JOIN analytics.data_provider provider ON provider.id = source.provider_id
+            WHERE provider.code = %s
+            """,
+            (PROVIDER_CODE,),
+        ).fetchone()[0]
+        quarters = (
+            (date(2025, 7, 1), date(2025, 9, 30), "Q3"),
+            (date(2025, 10, 1), date(2025, 12, 31), "Q4"),
+            (date(2026, 1, 1), date(2026, 3, 31), "Q1"),
+            (date(2026, 4, 1), date(2026, 6, 30), "Q2"),
+        )
+        for metric_code, numeric_value in (
+            ("revenue", Decimal("100")),
+            ("operating_cash_flow", Decimal("30")),
+            ("capital_expenditure", Decimal("-5")),
+        ):
+            for ordinal, (period_start, period_end, fiscal_period) in enumerate(
+                quarters,
+                start=1,
+            ):
+                connection.execute(
+                    """
+                    INSERT INTO analytics.fundamental_fact (
+                        security_id, metric_code, numeric_value, unit, currency,
+                        period_start, period_end, fiscal_year, fiscal_period,
+                        form_type, accession_number, filed_at, available_at,
+                        ingested_at, mapping_version, normalization_version,
+                        revision_status, quality_status, source_record_id
+                    ) VALUES (
+                        %s, %s, %s, 'USD', 'USD', %s, %s, 2026, %s,
+                        '10-Q', %s, %s, %s, %s,
+                        'fixture-normalized-v1', 'fixture-v1',
+                        'AS_FILED', 'VALIDATED', %s
+                    )
+                    """,
+                    (
+                        security_id,
+                        metric_code,
+                        numeric_value,
+                        period_start,
+                        period_end,
+                        fiscal_period,
+                        f"fixture-{metric_code[:10]}-{ordinal}",
+                        AVAILABLE_AT,
+                        AVAILABLE_AT,
+                        AVAILABLE_AT,
+                        source_id,
+                    ),
+                )
+
+    repository = ScreeningRepository(DATABASE_URL)
+    accepted = repository.create_run(
+        ScreeningRunRequest(
+            as_of_time=AS_OF,
+            data_snapshot_id="market-intelligence-v17-fixture",
+            universe_version=UNIVERSE_VERSION,
+            strategy_versions=("QC-v1.0.0",),
+        ),
+        "objective-persisted-fundamental-adapter-fixture",
+    )
+    run_id = UUID(accepted.run_id)
+    request = repository.build_observations(run_id)
+    aapl = next(item for item in request.observations if item.symbol == "AAPL")
+    factors = {item.name: item for item in aapl.factors}
+
+    assert factors["fcf_margin"].status == FactorStatus.VALID
+    assert factors["fcf_margin"].value == Decimal("0.25")
+    assert factors["fcf_margin"].lineage
+    assert factors["cash_conversion"].status == FactorStatus.MISSING
+    assert factors["valuation_guardrail"].status == FactorStatus.MISSING
+    assert factors["historical_fcf_yield_percentile"].status == FactorStatus.MISSING
+
+    repository.execute(run_id)
+    status = repository.get_status(run_id)
+
+    assert status is not None
+    assert status.status == RunStatus.SUCCEEDED
+    assert status.coverage is not None
+    assert status.coverage.scored_count == 0
+    assert status.coverage.insufficient_data_count == 55
+    assert status.coverage.specialized_model_count == 11
+
+
+def test_v17_eligibility_recovery_route_is_db_backed(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    _assert_isolated_database()
+    assert DATABASE_URL is not None
+    with psycopg.connect(DATABASE_URL) as connection:
+        _reset_fixture_database(connection)
+        snapshot_id, _ = _bootstrap_fixture(connection)
+
+    assembled = MarketIntelligenceAssembler(DATABASE_URL).assemble_snapshot(
+        data_snapshot_id=snapshot_id,
+        universe_version=UNIVERSE_VERSION,
+    )
+    repository = MarketIntelligenceRepository(DATABASE_URL)
+    profiles = tuple(
+        repository.load_profile(profile_id) for profile_id in assembled.profile_ids
+    )
+    request = ScreeningRequest(as_of=AS_OF, rank_by=RankMetric.OBJECTIVE_QUALITY)
+    result = screen_profiles(profiles, request)
+    profile_ids = {
+        profile.security.security_id: profile_id
+        for profile_id, profile in zip(
+            assembled.profile_ids,
+            profiles,
+            strict=True,
+        )
+    }
+    repository.persist_screening_run(
+        request,
+        result,
+        profile_ids,
+        idempotency_key="market-intelligence-v17-eligibility-recovery-fixture",
+        data_snapshot_id=snapshot_id,
+        universe_version=UNIVERSE_VERSION,
+    )
+    monkeypatch.setattr(analytics_main, "recover_pending_runs", lambda: None)
+    monkeypatch.setattr(
+        market_intelligence_routes,
+        "_eligibility_recovery_repository",
+        lambda: EligibilityRecoveryRepository(DATABASE_URL),
+    )
+
+    with TestClient(analytics_main.app) as client:
+        response = client.get(
+            "/internal/v1/market-intelligence/eligibility-recovery/status/latest",
+            params={
+                "data_snapshot_id": str(snapshot_id),
+                "universe_version": UNIVERSE_VERSION,
+                "as_of": AS_OF.isoformat(),
+            },
+        )
+
+    assert response.status_code == 200
+    payload = response.json()
+    assert payload["profileCount"] == 66
+    assert payload["resultCount"] == 66
+    assert payload["currentEligibleCount"] == 0
+    assert payload["maximumEligibleAfterPlan"] == 0
+    assert payload["status"] == "BLOCKED_COHORT_UNREACHABLE"
+    assert payload["requestPlan"] == []
+    assert payload["networkRequestsExecuted"] is False

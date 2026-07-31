@@ -5,6 +5,7 @@ import java.time.Instant;
 import java.util.UUID;
 
 import com.xiaofei.equity.marketintelligence.MarketIntelligenceContract.MarketIntelligenceFacets;
+import com.xiaofei.equity.marketintelligence.MarketIntelligenceContract.EligibilityRecoveryStatusResponse;
 import com.xiaofei.equity.marketintelligence.MarketIntelligenceContract.ProfileResponse;
 import com.xiaofei.equity.marketintelligence.MarketIntelligenceContract.ScreeningResultPage;
 import com.xiaofei.equity.marketintelligence.MarketIntelligenceContract.ScreeningRunMetadata;
@@ -106,6 +107,17 @@ public class MarketIntelligenceController {
 			@RequestParam UUID dataSnapshotId) {
 		identityResolver.resolve(identity);
 		return analyticsClient.getFacets(dataSnapshotId);
+	}
+
+	@GetMapping("/eligibility-recovery/status/latest")
+	public EligibilityRecoveryStatusResponse getLatestEligibilityRecoveryStatus(
+			@RequestHeader(ClosedTestIdentityResolver.IDENTITY_HEADER) String identity,
+			@RequestParam UUID dataSnapshotId,
+			@RequestParam String universeVersion,
+			@RequestParam Instant asOf) {
+		identityResolver.resolve(identity);
+		return analyticsClient.getLatestEligibilityRecoveryStatus(
+				dataSnapshotId, universeVersion, asOf);
 	}
 
 	private static void requirePageLimit(int limit) {

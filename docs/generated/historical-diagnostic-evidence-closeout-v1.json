@@ -1,0 +1,254 @@
+{
+  "artifactType": "HISTORICAL_DIAGNOSTIC_EVIDENCE_CLOSEOUT",
+  "schemaVersion": "HISTORICAL-DIAGNOSTIC-EVIDENCE-CLOSEOUT-v1.0.0",
+  "effectiveDate": "2026-07-29",
+  "mode": "STRICTLY_OFFLINE_READ_ONLY",
+  "terminalStatus": "CLOSED_WITHOUT_FORMAL_VALIDATION",
+  "tracks": {
+    "TACTICAL_1W": {
+      "modelVersion": "TACTICAL-SIGNAL-v2.2.0",
+      "horizonCompletedSessions": 5,
+      "evidenceRole": "DIAGNOSTIC_ONLY",
+      "formalValidationStatus": "NOT_ESTABLISHED"
+    },
+    "TACTICAL_1M": {
+      "modelVersion": "TACTICAL-SIGNAL-v2.2.0",
+      "horizonCompletedSessions": 20,
+      "evidenceRole": "DIAGNOSTIC_ONLY",
+      "formalValidationStatus": "NOT_ESTABLISHED"
+    },
+    "TACTICAL_3M": {
+      "modelVersion": "TACTICAL-SIGNAL-v2.2.0",
+      "horizonCompletedSessions": 60,
+      "evidenceRole": "DIAGNOSTIC_ONLY",
+      "formalValidationStatus": "NOT_ESTABLISHED"
+    },
+    "LONG_12M_PLUS": {
+      "modelVersion": "LONG-HORIZON-RESEARCH-v1.1.0",
+      "horizonCompletedSessions": 252,
+      "evidenceRole": "BLOCKED",
+      "formalValidationStatus": "NOT_EXECUTED",
+      "historicalDecisionReadyCount": 0,
+      "scoreCount": 0
+    }
+  },
+  "sliceDisposition": {
+    "formalPitEligible": 0,
+    "diagnosticOnly": 54,
+    "blocked": 18,
+    "favorableSlicePromotionAllowed": false,
+    "fragmentAggregationIntoValidationPassAllowed": false
+  },
+  "evidenceLimitations": {
+    "closedCurrentPool": true,
+    "survivorshipBiasPresent": true,
+    "historicalMembershipPit": false,
+    "historicalClassificationPit": false,
+    "historicalIdentityAndStatusPit": false,
+    "historicalCorporateActionsPit": false,
+    "historicalFundamentalsAndObjectivePit": false,
+    "historicalObservationAvailabilityProvenAtCutoff": false,
+    "untouchedHoldout": false,
+    "futureReturnProof": false,
+    "statisticalEdgeProven": false
+  },
+  "claimBoundary": {
+    "historicalEvidenceMaySupportEngineeringDiagnostics": true,
+    "historicalEvidenceMayProveInvestmentReturns": false,
+    "historicalEvidenceMayAuthorizeRetuningFromFavorableSlices": false,
+    "historicalEvidenceMaySatisfyForwardValidation": false,
+    "onlyFormalPath": "PROSPECTIVE_FORWARD_DECISION_QUALITY_VALIDATION",
+    "statement": "Historical closed-pool evidence is useful for detecting implementation errors and adverse behavior, but it is not an untouched holdout, point-in-time historical proof, or future-return proof. Favorable slices cannot be selected or combined to create a validation pass."
+  },
+  "verifiedEvidenceGraph": {
+    "directArtifacts": [
+      {
+        "path": "docs/generated/historical-pit-slice-feasibility-audit-v1.json",
+        "fileSha256": "167A51D1E4FA69404D3A5E6A64AD06C075AD527A1B7FAFD96C2144A9E00CFCB3",
+        "artifactContentHash": "sha256:1e2ba049eb94c8a87cd72f0b07df8a8716c838561bdc1b027fde6ad9a6fdfa13",
+        "artifactType": "HISTORICAL_PIT_SLICE_FEASIBILITY_AUDIT",
+        "schemaVersion": "HISTORICAL-PIT-SLICE-FEASIBILITY-v1.0.0"
+      },
+      {
+        "path": "docs/generated/tactical-v2-2-historical-diagnostic-terminal-2026-07-29.json",
+        "fileSha256": "43FCFCFB4066BDFCF530308C8B04DDC409B6D6E6CFDB4DA0098424A9A207B7A0",
+        "artifactContentHash": "E389CB70CEAB19854DB13B22652CC547C4618B12F4E28947DB03297D59632C7A",
+        "artifactType": "TACTICAL_V22_HISTORICAL_DIAGNOSTIC_TERMINAL",
+        "schemaVersion": "TACTICAL-V2.2-HISTORICAL-DIAGNOSTIC-TERMINAL-v1.0.0"
+      },
+      {
+        "path": "docs/generated/tactical-walk-forward-local-diagnostic-2026-07-29.json",
+        "fileSha256": "261FBDD8E1B58F0827CB8F33127764E2D5D05032EB79ED242912CE568EA02E90",
+        "artifactContentHash": "E2AFA7967F42A0A802B8811633F4F8C68BCC09217BD968E72958CE3E6544AC2F",
+        "artifactType": "TACTICAL_WALK_FORWARD_LOCAL_DIAGNOSTIC",
+        "schemaVersion": "tactical-walk-forward-local-diagnostic-v1.1.0"
+      },
+      {
+        "path": "docs/generated/tactical-v2-2-model-freeze.json",
+        "fileSha256": "5D541315F62990BC5F44A4E421F404D737F6FFCF039E586B18BA362A113DC49F",
+        "artifactContentHash": "A596080CD7936A6881A38E759C597934DAE1125EC83026DF6DB0434F6FE31910",
+        "artifactType": "MODEL_FREEZE",
+        "schemaVersion": "MODEL-FREEZE-ARTIFACT-v1.0.0",
+        "freezeHash": "D6E3EDB1160856ADE700C37D42A4C9E2CDDA3B88A4080DBC8ED73354B4C5BF99",
+        "modelVersion": "TACTICAL-SIGNAL-v2.2.0"
+      },
+      {
+        "path": "docs/generated/long-horizon-v1-1-historical-readiness-2026-07-29.json",
+        "fileSha256": "46352B1539D475F15ABA9B4E8CFE5D8E4E5D4E33AAB2313030578612F1563773",
+        "artifactContentHash": "10ED9DA2C0DD5128361D49860CA55B42BBF44A936598BB42A89A0182F657A390",
+        "artifactType": "LONG_HORIZON_V11_HISTORICAL_READINESS",
+        "schemaVersion": "LONG-HORIZON-v1.1-HISTORICAL-READINESS-v1.0.0"
+      },
+      {
+        "path": "docs/generated/long-horizon-historical-stratified-validation-v1-4-2026-07-29.json",
+        "fileSha256": "B88253CF9F04FF33C25EFD2DE79BE6A516AF03DC3A44271A26B1236E7941F058",
+        "artifactContentHash": "3A6FF54B14B5F1A12196770A2395FD299016742D9B6F4738E900973EA4AD3DC2",
+        "artifactType": "LONG_HORIZON_HISTORICAL_STRATIFIED_VALIDATION",
+        "schemaVersion": "LONG-HORIZON-HISTORICAL-STRATIFIED-VALIDATION-v1.4.0"
+      },
+      {
+        "path": "docs/generated/long-horizon-v1-1-model-freeze.json",
+        "fileSha256": "E208C280355077009C4AF102383881D89D3139242086E859B5EEC4BEB6873024",
+        "artifactContentHash": "233271457387A5D7212379AE2C77D69C743DC69F7345FE2D834FF7DC98D4FA59",
+        "artifactType": "MODEL_FREEZE",
+        "schemaVersion": "MODEL-FREEZE-ARTIFACT-v1.0.0",
+        "freezeHash": "8F8E7FB671A8C35E771FDAD6B9E3ED5D90950135ACC9297BBFF571F27780E6C3",
+        "modelVersion": "LONG-HORIZON-RESEARCH-v1.1.0"
+      },
+      {
+        "path": "analysis-python/resources/universes/market-intelligence-closed-test-us-v1.json",
+        "fileSha256": "C977E932EDD5184AABBDE53ACCFF6F480650F96C03C878A9EC7FBE15D2920078"
+      },
+      {
+        "path": "analysis-python/src/equity_analysis/historical_validation/long_horizon_v11_readiness.py",
+        "fileSha256": "EE5C17AD5FF81BFC3EB7ECD6A71F78F34340AD00D1C5DA30ABCB33D47E13FD8E"
+      },
+      {
+        "path": "docs/generated/historical-yahoo-price-cache-20260729T-HISTORICAL-V1-R2-manifest.json",
+        "fileSha256": "E322AC57C00BB4018AC883A2F0EF3461299D7D97725B0791C75EA01846D08E27",
+        "artifactContentHash": "CF50A3994AB3660029AC56F586F8B6CA572EA1654B6B5DF5549152D191B1A0D9"
+      },
+      {
+        "path": "docs/generated/long-horizon-v1-1-historical-readiness-2026-07-29.json",
+        "fileSha256": "46352B1539D475F15ABA9B4E8CFE5D8E4E5D4E33AAB2313030578612F1563773",
+        "artifactContentHash": "10ED9DA2C0DD5128361D49860CA55B42BBF44A936598BB42A89A0182F657A390"
+      },
+      {
+        "path": "docs/generated/scoring-input-v3-coverage-preflight-v1.json",
+        "fileSha256": "19610287140C68D4929C011CCF2E06CB82CF735B4ECF725C1B39F9738EDAFDDF",
+        "artifactContentHash": "68F095D00A576D878EBA0B72216E5CF4E8A57664BFC2425603AAC171DB72EAA7"
+      },
+      {
+        "path": "docs/generated/scoring-input-v4-sec-offline-manifest-v2.json",
+        "fileSha256": "DB6698F81EB629A435837A2E13D0729B623CAF6B1FE13C7C3C3F183DDB91344D",
+        "artifactContentHash": "7A125F6B07DC3661965336D05F76A9657EC8C657AA94C9DA6E8E9D652CAF35B0"
+      }
+    ],
+    "tacticalFrozenSourceFiles": [
+      {
+        "path": "analysis-python/src/equity_analysis/tactical/contracts_v22.py",
+        "fileSha256": "24BC4F64A417B9A3569FD7C9A9770FBA3A992C5784D2D25A3779779DFE74B496"
+      },
+      {
+        "path": "analysis-python/src/equity_analysis/tactical/features_v22.py",
+        "fileSha256": "847760846D7932DCC9E15C9B74DAAE4AE6895019FBCB8475D8E25FCADFB60345"
+      },
+      {
+        "path": "analysis-python/src/equity_analysis/tactical/signal_v22.py",
+        "fileSha256": "76855B9883B77405532C1FA1518ECA4014E46E34B9B962DE39C9BDFDF4AD5119"
+      },
+      {
+        "path": "docs/tactical-signal-v2-2-methodology-2026-07-29.md",
+        "fileSha256": "9242B6FD502F5468ED3CD0FD79606BB430A26243DC276BC7925878B20F35848A"
+      },
+      {
+        "path": "analysis-python/src/equity_analysis/historical_validation/governance_v1.py",
+        "fileSha256": "03E26D230D5C37C5FC233FDA4439C8F42A0FE1E364E4DB62BCB83EF57BAE5D92"
+      },
+      {
+        "path": "analysis-python/src/equity_analysis/historical_validation/protocol_v2.py",
+        "fileSha256": "A6B5030437258E2E64DFEAD2892ACEC7A57BA68E16F875611206D1C2F0CDBCC0"
+      },
+      {
+        "path": "analysis-python/src/equity_analysis/historical_validation/walk_forward_v2.py",
+        "fileSha256": "45D4DBDD0E7A643658B160AE5B044C15A4A07113DC33382A3DE87DDFF3D72F0F"
+      },
+      {
+        "path": "docs/model-validation-governance-v1.md",
+        "fileSha256": "4B1F2B65EB17190C54DE9BF784777BAE14575D78A7DADE90B17AB1F5639E9A72"
+      },
+      {
+        "path": "docs/historical-walk-forward-validation-v2.md",
+        "fileSha256": "EF6829121B6B3E491DC9089A4968D85113EDE71A8AD78381D3F7A1742431C83A"
+      },
+      {
+        "path": "docs/generated/model-validation-governance-v1.json",
+        "fileSha256": "C942DBBE201C08F19323113E8813C70A9CAB7715D5C798849C504B4FA98AF310"
+      },
+      {
+        "path": "docs/generated/historical-yahoo-price-cache-20260729T-HISTORICAL-V1-R2-manifest.json",
+        "fileSha256": "E322AC57C00BB4018AC883A2F0EF3461299D7D97725B0791C75EA01846D08E27"
+      },
+      {
+        "path": "docs/generated/tactical-historical-stratified-validation-v1-1-2026-07-29.json",
+        "fileSha256": "90A93563A9B4B087FF71FF33074D4D16C160476450E423E02A20976AAB298880"
+      }
+    ],
+    "longHorizonFrozenSourceFiles": [
+      {
+        "path": "analysis-python/src/equity_analysis/research_rating/long_horizon_v11.py",
+        "fileSha256": "2C4D7786710D0740CEC7F578F05D2F9754C6A57DD4B976BB2DFEF96EC919F137"
+      },
+      {
+        "path": "docs/long-horizon-research-rating-v1-1.md",
+        "fileSha256": "19D206AB5BB36CE1413D7B08ECD42D9508C600C22D43D55CA261D73C3D69FE92"
+      },
+      {
+        "path": "analysis-python/src/equity_analysis/historical_validation/governance_v1.py",
+        "fileSha256": "03E26D230D5C37C5FC233FDA4439C8F42A0FE1E364E4DB62BCB83EF57BAE5D92"
+      },
+      {
+        "path": "analysis-python/src/equity_analysis/historical_validation/protocol_v2.py",
+        "fileSha256": "A6B5030437258E2E64DFEAD2892ACEC7A57BA68E16F875611206D1C2F0CDBCC0"
+      },
+      {
+        "path": "analysis-python/src/equity_analysis/historical_validation/walk_forward_v2.py",
+        "fileSha256": "45D4DBDD0E7A643658B160AE5B044C15A4A07113DC33382A3DE87DDFF3D72F0F"
+      },
+      {
+        "path": "docs/model-validation-governance-v1.md",
+        "fileSha256": "4B1F2B65EB17190C54DE9BF784777BAE14575D78A7DADE90B17AB1F5639E9A72"
+      },
+      {
+        "path": "docs/historical-walk-forward-validation-v2.md",
+        "fileSha256": "EF6829121B6B3E491DC9089A4968D85113EDE71A8AD78381D3F7A1742431C83A"
+      },
+      {
+        "path": "docs/generated/model-validation-governance-v1.json",
+        "fileSha256": "C942DBBE201C08F19323113E8813C70A9CAB7715D5C798849C504B4FA98AF310"
+      },
+      {
+        "path": "docs/generated/historical-yahoo-price-cache-20260729T-HISTORICAL-V1-R2-manifest.json",
+        "fileSha256": "E322AC57C00BB4018AC883A2F0EF3461299D7D97725B0791C75EA01846D08E27"
+      },
+      {
+        "path": "docs/generated/long-horizon-historical-stratified-validation-v1-4-2026-07-29.json",
+        "fileSha256": "B88253CF9F04FF33C25EFD2DE79BE6A516AF03DC3A44271A26B1236E7941F058"
+      }
+    ],
+    "verifiedFileCount": 25,
+    "evidenceGraphHash": "sha256:7f7e2ad89657062408bfdf40b2f8e424ef6e8c7b58a72c13774e75a463147a15"
+  },
+  "execution": {
+    "networkRequests": 0,
+    "databaseReads": 0,
+    "databaseWrites": 0,
+    "modelsExecuted": false,
+    "scoresOrRanksComputed": false,
+    "weightsOrThresholdsChanged": false,
+    "samplingChanged": false,
+    "rawProviderValuesIncluded": false,
+    "automaticTradingAuthorized": false
+  },
+  "artifactContentHash": "sha256:0d670b0793ec49b2cca6ac472eea3e1585d94e77fcd524bc800c6cfc1f8d0437"
+}

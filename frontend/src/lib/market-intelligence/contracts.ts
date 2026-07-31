@@ -206,6 +206,93 @@ export type MarketIntelligenceFacets = {
   membershipStatuses: string[];
 };
 
+export type EligibilityRecoveryStatus =
+  | "READY_FOR_CONFIRMATION"
+  | "NO_ACTIONABLE_REQUESTS"
+  | "BLOCKED_COHORT_UNREACHABLE"
+  | "BLOCKED_EVIDENCE_SEMANTICS"
+  | "BLOCKED_BUDGET"
+  | "BLOCKED_SNAPSHOT";
+
+export type EligibilityRecoverySecurityState =
+  | "ALREADY_ELIGIBLE"
+  | "RECOVERABLE"
+  | "BLOCKED"
+  | "NOT_APPLICABLE";
+
+export type EligibilityRecoveryRequestPlan = {
+  provider: string;
+  endpointCode: string;
+  dataset: string;
+  symbols: string[];
+  physicalRequestHardCeiling: number;
+  weightedCallHardCeiling: number;
+  runnerMaximumAttempts: number;
+};
+
+export type EligibilityBlockerSummary = {
+  category: string;
+  reasonCode: string;
+  actionability: string;
+  affectedSecurityCount: number;
+};
+
+export type EligibilityFreshness = {
+  datasetCode: string;
+  state: string;
+  evaluatedAt: string | null;
+  staleAfter: string | null;
+  reasonCode: string | null;
+};
+
+export type EligibilityFreshnessSummary = EligibilityFreshness & {
+  affectedSecurityCount: number;
+};
+
+export type EligibilityMissingOperand = {
+  factorCode: string;
+  operandCode: string;
+  reasonCode: string;
+  providerRoute: string;
+  actionability: string;
+};
+
+export type EligibilitySecurityDiagnostic = {
+  securityId: string;
+  symbol: string;
+  state: EligibilityRecoverySecurityState;
+  missingOperands: EligibilityMissingOperand[];
+  freshness: EligibilityFreshness[];
+};
+
+export type EligibilityRecoveryStatusResponse = {
+  schemaVersion: string;
+  preflightId: string;
+  generatedAt: string;
+  dataSnapshotId: string;
+  universeVersion: string;
+  snapshotAsOf: string;
+  objectiveRatingVersion: string;
+  recoveryPolicyVersion: string;
+  status: EligibilityRecoveryStatus;
+  currentEligibleCount: number;
+  frozenMinimumEligibleCount: number;
+  maximumEligibleAfterPlan: number;
+  dueSecurityCount: number;
+  dueSymbols: string[];
+  persistedEvidenceReuseCount: number;
+  profileCount: number;
+  resultCount: number;
+  requestPlan: EligibilityRecoveryRequestPlan[];
+  blockerSummary: EligibilityBlockerSummary[];
+  freshness: EligibilityFreshnessSummary[];
+  securityDiagnostics: EligibilitySecurityDiagnostic[];
+  confirmationRequired: boolean;
+  networkRequestsExecuted: false;
+  scoresOrRanksGenerated: false;
+  artifactContentHash: string;
+};
+
 export class ContractDecodeError extends Error {
   constructor(path: string, expectation: string) {
     super(`Invalid market-intelligence response at ${path}: ${expectation}.`);
@@ -295,6 +382,14 @@ function uuid(value: unknown, path: string): string {
   return result;
 }
 
+function sha256(value: unknown, path: string): string {
+  const result = string(value, path);
+  if (!/^sha256:[0-9a-f]{64}$/.test(result)) {
+    throw new ContractDecodeError(path, "expected a lowercase sha256 hash");
+  }
+  return result;
+}
+
 function stringArray(value: unknown, path: string): string[] {
   if (!Array.isArray(value)) {
     throw new ContractDecodeError(path, "expected an array");
@@ -354,6 +449,20 @@ const rankMetrics = [
   "BUYING_OPPORTUNITY",
 ] as const;
 const directions = ["ASCENDING", "DESCENDING"] as const;
+const eligibilityRecoveryStatuses = [
+  "READY_FOR_CONFIRMATION",
+  "NO_ACTIONABLE_REQUESTS",
+  "BLOCKED_COHORT_UNREACHABLE",
+  "BLOCKED_EVIDENCE_SEMANTICS",
+  "BLOCKED_BUDGET",
+  "BLOCKED_SNAPSHOT",
+] as const;
+const eligibilityRecoverySecurityStates = [
+  "ALREADY_ELIGIBLE",
+  "RECOVERABLE",
+  "BLOCKED",
+  "NOT_APPLICABLE",
+] as const;
 
 function decodeLineage(value: unknown, path: string): EvidenceLineage {
   const source = record(value, path);
@@ -921,6 +1030,259 @@ export function decodeSecuritySearchPage(
       };
     }),
     nextCursor: nullableString(source.nextCursor, `${path}.nextCursor`),
+  };
+}
+
+function decodeEligibilityFreshness(
+  value: unknown,
+  path: string,
+): EligibilityFreshness {
+  const source = record(value, path);
+  return {
+    datasetCode: string(source.datasetCode, `${path}.datasetCode`),
+    state: string(source.state, `${path}.state`),
+    evaluatedAt: nullableTimestamp(
+      source.evaluatedAt,
+      `${path}.evaluatedAt`,
+    ),
+    staleAfter: nullableTimestamp(source.staleAfter, `${path}.staleAfter`),
+    reasonCode: nullableString(source.reasonCode, `${path}.reasonCode`),
+  };
+}
+
+export function decodeEligibilityRecoveryStatus(
+  value: unknown,
+  path = "$",
+): EligibilityRecoveryStatusResponse {
+  const source = record(value, path);
+  const status = oneOf(
+    source.status,
+    `${path}.status`,
+    eligibilityRecoveryStatuses,
+  );
+  const currentEligibleCount = integer(
+    source.currentEligibleCount,
+    `${path}.currentEligibleCount`,
+  );
+  const frozenMinimumEligibleCount = integer(
+    source.frozenMinimumEligibleCount,
+    `${path}.frozenMinimumEligibleCount`,
+  );
+  const maximumEligibleAfterPlan = integer(
+    source.maximumEligibleAfterPlan,
+    `${path}.maximumEligibleAfterPlan`,
+  );
+  const dueSecurityCount = integer(
+    source.dueSecurityCount,
+    `${path}.dueSecurityCount`,
+  );
+  const dueSymbols = stringArray(source.dueSymbols, `${path}.dueSymbols`);
+  const confirmationRequired = boolean(
+    source.confirmationRequired,
+    `${path}.confirmationRequired`,
+  );
+  const networkRequestsExecuted = boolean(
+    source.networkRequestsExecuted,
+    `${path}.networkRequestsExecuted`,
+  );
+  const scoresOrRanksGenerated = boolean(
+    source.scoresOrRanksGenerated,
+    `${path}.scoresOrRanksGenerated`,
+  );
+
+  if (
+    maximumEligibleAfterPlan < currentEligibleCount ||
+    dueSymbols.length > dueSecurityCount
+  ) {
+    throw new ContractDecodeError(
+      path,
+      "expected internally consistent eligibility-recovery counts",
+    );
+  }
+  if (
+    status === "READY_FOR_CONFIRMATION" &&
+    (!confirmationRequired ||
+      !Array.isArray(source.requestPlan) ||
+      source.requestPlan.length === 0)
+  ) {
+    throw new ContractDecodeError(
+      path,
+      "READY_FOR_CONFIRMATION requires confirmation and a request plan",
+    );
+  }
+  if (networkRequestsExecuted || scoresOrRanksGenerated) {
+    throw new ContractDecodeError(
+      path,
+      "eligibility-recovery status must not execute requests or generate scores",
+    );
+  }
+
+  return {
+    schemaVersion: string(source.schemaVersion, `${path}.schemaVersion`),
+    preflightId: sha256(source.preflightId, `${path}.preflightId`),
+    generatedAt: isoTimestamp(source.generatedAt, `${path}.generatedAt`),
+    dataSnapshotId: uuid(
+      source.dataSnapshotId,
+      `${path}.dataSnapshotId`,
+    ),
+    universeVersion: string(
+      source.universeVersion,
+      `${path}.universeVersion`,
+    ),
+    snapshotAsOf: isoTimestamp(
+      source.snapshotAsOf,
+      `${path}.snapshotAsOf`,
+    ),
+    objectiveRatingVersion: string(
+      source.objectiveRatingVersion,
+      `${path}.objectiveRatingVersion`,
+    ),
+    recoveryPolicyVersion: string(
+      source.recoveryPolicyVersion,
+      `${path}.recoveryPolicyVersion`,
+    ),
+    status,
+    currentEligibleCount,
+    frozenMinimumEligibleCount,
+    maximumEligibleAfterPlan,
+    dueSecurityCount,
+    dueSymbols,
+    persistedEvidenceReuseCount: integer(
+      source.persistedEvidenceReuseCount,
+      `${path}.persistedEvidenceReuseCount`,
+    ),
+    profileCount: integer(
+      source.profileCount,
+      `${path}.profileCount`,
+    ),
+    resultCount: integer(
+      source.resultCount,
+      `${path}.resultCount`,
+    ),
+    requestPlan: array(
+      source.requestPlan,
+      `${path}.requestPlan`,
+      (item, itemPath) => {
+        const plan = record(item, itemPath);
+        return {
+          provider: string(plan.provider, `${itemPath}.provider`),
+          endpointCode: string(
+            plan.endpointCode,
+            `${itemPath}.endpointCode`,
+          ),
+          dataset: string(plan.dataset, `${itemPath}.dataset`),
+          symbols: stringArray(plan.symbols, `${itemPath}.symbols`),
+          physicalRequestHardCeiling: integer(
+            plan.physicalRequestHardCeiling,
+            `${itemPath}.physicalRequestHardCeiling`,
+          ),
+          weightedCallHardCeiling: integer(
+            plan.weightedCallHardCeiling,
+            `${itemPath}.weightedCallHardCeiling`,
+          ),
+          runnerMaximumAttempts: integer(
+            plan.runnerMaximumAttempts,
+            `${itemPath}.runnerMaximumAttempts`,
+          ),
+        };
+      },
+    ),
+    blockerSummary: array(
+      source.blockerSummary,
+      `${path}.blockerSummary`,
+      (item, itemPath) => {
+        const blocker = record(item, itemPath);
+        return {
+          category: string(blocker.category, `${itemPath}.category`),
+          reasonCode: string(
+            blocker.reasonCode,
+            `${itemPath}.reasonCode`,
+          ),
+          actionability: string(
+            blocker.actionability,
+            `${itemPath}.actionability`,
+          ),
+          affectedSecurityCount: integer(
+            blocker.affectedSecurityCount,
+            `${itemPath}.affectedSecurityCount`,
+          ),
+        };
+      },
+    ),
+    freshness: array(
+      source.freshness,
+      `${path}.freshness`,
+      (item, itemPath) => {
+        const freshness = record(item, itemPath);
+        return {
+          ...decodeEligibilityFreshness(freshness, itemPath),
+          affectedSecurityCount: integer(
+            freshness.affectedSecurityCount,
+            `${itemPath}.affectedSecurityCount`,
+          ),
+        };
+      },
+    ),
+    securityDiagnostics: array(
+      source.securityDiagnostics,
+      `${path}.securityDiagnostics`,
+      (item, itemPath) => {
+        const diagnostic = record(item, itemPath);
+        return {
+          securityId: uuid(
+            diagnostic.securityId,
+            `${itemPath}.securityId`,
+          ),
+          symbol: string(diagnostic.symbol, `${itemPath}.symbol`),
+          state: oneOf(
+            diagnostic.state,
+            `${itemPath}.state`,
+            eligibilityRecoverySecurityStates,
+          ),
+          missingOperands: array(
+            diagnostic.missingOperands,
+            `${itemPath}.missingOperands`,
+            (operandValue, operandPath) => {
+              const operand = record(operandValue, operandPath);
+              return {
+                factorCode: string(
+                  operand.factorCode,
+                  `${operandPath}.factorCode`,
+                ),
+                operandCode: string(
+                  operand.operandCode,
+                  `${operandPath}.operandCode`,
+                ),
+                reasonCode: string(
+                  operand.reasonCode,
+                  `${operandPath}.reasonCode`,
+                ),
+                providerRoute: string(
+                  operand.providerRoute,
+                  `${operandPath}.providerRoute`,
+                ),
+                actionability: string(
+                  operand.actionability,
+                  `${operandPath}.actionability`,
+                ),
+              };
+            },
+          ),
+          freshness: array(
+            diagnostic.freshness,
+            `${itemPath}.freshness`,
+            decodeEligibilityFreshness,
+          ),
+        };
+      },
+    ),
+    confirmationRequired,
+    networkRequestsExecuted: false,
+    scoresOrRanksGenerated: false,
+    artifactContentHash: sha256(
+      source.artifactContentHash,
+      `${path}.artifactContentHash`,
+    ),
   };
 }
 

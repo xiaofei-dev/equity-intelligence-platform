@@ -1,0 +1,2040 @@
+{
+  "artifactType": "PRACTICAL_LONG_HORIZON_PROVIDER_BACKTEST_PREFLIGHT",
+  "schemaVersion": "PROVIDER-BACKTEST-PREFLIGHT-v1.0.0",
+  "contractVersion": "PRACTICAL-LONG-HORIZON-BACKTEST-DATA-v1.0.0",
+  "status": "READY_FOR_ZERO_NETWORK_CONTROLLED_DATA_AUDIT",
+  "claimCeiling": "CURRENT_REVISION_BACKTEST_ONLY",
+  "claimLimitations": [
+    "Historical provider values may include revisions observed after an anchor.",
+    "The current constituent universe creates survivorship bias.",
+    "The result cannot be labeled PIT_SUPPORTED or FORWARD_SUPPORTED.",
+    "A positive SPY-relative result is directional model evidence, not proof of future profit."
+  ],
+  "selection": {
+    "policy": "Retain formula-ready closed-test issuers in frozen role order, then add formula-ready mature operating companies by deterministic sector round robin and source ordinal.",
+    "issuerCount": 100,
+    "marketBenchmark": "SPY",
+    "stablePublicIdFormat": "US:{SYMBOL}",
+    "retainedIssuerCount": 42,
+    "expansionIssuerCount": 58,
+    "selectionOutcomeBlind": true,
+    "universeContentHash": "1D091CF13F80CF17F52967B54D489CBEAD02CF861E6F299EC2BD406F9EB1FD4E"
+  },
+  "sourceArtifacts": {
+    "baseUniverse": {
+      "path": "analysis-python/resources/universes/market-intelligence-closed-test-us-v1.json",
+      "fileSha256": "C977E932EDD5184AABBDE53ACCFF6F480650F96C03C878A9EC7FBE15D2920078"
+    },
+    "expansionUniverse": {
+      "path": "analysis-python/tests/fixtures/provider_expansion_universe_v2.json",
+      "fileSha256": "5AF0CC6938CD88FF3814B4287742B55B5945D97E67ADF37FD32CA4AFDB3F5111"
+    },
+    "formulaInputAggregate": {
+      "path": "docs/generated/formula-ready-243-final-aggregate-v1.json",
+      "fileSha256": "2B3EE90401BB635FBB07CA977FD35D7A371CB64BB1735D070FC28268598CA9F8",
+      "artifactContentHash": "CE0EB2F588105DA4E12F8BB763EC65B759714A2C4A6C9435C35A9F2ED9F69859",
+      "formulaReadySecurityCount": 223
+    },
+    "historicalPriceManifest": {
+      "path": "docs/generated/historical-yahoo-price-cache-20260729T-HISTORICAL-V1-R2-manifest.json",
+      "fileSha256": "E322AC57C00BB4018AC883A2F0EF3461299D7D97725B0791C75EA01846D08E27",
+      "artifactContentHash": "CF50A3994AB3660029AC56F586F8B6CA572EA1654B6B5DF5549152D191B1A0D9",
+      "completedSecurityCount": 56
+    },
+    "cachedTransportAudit": {
+      "path": "docs/generated/provider-cached-transport-semantic-audit-v1.2.json",
+      "fileSha256": "2AE865EA4EC446F3FBED8BC5B1BC80F669B6967988BAA74FB01A0E55DED1C027",
+      "artifactContentHash": "6A1739CBE0417746791F68F78D03BD36A206B3D8670DEE4837BB609924D87F1F",
+      "completeFundamentalsEodMarketCapSecurityCount": 216
+    }
+  },
+  "acquisition": {
+    "yahooHistoricalPrice": {
+      "endpointContract": "NO_LIVE_ENDPOINT",
+      "symbols": [],
+      "symbolCount": 0,
+      "offlineCanarySymbols": [
+        "META",
+        "MCD",
+        "WMT",
+        "MCK",
+        "ADP",
+        "MSFT",
+        "LIN",
+        "DUK"
+      ],
+      "offlineCanaryReadCount": 8,
+      "plannedPhysicalWrapperCalls": 0,
+      "hardPhysicalWrapperCallCeiling": 0,
+      "providerRetryLimit": 0,
+      "cachedSpyStartDate": "2014-01-01",
+      "cachedSpyEndDate": "2026-07-28",
+      "decision": "No issuer price request is required because each selected FORMULA_READY payload already contains normalized EODHD daily price records. The existing hash-verified Yahoo SPY cache is reused only for market-benchmark outcomes."
+    },
+    "eodhd": {
+      "endpoints": [],
+      "symbols": [],
+      "plannedPhysicalRequests": 0,
+      "plannedConfiguredWeight": 0,
+      "provisionalBilledCalls": 0,
+      "hardBilledCallCeiling": 0,
+      "providerRetryLimit": 0,
+      "dailyAllowance": 100000,
+      "minimumUnusedReserve": 10000,
+      "dashboardBaselineRequired": false,
+      "decision": "No EODHD request is authorized because each selected security already has a controlled FORMULA_READY payload. Any missing or hash-invalid payload stops this plan and requires a new preflight."
+    }
+  },
+  "modelInputContract": {
+    "formulaInputPayloadCount": 100,
+    "formulaInputPayloadHashVerificationRequired": true,
+    "genuinelyMissingSelectedSecurityCount": 0,
+    "liveProviderRecoveryRequiredCount": 0,
+    "minimumAdjustedCloseSessionsPerIssuer": 1261,
+    "historicalPricePayloadCountAfterAcquisition": 100,
+    "issuerHistoricalPriceSource": "CONTROLLED_FORMULA_READY_EODHD_ADJUSTED_CLOSE",
+    "marketBenchmarkPriceSource": "HASH_VERIFIED_YAHOO_TOTAL_RETURN_ADJUSTED_SPY",
+    "spyBenchmarkCacheRequired": true,
+    "sectorBenchmark": "DEFERRED_NOT_REQUIRED_FOR_V1",
+    "longHorizonCompletedSessionTargets": [
+      252,
+      504,
+      756,
+      1260
+    ],
+    "transactionCostsRequired": true,
+    "missingDataRemainsExplicit": true,
+    "aiAffectsDeterministicScore": false
+  },
+  "executionSafety": {
+    "crossProcessLeaseRequired": true,
+    "uniqueRunIdRequired": true,
+    "immutableRequestJournalRequired": true,
+    "contentAddressedControlledStorageRequired": true,
+    "gitSafeArtifactsMayContainProviderValues": false,
+    "unknownRequestStateStopsRun": true,
+    "partialFailureMayResumeOnlyFromHashVerifiedCompletedReceipts": true,
+    "networkExecutionAuthorizedByThisArtifact": false,
+    "zeroNetworkControlledDataAuditAuthorized": false
+  },
+  "automaticStopRules": [
+    "SOURCE_ARTIFACT_HASH_CHANGED",
+    "UNIVERSE_CONTENT_HASH_CHANGED",
+    "CONTROLLED_FORMULA_INPUT_MISSING",
+    "CONTROLLED_FORMULA_INPUT_HASH_MISMATCH",
+    "SPY_BENCHMARK_PRICE_MISSING",
+    "INSUFFICIENT_ADJUSTED_CLOSE_HISTORY",
+    "INSUFFICIENT_FINANCIAL_HISTORY",
+    "INSUFFICIENT_HISTORICAL_MARKET_CAP_HISTORY",
+    "REQUEST_JOURNAL_OR_LEASE_INCONSISTENT",
+    "UNKNOWN_PHYSICAL_REQUEST_STATE",
+    "LICENSED_VALUE_FOUND_IN_GIT_SAFE_ARTIFACT"
+  ],
+  "securities": [
+    {
+      "securityId": "US:MSFT",
+      "symbol": "MSFT",
+      "role": "RETAINED_V1",
+      "sector": "Information Technology",
+      "sourceOrdinal": 1,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "467BFF6C996C33F25ACE4B8BD9A90D46A7457147C2419F933A82A85AB6472BC2",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/MSFT/467BFF6C996C33F25ACE4B8BD9A90D46A7457147C2419F933A82A85AB6472BC2.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:META",
+      "symbol": "META",
+      "role": "RETAINED_V1",
+      "sector": "Communication Services",
+      "sourceOrdinal": 2,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "C245C105A787E2D8E21740CF09C8A32A728EB939D5CE824D1CE7898F732676CB",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/META/C245C105A787E2D8E21740CF09C8A32A728EB939D5CE824D1CE7898F732676CB.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:WMT",
+      "symbol": "WMT",
+      "role": "RETAINED_V1",
+      "sector": "Consumer Staples",
+      "sourceOrdinal": 3,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "02DB53955D6EA6BE25AB1AEB5FB3CEDDE0B8A5CF8DE7EAE45A2E2C29F21D6FF8",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/WMT/02DB53955D6EA6BE25AB1AEB5FB3CEDDE0B8A5CF8DE7EAE45A2E2C29F21D6FF8.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:MCD",
+      "symbol": "MCD",
+      "role": "RETAINED_V1",
+      "sector": "Consumer Discretionary",
+      "sourceOrdinal": 4,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "1DDA854CEA32315FC9AEC34DAEFDEE89C28C835F614645C7B2106023429CD94C",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/MCD/1DDA854CEA32315FC9AEC34DAEFDEE89C28C835F614645C7B2106023429CD94C.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:ADP",
+      "symbol": "ADP",
+      "role": "RETAINED_V1",
+      "sector": "Industrials",
+      "sourceOrdinal": 5,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "A6878549C8D7F4D3AD09667195A81B4977BB6D94E5BA9057B3A451BC3F5DD302",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/ADP/A6878549C8D7F4D3AD09667195A81B4977BB6D94E5BA9057B3A451BC3F5DD302.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:NKE",
+      "symbol": "NKE",
+      "role": "RETAINED_V1",
+      "sector": "Consumer Discretionary",
+      "sourceOrdinal": 6,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "5F74B218CD0272A8525DE5A915F5A627473670567CB3494E396239B1533BCDA6",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/NKE/5F74B218CD0272A8525DE5A915F5A627473670567CB3494E396239B1533BCDA6.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:TGT",
+      "symbol": "TGT",
+      "role": "RETAINED_V1",
+      "sector": "Consumer Discretionary",
+      "sourceOrdinal": 7,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "F1A8770D23844CCA822040BC282DCD9F417CEB753A64AC2B0CE72715B10EA1C9",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/TGT/F1A8770D23844CCA822040BC282DCD9F417CEB753A64AC2B0CE72715B10EA1C9.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:PLAB",
+      "symbol": "PLAB",
+      "role": "RETAINED_V1",
+      "sector": "Information Technology",
+      "sourceOrdinal": 8,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "E5F8890A8FF79364A578FE3F919AEF0E81C2461E1297145F2A6A2BF74912981A",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/PLAB/E5F8890A8FF79364A578FE3F919AEF0E81C2461E1297145F2A6A2BF74912981A.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:NVDA",
+      "symbol": "NVDA",
+      "role": "RETAINED_V1",
+      "sector": "Information Technology",
+      "sourceOrdinal": 9,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "0A4287BAC3B97E219A3891BE73A67067FC071E10BD10392636D8F46E574AFEE5",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/NVDA/0A4287BAC3B97E219A3891BE73A67067FC071E10BD10392636D8F46E574AFEE5.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:AVGO",
+      "symbol": "AVGO",
+      "role": "RETAINED_V1",
+      "sector": "Information Technology",
+      "sourceOrdinal": 10,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "CCE0DAF2F562CE885CA479DCCDDDF30B26367E09F440B0909D5008EB9F6E7141",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/AVGO/CCE0DAF2F562CE885CA479DCCDDDF30B26367E09F440B0909D5008EB9F6E7141.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:ORCL",
+      "symbol": "ORCL",
+      "role": "RETAINED_V1",
+      "sector": "Information Technology",
+      "sourceOrdinal": 11,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "C4737554CE5DF694FB3DC38201E46A8C8499CC46520279A46947897F7E181A85",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/ORCL/C4737554CE5DF694FB3DC38201E46A8C8499CC46520279A46947897F7E181A85.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:CSCO",
+      "symbol": "CSCO",
+      "role": "RETAINED_V1",
+      "sector": "Information Technology",
+      "sourceOrdinal": 12,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "EAF1F81D9D3E8F0070D3D1216A8EBF49D004AC41FF62538E675D366D18F0C829",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/CSCO/EAF1F81D9D3E8F0070D3D1216A8EBF49D004AC41FF62538E675D366D18F0C829.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:IBM",
+      "symbol": "IBM",
+      "role": "RETAINED_V1",
+      "sector": "Information Technology",
+      "sourceOrdinal": 13,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "4CB503B6578E2859952B871344CF543849F2945C0BE17DDAA86B79429D698F37",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/IBM/4CB503B6578E2859952B871344CF543849F2945C0BE17DDAA86B79429D698F37.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:GOOGL",
+      "symbol": "GOOGL",
+      "role": "RETAINED_V1",
+      "sector": "Communication Services",
+      "sourceOrdinal": 14,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "790C05E06D0FB10B41F194B2BE65290E8F425643470F75A48E54C884A9BA3D00",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/GOOGL/790C05E06D0FB10B41F194B2BE65290E8F425643470F75A48E54C884A9BA3D00.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:NFLX",
+      "symbol": "NFLX",
+      "role": "RETAINED_V1",
+      "sector": "Communication Services",
+      "sourceOrdinal": 15,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "56D4491C2C6602461741EC59E4B4A90E4B533FD6D3CC8492010D01D9F14F8065",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/NFLX/56D4491C2C6602461741EC59E4B4A90E4B533FD6D3CC8492010D01D9F14F8065.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:DIS",
+      "symbol": "DIS",
+      "role": "RETAINED_V1",
+      "sector": "Communication Services",
+      "sourceOrdinal": 16,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "82D2DB30FA452BFD325A9D75288811E6994AFE673953C85DCED1A1A5069E93F2",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/DIS/82D2DB30FA452BFD325A9D75288811E6994AFE673953C85DCED1A1A5069E93F2.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:AMZN",
+      "symbol": "AMZN",
+      "role": "RETAINED_V1",
+      "sector": "Consumer Discretionary",
+      "sourceOrdinal": 17,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "C85F330707E8F8F9FAD4C6358E487B28A6838BC7CD9BD162BC4AB2D01603AB43",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/AMZN/C85F330707E8F8F9FAD4C6358E487B28A6838BC7CD9BD162BC4AB2D01603AB43.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:HD",
+      "symbol": "HD",
+      "role": "RETAINED_V1",
+      "sector": "Consumer Discretionary",
+      "sourceOrdinal": 18,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "FD8EB5CD5648AB49F5F79B5F26F5A0AA1D47E423EA11C9E6D779EE5835562282",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/HD/FD8EB5CD5648AB49F5F79B5F26F5A0AA1D47E423EA11C9E6D779EE5835562282.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:LOW",
+      "symbol": "LOW",
+      "role": "RETAINED_V1",
+      "sector": "Consumer Discretionary",
+      "sourceOrdinal": 19,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "61985AF4CDCB13D9464463AE9E9D2E7E6A7B0E812A3E732422EB90BBFC565202",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/LOW/61985AF4CDCB13D9464463AE9E9D2E7E6A7B0E812A3E732422EB90BBFC565202.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:SBUX",
+      "symbol": "SBUX",
+      "role": "RETAINED_V1",
+      "sector": "Consumer Discretionary",
+      "sourceOrdinal": 20,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "0CA5B7A2DC40687E9095A91591120D5B8B11FC565374DDE3E1438EACC4C02E8C",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/SBUX/0CA5B7A2DC40687E9095A91591120D5B8B11FC565374DDE3E1438EACC4C02E8C.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:PG",
+      "symbol": "PG",
+      "role": "RETAINED_V1",
+      "sector": "Consumer Staples",
+      "sourceOrdinal": 21,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "ABD25D06B8C7BB0D682719780591DB4070B5744528D3A34B92E67483C7D2E672",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/PG/ABD25D06B8C7BB0D682719780591DB4070B5744528D3A34B92E67483C7D2E672.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:KO",
+      "symbol": "KO",
+      "role": "RETAINED_V1",
+      "sector": "Consumer Staples",
+      "sourceOrdinal": 22,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "976E9744BB90931236D52A120660152CF183A73DEDF2A622BA803E1BC5DC4B7B",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/KO/976E9744BB90931236D52A120660152CF183A73DEDF2A622BA803E1BC5DC4B7B.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:CL",
+      "symbol": "CL",
+      "role": "RETAINED_V1",
+      "sector": "Consumer Staples",
+      "sourceOrdinal": 23,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "514AD8ADFE6DD035DE837589A848B84F1FD051493DD6C5958D5B72DC3CEF1051",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/CL/514AD8ADFE6DD035DE837589A848B84F1FD051493DD6C5958D5B72DC3CEF1051.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:MCK",
+      "symbol": "MCK",
+      "role": "RETAINED_V1",
+      "sector": "Health Care",
+      "sourceOrdinal": 24,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "7CD4C85C48391B414BEE921948B64012B24F52C684DBB21EF73980B6AC9E7537",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/MCK/7CD4C85C48391B414BEE921948B64012B24F52C684DBB21EF73980B6AC9E7537.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:HON",
+      "symbol": "HON",
+      "role": "RETAINED_V1",
+      "sector": "Industrials",
+      "sourceOrdinal": 25,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "2A2471B428ECA26FD5296BDD3DB9B45EC92E825FDEE7FA956078032855C1378E",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/HON/2A2471B428ECA26FD5296BDD3DB9B45EC92E825FDEE7FA956078032855C1378E.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:UPS",
+      "symbol": "UPS",
+      "role": "RETAINED_V1",
+      "sector": "Industrials",
+      "sourceOrdinal": 26,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "CA8DED877D42DA10413E399126F7871FB0253C447B6B06EEEF1129F4C375F6D5",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/UPS/CA8DED877D42DA10413E399126F7871FB0253C447B6B06EEEF1129F4C375F6D5.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:UNP",
+      "symbol": "UNP",
+      "role": "RETAINED_V1",
+      "sector": "Industrials",
+      "sourceOrdinal": 27,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "4018CC3BBD42EC58EE25FE425EAACC8EECF14E43F182DF5D46945BD374C6A2D5",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/UNP/4018CC3BBD42EC58EE25FE425EAACC8EECF14E43F182DF5D46945BD374C6A2D5.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:DE",
+      "symbol": "DE",
+      "role": "RETAINED_V1",
+      "sector": "Industrials",
+      "sourceOrdinal": 28,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "A92EA191944EF7EB76C22AB0A1CE444AA43616B897B4714DED6C28A7DF3759FC",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/DE/A92EA191944EF7EB76C22AB0A1CE444AA43616B897B4714DED6C28A7DF3759FC.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:ETN",
+      "symbol": "ETN",
+      "role": "RETAINED_V1",
+      "sector": "Industrials",
+      "sourceOrdinal": 29,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "23A36F7F2D9056580BA7C5361FE899C787B45E34C4C97CBD94D0C0828B00CA0A",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/ETN/23A36F7F2D9056580BA7C5361FE899C787B45E34C4C97CBD94D0C0828B00CA0A.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:DUK",
+      "symbol": "DUK",
+      "role": "RETAINED_V1",
+      "sector": "Utilities",
+      "sourceOrdinal": 30,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "42EA382E96E0463D6C1CA1F032F82AE6548C78FFDEBA71CF85AC074CD6AFC473",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/DUK/42EA382E96E0463D6C1CA1F032F82AE6548C78FFDEBA71CF85AC074CD6AFC473.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:SO",
+      "symbol": "SO",
+      "role": "RETAINED_V1",
+      "sector": "Utilities",
+      "sourceOrdinal": 31,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "9A5B7775708BF8864FBC4CC2D6D6533EBFE5791D9256FCCBF5C57FD49DA9E57C",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/SO/9A5B7775708BF8864FBC4CC2D6D6533EBFE5791D9256FCCBF5C57FD49DA9E57C.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:LIN",
+      "symbol": "LIN",
+      "role": "RETAINED_V1",
+      "sector": "Materials",
+      "sourceOrdinal": 32,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "C41EBED6932CFCE000217A4BA2AF1825A097C49EF167FE6D6566DA0E67856123",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/LIN/C41EBED6932CFCE000217A4BA2AF1825A097C49EF167FE6D6566DA0E67856123.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:SHW",
+      "symbol": "SHW",
+      "role": "RETAINED_V1",
+      "sector": "Materials",
+      "sourceOrdinal": 33,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "801FF8D03C5EB91162DF1E6F9046D78DCB5EAE775288A3803E8E15E192562F1B",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/SHW/801FF8D03C5EB91162DF1E6F9046D78DCB5EAE775288A3803E8E15E192562F1B.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:ECL",
+      "symbol": "ECL",
+      "role": "RETAINED_V1",
+      "sector": "Materials",
+      "sourceOrdinal": 34,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "333A2B08A1D8A0BE510A2B70CD3A73FDD03F93FB30801AB37D35D1A53CDC40B4",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/ECL/333A2B08A1D8A0BE510A2B70CD3A73FDD03F93FB30801AB37D35D1A53CDC40B4.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:APD",
+      "symbol": "APD",
+      "role": "RETAINED_V1",
+      "sector": "Materials",
+      "sourceOrdinal": 35,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "89DFD97DBFF2D39D9E4A840476B10DE2C050BE5E1AA2048E986F99BA7B83C698",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/APD/89DFD97DBFF2D39D9E4A840476B10DE2C050BE5E1AA2048E986F99BA7B83C698.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:CROX",
+      "symbol": "CROX",
+      "role": "RETAINED_V1",
+      "sector": "Consumer Discretionary",
+      "sourceOrdinal": 36,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "02744E89F9F8379024C61B45366D48359BD79EE9659EA25E279381D859690CC8",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/CROX/02744E89F9F8379024C61B45366D48359BD79EE9659EA25E279381D859690CC8.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:OLED",
+      "symbol": "OLED",
+      "role": "RETAINED_V1",
+      "sector": "Information Technology",
+      "sourceOrdinal": 37,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "D9826E56BA8BC356163AC7719FA4043E99DCA5BDB1B8706D41A8D111604345B7",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/OLED/D9826E56BA8BC356163AC7719FA4043E99DCA5BDB1B8706D41A8D111604345B7.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:UFPI",
+      "symbol": "UFPI",
+      "role": "RETAINED_V1",
+      "sector": "Materials",
+      "sourceOrdinal": 38,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "2372E14B131B2BB57496564BE250789C93D8FA9D0F6D4717EBDF47D4A632563B",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/UFPI/2372E14B131B2BB57496564BE250789C93D8FA9D0F6D4717EBDF47D4A632563B.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:WDFC",
+      "symbol": "WDFC",
+      "role": "RETAINED_V1",
+      "sector": "Materials",
+      "sourceOrdinal": 39,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "596782E85CF22CDCC4E9365EAC5A5A030E5D31DE6DD291DB367E8E76D7470FA0",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/WDFC/596782E85CF22CDCC4E9365EAC5A5A030E5D31DE6DD291DB367E8E76D7470FA0.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:FIX",
+      "symbol": "FIX",
+      "role": "RETAINED_V1",
+      "sector": "Industrials",
+      "sourceOrdinal": 40,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "4DCCFDDE38213EDC0140F118025CCC3D769A1DA39356551CF442EBC5DD4EBD70",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/FIX/4DCCFDDE38213EDC0140F118025CCC3D769A1DA39356551CF442EBC5DD4EBD70.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:SAIA",
+      "symbol": "SAIA",
+      "role": "RETAINED_V1",
+      "sector": "Industrials",
+      "sourceOrdinal": 41,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "0ED8D8069174637E445A533BEE33EA79AC0A92527565E86666ACA3115E1B9481",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/SAIA/0ED8D8069174637E445A533BEE33EA79AC0A92527565E86666ACA3115E1B9481.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:ELF",
+      "symbol": "ELF",
+      "role": "RETAINED_V1",
+      "sector": "Consumer Discretionary",
+      "sourceOrdinal": 42,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "92959D012C4525C3128177F99A83E32DB894D3F7B8400BF6B182FC45E12A5DEA",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/ELF/92959D012C4525C3128177F99A83E32DB894D3F7B8400BF6B182FC45E12A5DEA.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:CMCSA",
+      "symbol": "CMCSA",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Communication Services",
+      "sourceOrdinal": 19,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "6983C5495B06C0A5B02D360A71D08C84B328617149695A48C1E92357F0D808A2",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/CMCSA/6983C5495B06C0A5B02D360A71D08C84B328617149695A48C1E92357F0D808A2.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:TJX",
+      "symbol": "TJX",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Consumer Discretionary",
+      "sourceOrdinal": 30,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "4FDE6D053999C62661EB96C13125D6CEEFEFFAE6E7ED2E8327339804FC09F972",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/TJX/4FDE6D053999C62661EB96C13125D6CEEFEFFAE6E7ED2E8327339804FC09F972.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:MO",
+      "symbol": "MO",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Consumer Staples",
+      "sourceOrdinal": 23,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "A95F035CF1C603CB7C448A3A7731ABF1806790DD4710D17FD97E2FD1F79C6EF4",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/MO/A95F035CF1C603CB7C448A3A7731ABF1806790DD4710D17FD97E2FD1F79C6EF4.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:BDX",
+      "symbol": "BDX",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Health Care",
+      "sourceOrdinal": 55,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "C0513D05B0F1F93E8C8CB920B570E42EAE17B882D8A883A20E72A4FE7E705EBF",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/BDX/C0513D05B0F1F93E8C8CB920B570E42EAE17B882D8A883A20E72A4FE7E705EBF.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:AOS",
+      "symbol": "AOS",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Industrials",
+      "sourceOrdinal": 3,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "71BB99503C2620338D6FBB2D16BF6B680E756550321E7F2BC9EE66FB38D6DCF1",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/AOS/71BB99503C2620338D6FBB2D16BF6B680E756550321E7F2BC9EE66FB38D6DCF1.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:AMD",
+      "symbol": "AMD",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Information Technology",
+      "sourceOrdinal": 8,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "61B4D66C1A795D1142E38A363BB8334C59728D5C1EC67D63FE508D394C19DFD3",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/AMD/61B4D66C1A795D1142E38A363BB8334C59728D5C1EC67D63FE508D394C19DFD3.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:ALB",
+      "symbol": "ALB",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Materials",
+      "sourceOrdinal": 15,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "957EE7A3432285FF9D4E10DDFF6AF801A1B7CC0D186CA81E4F1874881FD6FEFC",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/ALB/957EE7A3432285FF9D4E10DDFF6AF801A1B7CC0D186CA81E4F1874881FD6FEFC.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:AES",
+      "symbol": "AES",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Utilities",
+      "sourceOrdinal": 9,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "95FF79760A57C89D2DA1BBEC270E93059A783E02266652DBA7F411325F19148E",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/AES/95FF79760A57C89D2DA1BBEC270E93059A783E02266652DBA7F411325F19148E.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:TMUS",
+      "symbol": "TMUS",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Communication Services",
+      "sourceOrdinal": 20,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "142F8DAEC7F6E7C2D8C8726BFD3156F95B3CCDF0E39005F0534BA3274113D0F7",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/TMUS/142F8DAEC7F6E7C2D8C8726BFD3156F95B3CCDF0E39005F0534BA3274113D0F7.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:ROST",
+      "symbol": "ROST",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Consumer Discretionary",
+      "sourceOrdinal": 31,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "A436FEF54D8C483FF256194B416A7C0834F3D19AE4475C84D5B929C3D4E23186",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/ROST/A436FEF54D8C483FF256194B416A7C0834F3D19AE4475C84D5B929C3D4E23186.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:MDLZ",
+      "symbol": "MDLZ",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Consumer Staples",
+      "sourceOrdinal": 43,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "3A6DB842801CF462F5A00C495B111B9906BDA89CDBC96C28C278BA7C9437AA9D",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/MDLZ/3A6DB842801CF462F5A00C495B111B9906BDA89CDBC96C28C278BA7C9437AA9D.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:BSX",
+      "symbol": "BSX",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Health Care",
+      "sourceOrdinal": 56,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "61317A2BEA018961EDD7709BDEE59331489C93A25360EDCEAE3B020D9BE99F2B",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/BSX/61317A2BEA018961EDD7709BDEE59331489C93A25360EDCEAE3B020D9BE99F2B.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:ALLE",
+      "symbol": "ALLE",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Industrials",
+      "sourceOrdinal": 18,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "D395BC2D1BF9D04D0347462533F864BFF215A0B4F3519A9311E760DAD7BCBDF4",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/ALLE/D395BC2D1BF9D04D0347462533F864BFF215A0B4F3519A9311E760DAD7BCBDF4.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:QCOM",
+      "symbol": "QCOM",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Information Technology",
+      "sourceOrdinal": 10,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "ADCD05CEAC68417EF497B3AD9EF9E29008DDFD50E5914CDD41AF5632ED8B8A9A",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/QCOM/ADCD05CEAC68417EF497B3AD9EF9E29008DDFD50E5914CDD41AF5632ED8B8A9A.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:AMCR",
+      "symbol": "AMCR",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Materials",
+      "sourceOrdinal": 25,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "34C8C9FC7DB7C3F5E6ADE5D7BFB787D90164EE47E99788573AD8BC56ABCBCA66",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/AMCR/34C8C9FC7DB7C3F5E6ADE5D7BFB787D90164EE47E99788573AD8BC56ABCBCA66.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:LNT",
+      "symbol": "LNT",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Utilities",
+      "sourceOrdinal": 19,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "8A6F7C322F91D3256D055D4C56FF902A16DAE91E49C17A3469E56E07ACF55C04",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/LNT/8A6F7C322F91D3256D055D4C56FF902A16DAE91E49C17A3469E56E07ACF55C04.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:EA",
+      "symbol": "EA",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Communication Services",
+      "sourceOrdinal": 22,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "23964CE62EE4F4B6E3A1C5BB39C71BC77A0B815C17004C9D86753A4678EDF0AD",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/EA/23964CE62EE4F4B6E3A1C5BB39C71BC77A0B815C17004C9D86753A4678EDF0AD.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:ORLY",
+      "symbol": "ORLY",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Consumer Discretionary",
+      "sourceOrdinal": 32,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "EE868C396D1C7E7F2D6E9ADC01A67195468F0F7B21857AEA076F8BC2D4C10BCA",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/ORLY/EE868C396D1C7E7F2D6E9ADC01A67195468F0F7B21857AEA076F8BC2D4C10BCA.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:KMB",
+      "symbol": "KMB",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Consumer Staples",
+      "sourceOrdinal": 44,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "A90B3755C96A2705D44B2395FD72C224D6DB1B958D2F74FD00B5A8271B264DDA",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/KMB/A90B3755C96A2705D44B2395FD72C224D6DB1B958D2F74FD00B5A8271B264DDA.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:ZBH",
+      "symbol": "ZBH",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Health Care",
+      "sourceOrdinal": 59,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "32A59D435FA4DDA2F5E79451E08D1B8DD00568113B5DC76D8060F7731D61DE2D",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/ZBH/32A59D435FA4DDA2F5E79451E08D1B8DD00568113B5DC76D8060F7731D61DE2D.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:AME",
+      "symbol": "AME",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Industrials",
+      "sourceOrdinal": 33,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "7B9D5E28C0B950D811AEE518F37BA81A18847002C5BD55B7076F611EA4AA5BFA",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/AME/7B9D5E28C0B950D811AEE518F37BA81A18847002C5BD55B7076F611EA4AA5BFA.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:AMAT",
+      "symbol": "AMAT",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Information Technology",
+      "sourceOrdinal": 11,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "BB2503DBA30C0DE19E6A1A1802F56C5D60C05A3E67B579A5F465100BF41EC6E2",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/AMAT/BB2503DBA30C0DE19E6A1A1802F56C5D60C05A3E67B579A5F465100BF41EC6E2.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:BALL",
+      "symbol": "BALL",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Materials",
+      "sourceOrdinal": 59,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "103C0E4AFFB46B16F229B52553FB63C79D36DF228ACCD82C599CFA53370CE0F9",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/BALL/103C0E4AFFB46B16F229B52553FB63C79D36DF228ACCD82C599CFA53370CE0F9.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:AEE",
+      "symbol": "AEE",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Utilities",
+      "sourceOrdinal": 26,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "94A6B587D9CAB34BA7AAE88A863079BF5B4BC74373D20CF5BF7C2AA03DB7E195",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/AEE/94A6B587D9CAB34BA7AAE88A863079BF5B4BC74373D20CF5BF7C2AA03DB7E195.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:GOOG",
+      "symbol": "GOOG",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Communication Services",
+      "sourceOrdinal": 22,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "E0DC7207E4E00E8AC501170D642CA10FE0A2C0B47359DD3F77292D14D14FC947",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/GOOG/E0DC7207E4E00E8AC501170D642CA10FE0A2C0B47359DD3F77292D14D14FC947.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:YUM",
+      "symbol": "YUM",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Consumer Discretionary",
+      "sourceOrdinal": 36,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "66A5964CEFA3F0F07F005D609D205947DA1FC6E14C5CA1C103CE9580FFEA75A8",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/YUM/66A5964CEFA3F0F07F005D609D205947DA1FC6E14C5CA1C103CE9580FFEA75A8.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:ADM",
+      "symbol": "ADM",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Consumer Staples",
+      "sourceOrdinal": 45,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "C7297309AD9A04783988CEF51E5E603550DAC6FED25FFF09CF67EC29EFE7700E",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/ADM/C7297309AD9A04783988CEF51E5E603550DAC6FED25FFF09CF67EC29EFE7700E.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:PFE",
+      "symbol": "PFE",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Health Care",
+      "sourceOrdinal": 60,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "265EDFBBD6ACB79C85AF4129FFC0D8CFCEE471EF58281946BB340FB1B9C5227C",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/PFE/265EDFBBD6ACB79C85AF4129FFC0D8CFCEE471EF58281946BB340FB1B9C5227C.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:AXON",
+      "symbol": "AXON",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Industrials",
+      "sourceOrdinal": 57,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "D371AF72C14233EBAE9F53C70DE18261581A6951BFBB403CE356C6CAFDB6FDE2",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/AXON/D371AF72C14233EBAE9F53C70DE18261581A6951BFBB403CE356C6CAFDB6FDE2.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:AKAM",
+      "symbol": "AKAM",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Information Technology",
+      "sourceOrdinal": 14,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "EA1DC6A84D0C87806D8F50F7A07E213CEE53F51811DF22C208D2034B604638CC",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/AKAM/EA1DC6A84D0C87806D8F50F7A07E213CEE53F51811DF22C208D2034B604638CC.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:PPG",
+      "symbol": "PPG",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Materials",
+      "sourceOrdinal": 95,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "835DC5D17ACB048B1AADC68AF6985051477125F9C9DF26F3DBBA263A486FD378",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/PPG/835DC5D17ACB048B1AADC68AF6985051477125F9C9DF26F3DBBA263A486FD378.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:AWK",
+      "symbol": "AWK",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Utilities",
+      "sourceOrdinal": 31,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "F0A7BE5A7A1CEA722CF7C4C2A7425641B5AFCFB5526A596B44D25F3E57C8B19E",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/AWK/F0A7BE5A7A1CEA722CF7C4C2A7425641B5AFCFB5526A596B44D25F3E57C8B19E.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:CHTR",
+      "symbol": "CHTR",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Communication Services",
+      "sourceOrdinal": 101,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "54ECDF5F6A107A6A761532FCB5EB3D0588770CDD82F854537214AC0CD7D7F915",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/CHTR/54ECDF5F6A107A6A761532FCB5EB3D0588770CDD82F854537214AC0CD7D7F915.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:APTV",
+      "symbol": "APTV",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Consumer Discretionary",
+      "sourceOrdinal": 43,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "542EBDABD3CA32C697265C92517B4B3AB562E362414C83D9ABE1A25625FDE31C",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/APTV/542EBDABD3CA32C697265C92517B4B3AB562E362414C83D9ABE1A25625FDE31C.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:GIS",
+      "symbol": "GIS",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Consumer Staples",
+      "sourceOrdinal": 45,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "540EA283FC3242D38E834AE3DE818C8A0A57C2579E924A6D332F5ED703A44A8B",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/GIS/540EA283FC3242D38E834AE3DE818C8A0A57C2579E924A6D332F5ED703A44A8B.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:BAX",
+      "symbol": "BAX",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Health Care",
+      "sourceOrdinal": 61,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "0CCCB5AEBAB63BCC36EE390884D0A881486CE058A7D4CE7EB0E1DD1867941124",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/BAX/0CCCB5AEBAB63BCC36EE390884D0A881486CE058A7D4CE7EB0E1DD1867941124.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:RTX",
+      "symbol": "RTX",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Industrials",
+      "sourceOrdinal": 70,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "2E50A4B241D8D7EAAAAEEC18BECEA6259BF5393F1092904DF98721A39162E96E",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/RTX/2E50A4B241D8D7EAAAAEEC18BECEA6259BF5393F1092904DF98721A39162E96E.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:APH",
+      "symbol": "APH",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Information Technology",
+      "sourceOrdinal": 35,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "9182FFC6E40744B1D9E4A60973F2AA8263EEA4090AE704475FEC837422A101F0",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/APH/9182FFC6E40744B1D9E4A60973F2AA8263EEA4090AE704475FEC837422A101F0.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:AVY",
+      "symbol": "AVY",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Materials",
+      "sourceOrdinal": 96,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "68A3C08202B1B69C16C41FB1BDCC6E01BA4DB0113CDF749DA4CCD4B5D470E90D",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/AVY/68A3C08202B1B69C16C41FB1BDCC6E01BA4DB0113CDF749DA4CCD4B5D470E90D.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:ATO",
+      "symbol": "ATO",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Utilities",
+      "sourceOrdinal": 51,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "588DCC1AEB797AF813E3DAC47F00EF653B7A6A94E0681D9047D6D1986C0926A3",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/ATO/588DCC1AEB797AF813E3DAC47F00EF653B7A6A94E0681D9047D6D1986C0926A3.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:T",
+      "symbol": "T",
+      "role": "EXPANSION_RESERVE",
+      "sector": "Communication Services",
+      "sourceOrdinal": 105,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "7B641AD626FC0C5147D99117E83796AA806A25D34604E695C4787ED7D0513245",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/T/7B641AD626FC0C5147D99117E83796AA806A25D34604E695C4787ED7D0513245.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:BBY",
+      "symbol": "BBY",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Consumer Discretionary",
+      "sourceOrdinal": 64,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "23B66D577805488EF9838884C5E3951FD40E05431457E83BDA10CF0692B7D535",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/BBY/23B66D577805488EF9838884C5E3951FD40E05431457E83BDA10CF0692B7D535.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:BF-B",
+      "symbol": "BF-B",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Consumer Staples",
+      "sourceOrdinal": 78,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "3D9F290C726403649F41B3B971B7614655B9DD0F5A334F8BA3631AC37F7A8478",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/BF-B/3D9F290C726403649F41B3B971B7614655B9DD0F5A334F8BA3631AC37F7A8478.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:MRK",
+      "symbol": "MRK",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Health Care",
+      "sourceOrdinal": 61,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "77E3057C85432725187C137B9E2AD87098732AA16810361C8713F9969C64F0CD",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/MRK/77E3057C85432725187C137B9E2AD87098732AA16810361C8713F9969C64F0CD.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:BA",
+      "symbol": "BA",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Industrials",
+      "sourceOrdinal": 71,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "1C42A0519A1E28DDDCA70EC6BF165A1F30164D5216A606DE172977FD030258CD",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/BA/1C42A0519A1E28DDDCA70EC6BF165A1F30164D5216A606DE172977FD030258CD.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:APP",
+      "symbol": "APP",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Information Technology",
+      "sourceOrdinal": 42,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "FE096AB466E6DDAA21ABCB3501610CFA1AD0C0D6E3378F3FE534BF41629E46D1",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/APP/FE096AB466E6DDAA21ABCB3501610CFA1AD0C0D6E3378F3FE534BF41629E46D1.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:CF",
+      "symbol": "CF",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Materials",
+      "sourceOrdinal": 98,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "92F6121649AC63CBD4209A856424BB5C391354C66C769ADE50F19ACF4DA6429F",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/CF/92F6121649AC63CBD4209A856424BB5C391354C66C769ADE50F19ACF4DA6429F.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:AEP",
+      "symbol": "AEP",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Utilities",
+      "sourceOrdinal": 86,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "B71C8220457367AE58F8CF32C0F9B89B7BA845F0521B54D2949C62E3AF34CA0B",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/AEP/B71C8220457367AE58F8CF32C0F9B89B7BA845F0521B54D2949C62E3AF34CA0B.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:OMC",
+      "symbol": "OMC",
+      "role": "EXPANSION_RESERVE",
+      "sector": "Communication Services",
+      "sourceOrdinal": 106,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "68C863BDBBB7E0C290DEE770FADF4394DB0EE1B902FB0009513CF198A0A50EEB",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/OMC/68C863BDBBB7E0C290DEE770FADF4394DB0EE1B902FB0009513CF198A0A50EEB.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:BKNG",
+      "symbol": "BKNG",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Consumer Discretionary",
+      "sourceOrdinal": 72,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "AE0EE187A6B71C7424888A6928E162D2407B79B661F07943D25A19472EE6A869",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/BKNG/AE0EE187A6B71C7424888A6928E162D2407B79B661F07943D25A19472EE6A869.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:BG",
+      "symbol": "BG",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Consumer Staples",
+      "sourceOrdinal": 80,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "63322DB90559A4DF62703C3C371A9682E0DE7B09EE8E8535F960E96E599B19C7",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/BG/63322DB90559A4DF62703C3C371A9682E0DE7B09EE8E8535F960E96E599B19C7.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:BMY",
+      "symbol": "BMY",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Health Care",
+      "sourceOrdinal": 62,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "E0CD646B21163226654782036D7EE8FD94ED5E62C8B100E3C520FE3E2121C884",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/BMY/E0CD646B21163226654782036D7EE8FD94ED5E62C8B100E3C520FE3E2121C884.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:LMT",
+      "symbol": "LMT",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Industrials",
+      "sourceOrdinal": 71,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "9A66D3F97727879E4D8BC4965793F8FBADEFB95616152E73AB14CF561EA5868B",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/LMT/9A66D3F97727879E4D8BC4965793F8FBADEFB95616152E73AB14CF561EA5868B.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:ADSK",
+      "symbol": "ADSK",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Information Technology",
+      "sourceOrdinal": 52,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "189D2B05149FED432F1F1812ECC03EE7461F7E76C34FDA59B2CF9D031F0D73F9",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/ADSK/189D2B05149FED432F1F1812ECC03EE7461F7E76C34FDA59B2CF9D031F0D73F9.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:HWKN",
+      "symbol": "HWKN",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Materials",
+      "sourceOrdinal": 100,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "7A3102461A924A3371E41ACEAE25E070545522D48C63DEF593443228AE6F60EB",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/HWKN/7A3102461A924A3371E41ACEAE25E070545522D48C63DEF593443228AE6F60EB.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:EXC",
+      "symbol": "EXC",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Utilities",
+      "sourceOrdinal": 87,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "20D187AFAAAC0846DD1ABE5A02DDD7BECA25E0D2A3E3D089F3D694F27F702A75",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/EXC/20D187AFAAAC0846DD1ABE5A02DDD7BECA25E0D2A3E3D089F3D694F27F702A75.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:FOXA",
+      "symbol": "FOXA",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Communication Services",
+      "sourceOrdinal": 207,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "6D8329BDC377598C6BE428E30491136D46FF52AA9CEC23D006C61E045BA7AB74",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/FOXA/6D8329BDC377598C6BE428E30491136D46FF52AA9CEC23D006C61E045BA7AB74.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    },
+    {
+      "securityId": "US:CCL",
+      "symbol": "CCL",
+      "role": "EXPANSION_PRIMARY",
+      "sector": "Consumer Discretionary",
+      "sourceOrdinal": 87,
+      "formulaInput": {
+        "state": "REUSE_CONTROLLED_FORMULA_READY_INPUT",
+        "contentHash": "0B8A147209638108BB1459F06AFB7088704E0FBB2D22672B2530B85CBBBC79EF",
+        "storageReference": "storage/provider-validation/scoring-inputs-v2/CCL/0B8A147209638108BB1459F06AFB7088704E0FBB2D22672B2530B85CBBBC79EF.json",
+        "verificationRequiredBeforeModelRun": true
+      },
+      "historicalPrice": {
+        "state": "REUSE_CONTROLLED_EODHD_DAILY_PRICE",
+        "provider": "eodhd",
+        "coverageWindowState": "PENDING_OFFLINE_PAYLOAD_AUDIT",
+        "minimumCompletedSessionsRequired": 1261
+      }
+    }
+  ],
+  "networkRequestsExecuted": false,
+  "providerValuesIncluded": false,
+  "scoresOrRanksIncluded": false,
+  "forwardValidationExecuted": false,
+  "artifactContentHash": "B03A732C80C383458CA083A455C8FC58BACC9710C43A6BD5BF84BEF4EB5C9140"
+}

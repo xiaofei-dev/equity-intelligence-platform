@@ -1,0 +1,60 @@
+{
+  "artifactType": "POST_CLOSE_PIPELINE_PREFLIGHT",
+  "schemaVersion": "POST-CLOSE-PIPELINE-PREFLIGHT-v2.2.1",
+  "status": "BLOCKED",
+  "blockedReasons": [
+    "PRODUCTION_66_MODEL_INPUT_EVIDENCE_MISSING",
+    "REAL_CONTROLLED_BENCHMARK_LEDGER_MISSING",
+    "TARGET_SESSION_NOT_COMPLETED"
+  ],
+  "targetSession": "2026-07-30",
+  "latestCompletedSession": "2026-07-29",
+  "v20ActivationAcceptanceHash": "sha256:a4e7715b8c97d1c6d132d141da39cad49c15f6d3102678106a97db633121d440",
+  "infrastructure": {
+    "completedSessionCapture": "READY_AWAITING_TIME",
+    "sixBenchmarkControlledLedger": "READY_AWAITING_REAL_EVIDENCE",
+    "decisionControlledComposite": "READY_AWAITING_REAL_EVIDENCE",
+    "modelInputAssembly": "READY_AWAITING_REAL_EVIDENCE",
+    "frozenModelExecution": "READY_NOT_EXECUTED",
+    "prospectiveEnrollment": "READY_REQUIRES_EXPLICIT_AUTHORIZATION",
+    "humanDecisionSidecar": "READY_NOT_EXECUTED",
+    "portfolioSuitabilityBoundary": "READY_NOT_EXECUTED"
+  },
+  "supersededImplementationBlocker": {
+    "code": "CONTROLLED_BENCHMARK_CONSTITUENT_LEDGER_NOT_IMPLEMENTED",
+    "state": "RESOLVED_BY_V20_CONTRACT_AND_TYPED_PERSISTENCE",
+    "mayProveRealLedgerExists": false
+  },
+  "sourceBindings": {
+    "pricePreflight": {
+      "path": "docs/generated/future-price-history-final-preexecution-preflight-v2-1.json",
+      "artifactContentHash": "sha256:a63cfe8bfcac0e9e5432e0bee9bb10122c1cebf99c498e599c0c25703b4778fa",
+      "fileSha256": "sha256:4dbac7409d0f370c64e1398557439886bcb239794c87e4c2b0e78e2122cdaa5e"
+    },
+    "v20ActivationAcceptance": {
+      "path": "docs/generated/forward-dqv-v20-activation-acceptance-v1.json",
+      "artifactContentHash": "sha256:a4e7715b8c97d1c6d132d141da39cad49c15f6d3102678106a97db633121d440",
+      "fileSha256": "sha256:d3bb1b4686ca796aaddfd9d1af7de74e58f0352b66566786230ea97b09ffcb59"
+    }
+  },
+  "modelEvidenceLabels": {
+    "path": "docs/generated/model-validation-terminal-closeout-v1.json",
+    "fileSha256": "sha256:6036a54d64ce0a4093258cf8ace85f923406faad556fde39af5be35a92131af4",
+    "declaredArtifactContentHash": "E414C070746738AC1830F6E3ABCFDF871E6F68269DFA08AD603195B50719BCD9",
+    "terminalConclusion": "TACTICAL_RANKING_PARTIAL_DIAGNOSTIC_ONLY;TACTICAL_ENTRY_NOT_VALIDATED;LONG_HORIZON_NOT_VALIDATED",
+    "unchangedByActivation": true
+  },
+  "executionBoundary": {
+    "providerNetworkRequests": 0,
+    "databaseReads": 0,
+    "businessDatabaseWrites": 0,
+    "scoresOrRanksComputed": false,
+    "enrollmentExecuted": false,
+    "outcomesComputed": false,
+    "maturityExecuted": false,
+    "commitCreated": false,
+    "pushExecuted": false,
+    "deploymentExecuted": false
+  },
+  "artifactContentHash": "sha256:be6fbc48b2dadb4da80c3b3aa68ccdf755a18282ab0f5910d1c392aae7b9ee8d"
+}

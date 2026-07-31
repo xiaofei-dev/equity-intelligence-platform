@@ -15,6 +15,11 @@ from equity_analysis.forward_validation.persistence import (
     ForwardConflictError,
     ForwardRepository,
 )
+from equity_analysis.forward_validation.prospective_enrollment_v1 import (
+    ProspectiveEnrollmentAccepted,
+    ProspectiveEnrollmentApiRequest,
+    ProspectiveEnrollmentRepository,
+)
 
 router = APIRouter(prefix="/internal/v1/forward-validation", tags=["forward-validation"])
 
@@ -27,6 +32,19 @@ def get_repository() -> ForwardRepository:
             detail={"code": "FORWARD_VALIDATION_NOT_CONFIGURED", "message": "Database unavailable"},
         )
     return ForwardRepository(database_url)
+
+
+def get_prospective_repository() -> ProspectiveEnrollmentRepository:
+    database_url = Settings.from_environment().analytics_database_url
+    if not database_url:
+        raise HTTPException(
+            status_code=503,
+            detail={
+                "code": "FORWARD_VALIDATION_NOT_CONFIGURED",
+                "message": "Database unavailable",
+            },
+        )
+    return ProspectiveEnrollmentRepository(database_url)
 
 
 @router.post("/experiments", response_model=ForwardExperimentAccepted, status_code=202)
@@ -102,4 +120,68 @@ def get_report(
     result = repository.report(experiment_id, report_type)
     if result is None:
         raise HTTPException(status_code=404, detail={"code": "REPORT_NOT_FOUND"})
+    return result
+
+
+@router.post(
+    "/prospective-enrollments",
+    response_model=ProspectiveEnrollmentAccepted,
+    status_code=201,
+)
+def create_prospective_enrollment(
+    request: ProspectiveEnrollmentApiRequest,
+    idempotency_key: Annotated[str | None, Header(alias="Idempotency-Key")] = None,
+) -> ProspectiveEnrollmentAccepted:
+    if not idempotency_key:
+        raise HTTPException(
+            status_code=400,
+            detail={"code": "IDEMPOTENCY_KEY_REQUIRED"},
+        )
+    del request
+    raise HTTPException(
+        status_code=410,
+        detail={
+            "code": "LEGACY_PROSPECTIVE_ENROLLMENT_DISABLED",
+            "message": (
+                "The legacy enrollment route cannot create prospective evidence. "
+                "Use the controlled Forward DQV v2.1.1 enrollment workflow."
+            ),
+        },
+    )
+
+
+@router.get(
+    "/prospective-enrollments/latest",
+    response_model=ProspectiveEnrollmentAccepted,
+)
+def get_latest_prospective_enrollment(
+    repository: Annotated[
+        ProspectiveEnrollmentRepository, Depends(get_prospective_repository)
+    ],
+) -> ProspectiveEnrollmentAccepted:
+    result = repository.latest()
+    if result is None:
+        raise HTTPException(
+            status_code=404,
+            detail={"code": "PROSPECTIVE_ENROLLMENT_NOT_FOUND"},
+        )
+    return result
+
+
+@router.get(
+    "/prospective-enrollments/{attempt_id}",
+    response_model=ProspectiveEnrollmentAccepted,
+)
+def get_prospective_enrollment(
+    attempt_id: UUID,
+    repository: Annotated[
+        ProspectiveEnrollmentRepository, Depends(get_prospective_repository)
+    ],
+) -> ProspectiveEnrollmentAccepted:
+    result = repository.get(attempt_id)
+    if result is None:
+        raise HTTPException(
+            status_code=404,
+            detail={"code": "PROSPECTIVE_ENROLLMENT_NOT_FOUND"},
+        )
     return result

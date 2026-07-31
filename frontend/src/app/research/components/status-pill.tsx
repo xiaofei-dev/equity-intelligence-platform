@@ -9,6 +9,8 @@ const positive = new Set([
   "SEALED",
   "CURRENT",
   "READY",
+  "ENROLLED",
+  "ALREADY_ELIGIBLE",
 ]);
 const caution = new Set([
   "MISSING",
@@ -17,8 +19,25 @@ const caution = new Set([
   "INSUFFICIENT_DATA",
   "INSUFFICIENT_EVIDENCE",
   "NOT_EXECUTED",
+  "NO_ELIGIBLE_SIGNALS",
+  "NOT_MATURED",
+  "NOT_APPLICABLE",
+  "RECOVERABLE",
+  "READY_FOR_CONFIRMATION",
+  "NO_ACTIONABLE_REQUESTS",
+  "PROVIDER_RECOVERY_PENDING",
 ]);
-const negative = new Set(["INVALID", "FAILED", "INELIGIBLE"]);
+const negative = new Set([
+  "INVALID",
+  "FAILED",
+  "INELIGIBLE",
+  "BLOCKED",
+  "BLOCKED_COHORT_UNREACHABLE",
+  "BLOCKED_EVIDENCE_SEMANTICS",
+  "BLOCKED_BUDGET",
+  "BLOCKED_SNAPSHOT",
+  "PROVIDER_RECOVERY_BLOCKED",
+]);
 
 export function StatusPill({
   state,

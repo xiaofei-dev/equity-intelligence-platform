@@ -26,6 +26,22 @@ docs/generated/*-diagnostics.json
 docs/generated/*.lock
 docs/generated/tactical-signal-validation-20260728T120259Z-all-requested.json
 
+# Licensed or personal-use market-data derivatives remain local.
+# Git may contain only separately generated value-free manifests.
+docs/generated/long-horizon-historical-stratified-validation*.json
+docs/generated/long-horizon-v1-1-tier1-retrospective-*.json
+docs/generated/practical-long-horizon-*-backtest-*.json
+docs/generated/practical-long-horizon-provider-backtest-coverage-v1*.json
+!docs/generated/practical-long-horizon-provider-backtest-coverage-v1-3.json
+docs/generated/practical-tactical-v2-2-backtest-v1*.json
+!docs/generated/practical-tactical-v2-2-backtest-manifest-v1.json
+docs/generated/tactical-historical-stratified-validation*.json
+docs/generated/tactical-signal-validation-*.json
+docs/generated/tactical-v2-2-tier1-retrospective-*.json
+!docs/generated/tactical-v2-2-tier1-retrospective-manifest-v1.json
+docs/generated/tactical-v2-2-tier1-statistical-closeout-*.json
+docs/generated/tactical-walk-forward-local-diagnostic-*.json
+
 # Frontend build output and dependencies
 frontend/node_modules/
 frontend/.next/

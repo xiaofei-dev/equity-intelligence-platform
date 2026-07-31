@@ -2,6 +2,7 @@ import "server-only";
 
 import {
   ContractDecodeError,
+  decodeEligibilityRecoveryStatus,
   decodeFacets,
   decodeProfileEnvelope,
   decodeScreeningResultPage,
@@ -9,10 +10,12 @@ import {
   decodeSecuritySearchPage,
   isUuid,
   type MarketIntelligenceFacets,
+  type EligibilityRecoveryStatusResponse,
   type ProfileEnvelope,
   type ScreeningResultPage,
   type SecuritySearchPage,
 } from "./contracts";
+import { buildEligibilityRecoveryStatusPath } from "./eligibility-recovery-route";
 
 export type BackendError = {
   code:
@@ -200,6 +203,43 @@ export async function loadResearchFacets(): Promise<
     `/api/v1/market-intelligence/facets?${query}`,
     decodeFacets,
   );
+}
+
+export async function loadLatestEligibilityRecoveryStatus(options: {
+  dataSnapshotId: string;
+  universeVersion: string;
+  asOf: string;
+}): Promise<BackendResult<EligibilityRecoveryStatusResponse | null>> {
+  if (!isUuid(options.dataSnapshotId)) {
+    return {
+      ok: false,
+      error: {
+        code: "RESEARCH_INVALID_IDENTIFIER",
+        message: "The eligibility-recovery snapshot identifier is invalid.",
+      },
+    };
+  }
+  if (
+    !options.universeVersion.trim() ||
+    Number.isNaN(Date.parse(options.asOf))
+  ) {
+    return {
+      ok: false,
+      error: {
+        code: "RESEARCH_CONFIGURATION_ERROR",
+        message:
+          "Eligibility recovery requires a universe version and valid snapshot cutoff.",
+      },
+    };
+  }
+  const result = await request(
+    buildEligibilityRecoveryStatusPath(options),
+    decodeEligibilityRecoveryStatus,
+  );
+  if (!result.ok && result.error.status === 404) {
+    return { ok: true, data: null };
+  }
+  return result;
 }
 
 export async function searchSecurities(options: {

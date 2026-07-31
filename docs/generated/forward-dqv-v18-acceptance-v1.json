@@ -1,0 +1,122 @@
+{
+  "artifactType": "FORWARD_DQV_V18_ACCEPTANCE",
+  "schemaVersion": "FORWARD-DQV-V18-ACCEPTANCE-v1.0.0",
+  "effectiveDate": "2026-07-29",
+  "status": "READY",
+  "implementationStatus": "READY",
+  "enrollmentStatus": "NOT_EXECUTED",
+  "migrationVersion": 18,
+  "migrationApplied": true,
+  "appendOnlyValidated": true,
+  "fiveHorizonCompletenessValidated": true,
+  "sixBenchmarkCompletenessValidated": true,
+  "migrationFileSha256": "sha256:01a01a2ecd11157a1ecce0ea0ff46bb7d1254b5c13a088ab239db2e8f31b054b",
+  "repositoryContractHash": "sha256:2a7b67d66e9b93b0fb1b25caa76909c2d6074b7da34acaddcc97c283dfc27c13",
+  "sourceFiles": {
+    "migration": {
+      "path": "database/migrations/V18__create_forward_dqv_v2_outcome_ledger.sql",
+      "fileSha256": "sha256:01a01a2ecd11157a1ecce0ea0ff46bb7d1254b5c13a088ab239db2e8f31b054b"
+    },
+    "outcomesV21": {
+      "path": "analysis-python/src/equity_analysis/forward_validation/outcomes_v21.py",
+      "fileSha256": "sha256:0f299b44628e12cfc9f01769fe56c175ecf6280cb25b0aa84939da47000bc393"
+    },
+    "repositoryV21": {
+      "path": "analysis-python/src/equity_analysis/forward_validation/outcome_persistence_v21.py",
+      "fileSha256": "sha256:bbe30d0ec017e93bae4474c416e8a0d3df9d7d60f5061333e7c8ced48d14b059"
+    }
+  },
+  "schemaContract": {
+    "tables": [
+      "analytics.forward_dqv_enrollment_v2",
+      "analytics.forward_dqv_maturity_schedule_v2",
+      "analytics.forward_dqv_outcome_batch_v2",
+      "analytics.forward_dqv_security_outcome_v2",
+      "analytics.forward_dqv_benchmark_outcome_v2",
+      "analytics.forward_dqv_path_metric_v2",
+      "analytics.forward_dqv_quality_report_v2"
+    ],
+    "completedSessionHorizons": [
+      5,
+      20,
+      60,
+      126,
+      252
+    ],
+    "benchmarkKinds": [
+      "SPY",
+      "SECTOR",
+      "EQUAL_WEIGHT",
+      "PURE_MOMENTUM",
+      "PURE_VALUE",
+      "PURE_QUALITY"
+    ],
+    "tableCount": 7,
+    "horizonCount": 5,
+    "benchmarkKindCount": 6
+  },
+  "postgresql17Acceptance": {
+    "status": "PASS",
+    "engine": "PostgreSQL 17",
+    "upgradeMatrix": [
+      {
+        "fromVersion": "V1",
+        "toVersion": "V18",
+        "status": "PASS"
+      },
+      {
+        "fromVersion": "V3",
+        "toVersion": "V18",
+        "status": "PASS"
+      },
+      {
+        "fromVersion": "V12",
+        "toVersion": "V18",
+        "status": "PASS"
+      },
+      {
+        "fromVersion": "V16",
+        "toVersion": "V18",
+        "status": "PASS"
+      },
+      {
+        "fromVersion": "V17",
+        "toVersion": "V18",
+        "status": "PASS"
+      }
+    ]
+  },
+  "testAcceptance": {
+    "repositoryTests": {
+      "status": "PASS",
+      "passed": 3
+    },
+    "fullPythonSuite": {
+      "status": "PASS",
+      "passed": 892,
+      "skipped": 17,
+      "workingDirectory": "repository-root"
+    },
+    "ruff": {
+      "status": "PASS"
+    },
+    "gitDiffCheck": {
+      "status": "PASS",
+      "lineEndingNoticesOnly": true
+    }
+  },
+  "executionBoundary": {
+    "networkRequests": 0,
+    "providerRequests": 0,
+    "businessDatabaseWrites": 0,
+    "scoresComputed": false,
+    "enrollmentExecuted": false,
+    "outcomesComputed": false,
+    "commitCreated": false,
+    "pushExecuted": false,
+    "deploymentExecuted": false,
+    "credentialsIncluded": false,
+    "databaseUrlIncluded": false
+  },
+  "artifactContentHash": "sha256:e5ce27f66981d8341ed0d88f33fc72d380999b3d68360d53ce83f908f51a5f1e"
+}

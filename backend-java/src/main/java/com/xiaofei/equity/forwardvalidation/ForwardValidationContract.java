@@ -2,7 +2,9 @@ package com.xiaofei.equity.forwardvalidation;
 
 import java.math.BigDecimal;
 import java.time.Instant;
+import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 public final class ForwardValidationContract {
 
@@ -27,6 +29,28 @@ public final class ForwardValidationContract {
 		MIXED,
 		UNFAVORABLE,
 		INSUFFICIENT_SAMPLE
+	}
+
+	public enum ProspectiveEnrollmentStatus {
+		ENROLLED,
+		NO_ELIGIBLE_SIGNALS,
+		BLOCKED
+	}
+
+	public enum ProspectiveDecisionState {
+		ELIGIBLE,
+		EXCLUDED
+	}
+
+	public enum ProspectiveMaturityStatus {
+		NOT_MATURED,
+		NOT_APPLICABLE
+	}
+
+	public enum ProspectiveHorizon {
+		ONE_WEEK,
+		ONE_MONTH,
+		THREE_MONTHS
 	}
 
 	public record ForwardExperimentRequest(
@@ -70,6 +94,46 @@ public final class ForwardValidationContract {
 			int signalCount,
 			Instant sealedAt,
 			String inputHash) {
+	}
+
+	public record ProspectiveEnrollmentRequest(
+			String decisionSnapshotEventHash,
+			List<UUID> marketIntelligenceScreeningRunIds,
+			UUID experimentId) {
+	}
+
+	public record ProspectiveMaturitySchedule(
+			ProspectiveHorizon horizon,
+			int tradingDays,
+			Instant maturesOn,
+			ProspectiveMaturityStatus status) {
+	}
+
+	public record ProspectiveSecurityDecision(
+			UUID profileId,
+			UUID securityId,
+			String symbol,
+			ProspectiveDecisionState state,
+			List<String> exclusionReasons,
+			String longHorizonContextHash) {
+	}
+
+	public record ProspectiveEnrollmentAccepted(
+			UUID attemptId,
+			String attemptHash,
+			String decisionSnapshotEventHash,
+			ProspectiveEnrollmentStatus status,
+			UUID dataSnapshotId,
+			Instant decisionAsOf,
+			int profileCount,
+			int eligibleCount,
+			int excludedCount,
+			int signalCount,
+			UUID forwardEnrollmentId,
+			List<ProspectiveMaturitySchedule> maturitySchedule,
+			List<ProspectiveSecurityDecision> decisions,
+			List<String> blockedReasons,
+			boolean longHorizonIsContextOnly) {
 	}
 
 	public record ResultRows(

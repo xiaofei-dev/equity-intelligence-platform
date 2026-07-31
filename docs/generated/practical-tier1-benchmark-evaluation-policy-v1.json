@@ -1,0 +1,73 @@
+{
+  "acceptanceSemantics": {
+    "directionallyUseful": "Positive benchmark-relative and rank evidence across more than one date, with disclosed risk, costs, coverage, and stability.",
+    "notRequired": [
+      "perfect accuracy",
+      "profit on every date",
+      "positive return in a falling market"
+    ],
+    "prohibited": [
+      "retrospective score tuning",
+      "inventing a Long Horizon composite from separate dimensions",
+      "missing-value substitution",
+      "calling current-universe non-PIT evidence a strict historical holdout",
+      "AI-generated deterministic ranks",
+      "automatic trading"
+    ]
+  },
+  "artifactContentHash": "sha256:c382ed31cba13e14cbc3d8fed0c8bf21a48ee69a2aef951a19fe2955a40fbae8",
+  "claimBoundary": "A favorable Tier-1 result supports continued prospective testing; it does not prove future excess return.",
+  "defaultMinimumAssessedSecurityCountPerSlice": 20,
+  "defaultTargetSecurityCountPerSlice": 100,
+  "mandatoryBenchmark": "SPY",
+  "metrics": [
+    "forward_return",
+    "benchmark_excess_return",
+    "top_minus_bottom_spread",
+    "spearman_rank_information_coefficient",
+    "hit_rate",
+    "maximum_drawdown",
+    "maximum_adverse_excursion",
+    "maximum_favorable_excursion",
+    "annualized_realized_volatility",
+    "annualized_information_ratio",
+    "turnover",
+    "simple_turnover_cost",
+    "coverage",
+    "abstention",
+    "date_sector_size_regime_stability",
+    "dependency_block_bootstrap_interval"
+  ],
+  "optionalBenchmarks": [
+    "SAME-DATE ELIGIBLE UNIVERSE EQUAL WEIGHT",
+    "PER-SECURITY DATED SECTOR BENCHMARK"
+  ],
+  "portfolioViews": [
+    "TOP",
+    "BOTTOM",
+    "ELIGIBLE_EQUAL_WEIGHT"
+  ],
+  "purpose": "Evaluate whether frozen model decisions add practical ranking, return, or downside information relative to explicit benchmarks.",
+  "schemaVersion": "PRACTICAL-TIER1-BENCHMARK-EVALUATION-v1.0.0",
+  "statisticsPolicyVersion": "PRACTICAL-BENCHMARK-STATISTICS-v1.0.0",
+  "supportedModels": [
+    {
+      "frozenVersion": "TACTICAL-SIGNAL-v2.2.0",
+      "modelId": "TACTICAL",
+      "preregisteredDimensions": [
+        "TACTICAL_RANKING"
+      ]
+    },
+    {
+      "aggregateComposite": "PROHIBITED_UNLESS_SEPARATELY_FROZEN",
+      "frozenVersion": "LONG-HORIZON-v1.1.0",
+      "modelId": "LONG_HORIZON",
+      "preregisteredDimensions": [
+        "COMPANY_QUALITY",
+        "SECURITY_ATTRACTIVENESS",
+        "EXPECTED_RETURN",
+        "DOWNSIDE_RISK"
+      ]
+    }
+  ]
+}

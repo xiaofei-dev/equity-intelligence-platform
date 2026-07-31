@@ -49,6 +49,25 @@ BEGIN
         ,('market_intelligence_screening_run')
         ,('market_intelligence_screening_result')
         ,('market_intelligence_ai_narrative')
+        ,('forward_dqv_enrollment_v2')
+        ,('forward_dqv_maturity_schedule_v2')
+        ,('forward_dqv_outcome_batch_v2')
+        ,('forward_dqv_security_outcome_v2')
+        ,('forward_dqv_benchmark_outcome_v2')
+        ,('forward_dqv_path_metric_v2')
+        ,('forward_dqv_quality_report_v2')
+        ,('forward_dqv_benchmark_ledger_v3')
+        ,('forward_dqv_benchmark_family_v3')
+        ,('forward_dqv_benchmark_variant_v3')
+        ,('forward_dqv_benchmark_holding_v3')
+        ,('forward_dqv_security_benchmark_binding_v3')
+        ,('forward_dqv_outcome_ledger_binding_v3')
+        ,('forward_dqv_benchmark_holding_outcome_v3')
+        ,('forward_dqv_benchmark_variant_outcome_v3')
+        ,('forward_dqv_benchmark_family_outcome_v3')
+        ,('forward_dqv_human_decision_record_v3')
+        ,('forward_dqv_human_evidence_citation_v3')
+        ,('forward_dqv_portfolio_suitability_boundary_v3')
     ) expected(table_name)
     WHERE to_regclass('analytics.' || expected.table_name) IS NULL;
 
@@ -122,6 +141,103 @@ BEGIN
 
     IF has_schema_privilege('analytics_writer', 'app', 'USAGE') THEN
         RAISE EXCEPTION 'analytics_writer must not have app schema usage';
+    END IF;
+END;
+$$;
+
+DO $$
+DECLARE
+    forward_dqv_v20_trigger_count INTEGER;
+BEGIN
+    SELECT COUNT(*) INTO forward_dqv_v20_trigger_count
+    FROM pg_trigger
+    WHERE NOT tgisinternal
+      AND tgname IN (
+          'tr_forward_dqv_benchmark_ledger_v3_correction',
+          'tr_forward_dqv_benchmark_ledger_v3_complete',
+          'tr_forward_dqv_benchmark_outcome_v3_complete',
+          'tr_forward_dqv_benchmark_ledger_v3_append_only',
+          'tr_forward_dqv_benchmark_family_v3_append_only',
+          'tr_forward_dqv_benchmark_variant_v3_append_only',
+          'tr_forward_dqv_benchmark_holding_v3_append_only',
+          'tr_forward_dqv_security_benchmark_binding_v3_append_only',
+          'tr_forward_dqv_outcome_ledger_binding_v3_append_only',
+          'tr_forward_dqv_benchmark_holding_outcome_v3_append_only',
+          'tr_forward_dqv_benchmark_variant_outcome_v3_append_only',
+          'tr_forward_dqv_benchmark_family_outcome_v3_append_only',
+          'tr_forward_dqv_human_decision_v3_complete',
+          'tr_forward_dqv_portfolio_boundary_v3_correction',
+          'tr_forward_dqv_human_decision_v3_append_only',
+          'tr_forward_dqv_human_evidence_v3_append_only',
+          'tr_forward_dqv_portfolio_boundary_v3_append_only'
+      );
+    IF forward_dqv_v20_trigger_count <> 17 THEN
+        RAISE EXCEPTION
+            'Forward DQV V20 append-only and completeness triggers are incomplete';
+    END IF;
+END;
+$$;
+
+DO $$
+DECLARE
+    forward_dqv_trigger_count INTEGER;
+BEGIN
+    SELECT COUNT(*) INTO forward_dqv_trigger_count
+    FROM pg_trigger
+    WHERE NOT tgisinternal
+      AND tgname IN (
+          'tr_forward_dqv_enrollment_append_only',
+          'tr_forward_dqv_maturity_append_only',
+          'tr_forward_dqv_batch_append_only',
+          'tr_forward_dqv_security_outcome_append_only',
+          'tr_forward_dqv_benchmark_outcome_append_only',
+          'tr_forward_dqv_path_metric_append_only',
+          'tr_forward_dqv_quality_report_append_only',
+          'tr_forward_dqv_enrollment_complete',
+          'tr_forward_dqv_batch_complete',
+          'tr_forward_dqv_batch_correction',
+          'tr_forward_dqv_report_correction'
+      );
+
+    IF forward_dqv_trigger_count <> 11 THEN
+        RAISE EXCEPTION 'Forward DQV v2 append-only and completeness triggers are incomplete';
+    END IF;
+
+    IF EXISTS (
+        SELECT 1
+        FROM information_schema.tables
+        WHERE table_schema = 'app'
+          AND table_name LIKE 'forward_dqv_%'
+    ) THEN
+        RAISE EXCEPTION 'Forward DQV v2 tables leaked into app schema';
+    END IF;
+END;
+$$;
+
+DO $$
+DECLARE
+    contract_definition TEXT;
+    chronology_definition TEXT;
+BEGIN
+    SELECT pg_get_constraintdef(oid) INTO contract_definition
+    FROM pg_constraint
+    WHERE conrelid = 'analytics.forward_dqv_enrollment_v2'::regclass
+      AND conname = 'ck_forward_dqv_enrollment_contract';
+
+    SELECT pg_get_constraintdef(oid) INTO chronology_definition
+    FROM pg_constraint
+    WHERE conrelid = 'analytics.forward_dqv_enrollment_v2'::regclass
+      AND conname = 'ck_forward_dqv_enrollment_chronology';
+
+    IF contract_definition NOT LIKE '%FORWARD-DQV-ENROLLMENT-v2.1.1%' THEN
+        RAISE EXCEPTION
+            'Forward DQV enrollment does not enforce the v2.1.1 contract';
+    END IF;
+    IF chronology_definition NOT LIKE '%decision_as_of <= sealed_at%'
+       OR chronology_definition
+            NOT LIKE '%sealed_at <= effective_at_completed_session_open%' THEN
+        RAISE EXCEPTION
+            'Forward DQV enrollment chronology permits post-entry sealing';
     END IF;
 END;
 $$;

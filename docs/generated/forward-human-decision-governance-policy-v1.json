@@ -1,0 +1,57 @@
+{
+  "artifactContentHash": "sha256:0ad6b3d6c48eb712e19b304b50685742e86bd50e329c23780984ce53cdd0c8e4",
+  "artifactType": "FORWARD_DQV_HUMAN_DECISION_GOVERNANCE_POLICY",
+  "executionBoundary": {
+    "automaticTradingAuthorized": false,
+    "databaseWrites": 0,
+    "providerNetworkRequests": 0,
+    "scoresOrRanksComputed": false
+  },
+  "formalPersistence": {
+    "requiredSuccessorCapabilities": [
+      "APPEND_ONLY_HUMAN_DECISION_RECORD_LEDGER",
+      "HUMAN_DECISION_PREDECESSOR_AND_SUPERSESSION_CONSTRAINTS",
+      "DECISION_OUTPUT_AND_ENROLLMENT_HASH_BINDINGS",
+      "SEPARATE_USER_OWNED_PORTFOLIO_WORKFLOW_BINDING"
+    ],
+    "state": "BLOCKED_SUCCESSOR_SCHEMA_REQUIRED",
+    "v18V19ContainHumanDecisionLedger": false,
+    "v18V19ContainPortfolioSuitabilityBoundary": false
+  },
+  "humanDecision": {
+    "actorIdentityRequired": true,
+    "appendOnlyHashChainRequired": true,
+    "citedEvidenceRequired": true,
+    "confidenceRequired": true,
+    "mayMutateModelEvidenceLabel": false,
+    "mayMutateScoreOrRank": false,
+    "mustFollowImmutableModelOutput": true,
+    "predecessorHashRequiredAfterRoot": true,
+    "rationaleRequired": true,
+    "recordContract": "FORWARD-DQV-HUMAN-DECISION-RECORD-v1.0.0",
+    "researchDispositionRequired": true,
+    "supersessionHashRequiredForCorrection": true,
+    "testIdentityRequired": true,
+    "timestampRequired": true
+  },
+  "portfolioSuitability": {
+    "automaticExecutionAuthorized": false,
+    "contract": "FORWARD-DQV-PORTFOLIO-SUITABILITY-BOUNDARY-v1.0.0",
+    "defaultModelState": "NOT_ASSESSED_BY_MODEL",
+    "separateUserOwnedWorkflowMayBeHashBound": true,
+    "tradeDecisionIncluded": false,
+    "weightsIncluded": false
+  },
+  "prospectiveBinding": {
+    "bindsDecisionControlledCompositeHash": true,
+    "bindsDecisionManifestHash": true,
+    "bindsDeterministicOutputSetHash": true,
+    "humanDecisionIncludedInEnrollmentHash": false,
+    "humanDecisionIncludedInModelOutput": false,
+    "humanDecisionMustBeNoLaterThanEntryOpenWhenEnrolled": true,
+    "mayBindVerifiedEnrollmentV211": true,
+    "sidecarContract": "FORWARD-DQV-PROSPECTIVE-GOVERNANCE-SIDECAR-v1.0.0"
+  },
+  "schemaVersion": "FORWARD-DQV-HUMAN-DECISION-GOVERNANCE-POLICY-v1.0.0",
+  "status": "CONTRACT_READY_PERSISTENCE_BLOCKED"
+}

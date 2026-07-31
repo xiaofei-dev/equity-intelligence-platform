@@ -1,0 +1,188 @@
+{
+  "contractVersion": "dual-system-architecture-v1.0.0",
+  "versionSet": {
+    "evidenceSchemaVersion": "evidence-lineage-v1.0.0",
+    "calendarVersion": "XNYS-2026-v1",
+    "taxonomyVersion": "GICS-2025",
+    "normalizationVersion": "canonical-equity-v1.0.0",
+    "benchmarkPolicyVersion": "dual-sleeve-benchmarks-v1.0.0",
+    "riskPolicyVersion": "dual-sleeve-risk-v1.0.0",
+    "costPolicyVersion": "daily-long-only-cost-v1.0.0"
+  },
+  "decisionTiming": {
+    "decisionCutoff": "2026-07-29T20:05:00Z",
+    "sealedIngestionCutoff": "2026-07-29T20:07:00Z"
+  },
+  "security": {
+    "securityId": "11111111-1111-4111-8111-111111111111",
+    "companyId": "22222222-2222-4222-8222-222222222222",
+    "instrumentId": "33333333-3333-4333-8333-333333333333",
+    "shareClassId": "44444444-4444-4444-8444-444444444444",
+    "listingId": "55555555-5555-4555-8555-555555555555",
+    "tickerAssignmentId": "66666666-6666-4666-8666-666666666666",
+    "ticker": "EXM",
+    "mic": "XNYS",
+    "currency": "USD"
+  },
+  "evidence": {
+    "strictnessClass": "DOMAIN_TOLERANT_NUMERIC",
+    "claimClass": "CURRENT_ONLY",
+    "state": "VALID",
+    "reasonCode": "ALIGNED_WITHIN_FIELD_TOLERANCE",
+    "providerCode": "canonical-provider-audit-only",
+    "providerSchemaVersion": "provider-schema-v3",
+    "adapterVersion": "provider-neutral-adapter-v1.2.0",
+    "normalizationVersion": "canonical-equity-v1.0.0",
+    "sourceRecordId": "77777777-7777-4777-8777-777777777777",
+    "sourceRevision": 2,
+    "sourceContentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "normalizedRecordHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "effectiveAt": "2026-07-29T20:00:00Z",
+    "availableAt": "2026-07-29T20:05:00Z",
+    "retrievedAt": "2026-07-29T20:06:00Z",
+    "ingestedAt": "2026-07-29T20:07:00Z",
+    "freshnessPolicyVersion": "fundamentals-quarterly-v1.0.0",
+    "staleAfter": "2026-11-15T00:00:00Z",
+    "fieldTolerancePolicy": {
+      "policyVersion": "financial-ratios-v1.0.0",
+      "fieldCode": "OPERATING_MARGIN",
+      "absoluteTolerance": "0.0001",
+      "relativeTolerance": "0.0010",
+      "symmetric": true,
+      "alignmentSatisfied": true
+    },
+    "conflict": {
+      "status": "RESOLVED_WITHIN_TOLERANCE",
+      "criticality": "NONCRITICAL",
+      "affectedFactors": []
+    }
+  },
+  "completedSession": {
+    "calendarId": "XNYS",
+    "calendarVersion": "XNYS-2026-v1",
+    "mic": "XNYS",
+    "sessionDate": "2026-07-29",
+    "timezone": "America/New_York",
+    "scheduledOpen": "2026-07-29T13:30:00Z",
+    "scheduledClose": "2026-07-29T20:00:00Z",
+    "earlyClose": false,
+    "status": "COMPLETED",
+    "completedAt": "2026-07-29T20:00:01Z"
+  },
+  "fundamentalValueOutput": {
+    "outputId": "88888888-8888-4888-8888-888888888888",
+    "decisionContractVersion": "fundamental-value-decision-v1.0.0",
+    "modelId": "FUNDAMENTAL_VALUE",
+    "modelVersion": "FUNDAMENTAL-VALUE-v1.0.0",
+    "strategyVersion": "LONG-TERM-CORE-v1.0.0",
+    "sleeve": "LONG_TERM_CORE",
+    "state": "VALID",
+    "applicability": "APPLICABLE",
+    "fairValue": {
+      "central": "125.00",
+      "rangeLow": "110.00",
+      "rangeHigh": "140.00",
+      "currency": "USD",
+      "methodVersion": "fair-value-range-v1.0.0"
+    },
+    "referencePrice": "100.00",
+    "marginOfSafety": "0.2000",
+    "maximumAllocationCap": "0.0800",
+    "automaticFinalWeight": null,
+    "benchmarkCodes": ["SPY", "DATED_SECTOR_BENCHMARK"],
+    "deterministicScore": "72.50",
+    "evidenceHash": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+  },
+  "quantTradePlanOutput": {
+    "outputId": "99999999-9999-4999-8999-999999999999",
+    "decisionContractVersion": "quant-trade-plan-v1.0.0",
+    "modelId": "QUANT_TRADING",
+    "modelVersion": "QUANT-TRADING-v1.0.0",
+    "strategyVersion": "DAILY-LONG-ONLY-v1.0.0",
+    "sleeve": "QUANT_TRADING",
+    "state": "VALID",
+    "market": "US_EQUITIES",
+    "cadence": "DAILY",
+    "direction": "LONG_ONLY",
+    "leverageAllowed": false,
+    "shortingAllowed": false,
+    "optionsAllowed": false,
+    "setup": "MOMENTUM_CONTINUATION",
+    "entryRule": "NEXT_COMPLETED_SESSION_BREAKOUT",
+    "entryRangeLow": "101.00",
+    "entryRangeHigh": "102.00",
+    "stop": "97.00",
+    "targets": ["108.00", "112.00"],
+    "expiresAfterCompletedSessions": 1,
+    "maximumPositionRisk": "0.0050",
+    "liquidityAssumptions": {
+      "version": "daily-liquidity-v1.0.0",
+      "state": "VALID",
+      "averageDailyDollarVolume": "25000000.00",
+      "maximumParticipationRate": "0.0500"
+    },
+    "costAssumptions": {
+      "version": "daily-long-only-cost-v1.0.0",
+      "state": "VALID",
+      "transactionCostBps": "2.00",
+      "slippageBps": "5.00"
+    },
+    "brokerageExecutionAllowed": false,
+    "benchmarkCodes": ["SPY", "DATED_SECTOR_BENCHMARK", "CASH"],
+    "deterministicScore": "64.00",
+    "evidenceHash": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+  },
+  "portfolioRiskView": {
+    "contractVersion": "unified-portfolio-risk-view-v1.0.0",
+    "scoreAggregationPolicy": "PROHIBITED_ACROSS_ENGINES",
+    "sameSecurityAcrossSleevesAllowed": true,
+    "automaticCashTransfersAllowed": false,
+    "cashTransferAuthority": "EXPLICIT_HUMAN_DECISION_ONLY",
+    "sleeves": [
+      {
+        "sleeve": "LONG_TERM_CORE",
+        "engineOutputId": "88888888-8888-4888-8888-888888888888",
+        "benchmarkCodes": ["SPY", "DATED_SECTOR_BENCHMARK"],
+        "cash": "5000.00",
+        "costBasis": "10000.00"
+      },
+      {
+        "sleeve": "QUANT_TRADING",
+        "engineOutputId": "99999999-9999-4999-8999-999999999999",
+        "benchmarkCodes": ["SPY", "DATED_SECTOR_BENCHMARK", "CASH"],
+        "cash": "2000.00",
+        "costBasis": "3000.00"
+      }
+    ]
+  },
+  "aiNarrative": {
+    "status": "NOT_EXECUTED",
+    "narrative": null,
+    "sourceReferences": [],
+    "promptVersion": null,
+    "modelVersion": null,
+    "mayAffectDeterministicFields": false,
+    "maySetWeightsOrTrades": false
+  },
+  "humanControl": {
+    "decisionRequiredForFinalAllocation": true,
+    "decisionRequiredForCashTransfer": true,
+    "automaticBrokerageExecutionAllowed": false,
+    "decisionRecordsAreImmutable": true,
+    "correctionsUseSupersession": true
+  },
+  "compatibility": {
+    "legacyBuyingOpportunityMeaning": "LONG_TERM_VALUATION_EVIDENCE",
+    "successorMetric": "VALUATION_OPPORTUNITY",
+    "legacyPublicMarketDataApiStatus": "COMPATIBILITY_SURFACE"
+  },
+  "validationGovernance": {
+    "internalApproximateHistoricalRepresentation": [
+      "APPROXIMATE_HISTORICAL_RESEARCH",
+      "APPROXIMATE_HISTORICAL"
+    ],
+    "userFacingConcept": "APPROXIMATE_HISTORICAL_BACKTEST",
+    "modelEvidenceLabel": "DEVELOPMENT_OBSERVED",
+    "mayUpgradeModelEvidenceLabel": false
+  }
+}

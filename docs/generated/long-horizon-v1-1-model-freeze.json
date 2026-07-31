@@ -1,0 +1,228 @@
+{
+  "artifactType": "MODEL_FREEZE",
+  "schemaVersion": "MODEL-FREEZE-ARTIFACT-v1.0.0",
+  "generatorVersion": "MODEL-FREEZE-GENERATOR-v1.0.0",
+  "modelTrack": "LONG_HORIZON",
+  "modelVersion": "LONG-HORIZON-RESEARCH-v1.1.0",
+  "freezeRecord": {
+    "model_version": "LONG-HORIZON-RESEARCH-v1.1.0",
+    "validation_protocol_version": "HISTORICAL-VALIDATION-PROTOCOL-v2.0.0",
+    "frozen_at": "2026-07-30T00:45:00+00:00",
+    "observed_evidence_cutoff": "2026-07-29T23:59:59+00:00",
+    "formulas_hash": "2254FFA989FAC460768B703CDC6FD26102177E832A6600142B699BC300B20980",
+    "weights_hash": "282EB5AD773EDD3AC5D2ADB5F9EA4A6485607A3A0ACF0823AC9EB0163DC3AFA7",
+    "input_schema_hash": "9A9D20AC1C9FE71877AF472877E76902291D6F30C0242102DA318649BD29BAAA",
+    "applicability_hash": "6B6FD2AB364B7E5904908ACD884A01463D4598E7F6F54B51B56BAF1034D2F841",
+    "missing_data_policy_hash": "3CD731350ACBE9D72F37CF772EE1B666B3DD1098E70CDFF7CCC9F251AF8B10C2",
+    "benchmark_contract_hash": "F217F27E424BD75422F2402153FDB4498DB28AB2CD4A8AACA426382A11B23438",
+    "cost_model_hash": "B07F5C5AD4B2F13D0C81A48B2EAB4E722DA9B0E43143E013BEDCC155FABA96BB",
+    "universe_hash": "2B4AA32F7FC4F8360B6E45B025D35A5046B9416BEB47873870084993D069F1C6",
+    "sampling_hash": "98ACAC68EC91B0F1B22E767E7B6A19D699EAD0E46D7B52F7303A76A4E6C6E42F",
+    "acceptance_threshold_hash": "2457146CE628B2F8238EDA0DDB99873D0073DF7BC2A5C5D83D21BA3E9D3E486F",
+    "source_artifact_hashes": [
+      "2C4D7786710D0740CEC7F578F05D2F9754C6A57DD4B976BB2DFEF96EC919F137",
+      "19D206AB5BB36CE1413D7B08ECD42D9508C600C22D43D55CA261D73C3D69FE92",
+      "03E26D230D5C37C5FC233FDA4439C8F42A0FE1E364E4DB62BCB83EF57BAE5D92",
+      "A6B5030437258E2E64DFEAD2892ACEC7A57BA68E16F875611206D1C2F0CDBCC0",
+      "45D4DBDD0E7A643658B160AE5B044C15A4A07113DC33382A3DE87DDFF3D72F0F",
+      "4B1F2B65EB17190C54DE9BF784777BAE14575D78A7DADE90B17AB1F5639E9A72",
+      "EF6829121B6B3E491DC9089A4968D85113EDE71A8AD78381D3F7A1742431C83A",
+      "C942DBBE201C08F19323113E8813C70A9CAB7715D5C798849C504B4FA98AF310",
+      "E322AC57C00BB4018AC883A2F0EF3461299D7D97725B0791C75EA01846D08E27",
+      "B88253CF9F04FF33C25EFD2DE79BE6A516AF03DC3A44271A26B1236E7941F058"
+    ],
+    "random_seed": 20260729,
+    "maximum_horizon_sessions": 252,
+    "purge_sessions": 252,
+    "embargo_sessions": 252,
+    "version": "MODEL-VALIDATION-GOVERNANCE-v1.0.0"
+  },
+  "freezeHash": "8F8E7FB671A8C35E771FDAD6B9E3ED5D90950135ACC9297BBFF571F27780E6C3",
+  "contracts": {
+    "applicability": {
+      "decisionDomain": "LONG_HORIZON_RESEARCH",
+      "minimumHorizon": "12_MONTHS",
+      "supportedCompanyModel": "GENERAL",
+      "specializedModels": [
+        "BANK",
+        "INSURANCE",
+        "REIT",
+        "RESOURCE",
+        "BIOTECH"
+      ],
+      "recentIpoOutcome": "INSUFFICIENT_PUBLIC_HISTORY",
+      "defaultRankingAuthorized": false,
+      "automaticTradingAuthorized": false
+    },
+    "missingDataPolicy": {
+      "states": [
+        "VALID",
+        "MISSING",
+        "INVALID",
+        "NOT_APPLICABLE"
+      ],
+      "neutralSubstitutionAllowed": false,
+      "completeDimensionEvidenceRequired": true,
+      "insufficientCohortOutcome": "COHORT_INSUFFICIENT",
+      "minimumPeerCohort": 20,
+      "specializedCompanyOutcome": "SPECIALIZED_MODEL_REQUIRED"
+    },
+    "benchmark": {
+      "version": "FORMAL-BENCHMARK-CONTRACT-v1.0.0",
+      "required": [
+        "SPY",
+        "SECTOR",
+        "EQUAL_WEIGHT",
+        "PURE_MOMENTUM",
+        "PURE_VALUE",
+        "PURE_QUALITY"
+      ],
+      "datedEvidenceHashRequired": true,
+      "sameExecutionAndCostPolicyRequired": true,
+      "formalGateStopsOnUnavailableBenchmark": true
+    },
+    "cost": {
+      "version": "LIQUIDITY-SENSITIVE-COST-v1.0.0",
+      "fixedRoundTripBps": "2",
+      "baseSlippageOneWayBps": "1",
+      "impactBpsAtFullParticipation": "25",
+      "maximumImpactOneWayBps": "50",
+      "averageDailyDollarVolumeRequired": true,
+      "costsAppliedBeforeAcceptance": true
+    },
+    "universe": {
+      "version": "COMPLETE-FROZEN-POPULATION-v1.0.0",
+      "identity": "STABLE_PUBLIC_SECURITY_ID",
+      "completePopulationRequiredAtEveryDecision": true,
+      "historicalMembershipRequiredForHistoricalValidation": true,
+      "prospectiveFrozenUniverseAllowed": true,
+      "currentUniverseRetrospectiveRole": "DEVELOPMENT_OBSERVED",
+      "terminalStatesRequired": [
+        "ASSESSED",
+        "MISSING",
+        "INVALID",
+        "STALE",
+        "NOT_APPLICABLE",
+        "SPECIALIZED_MODEL_REQUIRED",
+        "EXCLUDED"
+      ],
+      "survivorshipSubstitutionAllowed": false
+    },
+    "sampling": {
+      "version": "PURGED-NESTED-WALK-FORWARD-v1.0.0",
+      "roles": [
+        "DEVELOPMENT_OBSERVED",
+        "SEALED_VALIDATION",
+        "WALK_FORWARD_OUTER_FOLD",
+        "PROSPECTIVE_FORWARD"
+      ],
+      "chronologicalOuterFolds": true,
+      "nestedDevelopmentSelection": true,
+      "ordinaryIidBootstrapFormalGateAllowed": false,
+      "formalResampling": "BLOCK_BOOTSTRAP",
+      "overlappingOutcomesRole": "OVERLAPPING_DIAGNOSTIC",
+      "randomSeed": 20260729,
+      "maximumHorizonSessions": 252,
+      "purgeSessions": 252,
+      "embargoSessions": 252
+    },
+    "acceptance": {
+      "target": "SEPARATE_LONG_HORIZON_DECISION_TARGETS",
+      "defaultRankingAuthorized": false,
+      "minimumCoverageRatio": "0.80",
+      "minimumEligibleDecisionsPerTarget": 100,
+      "targets": {
+        "BUSINESS_QUALITY": [
+          "FUTURE_FUNDAMENTAL_DURABILITY",
+          "IMPAIRMENT_RATE"
+        ],
+        "SECURITY_ATTRACTIVENESS": [
+          "BENCHMARK_RELATIVE_RETURN",
+          "TOP_MINUS_BOTTOM"
+        ],
+        "DOWNSIDE_RISK": [
+          "MAXIMUM_DRAWDOWN",
+          "DOWNSIDE_CAPTURE"
+        ]
+      },
+      "singleAggregateValidationClaimAllowed": false,
+      "requiredPositiveLowerConfidenceBounds": [
+        "TARGET_DISCRIMINATION",
+        "TARGET_VERSUS_BENCHMARK"
+      ],
+      "maximumDownsideCapture": "1.00"
+    }
+  },
+  "sourceFiles": [
+    {
+      "path": "analysis-python/src/equity_analysis/research_rating/long_horizon_v11.py",
+      "fileSha256": "2C4D7786710D0740CEC7F578F05D2F9754C6A57DD4B976BB2DFEF96EC919F137"
+    },
+    {
+      "path": "docs/long-horizon-research-rating-v1-1.md",
+      "fileSha256": "19D206AB5BB36CE1413D7B08ECD42D9508C600C22D43D55CA261D73C3D69FE92"
+    },
+    {
+      "path": "analysis-python/src/equity_analysis/historical_validation/governance_v1.py",
+      "fileSha256": "03E26D230D5C37C5FC233FDA4439C8F42A0FE1E364E4DB62BCB83EF57BAE5D92"
+    },
+    {
+      "path": "analysis-python/src/equity_analysis/historical_validation/protocol_v2.py",
+      "fileSha256": "A6B5030437258E2E64DFEAD2892ACEC7A57BA68E16F875611206D1C2F0CDBCC0"
+    },
+    {
+      "path": "analysis-python/src/equity_analysis/historical_validation/walk_forward_v2.py",
+      "fileSha256": "45D4DBDD0E7A643658B160AE5B044C15A4A07113DC33382A3DE87DDFF3D72F0F"
+    },
+    {
+      "path": "docs/model-validation-governance-v1.md",
+      "fileSha256": "4B1F2B65EB17190C54DE9BF784777BAE14575D78A7DADE90B17AB1F5639E9A72"
+    },
+    {
+      "path": "docs/historical-walk-forward-validation-v2.md",
+      "fileSha256": "EF6829121B6B3E491DC9089A4968D85113EDE71A8AD78381D3F7A1742431C83A"
+    },
+    {
+      "path": "docs/generated/model-validation-governance-v1.json",
+      "fileSha256": "C942DBBE201C08F19323113E8813C70A9CAB7715D5C798849C504B4FA98AF310"
+    },
+    {
+      "path": "docs/generated/historical-yahoo-price-cache-20260729T-HISTORICAL-V1-R2-manifest.json",
+      "fileSha256": "E322AC57C00BB4018AC883A2F0EF3461299D7D97725B0791C75EA01846D08E27"
+    },
+    {
+      "path": "docs/generated/long-horizon-historical-stratified-validation-v1-4-2026-07-29.json",
+      "fileSha256": "B88253CF9F04FF33C25EFD2DE79BE6A516AF03DC3A44271A26B1236E7941F058"
+    }
+  ],
+  "freezeChronology": {
+    "observedEvidenceCutoff": "2026-07-29T23:59:59+00:00",
+    "sourceFinalizationObservedAt": "2026-07-30T00:40:54.609680+00:00",
+    "frozenAt": "2026-07-30T00:45:00+00:00",
+    "derivation": "The fixed UTC freeze time is the next five-minute boundary after the maximum bound-source mtime observed during initial generation.",
+    "generationChronologyChecked": true,
+    "stableVerificationUsesContentHashesNotCheckoutMtime": true
+  },
+  "observedHistoricalEvidence": {
+    "evaluationRole": "DEVELOPMENT_OBSERVED",
+    "observedEvidenceCutoff": "2026-07-29T23:59:59+00:00",
+    "untouchedHoldoutAvailable": false,
+    "artifacts": [
+      {
+        "path": "docs/generated/long-horizon-historical-stratified-validation-v1-4-2026-07-29.json",
+        "role": "DEVELOPMENT_OBSERVED",
+        "modelVersion": "LONG-HORIZON-RESEARCH-v1.0.0",
+        "fileSha256": "B88253CF9F04FF33C25EFD2DE79BE6A516AF03DC3A44271A26B1236E7941F058",
+        "untouchedHoldout": false
+      }
+    ],
+    "claimBoundary": "Observed retrospective evidence is diagnostic development evidence and cannot become an untouched holdout."
+  },
+  "execution": {
+    "networkRequestsExecuted": false,
+    "historicalScoringExecuted": false,
+    "forwardValidationExecuted": false,
+    "databaseMigrationExecuted": false
+  },
+  "artifactContentHash": "233271457387A5D7212379AE2C77D69C743DC69F7345FE2D834FF7DC98D4FA59"
+}

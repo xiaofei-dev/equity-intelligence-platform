@@ -1,0 +1,617 @@
+{
+  "artifactType": "FUTURE_COMPLETED_SESSION_PRICE_EVIDENCE_PREFLIGHT",
+  "schemaVersion": "FUTURE-PRICE-EVIDENCE-PREFLIGHT-v1.0.0",
+  "evidenceContractVersion": "FUTURE-COMPLETED-SESSION-PRICE-EVIDENCE-v1.0.0",
+  "runId": "FUTURE-PRICE-EVIDENCE-v1-PREFLIGHT",
+  "planHash": "sha256:2a1666fd7ed313072ce5c93a227628d68ae07fa5442c745502db6464481487af",
+  "status": "BLOCKED_AWAITING_COMPLETED_SESSION_DUAL_REVIEW_AND_LIVE_APPROVAL",
+  "targetSession": "2026-07-30",
+  "preregistrationCutoff": "2026-07-30T03:12:23.237053+00:00",
+  "preregistrationSealHash": "sha256:8f6c3232f9ca5f2ace25f770c447c1d3bae2b17205151dc93fcc9b30cf15e889",
+  "universeVersion": "market-intelligence-closed-test-us-v1.0.0",
+  "universeFileSha256": "C977E932EDD5184AABBDE53ACCFF6F480650F96C03C878A9EC7FBE15D2920078",
+  "symbolCount": 57,
+  "symbols": [
+    "AAPL",
+    "MSFT",
+    "META",
+    "WMT",
+    "MCD",
+    "CAT",
+    "ADP",
+    "NKE",
+    "TGT",
+    "PLAB",
+    "NVDA",
+    "AVGO",
+    "ORCL",
+    "CSCO",
+    "ACN",
+    "IBM",
+    "GOOGL",
+    "NFLX",
+    "DIS",
+    "AMZN",
+    "HD",
+    "LOW",
+    "SBUX",
+    "COST",
+    "PG",
+    "KO",
+    "PEP",
+    "CL",
+    "JNJ",
+    "ABT",
+    "MDT",
+    "SYK",
+    "TMO",
+    "MCK",
+    "HON",
+    "UPS",
+    "UNP",
+    "DE",
+    "ETN",
+    "NEE",
+    "DUK",
+    "SO",
+    "LIN",
+    "SHW",
+    "ECL",
+    "APD",
+    "CROX",
+    "OLED",
+    "EXPO",
+    "CALM",
+    "UFPI",
+    "WDFC",
+    "FIX",
+    "SAIA",
+    "ELF",
+    "SPY",
+    "XLK"
+  ],
+  "endpointCounts": {
+    "OFFICIAL_NASDAQ_CALENDAR": 1,
+    "OFFICIAL_NYSE_CALENDAR": 1,
+    "YAHOO_CHART_JSON": 57
+  },
+  "expectedPhysicalHttpAttempts": 59,
+  "physicalHttpAttemptHardCeiling": 59,
+  "configuredWeightHardCeiling": 59,
+  "providerRetryLimit": 0,
+  "requests": [
+    {
+      "requestIdentity": "official-calendar-nyse",
+      "symbol": "_CALENDAR_NYSE",
+      "endpointCategory": "OFFICIAL_NYSE_CALENDAR",
+      "method": "GET",
+      "url": "https://www.nyse.com/markets/hours-calendars",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "official-calendar-nasdaq",
+      "symbol": "_CALENDAR_NASDAQ",
+      "endpointCategory": "OFFICIAL_NASDAQ_CALENDAR",
+      "method": "GET",
+      "url": "https://www.nasdaq.com/market-activity/stock-market-holiday-schedule",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-AAPL-2026-07-30",
+      "symbol": "AAPL",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/AAPL?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-MSFT-2026-07-30",
+      "symbol": "MSFT",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/MSFT?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-META-2026-07-30",
+      "symbol": "META",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/META?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-WMT-2026-07-30",
+      "symbol": "WMT",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/WMT?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-MCD-2026-07-30",
+      "symbol": "MCD",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/MCD?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-CAT-2026-07-30",
+      "symbol": "CAT",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/CAT?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-ADP-2026-07-30",
+      "symbol": "ADP",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/ADP?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-NKE-2026-07-30",
+      "symbol": "NKE",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/NKE?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-TGT-2026-07-30",
+      "symbol": "TGT",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/TGT?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-PLAB-2026-07-30",
+      "symbol": "PLAB",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/PLAB?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-NVDA-2026-07-30",
+      "symbol": "NVDA",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-AVGO-2026-07-30",
+      "symbol": "AVGO",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/AVGO?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-ORCL-2026-07-30",
+      "symbol": "ORCL",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/ORCL?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-CSCO-2026-07-30",
+      "symbol": "CSCO",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/CSCO?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-ACN-2026-07-30",
+      "symbol": "ACN",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/ACN?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-IBM-2026-07-30",
+      "symbol": "IBM",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/IBM?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-GOOGL-2026-07-30",
+      "symbol": "GOOGL",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/GOOGL?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-NFLX-2026-07-30",
+      "symbol": "NFLX",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/NFLX?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-DIS-2026-07-30",
+      "symbol": "DIS",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/DIS?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-AMZN-2026-07-30",
+      "symbol": "AMZN",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/AMZN?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-HD-2026-07-30",
+      "symbol": "HD",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/HD?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-LOW-2026-07-30",
+      "symbol": "LOW",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/LOW?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-SBUX-2026-07-30",
+      "symbol": "SBUX",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/SBUX?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-COST-2026-07-30",
+      "symbol": "COST",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/COST?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-PG-2026-07-30",
+      "symbol": "PG",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/PG?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-KO-2026-07-30",
+      "symbol": "KO",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/KO?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-PEP-2026-07-30",
+      "symbol": "PEP",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/PEP?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-CL-2026-07-30",
+      "symbol": "CL",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/CL?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-JNJ-2026-07-30",
+      "symbol": "JNJ",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/JNJ?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-ABT-2026-07-30",
+      "symbol": "ABT",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/ABT?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-MDT-2026-07-30",
+      "symbol": "MDT",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/MDT?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-SYK-2026-07-30",
+      "symbol": "SYK",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/SYK?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-TMO-2026-07-30",
+      "symbol": "TMO",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/TMO?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-MCK-2026-07-30",
+      "symbol": "MCK",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/MCK?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-HON-2026-07-30",
+      "symbol": "HON",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/HON?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-UPS-2026-07-30",
+      "symbol": "UPS",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/UPS?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-UNP-2026-07-30",
+      "symbol": "UNP",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/UNP?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-DE-2026-07-30",
+      "symbol": "DE",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/DE?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-ETN-2026-07-30",
+      "symbol": "ETN",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/ETN?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-NEE-2026-07-30",
+      "symbol": "NEE",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/NEE?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-DUK-2026-07-30",
+      "symbol": "DUK",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/DUK?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-SO-2026-07-30",
+      "symbol": "SO",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/SO?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-LIN-2026-07-30",
+      "symbol": "LIN",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/LIN?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-SHW-2026-07-30",
+      "symbol": "SHW",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/SHW?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-ECL-2026-07-30",
+      "symbol": "ECL",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/ECL?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-APD-2026-07-30",
+      "symbol": "APD",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/APD?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-CROX-2026-07-30",
+      "symbol": "CROX",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/CROX?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-OLED-2026-07-30",
+      "symbol": "OLED",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/OLED?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-EXPO-2026-07-30",
+      "symbol": "EXPO",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/EXPO?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-CALM-2026-07-30",
+      "symbol": "CALM",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/CALM?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-UFPI-2026-07-30",
+      "symbol": "UFPI",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/UFPI?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-WDFC-2026-07-30",
+      "symbol": "WDFC",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/WDFC?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-FIX-2026-07-30",
+      "symbol": "FIX",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/FIX?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-SAIA-2026-07-30",
+      "symbol": "SAIA",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/SAIA?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-ELF-2026-07-30",
+      "symbol": "ELF",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/ELF?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-SPY-2026-07-30",
+      "symbol": "SPY",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/SPY?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    },
+    {
+      "requestIdentity": "yahoo-chart-XLK-2026-07-30",
+      "symbol": "XLK",
+      "endpointCategory": "YAHOO_CHART_JSON",
+      "method": "GET",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLK?period1=1781582399&period2=1785470400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "configuredWeight": 1
+    }
+  ],
+  "networkExecutionDefault": false,
+  "networkExecutionAuthorized": false,
+  "liveConfirmationRequired": true,
+  "liveConfirmationTokenSha256": "735D134D574BCF6D45CFC35FFEC33E67BD63D5EB4498CC411B28EBAEFEAE7FCE",
+  "directYahooChartJsonRequired": true,
+  "yfinanceDataFrameAcceptedAsRawTransport": false,
+  "rawTransportRequirement": {
+    "bodyHashSemantics": "EXACT_HTTP_RESPONSE_BODY_BYTES",
+    "envelopeHashRequired": true,
+    "responseBodyCheckpointRequired": true,
+    "normalizedContentHashMayNotSubstitute": true
+  },
+  "completedSessionRequirement": {
+    "nyseOfficialBodyHashRequired": true,
+    "nasdaqOfficialBodyHashRequired": true,
+    "namedReviewerRequired": true,
+    "publishedEarlyCloseHandled": true,
+    "incompleteSessionStopsRun": true
+  },
+  "priceAndActionRequirement": {
+    "providerSchemaVersion": "yahoo-chart-v8-json",
+    "normalizationVersion": "YAHOO-CHART-DAILY-NORMALIZATION-v1.0.0",
+    "adjustmentMode": "TOTAL_RETURN_ADJUSTED",
+    "actionToAdjustedPriceBindingRequired": true,
+    "providerRevisionKeyRequired": true,
+    "sourceRevisionStatusRequired": true
+  },
+  "adtvRequirement": {
+    "metricName": "average_daily_dollar_volume",
+    "metricVersion": "ADTV-20-RAW-CLOSE-X-RAW-VOLUME-v1.0.0",
+    "completedSessionCount": 20,
+    "formula": "MEAN(RAW_CLOSE * RAW_VOLUME)",
+    "sameTargetSessionRequired": true,
+    "numericValueGitSafe": false
+  },
+  "executionSafety": {
+    "crossProcessExecutionLeaseRequired": true,
+    "physicalRequestJournalRequired": true,
+    "immutableResponseCheckpointRequired": true,
+    "idempotentReplayRequired": true,
+    "unknownRequestStateStopsRun": true,
+    "unknownRequestAutomaticRetryAllowed": false,
+    "databaseWritesAuthorized": false
+  },
+  "stopConditions": [
+    "TARGET_SESSION_NOT_COMPLETED",
+    "DUAL_AUTHORITY_CALENDAR_EVIDENCE_MISSING_OR_UNREVIEWED",
+    "UNIVERSE_OR_PREREGISTRATION_HASH_CHANGED",
+    "NETWORK_NOT_EXPLICITLY_AUTHORIZED",
+    "PHYSICAL_REQUEST_STATE_UNKNOWN",
+    "ATTEMPT_OR_WEIGHT_CEILING_EXCEEDED",
+    "HTTP_AUTH_LIMIT_FORMAT_OR_SEMANTIC_ANOMALY",
+    "RAW_TRANSPORT_BODY_OR_ENVELOPE_NOT_DURABLY_HASHED",
+    "ACTION_ADJUSTMENT_BINDING_INCOMPLETE",
+    "ADTV_20_COMPLETED_SESSIONS_MISSING"
+  ],
+  "providerNetworkRequestsExecuted": 0,
+  "databaseWritesExecuted": 0,
+  "scoresOrRanksComputed": false,
+  "rawProviderValuesIncluded": false,
+  "artifactContentHash": "sha256:e591f754a32cc1f1425cb5430978782096a12bba4d1dcc29e4eefc2ef12ad44e"
+}

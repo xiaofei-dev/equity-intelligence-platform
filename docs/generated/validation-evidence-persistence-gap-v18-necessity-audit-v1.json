@@ -1,0 +1,182 @@
+{
+  "artifactContentHash": "sha256:9d498f34acbbc4bf2c2c9c9ec15420c1e0efa5a43aa948349c08eace25f5d605",
+  "auditMode": "OFFLINE_READ_ONLY",
+  "auditVersion": "VALIDATION-EVIDENCE-PERSISTENCE-GAP-AUDIT-v1.0.0",
+  "dataSnapshotId": "beaa9952-9852-4088-9dc3-92047824414b",
+  "implementationBoundary": {
+    "analyticsSchemaChangeRequired": false,
+    "appSchemaChangeRequired": false,
+    "databaseOwnership": "analytics.* remains Python Analytics owned",
+    "databaseWrites": 0,
+    "migrationCreated": false,
+    "networkRequests": 0,
+    "scoringRuns": 0
+  },
+  "inputs": [
+    {
+      "artifactContentHash": "sha256:2ae15376ab81b01e9b925980822f61cb10e811c0e7509846bd8d1c3f334d828e",
+      "fileSha256": "sha256:9a7e1d61656279ea970a291533160e18e90ab285406b7d91331ed1b29743c52f",
+      "kind": "PRICE_PROMOTION_PREFLIGHT",
+      "path": "docs/generated/price-promotion-preflight-20260729-beaa9952.json",
+      "state": "BLOCKED"
+    },
+    {
+      "artifactContentHash": "sha256:4a54add24c36bb5c63821f5228bb392c354719f9a501e9d710d270412d26910b",
+      "diagnosticContentHash": "sha256:ac9dc20f676efea42dab2c9e2826f9e7f650edb4edb5814a7b49c9030713812e",
+      "fileSha256": "sha256:7eb1cbde4e5b0ad6972b4cb2a804f8eb90c854a42882bbdc19f0febcbf6174de",
+      "kind": "FORWARD_BENCHMARK_DB_READINESS",
+      "path": "docs/generated/forward-benchmark-db-readiness-v2-1-beaa9952.json",
+      "state": "BLOCKED"
+    }
+  ],
+  "requirements": [
+    {
+      "currentBlocker": "The official bodies have not been captured and reviewed; this is not a missing relational capability.",
+      "currentState": "MISSING_RUNTIME_EVIDENCE",
+      "disposition": "CODE_ONLY",
+      "existingStructures": [
+        "analytics.data_provider",
+        "analytics.ingestion_batch",
+        "analytics.source_record",
+        "analytics.analytics_audit_event"
+      ],
+      "losslessExpression": "Persist one source_record per hash-verified NYSE/Nasdaq official calendar body using source_uri, storage_reference, content_hash, available_at and ingested_at. Seal a versioned audit event that binds both source IDs/hashes, target session, each authority's session state, agreement state, reviewer, reviewedAt and evidence hash.",
+      "migrationRequired": false,
+      "requirement": "COMPLETED_SESSION_CALENDAR_EVIDENCE"
+    },
+    {
+      "currentBlocker": "Current yfinance rows retained normalized source hashes only. A separately typed code contract and durable body capture are absent.",
+      "currentState": "MISSING_RUNTIME_EVIDENCE",
+      "disposition": "CODE_ONLY",
+      "existingStructures": [
+        "analytics.source_record.source_uri",
+        "analytics.source_record.storage_reference",
+        "analytics.source_record.content_hash",
+        "analytics.analytics_audit_event.detail"
+      ],
+      "losslessExpression": "Create a separate raw-transport source_record whose content_hash is explicitly the raw body hash and whose storage_reference points to durable external storage. Bind it to the normalized source_record and request journal in a versioned immutable audit event. Never reinterpret an existing normalized content_hash as a raw hash.",
+      "migrationRequired": false,
+      "requirement": "RAW_TRANSPORT_BODY_HASH_AND_REFERENCE"
+    },
+    {
+      "currentBlocker": "The dual stored modes and action checkpoints reconcile structurally, but no action-to-adjustment evidence contract has been executed.",
+      "currentState": "MISSING_RUNTIME_EVIDENCE",
+      "disposition": "CODE_ONLY",
+      "existingStructures": [
+        "analytics.corporate_action",
+        "analytics.daily_price_observation",
+        "analytics.refresh_checkpoint",
+        "analytics.analytics_audit_event"
+      ],
+      "losslessExpression": "Seal a versioned reconciliation audit event containing the security, target session, action checkpoint/source manifest hash, selected action revision hash, both price-mode revision manifest hashes, adjustment policy/version, reconciliation state and evidence hash.",
+      "migrationRequired": false,
+      "requirement": "ACTION_TO_ADJUSTED_PRICE_BINDING"
+    },
+    {
+      "currentBlocker": "The policy exists in code but no runtime decisions or row bindings have been sealed.",
+      "currentState": "MISSING_RUNTIME_EVIDENCE",
+      "disposition": "CODE_ONLY",
+      "existingStructures": [
+        "analytics.daily_price_observation",
+        "analytics.source_record",
+        "analytics.analytics_audit_event"
+      ],
+      "losslessExpression": "Persist immutable validation and promotion decision audit events that bind security/date/mode, selected prior row IDs and revisions, source hashes, decision hash, promotion evidence hash, policy hash, reviewed cutoff and any new VALIDATED revision. Existing rows remain unchanged.",
+      "migrationRequired": false,
+      "requirement": "PRICE_VALIDATION_AND_PROMOTION_HASHES"
+    },
+    {
+      "currentBlocker": "The READY snapshot has no qualifying decision-session ADTV observations.",
+      "currentState": "MISSING_OBSERVATIONS",
+      "disposition": "REUSE_V14_V17",
+      "existingStructures": [
+        "analytics.metric_definition",
+        "analytics.metric_observation",
+        "analytics.source_record",
+        "analytics.dataset_release"
+      ],
+      "losslessExpression": "Register a versioned ADTV metric definition and persist one append-only metric_observation per security/decision session with numeric value, unit, status, source, effective/available/ingested times and revision.",
+      "migrationRequired": false,
+      "requirement": "DECISION_TIME_ADTV"
+    },
+    {
+      "currentBlocker": "V17 score columns were populated without the existing score-fact and lineage structures required by Forward v2.1.",
+      "currentState": "MISSING_SCORE_FACT_BINDING",
+      "disposition": "REUSE_V14_V17",
+      "existingStructures": [
+        "analytics.security_profile_snapshot",
+        "analytics.metric_definition",
+        "analytics.metric_observation",
+        "analytics.security_profile_fact",
+        "analytics.security_profile_fact_lineage",
+        "analytics.source_record"
+      ],
+      "losslessExpression": "Persist versioned Objective quality and valuation scores as metric observations, link them to the exact profile as facts, and retain ordered input source lineage. metric_observation carries effective/available/ingested times and revision; the profile already carries rating version and input_payload_hash.",
+      "migrationRequired": false,
+      "requirement": "OBJECTIVE_SCORE_LINEAGE_AND_TIMING"
+    },
+    {
+      "currentBlocker": "The current snapshot contains placeholder sector data; the schema already supports real versioned classification lineage.",
+      "currentState": "DATA_QUALITY_BLOCKED",
+      "disposition": "REUSE_V14_V17",
+      "existingStructures": [
+        "analytics.classification_node",
+        "analytics.company_profile_observation",
+        "analytics.security_profile_snapshot.classification_source_record_id",
+        "analytics.security_profile_classification_lineage",
+        "analytics.source_record"
+      ],
+      "losslessExpression": "Use source-backed V14 company profile classification and copy the exact taxonomy/node/source lineage into the immutable V17 profile lineage. Do not accept placeholder sector labels.",
+      "migrationRequired": false,
+      "requirement": "REAL_SECTOR_LINEAGE"
+    }
+  ],
+  "schemaEvidence": [
+    {
+      "fileSha256": "sha256:3fc70fe44cc18db414f191b5633bbc5ed615cc3aaf6d4576230b60c668893eda",
+      "migration": "V14",
+      "path": "database/migrations/V14__create_market_intelligence_reference_data.sql"
+    },
+    {
+      "fileSha256": "sha256:58c0cfd9c94ddbe43f4a077f7cafb82a074cf4d8e783d94034fe2d29625eea03",
+      "migration": "V15",
+      "path": "database/migrations/V15__create_market_intelligence_observations_and_screening.sql"
+    },
+    {
+      "fileSha256": "sha256:f7f4a6a68bb9de962782bad0fcb2aa181d542b2c98ad49addf056ed996f40e6c",
+      "migration": "V16",
+      "path": "database/migrations/V16__create_market_intelligence_refresh_operations.sql"
+    },
+    {
+      "fileSha256": "sha256:0dd19070c26c87986952cb4859c9c7d3510c0d742186ac9435b9ab69c1d50c33",
+      "migration": "V17",
+      "path": "database/migrations/V17__persist_market_intelligence_screening_contract.sql"
+    }
+  ],
+  "state": "COMPLETE",
+  "summary": {
+    "appendOnlyMigrationCount": 0,
+    "appendOnlyMigrationRequirements": [],
+    "codeOnlyCount": 4,
+    "conclusion": "V18_NOT_REQUIRED_FOR_ACCEPTED_V1_EVIDENCE_CONTRACTS",
+    "reuseV14V17Count": 3,
+    "v18Required": false
+  },
+  "verificationPlan": {
+    "codeOnlyPersistenceTests": [
+      "calendar source/body hash and dual-authority binding replay/conflict",
+      "raw versus normalized source hash semantic separation",
+      "action/adjustment reconciliation replay/conflict",
+      "price validation and promotion row-binding replay/conflict",
+      "ADTV PIT selection at decision cutoff",
+      "Objective score fact/lineage/timing reconstruction",
+      "placeholder-sector rejection and real lineage reconstruction"
+    ],
+    "existingMigrationTests": [
+      "PostgreSQL 17 clean V1-to-V17",
+      "V16-to-V17 upgrade",
+      "V17 current schema acceptance"
+    ],
+    "futureMigrationTests": []
+  }
+}

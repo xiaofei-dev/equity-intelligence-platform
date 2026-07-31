@@ -1,11 +1,20 @@
 from datetime import UTC, datetime
-from typing import Any
+from typing import Annotated, Any
 from uuid import UUID
 
+import psycopg
 from fastapi import APIRouter, Header, HTTPException, Query
 from pydantic import BaseModel
 
 from equity_analysis.config import Settings
+from equity_analysis.market_intelligence.eligibility_recovery_v1 import (
+    EligibilityRecoveryError,
+    EligibilityRecoveryNotFoundError,
+    EligibilityRecoveryRepository,
+    EligibilityRecoverySnapshotError,
+    EligibilityRecoveryStatusResponse,
+    EligibilityRecoveryUniverseError,
+)
 from equity_analysis.market_intelligence.models import (
     MarketIntelligenceFacets,
     MarketIntelligenceProfileEnvelope,
@@ -62,6 +71,47 @@ class DurableProfileResponse(BaseModel):
 class DurableScreenResponse(BaseModel):
     run_id: UUID
     result: dict[str, Any]
+
+
+@router.get(
+    "/eligibility-recovery/status/latest",
+    response_model=EligibilityRecoveryStatusResponse,
+)
+def get_latest_eligibility_recovery_status(
+    data_snapshot_id: UUID,
+    universe_version: Annotated[str, Query(min_length=1, max_length=128)],
+    as_of: Annotated[datetime, Query()],
+) -> EligibilityRecoveryStatusResponse:
+    try:
+        return _eligibility_recovery_repository().load_status(
+            data_snapshot_id=data_snapshot_id,
+            universe_version=universe_version,
+            as_of=as_of,
+            generated_at=datetime.now(UTC),
+        )
+    except EligibilityRecoveryError as error:
+        status_code = (
+            404
+            if isinstance(error, EligibilityRecoveryNotFoundError)
+            else 409
+            if isinstance(
+                error,
+                EligibilityRecoverySnapshotError | EligibilityRecoveryUniverseError,
+            )
+            else 422
+        )
+        raise HTTPException(
+            status_code=status_code,
+            detail={"code": error.code, "message": str(error)},
+        ) from error
+    except (psycopg.Error, OSError) as error:
+        raise HTTPException(
+            status_code=503,
+            detail={
+                "code": "ELIGIBILITY_RECOVERY_DATABASE_UNAVAILABLE",
+                "message": "Eligibility recovery status is temporarily unavailable",
+            },
+        ) from error
 
 
 @router.post("/profiles/build", response_model=SecurityProfile)
@@ -271,6 +321,12 @@ def _repository() -> MarketIntelligenceRepository:
 
 def _assembler() -> MarketIntelligenceAssembler:
     return MarketIntelligenceAssembler(Settings.from_environment().analytics_database_url)
+
+
+def _eligibility_recovery_repository() -> EligibilityRecoveryRepository:
+    return EligibilityRecoveryRepository(
+        Settings.from_environment().analytics_database_url
+    )
 
 
 def _raise_market_intelligence_error(error: ValueError) -> None:
