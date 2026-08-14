@@ -121,6 +121,14 @@ def test_checked_coverage_is_value_free_and_seals_before_outcomes() -> None:
     assert artifact["providerValuesIncluded"] is False
     assert [phase["securityCount"] for phase in artifact["phases"]] == [25, 100, 216]
     assert all(len(phase["matrix"]) == 12 for phase in artifact["phases"])
+    assert hashlib.sha256(path.read_bytes()).hexdigest().upper() == (
+        "6136495A50D4EF99C642D1C30CA9FA3823675CDADF88870ADBD05DEE5C340B66")
+
+
+def test_controlled_predictor_checkpoint_matches_git_safe_coverage() -> None:
+    path = (REPOSITORY / "contracts/fundamental-value-historical-validation-v1"
+            / "stage7c5-provider-native-company-quality-coverage.json")
+    artifact = json.loads(path.read_text())
     checkpoint_path = (REPOSITORY / "storage/fundamental-value-historical-validation-v1"
                        / "stage7c5-provider-native/sealed-predictors.json")
     checkpoint = json.loads(checkpoint_path.read_text())
@@ -137,5 +145,3 @@ def test_checked_coverage_is_value_free_and_seals_before_outcomes() -> None:
         "contentHash": checkpoint["contentHash"],
         "outcomesReadBeforeSeal": False,
     }
-    assert hashlib.sha256(path.read_bytes()).hexdigest().upper() == (
-        "6136495A50D4EF99C642D1C30CA9FA3823675CDADF88870ADBD05DEE5C340B66")

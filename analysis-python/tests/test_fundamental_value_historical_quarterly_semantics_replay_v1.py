@@ -45,7 +45,7 @@ def test_correct_support_source_is_visually_corroborated_and_approximation_only(
 
 def test_correct_support_hash_drift_fails(tmp_path: Path) -> None:
     altered = tmp_path / "chat.png"
-    altered.write_bytes(SCREENSHOT.read_bytes() + b"x")
+    altered.write_bytes(b"synthetic non-matching support evidence")
     with pytest.raises(SupportEvidenceError, match="HASH_DRIFT"):
         seal_correct_support_evidence(altered)
 
