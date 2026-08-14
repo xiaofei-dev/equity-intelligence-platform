@@ -1,0 +1,48 @@
+{
+  "artifactVersion": "portfolio-decision-task5-v33-final-gate-v1.0.0",
+  "generatedAt": "2026-08-13T23:32:23Z",
+  "taskState": "FINAL_MUTATION_E2E_BLOCKED",
+  "postgresql17Matrix": {
+    "exitCode": 0,
+    "terminalLine": "Database migration acceptance passed.",
+    "combinedLogSha256": "20F839B91C559116C81F6C6B07F77F388F4CF4719A0A7C74289270DE85AA1196",
+    "exitFileSha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+  },
+  "verifiedGates": {
+    "pythonFocused": "77 passed",
+    "ruff": "PASS",
+    "springFull": "179 tests, 3 skipped, 0 failures, 0 errors",
+    "springTypedPostgresql": "3 passed",
+    "frontendFocused": "25 passed",
+    "frontendEslint": "PASS",
+    "nextProductionBuild": "PASS"
+  },
+  "implementedBoundaries": {
+    "exactFourProjectionBeforeSelection": true,
+    "distinctHoldComparator": true,
+    "thesisLatestReviewSupersession": true,
+    "singleFrozenComparisonCutoff": true,
+    "v33WholeSecondRuntimeBoundary": true,
+    "v33UnsealedLongitudinalDriftRefusal": true
+  },
+  "freshMutationE2E": {
+    "state": "BLOCKED_BEFORE_SCENARIO_CREATION",
+    "firstReason": "The accepted historical position manifest has no persisted V26 Fundamental Value assessment reference, so the authoritative FastAPI command rejects MODEL_REFERENCE_REQUIRED.",
+    "secondReason": "The controlled V26 seed supports the deterministic GOOG identity only; the acceptance database already owns that identity and exact replay cannot be established by inserting a duplicate listing.",
+    "prohibitedFallback": "No caller-supplied model reference, price, return, or fixed SQL comparison was substituted.",
+    "chromeAcceptanceClaimed": false
+  },
+  "sourceSha256": {
+    "portfolioDecisionService": "E1228E3D5C40894ECBC1C3415B68C8114B3DAC574020E508E6A90A1127328293",
+    "portfolioDecisionClock": "6061BD49C07B12F558E930A1D5574FE82F836D40879D8B1A39D414F14CA47376",
+    "v33Migration": "F61CFBA1068387BB6F7AB84E281CFD283771D5ACD38722AA1FC91EF6F9DA4D8F",
+    "v32Workspace": "AF46547E84A9E5C409675866A1FDD554F2B80D5F17BC0AFA7126EFE050DF0CE7"
+  },
+  "safety": {
+    "providerNetworkRequests": 0,
+    "businessDatabaseWrites": 0,
+    "brokerageActions": 0,
+    "deploymentActions": 0,
+    "modelEvidenceLabelChanged": false
+  }
+}

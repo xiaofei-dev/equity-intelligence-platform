@@ -1,0 +1,97 @@
+{
+  "contractVersion": "FV-STAGE8C-SEC-DB-INVENTORY-v1.6.0",
+  "state": "PREREGISTERED_OFFLINE_NETWORK_AND_DATABASE_CLOSED",
+  "scope": "Migration-free SEC operating-MIC corroboration and read-only target identity inventory for GOOG, FOX, and MSFT only.",
+  "contractContentHash": "9045FCFA5CC3BD63EB100522CC96D25DAFB53AB212C83047DFFC42B5215121BC",
+  "predecessorV15": {
+    "decisionCode": "US_COMPOSITE_DIAGNOSTIC_COMPLETE_CONVERGENT",
+    "planContentHash": "F7F2E728FB4B91D9FA7E9B7F63B5E38259655B7B64D798BD63BE54DCA187FB40",
+    "reviewContentHash": "E53CF93A88523B8F91F5F84AB59FD230F5335E218970B87FB77321BF1AA57747",
+    "checkpointReceiptSetHash": "4BE2E3926EB0EDC823CC90A937AB647F1A9F0C8C05D913E4E65DE5C767374CF9",
+    "replayVerificationHash": "66564E8FC3E08D3D2E15EB387534B956A85F1FF1AA40614597D11ED381A25128",
+    "diagnosticAcceptanceHash": "FFF937E1AB4646440946E3E9571610996B6A8809183765B578908BDCE03156A7",
+    "storageAcceptanceHash": "35F466820289ACDF9FF427327E5B03020F6A920BFCE7A0D52BD4E472CFD4492B",
+    "resultArtifactCanonicalHash": "AD83ACD175AFA01D706D689EE48B93233BB8D95D6B494655B7E15337B5FDC6B7",
+    "resultArtifactBindingStatus": "BOUND_EXACT_GIT_SAFE_RESULT_ARTIFACT"
+  },
+  "secCorroboration": {
+    "contractVersion": "FV-STAGE8C-SEC-EXCHANGE-CORROBORATION-v1.0.0",
+    "requestContentHash": "027988A7E7FCF99446BF7B7C81022A604035DD27F2E3919E1F4AF22C187024E5",
+    "method": "GET",
+    "url": "https://www.sec.gov/files/company_tickers_exchange.json",
+    "physicalRequestCount": 1,
+    "retryLimit": 0,
+    "targetTickers": [
+      "GOOG",
+      "FOX",
+      "MSFT"
+    ],
+    "userAgentEnvironmentVariable": "SEC_USER_AGENT",
+    "userAgentPrefix": null,
+    "userAgentPolicy": "EXACT_VALIDATED_RUNTIME_VALUE_NO_TRANSFORMATION_NOT_PERSISTED_OR_HASHED",
+    "rawCheckpointPolicy": "PRIVATE_GIT_IGNORED_HASH_BOUND_CHECKPOINT",
+    "mapping": {
+      "providerExchange": "Nasdaq",
+      "canonicalOperatingMic": "XNAS",
+      "claim": "CURRENT_OPERATING_MIC_CORROBORATION_ONLY"
+    },
+    "excludedClaims": [
+      "NASDAQ_SEGMENT",
+      "NASDAQ_TIER",
+      "EXCHANGE_HISTORY",
+      "LISTING_FIGI",
+      "CURRENCY",
+      "COMPLETED_SESSION"
+    ]
+  },
+  "targetDatabaseInventory": {
+    "contractVersion": "FV-STAGE8C-TARGET-DB-INVENTORY-v1.0.0",
+    "queryContentHash": "EF830E6A74D07FA91897FE0684457DEAEEA349D8AE97F2736E2A920BBAFDEF7A",
+    "contractContentHash": "D4B70A85BF53BBD13813AFF3DE7F1DB75E850947C456F252E38036570FC4B410",
+    "targetTickers": [
+      "GOOG",
+      "FOX",
+      "MSFT"
+    ],
+    "adoptionPolicy": {
+      "version": "FV-STAGE8C-TARGET-DB-ADOPTION-v1.1.0",
+      "inventoryAsOfDate": "2026-08-02",
+      "acceptedLegacySecurityExchanges": [
+        "NASDAQ",
+        "XNAS"
+      ],
+      "requiredSecurityActive": true,
+      "requiredSecurityInstrumentType": "COMMON_STOCK",
+      "requiredSecurityCurrency": "USD",
+      "requiredListingMic": "XNAS",
+      "requiredListingCurrency": "USD",
+      "registryEvidenceRequired": true,
+      "currentTickerRule": "VALID_FROM_LE_AS_OF_LT_VALID_TO_OR_OPEN_ENDED"
+    },
+    "tables": [
+      "analytics.security",
+      "analytics.evidence_company_identity_v1",
+      "analytics.evidence_instrument_identity_v1",
+      "analytics.evidence_share_class_identity_v1",
+      "analytics.evidence_listing_identity_v1",
+      "analytics.evidence_ticker_assignment_v1"
+    ],
+    "readOnly": true,
+    "msftRule": "ADOPT_EXISTING_ANALYTICS_SECURITY_PUBLIC_ID_OR_STOP",
+    "googFoxRule": "ADOPT_IF_PRESENT_ELSE_NEW_ID_CANDIDATE_WITHOUT_INSERT",
+    "insertAuthorized": false,
+    "updateAuthorized": false
+  },
+  "projectionRuling": {
+    "projectionV1Status": "INCOMPATIBLE",
+    "successorRequirement": "PROJECTION_V2_AND_APPEND_ONLY_V25_REQUIRED",
+    "projectionV2Created": false,
+    "v25Created": false,
+    "realProjectionAuthorized": false
+  },
+  "networkAuthorized": false,
+  "databaseReadAuthorized": false,
+  "databaseWriteAuthorized": false,
+  "migrationAuthorized": false,
+  "contentHash": "F224B01A3BAFCB8ECBEF887BD87C1C6522E15B9FAD537B2809367BDF645554A8"
+}

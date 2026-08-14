@@ -1,0 +1,106 @@
+{
+  "benchmarks": {
+    "cash": "ZERO_RETURN",
+    "equalWeight": "NOT_OBSERVED",
+    "primary": "SPY_BUY_AND_HOLD_SAME_CALENDAR_AND_COST_POLICY",
+    "sector": "NOT_OBSERVED"
+  },
+  "contentHash": "BF9BF8D473CA10C0944E2F900824CE2B64B22C8778684E32AA4E5056CF5BE954",
+  "contractVersion": "quant-trading-system-v1.1.0",
+  "cost": {
+    "entryAndExitChargedSeparately": true,
+    "perSide": "participation=notional/ADTV; impact=min(50bps,25bps*sqrt(participation)); sideBps=1+impact",
+    "version": "C9-NONLINEAR-COST-v1.0.0"
+  },
+  "crossSection": {
+    "completeExpectedDenominatorRequired": true,
+    "contentHashBindsOrderedDenominatorAndEveryRawSignal": true,
+    "scheduleAnchor": "FIRST_SESSION_AFTER_EXACT_253_SESSION_HISTORY_IS_ORDINAL_ZERO",
+    "terminalSignalRequiredForEveryExpectedSecurity": true
+  },
+  "engineVersion": "QUANT-TRADING-ENGINE-v1.1.0",
+  "entry": {
+    "intradayReclaimEntry": false,
+    "skipWhenOpenAboveSignalClosePlusAtrMultiple": "2",
+    "skipWhenOpenAtOrBelowInitialStop": true,
+    "timing": "NEXT_OBSERVED_SESSION_OPEN_AFTER_REBALANCE_DECISION"
+  },
+  "entryExitPolicyVersion": "DUAL-MOMENTUM-TREND-ENTRY-EXIT-v1.1.0",
+  "exit": {
+    "dailyExitEvaluation": "HARD_OR_TRAILING_STOP_INTRADAY_EVERY_SESSION; MARKET_SMA200_AND_SECURITY_SMA100_AFTER_EVERY_COMPLETED_CLOSE_FOR_NEXT_OPEN",
+    "hardStop": "MAX_OF_SIGNAL_CLOSE_MINUS_3_ATR_AND_SIGNAL_CLOSE_MINUS_10_PERCENT_WITH_MINIMUM_2_PERCENT_DISTANCE",
+    "holdingCount": "ENTRY_SESSION_IS_HELD_SESSION_1; EXIT_AT_NEXT_OPEN_AFTER_SESSION_126_CLOSE",
+    "nextOpenExit": [
+      "SPY_CLOSE_NOT_ABOVE_SMA200",
+      "SECURITY_CLOSE_NOT_ABOVE_SMA100",
+      "REBALANCE_PERCENTILE_BELOW_60_OR_NOT_RANKED",
+      "MAXIMUM_126_HELD_SESSIONS",
+      "UNEXPLAINED_MISSING_ACTIVE_BAR"
+    ],
+    "profitTarget": "NONE_ALLOW_WINNERS_TO_RUN",
+    "rankExitEvaluation": "ONLY_ON_EVERY_FIFTH_SESSION_REBALANCE",
+    "sameBarRule": "STOP_FIRST_AFTER_ENTRY",
+    "sameSecurityReentry": "PROHIBITED_ON_THE_SAME_SESSION_AS_ANY_EXIT",
+    "trailingActivation": "AFTER_ENTRY_SESSION_CLOSE_FOR_NEXT_SESSION; NEVER_LOWER_ACTIVE_STOP",
+    "trailingStop": "MAX_PRIOR_ACTIVE_STOP_AND_HIGHEST_COMPLETED_CLOSE_SINCE_ENTRY_INCLUSIVE_MINUS_3_TIMES_CURRENT_COMPLETED_SESSION_ATR14"
+  },
+  "formulaVersion": "DUAL-MOMENTUM-TREND-FORMULAS-v1.1.0",
+  "governance": {
+    "automaticBrokerageExecution": false,
+    "futureReturnsGuaranteed": false,
+    "initialModelEvidenceLabel": "NOT_VALIDATED",
+    "llmSignalOrWeightAuthority": false,
+    "productionPersistenceBeforeValidation": false
+  },
+  "hypothesis": "Liquid equities with positive medium-term absolute momentum and the strongest cross-sectional 12-1 and 6-1 momentum, held while broad-market and security trends remain positive, may improve risk-adjusted participation by allowing winners to run.",
+  "modelVersion": "QUANT-TRADING-v1.1.0",
+  "outcomeAwareness": {
+    "designedAfterV1OutcomeWasObserved": true,
+    "predecessorDispositionHash": "02D8410EC8FF7690C7FE30E4296C06162E708CBF5A0D9F88AEA030737B035F4D",
+    "predecessorFullResultHash": "F87E4AF65E9E2AAF73BC6ADA7142FB5C78E21D0E2D8E95771D83963C1533AB8D",
+    "predecessorValidationProtocolHash": "84B5DEEDF5ABE572C135E3E1CF3D4FF7ED391F93A20A82D4F3B6C1BF48F070BC",
+    "sameHistoryMaximumClaim": "DEVELOPMENT_OBSERVED_ONLY",
+    "sameHistoryUntouchedHoldoutClaimed": false,
+    "v1ParametersMayBeModifiedInPlace": false
+  },
+  "portfolio": {
+    "exitReserve": "WORST_CASE_C9_51_BPS_SIDE_COST_AT_INITIAL_STOP_NOTIONAL_USING_ENTRY_SESSION_PREOPEN_ADTV",
+    "initialCashUsd": "100000",
+    "maximumPositions": 10,
+    "notionalFractionCapPerPosition": "0.10",
+    "riskFractionPerPosition": "0.005",
+    "riskNav": "PRIOR_COMPLETED_CLOSE_PORTFOLIO_NAV",
+    "selectionPriority": [
+      "COMPOSITE_SCORE_DESC",
+      "SECURITY_ID_ASC"
+    ],
+    "shareSizing": "DECREMENT_FROM_FLOOR_MIN_OF_NAV_RISK_OVER_FILL_MINUS_STOP_NAV_NOTIONAL_OVER_FILL_AND_AVAILABLE_CASH_OVER_FILL_UNTIL_LOSS_TO_STOP_PLUS_ENTRY_COST_PLUS_STOP_EXIT_RESERVE_FITS_RISK_AND_FILL_NOTIONAL_PLUS_BOTH_COSTS_FIT_CASH",
+    "wholeSharesOnly": true
+  },
+  "setup": "DUAL_MOMENTUM_TREND",
+  "signal": {
+    "absoluteEligibility": [
+      "PRICE_AT_LEAST_5_USD",
+      "MEDIAN_ADTV20_AT_LEAST_5000000_USD",
+      "SECURITY_CLOSE_ABOVE_SMA200",
+      "SPY_CLOSE_ABOVE_SMA200",
+      "MOMENTUM_252_SKIP20_POSITIVE",
+      "MOMENTUM_126_SKIP20_POSITIVE",
+      "ATR_PERCENT_AT_MOST_0.10"
+    ],
+    "crossSectionMinimum": 20,
+    "decisionFrequency": "EVERY_FIFTH_COMPLETED_SPY_SESSION_FROM_FIRST_ELIGIBLE_SESSION",
+    "ranking": {
+      "entryMinimumPercentile": "80",
+      "maximumEntryRank": 10,
+      "momentum126Skip20Weight": "0.40",
+      "momentum252Skip20Weight": "0.60",
+      "ordinalTieBreak": "SECURITY_ID_ASC",
+      "percentileFormula": "100*(COUNT_LOWER+0.5*(COUNT_EQUAL-1))/(N-1)",
+      "retentionMinimumPercentile": "60"
+    },
+    "requiredAlignedSessions": 253
+  },
+  "sleeve": "QUANT_TRADING",
+  "strategyVersion": "DUAL-MOMENTUM-TREND-v1.1.0"
+}

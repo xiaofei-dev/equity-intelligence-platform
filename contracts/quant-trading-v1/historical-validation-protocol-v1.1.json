@@ -1,0 +1,469 @@
+{
+  "schemaVersion": "QUANT-TRADING-HISTORICAL-VALIDATION-v1.1.1",
+  "state": "PREREGISTERED_CHRONOLOGY_REPAIR_BEFORE_V11_OUTCOME_ACCESS",
+  "sealedOn": "2026-08-12",
+  "outcomeAwareness": {
+    "v1OutcomeObservedBeforeV11Design": true,
+    "v11NumericPricesReadBeforeSeal": false,
+    "v11OutcomeMetricsReadBeforeSeal": false,
+    "sameControlledHistoryReused": true,
+    "sameHistoryUntouchedHoldoutClaimed": false,
+    "strictPitClaimed": false,
+    "backtestSupportedClaimed": false,
+    "forwardSupportedClaimed": false,
+    "maximumSameHistoryClaim": "DEVELOPMENT_OBSERVED_SAME_HISTORY_POST_V1_OUTCOME",
+    "parameterOrThresholdChangeAfterV11OutcomeAccessAllowed": false,
+    "failedValidationMayTriggerSameOutcomeRetuning": false,
+    "requiredSuccessorAfterAnyOutcomeAwareChange": "NEW_VERSION_NEW_PREREGISTRATION_NO_CLAIM_UPGRADE_ON_SAME_HISTORY",
+    "payloadBytesExposeHistoricalBarsAfterIntent": true,
+    "prePerformanceSealDoesNotClaimBarsWereUnavailableToProcess": true,
+    "returnsPnlRanksAgainstFutureReturnsOrAcceptanceInspectedBeforeInputSeal": false
+  },
+  "chronologyRepair": {
+    "supersedesEngineeringDraftVersion": "QUANT-TRADING-HISTORICAL-VALIDATION-v1.1.0",
+    "supersedesEngineeringDraftHash": "0592A9A24F7975366B0C11DC1F6A991C2330F79671A96320CA30DE182FC438BE",
+    "repairMadeBeforeAnyV11OutcomeAccess": true,
+    "economicFormulaCostThresholdOrPopulationChange": false,
+    "reason": "ACTUAL_SESSION_SCHEDULE_FORMULA_RANK_AND_TERMINAL_MANIFESTS_DEPEND_ON_DECODED_SEALED_BARS_AND_CANNOT_BE_TRUTHFULLY_SEALED_PRE_ACCESS"
+  },
+  "controlledBindings": {
+    "predecessorProtocol": {
+      "version": "QUANT-TRADING-HISTORICAL-VALIDATION-v1.0.0",
+      "contentHash": "84B5DEEDF5ABE572C135E3E1CF3D4FF7ED391F93A20A82D4F3B6C1BF48F070BC",
+      "dispositionHash": "02D8410EC8FF7690C7FE30E4296C06162E708CBF5A0D9F88AEA030737B035F4D",
+      "fullPopulationResultHash": "F87E4AF65E9E2AAF73BC6ADA7142FB5C78E21D0E2D8E95771D83963C1533AB8D",
+      "resultValuesImported": false
+    },
+    "successorDecisionContract": {
+      "contractVersion": "quant-trading-system-v1.1.0",
+      "modelVersion": "QUANT-TRADING-v1.1.0",
+      "strategyVersion": "DUAL-MOMENTUM-TREND-v1.1.0",
+      "formulaVersion": "DUAL-MOMENTUM-TREND-FORMULAS-v1.1.0",
+      "entryExitPolicyVersion": "DUAL-MOMENTUM-TREND-ENTRY-EXIT-v1.1.0",
+      "engineVersion": "QUANT-TRADING-ENGINE-v1.1.0",
+      "contentHash": "BF9BF8D473CA10C0944E2F900824CE2B64B22C8778684E32AA4E5056CF5BE954"
+    },
+    "simulator": {
+      "version": "QUANT-TRADING-PORTFOLIO-SIMULATOR-v1.1.0",
+      "primaryCostPolicyVersion": "C9-NONLINEAR-COST-v1.0.0",
+      "fixedSensitivityCostPolicyVersion": "FIXED-5-BPS-PER-SIDE-v1.0.0",
+      "sourceAndRunnerHashes": "BOUND_PRE_ACCESS_BEFORE_ANY_NUMERIC_BYTE_READ"
+    },
+    "population": {
+      "source": "C5_CURRENT_SURVIVOR_CONTROLLED_OVERLAP",
+      "count": 191,
+      "identitySetHash": "B29306CE3B1A047C074B68FDA07149FFF72F7B2ECD2BC0D78AAD7B42692656C7",
+      "identityProjectionSourceHash": "E110C20287CB1B9E2260E9DAA33C2F2A8B5CD290F11E20EB733B918F61F595DD",
+      "predictorValuesUsed": false,
+      "historicalMembershipClaimed": false,
+      "delistedPopulationClaimed": false,
+      "survivorshipBias": true
+    },
+    "priceEvidence": {
+      "track": "YAHOO_ADJUSTED_OHLCV_CURRENT_SURVIVOR_APPROXIMATION",
+      "receiptHash": "B74761883F9395F1334B3F78983DB4237DF0F3F245F449EFFDC73F98FBB738AD",
+      "receiptFileSha256": "CD830491016535733CB9FE5C4BEAEBC6EE6D48F0186B6C82F131BF30FE8168C8",
+      "calendarHash": "7FE1CA16970AE0346C67120DD4F32BA3BEF039276B9800757D15D3744189AA2C",
+      "calendarFileSha256": "AF107891BB758C021EC012FDAB52AADDD8A07664F41CFCB7A686434A7B477CE8",
+      "aliasCount": 203,
+      "equityCount": 191,
+      "primaryBenchmark": "SPY",
+      "adjustmentPolicy": "YAHOO-ADJCLOSE-RATIO-OHLC-v1.0.0",
+      "separateDividendOrSplitCashFlows": false,
+      "currentRevisionOnly": true
+    }
+  },
+  "batchProgression": {
+    "ordering": "SHA256_UTF8_SECURITY_ID_ASC_THEN_SECURITY_ID_ASC",
+    "nestedCumulativeSets": true,
+    "batches": [
+      {
+        "code": "PILOT25",
+        "cumulativeCount": 25,
+        "incrementalCount": 25,
+        "purpose": "ENGINEERING_INTEGRITY_ONLY",
+        "performanceGate": false
+      },
+      {
+        "code": "EXPANSION100",
+        "cumulativeCount": 100,
+        "incrementalCount": 75,
+        "purpose": "ENGINEERING_INTEGRITY_ONLY",
+        "performanceGate": false
+      },
+      {
+        "code": "FULL191",
+        "cumulativeCount": 191,
+        "incrementalCount": 91,
+        "purpose": "SOLE_PRIMARY_ACCEPTANCE_POPULATION",
+        "performanceGate": true
+      }
+    ],
+    "advanceOn": "STRUCTURAL_AND_REPLAY_INTEGRITY_ONLY_NEVER_PERFORMANCE",
+    "stopOn": [
+      "HASH_OR_IDENTITY_DRIFT",
+      "FORMULA_OR_RUNNER_PARITY_FAILURE",
+      "CALENDAR_OR_ADJUSTMENT_DRIFT",
+      "INCOMPLETE_TERMINAL_REGISTRY",
+      "NONDETERMINISTIC_REPLAY",
+      "UNEXPLAINED_MISSING_ACTIVE_POSITION_BAR"
+    ],
+    "stoppedBatchMustBePreserved": true,
+    "parameterChangeBetweenBatchesAllowed": false,
+    "primaryAcceptanceUsesOnly": "FULL191",
+    "manifestChronology": "DERIVE_PILOT25_THEN_EXPANSION100_THEN_FULL191_AFTER_PAYLOAD_DECODE_BEFORE_ANY_PERFORMANCE_AGGREGATION",
+    "pilotAndExpansionMayCalculatePerformance": false,
+    "prefixEqualityRequired": true
+  },
+  "strategyRules": {
+    "arithmetic": {
+      "precision": 50,
+      "rounding": "ROUND_HALF_EVEN",
+      "canonicalDecimal": "FINITE_PLAIN_BASE10_NO_EXPONENT_NO_SIGNED_ZERO"
+    },
+    "signal": {
+      "requiredAlignedSessions": 253,
+      "decisionFrequency": "EVERY_FIFTH_COMPLETED_SPY_SESSION_FROM_FIRST_ELIGIBLE_SESSION",
+      "absoluteEligibility": [
+        "PRICE_AT_LEAST_5_USD",
+        "MEDIAN_ADTV20_AT_LEAST_5000000_USD",
+        "SECURITY_CLOSE_ABOVE_SMA200",
+        "SPY_CLOSE_ABOVE_SMA200",
+        "MOMENTUM_252_SKIP20_POSITIVE",
+        "MOMENTUM_126_SKIP20_POSITIVE",
+        "ATR_PERCENT_AT_MOST_0.10"
+      ],
+      "crossSectionMinimum": 20,
+      "ranking": {
+        "momentum252Skip20Weight": "0.60",
+        "momentum126Skip20Weight": "0.40",
+        "ordinalTieBreak": "SECURITY_ID_ASC",
+        "percentileFormula": "100*(COUNT_LOWER+0.5*(COUNT_EQUAL-1))/(N-1)",
+        "entryMinimumPercentile": "80",
+        "retentionMinimumPercentile": "60",
+        "maximumEntryRank": 10
+      }
+    },
+    "decisionAnchor": {
+      "firstEligibleSession": "EARLIEST_COMPLETED_SPY_SESSION_WITH_253_ALIGNED_SPY_ROWS_AND_AT_LEAST_20_STRUCTURALLY_USABLE_SECURITY_HISTORIES",
+      "frequency": "EVERY_FIFTH_COMPLETED_SPY_SESSION_FROM_FIRST_ELIGIBLE_SESSION",
+      "lastEligibleDecision": "LATEST_ANCHORED_SESSION_WITH_NEXT_ENTRY_SESSION_PLUS_126_COMPLETED_HOLDING_SESSIONS_PLUS_ONE_EXIT_SESSION",
+      "rankingPopulation": "ALL_191_TERMINAL_ROWS_EACH_DECISION_DATE",
+      "missingRowsRemainExplicit": true
+    },
+    "entry": {
+      "timing": "NEXT_OBSERVED_SESSION_OPEN_AFTER_REBALANCE_DECISION",
+      "skipWhenOpenAtOrBelowInitialStop": true,
+      "skipWhenOpenAboveSignalClosePlusAtrMultiple": "2",
+      "intradayReclaimEntry": false,
+      "initialStop": "MAX(SIGNAL_CLOSE-MAX(3*ATR14,0.02*SIGNAL_CLOSE),0.90*SIGNAL_CLOSE)",
+      "fill": "NEXT_SESSION_OPEN_ONLY_WHEN_INITIAL_STOP_LT_OPEN_LE_MAXIMUM_ENTRY_PRICE",
+      "maximumEntryPrice": "SIGNAL_CLOSE+2*ATR14",
+      "entryOrderExpiry": "END_OF_NEXT_OBSERVED_SESSION"
+    },
+    "exit": {
+      "profitTarget": "NONE_ALLOW_WINNERS_TO_RUN",
+      "hardStop": "MAX_OF_SIGNAL_CLOSE_MINUS_3_ATR_AND_SIGNAL_CLOSE_MINUS_10_PERCENT_WITH_MINIMUM_2_PERCENT_DISTANCE",
+      "trailingStop": "MAX_PRIOR_ACTIVE_STOP_AND_HIGHEST_COMPLETED_CLOSE_SINCE_ENTRY_INCLUSIVE_MINUS_3_TIMES_CURRENT_COMPLETED_SESSION_ATR14",
+      "trailingActivation": "CALCULATED_AFTER_COMPLETED_CLOSE_EFFECTIVE_NEXT_SESSION",
+      "nextOpenExit": [
+        "SPY_CLOSE_NOT_ABOVE_SMA200",
+        "SECURITY_CLOSE_NOT_ABOVE_SMA100",
+        "REBALANCE_PERCENTILE_BELOW_60_OR_NOT_RANKED",
+        "MAXIMUM_126_HELD_SESSIONS",
+        "UNEXPLAINED_MISSING_ACTIVE_BAR"
+      ],
+      "sameBarRule": "STOP_FIRST_AFTER_ENTRY",
+      "dailyExitEvaluation": "HARD_OR_TRAILING_STOP_INTRADAY_EVERY_SESSION; MARKET_SMA200_AND_SECURITY_SMA100_AFTER_EVERY_COMPLETED_CLOSE_FOR_NEXT_OPEN",
+      "rankExitEvaluation": "REBALANCE_SESSIONS_ONLY",
+      "holdingCount": "ENTRY_SESSION_IS_HELD_SESSION_1_EXIT_AT_NEXT_OPEN_AFTER_SESSION_126_CLOSE",
+      "sameSecurityReentry": "PROHIBITED_ON_THE_SAME_SESSION_AS_ANY_EXIT",
+      "hardStopGapFill": "SESSION_OPEN_WHEN_OPEN_LE_ACTIVE_STOP",
+      "hardStopTouchFill": "ACTIVE_STOP_WHEN_LOW_LE_ACTIVE_STOP",
+      "trailingAtr": "CURRENT_COMPLETED_SESSION_ATR14",
+      "highestClose": "INCLUDES_ENTRY_SESSION_COMPLETED_CLOSE",
+      "marketAndSecurityTrendEvaluation": "EVERY_COMPLETED_SESSION_CLOSE",
+      "nextOpenReasonPriority": [
+        "SPY_CLOSE_NOT_ABOVE_SMA200",
+        "SECURITY_CLOSE_NOT_ABOVE_SMA100",
+        "REBALANCE_PERCENTILE_BELOW_60_OR_NOT_RANKED",
+        "MAXIMUM_126_HELD_SESSIONS",
+        "UNEXPLAINED_MISSING_ACTIVE_BAR"
+      ],
+      "openPhasePriority": [
+        "PENDING_NEXT_OPEN_EXIT",
+        "ACTIVE_STOP_GAP",
+        "NEW_ENTRY"
+      ],
+      "intradayPriority": [
+        "ACTIVE_STOP",
+        "NO_PROFIT_TARGET"
+      ],
+      "finalForcedLiquidation": false
+    },
+    "portfolio": {
+      "initialCashUsd": "100000",
+      "maximumPositions": 10,
+      "riskFractionPerPosition": "0.005",
+      "notionalFractionCapPerPosition": "0.10",
+      "wholeSharesOnly": true,
+      "selectionPriority": [
+        "COMPOSITE_SCORE_DESC",
+        "SECURITY_ID_ASC"
+      ],
+      "shareSizing": "DECREMENT_FROM_FLOOR_MIN_OF_NAV_RISK_OVER_FILL_MINUS_STOP_NAV_NOTIONAL_OVER_FILL_AND_AVAILABLE_CASH_OVER_FILL_UNTIL_LOSS_TO_STOP_PLUS_ENTRY_COST_PLUS_STOP_EXIT_RESERVE_FITS_RISK_AND_FILL_NOTIONAL_PLUS_BOTH_COSTS_FIT_CASH",
+      "riskNav": "PRIOR_COMPLETED_CLOSE_PORTFOLIO_NAV",
+      "exitReserve": "WORST_CASE_C9_51_BPS_SIDE_COST_AT_INITIAL_STOP_NOTIONAL_USING_ENTRY_SESSION_PREOPEN_ADTV",
+      "navSizingReference": "PRIOR_COMPLETED_CLOSE_NAV",
+      "riskIncludes": [
+        "FILL_TO_INITIAL_STOP_LOSS",
+        "ESTIMATED_ENTRY_COST",
+        "WORST_CASE_51_BPS_INITIAL_STOP_NOTIONAL_EXIT_RESERVE"
+      ],
+      "shareCount": "FLOOR_MIN_OF_STOP_RISK_NOTIONAL_CAP_AND_AVAILABLE_CASH_THEN_DECREMENT_UNTIL_BOTH_RISK_AND_CASH_CONSTRAINTS_PASS",
+      "cashReturn": "0",
+      "leverage": false,
+      "shorting": false
+    }
+  },
+  "costPolicy": {
+    "version": "C9-NONLINEAR-COST-v1.0.0",
+    "entryAndExitChargedSeparately": true,
+    "participation": "SIDE_FILL_NOTIONAL/PRIOR_20_COMPLETED_SESSION_MEDIAN_ADTV",
+    "impactBps": "MIN(50,25*SQRT(PARTICIPATION))",
+    "perSideBps": "1+IMPACT_BPS",
+    "sideRate": "PER_SIDE_BPS/10000",
+    "sideCostUsd": "SIDE_FILL_NOTIONAL*SIDE_RATE",
+    "executionBarAdtvField": "MEDIAN_OF_ADJUSTED_CLOSE_TIMES_VOLUME_FOR_EXACTLY_20_COMPLETED_SESSIONS_STRICTLY_BEFORE_THE_EXECUTION_BAR_SESSION",
+    "entryLiquidityWindow": "20_COMPLETED_SESSIONS_STRICTLY_BEFORE_ENTRY_SESSION_ENDING_AT_DECISION_SESSION",
+    "exitLiquidityWindow": "20_COMPLETED_SESSIONS_STRICTLY_BEFORE_EXIT_SESSION",
+    "currentExecutionBarCloseOrVolumeIncluded": false,
+    "runnerMustRecomputeAndRejectAdtvMismatch": true,
+    "missingOrInvalidLiquidity": "NO_FILL_FAIL_CLOSED",
+    "fixedSensitivity": "5_BPS_PER_SIDE_SEPARATE_RESULT",
+    "fixedSensitivityMethod": {
+      "inputAndDecisionStream": "EXACTLY_IDENTICAL_TO_PRIMARY",
+      "costReplacement": "REPLACE_C9_SIDE_COST_WITH_EXACT_5_BPS_PER_SIDE",
+      "costAddition": false,
+      "shareSizingAndCash": "INDEPENDENT_FULL_PORTFOLIO_REPLAY_FROM_100000_USD_USING_5_BPS_ENTRY_COST_AND_5_BPS_STOP_EXIT_RESERVE",
+      "ordersAndPositions": "RECOMPUTED_DETERMINISTICALLY_UNDER_FIXED_COST_CASH_AND_SIZING_NEVER_COPIED_FROM_PRIMARY",
+      "signalsRanksStopsAndExitConditions": "UNCHANGED_FROM_PRIMARY",
+      "terminalAndMetricWindow": "IDENTICAL_TO_PRIMARY"
+    },
+    "monetaryQuantization": "NONE_CANONICAL_DECIMAL"
+  },
+  "terminalPolicy": {
+    "adjustedOhlcv": true,
+    "separateDividendOrSplitCashFlows": false,
+    "missingCandidateBar": "EXPLICIT_MISSING_NOT_ELIGIBLE_NO_IMPUTATION",
+    "missingActivePositionBar": "PERMANENTLY_MARK_PERFORMANCE_INCOMPLETE_AND_SCHEDULE_NEXT_TRADABLE_OPEN_DIAGNOSTIC_EXIT",
+    "haltOrSuspensionFill": "NO_ASSUMED_FILL",
+    "knownAcquisitionDelistingOrBankruptcy": "BLOCKED_NO_V11_TERMINAL_EVENT_INPUT_CONTRACT",
+    "unprovenTerminalEvent": "INVALIDATE_AFFECTED_BATCH_NO_ZERO_OR_CASH_SUBSTITUTION",
+    "completeTerminalRowRequired": "EVERY_SECURITY_EVERY_DECISION_AND_PORTFOLIO_SESSION",
+    "productionEligibility": false
+  },
+  "benchmarks": {
+    "primary": {
+      "code": "SPY",
+      "construction": "BUY_AND_HOLD_WITH_WHOLE_SHARES_AND_RESIDUAL_CASH",
+      "window": "FIRST_STRATEGY_ENTRY_SESSION_OPEN_TO_FINAL_MATURITY_SESSION_CLOSE",
+      "calendar": "IDENTICAL_TO_STRATEGY",
+      "initialCashUsd": "100000",
+      "costAndLiquidityPolicy": "IDENTICAL_C9_NONLINEAR_ENTRY_AND_EXIT",
+      "terminalPolicy": "IDENTICAL_TO_STRATEGY"
+    },
+    "cash": {
+      "code": "CASH",
+      "return": "0",
+      "initialCashUsd": "100000"
+    },
+    "equalWeight": {
+      "state": "NOT_OBSERVED",
+      "reason": "V11_DECISION_CONTRACT_DOES_NOT_AUTHORIZE_EQUAL_WEIGHT_RESULT"
+    },
+    "sector": {
+      "state": "NOT_OBSERVED",
+      "reason": "NO_DATED_SECTOR_MAPPING_BOUND_TO_V11_POPULATION"
+    },
+    "benchmarkSubstitutionAllowed": false
+  },
+  "metrics": {
+    "portfolioSessionConvention": "AFTER_CLOSE_NAV_EACH_COMPLETED_SPY_SESSION",
+    "primaryWindow": {
+      "start": "FIRST_STRATEGY_ENTRY_SESSION_IMMEDIATELY_BEFORE_OPEN",
+      "noStrategyEntry": "INVALID_PRIMARY_RESULT_NO_PERFORMANCE_CLAIM",
+      "initialSeedNav": "100000",
+      "firstLedgerNav": "AFTER_FIRST_ENTRY_SESSION_COMPLETED_CLOSE",
+      "firstDailySimpleReturn": "FIRST_LEDGER_NAV/100000-1",
+      "end": "FINAL_MATURITY_SESSION_AFTER_CLOSE_AFTER_ALL_STRATEGY_EXITS",
+      "calendarDays": "FINAL_MATURITY_SESSION_DATE_MINUS_FIRST_STRATEGY_ENTRY_SESSION_DATE",
+      "minimumCalendarDays": 1
+    },
+    "totalReturn": "FINAL_AFTER_CLOSE_NAV/100000-1",
+    "cagr": "(FINAL_AFTER_CLOSE_NAV/100000)^(365.2425/EXACT_CALENDAR_DAYS)-1",
+    "spyExcess": [
+      "TOTAL_RETURN_MINUS_SPY",
+      "CAGR_MINUS_SPY"
+    ],
+    "maxDrawdown": "MIN(NAV/RUNNING_PEAK_NAV-1)",
+    "annualizedVolatility": "SAMPLE_STDDEV_DAILY_SIMPLE_NAV_RETURN*SQRT(252)",
+    "sharpeRfZero": "MEAN_DAILY_SIMPLE_NAV_RETURN/SAMPLE_STDDEV*SQRT(252)",
+    "zeroVolatilitySharpe": "NOT_OBSERVED",
+    "turnover": "SUM_ABSOLUTE_EXECUTED_GROSS_NOTIONAL/MEAN_DAILY_NAV",
+    "costs": [
+      "TOTAL_COST_USD",
+      "COST_AS_FRACTION_OF_INITIAL_CASH"
+    ],
+    "trades": [
+      "CLOSED_TRADE_COUNT",
+      "WIN_RATE_NET_RETURN_GT_0",
+      "LOSS_RATE_NET_RETURN_LT_0",
+      "BREAKEVEN_RATE_NET_RETURN_EQ_0",
+      "SEVERE_LOSS_RATE_NET_RETURN_LE_MINUS_20_PERCENT"
+    ],
+    "closedTradeMethod": {
+      "pairing": "ONE_FILLED_BUY_TO_THE_NEXT_FILLED_SELL_FOR_THE_SAME_SECURITY_WITH_NO_INTERVENING_FILLED_BUY",
+      "entryCashOutflow": "ENTRY_FILL_PRICE*SHARES+ENTRY_SIDE_COST_USD",
+      "exitCashInflow": "EXIT_FILL_PRICE*SHARES-EXIT_SIDE_COST_USD",
+      "netPnl": "EXIT_CASH_INFLOW-ENTRY_CASH_OUTFLOW",
+      "netReturn": "NET_PNL/ENTRY_CASH_OUTFLOW",
+      "openTradeAtEndAllowed": false,
+      "closedTradeCount": "EXACT_FILLED_BUY_SELL_PAIR_COUNT"
+    },
+    "coverage": [
+      "TERMINAL_ROW_COUNT",
+      "USABLE_SECURITY_RATE_PER_DECISION",
+      "RANKED_CROSS_SECTION_COUNT_PER_DECISION",
+      "MISSING_REASON_COUNTS",
+      "TIME_IN_MARKET"
+    ],
+    "subperiods": [
+      "2015-2019",
+      "2020-2022",
+      "2023-2026"
+    ],
+    "subperiodMethod": {
+      "kind": "SLICE_PRIMARY_FULL_RUN_AFTER_CLOSE_NAV_NO_INDEPENDENT_REPLAY",
+      "start": "FIRST_COMPLETED_SPY_SESSION_ON_OR_AFTER_CALENDAR_START",
+      "end": "LAST_COMPLETED_SPY_SESSION_ON_OR_BEFORE_CALENDAR_END",
+      "strategyReturn": "END_AFTER_CLOSE_NAV/START_AFTER_CLOSE_NAV-1",
+      "spyReturn": "END_AFTER_CLOSE_NAV/START_AFTER_CLOSE_NAV-1",
+      "cagr": "(END_NAV/START_NAV)^(365.2425/EXACT_CALENDAR_DAY_DIFFERENCE)-1",
+      "minimumCalendarDayDifference": 1,
+      "positionsAndCashCarryAcrossBoundaries": true,
+      "boundaryResetOrTrade": false,
+      "boundaryTransactionCost": "NONE_BECAUSE_NO_SYNTHETIC_BOUNDARY_TRADE",
+      "warmupAndDecisionSchedule": "IDENTICAL_UNCHANGED_PRIMARY_FULL_RUN"
+    },
+    "stressWindows": [
+      [
+        "2018-09-20",
+        "2018-12-24"
+      ],
+      [
+        "2020-02-19",
+        "2020-03-23"
+      ],
+      [
+        "2022-01-03",
+        "2022-06-16"
+      ]
+    ],
+    "subperiodAndStressStatus": "DIAGNOSTIC_EXCEPT_EXPLICIT_SUBPERIOD_GATE"
+  },
+  "acceptance": {
+    "evaluationCount": 1,
+    "primaryBatch": "FULL191",
+    "allGatesRequired": true,
+    "integrityGates": [
+      "EXACT_PROTOCOL_AND_SUCCESSOR_CONTRACT_HASHES",
+      "EXACT_191_MEMBER_TERMINAL_DENOMINATOR",
+      "DETERMINISTIC_EXACT_REPLAY",
+      "NO_UNEXPLAINED_ACTIVE_POSITION_GAP",
+      "NO_FORMULA_COST_OR_LEDGER_DRIFT",
+      "NO_OUTCOME_AWARE_PARAMETER_CHANGE",
+      "PRIMARY_STRATEGY_TERMINAL_STATE_COMPLETE_CASH",
+      "FIXED_SENSITIVITY_STRATEGY_TERMINAL_STATE_COMPLETE_CASH",
+      "SPY_BENCHMARK_EXITED_AT_FINAL_MATURITY_CLOSE_WITH_EXIT_COST"
+    ],
+    "numericGates": {
+      "minimumCompletedPortfolioSessions": 2000,
+      "minimumClosedTrades": 50,
+      "minimumCagrMinusSpy": "0",
+      "minimumTotalReturnMinusSpyExclusive": "0",
+      "minimumSharpeAdvantageVsSpy": {
+        "formula": "STRATEGY_SHARPE_RF_ZERO-SPY_SHARPE_RF_ZERO",
+        "minimum": "0.10",
+        "notObservedFails": true
+      },
+      "maximumDrawdownMagnitudeDeteriorationVsSpy": {
+        "formula": "ABS(STRATEGY_MAX_DRAWDOWN)-ABS(SPY_MAX_DRAWDOWN)",
+        "maximum": "0.05"
+      },
+      "minimumPositiveSpyCagrExcessSubperiods": 2,
+      "requiredSubperiodCount": 3,
+      "maximumSevereLossRate": "0.10",
+      "fixedFiveBpsSensitivityMinimumFinalNavExclusive": "100000"
+    },
+    "passingInterpretation": "DIRECTIONALLY_SUPPORTIVE_DEVELOPMENT_OBSERVATION_SAME_HISTORY_ONLY",
+    "failingInterpretation": "NOT_DIRECTIONALLY_SUPPORTIVE_NO_RETUNING_ON_SAME_OUTCOME",
+    "invalidInterpretation": "INVALID_OR_INCOMPLETE_NO_PERFORMANCE_CLAIM",
+    "modelEvidenceLabelAfterAnyResult": "NOT_VALIDATED",
+    "claimUpgradeAllowed": false,
+    "productionOrBrokerageAuthorization": false
+  },
+  "executionBoundary": {
+    "checkedV11RunnerRequiredBeforeOutcomeAccess": true,
+    "preAccessSealScope": [
+      "EXACT_191_DENOMINATOR_ORDER_IDS_AND_SYMBOLS",
+      "EXACT_203_SOURCE_PATH_BYTE_FILE_AND_CANONICAL_CONTENT_HASHES",
+      "CALENDAR_AUTHORITY_SOURCE_FILE_HASH_AND_DECLARED_BOUNDS",
+      "DECISION_ANCHOR_MATURITY_BATCH_AND_DERIVATION_RULES",
+      "SOURCE_CODE_RUNTIME_FORMULA_COST_METRIC_AND_ACCEPTANCE_IDENTITIES",
+      "ONE_EVALUATION_RETRY_ZERO_UNKNOWN_NO_RETRY_AND_OUTPUT_PATHS"
+    ],
+    "preAccessFutureValueDerivedManifestHashesForbidden": true,
+    "outcomeAccessIntentRequired": true,
+    "outcomeExecutionIntentRequiredBeforeFirstNumericByteRead": true,
+    "journalGrammar": [
+      "PREPARATION_INTENT",
+      "PREPARATION_STRUCTURAL_COMPLETE",
+      "OUTCOME_ACCESS_INTENT",
+      "OUTCOME_EXECUTION_INTENT",
+      "POST_ACCESS_PRE_PERFORMANCE_INPUT_SEAL",
+      "EXACTLY_ONE_COMPLETED_FAILED_OR_UNKNOWN_TERMINAL"
+    ],
+    "postAccessPrePerformanceInputSeal": {
+      "derivedInSameCheckedRunAfterPayloadDecode": true,
+      "mustPrecedeReturnPnlBenchmarkOrAcceptanceAggregation": true,
+      "contents": [
+        "EXACT_VERIFIED_SPY_COMPLETED_SESSION_VECTOR_AND_HASH",
+        "EXACT_FIRST_ELIGIBLE_AND_LAST_MATURE_DECISION_SCHEDULE",
+        "PILOT25_FORMULA_REPLAY_AND_TERMINAL_INPUT_MANIFESTS",
+        "EXPANSION100_FORMULA_REPLAY_AND_TERMINAL_INPUT_MANIFESTS",
+        "FULL191_FORMULA_REPLAY_TERMINAL_INPUT_AND_RANK_MANIFESTS",
+        "EXACT_25_TO_100_TO_191_PREFIX_EQUALITY",
+        "STATE_VOCABULARIES_SOURCE_HASHES_COUNTS_AND_SCHEDULES"
+      ],
+      "performanceEvaluated": false,
+      "returnPnlBenchmarkOrAcceptanceFieldsAllowed": false
+    },
+    "numericExposureLimitation": "DECODING_PAYLOAD_BYTES_EXPOSES_BARS_TO_THE_CHECKED_PROCESS_BUT_NO_RETURN_PNL_BENCHMARK_PERFORMANCE_OR_ACCEPTANCE_VALUE_MAY_BE_CALCULATED_INSPECTED_OR_EMITTED_BEFORE_THE_INPUT_SEAL",
+    "uninterruptedNoninteractiveRunRequired": true,
+    "humanOrLlmPauseBetweenDecodeInputSealAndPerformanceAllowed": false,
+    "batch25And100Purpose": "INTEGRITY_AND_REPLAY_ONLY_NO_PERFORMANCE",
+    "full191OnlyPerformanceAggregation": true,
+    "onePassOnly": true,
+    "exactReplayMayVerifyButNotRewrite": true,
+    "resultMustBindExecutionIntentAndPostAccessInputSeal": true,
+    "deterministicPrewriteFailureState": "FAILED",
+    "uncertainPartialDurableState": "UNKNOWN_NO_RETRY",
+    "networkAuthorized": false,
+    "providerRequests": 0,
+    "databaseWritesAuthorized": false,
+    "automaticBrokerageExecution": false,
+    "llmSignalOrWeightAuthority": false
+  },
+  "contentHash": "FB239E0F1D7AFC3F755E2E4BF15DDE6745143BC2614C1352459109D67A0B95F4"
+}

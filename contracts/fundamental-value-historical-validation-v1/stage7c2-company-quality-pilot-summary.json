@@ -1,0 +1,1067 @@
+{
+  "schemaVersion": "FV-STAGE7C2-COMPANY-QUALITY-PILOT-v1.0.0",
+  "status": "STOPPED_BELOW_MINIMUM_COVERAGE",
+  "outcomesRead": false,
+  "networkRequests": 0,
+  "databaseRequests": 0,
+  "controlled100SecIntersectionCount": 100,
+  "controlled100SecBuiltTimelineCount": 100,
+  "offlineSecBuiltTimelineCount": 216,
+  "intersectionContentHash": "35F707A6D4D9E064CE1407B451D5B9E1CCBF1CF6BD038C2673FA418C7C685628",
+  "calendarHash": "518B444025C390B336F689220F77DFCCA81ED687E211EC175324E5F2CD214D22",
+  "decisionDates": [
+    "2015-05-07",
+    "2016-05-19",
+    "2017-06-30",
+    "2018-04-09",
+    "2019-06-21",
+    "2020-04-20",
+    "2021-06-02",
+    "2022-05-18",
+    "2023-05-18"
+  ],
+  "producerRegistryHashes": {
+    "return_on_invested_capital": "ABE12ECF350BFEA0BE848FB6B01119D8438D2155854A0BFE0890AFE8E200B96F",
+    "operating_margin": "FB5FE4098F321E160A97E5C453DC05F2A67A40342F6DBE29A4EE1F598E0510BF",
+    "free_cash_flow_margin": "75DDFE32AB232C3D4C1272D7A1F4406C608A3327B1D20E9FDD1A61270DDDC4F7",
+    "earnings_stability": "CD57E529FF6A84079F485D41702FA382E5E398E8B18ABC8F5AC214920A8684E3",
+    "cash_flow_stability": "6F48430EF4ECACCAC20F21D090D4078ACE69388822EBAC3B8017CDC287751369"
+  },
+  "strictPitPhases": [
+    {
+      "phase": "PILOT25",
+      "securityCount": 25,
+      "securitySetHash": "53CA90469EC1E95BAE569911F1BDD8AC02BEDCE51804536ABB2E419845EAB200",
+      "matrixContentHash": "8E8CE1EA170972622D01D5F54F12B3D0B2F20B0D924BC56A442EA6391325A520",
+      "dateRows": [
+        {
+          "decisionDate": "2015-05-07",
+          "securityCount": 25,
+          "availabilityStratum": "STRICT_PIT",
+          "operandStateCounts": {
+            "return_on_invested_capital": {
+              "MISSING": 25
+            },
+            "operating_margin": {
+              "MISSING": 25
+            },
+            "free_cash_flow_margin": {
+              "MISSING": 25
+            },
+            "earnings_stability": {
+              "MISSING": 25
+            },
+            "cash_flow_stability": {
+              "MISSING": 25
+            }
+          },
+          "companyQualityTargetCounts": {
+            "MISSING": 25
+          },
+          "reasonCounts": {
+            "MISSING_ALIGNED_PERIODS": 125,
+            "TARGET:return_on_invested_capital:MISSING_ALIGNED_PERIODS": 25
+          },
+          "valueFreeOutputSetHash": "C5D2F586C54314FAAA517212246F499A2428CFE856B423FAE84F2854C576A828",
+          "contentHash": "76EEC9D0EB6233DE32F121600674A62ACB2F5DFDC47EBEC373B427815838DC09"
+        },
+        {
+          "decisionDate": "2016-05-19",
+          "securityCount": 25,
+          "availabilityStratum": "STRICT_PIT",
+          "operandStateCounts": {
+            "return_on_invested_capital": {
+              "MISSING": 25
+            },
+            "operating_margin": {
+              "MISSING": 25
+            },
+            "free_cash_flow_margin": {
+              "MISSING": 25
+            },
+            "earnings_stability": {
+              "MISSING": 25
+            },
+            "cash_flow_stability": {
+              "MISSING": 25
+            }
+          },
+          "companyQualityTargetCounts": {
+            "MISSING": 25
+          },
+          "reasonCounts": {
+            "MISSING_ALIGNED_PERIODS": 125,
+            "TARGET:return_on_invested_capital:MISSING_ALIGNED_PERIODS": 25
+          },
+          "valueFreeOutputSetHash": "C477F05CC344BBEACA9300C66361D0900A9801D393CBD6ECFD0E0BE7C8413B82",
+          "contentHash": "C38FE43B0CF4CE2B2C55D7398F75079DC5203E825DDBAFE11750DB9F50CF1F0A"
+        },
+        {
+          "decisionDate": "2017-06-30",
+          "securityCount": 25,
+          "availabilityStratum": "STRICT_PIT",
+          "operandStateCounts": {
+            "return_on_invested_capital": {
+              "MISSING": 25
+            },
+            "operating_margin": {
+              "MISSING": 25
+            },
+            "free_cash_flow_margin": {
+              "MISSING": 25
+            },
+            "earnings_stability": {
+              "MISSING": 25
+            },
+            "cash_flow_stability": {
+              "MISSING": 25
+            }
+          },
+          "companyQualityTargetCounts": {
+            "MISSING": 25
+          },
+          "reasonCounts": {
+            "MISSING_ALIGNED_PERIODS": 125,
+            "TARGET:return_on_invested_capital:MISSING_ALIGNED_PERIODS": 25
+          },
+          "valueFreeOutputSetHash": "822AF39E3B5240591F41EF126855467FC42DF3BD890C0CB3B33DE60783BF6578",
+          "contentHash": "B84468CE1484A8F8CCCF5CC7A6D054C46066129536393B6AE820425D6C07F969"
+        },
+        {
+          "decisionDate": "2018-04-09",
+          "securityCount": 25,
+          "availabilityStratum": "STRICT_PIT",
+          "operandStateCounts": {
+            "return_on_invested_capital": {
+              "MISSING": 25
+            },
+            "operating_margin": {
+              "MISSING": 25
+            },
+            "free_cash_flow_margin": {
+              "MISSING": 25
+            },
+            "earnings_stability": {
+              "MISSING": 25
+            },
+            "cash_flow_stability": {
+              "MISSING": 25
+            }
+          },
+          "companyQualityTargetCounts": {
+            "MISSING": 25
+          },
+          "reasonCounts": {
+            "MISSING_ALIGNED_PERIODS": 125,
+            "TARGET:return_on_invested_capital:MISSING_ALIGNED_PERIODS": 25
+          },
+          "valueFreeOutputSetHash": "EE890254FCA3EB9074DC9D5BC72F53A3B6E60451D2D85018BBCE0EC67BD2C180",
+          "contentHash": "B4C671D1DCDABA655189C32B3211E887111DB26464084FB3FD48FB9245A3122D"
+        },
+        {
+          "decisionDate": "2019-06-21",
+          "securityCount": 25,
+          "availabilityStratum": "STRICT_PIT",
+          "operandStateCounts": {
+            "return_on_invested_capital": {
+              "MISSING": 25
+            },
+            "operating_margin": {
+              "MISSING": 25
+            },
+            "free_cash_flow_margin": {
+              "MISSING": 25
+            },
+            "earnings_stability": {
+              "MISSING": 25
+            },
+            "cash_flow_stability": {
+              "MISSING": 25
+            }
+          },
+          "companyQualityTargetCounts": {
+            "MISSING": 25
+          },
+          "reasonCounts": {
+            "MISSING_ALIGNED_PERIODS": 125,
+            "TARGET:return_on_invested_capital:MISSING_ALIGNED_PERIODS": 25
+          },
+          "valueFreeOutputSetHash": "1DAA7CC495E6AB014D7DE3E4BEA950184EC671D0478305B5F1C356EF9E0FD141",
+          "contentHash": "9B7F06580EB82867AE821AFFE10F33F1A9DA6B3D6689A49653EF788FCC55FC45"
+        },
+        {
+          "decisionDate": "2020-04-20",
+          "securityCount": 25,
+          "availabilityStratum": "STRICT_PIT",
+          "operandStateCounts": {
+            "return_on_invested_capital": {
+              "MISSING": 25
+            },
+            "operating_margin": {
+              "MISSING": 25
+            },
+            "free_cash_flow_margin": {
+              "MISSING": 25
+            },
+            "earnings_stability": {
+              "MISSING": 25
+            },
+            "cash_flow_stability": {
+              "MISSING": 25
+            }
+          },
+          "companyQualityTargetCounts": {
+            "MISSING": 25
+          },
+          "reasonCounts": {
+            "MISSING_ALIGNED_PERIODS": 125,
+            "TARGET:return_on_invested_capital:MISSING_ALIGNED_PERIODS": 25
+          },
+          "valueFreeOutputSetHash": "75D22A98FECF1DE063934F64E80BA2D8D301F657FB23089438280757C6706F7D",
+          "contentHash": "254088C181E11903F3F722C3204B839C214F40508744B88D6044B5B466B3C63F"
+        },
+        {
+          "decisionDate": "2021-06-02",
+          "securityCount": 25,
+          "availabilityStratum": "STRICT_PIT",
+          "operandStateCounts": {
+            "return_on_invested_capital": {
+              "MISSING": 25
+            },
+            "operating_margin": {
+              "MISSING": 25
+            },
+            "free_cash_flow_margin": {
+              "MISSING": 25
+            },
+            "earnings_stability": {
+              "MISSING": 25
+            },
+            "cash_flow_stability": {
+              "MISSING": 25
+            }
+          },
+          "companyQualityTargetCounts": {
+            "MISSING": 25
+          },
+          "reasonCounts": {
+            "MISSING_ALIGNED_PERIODS": 125,
+            "TARGET:return_on_invested_capital:MISSING_ALIGNED_PERIODS": 25
+          },
+          "valueFreeOutputSetHash": "D5EB7A5C9A77884A0113838BA9905A39EB163CDF80F84467F2312D4199DF2620",
+          "contentHash": "FB72AAEDAAB41056C22CE3FF62DFBD07FF91218A7B72C557EDB79777D192FE17"
+        },
+        {
+          "decisionDate": "2022-05-18",
+          "securityCount": 25,
+          "availabilityStratum": "STRICT_PIT",
+          "operandStateCounts": {
+            "return_on_invested_capital": {
+              "MISSING": 25
+            },
+            "operating_margin": {
+              "MISSING": 25
+            },
+            "free_cash_flow_margin": {
+              "MISSING": 25
+            },
+            "earnings_stability": {
+              "MISSING": 25
+            },
+            "cash_flow_stability": {
+              "MISSING": 25
+            }
+          },
+          "companyQualityTargetCounts": {
+            "MISSING": 25
+          },
+          "reasonCounts": {
+            "MISSING_ALIGNED_PERIODS": 125,
+            "TARGET:return_on_invested_capital:MISSING_ALIGNED_PERIODS": 25
+          },
+          "valueFreeOutputSetHash": "87DEE7FB657A07EC189D4FEAE714830BCD5427E335BFC3D75335D8ECEBF7E1F7",
+          "contentHash": "DE213EFC3102526F7FF10DA3E9F5147982DDD2CDDF8D0F6EE897B6805FBF9D99"
+        },
+        {
+          "decisionDate": "2023-05-18",
+          "securityCount": 25,
+          "availabilityStratum": "STRICT_PIT",
+          "operandStateCounts": {
+            "return_on_invested_capital": {
+              "MISSING": 25
+            },
+            "operating_margin": {
+              "MISSING": 25
+            },
+            "free_cash_flow_margin": {
+              "MISSING": 25
+            },
+            "earnings_stability": {
+              "MISSING": 25
+            },
+            "cash_flow_stability": {
+              "MISSING": 25
+            }
+          },
+          "companyQualityTargetCounts": {
+            "MISSING": 25
+          },
+          "reasonCounts": {
+            "MISSING_ALIGNED_PERIODS": 125,
+            "TARGET:return_on_invested_capital:MISSING_ALIGNED_PERIODS": 25
+          },
+          "valueFreeOutputSetHash": "360DC6060AF8461016EEC125339B9CAE83103512760E2A53BF33E8C5FEFC356C",
+          "contentHash": "0198A42AC8C072D97B952A9D02F5C2772B3C75081FB1622AB64F807CE4A7B377"
+        }
+      ]
+    },
+    {
+      "phase": "CONTROLLED100",
+      "securityCount": 100,
+      "securitySetHash": "00AB847C348FE51B9DE1DC46BCA00FEFBBF7ABA5DB862B1DEC417B58697DEDA5",
+      "matrixContentHash": "A64AD4B41E8FFAD294887FC6429C107D3F50FF8D7BBB11FA78EF6DF0F9911B65",
+      "dateRows": [
+        {
+          "decisionDate": "2015-05-07",
+          "securityCount": 100,
+          "availabilityStratum": "STRICT_PIT",
+          "operandStateCounts": {
+            "return_on_invested_capital": {
+              "MISSING": 100
+            },
+            "operating_margin": {
+              "MISSING": 100
+            },
+            "free_cash_flow_margin": {
+              "MISSING": 100
+            },
+            "earnings_stability": {
+              "MISSING": 100
+            },
+            "cash_flow_stability": {
+              "MISSING": 100
+            }
+          },
+          "companyQualityTargetCounts": {
+            "MISSING": 100
+          },
+          "reasonCounts": {
+            "MISSING_ALIGNED_PERIODS": 500,
+            "TARGET:return_on_invested_capital:MISSING_ALIGNED_PERIODS": 100
+          },
+          "valueFreeOutputSetHash": "C590DA3EE16A1FA5F0F34538F8BA399A51EA68F4B2C793417125CEC23BF0CB9A",
+          "contentHash": "6C0335C06A82301148A9185B37270FBCFD0F8C31629B4AF791373BACC0B83BEE"
+        },
+        {
+          "decisionDate": "2016-05-19",
+          "securityCount": 100,
+          "availabilityStratum": "STRICT_PIT",
+          "operandStateCounts": {
+            "return_on_invested_capital": {
+              "MISSING": 100
+            },
+            "operating_margin": {
+              "MISSING": 100
+            },
+            "free_cash_flow_margin": {
+              "MISSING": 100
+            },
+            "earnings_stability": {
+              "MISSING": 100
+            },
+            "cash_flow_stability": {
+              "MISSING": 100
+            }
+          },
+          "companyQualityTargetCounts": {
+            "MISSING": 100
+          },
+          "reasonCounts": {
+            "MISSING_ALIGNED_PERIODS": 500,
+            "TARGET:return_on_invested_capital:MISSING_ALIGNED_PERIODS": 100
+          },
+          "valueFreeOutputSetHash": "EB9FDDE1C309BD6B8A93BCA548242D608F4B03A844C0B1286D14CB91120AE94C",
+          "contentHash": "A104E9FE89FA768BC4CE33D2AEA7783C42D5A6BF26827B3C1B2BD07F61AC81B3"
+        },
+        {
+          "decisionDate": "2017-06-30",
+          "securityCount": 100,
+          "availabilityStratum": "STRICT_PIT",
+          "operandStateCounts": {
+            "return_on_invested_capital": {
+              "MISSING": 100
+            },
+            "operating_margin": {
+              "MISSING": 100
+            },
+            "free_cash_flow_margin": {
+              "MISSING": 100
+            },
+            "earnings_stability": {
+              "MISSING": 100
+            },
+            "cash_flow_stability": {
+              "MISSING": 100
+            }
+          },
+          "companyQualityTargetCounts": {
+            "MISSING": 100
+          },
+          "reasonCounts": {
+            "MISSING_ALIGNED_PERIODS": 500,
+            "TARGET:return_on_invested_capital:MISSING_ALIGNED_PERIODS": 100
+          },
+          "valueFreeOutputSetHash": "EA3043ECC796555F4DB5A133B0946DA9B06D301A3EE25297EFB28A821BF94AD7",
+          "contentHash": "8613A5ADF8AAC24B412B5B252CD611DB54DF24697732171D8F276109B6B369B7"
+        },
+        {
+          "decisionDate": "2018-04-09",
+          "securityCount": 100,
+          "availabilityStratum": "STRICT_PIT",
+          "operandStateCounts": {
+            "return_on_invested_capital": {
+              "MISSING": 100
+            },
+            "operating_margin": {
+              "MISSING": 100
+            },
+            "free_cash_flow_margin": {
+              "MISSING": 100
+            },
+            "earnings_stability": {
+              "MISSING": 100
+            },
+            "cash_flow_stability": {
+              "MISSING": 100
+            }
+          },
+          "companyQualityTargetCounts": {
+            "MISSING": 100
+          },
+          "reasonCounts": {
+            "MISSING_ALIGNED_PERIODS": 500,
+            "TARGET:return_on_invested_capital:MISSING_ALIGNED_PERIODS": 100
+          },
+          "valueFreeOutputSetHash": "8D02F6F2C599A5C72B1222672A5913AC7E9E55A237F5027716DE963754712F82",
+          "contentHash": "979AE68AD7FA68B102B81F05BC666E4FAC71450D68408E601F2DE4AE04F9B19C"
+        },
+        {
+          "decisionDate": "2019-06-21",
+          "securityCount": 100,
+          "availabilityStratum": "STRICT_PIT",
+          "operandStateCounts": {
+            "return_on_invested_capital": {
+              "MISSING": 100
+            },
+            "operating_margin": {
+              "MISSING": 99,
+              "VALID": 1
+            },
+            "free_cash_flow_margin": {
+              "MISSING": 100
+            },
+            "earnings_stability": {
+              "MISSING": 98,
+              "VALID": 2
+            },
+            "cash_flow_stability": {
+              "MISSING": 100
+            }
+          },
+          "companyQualityTargetCounts": {
+            "MISSING": 100
+          },
+          "reasonCounts": {
+            "MISSING_ALIGNED_PERIODS": 496,
+            "TARGET:return_on_invested_capital:MISSING_ALIGNED_PERIODS": 99,
+            "TARGET:return_on_invested_capital:TAX_RATE_OUTLIER": 1,
+            "TAX_RATE_OUTLIER": 1,
+            "VALID": 3
+          },
+          "valueFreeOutputSetHash": "E51DF8CF855879D6221410A7710279471B40414781E0B4A561DFE3CEF9461930",
+          "contentHash": "0F7305FEABF5C311E19623DA687E3243CBDED5735926E5054B9BD50DA9932FB7"
+        },
+        {
+          "decisionDate": "2020-04-20",
+          "securityCount": 100,
+          "availabilityStratum": "STRICT_PIT",
+          "operandStateCounts": {
+            "return_on_invested_capital": {
+              "MISSING": 100
+            },
+            "operating_margin": {
+              "MISSING": 98,
+              "VALID": 2
+            },
+            "free_cash_flow_margin": {
+              "MISSING": 99,
+              "VALID": 1
+            },
+            "earnings_stability": {
+              "MISSING": 97,
+              "VALID": 3
+            },
+            "cash_flow_stability": {
+              "MISSING": 99,
+              "VALID": 1
+            }
+          },
+          "companyQualityTargetCounts": {
+            "MISSING": 100
+          },
+          "reasonCounts": {
+            "BALANCE_PARENT_ALIGNMENT_MISSING": 1,
+            "MISSING_ALIGNED_PERIODS": 491,
+            "TARGET:return_on_invested_capital:BALANCE_PARENT_ALIGNMENT_MISSING": 1,
+            "TARGET:return_on_invested_capital:MISSING_ALIGNED_PERIODS": 98,
+            "TARGET:return_on_invested_capital:TAX_RATE_OUTLIER": 1,
+            "TAX_RATE_OUTLIER": 1,
+            "VALID": 7
+          },
+          "valueFreeOutputSetHash": "11783914D8D4100EA3A927FC073F2A9F458CD8BB20959B7BB380374D537BDA77",
+          "contentHash": "DA9FA757557CA22098D8BB2C5ADDF4FDE2A42E2A8FFEDA35EBC37AF231F60E14"
+        },
+        {
+          "decisionDate": "2021-06-02",
+          "securityCount": 100,
+          "availabilityStratum": "STRICT_PIT",
+          "operandStateCounts": {
+            "return_on_invested_capital": {
+              "MISSING": 100
+            },
+            "operating_margin": {
+              "MISSING": 97,
+              "VALID": 3
+            },
+            "free_cash_flow_margin": {
+              "MISSING": 99,
+              "VALID": 1
+            },
+            "earnings_stability": {
+              "MISSING": 96,
+              "VALID": 4
+            },
+            "cash_flow_stability": {
+              "MISSING": 99,
+              "VALID": 1
+            }
+          },
+          "companyQualityTargetCounts": {
+            "MISSING": 100
+          },
+          "reasonCounts": {
+            "BALANCE_PARENT_ALIGNMENT_MISSING": 1,
+            "MISSING_ALIGNED_PERIODS": 489,
+            "TARGET:return_on_invested_capital:BALANCE_PARENT_ALIGNMENT_MISSING": 1,
+            "TARGET:return_on_invested_capital:MISSING_ALIGNED_PERIODS": 98,
+            "TARGET:return_on_invested_capital:TAX_RATE_OUTLIER": 1,
+            "TAX_RATE_OUTLIER": 1,
+            "VALID": 9
+          },
+          "valueFreeOutputSetHash": "3D349F5125DBFFD1168D8EFCAA2FEFC1E5013BB18FD901397E89E2DD683883A2",
+          "contentHash": "F1D0DD4FAB499E9C5779586F9E7DD63A4657466BFB12EF197FB18E45870049EE"
+        },
+        {
+          "decisionDate": "2022-05-18",
+          "securityCount": 100,
+          "availabilityStratum": "STRICT_PIT",
+          "operandStateCounts": {
+            "return_on_invested_capital": {
+              "MISSING": 100
+            },
+            "operating_margin": {
+              "MISSING": 97,
+              "VALID": 3
+            },
+            "free_cash_flow_margin": {
+              "MISSING": 99,
+              "VALID": 1
+            },
+            "earnings_stability": {
+              "MISSING": 96,
+              "VALID": 4
+            },
+            "cash_flow_stability": {
+              "MISSING": 99,
+              "VALID": 1
+            }
+          },
+          "companyQualityTargetCounts": {
+            "MISSING": 100
+          },
+          "reasonCounts": {
+            "BALANCE_PARENT_ALIGNMENT_MISSING": 1,
+            "MISSING_ALIGNED_PERIODS": 489,
+            "TARGET:return_on_invested_capital:BALANCE_PARENT_ALIGNMENT_MISSING": 1,
+            "TARGET:return_on_invested_capital:MISSING_ALIGNED_PERIODS": 98,
+            "TARGET:return_on_invested_capital:TAX_RATE_OUTLIER": 1,
+            "TAX_RATE_OUTLIER": 1,
+            "VALID": 9
+          },
+          "valueFreeOutputSetHash": "137AD617F7C9EB7CA4BED606F057BFE209AF050BAD1CC51B9273EE72FD2D9A17",
+          "contentHash": "FD772E56AC7353EED2DCDF8AF8A0CA4F5CAE9638283137E59ACEA8E28512D5F0"
+        },
+        {
+          "decisionDate": "2023-05-18",
+          "securityCount": 100,
+          "availabilityStratum": "STRICT_PIT",
+          "operandStateCounts": {
+            "return_on_invested_capital": {
+              "MISSING": 100
+            },
+            "operating_margin": {
+              "MISSING": 97,
+              "VALID": 3
+            },
+            "free_cash_flow_margin": {
+              "MISSING": 99,
+              "VALID": 1
+            },
+            "earnings_stability": {
+              "MISSING": 96,
+              "VALID": 4
+            },
+            "cash_flow_stability": {
+              "MISSING": 99,
+              "VALID": 1
+            }
+          },
+          "companyQualityTargetCounts": {
+            "MISSING": 100
+          },
+          "reasonCounts": {
+            "BALANCE_PARENT_ALIGNMENT_MISSING": 1,
+            "MISSING_ALIGNED_PERIODS": 489,
+            "TARGET:return_on_invested_capital:BALANCE_PARENT_ALIGNMENT_MISSING": 1,
+            "TARGET:return_on_invested_capital:MISSING_ALIGNED_PERIODS": 98,
+            "TARGET:return_on_invested_capital:TAX_RATE_OUTLIER": 1,
+            "TAX_RATE_OUTLIER": 1,
+            "VALID": 9
+          },
+          "valueFreeOutputSetHash": "6607B5180DD0216E2ACF88A269528DA0CEF2A84DFC403D0160E8B952F3DB08BC",
+          "contentHash": "81A29D18D242F133779152BF2A8C1A82A1F6B80FBA404FC25B29D2E677B18CE1"
+        }
+      ]
+    },
+    {
+      "phase": "OFFLINE216",
+      "securityCount": 216,
+      "securitySetHash": "05044F0ADA59008CFB6D96A578975EDD3E44686F8E115E1A6DD89F749C3D9449",
+      "matrixContentHash": "AF58780978C267E57D4AB2B56C4864DCC85416275EC67F891F6942C1EB2A20E2",
+      "dateRows": [
+        {
+          "decisionDate": "2015-05-07",
+          "securityCount": 216,
+          "availabilityStratum": "STRICT_PIT",
+          "operandStateCounts": {
+            "return_on_invested_capital": {
+              "MISSING": 216
+            },
+            "operating_margin": {
+              "MISSING": 216
+            },
+            "free_cash_flow_margin": {
+              "MISSING": 216
+            },
+            "earnings_stability": {
+              "MISSING": 216
+            },
+            "cash_flow_stability": {
+              "MISSING": 216
+            }
+          },
+          "companyQualityTargetCounts": {
+            "MISSING": 216
+          },
+          "reasonCounts": {
+            "MISSING_ALIGNED_PERIODS": 1080,
+            "TARGET:return_on_invested_capital:MISSING_ALIGNED_PERIODS": 216
+          },
+          "valueFreeOutputSetHash": "87D4A2F709DAC24B3F6330AF622FD6FC048DE2A8A01EF5DF46000CABBD00B829",
+          "contentHash": "E25C198EDF6E2455CE94C4C26BCCA2F3F159068E79199BF89BD17E74B5306261"
+        },
+        {
+          "decisionDate": "2016-05-19",
+          "securityCount": 216,
+          "availabilityStratum": "STRICT_PIT",
+          "operandStateCounts": {
+            "return_on_invested_capital": {
+              "MISSING": 216
+            },
+            "operating_margin": {
+              "MISSING": 216
+            },
+            "free_cash_flow_margin": {
+              "MISSING": 216
+            },
+            "earnings_stability": {
+              "MISSING": 216
+            },
+            "cash_flow_stability": {
+              "MISSING": 216
+            }
+          },
+          "companyQualityTargetCounts": {
+            "MISSING": 216
+          },
+          "reasonCounts": {
+            "MISSING_ALIGNED_PERIODS": 1080,
+            "TARGET:return_on_invested_capital:MISSING_ALIGNED_PERIODS": 216
+          },
+          "valueFreeOutputSetHash": "915275C438C4BFFF97658F9B48AAC4BDFA57ACAFF404580EBD43DD06E74F41BA",
+          "contentHash": "5C9EAC31084036AC6F1B9906A71EA7B7C1A02117CB9935BB6A65FA9C80FD3689"
+        },
+        {
+          "decisionDate": "2017-06-30",
+          "securityCount": 216,
+          "availabilityStratum": "STRICT_PIT",
+          "operandStateCounts": {
+            "return_on_invested_capital": {
+              "MISSING": 216
+            },
+            "operating_margin": {
+              "MISSING": 216
+            },
+            "free_cash_flow_margin": {
+              "MISSING": 216
+            },
+            "earnings_stability": {
+              "MISSING": 216
+            },
+            "cash_flow_stability": {
+              "MISSING": 216
+            }
+          },
+          "companyQualityTargetCounts": {
+            "MISSING": 216
+          },
+          "reasonCounts": {
+            "MISSING_ALIGNED_PERIODS": 1080,
+            "TARGET:return_on_invested_capital:MISSING_ALIGNED_PERIODS": 216
+          },
+          "valueFreeOutputSetHash": "EA6AE43B7AEE0F4F6DA6958EFDDA0B1CAE250F5ECC2AF4684D7F654958806D56",
+          "contentHash": "CCE68F016F47C27672A9045F749DB80F0D9A99A09DEA360F28F1FD6F54CA540F"
+        },
+        {
+          "decisionDate": "2018-04-09",
+          "securityCount": 216,
+          "availabilityStratum": "STRICT_PIT",
+          "operandStateCounts": {
+            "return_on_invested_capital": {
+              "MISSING": 216
+            },
+            "operating_margin": {
+              "MISSING": 216
+            },
+            "free_cash_flow_margin": {
+              "MISSING": 216
+            },
+            "earnings_stability": {
+              "MISSING": 216
+            },
+            "cash_flow_stability": {
+              "MISSING": 216
+            }
+          },
+          "companyQualityTargetCounts": {
+            "MISSING": 216
+          },
+          "reasonCounts": {
+            "MISSING_ALIGNED_PERIODS": 1080,
+            "TARGET:return_on_invested_capital:MISSING_ALIGNED_PERIODS": 216
+          },
+          "valueFreeOutputSetHash": "9B29968449CA0C1FDD83C1A3262F7F9C2D0B10B8E0418B82E13EC0A58061EE39",
+          "contentHash": "959AD728DE1A42404FDB0B0733189A4666D4B3B69E1529EB7B9915B448D31A4C"
+        },
+        {
+          "decisionDate": "2019-06-21",
+          "securityCount": 216,
+          "availabilityStratum": "STRICT_PIT",
+          "operandStateCounts": {
+            "return_on_invested_capital": {
+              "MISSING": 216
+            },
+            "operating_margin": {
+              "MISSING": 214,
+              "VALID": 2
+            },
+            "free_cash_flow_margin": {
+              "MISSING": 216
+            },
+            "earnings_stability": {
+              "MISSING": 214,
+              "VALID": 2
+            },
+            "cash_flow_stability": {
+              "MISSING": 216
+            }
+          },
+          "companyQualityTargetCounts": {
+            "MISSING": 216
+          },
+          "reasonCounts": {
+            "MISSING_ALIGNED_PERIODS": 1075,
+            "TARGET:return_on_invested_capital:MISSING_ALIGNED_PERIODS": 215,
+            "TARGET:return_on_invested_capital:TAX_RATE_OUTLIER": 1,
+            "TAX_RATE_OUTLIER": 1,
+            "VALID": 4
+          },
+          "valueFreeOutputSetHash": "283132D9D258782B1E08E4C3B9D67DB49AF44A1DB37769B016221F3678253838",
+          "contentHash": "42F35362C7CA832A7C09C066995EDC1E2B9F958552BC25A1D2D070E07E504903"
+        },
+        {
+          "decisionDate": "2020-04-20",
+          "securityCount": 216,
+          "availabilityStratum": "STRICT_PIT",
+          "operandStateCounts": {
+            "return_on_invested_capital": {
+              "MISSING": 216
+            },
+            "operating_margin": {
+              "MISSING": 213,
+              "VALID": 3
+            },
+            "free_cash_flow_margin": {
+              "MISSING": 215,
+              "VALID": 1
+            },
+            "earnings_stability": {
+              "MISSING": 213,
+              "VALID": 3
+            },
+            "cash_flow_stability": {
+              "MISSING": 215,
+              "VALID": 1
+            }
+          },
+          "companyQualityTargetCounts": {
+            "MISSING": 216
+          },
+          "reasonCounts": {
+            "BALANCE_PARENT_ALIGNMENT_MISSING": 1,
+            "MISSING_ALIGNED_PERIODS": 1070,
+            "TARGET:return_on_invested_capital:BALANCE_PARENT_ALIGNMENT_MISSING": 1,
+            "TARGET:return_on_invested_capital:MISSING_ALIGNED_PERIODS": 214,
+            "TARGET:return_on_invested_capital:TAX_RATE_OUTLIER": 1,
+            "TAX_RATE_OUTLIER": 1,
+            "VALID": 8
+          },
+          "valueFreeOutputSetHash": "E30EE39282C37B0FA19631043A3E183E0BD48A7BF772514C2C8D0B1CD7D3FA27",
+          "contentHash": "164593039CB162EA085CF08041DDAF98C84C6E216B3EA328DF2250CB71141A37"
+        },
+        {
+          "decisionDate": "2021-06-02",
+          "securityCount": 216,
+          "availabilityStratum": "STRICT_PIT",
+          "operandStateCounts": {
+            "return_on_invested_capital": {
+              "MISSING": 216
+            },
+            "operating_margin": {
+              "MISSING": 212,
+              "VALID": 4
+            },
+            "free_cash_flow_margin": {
+              "MISSING": 215,
+              "VALID": 1
+            },
+            "earnings_stability": {
+              "MISSING": 212,
+              "VALID": 4
+            },
+            "cash_flow_stability": {
+              "MISSING": 215,
+              "VALID": 1
+            }
+          },
+          "companyQualityTargetCounts": {
+            "MISSING": 216
+          },
+          "reasonCounts": {
+            "BALANCE_PARENT_ALIGNMENT_MISSING": 1,
+            "MISSING_ALIGNED_PERIODS": 1068,
+            "TARGET:return_on_invested_capital:BALANCE_PARENT_ALIGNMENT_MISSING": 1,
+            "TARGET:return_on_invested_capital:MISSING_ALIGNED_PERIODS": 214,
+            "TARGET:return_on_invested_capital:TAX_RATE_OUTLIER": 1,
+            "TAX_RATE_OUTLIER": 1,
+            "VALID": 10
+          },
+          "valueFreeOutputSetHash": "651CC8F9E90F045F61A7976F8C30D9B7AD318BB32D535C18EEC23DB3F8DB5DFE",
+          "contentHash": "37F5A060FF38619F78AEF736C84949EB0AD80ACC1370B8FA587CB1AA41BE7AE5"
+        },
+        {
+          "decisionDate": "2022-05-18",
+          "securityCount": 216,
+          "availabilityStratum": "STRICT_PIT",
+          "operandStateCounts": {
+            "return_on_invested_capital": {
+              "MISSING": 216
+            },
+            "operating_margin": {
+              "MISSING": 212,
+              "VALID": 4
+            },
+            "free_cash_flow_margin": {
+              "MISSING": 215,
+              "VALID": 1
+            },
+            "earnings_stability": {
+              "MISSING": 212,
+              "VALID": 4
+            },
+            "cash_flow_stability": {
+              "MISSING": 215,
+              "VALID": 1
+            }
+          },
+          "companyQualityTargetCounts": {
+            "MISSING": 216
+          },
+          "reasonCounts": {
+            "BALANCE_PARENT_ALIGNMENT_MISSING": 1,
+            "MISSING_ALIGNED_PERIODS": 1068,
+            "TARGET:return_on_invested_capital:BALANCE_PARENT_ALIGNMENT_MISSING": 1,
+            "TARGET:return_on_invested_capital:MISSING_ALIGNED_PERIODS": 214,
+            "TARGET:return_on_invested_capital:TAX_RATE_OUTLIER": 1,
+            "TAX_RATE_OUTLIER": 1,
+            "VALID": 10
+          },
+          "valueFreeOutputSetHash": "27BD78BC68B2F1B5A2D76D510951C4C6B9A9B2E9FC3F1CACD33430BFE91E85BE",
+          "contentHash": "AAFA790328AE011ACF91D95D5B1FE97C34B33163AA4D6F5E35DAD16C153263FB"
+        },
+        {
+          "decisionDate": "2023-05-18",
+          "securityCount": 216,
+          "availabilityStratum": "STRICT_PIT",
+          "operandStateCounts": {
+            "return_on_invested_capital": {
+              "MISSING": 216
+            },
+            "operating_margin": {
+              "MISSING": 212,
+              "VALID": 4
+            },
+            "free_cash_flow_margin": {
+              "MISSING": 215,
+              "VALID": 1
+            },
+            "earnings_stability": {
+              "MISSING": 212,
+              "VALID": 4
+            },
+            "cash_flow_stability": {
+              "MISSING": 215,
+              "VALID": 1
+            }
+          },
+          "companyQualityTargetCounts": {
+            "MISSING": 216
+          },
+          "reasonCounts": {
+            "BALANCE_PARENT_ALIGNMENT_MISSING": 1,
+            "MISSING_ALIGNED_PERIODS": 1068,
+            "TARGET:return_on_invested_capital:BALANCE_PARENT_ALIGNMENT_MISSING": 1,
+            "TARGET:return_on_invested_capital:MISSING_ALIGNED_PERIODS": 214,
+            "TARGET:return_on_invested_capital:TAX_RATE_OUTLIER": 1,
+            "TAX_RATE_OUTLIER": 1,
+            "VALID": 10
+          },
+          "valueFreeOutputSetHash": "553147A9AA0EC82345873927D747DA584429012B43C94353601F9FBB11048CE3",
+          "contentHash": "49E18AD8D8DB5C10054D7173858CCE69EB79A884BF4D8D9BBDAA287D81B4E6AD"
+        }
+      ]
+    }
+  ],
+  "currentRevisionApproximation": [
+    {
+      "decisionDate": "2015-05-07",
+      "securityCount": 100,
+      "usableCount": 0,
+      "state": "NOT_RUN",
+      "reason": "CURRENT_REVISION_APPROXIMATION_PRODUCER_NOT_IMPLEMENTED"
+    },
+    {
+      "decisionDate": "2016-05-19",
+      "securityCount": 100,
+      "usableCount": 0,
+      "state": "NOT_RUN",
+      "reason": "CURRENT_REVISION_APPROXIMATION_PRODUCER_NOT_IMPLEMENTED"
+    },
+    {
+      "decisionDate": "2017-06-30",
+      "securityCount": 100,
+      "usableCount": 0,
+      "state": "NOT_RUN",
+      "reason": "CURRENT_REVISION_APPROXIMATION_PRODUCER_NOT_IMPLEMENTED"
+    },
+    {
+      "decisionDate": "2018-04-09",
+      "securityCount": 100,
+      "usableCount": 0,
+      "state": "NOT_RUN",
+      "reason": "CURRENT_REVISION_APPROXIMATION_PRODUCER_NOT_IMPLEMENTED"
+    },
+    {
+      "decisionDate": "2019-06-21",
+      "securityCount": 100,
+      "usableCount": 0,
+      "state": "NOT_RUN",
+      "reason": "CURRENT_REVISION_APPROXIMATION_PRODUCER_NOT_IMPLEMENTED"
+    },
+    {
+      "decisionDate": "2020-04-20",
+      "securityCount": 100,
+      "usableCount": 0,
+      "state": "NOT_RUN",
+      "reason": "CURRENT_REVISION_APPROXIMATION_PRODUCER_NOT_IMPLEMENTED"
+    },
+    {
+      "decisionDate": "2021-06-02",
+      "securityCount": 100,
+      "usableCount": 0,
+      "state": "NOT_RUN",
+      "reason": "CURRENT_REVISION_APPROXIMATION_PRODUCER_NOT_IMPLEMENTED"
+    },
+    {
+      "decisionDate": "2022-05-18",
+      "securityCount": 100,
+      "usableCount": 0,
+      "state": "NOT_RUN",
+      "reason": "CURRENT_REVISION_APPROXIMATION_PRODUCER_NOT_IMPLEMENTED"
+    },
+    {
+      "decisionDate": "2023-05-18",
+      "securityCount": 100,
+      "usableCount": 0,
+      "state": "NOT_RUN",
+      "reason": "CURRENT_REVISION_APPROXIMATION_PRODUCER_NOT_IMPLEMENTED"
+    }
+  ],
+  "offline216Replay": {
+    "state": "STOPPED_BELOW_MINIMUM_COVERAGE",
+    "builtTimelineCount": 216,
+    "minimumRequiredUsablePerDate": 100,
+    "controlled100MinimumUsablePerDate": 0,
+    "offline216MinimumUsablePerDate": 0,
+    "reason": "Final coverage threshold is evaluated only after OFFLINE216.",
+    "authorizedPhases": [
+      "PILOT25",
+      "CONTROLLED100",
+      "OFFLINE216"
+    ]
+  },
+  "otherTargets": {
+    "SECURITY_ATTRACTIVENESS_MARGIN_OF_SAFETY": "BLOCKED_VALUATION_POLICY",
+    "EXPECTED_RETURN": "BLOCKED_VALUATION_POLICY",
+    "DOWNSIDE_RISK": "BLOCKED_POLICY_RISK_EVIDENCE"
+  },
+  "parentCoverageAudit": {
+    "depreciation_and_amortization": "PARENT_COVERAGE_UNPROVEN",
+    "cash_dividends_paid": "PARENT_COVERAGE_UNPROVEN",
+    "share_repurchases": "PARENT_COVERAGE_UNPROVEN"
+  },
+  "claimCeiling": "DEVELOPMENT_OBSERVED_TARGET_COMPONENT_ONLY",
+  "fullInMemoryResultHash": "C578F9F13FB401056B7F2E06B838960F36C999C3E922192067585E36C2D9AA20",
+  "compactInMemoryArtifactHash": "6685D3C07CBF324C8D04B428A1299941CC5897235A694FA1382EC5A2DF8B865C",
+  "summaryContentHash": "35B0940D0A9DB2E99CDE696D64AE6E8931B5F6D7FCF6FE5C535AFE6890DF8CAE"
+}

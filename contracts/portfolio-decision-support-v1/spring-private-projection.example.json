@@ -1,0 +1,47 @@
+{
+  "projectionVersion": "portfolio-decision-spring-projection-v1.0.0",
+  "contextId": "00000000-0000-4000-8000-000000000010",
+  "evidenceManifestId": "00000000-0000-4000-8000-000000000011",
+  "constraintPolicyVersionId": "00000000-0000-4000-8000-000000000012",
+  "projectionHash": "sha256:b8857fc057b5ff829aac16cd7274572e069b8fdc047f3a85b4b5d7e6d1d319c0",
+  "contractVersion": "portfolio-decision-scenario-v1.0.0",
+  "scenarioType": "HOLD_CURRENT",
+  "portfolioContextHash": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+  "constraintPolicyHash": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+  "currentCash": "20000",
+  "liabilityValue": "0",
+  "newMoneyAmount": "0",
+  "positions": [{
+    "securityId": "00000000-0000-4000-8000-000000000001",
+    "ticker": "AAPL",
+    "sleeve": "LONG_TERM_CORE",
+    "sectorCode": "45",
+    "currentMarketValue": "80000",
+    "priceState": "VALID",
+    "permission": "BUY_AND_SELL",
+    "humanApprovedCandidate": true,
+    "modelReferenceId": "22222222-2222-4222-8222-222222222222",
+    "targetMarketValue": null
+  }],
+  "sleeveBudgets": [
+    {"sleeve": "LONG_TERM_CORE", "maximumWeight": "1"},
+    {"sleeve": "QUANT_TRADING", "maximumWeight": "0.2"}
+  ],
+  "constraints": {
+    "maximumPositionCount": 20,
+    "maximumPositionWeight": "1",
+    "maximumSectorWeight": "1",
+    "minimumCashWeight": "0.1",
+    "maximumLeverageRatio": "0",
+    "maximumSpeculativeWeight": "0.2"
+  },
+  "costPolicy": {
+    "transactionCostBps": "2",
+    "slippageBps": "3",
+    "impactState": "NOT_ESTIMATED",
+    "taxEstimateState": "NOT_ESTIMATED"
+  },
+  "taxEstimateState": "NOT_ESTIMATED",
+  "taxEstimateAmount": null,
+  "taxLotEvidenceHash": null
+}

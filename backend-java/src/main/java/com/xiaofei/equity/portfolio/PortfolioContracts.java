@@ -46,6 +46,18 @@ public final class PortfolioContracts {
 			@NotNull List<@Valid PositionInput> positions) {
 	}
 
+	public record CreateManualSnapshotRequest(
+			@NotNull Instant asOfTime,
+			@Size(max = 255) String sourceReference,
+			@NotNull SnapshotCompleteness completeness,
+			@NotNull List<@Valid CashBalanceInput> cashBalances,
+			@NotNull List<@Valid PositionInput> positions) {
+		public CreateSnapshotRequest asSnapshotRequest() {
+			return new CreateSnapshotRequest(asOfTime, SnapshotSource.MANUAL, sourceReference,
+					completeness, cashBalances, positions);
+		}
+	}
+
 	public enum SnapshotSource {
 		MANUAL, FILE_IMPORT, SYSTEM
 	}
@@ -75,6 +87,38 @@ public final class PortfolioContracts {
 			SnapshotCompleteness completeness,
 			String contentHash,
 			Instant recordedAt) {
+	}
+
+	public record SnapshotResponse(
+			UUID snapshotId,
+			UUID accountId,
+			Instant asOfTime,
+			SnapshotSource sourceType,
+			String sourceReference,
+			SnapshotCompleteness completeness,
+			String contentHash,
+			Instant sealedAt,
+			Instant recordedAt,
+			List<CashBalanceInput> cashBalances,
+			List<PositionInput> positions) {
+	}
+
+	public record CsvSnapshotPreview(
+			String parserVersion,
+			String fileSha256,
+			long byteCount,
+			int dataRowCount,
+			int cashBalanceCount,
+			int positionCount,
+			boolean valid,
+			List<CsvDiagnostic> diagnostics) {
+	}
+
+	public record CsvDiagnostic(
+			int row,
+			String field,
+			String code,
+			String message) {
 	}
 
 	public record CreatePortfolioRequest(

@@ -1,0 +1,56 @@
+{
+  "contractVersion": "portfolio-decision-task5-final-browser-assertion-v1.0.0",
+  "assertionDate": "2026-08-13",
+  "evidenceClass": "GIT_SAFE_CONTROLLED_SYNTHETIC_BROWSER_ACCEPTANCE",
+  "browser": "Google Chrome through the Codex in-app browser",
+  "route": "/portfolio?portfolioId=28000000-0000-4000-8000-000000000003",
+  "httpStatus": 200,
+  "sourceBindings": {
+    "portfolioPageSha256": "sha256:938432198f6b146a5dd49c4655e1083a23b3298cb877a805de972f8813584e86",
+    "evaluationDecoderSha256": "sha256:92c2c9765d07efb64aa8a6befc1c07eba28afb9db98e73f09d2cb6d8638cbaa4",
+    "v31MigrationSha256": "sha256:f967c378320d440c9462810e5d015f03471ccf2592ac38ad247abb65e73f605d",
+    "v31AcceptanceSha256": "sha256:454137958425a9d215ba4216c1577755a8540665dad548bc6b4698cd6c1b8bc1",
+    "historicalFixtureSha256": "sha256:ef3bdf5fc5d53c6aedd96c10702c393e01a83ee27ff36c2305d50bcc992a9398"
+  },
+  "serviceBoundary": {
+    "browserToNext": "PASS",
+    "nextToSpring": "PASS",
+    "springToPostgresql": "PASS",
+    "fastapiHealth": "PASS"
+  },
+  "domAssertions": {
+    "scenarioType": "TARGET_PORTFOLIO",
+    "evaluationState": "PARTIALLY_MATURED",
+    "comparisonLabel": "HOLD + SPY / SIMULATED",
+    "availableHorizonSessions": 20,
+    "awaitingHorizonSessions": [60, 252, 504, 756],
+    "periodStart": "2025-01-03",
+    "periodEnd": "2025-01-31",
+    "observationCoverage": "21/21 (100.00%)",
+    "grossReturn": "NOT OBSERVED",
+    "acceptedNetReturn": "15.80%",
+    "holdReturn": "16.00%",
+    "acceptedMinusHold": "-0.20%",
+    "spyReturn": "10.00%",
+    "acceptedMinusSpy": "5.80%",
+    "maximumDrawdown": "NOT OBSERVED",
+    "turnover": "0.00%",
+    "entryImplementationCost": "$0.50"
+  },
+  "exactStoredValues": {
+    "acceptedNetReturn": "0.157995",
+    "holdReturn": "0.16",
+    "acceptedMinusHold": "-0.002005",
+    "spyReturn": "0.10",
+    "acceptedMinusSpy": "0.057995",
+    "entryImplementationCost": "0.5"
+  },
+  "safetyBoundary": {
+    "syntheticEvidence": true,
+    "investmentPerformanceClaim": false,
+    "guaranteedReturnClaim": false,
+    "brokerageExecutionAuthorized": false,
+    "llmFinalWeightAuthority": false,
+    "productionModelLabelChanged": false
+  }
+}

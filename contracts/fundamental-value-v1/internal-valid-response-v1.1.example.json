@@ -1,0 +1,76 @@
+{
+  "contractVersion": "internal-fundamental-value-result-v1.1.0",
+  "assemblyId": "10000000-0000-4000-8000-000000000031",
+  "assessmentId": "ccdcaa6b-6254-5141-9aca-294a40f91292",
+  "identity": {
+    "securityId": "10000000-0000-4000-8000-000000000010",
+    "companyId": "10000000-0000-4000-8000-000000000011",
+    "instrumentId": "10000000-0000-4000-8000-000000000012",
+    "shareClassId": "10000000-0000-4000-8000-000000000013",
+    "listingId": "10000000-0000-4000-8000-000000000014",
+    "tickerAssignmentId": "10000000-0000-4000-8000-000000000015",
+    "ticker": "TEST",
+    "mic": "XNYS",
+    "currency": "USD",
+    "completedSessionDate": "2026-07-29"
+  },
+  "state": "VALID",
+  "applicability": "APPLICABLE",
+  "companyType": "MATURE_OPERATING_COMPANY",
+  "reasonCodes": [],
+  "coreInvocationAuthorized": true,
+  "manifestContentHash": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+  "inputSealContentHash": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+  "decisionCutoff": "2026-07-29T20:05:00Z",
+  "sealedIngestionCutoff": "2026-07-29T20:07:00Z",
+  "modelEvidenceLabel": "NOT_VALIDATED",
+  "claimCeiling": "FULL_CURRENT_DECISION",
+  "riskCapCeiling": "0.02",
+  "deterministicAssessment": {
+    "companyType": "MATURE_OPERATING_COMPANY", "applicability": "APPLICABLE",
+    "referencePrice": {"state": "VALID", "value": "100", "reasonCode": null},
+    "currency": "USD", "projectionYears": 5,
+    "companyQuality": {"state": "VALID", "score": "76.91", "reasonCodes": []},
+    "financialResilience": {"state": "VALID", "score": "71.25", "reasonCodes": []},
+    "earningsAndCashFlowQuality": {"state": "VALID", "score": "67.86", "reasonCodes": []},
+    "capitalAllocationQuality": {"state": "VALID", "score": "85.00", "reasonCodes": []},
+    "valuations": [
+      {"method": "FCFF_DCF", "state": "VALID", "low": "128.35", "central": "160.50", "high": "208.74", "reasonCodes": [], "terminalValueShare": "0.6944"},
+      {"method": "NORMALIZED_OWNER_EARNINGS", "state": "VALID", "low": "102.00", "central": "173.33", "high": "388.67", "reasonCodes": [], "terminalValueShare": null},
+      {"method": "EARNINGS_POWER", "state": "VALID", "low": "108.18", "central": "130.00", "high": "156.67", "reasonCodes": [], "terminalValueShare": null},
+      {"method": "COMPARABLE_CROSS_CHECK", "state": "VALID", "low": "125.20", "central": "154.00", "high": "182.80", "reasonCodes": [], "terminalValueShare": null}
+    ],
+    "fairValue": {"state": "VALID", "low": "102.00", "central": "160.50", "high": "388.67", "reasonCodes": []},
+    "marginOfSafety": {"state": "VALID", "low": "0.0200", "central": "0.6050", "high": "2.8867", "reasonCodes": []},
+    "expectedReturn": {"state": "VALID", "low": "0.0431", "central": "0.1589", "high": "0.4022", "reasonCodes": []},
+    "downsideRisk": {"state": "VALID", "score": "22.19", "reasonCodes": []},
+    "claimCeiling": "FULL_CURRENT_DECISION",
+    "thesisEvidence": [
+      {"code": "QUALITY_AT_LEAST_65", "state": "VALID", "observedValue": "76.91", "threshold": "65", "satisfied": true, "reasonCodes": []},
+      {"code": "RESILIENCE_AT_LEAST_60", "state": "VALID", "observedValue": "71.25", "threshold": "60", "satisfied": true, "reasonCodes": []},
+      {"code": "CONSERVATIVE_MARGIN_OF_SAFETY_AT_LEAST_15_PERCENT", "state": "VALID", "observedValue": "0.0200", "threshold": "0.15", "satisfied": false, "reasonCodes": []}
+    ],
+    "counterThesisEvidence": [
+      {"code": "DOWNSIDE_RISK_AT_LEAST_60", "state": "VALID", "observedValue": "22.19", "threshold": "60", "satisfied": false, "reasonCodes": []},
+      {"code": "NET_DEBT_TO_EBITDA_ABOVE_3", "state": "VALID", "observedValue": "0.50", "threshold": "3", "satisfied": false, "reasonCodes": []}
+    ],
+    "invalidationConditions": [
+      {"code": "ROIC_BELOW_8_PERCENT", "state": "VALID", "observedValue": "0.18", "threshold": "0.08", "satisfied": false, "reasonCodes": []},
+      {"code": "INTEREST_COVERAGE_BELOW_3", "state": "VALID", "observedValue": "10", "threshold": "3", "satisfied": false, "reasonCodes": []},
+      {"code": "CENTRAL_MARGIN_OF_SAFETY_BELOW_ZERO", "state": "VALID", "observedValue": "0.6050", "threshold": "0", "satisfied": false, "reasonCodes": []}
+    ],
+    "riskCap": {"ceiling": "0.02", "bindingReasons": ["LIMITED_CONSERVATIVE_MARGIN", "MODERATE_EARNINGS_AND_CASH_FLOW_QUALITY", "MODEL_EVIDENCE_CEILING"]},
+    "modelEvidenceLabel": "NOT_VALIDATED",
+    "modelVersion": "FUNDAMENTAL-VALUE-v1.0.0", "strategyVersion": "LONG-TERM-CORE-v1.0.0",
+    "formulaVersion": "fundamental-value-formulas-v1.1.0",
+    "aggregationVersion": "FUNDAMENTAL-VALUE-WEIGHTED-MEDIAN-QUANTILE-v1.0.0",
+    "riskPolicyVersion": "LONG-TERM-CORE-RISK-CAP-TIERS-v1.0.0",
+    "assumptionPolicyVersion": "fundamental-value-assumptions-v1.1.0",
+    "inputHash": "sha256:e0fa0dabd17e99d4debbab98cb8973bed7f79933bb28a640228fce24df719338",
+    "contentHash": "sha256:2af2267e5897d2939e439cac52279525da7014bc03eca8910294c9dcae9b2642",
+    "deterministicRankingAuthorized": false, "finalPortfolioWeightAuthorized": false,
+    "automaticBrokerageExecutionAuthorized": false
+  },
+  "finalPortfolioWeightAuthorized": false,
+  "automaticBrokerageExecutionAuthorized": false
+}

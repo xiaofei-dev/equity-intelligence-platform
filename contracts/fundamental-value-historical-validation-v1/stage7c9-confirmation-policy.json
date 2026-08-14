@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "FV-STAGE7C9-CONFIRMATION-POLICY-v1.0.0",
+  "iteration": "FINAL_RETROSPECTIVE_ITERATION",
+  "claim": "DEVELOPMENT_CONFIRMATORY_AFTER_PROTOCOL_REPAIR_CURRENT_REVISION_APPROXIMATION",
+  "notUntouchedHoldout": true,
+  "bindings": {
+    "c8Disposition": "8C0610A47178CE54993E93B5926BDC94D05FF59E29A7B38B662AEC4E66C54385",
+    "c7Receipt": "B74761883F9395F1334B3F78983DB4237DF0F3F245F449EFFDC73F98FBB738AD",
+    "calendar": "7FE1CA16970AE0346C67120DD4F32BA3BEF039276B9800757D15D3744189AA2C",
+    "predictorSeal": "E110C20287CB1B9E2260E9DAA33C2F2A8B5CD290F11E20EB733B918F61F595DD"
+  },
+  "dateSelection": {
+    "version": "FV-STAGE7C9-FRESH-DATE-SELECTION-v1.0.0",
+    "tupleEncoding": "CANONICAL_JSON_ARRAY_UTF8_COMPACT",
+    "rank": "SHA256([version,yearInteger,sessionDate])_ASC_DATE_ASC",
+    "strata": "2015_2022_Q4_PLUS_2023_Q1",
+    "dates": [
+      "2015-11-12",
+      "2016-10-06",
+      "2017-12-26",
+      "2018-11-06",
+      "2019-11-25",
+      "2020-11-06",
+      "2021-10-22",
+      "2022-11-17",
+      "2023-01-09"
+    ],
+    "selectionArtifactHash": "124596447E3FE8C5E28D5EC9320F6B34C0C390C579723B6806A7DE2FCBF1FE3B",
+    "dateSetHash": "CA21946B72B21A68D7D6D802C644CF2E75056B3551DC9A8677E730AC793DB549",
+    "maturity": 756,
+    "excludeAllC8Dates": true
+  },
+  "rankCorrelation": {
+    "name": "DETERMINISTIC_ORDINAL_RANK_CORRELATION",
+    "predictorRank": "1_IS_HIGHEST_SCORE_SECURITY_ID_ASC_TIE",
+    "returnRank": "1_IS_HIGHEST_NET_ANNUALIZED_RETURN_SECURITY_ID_ASC_TIE",
+    "formula": "PEARSON_COMPLETE_ORDINAL_VECTORS",
+    "positive": "ALIGNED",
+    "minimumPairs": 100
+  },
+  "cost": {
+    "adv": "MEAN_RAW_CLOSE_TIMES_VOLUME_EXACT_60_OBSERVED_SESSIONS_STRICTLY_PRE_ENTRY_POSITIVE",
+    "participation": "ORDER_NOTIONAL_DIV_ADTV",
+    "impactBps": "MIN_50_COMMA_25_TIMES_SQRT_PARTICIPATION",
+    "roundTripBps": "2_PLUS_2_TIMES_OPEN_1_PLUS_IMPACT_CLOSE",
+    "rate": "ROUND_TRIP_BPS_DIV_10000",
+    "net": "GROSS_MINUS_RATE",
+    "portfolioNotionalUsd": "100000"
+  },
+  "terminalRegistry": {
+    "expectedRows": 5157,
+    "key": "SECURITY_ID_DECISION_DATE_HORIZON",
+    "states": [
+      "USABLE",
+      "MISSING"
+    ],
+    "missingNumericForbidden": true,
+    "aggregateOnlyUsable": true,
+    "sealedDenominator": true
+  },
+  "carriedC8Rules": {
+    "policyHash": "FD2451B51EFC7B96F69D1CABE4CEA8337B7B43498A8158EBB317057F30DD19A1",
+    "allowedChanges": [
+      "FRESH_DATES",
+      "CORRECTED_RANK_DIRECTION",
+      "COMPLETE_COST_FUNCTION",
+      "TERMINAL_REGISTRY_REPRODUCIBILITY"
+    ],
+    "horizons": [
+      252,
+      504,
+      756
+    ],
+    "primary": 756,
+    "minimumEligibleDates": 7,
+    "coverage": "UNCHANGED_C8",
+    "pathsMddDownsideSevereHitSpy": "UNCHANGED_C8",
+    "sector": "CURRENT_CLASSIFICATION_APPROXIMATION_DIAGNOSTIC"
+  },
+  "outcomesReadBeforeIntent": false,
+  "networkRequestsExpected": 0,
+  "contentHash": "11A639CA376DE3C1205F6F22EF312210E5A8620D549431168A7CCA67C5419D73"
+}

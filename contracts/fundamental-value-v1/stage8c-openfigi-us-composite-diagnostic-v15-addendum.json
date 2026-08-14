@@ -1,0 +1,95 @@
+{
+  "contractVersion": "FV-STAGE8C-OPENFIGI-US-COMPOSITE-DIAGNOSTIC-v1.5.0",
+  "state": "PREREGISTERED_OFFLINE_NETWORK_CLOSED",
+  "scope": "Post-v1.4 engineering diagnosis for the public GOOG, FOX, and MSFT ISIN/CUSIP pairs only.",
+  "predecessor": {
+    "disposition": "REJECTED_AMBIGUOUS_IDENTIFIER_MAPPING",
+    "decisionCode": "DIAGNOSTIC_REJECTED_GATE_NOT_MET",
+    "planContentHash": "589B4E2C21C6888DAD3630302B61318340C0D7F1C118844053202E64D4F94542",
+    "reviewContentHash": "7A3F6634C921A1C9CCF18B5F6FEEF715B84023082A271DD9BF3212F1F344CC49",
+    "checkpointReceiptSetHash": "CCFC7F9C5E99B926793D89A235FBF6DC440996529B395C900977DFF295D5E4E5",
+    "diagnosticAcceptanceContentHash": "7217C36B06E261FEED0B65A4D79F1F11F17EF80AAD0096BBFF4A0E7D2CA62950",
+    "storageRejectionContentHash": "408209D2472B6C41087D788DFEA8FF17C906763F96357945CB9E9223E9E5E4E5"
+  },
+  "planContentHash": "F7F2E728FB4B91D9FA7E9B7F63B5E38259655B7B64D798BD63BE54DCA187FB40",
+  "providerOrigin": "https://api.openfigi.com",
+  "endpointPath": "/v3/mapping",
+  "requestFilter": {
+    "exchCode": "US",
+    "micCode": null,
+    "meaning": "US composite identity filter; it does not prove an operating MIC."
+  },
+  "members": [
+    {
+      "securityId": "EODHD:GOOG",
+      "symbol": "GOOG",
+      "expectedOperatingMic": "XNAS",
+      "identifierTypes": [
+        "ID_ISIN",
+        "ID_CUSIP"
+      ]
+    },
+    {
+      "securityId": "EODHD:FOX",
+      "symbol": "FOX",
+      "expectedOperatingMic": "XNAS",
+      "identifierTypes": [
+        "ID_ISIN",
+        "ID_CUSIP"
+      ]
+    },
+    {
+      "securityId": "EODHD:MSFT",
+      "symbol": "MSFT",
+      "expectedOperatingMic": "XNAS",
+      "identifierTypes": [
+        "ID_ISIN",
+        "ID_CUSIP"
+      ]
+    }
+  ],
+  "physicalRequestCount": 2,
+  "logicalJobCount": 6,
+  "maxJobsPerRequest": 5,
+  "retryLimit": 0,
+  "requestIdentities": [
+    "B43CE86198BC0F02E6D999D72458215F58A36279FD6678F95A384177F40D6A07",
+    "7EB07E02D916A330DFE78488235BD968F80F994E335CE6E1F5D42A54D80F03FC"
+  ],
+  "wireBodySha256": [
+    "8586AA7F7E68618C28208EAB8125AE5F36C9B9CE9D67BC71FFFC8885C91E6072",
+    "DF758BDB6B0695B27EFD6D21866CCF29FE22435A4A7431642BCD2CF96FD1E098"
+  ],
+  "wireContentHashes": [
+    "D3CE775763B644B050AD790D8E8620EEC55766E4D1DFA0A7370E5D766BEBD7EA",
+    "E9C18F93FAEDD83F263D21C7FB2CE48DE859F2D255F49473F28974300A72253F"
+  ],
+  "acceptanceGate": {
+    "successDecisionCode": "US_COMPOSITE_DIAGNOSTIC_COMPLETE_CONVERGENT",
+    "rejectionDecisionCode": "US_COMPOSITE_DIAGNOSTIC_REJECTED_GATE_NOT_MET",
+    "uniquePrimaryJobs": 6,
+    "completeConvergentPairs": 3,
+    "warnings": 0,
+    "errors": 0,
+    "ambiguousPrimary": 0,
+    "noPrimary": 0,
+    "pairConflicts": 0
+  },
+  "failureSealing": {
+    "appendOnlyRejectionSupported": true,
+    "rejectionRequiresFailedGate": true,
+    "rejectionRetainsDiagnosticOnlyBoundary": true
+  },
+  "claimBoundary": {
+    "postPredecessorObservation": true,
+    "diagnosticOnly": true,
+    "operatingMicBindingStatus": "REQUIRES_SEC_CORROBORATION",
+    "durableIdentityAuthorized": false,
+    "remainderAuthorized": false,
+    "evidenceUpgradeAuthorized": false,
+    "holdoutClaimed": false,
+    "modelValidationClaimed": false
+  },
+  "networkAuthorized": false,
+  "contentHash": "E389DB44D9869E3FE977E0C9803D2E62EAA2323E36985D2BE70B7E12A5E4B52D"
+}

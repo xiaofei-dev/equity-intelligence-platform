@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "FUNDAMENTAL-VALUE-HISTORICAL-PREPARATION-v1.0.0",
+  "status": "PREPARATION_BLOCKED_BEFORE_NETWORK",
+  "outcomesInspected": false,
+  "universeContentHash": "6B43281FEE851386AE549945EA43DF674E18EC332526DEF94FD0D23265D55353",
+  "predictors": [
+    {
+      "target": "COMPANY_QUALITY",
+      "source_field_path": "company_quality.score",
+      "higher_is_better": true,
+      "eligibility_definition": "assessment.applicability == Applicability.APPLICABLE and assessment.company_type == CompanyType.MATURE_OPERATING_COMPANY and selected component state == DataState.VALID",
+      "binary_condition_paths": ["thesis_evidence:QUALITY_AT_LEAST_65"],
+      "model_version": "FUNDAMENTAL-VALUE-v1.0.0",
+      "formula_version": "fundamental-value-formulas-v1.1.0",
+      "assumption_version": "fundamental-value-assumptions-v1.1.0",
+      "aggregation_version": "FUNDAMENTAL-VALUE-WEIGHTED-MEDIAN-QUANTILE-v1.0.0",
+      "mapping_version": "FV-STAGE7-TARGET-MAPPING-v1.0.0",
+      "mapping_content_hash": "05DFA283F8532968E43071F7DB668930949EB68984D4CE3351623DEFBB90D30D",
+      "projection_years": 3
+    },
+    {
+      "target": "SECURITY_ATTRACTIVENESS_MARGIN_OF_SAFETY",
+      "source_field_path": "margin_of_safety.low",
+      "higher_is_better": true,
+      "eligibility_definition": "assessment.applicability == Applicability.APPLICABLE and assessment.company_type == CompanyType.MATURE_OPERATING_COMPANY and selected component state == DataState.VALID",
+      "binary_condition_paths": ["thesis_evidence:CONSERVATIVE_MARGIN_OF_SAFETY_AT_LEAST_15_PERCENT", "invalidation_conditions:CENTRAL_MARGIN_OF_SAFETY_BELOW_ZERO"],
+      "model_version": "FUNDAMENTAL-VALUE-v1.0.0",
+      "formula_version": "fundamental-value-formulas-v1.1.0",
+      "assumption_version": "fundamental-value-assumptions-v1.1.0",
+      "aggregation_version": "FUNDAMENTAL-VALUE-WEIGHTED-MEDIAN-QUANTILE-v1.0.0",
+      "mapping_version": "FV-STAGE7-TARGET-MAPPING-v1.0.0",
+      "mapping_content_hash": "4B66C45287503B1A127E9CAE9E34674B87478CD664295E3A0B32D65F458CF160",
+      "projection_years": 3
+    },
+    {
+      "target": "EXPECTED_RETURN",
+      "source_field_path": "expected_return.central",
+      "higher_is_better": true,
+      "eligibility_definition": "assessment.applicability == Applicability.APPLICABLE and assessment.company_type == CompanyType.MATURE_OPERATING_COMPANY and selected component state == DataState.VALID",
+      "binary_condition_paths": [],
+      "model_version": "FUNDAMENTAL-VALUE-v1.0.0",
+      "formula_version": "fundamental-value-formulas-v1.1.0",
+      "assumption_version": "fundamental-value-assumptions-v1.1.0",
+      "aggregation_version": "FUNDAMENTAL-VALUE-WEIGHTED-MEDIAN-QUANTILE-v1.0.0",
+      "mapping_version": "FV-STAGE7-TARGET-MAPPING-v1.0.0",
+      "mapping_content_hash": "07D7F3B5ED34ED4E578E6E01E5BD0202393572076082BFAC5D21905316A547FD",
+      "projection_years": 3
+    },
+    {
+      "target": "DOWNSIDE_RISK",
+      "source_field_path": "downside_risk.score",
+      "higher_is_better": false,
+      "eligibility_definition": "assessment.applicability == Applicability.APPLICABLE and assessment.company_type == CompanyType.MATURE_OPERATING_COMPANY and selected component state == DataState.VALID",
+      "binary_condition_paths": ["counter_thesis_evidence:DOWNSIDE_RISK_AT_LEAST_60"],
+      "model_version": "FUNDAMENTAL-VALUE-v1.0.0",
+      "formula_version": "fundamental-value-formulas-v1.1.0",
+      "assumption_version": "fundamental-value-assumptions-v1.1.0",
+      "aggregation_version": "FUNDAMENTAL-VALUE-WEIGHTED-MEDIAN-QUANTILE-v1.0.0",
+      "mapping_version": "FV-STAGE7-TARGET-MAPPING-v1.0.0",
+      "mapping_content_hash": "3FF672B925486BBF8495ED7CCA1A15A8A7161B8DDB30B9B25E6FE618F2DFACCB",
+      "projection_years": 3
+    }
+  ],
+  "operandFeasibilityContentHash": "EC668D33678BEB4ECE1857B1D0C56D21D0B1F42CB127D643317AD9B5C45FC4A0",
+  "coverageFeasibilityContentHash": "7F9AED79FACD65821C7FA760D1B4F92A57717C5537F5D72E5A3E7EEBB0F0E51E",
+  "rawSourceFeasibilityContentHash": "9B29B7D30DCECF3DCA72BC9450C493027C3F0188B3D3169644A6E58ABB1C670E",
+  "dailyPathContentHash": "1F997AD8BCDF43CB17F8F46E65DD3FD72D9EC8456E73779CDB205EE04044681C",
+  "executionContentHash": "008D063809487A539E4E635AB57B92F3177C65CD5C99DE7F12C2FD30C379A0BE",
+  "preparationContentHash": "60391A39074E9DD8B1B78CDC740210F46760D72158030CDFCCBF5D0C3F427B6F",
+  "summaryContentHash": "4EAC7BD3028F80222004A5F23641C29DC0DC6B5025B3DBE50931F4AEF7DA93AC"
+}

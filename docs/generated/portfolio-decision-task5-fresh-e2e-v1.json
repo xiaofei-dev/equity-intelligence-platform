@@ -1,0 +1,67 @@
+{
+  "artifactVersion": "portfolio-decision-task5-fresh-e2e-v1.0.0",
+  "state": "PASS",
+  "migrationHead": "V35",
+  "database": {
+    "kind": "freshDisposablePostgresql17",
+    "migratedFrom": "V1",
+    "migratedTo": "V35"
+  },
+  "fixture": {
+    "kind": "offlineControlledGoog",
+    "providerNetworkRequests": 0,
+    "brokerageActions": 0,
+    "portfolioId": "33944475-f78c-4112-b143-12557f21c396",
+    "contextId": "45e8e184-2a58-4cc1-858b-4b33bcfed83a",
+    "evidenceManifestId": "3fe5f88d-ee72-4c6e-89b1-7f923d3e7b9b"
+  },
+  "comparison": {
+    "comparisonId": "f0edb2de-93f8-3ed9-821a-949ae8206c83",
+    "comparisonContentHash": "sha256:24a45a35fd2774ae1fecae5295cfd08cbde73a3f595baa607877c4c4a224a612",
+    "scenarioTypes": [
+      "CONSTRAINED_REBALANCE",
+      "HOLD_CURRENT",
+      "NEW_MONEY_ONLY",
+      "TARGET_PORTFOLIO"
+    ],
+    "scenarioContentHashes": [
+      "sha256:aee2104adcd9bd1ee85b695bb06dba781a29712d3c13f0244837df251cd323a6",
+      "sha256:ea84eff7bd25fc9dcd993b94b5daa7bb8d0677f1fafad88f5e18f31a71e4308f",
+      "sha256:c5ec029894446e025c433cb081dd1a6e5ca1ddd85c9f45d88c503953f6f0e95a",
+      "sha256:eb06786d6f6431cbc128ce52435e937c21d2a9b8fbafea602f9d93a4a1ce448a"
+    ],
+    "selectedScenarioId": "8dc6b8c5-5943-4049-b3b9-fd8275b472f2",
+    "humanDecisionId": "180ace5b-4d21-46ec-af76-8ec448e0c30b",
+    "latestComparisonMatches": true
+  },
+  "http": {
+    "comparisonCreate": 201,
+    "comparisonReplay": 201,
+    "comparisonConflict": 409,
+    "selection": 200,
+    "selectionReplay": 200,
+    "selectionConflict": 409,
+    "decision": 201,
+    "decisionReplay": 201,
+    "decisionConflict": 409
+  },
+  "nextJsReadback": {
+    "route": "/portfolio?portfolioId=33944475-f78c-4112-b143-12557f21c396",
+    "capturedAt": "2026-08-14T00:55:19Z",
+    "status": 200,
+    "contentType": "text/html; charset=utf-8",
+    "responseByteCount": 101435,
+    "responseSha256": "sha256:c87f49be4bee0f791238cab55a5f59606c88d5417eec82a527a209871ce60b0e",
+    "exactFourVisible": true,
+    "allScenarioTypesVisible": true,
+    "acceptedHumanConclusionVisible": true,
+    "notValidatedVisible": true,
+    "noFinalWeightOrOrderAuthorityBoundaryVisible": true,
+    "sourceSha256": {
+      "frontend/src/app/portfolio/page.tsx": "sha256:639ea057a0409ea3cc67e90fd1fc1fd61c03ebc74f03e9451d33ab0598f9651e",
+      "frontend/src/app/portfolio/v32-workspace.tsx": "sha256:af46547e84a9e5c409675866a1fdd554f2b80d5f17bc0afa7126efe050df0ce7",
+      "frontend/src/lib/portfolio-decision/v32.ts": "sha256:3c542c841df2a5baa7a0175b633769d0e3c23d00ff0f159c8938a33e54cc229e"
+    }
+  },
+  "historicalMaturityEvidence": "Existing PostgreSQL typed longitudinal acceptance remains separate; no future maturity was fabricated."
+}

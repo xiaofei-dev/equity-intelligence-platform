@@ -1,0 +1,140 @@
+{
+  "schemaVersion": "FV-STAGE7C8-HISTORICAL-OUTCOME-FINAL-v1.0.0",
+  "sourceResultHash": "9533393392F9539DD2B39516FD12FE020129AB5C9FCEADFE24CD2767B96F92E1",
+  "policyHash": "FD2451B51EFC7B96F69D1CABE4CEA8337B7B43498A8158EBB317057F30DD19A1",
+  "claimCeiling": "DEVELOPMENT_OBSERVED_CURRENT_REVISION_APPROXIMATION",
+  "evidenceRuling": "DEVELOPMENT_OBSERVED_CURRENT_REVISION_APPROXIMATION",
+  "modelLevelUpgrade": false,
+  "thresholdResults": {
+    "completeDates": true,
+    "medianRankIc": true,
+    "positiveRankIcDates": true,
+    "highMinusLowSpread": true,
+    "highSpyExcess": true,
+    "highSpyWinDates": true,
+    "leaveOneOutNonnegative": true,
+    "medianHighMddDeteriorationWithin5pp": true,
+    "stressVetoClear": true
+  },
+  "allMarketFirstDirectionalThresholdsPassed": true,
+  "primary756": {
+    "eligiblePrimaryDates": 9,
+    "primaryDateCount": 9,
+    "evidenceConclusion": "INSUFFICIENT_EVIDENCE",
+    "medianRankIc": "0.1365622367209388898685319070",
+    "positiveRankIcDates": 9,
+    "medianHighMinusLowNetAnnualized": "0.027626750381824353648668952",
+    "medianHighSpyNetAnnualizedExcess": "0.058976977110414042939245271",
+    "highSpyWinDates": 9
+  },
+  "horizonDiagnostics": {
+    "252": {
+      "eligibleDates": 9,
+      "medianRankIc": "0.1032589752527012896479609620",
+      "medianHighMinusLowNetAnnualized": "0.046814852745349282013191842",
+      "medianHighSpyNetAnnualizedExcess": "0.0706604631932042107907095477"
+    },
+    "504": {
+      "eligibleDates": 9,
+      "medianRankIc": "0.06660862704555656822602804946",
+      "medianHighMinusLowNetAnnualized": "0.029525126374589403371745981",
+      "medianHighSpyNetAnnualizedExcess": "0.055915942630308929142306106"
+    },
+    "756": {
+      "eligibleDates": 9,
+      "medianRankIc": "0.1365622367209388898685319070",
+      "medianHighMinusLowNetAnnualized": "0.027626750381824353648668952",
+      "medianHighSpyNetAnnualizedExcess": "0.058976977110414042939245271"
+    }
+  },
+  "leaveOneDateOut": [
+    {
+      "omittedDate": "2015-05-07",
+      "medianHighSpyNetAnnualizedExcess": "0.0611357728449979337703635955"
+    },
+    {
+      "omittedDate": "2016-05-19",
+      "medianHighSpyNetAnnualizedExcess": "0.0542809264531545841657298935"
+    },
+    {
+      "omittedDate": "2017-06-30",
+      "medianHighSpyNetAnnualizedExcess": "0.052122130718570693334611569"
+    },
+    {
+      "omittedDate": "2018-04-09",
+      "medianHighSpyNetAnnualizedExcess": "0.0611357728449979337703635955"
+    },
+    {
+      "omittedDate": "2019-06-21",
+      "medianHighSpyNetAnnualizedExcess": "0.0611357728449979337703635955"
+    },
+    {
+      "omittedDate": "2020-04-20",
+      "medianHighSpyNetAnnualizedExcess": "0.052122130718570693334611569"
+    },
+    {
+      "omittedDate": "2021-06-02",
+      "medianHighSpyNetAnnualizedExcess": "0.052122130718570693334611569"
+    },
+    {
+      "omittedDate": "2022-05-18",
+      "medianHighSpyNetAnnualizedExcess": "0.052122130718570693334611569"
+    },
+    {
+      "omittedDate": "2023-05-18",
+      "medianHighSpyNetAnnualizedExcess": "0.0611357728449979337703635955"
+    }
+  ],
+  "medianHighGrossMddDeteriorationVsSpy": "-0.0012833440305563003763910635",
+  "nonOverlappingAnchors": {
+    "dates": [
+      "2015-05-07",
+      "2019-06-21",
+      "2023-05-18"
+    ],
+    "count": 3,
+    "medianHighSpyNetAnnualizedExcess": "0.029022286577108418896025291"
+  },
+  "stressDiagnostics": [
+    {
+      "decisionDate": "2018-09-20",
+      "annualizedUnderperformanceVeto": false,
+      "mddDeteriorationVeto": false,
+      "vetoNode": false,
+      "highSpyNetAnnualizedExcess": "0.119710088754281622514472384",
+      "highGrossMdd": "-0.3496881507392806034724327212",
+      "spyGrossMdd": "-0.3371726930123547916314964891"
+    },
+    {
+      "decisionDate": "2020-02-19",
+      "annualizedUnderperformanceVeto": false,
+      "mddDeteriorationVeto": false,
+      "vetoNode": false,
+      "highSpyNetAnnualizedExcess": "0.041465753003857223019736389",
+      "highGrossMdd": "-0.332774679224924196699228982",
+      "spyGrossMdd": "-0.3344382679040238249184290607"
+    },
+    {
+      "decisionDate": "2022-01-03",
+      "annualizedUnderperformanceVeto": false,
+      "mddDeteriorationVeto": false,
+      "vetoNode": false,
+      "highSpyNetAnnualizedExcess": "0.062868247820417094375169412",
+      "highGrossMdd": "-0.2617918808232063925443266823",
+      "spyGrossMdd": "-0.2447109751743414620828690899"
+    }
+  ],
+  "stressVetoNodeCount": 0,
+  "sectorDiagnostics": "NOT_OBSERVED_CURRENT_CLASSIFICATION_BINDING_NOT_IMPLEMENTED",
+  "limitations": [
+    "CURRENT_REVISION_APPROXIMATION",
+    "CURRENT_UNIVERSE_SURVIVORSHIP_LIMITATION",
+    "COMPANY_QUALITY_TARGET_ONLY",
+    "SECTOR_DIAGNOSTIC_NOT_OBSERVED",
+    "NOT_STRICT_PIT",
+    "NOT_PRODUCTION_ELIGIBLE",
+    "NOT_FORWARD_SUPPORT"
+  ],
+  "stage8Readiness": "ELIGIBLE_FOR_MIGRATION_FREE_READINESS_CONTRACT_ONLY",
+  "contentHash": "104D3B414A9F5638AF1A5A7CB5334589AF1A1A866F5E58284C90EBF9378963F0"
+}

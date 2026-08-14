@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "FV-STAGE7C6-OUTCOME-PATH-PREFLIGHT-v1.0.0",
+  "state": "BLOCKED_OUTCOME_PATH_INCOMPLETE",
+  "c5CoverageContentHash": "848ED7DE1A55F3EBE56B6DAB4E5BF8E347C303BF803A0FAC1F096FDA7E09DB4C",
+  "c5PredictorCheckpointContentHash": "D9BF09661416214C1FF9788D41AC9E1FD6505FB72E02C091B762DA4F98CCA712",
+  "inventory": {
+    "c5Population": {
+      "predictorRecordCount": 1804,
+      "distinctSecurityCount": 191,
+      "distinctDecisionDateCount": 12,
+      "identitySetHash": "B29306CE3B1A047C074B68FDA07149FFF72F7B2ECD2BC0D78AAD7B42692656C7",
+      "securityDateSetHash": "3D52EC5A631B518C9484799E355EA6272C835334B8F558AD25B03A5E683A387B",
+      "populationLabel": "CONTROLLED_OVERLAP_CURRENT_UNIVERSE_RETROSPECTIVE",
+      "survivorshipLimitation": true,
+      "notA310UniverseClaim": true
+    },
+    "controlledCaches": {
+      "yahoo": {
+        "manifestSha256": "E322AC57C00BB4018AC883A2F0EF3461299D7D97725B0791C75EA01846D08E27",
+        "status": "COMPLETE",
+        "symbolCount": 56,
+        "includesSpy": true,
+        "includesAllSectorEtfs": false,
+        "identityBinding": "SYMBOL_ONLY"
+      },
+      "eodhd": {
+        "auditSha256": "2AE865EA4EC446F3FBED8BC5B1BC80F669B6967988BAA74FB01A0E55DED1C027",
+        "eodSecurityCount": 216,
+        "includesBenchmarks": false,
+        "includesCorporateActions": false,
+        "identityBinding": "SYMBOL_ONLY"
+      }
+    }
+  },
+  "outcomeContractSealed": false,
+  "numericOutcomesRead": false,
+  "acquisitionPlanGenerated": false,
+  "networkAuthorized": false,
+  "physicalRequestsExecuted": 0,
+  "requestWeightConsumed": 0,
+  "retryLimit": 0,
+  "unknownRequestsRetried": 0,
+  "blockers": [
+    "CANONICAL_SECURITY_LISTING_SHARE_CLASS_AND_TICKER_INTERVALS_UNPROVEN",
+    "EXACT_COMPLETED_SESSION_CALENDAR_AND_OUTCOME_CUTOFF_UNBOUND",
+    "PER_SECURITY_ENTRY_EXIT_MATURITY_UNPROVEN",
+    "ADJUSTMENT_ACTION_DOUBLE_COUNT_PREVENTION_UNBOUND",
+    "DELISTING_ACQUISITION_TERMINAL_CASH_TREATMENT_UNPROVEN",
+    "NUMERIC_COST_SLIPPAGE_LIQUIDITY_POLICY_UNFROZEN",
+    "ELEVEN_SECTOR_ETF_PATHS_ABSENT",
+    "DATED_SECTOR_CLASSIFICATION_UNPROVEN",
+    "OUTCOME_TERMINAL_POPULATION_REGISTRY_ABSENT",
+    "EXECUTION_RUNNER_BLOCKED_EXECUTION_CONTRACT_INCOMPLETE"
+  ],
+  "stopRationale": "A complete accepted-registry request matrix cannot be derived until stable identities, benchmark/action requirements, and terminal policies are bound; an arbitrary partial plan is forbidden.",
+  "stage8State": "CLOSED_STAGE7_INCOMPLETE",
+  "providerValuesIncluded": false,
+  "contentHash": "1A70BA1FAA95A11C2450DA29AA77D13CA67102290FC1C23AABECDFE589230ECF"
+}

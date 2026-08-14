@@ -1,0 +1,68 @@
+{
+  "contractVersion": "FV-STAGE8C-OPENFIGI-DIAGNOSTIC-v1.4-RESULT-v1.0.0",
+  "recordedDate": "2026-08-02",
+  "state": "REJECTED_AMBIGUOUS_IDENTIFIER_MAPPING",
+  "run": {
+    "runId": "20260802T141600Z-STAGE8C-OPENFIGI-V14-001",
+    "diagnosticContractVersion": "FV-STAGE8C-OPENFIGI-DIAGNOSTIC-v1.4.0",
+    "executionContractVersion": "FV-STAGE8C-OPENFIGI-DIAGNOSTIC-EXECUTION-v1.0.0",
+    "planContentHash": "589B4E2C21C6888DAD3630302B61318340C0D7F1C118844053202E64D4F94542",
+    "authorizationContentHash": "2D64B19612B8C83132A538185245112940B1D8A2F965E2DEDEB75BD4E6D1FB5E",
+    "reviewContentHash": "7A3F6634C921A1C9CCF18B5F6FEEF715B84023082A271DD9BF3212F1F344CC49",
+    "replayVerificationContentHash": "23A7427A522DECA4F0F4657C9A0395E356EC8D1F369F7CD22017D75E3E6F23CC",
+    "diagnosticAcceptanceContentHash": "7217C36B06E261FEED0B65A4D79F1F11F17EF80AAD0096BBFF4A0E7D2CA62950",
+    "storageBackedAcceptanceContentHash": "408209D2472B6C41087D788DFEA8FF17C906763F96357945CB9E9223E9E5E4E5",
+    "checkpointReceiptSetHash": "CCFC7F9C5E99B926793D89A235FBF6DC440996529B395C900977DFF295D5E4E5"
+  },
+  "execution": {
+    "physicalRequests": 2,
+    "logicalJobs": 10,
+    "completedPhysicalRequests": 2,
+    "newPhysicalRequests": 2,
+    "replayedPhysicalRequestsDuringZeroSendReview": 2,
+    "failedPhysicalRequests": 0,
+    "retryLimit": 0,
+    "automaticRetries": 0,
+    "unknownTransportOutcomes": 0,
+    "httpStatusCodes": [
+      200,
+      200
+    ],
+    "responseBodySha256": [
+      "99E2646A90BB09C23F90E9D22982BD6ADEFA86468DDE3871CA9C64F3700C4429",
+      "2BAF9F84C4332195D3559C29749377F3C085C3853474ECD4D90B5852157F7DAC"
+    ],
+    "terminalEventHashes": [
+      "EA649CBD9084541A430D72ECB1B54F2AF378E3C8E73C8044DB8B9448AF414D5E",
+      "0345AE878EDD5F633DA6A2CD63C885C87C4844A1FAB56EA06639401F37D24015"
+    ]
+  },
+  "review": {
+    "uniquePrimary": 4,
+    "ambiguousPrimary": 6,
+    "unresolvedWarnings": 0,
+    "errors": 0,
+    "noPrimary": 0,
+    "completeConvergentPairs": 2,
+    "pairConflicts": 0
+  },
+  "decision": {
+    "code": "DIAGNOSTIC_REJECTED_GATE_NOT_MET",
+    "accepted": false,
+    "reason": "The frozen diagnostic requires ten unique primary mappings and five complete convergent identifier pairs. Six logical jobs remained ambiguous and only two pairs converged.",
+    "diagnosticOnly": true,
+    "durableIdentityAuthorized": false,
+    "remainderAuthorized": false,
+    "operatingMicBindingStatus": "REQUIRES_SEC_CORROBORATION"
+  },
+  "boundaries": {
+    "sameDiagnosticRetryAuthorized": false,
+    "remainingOpenFigiAuthorizedByThisResult": false,
+    "secAuthorizedByThisResult": false,
+    "databaseWriteAuthorizedByThisResult": false,
+    "v24EnrollmentAuthorizedByThisResult": false,
+    "outcomeAccessAuthorizedByThisResult": false,
+    "modelEvidenceLabel": "NOT_VALIDATED"
+  },
+  "contentHash": "08876DFB37E52DE43ED3B4BEB4C92EBA2A2B2F0C6D3C5EEDE9149DD5C3FDBADD"
+}

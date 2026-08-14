@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "QUANT-TRADING-HISTORICAL-EXECUTION-ADDENDUM-v1.1.6",
+  "predecessorAddendumVersion": "QUANT-TRADING-HISTORICAL-EXECUTION-ADDENDUM-v1.1.5",
+  "predecessorAddendumHash": "379FB2D5D49DAE47ECBF0AC88C96FDE5EBF79D3A8311DEE2253C735C1D42452C",
+  "successorExecutorVersion": "QUANT-TRADING-HISTORICAL-EXECUTOR-v1.1.6",
+  "successorResultVersion": "QUANT-TRADING-HISTORICAL-RESULT-v1.1.6",
+  "successorTerminalVersion": "QUANT-TRADING-HISTORICAL-TERMINAL-REGISTRY-v1.1.6",
+  "failedRun": {
+    "runId": "QUANT-V11-CONTROLLED-20260812-005",
+    "state": "FAILED_PRE_POST_ACCESS_SEAL",
+    "failedReason": "Yahoo_bar_value_is_invalid",
+    "diagnosticReason": "high_price_below_another_OHLC_value",
+    "executionIntentArtifactHash": "F5592E7594F6C39AF2ACE20C517E4EBB95B7A6C5AB3773BF9BC9827A9D0A76B3",
+    "executionIntentEventHash": "18CC56CE540ED4EEA2DA4063DBCEC80FFCCF7544C9EEA4EB8FDEDD8650195685",
+    "failedTerminalArtifactHash": "11EB61A06BB9ED6E684923C9B8CB8E1AC0535637F5607D1E049EB1E4DFAE0184",
+    "failedTerminalEventHash": "C7F0A4ACCEF515C51F61654E9A13A4A34259FB9C79F9540DF5997A8FBDE22AF5",
+    "eventFileSha256": [
+      "832A6F21600BA1B52248D21793615FD696F04EF9AC76B93DAF573191D382997C",
+      "4BB17ACC9C3C2AC556219E3D312932042F6451AB53803CDC04860E09FD6460B2",
+      "84A001824108B850E77E27146AF0F4B21D3A22B3974442DF91EBB1F1F4CD40E2",
+      "E9013A1096AD4512574F372C50E348FFFB8B7CB57C030379A278C22D7E952784",
+      "62EFEDC959EE4BA5EF49E29FB24287FA4E06A1FBBCAA22B3FF6E81F699D12D10"
+    ],
+    "postAccessInputSealCreated": false,
+    "outputArtifactsCreated": false,
+    "performanceEvaluated": false,
+    "retryAllowed": false
+  },
+  "controlledRepresentationAudit": {
+    "usableBarCount": 629552,
+    "highClosureCount": 21,
+    "lowClosureCount": 16,
+    "closureRowCount": 37,
+    "closureSymbolCount": 15,
+    "maximumAbsoluteCorrection": "0.00000000000000000000000001",
+    "remainingTrendBarDomainViolationCount": 0,
+    "otherTrendBarDomainViolationCount": 0,
+    "performanceCalculated": false
+  },
+  "compatibilityDelta": {
+    "predecessorProducerArithmeticReplayRequired": true,
+    "zeroVolumeExcludedBeforeClosure": true,
+    "canonicalHighFormula": "max(tacticalOpen,tacticalHigh,tacticalLow,tacticalClose)",
+    "canonicalLowFormula": "min(tacticalOpen,tacticalHigh,tacticalLow,tacticalClose)",
+    "openUnchanged": true,
+    "closeUnchanged": true,
+    "epsilonUsed": false,
+    "toleranceUsed": false,
+    "quantizationUsed": false,
+    "perSourceClosureDateAndFieldIdentityHashRequired": true,
+    "formulaRankingCostAndAcceptanceRulesUnchanged": true
+  },
+  "claimBoundary": {
+    "failedRuns001Through005Preserved": true,
+    "modelEvidenceLabel": "NOT_VALIDATED",
+    "evidenceUpgradeAllowed": false,
+    "newImmutableRunRequired": true
+  },
+  "canonicalContentHash": "7DC449B2B1CB0B5CB170E0C29644ECCCA2764684888DA6AA092582224216F98E"
+}

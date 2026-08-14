@@ -1,0 +1,69 @@
+{
+  "contractVersion": "FV-STAGE8C-OPENFIGI-CANARY-FAILURE-v1.0.0",
+  "recordedDate": "2026-08-02",
+  "state": "TERMINAL_FAILED_KNOWN_SEMANTIC",
+  "run": {
+    "runId": "20260802T113833Z-STAGE8C-OPENFIGI-001",
+    "acquisitionContractVersion": "FV-STAGE8C-CURRENT-EVIDENCE-ACQUISITION-v1.2.0",
+    "planContentHash": "0AB89383750DEE20B30BC8DDDF43E97F47C6D9511E0FADD08DA2D8E518FCF01A",
+    "planFileSha256": "A782CB8D55AF7877CF43EF605CB63ECAC65FB1437193B5CE6B082A2BED0B6EB2",
+    "populationManifestFileSha256": "C8353A00FAC6E724163C26F6E78D7EC3535F4643E0DF5FC1AB88839D6A52440A",
+    "privateRunInventorySha256": "EF6E9FA3A00E431B7A7BB16177C0035799E42C9D54F4CB71AC41AF6C54846684"
+  },
+  "execution": {
+    "plannedPhysicalRequests": 4,
+    "plannedLogicalJobs": 18,
+    "attemptedPhysicalRequests": 3,
+    "completedPhysicalRequests": 2,
+    "failedPhysicalRequests": 1,
+    "unattemptedPhysicalRequests": 1,
+    "transportedLogicalJobs": 15,
+    "unattemptedLogicalJobs": 3,
+    "retryLimit": 0,
+    "automaticRetries": 0,
+    "unknownTransportOutcomes": 0
+  },
+  "failure": {
+    "requestOrdinal": 3,
+    "requestIdentity": "6DA54CCAC3B41C738B007F452E96F947768A39CD2A98281C8CB276843E8143A5",
+    "reasonCode": "OPENFIGI_CANDIDATE_SECURITY_STOP",
+    "httpStatus": 200,
+    "failedEventHash": "152D28C584C716BBEB57D69C0B0CF860CB149EEE832642A78C4FADC6BF72FD53",
+    "checkpointSha256": "DE3C2D3F328E134EE915B33B7105B20450E0810782FF570B565E16A7BFE9F95C",
+    "responseBodyIncluded": false
+  },
+  "diagnosis": {
+    "category": "PROVIDER_TICKER_ALIAS_PARSER_DEFECT",
+    "providerTicker": "BF/B",
+    "platformExpectedTicker": "BF-B",
+    "providerResponseSemanticallyValid": true,
+    "authenticationFailure": false,
+    "rateLimitFailure": false,
+    "providerSchemaFailure": false,
+    "warningsCausedFailure": false
+  },
+  "successor": {
+    "acquisitionContractVersion": "FV-STAGE8C-CURRENT-EVIDENCE-ACQUISITION-v1.3.0",
+    "parserRegistryVersion": "FV-STAGE8C-PROVIDER-PARSER-REGISTRY-v1.1.0",
+    "openFigiParserVersion": "openfigi-stage8c-parser-v1.1.0",
+    "identityAdjudicationVersion": "FV-STAGE8C-IDENTITY-ADJUDICATION-v1.1.0",
+    "tickerAliasPolicyVersion": "openfigi-provider-ticker-alias-v1.0.0",
+    "rawProviderTickerPreserved": true,
+    "requestBoundComparisonOnly": true,
+    "newRunRequired": true,
+    "newAuthorizationRequired": true,
+    "newNetworkApprovalRequired": true
+  },
+  "boundaries": {
+    "oldRunImmutable": true,
+    "oldRunResumeAuthorized": false,
+    "oldRunRetryAuthorized": false,
+    "oldRuntimeSourceByteReplayClaimed": false,
+    "remainingIdentityRequestsAuthorized": false,
+    "secYahooEodhdAuthorized": false,
+    "databaseWriteAuthorized": false,
+    "enrollmentAuthorized": false,
+    "modelEvidenceLabel": "NOT_VALIDATED"
+  },
+  "contentHash": "98698040F5BD916FE91AB6FEAFAFD414EBE3F46C2ACA3E1BF4EEB104192732B2"
+}

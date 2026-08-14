@@ -1,0 +1,171 @@
+{
+  "schemaVersion": "QUANT-TRADING-HISTORICAL-CONTROLLED-RESULT-v1.1.8",
+  "runId": "QUANT-V11-CONTROLLED-20260812-008",
+  "executionState": "COMPLETED",
+  "interpretation": "NOT_DIRECTIONALLY_SUPPORTIVE_NO_RETUNING_ON_SAME_OUTCOME",
+  "modelEvidenceLabel": "NOT_VALIDATED",
+  "claimUpgradeAllowed": false,
+  "sameOutcomeRetuningAllowed": false,
+  "providerRequests": 0,
+  "databaseWrites": 0,
+  "eventChain": [
+    {
+      "sequence": 1,
+      "state": "PREPARATION_INTENT",
+      "artifactContentHash": "A5840EC64513634A766902AC8BCABC713765A9F12CAF69DEEA6AD27147833708",
+      "eventHash": "1E40971F5CE8F2A1C1E1B5C68470D0D121C16FBF35075013DA3C44BAED7C06C9",
+      "fileSha256": "14CFA7E5C4906F323ED7B26675C91F1B2CA64D051276FFC961372A039BA7E769"
+    },
+    {
+      "sequence": 2,
+      "state": "PREPARATION_STRUCTURAL_COMPLETE",
+      "artifactContentHash": "3E7364EBA973F0919BA8FD836C4E6FE07D0BB83E534EFF1E72CBF88F9C6A7ACB",
+      "eventHash": "3E499AF738EF64252A15BAC5F4FAEE5BDB700C1E1B61DC7E078CAE0DED9A2EA0",
+      "fileSha256": "8CF904FA3C80B33E81DB4C53585D864A29D87A38A88B8854FF86D92774D7AC0D"
+    },
+    {
+      "sequence": 3,
+      "state": "OUTCOME_ACCESS_INTENT",
+      "artifactContentHash": "82BEB76FDE36E189821488C5ECC6621AEE8EEB33A6180CC66630607F7E7EDF4B",
+      "eventHash": "9EB5167E87F01BF284AA22EB3F66C314BCE81D46A15142DAFCC03055439A1C9D",
+      "fileSha256": "6C8B2AC9C0140CFB7C82997DE27ECA8EBA7527A2BC317A9BFE840A62DED6A932"
+    },
+    {
+      "sequence": 4,
+      "state": "OUTCOME_EXECUTION_INTENT",
+      "artifactContentHash": "9374C4782C3C749FC03EC116C115D03F3A9BDD5DE27F88F3B30605FEA46FC335",
+      "eventHash": "4123594C5961746C8440B63C2A98ABD21131A4819903E37DA7A11AFB68DF381A",
+      "fileSha256": "8E0C13CF05EE1ED6F3FF6DBB71DCE7FBA04789896EAA911DC1E77E1153526D63"
+    },
+    {
+      "sequence": 5,
+      "state": "POST_ACCESS_PRE_PERFORMANCE_INPUT_SEAL",
+      "artifactContentHash": "2FF0AD54AEC0969C58C89EE2953E52900769A4F219D75864115EAE9E998B26FA",
+      "eventHash": "7027698F041217F37A58DD7E492ADF889D06E5CB7123B7DEB174753E5C7DAD9D",
+      "fileSha256": "BB8FB7EDA24909FBBABA1B7A73890A9A926DBAF514567518B7B18F0987181C25"
+    },
+    {
+      "sequence": 6,
+      "state": "OUTCOME_EXECUTION_COMPLETED",
+      "artifactContentHash": "05DBD974B1B9BC9350586BF37435926AF80D467947BE1A34311217B7FB7B2348",
+      "eventHash": "2F735F74F88588F868BC07C521CE703238B8A8BB6E5487278518A5A2C3FF920F",
+      "fileSha256": "827B4B78725449271922E2CCB499F03A620DE1FA01EC07D43483A4802E90B2B3"
+    }
+  ],
+  "sealedInputs": {
+    "protocolHash": "FB239E0F1D7AFC3F755E2E4BF15DDE6745143BC2614C1352459109D67A0B95F4",
+    "decisionContractHash": "BF9BF8D473CA10C0944E2F900824CE2B64B22C8778684E32AA4E5056CF5BE954",
+    "batchPlanHash": "9CC2F91D52CC393D96A53B372735C61851F8784384F6A00078565F958E646FA2",
+    "populationIdentitySetHash": "B29306CE3B1A047C074B68FDA07149FFF72F7B2ECD2BC0D78AAD7B42692656C7",
+    "populationManifestHash": "1DFF76EB9A46D9F9936AEBE182F7A555EFBEB94DA47BB2FD4E4A45AEDEB0A908",
+    "sourceRegistryHash": "7A58C124F9E159BBDF5805A6CDCECEEFE2BEC80250794A487E754A171F4D1255",
+    "calculationSourceManifestHash": "CA7281C11301CD1E7731BF6BF4D54A2B617C1C9FC1E398FB120A4C70968029F5",
+    "implementationSetHash": "E0A24B5329D75C07F0E43A3B6BC25E4DED25AF4E846EB6DBC206D5BBB76E81A8",
+    "runtimeHash": "0F879DA6D618765D2B2BB1212DCED2F830918A76BD9B1650A511DCD66428258C",
+    "compatibilityAddendumHash": "D58278CFB1070382275BC58B940C4CF904D9DC05F50EA65976D9476C77EBA7A2",
+    "payloadContractValidationHash": "DE1B2DD3132962D1F832F7AB1B2D30C2C5DC51CB226EDCC45B638DC14933DBCC",
+    "postAccessInputSealHash": "2FF0AD54AEC0969C58C89EE2953E52900769A4F219D75864115EAE9E998B26FA",
+    "calendarSessionCount": 2907,
+    "decisionScheduleCount": 557,
+    "firstEligibleDecisionDate": "2015-01-02",
+    "lastEligibleDecisionDate": "2026-01-23",
+    "performanceEvaluatedAtSeal": false
+  },
+  "outputArtifacts": [
+    {
+      "outputId": "PRIMARY_C9",
+      "contentHash": "sha256:89cc36ba68cc377b4426b3611b8473359fe1bb30faa5a4df97ccc327be361f7d",
+      "fileSha256": "4677B7B0B557D9C8991D2A8A1B98F099EC8F0523A1CEFF347CACB31F02FF7A61"
+    },
+    {
+      "outputId": "FIXED_FIVE_BPS",
+      "contentHash": "sha256:4892b8ca8ff06dce8454b1c2383d20a725a65fc5c2f1305d689eeeb1e308772f",
+      "fileSha256": "8E9D319E88C1FC6AB10643829D656E3286E792CD013728C3BB798AEC67E37261"
+    },
+    {
+      "outputId": "SPY",
+      "contentHash": "sha256:22c64171b9aa07fa5001600078de5982ab7382ca36242aaab008e2b45258683a",
+      "fileSha256": "1AF8B2E463988AE7CD97ADEC9AC8D8CDADD9C23718BCF3B9BD23012C52D56830"
+    },
+    {
+      "outputId": "TERMINAL_REGISTRY",
+      "contentHash": "sha256:8ca470c786cc31fc1e8d3533ef3e4f1a6fde4ef68a27ddf7ba8c43a5dfcdad82",
+      "fileSha256": "F697EF5EE1366B198AFC1A55F4B6D6B50FCB6EB64A0BECAEBBB9639CBA995035"
+    }
+  ],
+  "metrics": {
+    "windowStart": "2015-01-05",
+    "windowEnd": "2026-07-27",
+    "completedPortfolioSessions": 2906,
+    "primary": {
+      "initialNav": "100000",
+      "finalNav": "237071.66969974587181359549599347755970850664582236",
+      "totalReturn": "1.3707166969974587181359549599347755970850664582236",
+      "cagr": "0.0775521081182479498778850604080941267623332052151",
+      "maxDrawdown": "-0.14333665336432625194202362579655170929943102608186",
+      "sharpeRfZero": "0.76959483164767734876950598087346163316639498382375",
+      "totalCostUsd": "3054.4592757550066626544835143533688629219256062932",
+      "closedTradeCount": 1348,
+      "filledOrderCount": 2696,
+      "timeInMarket": "0.77804542326221610461114934618031658637302133516862",
+      "severeLossRate": "0"
+    },
+    "fixedFiveBps": {
+      "finalNav": "231463.74598661605850197487512051120453571428571437",
+      "cagr": "0.0753223132563448098257710076888125389026445570777",
+      "maxDrawdown": "-0.15622035695430804723401941351629866924864017640945",
+      "sharpeRfZero": "0.72136763857140481581783790258412689774526487274375",
+      "totalCostUsd": "13219.188293921224688052456597655438321428571428567"
+    },
+    "spy": {
+      "finalNav": "437644.04241294889397873952134665923981366128958324",
+      "totalReturn": "3.3764404241294889397873952134665923981366128958324",
+      "cagr": "0.1362557821035129264393600568108974149822411179817",
+      "maxDrawdown": "-0.33689511942025322597353626447880387037596685001216",
+      "sharpeRfZero": "0.81595903856926873495762708733509742642487499967517"
+    },
+    "comparisons": {
+      "primaryTotalReturnExcessVsSpy": "-2.0057237271320302216514402535318168010515464376088",
+      "primaryCagrExcessVsSpy": "-0.0587036739852649765614749964028032882199079127666",
+      "primarySharpeAdvantageVsSpy": "-0.04636420692159138618812110646163579325848001585142",
+      "primaryMddDeteriorationVsSpy": "-0.1935584660559269740315126386822521610765358239303",
+      "positiveSpyCagrExcessSubperiodCount": 0,
+      "observedSubperiodCount": 3
+    }
+  },
+  "evaluation": {
+    "state": "NOT_DIRECTIONALLY_SUPPORTIVE_NO_RETUNING_ON_SAME_OUTCOME",
+    "allGatesPass": false,
+    "passedGateCount": 5,
+    "failedGateCount": 4,
+    "failedGateCodes": [
+      "minimumCagrMinusSpy",
+      "minimumTotalReturnMinusSpyExclusive",
+      "minimumSharpeAdvantageVsSpy",
+      "minimumPositiveSpyCagrExcessSubperiods"
+    ],
+    "gateSetHash": "sha256:4f0b7581771aae42e4b3dd6917ad7cddec166f9415221a200431fcf0b9ddb186",
+    "acceptanceContentHash": "sha256:d58c649c4251ee05709a5ce9d0ff5af7c6b68440e497a77be7d6f3fd6263f25b",
+    "gateResults": [
+      {"code": "minimumCompletedPortfolioSessions", "state": "PASS", "observed": 2906, "comparator": ">=", "threshold": 2000, "reason": null},
+      {"code": "minimumClosedTrades", "state": "PASS", "observed": 1348, "comparator": ">=", "threshold": 50, "reason": null},
+      {"code": "minimumCagrMinusSpy", "state": "FAIL", "observed": "-0.0587036739852649765614749964028032882199079127666", "comparator": ">=", "threshold": "0", "reason": "FROZEN_GATE_FAILED"},
+      {"code": "minimumTotalReturnMinusSpyExclusive", "state": "FAIL", "observed": "-2.0057237271320302216514402535318168010515464376088", "comparator": ">", "threshold": "0", "reason": "FROZEN_GATE_FAILED"},
+      {"code": "minimumSharpeAdvantageVsSpy", "state": "FAIL", "observed": "-0.04636420692159138618812110646163579325848001585142", "comparator": ">=", "threshold": "0.10", "reason": "FROZEN_GATE_FAILED"},
+      {"code": "maximumDrawdownMagnitudeDeteriorationVsSpy", "state": "PASS", "observed": "-0.1935584660559269740315126386822521610765358239303", "comparator": "<=", "threshold": "0.05", "reason": null},
+      {"code": "minimumPositiveSpyCagrExcessSubperiods", "state": "FAIL", "observed": {"positive": 0, "observed": 3}, "comparator": ">= and exact", "threshold": {"minimumPositive": 2, "requiredObserved": 3}, "reason": "FROZEN_GATE_FAILED"},
+      {"code": "maximumSevereLossRate", "state": "PASS", "observed": "0", "comparator": "<=", "threshold": "0.10", "reason": null},
+      {"code": "fixedFiveBpsSensitivityMinimumFinalNavExclusive", "state": "PASS", "observed": "231463.74598661605850197487512051120453571428571437", "comparator": ">", "threshold": "100000", "reason": null}
+    ]
+  },
+  "dataBoundary": {
+    "gitSafeAggregateOnly": true,
+    "rawPayloadsIncluded": false,
+    "dailyRowsIncluded": false,
+    "ordersIncluded": false,
+    "securityRowsIncluded": false,
+    "licensedValuesIncluded": false,
+    "sourceStoragePathsIncluded": false
+  },
+  "canonicalContentHash": "56FB135C51432362049BA163E78F98995D9C583C3CD656DF216BE1E5B3C52814"
+}

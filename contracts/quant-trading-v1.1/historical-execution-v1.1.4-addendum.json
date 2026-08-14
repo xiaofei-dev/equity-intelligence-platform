@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "QUANT-TRADING-HISTORICAL-EXECUTION-ADDENDUM-v1.1.4",
+  "predecessorAddendumVersion": "QUANT-TRADING-HISTORICAL-EXECUTION-ADDENDUM-v1.1.3",
+  "predecessorAddendumHash": "E84E4F7F3D51AAABBCE3BC718D5A2240129B9A43BA9668F2E42B85453A9F9AD1",
+  "successorExecutorVersion": "QUANT-TRADING-HISTORICAL-EXECUTOR-v1.1.4",
+  "successorResultVersion": "QUANT-TRADING-HISTORICAL-RESULT-v1.1.4",
+  "successorTerminalVersion": "QUANT-TRADING-HISTORICAL-TERMINAL-REGISTRY-v1.1.4",
+  "failedRun": {
+    "runId": "QUANT-V11-CONTROLLED-20260812-003",
+    "state": "FAILED_PRE_POST_ACCESS_SEAL",
+    "failedReason": "Yahoo_bar_wire_type_drift",
+    "executionIntentArtifactHash": "E5DBFCE2C74EA23B5BD8D8FCEDEBFF1C1E096EBF817D3D4E76DAC05860E43B08",
+    "failedTerminalArtifactHash": "4553C700338334DB520043F292EBDE8D7E361A4716CA7C95C7A51423CEFE5AC6",
+    "failedTerminalEventHash": "45D0307A1F68E09466803EB299462B890C71E8EEFF293A178A59D6A6ED3D6850",
+    "failedTerminalFileSha256": "31D199179298DFA9F919ADF14E7E78CC450A54F4E85C38CD7913C35E9A922849",
+    "payloadJsonAccessBegan": true,
+    "postAccessInputSealCreated": false,
+    "outputArtifactsCreated": false,
+    "performanceEvaluated": false,
+    "retryAllowed": false
+  },
+  "controlledWireDomainAudit": {
+    "boundWireBarCount": 630672,
+    "zeroVolumeBarCount": 1120,
+    "zeroVolumeSymbolCount": 7,
+    "zeroVolumeBySymbol": {
+      "AMCR": 1110,
+      "XLRE": 5,
+      "DXCM": 1,
+      "CNC": 1,
+      "AMD": 1,
+      "CHD": 1,
+      "XEL": 1
+    },
+    "amcrFirstZeroVolumeDate": "2014-01-06",
+    "amcrLastZeroVolumeDate": "2019-06-10",
+    "negativeVolumeCount": 0,
+    "nonIntegerVolumeCount": 0,
+    "aboveSignedInt64VolumeCount": 0,
+    "nonpositiveOrNonfinitePriceOrFactorCount": 0,
+    "performanceCalculated": false
+  },
+  "compatibilityDelta": {
+    "volumeWireType": "EXACT_INTEGER_GREATER_THAN_OR_EQUAL_TO_ZERO",
+    "zeroVolumeMeaning": "ZERO_VOLUME_NONTRADABLE_MISSING",
+    "zeroVolumeIncludedInTradableBars": false,
+    "zeroVolumeIncludedInAdtvOrLiquidity": false,
+    "wireRowsFullyValidatedBeforeExclusion": true,
+    "wireHeaderCountAndFirstLastDatesBindAllWireRows": true,
+    "negativeOrNonIntegerVolumeRejected": true,
+    "perBarPriceFactorAndAdjustedCloseArithmeticUnchanged": true,
+    "formulaRankingCostAndAcceptanceRulesUnchanged": true
+  },
+  "claimBoundary": {
+    "failedRuns001Through003Preserved": true,
+    "modelEvidenceLabel": "NOT_VALIDATED",
+    "evidenceUpgradeAllowed": false,
+    "newImmutableRunRequired": true
+  },
+  "canonicalContentHash": "FF86ECBB940AE47017FF01A3B1E16878D68422C47E5BB3AC19C41F87F1EC36FF"
+}

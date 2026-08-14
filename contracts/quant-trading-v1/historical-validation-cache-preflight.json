@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "QUANT-TRADING-STAGE3-CACHE-PREFLIGHT-v1.0.0",
+  "protocolHash": "84B5DEEDF5ABE572C135E3E1CF3D4FF7ED391F93A20A82D4F3B6C1BF48F070BC",
+  "strictTrack": {
+    "state": "BLOCKED_INPUT_AUTHORITY_INCOMPLETE",
+    "blockers": [
+      "V22_DURABLE_IDENTITY_AND_TICKER_INTERVAL_AUTHORITY_ABSENT",
+      "CORPORATE_ACTION_EVENT_LIFECYCLE_AND_TERMINAL_AUTHORITY_ABSENT",
+      "HISTORICAL_MEMBERSHIP_AND_DELISTED_POPULATION_ABSENT"
+    ]
+  },
+  "developmentTrack": {
+    "state": "READY_FOR_BATCHED_OUTCOME_EXECUTION",
+    "track": "YAHOO_ADJUSTED_OHLCV_CURRENT_SURVIVOR_APPROXIMATION",
+    "claimCeiling": "DEVELOPMENT_OBSERVED_CURRENT_REVISION_CURRENT_SURVIVOR",
+    "populationCount": 191,
+    "pilotCount": 25,
+    "expansionCount": 100,
+    "fullCount": 191,
+    "missingReceiptSymbols": [],
+    "missingPayloadSymbols": [],
+    "payloadHashDriftSymbols": [],
+    "insufficientHistorySymbols": []
+  },
+  "numericPriceFieldsRead": false,
+  "outcomeMetricsCalculated": false,
+  "networkRequests": 0,
+  "contentHash": "FC63F5EBBDBDEC357B5F0ED6AFB3A5F9E6E2720B1760FE3B4B59192F26981F34"
+}

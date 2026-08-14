@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "FV-STAGE7C4-SUPPORT-AND-EMPIRICAL-GATE-v1.0.0",
+  "status": "BLOCKED_SUPPORT_EVIDENCE_BINDING_MISMATCH",
+  "outcomesRead": false,
+  "networkRequests": 0,
+  "databaseRequests": 0,
+  "controlledFinancialValuesRead": false,
+  "supportEvidence": {
+    "schemaVersion": "FV-STAGE7C4-SUPPORT-EVIDENCE-v1.0.0",
+    "sourceType": "HUMAN_SUPPLIED_SCREENSHOT_AND_TRANSCRIBED_STATEMENT",
+    "fileSha256": "4F79D7FFEC8539951337DBD4510B1B7CEFA750566D2D21D5602C73713CDD24D2",
+    "fileSizeBytes": 64444,
+    "fileTimestampUtc": "2026-07-28T09:03:27.3986745Z",
+    "humanProvidedQuote": "Financials values for the quarters are not cumulative. Restatement data is updated when possible.",
+    "quoteSemanticImplication": "If authenticated, EODHD quarterly financial values are noncumulative.",
+    "revisionLimitation": "Restatements may update current history; no immutable revision or strict PIT claim.",
+    "provenance": "User supplied; not independently obtained from provider transport.",
+    "visualInspection": "The hashed image shows an EODHD Individual subscription-plan card and does not display the quoted live-chat statement.",
+    "quoteVisuallyCorroborated": false,
+    "supportGate": "BLOCKED_SCREENSHOT_QUOTE_BINDING_MISMATCH",
+    "contentHash": "10A38E8F906A8DA02828249E18CDD05CE46757C5DBAE78331E20AB55F7588F78"
+  },
+  "preFrozenEmpiricalProtocol": {
+    "version": "FV-STAGE7C4-QUARTERLY-SEMANTICS-AUDIT-v1.0.0",
+    "sample_seed": "FV-STAGE7C4-SEMANTICS-SAMPLE-20260801-v1",
+    "minimum_securities": 20,
+    "minimum_sectors": 8,
+    "fields": [
+      "revenue",
+      "operating_income",
+      "net_income",
+      "operating_cash_flow",
+      "capital_expenditure"
+    ],
+    "exact_period_match_required": true,
+    "exact_unit_currency_required": true,
+    "relative_tolerance": "0.01",
+    "absolute_tolerance": "1",
+    "minimum_cross_provider_matches": 100,
+    "minimum_annual_comparisons": 60,
+    "minimum_overall_agreement": "0.95",
+    "minimum_per_field_agreement": "0.90",
+    "maximum_systematic_contradiction_rate": "0.02",
+    "content_hash": "DCB4609B165C1467C91FE6EABBB3EEA5E8B5BE9B6A88DCEF10E93F534B28DF75"
+  },
+  "empiricalAudit": {
+    "state": "NOT_RUN",
+    "matchedCounts": null,
+    "agreementRates": null,
+    "contradictionReasons": [
+      "SUPPORT_SCREENSHOT_DOES_NOT_DISPLAY_QUOTED_CHAT_STATEMENT"
+    ]
+  },
+  "approximationReplay": {
+    "state": "NOT_RUN_SEMANTIC_GATE_FAILED"
+  },
+  "claimCeiling": "NO_EMPIRICAL_SEMANTIC_CONCLUSION",
+  "contentHash": "E3F219F8C7DEC6158E9B51AC6492559F1A11E94A73260E05330A3689D0C271AE"
+}

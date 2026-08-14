@@ -1,0 +1,55 @@
+{
+  "contractVersion": "FV-STAGE8C-OPENFIGI-CANARY-SUCCESSOR-ADDENDUM-v1.0.0",
+  "recordedDate": "2026-08-02",
+  "state": "SUCCESSOR_CONTRACT_SET_FROZEN_NETWORK_UNAUTHORIZED",
+  "predecessorFailure": {
+    "contractVersion": "FV-STAGE8C-OPENFIGI-CANARY-FAILURE-v1.0.0",
+    "contentHash": "98698040F5BD916FE91AB6FEAFAFD414EBE3F46C2ACA3E1BF4EEB104192732B2",
+    "fileSha256": "A9B25B6BC5EF037BCF970CBCC3C124393C5A4FBA4C1D35174BEC0D1400244955",
+    "immutable": true,
+    "successorVersionDriftInPredecessorRecord": true
+  },
+  "successor": {
+    "acquisitionContractVersion": "FV-STAGE8C-CURRENT-EVIDENCE-ACQUISITION-v1.3.0",
+    "parserRegistryVersion": "FV-STAGE8C-PROVIDER-PARSER-REGISTRY-v1.1.0",
+    "openFigiAdapterVersion": "openfigi-stage8c-adapter-v1.1.0",
+    "openFigiParserVersion": "openfigi-stage8c-parser-v1.1.0",
+    "identityAdjudicationVersion": "FV-STAGE8C-IDENTITY-ADJUDICATION-v1.2.0",
+    "canaryReviewVersion": "FV-STAGE8C-OPENFIGI-CANARY-REVIEW-v1.2.0",
+    "canaryAcceptanceVersion": "FV-STAGE8C-OPENFIGI-CANARY-ACCEPTANCE-v1.3.0",
+    "canaryReplayVerificationVersion": "FV-STAGE8C-OPENFIGI-CANARY-REPLAY-VERIFICATION-v1.0.0",
+    "tickerAliasPolicyVersion": "openfigi-provider-ticker-alias-v1.0.0"
+  },
+  "pairedProviderIdentity": {
+    "identityAtoms": [
+      "figi",
+      "shareClassFigi",
+      "compositeFigi",
+      "ticker",
+      "exchCode"
+    ],
+    "rawProviderTickerPreserved": true,
+    "requestBoundAliasComparisonOnly": true,
+    "canaryPairConflictCountRequiredZero": true,
+    "identityAdjudicationRequiresExactPairConvergence": true,
+    "acceptedCanaryWithPairConflictAllowed": false,
+    "acceptanceRebuildsReviewFromImmutableCheckpoints": true,
+    "remainderExecutionRebuildsReviewFromImmutableCheckpoints": true
+  },
+  "boundaries": {
+    "oldRunResumeAuthorized": false,
+    "oldRunRetryAuthorized": false,
+    "newRunRequired": true,
+    "newAuthorizationRequired": true,
+    "networkAuthorizationGranted": false,
+    "remainingOpenFigiAuthorized": false,
+    "secAuthorized": false,
+    "yahooAuthorized": false,
+    "eodhdAuthorized": false,
+    "databaseWriteAuthorized": false,
+    "v24EnrollmentAuthorized": false,
+    "outcomeAccessAuthorized": false,
+    "modelEvidenceLabel": "NOT_VALIDATED"
+  },
+  "contentHash": "15F41D851289BE0FD4AE548B9E857D4FF6E296093ED8015AD9CACA12DB2BC359"
+}

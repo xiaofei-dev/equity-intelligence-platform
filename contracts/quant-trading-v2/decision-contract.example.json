@@ -1,0 +1,110 @@
+{
+  "contractVersion": "quant-trading-system-v2.0.0",
+  "modelVersion": "QUANT-TRADING-v2.0.0",
+  "strategyVersion": "REGIME-FILTERED-MEAN-REVERSION-v2.0.0",
+  "formulaVersion": "REGIME-FILTERED-MEAN-REVERSION-FORMULAS-v2.0.0",
+  "entryExitPolicyVersion": "REGIME-FILTERED-MEAN-REVERSION-ENTRY-EXIT-v2.0.0",
+  "engineVersion": "QUANT-TRADING-ENGINE-v2.0.0",
+  "sleeve": "QUANT_TRADING",
+  "setup": "REGIME_FILTERED_MEAN_REVERSION",
+  "hypothesis": "Liquid common stocks in established security and broad-market uptrends may exhibit short-lived mean reversion after an objectively extreme two-session RSI and twenty-session z-score pullback.",
+  "independence": {
+    "modifiesV1OrV11InPlace": false,
+    "combinesMomentumAndMeanReversionScores": false,
+    "sameHistoricalCacheUntouchedHoldoutClaimed": false,
+    "sameHistoricalCacheMaximumClaim": "DEVELOPMENT_OBSERVED_ONLY",
+    "oneRetrospectiveExecutionOnly": true,
+    "sameOutcomeRetuningAllowed": false,
+    "unsupportiveResultIsAcceptable": true
+  },
+  "signal": {
+    "requiredAlignedSessions": 253,
+    "decisionFrequency": "EVERY_COMPLETED_SPY_SESSION",
+    "rsi2Formula": "SIMPLE_TWO_CHANGE_RSI; AVERAGE_LAST_TWO_POSITIVE_CHANGES_AND_AVERAGE_LAST_TWO_ABSOLUTE_NEGATIVE_CHANGES; 100-100/(1+GAIN/LOSS); BOTH_ZERO=50; LOSS_ZERO=100; GAIN_ZERO=0",
+    "absoluteEligibility": [
+      "PRICE_AT_LEAST_5_USD",
+      "MEDIAN_ADTV20_AT_LEAST_5000000_USD",
+      "SPY_CLOSE_ABOVE_SMA200",
+      "SECURITY_CLOSE_ABOVE_SMA200",
+      "SECURITY_SMA50_ABOVE_SMA200",
+      "SECURITY_CLOSE_BELOW_SMA20",
+      "RSI2_AT_MOST_10",
+      "ZSCORE20_AT_MOST_MINUS_1.25",
+      "ATR_PERCENT_AT_MOST_0.10",
+      "MAXIMUM_ENTRY_REWARD_RISK_AT_LEAST_1.25"
+    ],
+    "crossSectionDenominatorMinimum": 20,
+    "eligibleSetMinimum": 3,
+    "ranking": {
+      "pullbackDepthPercentileWeight": "0.60",
+      "rsiOversoldPercentileWeight": "0.40",
+      "ordinalTieBreak": "SECURITY_ID_ASC",
+      "percentileFormula": "100*(COUNT_LOWER+0.5*(COUNT_EQUAL-1))/(N-1)",
+      "maximumEntryRank": 5
+    }
+  },
+  "entry": {
+    "timing": "NEXT_OBSERVED_SESSION_OPEN_AFTER_DECISION",
+    "maximumEntryPrice": "SIGNAL_CLOSE_PLUS_0.25_ATR14",
+    "skipWhenOpenAtOrBelowInitialStop": true,
+    "skipWhenOpenAboveMaximumEntryPrice": true,
+    "skipWhenOpenAtOrAboveProfitTarget": true,
+    "sameSessionReentry": "PROHIBITED"
+  },
+  "exit": {
+    "initialStop": "SIGNAL_CLOSE_MINUS_MIN(MAX(2.5_ATR14,3_PERCENT_SIGNAL_CLOSE),8_PERCENT_SIGNAL_CLOSE)",
+    "profitTarget": "FROZEN_SIGNAL_SESSION_SMA20",
+    "sameBarRule": "STOP_FIRST_THEN_TARGET",
+    "maximumHoldingSessions": 10,
+    "timeExit": "SESSION_10_COMPLETED_CLOSE",
+    "nextOpenExit": [
+      "SPY_CLOSE_NOT_ABOVE_SMA200",
+      "SECURITY_CLOSE_NOT_ABOVE_SMA200",
+      "UNEXPLAINED_MISSING_ACTIVE_BAR"
+    ],
+    "trailingStop": "NONE"
+  },
+  "portfolio": {
+    "initialCashUsd": "100000",
+    "maximumPositions": 5,
+    "riskFractionPerPosition": "0.005",
+    "notionalFractionCapPerPosition": "0.20",
+    "wholeSharesOnly": true,
+    "selectionPriority": [
+      "COMPOSITE_SCORE_DESC",
+      "SECURITY_ID_ASC"
+    ]
+  },
+  "cost": {
+    "version": "C9-NONLINEAR-COST-v1.0.0",
+    "perSide": "participation=notional/ADTV; impact=min(50bps,25bps*sqrt(participation)); sideBps=1+impact",
+    "entryAndExitChargedSeparately": true,
+    "fixedFiveBpsSensitivityRequired": true
+  },
+  "validation": {
+    "executionCount": 1,
+    "primaryBenchmark": "SPY_BUY_AND_HOLD_SAME_CALENDAR_AND_COST_POLICY",
+    "minimumCompletedTrades": 100,
+    "gates": {
+      "positiveNetCagr": "GREATER_THAN_0",
+      "positiveNetExpectancy": "GREATER_THAN_0",
+      "sharpeVsSpy": "GREATER_THAN_SPY",
+      "calmarVsSpy": "GREATER_THAN_SPY",
+      "maximumDrawdownVsSpy": "NO_WORSE_THAN_SPY",
+      "cagrVsSpy": "NO_LESS_THAN_SPY_MINUS_0.02",
+      "positiveCalendarYears": "AT_LEAST_6_OF_9_MATURE_YEARS",
+      "fixedCostSensitivityCagr": "GREATER_THAN_0"
+    },
+    "directionallySupportiveRule": "AT_LEAST_6_OF_8_GATES_AND_NO_NEGATIVE_EXPECTANCY",
+    "productionValidationClaimAllowed": false,
+    "failureAction": "RETAIN_NOT_VALIDATED_AND_STOP_WITHOUT_SAME_OUTCOME_RETUNING"
+  },
+  "governance": {
+    "initialModelEvidenceLabel": "NOT_VALIDATED",
+    "automaticBrokerageExecution": false,
+    "llmSignalOrWeightAuthority": false,
+    "finalPortfolioWeightAuthority": false,
+    "futureReturnsGuaranteed": false
+  },
+  "contentHash": "D6863767A2A3F1E4AED41D509A653A41553DC846A9C472437B888C6F675CB348"
+}

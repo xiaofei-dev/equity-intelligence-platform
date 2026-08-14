@@ -1,0 +1,118 @@
+{
+  "schemaVersion": "QUANT-TRADING-HISTORICAL-VALIDATION-v1.0.0",
+  "state": "PREDECLARED_BEFORE_QUANT_OUTCOME_CALCULATION",
+  "tracks": {
+    "strictGoverned": {
+      "state": "BLOCKED_INPUT_AUTHORITY_INCOMPLETE",
+      "reason": "V22_IDENTITY_ACTION_LIFECYCLE_AND_TERMINAL_AUTHORITY_ABSENT"
+    },
+    "developmentApproximation": {
+      "state": "AUTHORIZED_FOR_DEVELOPMENT_OBSERVATION",
+      "track": "YAHOO_ADJUSTED_OHLCV_CURRENT_SURVIVOR_APPROXIMATION",
+      "claimCeiling": "DEVELOPMENT_OBSERVED_CURRENT_REVISION_CURRENT_SURVIVOR"
+    }
+  },
+  "population": {
+    "count": 191,
+    "identitySetHash": "B29306CE3B1A047C074B68FDA07149FFF72F7B2ECD2BC0D78AAD7B42692656C7",
+    "source": "C5_CURRENT_SURVIVOR_CONTROLLED_OVERLAP",
+    "survivorshipBias": true,
+    "historicalMembershipClaimed": false,
+    "delistedPopulationClaimed": false,
+    "batchPolicy": "SHA256_SECURITY_ID_ASC; PILOT25_THEN_100_THEN_191"
+  },
+  "priceEvidence": {
+    "receiptHash": "B74761883F9395F1334B3F78983DB4237DF0F3F245F449EFFDC73F98FBB738AD",
+    "receiptFileSha256": "CD830491016535733CB9FE5C4BEAEBC6EE6D48F0186B6C82F131BF30FE8168C8",
+    "calendarHash": "7FE1CA16970AE0346C67120DD4F32BA3BEF039276B9800757D15D3744189AA2C",
+    "calendarFileSha256": "AF107891BB758C021EC012FDAB52AADDD8A07664F41CFCB7A686434A7B477CE8",
+    "aliases": 203,
+    "equities": 191,
+    "benchmark": "SPY",
+    "adjustment": "YAHOO-ADJCLOSE-RATIO-OHLC-v1.0.0",
+    "separateDividendOrSplitCashFlows": false
+  },
+  "decisionProtocol": {
+    "frequency": "EVERY_COMPLETED_SPY_SESSION",
+    "firstDecision": "FIRST_SESSION_WITH_EXACTLY_253_ALIGNED_ROWS",
+    "lastDecision": "LATEST_SESSION_WITH_60_LATER_COMPLETED_SESSIONS",
+    "signalHistorySessions": 253,
+    "entry": "IMMEDIATE_NEXT_OBSERVED_SPY_SESSION_OPEN",
+    "maximumHoldingSessions": 60,
+    "signalFormula": "MOMENTUM-CONTINUATION-FORMULAS-v1.0.0",
+    "entryExitPolicy": "MOMENTUM-CONTINUATION-ENTRY-EXIT-v1.0.0",
+    "simulator": "QUANT-TRADING-PORTFOLIO-SIMULATOR-v1.0.0",
+    "initialCashUsd": "100000",
+    "costPolicy": "C9-NONLINEAR-COST-v1.0.0",
+    "parameterChangeAfterOutcomeAccessAllowed": false
+  },
+  "terminalPolicy": {
+    "missingOrGappedRow": "EXPLICIT_MISSING_NO_FILL",
+    "unprovenTerminalEvent": "EXPLICIT_MISSING_FROM_FIRST_UNEXPLAINED_GAP",
+    "haltOrSuspensionAuthority": "NOT_PROVEN_IN_APPROXIMATION_TRACK",
+    "productionEligibility": false
+  },
+  "benchmarks": {
+    "primary": "SPY_BUY_AND_HOLD_SAME_CALENDAR_AND_COST_POLICY",
+    "cash": "ZERO_RETURN",
+    "equalWeight": "NOT_OBSERVED_BLOCKED_FROZEN_ELIGIBLE_POPULATION",
+    "sector": "NOT_OBSERVED_NO_DATED_MAPPING"
+  },
+  "metrics": [
+    "FINAL_NAV_USD",
+    "TOTAL_RETURN",
+    "CAGR",
+    "SPY_EXCESS_RETURN",
+    "MAX_DRAWDOWN",
+    "ANNUALIZED_VOLATILITY",
+    "SHARPE_RF_ZERO",
+    "TURNOVER",
+    "TOTAL_COST_USD",
+    "TRADE_COUNT",
+    "WIN_RATE",
+    "LOSS_RATE",
+    "SEVERE_LOSS_RATE"
+  ],
+  "severeLossDefinition": "CLOSED_TRADE_NET_RETURN_LESS_THAN_OR_EQUAL_TO_MINUS_20_PERCENT",
+  "diagnostics": {
+    "calendarYears": "EACH_COMPLETE_OR_PARTIAL_CALENDAR_YEAR",
+    "subperiods": [
+      "2015-2019",
+      "2020-2022",
+      "2023-2026"
+    ],
+    "stressWindows": [
+      [
+        "2018-09-20",
+        "2018-12-24"
+      ],
+      [
+        "2020-02-19",
+        "2020-03-23"
+      ],
+      [
+        "2022-01-03",
+        "2022-06-16"
+      ]
+    ],
+    "diagnosticOnly": true
+  },
+  "knownLimitations": [
+    "CURRENT_SURVIVOR_POPULATION",
+    "CURRENT_REVISION_PRICE_HISTORY",
+    "NO_STRICT_V22_IDENTITY",
+    "NO_STRICT_CORPORATE_ACTION_OR_TERMINAL_AUTHORITY",
+    "NO_HALTS_OR_SUSPENSIONS_AUTHORITY",
+    "NO_UNTOUCHED_HOLDOUT",
+    "NO_PRODUCTION_ELIGIBILITY",
+    "NO_FUTURE_RETURN_GUARANTEE"
+  ],
+  "preSealDisclosure": {
+    "schemaInspectionBeforeSeal": "ONE_ADM_FIRST_BAR_OPENED_FOR_WIRE_SHAPE_ONLY",
+    "strategyReturnOrMetricObservedBeforeSeal": false,
+    "parameterChangedFromObservedOutcome": false
+  },
+  "networkAuthorized": false,
+  "providerRequests": 0,
+  "contentHash": "84B5DEEDF5ABE572C135E3E1CF3D4FF7ED391F93A20A82D4F3B6C1BF48F070BC"
+}

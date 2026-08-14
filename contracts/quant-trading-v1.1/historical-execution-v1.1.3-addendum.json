@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "QUANT-TRADING-HISTORICAL-EXECUTION-ADDENDUM-v1.1.3",
+  "predecessorAddendumVersion": "QUANT-TRADING-HISTORICAL-EXECUTION-ADDENDUM-v1.1.2",
+  "predecessorAddendumHash": "D78C8E093CF334BD737FED3ACAFEFEAEFB10550EB4047762BA4B51E4AA62E19E",
+  "successorExecutorVersion": "QUANT-TRADING-HISTORICAL-EXECUTOR-v1.1.3",
+  "successorResultVersion": "QUANT-TRADING-HISTORICAL-RESULT-v1.1.3",
+  "successorTerminalVersion": "QUANT-TRADING-HISTORICAL-TERMINAL-REGISTRY-v1.1.3",
+  "failedRun": {
+    "runId": "QUANT-V11-CONTROLLED-20260812-002",
+    "state": "FAILED_PRE_POST_ACCESS_SEAL",
+    "failedReason": "Yahoo_source_adjustment_drift",
+    "firstFailingSymbol": "ADM",
+    "observedSourceAutoAdjust": false,
+    "observedSourceAdjustmentMode": "TOTAL_RETURN_ADJUSTED",
+    "observedNormalizedAdjustmentMode": "TOTAL_RETURN_ADJUSTED",
+    "executionIntentArtifactHash": "53184F18742F5EA33D412644AD6B93881A83EC6CDDD7074C9F2673CC369D4036",
+    "failedTerminalArtifactHash": "354AB99AF9C856A16668650D929C8740222BEE2D1871BD4EF78840FA159CE5C5",
+    "failedTerminalEventHash": "3623D5A9684A22B40FE571F60BA89915F12B01473C323DA8B31703491E40D3E2",
+    "failedTerminalFileSha256": "7ADB4FDB8FC02F32D1F046E247FD47D0FB191FA9328F7F306079BC051B186324",
+    "payloadJsonAccessBegan": true,
+    "postAccessInputSealCreated": false,
+    "outputArtifactsCreated": false,
+    "signalsCalculated": false,
+    "ranksCalculated": false,
+    "returnsCalculated": false,
+    "pnlCalculated": false,
+    "performanceEvaluated": false,
+    "acceptanceEvaluated": false,
+    "retryAllowed": false
+  },
+  "compatibilityDelta": {
+    "field": "adjustment.sourceAdjustmentMode",
+    "acceptedValue": "TOTAL_RETURN_ADJUSTED",
+    "rejectedValue": "UNADJUSTED",
+    "sourceAutoAdjustMustRemainFalse": true,
+    "normalizedAdjustmentModeMustRemainTotalReturnAdjusted": true,
+    "allOtherAdjustmentKeysAndValuesUnchanged": true,
+    "perBarAdjustmentArithmeticChecksUnchanged": true,
+    "formulaRankingCostAndAcceptanceRulesUnchanged": true
+  },
+  "claimBoundary": {
+    "failedRun001Preserved": true,
+    "failedRun002Preserved": true,
+    "modelEvidenceLabel": "NOT_VALIDATED",
+    "evidenceUpgradeAllowed": false,
+    "sameRunRetryAllowed": false,
+    "newImmutableRunRequired": true
+  },
+  "canonicalContentHash": "E84E4F7F3D51AAABBCE3BC718D5A2240129B9A43BA9668F2E42B85453A9F9AD1"
+}

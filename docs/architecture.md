@@ -1,5 +1,69 @@
 # System Architecture
 
+## Unified Portfolio and Risk Boundary
+
+Task 4 reuses V12 user, portfolio, account-snapshot, liability, and constraint
+policy ownership. FastAPI receives only a typed calculation request and never
+accesses `app.*`. Spring resolves the server-side identity, verifies ownership
+and the exact V12 constraint policy, calls FastAPI, validates the complete
+content-hashed result, and persists the immutable V28 graph. Next.js reads only
+Spring through `/portfolio`.
+
+```text
+V12 portfolio, sealed account snapshots, and constraint policy
+    + independent Fundamental Value and Quant evidence references
+    -> Spring ownership and policy validation
+    -> FastAPI deterministic exposure and risk calculation
+    -> Spring cross-language contract verification
+    -> V28 immutable context and optional human review
+    -> Next.js /portfolio
+```
+
+V21 `CORE`/`TACTICAL` persistence is retained unchanged as a legacy lane. V28
+uses `LONG_TERM_CORE`/`QUANT_TRADING` and does not reinterpret V21. Neither
+sleeve can set final weights, transfer cash, create orders, execute through a
+broker, or grant decision authority to an LLM.
+
+## Quantitative Trading Boundary
+
+Quantitative Trading is an independent Python analytics engine and owns only
+the `QUANT_TRADING` sleeve. It does not read Fundamental Value scores or legacy
+V21 portfolio tables. Quant v1 includes a pure Decimal signal engine and an
+event-driven simulator, but its historical result is economically rejected and
+not eligible for production use. Quant v1.1 is a separately versioned
+dual-momentum/trend successor whose controlled development replay was not
+directionally supportive against SPY.
+
+The v1.1 research-signal input now crosses a provider-neutral V22 assembly
+boundary. A read-only adapter rehydrates exact V22 selector aggregates,
+security/listing/ticker intervals, trading calendars, and completed sessions.
+The assembler requires 253 ordered total-return-adjusted daily observations for
+SPY and every expected security, preserves missing and not-applicable members
+inside the exact denominator, and fails on invalid, stale, excluded, ambiguous,
+future, or hash-drifting selector evidence. Numeric price values exist only in the
+in-memory deterministic engine input; the audit manifest contains identities,
+timestamps, states, versions, and hashes only.
+
+This boundary authorizes the deterministic v1.1 research-signal core, not the
+portfolio simulator or any order workflow. V27 stores only the public-safe
+research projection. FastAPI owns internal create/read, Spring Boot owns the
+public GET contract, and Next.js renders `/research/quant-trading`. V22 does
+not yet provide governed Quant event/lifecycle interval proof, so simulated
+portfolio execution from current evidence and brokerage execution remain
+closed.
+
+```text
+V22 immutable selector and identity references
+    -> FastAPI Quant v1.1 assembly and deterministic signal
+    -> PostgreSQL V27 append-only public-safe decision
+    -> Spring GET /api/v1/quant-trading/research-decisions/{decisionId}
+    -> Next.js /research/quant-trading
+```
+
+The V27/public contract has no final-weight, order, brokerage, LLM-authority,
+or guaranteed-return field. This architecture makes the research result
+usable without treating it as an autonomous trading system.
+
 ## Architecture Style
 
 The initial system uses a modular main application and a separate analytics service:
@@ -317,13 +381,29 @@ integration tests; the complete migration, upgrade, refusal, base, and
 advanced matrix had already passed on the unchanged V22 schema. This does not
 claim a business-database deployment or provider execution.
 
-V22 does not contain enough state for governed raw-payload deletion. A future
-append-only successor must bind each raw manifest to a versioned retention
-policy and legal-hold state and record an ordered immutable disposition-event
-chain with proofs and enforced cardinality. V23 is deferred for the MVP and
-becomes necessary only if the product assumes physical raw-object
-retention/deletion governance. Stage 3C does not create that migration or
-delete raw payloads.
+V22 does not contain enough state for governed raw-payload deletion. V23 is
+now reserved for the separately approved append-only Fundamental Value result
+model and must not contain retention/deletion governance. If physical
+raw-object governance later becomes product scope, the next available
+migration after V23 must bind each raw manifest to a versioned retention policy
+and legal-hold state and record an ordered immutable disposition-event chain
+with proofs and enforced cardinality. No current operation deletes raw payloads.
+
+The Fundamental Value system consumes immutable V22 selector and evidence
+references through Python. It owns deterministic company economics, fair-value
+methods and aggregation, price attractiveness, expected-return and downside
+evidence, thesis conditions, and a security-level `LONG_TERM_CORE` risk-cap
+ceiling. Spring Boot will remain the public workflow owner. Quantitative Trading
+is not an input, and the Unified Portfolio/Risk View must not blend the engines.
+
+V23 is the Python-owned append-only persistence successor for this boundary.
+It stores the full assembly identity and manifest, relational ordered operand
+evidence parents, non-usable states, and the normalized deterministic
+assessment graph under `analytics.*`. PostgreSQL enforces child cardinality,
+append-only seals, frozen method identity and weights, and applicability
+cardinality; Python rehydrates the typed graph and recomputes hashes and core
+arithmetic. No V23 object represents a final portfolio weight, rank, order,
+brokerage authority, AI conclusion, or raw-retention workflow.
 
 Stage 2 adds exact canonical payload contracts for prices and adjustment
 modes, corporate actions, fundamental periods, classifications, dated market
@@ -365,6 +445,41 @@ transaction. A security-level data failure is a coverage result; only a
 run-level failure changes the task to `FAILED`.
 
 Kafka may replace or supplement HTTP when event volume, multiple consumers, durable replay, or asynchronous reliability requirements justify it.
+
+## Fundamental Value internal API boundary
+
+FastAPI owns Fundamental Value evidence assembly, deterministic evaluation,
+and V23 persistence. Its versioned internal API accepts durable V22 routing,
+classification-request, and operand-request IDs plus the projection horizon;
+it does not accept metric values, provider-native fields, formula outputs, or
+unsealed result JSON. The service derives identity, session, cutoffs, and
+version bindings from sealed repositories before it decides whether core
+execution is authorized.
+
+Spring Boot owns the user-facing workflow and exposes a curated public
+contract. Its strict analytics client does not query `analytics.*`, implement
+valuation formulas, or convert a risk-cap ceiling into a portfolio weight.
+Explicit `MISSING`, specialized, and other non-usable results are successful
+domain responses. Malformed contracts, missing IDs, and immutable conflicts
+retain stable error mappings. The current result-only v1.1 projection carries
+the complete durable security identity, ticker assignment, ticker, MIC,
+identity currency, and completed session; the Stage 5 v1.0 fixtures remain
+historical acceptance evidence. Python and Spring reject any readback whose
+assembly ID differs from the requested path ID. Usable assessment identity is
+re-derived from the frozen persistence version, assembly ID, and assessment
+content hash. Completed-session date cannot exceed the decision cutoff, and
+the five conditions with exposed sources bind their observations back to those
+source fields.
+
+Next.js consumes only that Spring public contract. The Fundamental Value
+workspace performs strict response-shape decoding and presentation; it does
+not call FastAPI, PostgreSQL, or providers and does not reproduce valuation or
+risk formulas. It replays hashes and frozen semantics, binds the decoded result
+and derived assessment identity to the requested assembly, enforces session
+chronology and condition-source bindings, renders durable identity/session
+provenance and explicit non-usable applicability and evidence states, and
+separates deterministic assessment output from the currently absent AI
+narrative surface.
 
 ## Deployment
 

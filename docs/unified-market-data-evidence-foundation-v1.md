@@ -498,11 +498,12 @@ lineage. An append-only successor needs:
 - uniqueness/cardinality that permits one current governed disposition chain
   per manifest and rejects history rewriting.
 
-V23 is deferred for the MVP. Stage 3C performs no raw-payload deletion and
-does not create V23. A future V23 becomes necessary only if the product owns
-physical raw-object retention/deletion governance with the policy,
-deadline/jurisdiction, legal-hold, disposition-event, proof, and
-chain-cardinality responsibilities above.
+At Task 1 acceptance, V23 was unassigned and deferred. Task 2 subsequently
+reserved V23 for a narrowly scoped Fundamental Value persistence successor.
+Stage 3C performs no raw-payload deletion. If the product later owns physical
+raw-object retention/deletion governance, the policy, deadline/jurisdiction,
+legal-hold, disposition-event, proof, and chain-cardinality responsibilities
+above require the next migration version available after V23.
 
 ## Deferred or Separately Governed Boundaries
 
@@ -510,7 +511,8 @@ The following are outside the completed Task 1 scope and remain separately
 gated:
 
 - public selector API replacement and operational migration release;
-- physical raw-storage retention and deletion governance, deferred with V23;
+- physical raw-storage retention and deletion governance, deferred to the next
+  available migration version after the Fundamental Value V23 successor;
 - any provider execution.
 
 No live provider request, cloud resource, secret change, portfolio operation,

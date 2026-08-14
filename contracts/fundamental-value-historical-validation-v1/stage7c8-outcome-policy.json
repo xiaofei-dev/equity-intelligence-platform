@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "FV-STAGE7C8-OUTCOME-METHODOLOGY-v1.0.0",
+  "claimCeiling": "DEVELOPMENT_OBSERVED_CURRENT_REVISION_APPROXIMATION",
+  "population": {
+    "identityCount": 191,
+    "predictorRowCount": 1804,
+    "label": "CONTROLLED_OVERLAP_CURRENT_UNIVERSE_RETROSPECTIVE",
+    "survivorshipFree": false,
+    "universe310Claim": false
+  },
+  "bindings": {
+    "c5PredictorCheckpoint": "D9BF09661416214C1FF9788D41AC9E1FD6505FB72E02C091B762DA4F98CCA712",
+    "c7RankGroupSeal": "50069390D4AD07431D44E5ECDEAC78CFBA960BC16103D7F8D684F41867F6DB0C",
+    "c7CalendarSeal": "7FE1CA16970AE0346C67120DD4F32BA3BEF039276B9800757D15D3744189AA2C",
+    "c7ExecutionReceipt": "B74761883F9395F1334B3F78983DB4237DF0F3F245F449EFFDC73F98FBB738AD",
+    "c8ReuseRegistry": "2F3B706745B8E99F14037CC52C83FA360580761E462A307E11C6BB28DBEFD711"
+  },
+  "returns": {
+    "horizonsSessions": [
+      252,
+      504,
+      756
+    ],
+    "primaryHorizon": 756,
+    "entry": "FIRST_SPY_SESSION_STRICTLY_AFTER_CUTOFF",
+    "exit": "LATER_INDEX_ENTRY_NOT_ELAPSED",
+    "price": "YAHOO_ADJUSTED_CLOSE_ONLY",
+    "grossFormula": "ADJ_EXIT_DIV_ADJ_ENTRY_MINUS_1",
+    "exactSessionRequired": true,
+    "fill": "NONE",
+    "terminalMissing": "MISSING_TERMINAL_EVENT_UNPROVEN"
+  },
+  "cost": {
+    "version": "LIQUIDITY-SENSITIVE-COST-v1.0.0",
+    "fixedRoundTripBps": "2",
+    "baseSlippageOneWayBps": "1",
+    "impactBpsAtFullParticipation": "25",
+    "maximumImpactOneWayBps": "50",
+    "portfolioNotionalUsd": "100000",
+    "adv": "ARITHMETIC_MEAN_RAW_CLOSE_TIMES_VOLUME_60_OBSERVED_SESSIONS_STRICTLY_PRE_ENTRY",
+    "securityOrderNotional": "100000_DIV_USABLE_GROUP_N",
+    "net": "GROSS_MINUS_ROUND_TRIP_COST_RATE",
+    "groupGross": "ARITHMETIC_MEAN_CONSTITUENT_GROSS",
+    "groupCost": "ARITHMETIC_MEAN_CONSTITUENT_COST",
+    "groupNet": "GROUP_GROSS_MINUS_GROUP_COST",
+    "spyGroupNotional": "100000",
+    "spyHitNotional": "100000_DIV_USABLE_GROUP_N",
+    "applyOnce": true
+  },
+  "paths": {
+    "securityWealth": "ADJ_CLOSE_T_DIV_ADJ_CLOSE_ENTRY",
+    "groupWealth": "ARITHMETIC_MEAN_USABLE_SECURITY_WEALTH",
+    "allocation": "EQUAL_ENTRY_DOLLAR_BUY_AND_HOLD_NO_REBALANCE",
+    "allSpySessionsRequired": true,
+    "missingExcludedNumericRetainedDenominator": true,
+    "missingAsZero": false,
+    "mdd": "MIN_WEALTH_DIV_RUNNING_MAX_MINUS_1_GROSS",
+    "costShockInMdd": false
+  },
+  "downside": {
+    "dailyReturn": "WEALTH_T_DIV_WEALTH_PREVIOUS_MINUS_1",
+    "select": "SPY_DAILY_RETURN_LT_0",
+    "formula": "MEAN_GROUP_SELECTED_DIV_MEAN_SPY_SELECTED",
+    "minimumMatched": 20,
+    "notObserved": [
+      "NO_SPY_DOWN",
+      "FEWER_THAN_20",
+      "ZERO_OR_NONFINITE_DENOMINATOR",
+      "MISSING_ALIGNED_BAR"
+    ]
+  },
+  "severeLoss": {
+    "condition": "NET_TOTAL_RETURN_LTE_MINUS_0_30",
+    "denominator": "USABLE_EXACT_DATE_GROUP_HORIZON",
+    "zeroDenominator": "NOT_OBSERVED"
+  },
+  "spearman": {
+    "predictor": "SEALED_ORDINAL_RANK",
+    "returnRank": "NET_RETURN_ASC_SECURITY_ID_TIE_BREAK",
+    "formula": "PEARSON_COMPLETE_ORDINAL_VECTORS",
+    "minimumPairs": 100,
+    "positiveDirection": "HIGHER_QUALITY_HIGHER_RETURN",
+    "missing": "COVERAGE_ONLY_NO_IMPUTATION",
+    "nonzeroFiniteVarianceRequired": true
+  },
+  "eligibility": {
+    "minimumPairs": 100,
+    "minimumPairCoverage": "0.90",
+    "minimumHigh": 20,
+    "minimumLow": 20,
+    "minimumHighCoverage": "0.90",
+    "minimumLowCoverage": "0.90",
+    "middleExtremeGate": false,
+    "failState": "INSUFFICIENT_OUTCOME_COVERAGE",
+    "primary": "756_PRIMARY_RANDOM_MINIMUM_7",
+    "horizon252": "DIAGNOSTIC",
+    "horizon504": "SUPPORTING",
+    "stressSeparate": true,
+    "sectorMinimumMatched": 5,
+    "sectorAffectsLabel": false
+  },
+  "statistics": {
+    "hit": "SECURITY_NET_GT_SAME_NOTIONAL_SPY_NET_EQUALITY_NOT_HIT",
+    "primaryUnit": "DECISION_DATE_PORTFOLIO",
+    "iidSecurityRows": false,
+    "excess": "NET_ANNUALIZED",
+    "annualization": "EXISTING_DECIMAL_HELPER_TOTAL_LOSS_MINUS_1",
+    "leaveOnePrimaryDateOut": true
+  },
+  "anchors": {
+    "interval": "CLOSED_ENTRY_EXIT756",
+    "order": "PRIMARY_DECISION_DATE_ASC",
+    "greedy": "NEXT_ENTRY_GT_PREVIOUS_SELECTED_EXIT",
+    "equalityOverlaps": true,
+    "maximum": 3,
+    "stressExcluded": true,
+    "diagnosticOnly": true
+  },
+  "stressVeto": {
+    "minimumNodes": 2,
+    "annualizedSpyUnderperformance": "0.10",
+    "worseGrossMdd": "0.10"
+  },
+  "sector": {
+    "mappingQuality": "CURRENT_CLASSIFICATION_APPROXIMATION",
+    "missingNoSpySubstitution": true,
+    "etfs": [
+      "XLB",
+      "XLC",
+      "XLE",
+      "XLF",
+      "XLI",
+      "XLK",
+      "XLP",
+      "XLRE",
+      "XLU",
+      "XLV",
+      "XLY"
+    ]
+  },
+  "outcomeAccessed": false,
+  "contentHash": "FD2451B51EFC7B96F69D1CABE4CEA8337B7B43498A8158EBB317057F30DD19A1"
+}

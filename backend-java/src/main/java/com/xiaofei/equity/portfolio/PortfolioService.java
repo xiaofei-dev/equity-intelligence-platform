@@ -24,9 +24,85 @@ import org.springframework.transaction.annotation.Transactional;
 public class PortfolioService {
 
 	private final JdbcClient jdbcClient;
+	private final PortfolioCsvSnapshotParser csvParser;
 
-	public PortfolioService(JdbcClient jdbcClient) {
+	public PortfolioService(JdbcClient jdbcClient, PortfolioCsvSnapshotParser csvParser) {
 		this.jdbcClient = jdbcClient;
+		this.csvParser = csvParser;
+	}
+
+	public CsvSnapshotPreview previewCsv(CurrentUser user, UUID accountId, byte[] bytes) {
+		requireOwnedAccount(user.userId(), accountId);
+		return csvParser.parse(bytes).preview();
+	}
+
+	@Transactional
+	public SnapshotAccepted importCsvSnapshot(CurrentUser user, UUID accountId,
+			String idempotencyKey, String expectedFileSha256, Instant asOfTime,
+			SnapshotCompleteness completeness, byte[] bytes) {
+		requireOwnedAccount(user.userId(), accountId);
+		PortfolioCsvSnapshotParser.ParsedCsv parsed = csvParser.parse(bytes);
+		if (expectedFileSha256 == null || !expectedFileSha256.matches("[0-9a-f]{64}")) {
+			throw validation("CSV_FILE_HASH_INVALID", "Expected-File-Sha256 must be a lowercase SHA-256 digest.");
+		}
+		if (!expectedFileSha256.equals(parsed.fileSha256())) {
+			throw new UserContextException("CSV_PREVIEW_MISMATCH",
+					"The CSV file no longer matches the previewed digest.", 409);
+		}
+		if (!parsed.valid()) {
+			throw validation("CSV_VALIDATION_FAILED",
+					"The CSV file contains validation errors. Preview it for row diagnostics.");
+		}
+		return createSnapshot(user, accountId, idempotencyKey, new CreateSnapshotRequest(
+				asOfTime, SnapshotSource.FILE_IMPORT, parsed.sourceReference(), completeness,
+				parsed.cashBalances(), parsed.positions()));
+	}
+
+	public SnapshotResponse latestSnapshot(CurrentUser user, UUID accountId) {
+		requireOwnedAccount(user.userId(), accountId);
+		UUID snapshotId = jdbcClient.sql("""
+				SELECT id FROM app.account_snapshot
+				WHERE user_id=:userId AND account_id=:accountId AND sealed_at IS NOT NULL
+				ORDER BY as_of_time DESC, recorded_at DESC, id DESC LIMIT 1
+				""").params(Map.of("userId", user.userId(), "accountId", accountId))
+			.query(UUID.class).optional().orElseThrow(PortfolioService::notFound);
+		return snapshot(user, accountId, snapshotId);
+	}
+
+	public SnapshotResponse snapshot(CurrentUser user, UUID accountId, UUID snapshotId) {
+		requireOwnedAccount(user.userId(), accountId);
+		SnapshotMetadata metadata = jdbcClient.sql("""
+				SELECT id,account_id,as_of_time,source_type,source_reference,completeness,
+				       content_hash,sealed_at,recorded_at
+				FROM app.account_snapshot
+				WHERE id=:snapshotId AND account_id=:accountId AND user_id=:userId
+				  AND sealed_at IS NOT NULL
+				""").params(Map.of("snapshotId", snapshotId, "accountId", accountId,
+				"userId", user.userId())).query((rs, rowNumber) -> new SnapshotMetadata(
+				rs.getObject("id", UUID.class), rs.getObject("account_id", UUID.class),
+				rs.getTimestamp("as_of_time").toInstant(), SnapshotSource.valueOf(rs.getString("source_type")),
+				rs.getString("source_reference"), SnapshotCompleteness.valueOf(rs.getString("completeness")),
+				rs.getString("content_hash"), rs.getTimestamp("sealed_at").toInstant(),
+				rs.getTimestamp("recorded_at").toInstant())).optional().orElseThrow(PortfolioService::notFound);
+		List<CashBalanceInput> cash = jdbcClient.sql("""
+				SELECT currency,settled_amount,unsettled_amount,restricted_amount
+				FROM app.cash_balance_snapshot WHERE snapshot_id=:snapshotId AND user_id=:userId
+				ORDER BY currency
+				""").params(Map.of("snapshotId", snapshotId, "userId", user.userId()))
+			.query((rs, rowNumber) -> new CashBalanceInput(rs.getString("currency"),
+					rs.getBigDecimal("settled_amount"), rs.getBigDecimal("unsettled_amount"),
+					rs.getBigDecimal("restricted_amount"))).list();
+		List<PositionInput> positions = jdbcClient.sql("""
+				SELECT security_public_id,quantity,average_cost,cost_currency
+				FROM app.position_snapshot WHERE snapshot_id=:snapshotId AND user_id=:userId
+				ORDER BY security_public_id
+				""").params(Map.of("snapshotId", snapshotId, "userId", user.userId()))
+			.query((rs, rowNumber) -> new PositionInput(rs.getObject("security_public_id", UUID.class),
+					rs.getBigDecimal("quantity"), rs.getBigDecimal("average_cost"),
+					rs.getString("cost_currency"))).list();
+		return new SnapshotResponse(metadata.id(), metadata.accountId(), metadata.asOfTime(),
+				metadata.sourceType(), metadata.sourceReference(), metadata.completeness(),
+				metadata.contentHash(), metadata.sealedAt(), metadata.recordedAt(), cash, positions);
 	}
 
 	@Transactional
@@ -80,6 +156,7 @@ public class PortfolioService {
 			UUID accountId,
 			String idempotencyKey,
 			CreateSnapshotRequest request) {
+		request = governedSnapshotRequest(request);
 		requireOwnedAccount(user.userId(), accountId);
 		if (idempotencyKey == null || idempotencyKey.isBlank()) {
 			throw validation("IDEMPOTENCY_KEY_REQUIRED", "Idempotency-Key is required.");
@@ -96,7 +173,7 @@ public class PortfolioService {
 			throw validation("DUPLICATE_SNAPSHOT_ITEM", "Snapshot items must be unique.");
 		}
 
-		String contentHash = sha256(canonicalSnapshot(request));
+		String contentHash = sha256(canonicalTask5Snapshot(request));
 		SnapshotAccepted existing = findSnapshotByIdempotency(user.userId(), accountId, idempotencyKey);
 		if (existing != null) {
 			if (!existing.contentHash().equals(contentHash)) {
@@ -172,6 +249,12 @@ public class PortfolioService {
 						"costCurrency", position.costCurrency()))
 				.update();
 		}
+		jdbcClient.sql("""
+				INSERT INTO app.account_snapshot_task5_contract_v1
+				(snapshot_id,user_id,expected_cash_count,expected_position_count,expected_content_hash)
+				VALUES (:snapshot,:user,:cash,:positions,:hash)
+				""").params(Map.of("snapshot",snapshotId,"user",user.userId(),"cash",request.cashBalances().size(),
+				"positions",request.positions().size(),"hash",contentHash)).update();
 		jdbcClient.sql("""
 				UPDATE app.account_snapshot
 				SET sealed_at = CURRENT_TIMESTAMP
@@ -731,6 +814,30 @@ public class PortfolioService {
 		return canonical.toString();
 	}
 
+	static String canonicalTask5Snapshot(CreateSnapshotRequest request) {
+		var atoms=new java.util.ArrayList<String>();
+		request.cashBalances().stream().sorted(java.util.Comparator.comparing(CashBalanceInput::currency))
+				.forEach(cash->atoms.add("C:"+cash.currency()+":"+decimalText(cash.settledAmount())+":"
+						+decimalText(cash.unsettledAmount())+":"+decimalText(cash.restrictedAmount())));
+		request.positions().stream().sorted(java.util.Comparator.comparing(position->position.securityPublicId().toString()))
+				.forEach(position->atoms.add("P:"+position.securityPublicId()+":"+decimalText(position.quantity())+":"
+						+decimalText(position.averageCost())+":"+position.costCurrency()));
+		String cash=String.join("|",atoms.stream().filter(atom->atom.startsWith("C:")).toList());
+		String positions=String.join("|",atoms.stream().filter(atom->atom.startsWith("P:")).toList());
+		return cash+"|"+positions;
+	}
+
+	static CreateSnapshotRequest governedSnapshotRequest(CreateSnapshotRequest request) {
+		String sourceReference = "TASK5:" + request.sourceType().name();
+		if (request.sourceType() == SnapshotSource.FILE_IMPORT && request.sourceReference() != null) {
+			sourceReference += ":" + sha256(request.sourceReference());
+		}
+		return new CreateSnapshotRequest(request.asOfTime(), request.sourceType(), sourceReference,
+				request.completeness(), List.copyOf(request.cashBalances()), List.copyOf(request.positions()));
+	}
+
+	private static String decimalText(java.math.BigDecimal value){return value.setScale(10).toPlainString();}
+
 	private static String sha256(String value) {
 		try {
 			return HexFormat.of().formatHex(MessageDigest.getInstance("SHA-256")
@@ -744,6 +851,12 @@ public class PortfolioService {
 	private static Object nullable(Object value) {
 		return value == null ? new org.springframework.jdbc.core.SqlParameterValue(
 				java.sql.Types.VARCHAR, null) : value;
+	}
+
+	private record SnapshotMetadata(UUID id, UUID accountId, Instant asOfTime,
+			SnapshotSource sourceType, String sourceReference,
+			SnapshotCompleteness completeness, String contentHash,
+			Instant sealedAt, Instant recordedAt) {
 	}
 
 	private static UserContextException validation(String code, String message) {
