@@ -1,2 +1,12 @@
 bfbb13d874b07fee0f347f2b9bc9d452c9042c56:analysis-python/tests/test_daily_refresh_postgres_v16.py:generic-api-key:152
 bfbb13d874b07fee0f347f2b9bc9d452c9042c56:analysis-python/tests/test_daily_refresh_postgres_v16.py:generic-api-key:243
+5d11468e2c72b420ab9a077aa3d844735cec3206:analysis-python/tests/test_fundamental_value_forward_enrollment_v24.py:generic-api-key:218
+5d11468e2c72b420ab9a077aa3d844735cec3206:backend-java/src/test/java/com/xiaofei/equity/portfolio/PortfolioEvaluationObservationControllerTests.java:generic-api-key:37
+5d11468e2c72b420ab9a077aa3d844735cec3206:backend-java/src/test/java/com/xiaofei/equity/portfolio/PortfolioEvaluationObservationControllerTests.java:generic-api-key:44
+5d11468e2c72b420ab9a077aa3d844735cec3206:contracts/fundamental-value-historical-validation-v1/stage7c8-outcome-result.json:generic-api-key:4
+5d11468e2c72b420ab9a077aa3d844735cec3206:contracts/fundamental-value-historical-validation-v1/stage7c9-confirmation-final.json:generic-api-key:11
+5d11468e2c72b420ab9a077aa3d844735cec3206:contracts/quant-trading-v2/controlled-result-summary.example.json:generic-api-key:11
+5d11468e2c72b420ab9a077aa3d844735cec3206:contracts/quant-trading-v1.1/historical-execution-v1.1.8-controlled-result.json:generic-api-key:67
+5d11468e2c72b420ab9a077aa3d844735cec3206:contracts/quant-trading-v1.1/historical-execution-v1.1.8-addendum.json:generic-api-key:16
+5d11468e2c72b420ab9a077aa3d844735cec3206:contracts/quant-trading-v1.1/historical-execution-v1.1.8-addendum.json:generic-api-key:17
+5d11468e2c72b420ab9a077aa3d844735cec3206:docs/fundamental-value-historical-validation-stage-7-acceptance-2026-08-01.md:generic-api-key:47
