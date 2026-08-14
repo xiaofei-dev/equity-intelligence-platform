@@ -1,0 +1,1991 @@
+{
+  "schemaVersion": "FV-STAGE7C5-EODHD-PROVIDER-NATIVE-COMPANY-QUALITY-v1.0.0",
+  "track": "EODHD_PROVIDER_NORMALIZED_DISCRETE_CURRENT_REVISION_APPROXIMATION",
+  "claimCeiling": "DEVELOPMENT_OBSERVED_CURRENT_REVISION_APPROXIMATION",
+  "contract": {
+    "schemaVersion": "FV-STAGE7C5-EODHD-PROVIDER-NATIVE-COMPANY-QUALITY-v1.0.0",
+    "track": "EODHD_PROVIDER_NORMALIZED_DISCRETE_CURRENT_REVISION_APPROXIMATION",
+    "claimCeiling": "DEVELOPMENT_OBSERVED_CURRENT_REVISION_APPROXIMATION",
+    "supportEvidenceHash": "FE4BA477893B7F9D7C510517B4022C961A920A206BDA615B350DEAE75FDA8806",
+    "fieldMappings": {
+      "revenue": [
+        "Income_Statement",
+        "totalRevenue",
+        "FLOW_AS_REPORTED"
+      ],
+      "operating_income": [
+        "Income_Statement",
+        "operatingIncome",
+        "FLOW_AS_REPORTED"
+      ],
+      "net_income": [
+        "Income_Statement",
+        "netIncome",
+        "FLOW_AS_REPORTED"
+      ],
+      "pretax_income": [
+        "Income_Statement",
+        "incomeBeforeTax",
+        "FLOW_AS_REPORTED"
+      ],
+      "income_tax": [
+        "Income_Statement",
+        "incomeTaxExpense",
+        "FLOW_AS_REPORTED"
+      ],
+      "operating_cash_flow": [
+        "Cash_Flow",
+        "totalCashFromOperatingActivities",
+        "FLOW_AS_REPORTED"
+      ],
+      "capital_expenditure": [
+        "Cash_Flow",
+        "capitalExpenditures",
+        "OUTFLOW_POSITIVE"
+      ],
+      "stockholders_equity": [
+        "Balance_Sheet",
+        "totalStockholderEquity",
+        "INSTANT"
+      ],
+      "total_debt": [
+        "Balance_Sheet",
+        "shortLongTermDebtTotal",
+        "INSTANT"
+      ],
+      "cash_and_equivalents": [
+        "Balance_Sheet",
+        "cashAndShortTermInvestments",
+        "INSTANT"
+      ]
+    },
+    "signPolicy": "CAPEX_OUTFLOW_POSITIVE_OTHER_FIELDS_AS_REPORTED",
+    "unitCurrencyPolicy": "USD_ONLY",
+    "revisionPolicy": "CURRENT_PROVIDER_HISTORY; latest filing_date per periodEnd; same-latest incompatible rows are MISSING",
+    "periodPolicy": "periodEnd-only distinct quarters; 60-120 day spacing; 4-quarter TTM; 8-quarter stability; no periodStart claim",
+    "balancePolicy": "latest point at or before inferred TTM boundary within 120 days",
+    "taxRateRange": [
+      "0",
+      "0.50"
+    ],
+    "operatingMarginRange": [
+      "-1",
+      "1"
+    ],
+    "fcfMarginRange": [
+      "-2",
+      "2"
+    ],
+    "roicRange": [
+      "-1",
+      "2"
+    ],
+    "strictEconomicContractHashes": {
+      "cash_flow_stability": "6F48430EF4ECACCAC20F21D090D4078ACE69388822EBAC3B8017CDC287751369",
+      "earnings_stability": "CD57E529FF6A84079F485D41702FA382E5E398E8B18ABC8F5AC214920A8684E3",
+      "free_cash_flow_margin": "75DDFE32AB232C3D4C1272D7A1F4406C608A3327B1D20E9FDD1A61270DDDC4F7",
+      "operating_margin": "FB5FE4098F321E160A97E5C453DC05F2A67A40342F6DBE29A4EE1F598E0510BF",
+      "return_on_invested_capital": "ABE12ECF350BFEA0BE848FB6B01119D8438D2155854A0BFE0890AFE8E200B96F"
+    },
+    "specializedRouting": {
+      "sectors": [
+        "Basic Materials",
+        "Energy",
+        "Financial Services",
+        "Financials",
+        "Real Estate"
+      ],
+      "industryTerms": [
+        "bank",
+        "insurance",
+        "reit",
+        "real estate investment trust",
+        "biotechnology",
+        "mining",
+        "oil & gas",
+        "oil and gas",
+        "metals",
+        "exploration & production"
+      ],
+      "recognizedGenericSectors": [
+        "Communication Services",
+        "Consumer Cyclical",
+        "Consumer Defensive",
+        "Healthcare",
+        "Industrials",
+        "Technology",
+        "Utilities"
+      ],
+      "missingOrUnknownMetadata": "INSUFFICIENT_DATA"
+    },
+    "exclusions": [
+      "SEC_EQUIVALENCE",
+      "STRICT_PIT",
+      "PRODUCTION_ELIGIBILITY"
+    ],
+    "contentHash": "A9A8787104D9CB9BB764A21DF3DE6B22807F893FF86DA5C69609B6BBBD89A995"
+  },
+  "validationProtocol": {
+    "contractHash": "A9A8787104D9CB9BB764A21DF3DE6B22807F893FF86DA5C69609B6BBBD89A995",
+    "minimumEligiblePerDate": 100,
+    "dates": [
+      {
+        "decisionDate": "2015-05-07",
+        "dateType": "PRIMARY_RANDOM"
+      },
+      {
+        "decisionDate": "2016-05-19",
+        "dateType": "PRIMARY_RANDOM"
+      },
+      {
+        "decisionDate": "2017-06-30",
+        "dateType": "PRIMARY_RANDOM"
+      },
+      {
+        "decisionDate": "2018-04-09",
+        "dateType": "PRIMARY_RANDOM"
+      },
+      {
+        "decisionDate": "2019-06-21",
+        "dateType": "PRIMARY_RANDOM"
+      },
+      {
+        "decisionDate": "2020-04-20",
+        "dateType": "PRIMARY_RANDOM"
+      },
+      {
+        "decisionDate": "2021-06-02",
+        "dateType": "PRIMARY_RANDOM"
+      },
+      {
+        "decisionDate": "2022-05-18",
+        "dateType": "PRIMARY_RANDOM"
+      },
+      {
+        "decisionDate": "2023-05-18",
+        "dateType": "PRIMARY_RANDOM"
+      },
+      {
+        "decisionDate": "2018-09-20",
+        "dateType": "STRESS_DIAGNOSTIC"
+      },
+      {
+        "decisionDate": "2020-02-19",
+        "dateType": "STRESS_DIAGNOSTIC"
+      },
+      {
+        "decisionDate": "2022-01-03",
+        "dateType": "STRESS_DIAGNOSTIC"
+      }
+    ],
+    "outcomeProtocol": "FROZEN_STAGE7_V1_252_504_756_SESSIONS",
+    "contentHash": "2BD3705BF406E9F123E0BE919A7FB339E424716E7A502401B62C7908F7592C41"
+  },
+  "dates": [
+    "2015-05-07",
+    "2016-05-19",
+    "2017-06-30",
+    "2018-04-09",
+    "2019-06-21",
+    "2020-04-20",
+    "2021-06-02",
+    "2022-05-18",
+    "2023-05-18",
+    "2018-09-20",
+    "2020-02-19",
+    "2022-01-03"
+  ],
+  "phases": [
+    {
+      "phase": "PILOT25",
+      "securityCount": 25,
+      "matrix": [
+        {
+          "decisionDate": "2015-05-07",
+          "dateType": "PRIMARY_RANDOM",
+          "targetCounts": {
+            "VALID": 19,
+            "MISSING": 2,
+            "SPECIALIZED_MODEL_REQUIRED": 4,
+            "INSUFFICIENT_DATA": 0
+          },
+          "operandCounts": {
+            "return_on_invested_capital": {
+              "VALID": 19,
+              "MISSING": 2
+            },
+            "operating_margin": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "free_cash_flow_margin": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "earnings_stability": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "cash_flow_stability": {
+              "VALID": 20,
+              "MISSING": 1
+            }
+          },
+          "reasonCounts": {
+            "SPECIALIZED_MODEL_REQUIRED": 4,
+            "cash_flow_stability:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "cash_flow_stability:VALID": 20,
+            "earnings_stability:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "earnings_stability:VALID": 20,
+            "free_cash_flow_margin:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "free_cash_flow_margin:VALID": 20,
+            "operating_margin:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "operating_margin:VALID": 20,
+            "return_on_invested_capital:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "return_on_invested_capital:TAX_RATE_OUTLIER": 1,
+            "return_on_invested_capital:VALID": 19
+          },
+          "predictorSetHash": "2020613B9F2789E2293C6C577CD0209F15C012B7433B76257B6941D66ADC9495"
+        },
+        {
+          "decisionDate": "2016-05-19",
+          "dateType": "PRIMARY_RANDOM",
+          "targetCounts": {
+            "VALID": 18,
+            "MISSING": 3,
+            "SPECIALIZED_MODEL_REQUIRED": 4,
+            "INSUFFICIENT_DATA": 0
+          },
+          "operandCounts": {
+            "return_on_invested_capital": {
+              "VALID": 18,
+              "MISSING": 3
+            },
+            "operating_margin": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "free_cash_flow_margin": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "earnings_stability": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "cash_flow_stability": {
+              "VALID": 20,
+              "MISSING": 1
+            }
+          },
+          "reasonCounts": {
+            "SPECIALIZED_MODEL_REQUIRED": 4,
+            "cash_flow_stability:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "cash_flow_stability:VALID": 20,
+            "earnings_stability:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "earnings_stability:VALID": 20,
+            "free_cash_flow_margin:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "free_cash_flow_margin:VALID": 20,
+            "operating_margin:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "operating_margin:VALID": 20,
+            "return_on_invested_capital:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "return_on_invested_capital:PRETAX_INCOME_NONPOSITIVE": 1,
+            "return_on_invested_capital:TAX_RATE_OUTLIER": 1,
+            "return_on_invested_capital:VALID": 18
+          },
+          "predictorSetHash": "9C3067F203EF5BBADC0C1028193381D58160174D68A6E7AC4C0491D0EBBDDDF1"
+        },
+        {
+          "decisionDate": "2017-06-30",
+          "dateType": "PRIMARY_RANDOM",
+          "targetCounts": {
+            "VALID": 17,
+            "MISSING": 4,
+            "SPECIALIZED_MODEL_REQUIRED": 4,
+            "INSUFFICIENT_DATA": 0
+          },
+          "operandCounts": {
+            "return_on_invested_capital": {
+              "VALID": 17,
+              "MISSING": 4
+            },
+            "operating_margin": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "free_cash_flow_margin": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "earnings_stability": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "cash_flow_stability": {
+              "VALID": 20,
+              "MISSING": 1
+            }
+          },
+          "reasonCounts": {
+            "SPECIALIZED_MODEL_REQUIRED": 4,
+            "cash_flow_stability:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "cash_flow_stability:VALID": 20,
+            "earnings_stability:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "earnings_stability:VALID": 20,
+            "free_cash_flow_margin:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "free_cash_flow_margin:VALID": 20,
+            "operating_margin:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "operating_margin:VALID": 20,
+            "return_on_invested_capital:BALANCE_PARENT_ALIGNMENT_MISSING": 1,
+            "return_on_invested_capital:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "return_on_invested_capital:TAX_RATE_OUTLIER": 2,
+            "return_on_invested_capital:VALID": 17
+          },
+          "predictorSetHash": "41F9DF850FF9C9B70D67CECFA6547B4BDFD93948C6559CCDB87C890858B8535F"
+        },
+        {
+          "decisionDate": "2018-04-09",
+          "dateType": "PRIMARY_RANDOM",
+          "targetCounts": {
+            "VALID": 9,
+            "MISSING": 12,
+            "SPECIALIZED_MODEL_REQUIRED": 4,
+            "INSUFFICIENT_DATA": 0
+          },
+          "operandCounts": {
+            "return_on_invested_capital": {
+              "VALID": 9,
+              "MISSING": 12
+            },
+            "operating_margin": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "free_cash_flow_margin": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "earnings_stability": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "cash_flow_stability": {
+              "VALID": 20,
+              "MISSING": 1
+            }
+          },
+          "reasonCounts": {
+            "SPECIALIZED_MODEL_REQUIRED": 4,
+            "cash_flow_stability:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "cash_flow_stability:VALID": 20,
+            "earnings_stability:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "earnings_stability:VALID": 20,
+            "free_cash_flow_margin:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "free_cash_flow_margin:VALID": 20,
+            "operating_margin:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "operating_margin:VALID": 20,
+            "return_on_invested_capital:BALANCE_PARENT_ALIGNMENT_MISSING": 1,
+            "return_on_invested_capital:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "return_on_invested_capital:TAX_RATE_OUTLIER": 10,
+            "return_on_invested_capital:VALID": 9
+          },
+          "predictorSetHash": "06836AB48A37F75C5BE7CCEB060E5DE71151BB6DDAAC7B07AA8EEDBE67EE420F"
+        },
+        {
+          "decisionDate": "2019-06-21",
+          "dateType": "PRIMARY_RANDOM",
+          "targetCounts": {
+            "VALID": 20,
+            "MISSING": 1,
+            "SPECIALIZED_MODEL_REQUIRED": 4,
+            "INSUFFICIENT_DATA": 0
+          },
+          "operandCounts": {
+            "return_on_invested_capital": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "operating_margin": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "free_cash_flow_margin": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "earnings_stability": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "cash_flow_stability": {
+              "VALID": 20,
+              "MISSING": 1
+            }
+          },
+          "reasonCounts": {
+            "SPECIALIZED_MODEL_REQUIRED": 4,
+            "cash_flow_stability:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "cash_flow_stability:VALID": 20,
+            "earnings_stability:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "earnings_stability:VALID": 20,
+            "free_cash_flow_margin:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "free_cash_flow_margin:VALID": 20,
+            "operating_margin:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "operating_margin:VALID": 20,
+            "return_on_invested_capital:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "return_on_invested_capital:VALID": 20
+          },
+          "predictorSetHash": "1AD163979102B2B56DD18D1E1C9F9F2A6863DD8EF033D1D2F30C1AC474F829AC"
+        },
+        {
+          "decisionDate": "2020-04-20",
+          "dateType": "PRIMARY_RANDOM",
+          "targetCounts": {
+            "VALID": 20,
+            "MISSING": 1,
+            "SPECIALIZED_MODEL_REQUIRED": 4,
+            "INSUFFICIENT_DATA": 0
+          },
+          "operandCounts": {
+            "return_on_invested_capital": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "operating_margin": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "free_cash_flow_margin": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "earnings_stability": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "cash_flow_stability": {
+              "VALID": 20,
+              "MISSING": 1
+            }
+          },
+          "reasonCounts": {
+            "SPECIALIZED_MODEL_REQUIRED": 4,
+            "cash_flow_stability:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "cash_flow_stability:VALID": 20,
+            "earnings_stability:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "earnings_stability:VALID": 20,
+            "free_cash_flow_margin:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "free_cash_flow_margin:VALID": 20,
+            "operating_margin:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "operating_margin:VALID": 20,
+            "return_on_invested_capital:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "return_on_invested_capital:VALID": 20
+          },
+          "predictorSetHash": "E26D88F89CF557E9D6A9F651C48E4DA4CA761355C07F21A6A41EFA0FC1F32F50"
+        },
+        {
+          "decisionDate": "2021-06-02",
+          "dateType": "PRIMARY_RANDOM",
+          "targetCounts": {
+            "VALID": 19,
+            "MISSING": 2,
+            "SPECIALIZED_MODEL_REQUIRED": 4,
+            "INSUFFICIENT_DATA": 0
+          },
+          "operandCounts": {
+            "return_on_invested_capital": {
+              "VALID": 19,
+              "MISSING": 2
+            },
+            "operating_margin": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "free_cash_flow_margin": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "earnings_stability": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "cash_flow_stability": {
+              "VALID": 20,
+              "MISSING": 1
+            }
+          },
+          "reasonCounts": {
+            "SPECIALIZED_MODEL_REQUIRED": 4,
+            "cash_flow_stability:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "cash_flow_stability:VALID": 20,
+            "earnings_stability:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "earnings_stability:VALID": 20,
+            "free_cash_flow_margin:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "free_cash_flow_margin:VALID": 20,
+            "operating_margin:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "operating_margin:VALID": 20,
+            "return_on_invested_capital:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "return_on_invested_capital:TAX_RATE_OUTLIER": 1,
+            "return_on_invested_capital:VALID": 19
+          },
+          "predictorSetHash": "07253809DCAD46E59F463143C50431EF8090A4183FC295BFD727B3BEB5AB4560"
+        },
+        {
+          "decisionDate": "2022-05-18",
+          "dateType": "PRIMARY_RANDOM",
+          "targetCounts": {
+            "VALID": 20,
+            "MISSING": 1,
+            "SPECIALIZED_MODEL_REQUIRED": 4,
+            "INSUFFICIENT_DATA": 0
+          },
+          "operandCounts": {
+            "return_on_invested_capital": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "operating_margin": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "free_cash_flow_margin": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "earnings_stability": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "cash_flow_stability": {
+              "VALID": 20,
+              "MISSING": 1
+            }
+          },
+          "reasonCounts": {
+            "SPECIALIZED_MODEL_REQUIRED": 4,
+            "cash_flow_stability:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "cash_flow_stability:VALID": 20,
+            "earnings_stability:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "earnings_stability:VALID": 20,
+            "free_cash_flow_margin:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "free_cash_flow_margin:VALID": 20,
+            "operating_margin:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "operating_margin:VALID": 20,
+            "return_on_invested_capital:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "return_on_invested_capital:VALID": 20
+          },
+          "predictorSetHash": "D5D4E4476AC6C0FD0FC00ADD1E6024E8D31BF23D7776A764534BCB340C220D98"
+        },
+        {
+          "decisionDate": "2023-05-18",
+          "dateType": "PRIMARY_RANDOM",
+          "targetCounts": {
+            "VALID": 18,
+            "MISSING": 3,
+            "SPECIALIZED_MODEL_REQUIRED": 4,
+            "INSUFFICIENT_DATA": 0
+          },
+          "operandCounts": {
+            "return_on_invested_capital": {
+              "VALID": 18,
+              "MISSING": 3
+            },
+            "operating_margin": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "free_cash_flow_margin": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "earnings_stability": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "cash_flow_stability": {
+              "VALID": 20,
+              "MISSING": 1
+            }
+          },
+          "reasonCounts": {
+            "SPECIALIZED_MODEL_REQUIRED": 4,
+            "cash_flow_stability:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "cash_flow_stability:VALID": 20,
+            "earnings_stability:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "earnings_stability:VALID": 20,
+            "free_cash_flow_margin:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "free_cash_flow_margin:VALID": 20,
+            "operating_margin:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "operating_margin:VALID": 20,
+            "return_on_invested_capital:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "return_on_invested_capital:PRETAX_INCOME_NONPOSITIVE": 1,
+            "return_on_invested_capital:TAX_RATE_OUTLIER": 1,
+            "return_on_invested_capital:VALID": 18
+          },
+          "predictorSetHash": "0E0017954DCD1696B39BAC1CA16A3971FF5771A88847DA023813EDAD55105013"
+        },
+        {
+          "decisionDate": "2018-09-20",
+          "dateType": "STRESS_DIAGNOSTIC",
+          "targetCounts": {
+            "VALID": 11,
+            "MISSING": 10,
+            "SPECIALIZED_MODEL_REQUIRED": 4,
+            "INSUFFICIENT_DATA": 0
+          },
+          "operandCounts": {
+            "return_on_invested_capital": {
+              "VALID": 11,
+              "MISSING": 10
+            },
+            "operating_margin": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "free_cash_flow_margin": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "earnings_stability": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "cash_flow_stability": {
+              "VALID": 20,
+              "MISSING": 1
+            }
+          },
+          "reasonCounts": {
+            "SPECIALIZED_MODEL_REQUIRED": 4,
+            "cash_flow_stability:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "cash_flow_stability:VALID": 20,
+            "earnings_stability:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "earnings_stability:VALID": 20,
+            "free_cash_flow_margin:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "free_cash_flow_margin:VALID": 20,
+            "operating_margin:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "operating_margin:VALID": 20,
+            "return_on_invested_capital:BALANCE_PARENT_ALIGNMENT_MISSING": 1,
+            "return_on_invested_capital:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "return_on_invested_capital:TAX_RATE_OUTLIER": 8,
+            "return_on_invested_capital:VALID": 11
+          },
+          "predictorSetHash": "5358522CD829204C5C959D7776B4CA15516E53192481C7A56528DEB13AB19DFB"
+        },
+        {
+          "decisionDate": "2020-02-19",
+          "dateType": "STRESS_DIAGNOSTIC",
+          "targetCounts": {
+            "VALID": 20,
+            "MISSING": 1,
+            "SPECIALIZED_MODEL_REQUIRED": 4,
+            "INSUFFICIENT_DATA": 0
+          },
+          "operandCounts": {
+            "return_on_invested_capital": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "operating_margin": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "free_cash_flow_margin": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "earnings_stability": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "cash_flow_stability": {
+              "VALID": 20,
+              "MISSING": 1
+            }
+          },
+          "reasonCounts": {
+            "SPECIALIZED_MODEL_REQUIRED": 4,
+            "cash_flow_stability:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "cash_flow_stability:VALID": 20,
+            "earnings_stability:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "earnings_stability:VALID": 20,
+            "free_cash_flow_margin:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "free_cash_flow_margin:VALID": 20,
+            "operating_margin:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "operating_margin:VALID": 20,
+            "return_on_invested_capital:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "return_on_invested_capital:VALID": 20
+          },
+          "predictorSetHash": "BA3B597A03D57B1C89DD66CA69CA895FE304F8B19319C210D49647ECA16568C1"
+        },
+        {
+          "decisionDate": "2022-01-03",
+          "dateType": "STRESS_DIAGNOSTIC",
+          "targetCounts": {
+            "VALID": 20,
+            "MISSING": 1,
+            "SPECIALIZED_MODEL_REQUIRED": 4,
+            "INSUFFICIENT_DATA": 0
+          },
+          "operandCounts": {
+            "return_on_invested_capital": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "operating_margin": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "free_cash_flow_margin": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "earnings_stability": {
+              "VALID": 20,
+              "MISSING": 1
+            },
+            "cash_flow_stability": {
+              "VALID": 20,
+              "MISSING": 1
+            }
+          },
+          "reasonCounts": {
+            "SPECIALIZED_MODEL_REQUIRED": 4,
+            "cash_flow_stability:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "cash_flow_stability:VALID": 20,
+            "earnings_stability:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "earnings_stability:VALID": 20,
+            "free_cash_flow_margin:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "free_cash_flow_margin:VALID": 20,
+            "operating_margin:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "operating_margin:VALID": 20,
+            "return_on_invested_capital:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "return_on_invested_capital:VALID": 20
+          },
+          "predictorSetHash": "A661FE5913813B30F59380D5F81EF8304968B10C9920DF6F41F1516DD6CB4525"
+        }
+      ],
+      "contentHash": "C530513C95BC24E54C4D1B08DF475765715D4D9AD283C22CD05E486A14F189D4"
+    },
+    {
+      "phase": "CONTROLLED100",
+      "securityCount": 100,
+      "matrix": [
+        {
+          "decisionDate": "2015-05-07",
+          "dateType": "PRIMARY_RANDOM",
+          "targetCounts": {
+            "VALID": 77,
+            "MISSING": 13,
+            "SPECIALIZED_MODEL_REQUIRED": 10,
+            "INSUFFICIENT_DATA": 0
+          },
+          "operandCounts": {
+            "return_on_invested_capital": {
+              "VALID": 77,
+              "MISSING": 13
+            },
+            "operating_margin": {
+              "VALID": 86,
+              "MISSING": 4
+            },
+            "free_cash_flow_margin": {
+              "VALID": 86,
+              "MISSING": 4
+            },
+            "earnings_stability": {
+              "VALID": 86,
+              "MISSING": 4
+            },
+            "cash_flow_stability": {
+              "VALID": 86,
+              "MISSING": 4
+            }
+          },
+          "reasonCounts": {
+            "SPECIALIZED_MODEL_REQUIRED": 10,
+            "cash_flow_stability:MISSING_DISTINCT_QUARTER_CHAIN": 4,
+            "cash_flow_stability:VALID": 86,
+            "earnings_stability:MISSING_DISTINCT_QUARTER_CHAIN": 4,
+            "earnings_stability:VALID": 86,
+            "free_cash_flow_margin:MISSING_DISTINCT_QUARTER_CHAIN": 4,
+            "free_cash_flow_margin:VALID": 86,
+            "operating_margin:MISSING_DISTINCT_QUARTER_CHAIN": 4,
+            "operating_margin:VALID": 86,
+            "return_on_invested_capital:BALANCE_PARENT_ALIGNMENT_MISSING": 3,
+            "return_on_invested_capital:MISSING_DISTINCT_QUARTER_CHAIN": 4,
+            "return_on_invested_capital:PRETAX_INCOME_NONPOSITIVE": 4,
+            "return_on_invested_capital:TAX_RATE_OUTLIER": 2,
+            "return_on_invested_capital:VALID": 77
+          },
+          "predictorSetHash": "1E7A5A026F7088CF80C70C69EB15A22A4CCB2A03E24374D3F9D00DC8C2CBCD54"
+        },
+        {
+          "decisionDate": "2016-05-19",
+          "dateType": "PRIMARY_RANDOM",
+          "targetCounts": {
+            "VALID": 73,
+            "MISSING": 17,
+            "SPECIALIZED_MODEL_REQUIRED": 10,
+            "INSUFFICIENT_DATA": 0
+          },
+          "operandCounts": {
+            "return_on_invested_capital": {
+              "VALID": 73,
+              "MISSING": 17
+            },
+            "operating_margin": {
+              "VALID": 87,
+              "MISSING": 3
+            },
+            "free_cash_flow_margin": {
+              "VALID": 87,
+              "MISSING": 3
+            },
+            "earnings_stability": {
+              "VALID": 86,
+              "MISSING": 4
+            },
+            "cash_flow_stability": {
+              "VALID": 86,
+              "MISSING": 4
+            }
+          },
+          "reasonCounts": {
+            "SPECIALIZED_MODEL_REQUIRED": 10,
+            "cash_flow_stability:MISSING_DISTINCT_QUARTER_CHAIN": 4,
+            "cash_flow_stability:VALID": 86,
+            "earnings_stability:MISSING_DISTINCT_QUARTER_CHAIN": 4,
+            "earnings_stability:VALID": 86,
+            "free_cash_flow_margin:MISSING_DISTINCT_QUARTER_CHAIN": 3,
+            "free_cash_flow_margin:VALID": 87,
+            "operating_margin:MISSING_DISTINCT_QUARTER_CHAIN": 3,
+            "operating_margin:VALID": 87,
+            "return_on_invested_capital:BALANCE_PARENT_ALIGNMENT_MISSING": 2,
+            "return_on_invested_capital:MISSING_DISTINCT_QUARTER_CHAIN": 3,
+            "return_on_invested_capital:PRETAX_INCOME_NONPOSITIVE": 6,
+            "return_on_invested_capital:TAX_RATE_OUTLIER": 6,
+            "return_on_invested_capital:VALID": 73
+          },
+          "predictorSetHash": "72271C78096213DCFAF6B4865F38FFB5746765FC85C0289592DB958F6D7D3987"
+        },
+        {
+          "decisionDate": "2017-06-30",
+          "dateType": "PRIMARY_RANDOM",
+          "targetCounts": {
+            "VALID": 76,
+            "MISSING": 14,
+            "SPECIALIZED_MODEL_REQUIRED": 10,
+            "INSUFFICIENT_DATA": 0
+          },
+          "operandCounts": {
+            "return_on_invested_capital": {
+              "VALID": 76,
+              "MISSING": 14
+            },
+            "operating_margin": {
+              "VALID": 87,
+              "MISSING": 3
+            },
+            "free_cash_flow_margin": {
+              "VALID": 87,
+              "MISSING": 3
+            },
+            "earnings_stability": {
+              "VALID": 87,
+              "MISSING": 3
+            },
+            "cash_flow_stability": {
+              "VALID": 87,
+              "MISSING": 3
+            }
+          },
+          "reasonCounts": {
+            "SPECIALIZED_MODEL_REQUIRED": 10,
+            "cash_flow_stability:MISSING_DISTINCT_QUARTER_CHAIN": 3,
+            "cash_flow_stability:VALID": 87,
+            "earnings_stability:MISSING_DISTINCT_QUARTER_CHAIN": 3,
+            "earnings_stability:VALID": 87,
+            "free_cash_flow_margin:MISSING_DISTINCT_QUARTER_CHAIN": 3,
+            "free_cash_flow_margin:VALID": 87,
+            "operating_margin:MISSING_DISTINCT_QUARTER_CHAIN": 3,
+            "operating_margin:VALID": 87,
+            "return_on_invested_capital:BALANCE_PARENT_ALIGNMENT_MISSING": 3,
+            "return_on_invested_capital:MISSING_DISTINCT_QUARTER_CHAIN": 3,
+            "return_on_invested_capital:PRETAX_INCOME_NONPOSITIVE": 3,
+            "return_on_invested_capital:TAX_RATE_OUTLIER": 5,
+            "return_on_invested_capital:VALID": 76
+          },
+          "predictorSetHash": "A399857CC47A3C7E702DF54FEBF73DA56C30813FF0084EDEB4DE3D6D684C0321"
+        },
+        {
+          "decisionDate": "2018-04-09",
+          "dateType": "PRIMARY_RANDOM",
+          "targetCounts": {
+            "VALID": 48,
+            "MISSING": 42,
+            "SPECIALIZED_MODEL_REQUIRED": 10,
+            "INSUFFICIENT_DATA": 0
+          },
+          "operandCounts": {
+            "return_on_invested_capital": {
+              "VALID": 48,
+              "MISSING": 42
+            },
+            "operating_margin": {
+              "VALID": 87,
+              "MISSING": 3
+            },
+            "free_cash_flow_margin": {
+              "VALID": 87,
+              "MISSING": 3
+            },
+            "earnings_stability": {
+              "VALID": 87,
+              "MISSING": 3
+            },
+            "cash_flow_stability": {
+              "VALID": 87,
+              "MISSING": 3
+            }
+          },
+          "reasonCounts": {
+            "SPECIALIZED_MODEL_REQUIRED": 10,
+            "cash_flow_stability:MISSING_DISTINCT_QUARTER_CHAIN": 3,
+            "cash_flow_stability:VALID": 87,
+            "earnings_stability:MISSING_DISTINCT_QUARTER_CHAIN": 3,
+            "earnings_stability:VALID": 87,
+            "free_cash_flow_margin:MISSING_DISTINCT_QUARTER_CHAIN": 3,
+            "free_cash_flow_margin:VALID": 87,
+            "operating_margin:MISSING_DISTINCT_QUARTER_CHAIN": 3,
+            "operating_margin:VALID": 87,
+            "return_on_invested_capital:BALANCE_PARENT_ALIGNMENT_MISSING": 3,
+            "return_on_invested_capital:MISSING_DISTINCT_QUARTER_CHAIN": 3,
+            "return_on_invested_capital:OUTLIER_POLICY_FAILED": 1,
+            "return_on_invested_capital:PRETAX_INCOME_NONPOSITIVE": 1,
+            "return_on_invested_capital:TAX_RATE_OUTLIER": 34,
+            "return_on_invested_capital:VALID": 48
+          },
+          "predictorSetHash": "9F6CB689077E1B0F5DB75E7A7EC2B7BF121B105ED69E4880A5C9C72E2006CFA3"
+        },
+        {
+          "decisionDate": "2019-06-21",
+          "dateType": "PRIMARY_RANDOM",
+          "targetCounts": {
+            "VALID": 75,
+            "MISSING": 15,
+            "SPECIALIZED_MODEL_REQUIRED": 10,
+            "INSUFFICIENT_DATA": 0
+          },
+          "operandCounts": {
+            "return_on_invested_capital": {
+              "VALID": 76,
+              "MISSING": 14
+            },
+            "operating_margin": {
+              "VALID": 88,
+              "MISSING": 2
+            },
+            "free_cash_flow_margin": {
+              "VALID": 88,
+              "MISSING": 2
+            },
+            "earnings_stability": {
+              "VALID": 87,
+              "MISSING": 3
+            },
+            "cash_flow_stability": {
+              "VALID": 87,
+              "MISSING": 3
+            }
+          },
+          "reasonCounts": {
+            "SPECIALIZED_MODEL_REQUIRED": 10,
+            "cash_flow_stability:MISSING_DISTINCT_QUARTER_CHAIN": 3,
+            "cash_flow_stability:VALID": 87,
+            "earnings_stability:MISSING_DISTINCT_QUARTER_CHAIN": 3,
+            "earnings_stability:VALID": 87,
+            "free_cash_flow_margin:MISSING_DISTINCT_QUARTER_CHAIN": 2,
+            "free_cash_flow_margin:VALID": 88,
+            "operating_margin:MISSING_DISTINCT_QUARTER_CHAIN": 2,
+            "operating_margin:VALID": 88,
+            "return_on_invested_capital:BALANCE_PARENT_ALIGNMENT_MISSING": 2,
+            "return_on_invested_capital:MISSING_DISTINCT_QUARTER_CHAIN": 2,
+            "return_on_invested_capital:PRETAX_INCOME_NONPOSITIVE": 2,
+            "return_on_invested_capital:TAX_RATE_OUTLIER": 8,
+            "return_on_invested_capital:VALID": 76
+          },
+          "predictorSetHash": "C78069BC537B4E551E5FB2A42B479BC2AEAD090A6D21E0EAC8A8E10661D33657"
+        },
+        {
+          "decisionDate": "2020-04-20",
+          "dateType": "PRIMARY_RANDOM",
+          "targetCounts": {
+            "VALID": 71,
+            "MISSING": 19,
+            "SPECIALIZED_MODEL_REQUIRED": 10,
+            "INSUFFICIENT_DATA": 0
+          },
+          "operandCounts": {
+            "return_on_invested_capital": {
+              "VALID": 71,
+              "MISSING": 19
+            },
+            "operating_margin": {
+              "VALID": 89,
+              "MISSING": 1
+            },
+            "free_cash_flow_margin": {
+              "VALID": 88,
+              "MISSING": 2
+            },
+            "earnings_stability": {
+              "VALID": 88,
+              "MISSING": 2
+            },
+            "cash_flow_stability": {
+              "VALID": 88,
+              "MISSING": 2
+            }
+          },
+          "reasonCounts": {
+            "SPECIALIZED_MODEL_REQUIRED": 10,
+            "cash_flow_stability:MISSING_DISTINCT_QUARTER_CHAIN": 2,
+            "cash_flow_stability:VALID": 88,
+            "earnings_stability:MISSING_DISTINCT_QUARTER_CHAIN": 2,
+            "earnings_stability:VALID": 88,
+            "free_cash_flow_margin:MISSING_DISTINCT_QUARTER_CHAIN": 2,
+            "free_cash_flow_margin:VALID": 88,
+            "operating_margin:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "operating_margin:VALID": 89,
+            "return_on_invested_capital:BALANCE_PARENT_ALIGNMENT_MISSING": 3,
+            "return_on_invested_capital:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "return_on_invested_capital:PRETAX_INCOME_NONPOSITIVE": 3,
+            "return_on_invested_capital:TAX_RATE_OUTLIER": 12,
+            "return_on_invested_capital:VALID": 71
+          },
+          "predictorSetHash": "29209FAAAF175DE5A74D199DFAC15D683108D31E0D03F60CAAC03A3B8118B084"
+        },
+        {
+          "decisionDate": "2021-06-02",
+          "dateType": "PRIMARY_RANDOM",
+          "targetCounts": {
+            "VALID": 69,
+            "MISSING": 21,
+            "SPECIALIZED_MODEL_REQUIRED": 10,
+            "INSUFFICIENT_DATA": 0
+          },
+          "operandCounts": {
+            "return_on_invested_capital": {
+              "VALID": 69,
+              "MISSING": 21
+            },
+            "operating_margin": {
+              "VALID": 88,
+              "MISSING": 2
+            },
+            "free_cash_flow_margin": {
+              "VALID": 88,
+              "MISSING": 2
+            },
+            "earnings_stability": {
+              "VALID": 89,
+              "MISSING": 1
+            },
+            "cash_flow_stability": {
+              "VALID": 88,
+              "MISSING": 2
+            }
+          },
+          "reasonCounts": {
+            "SPECIALIZED_MODEL_REQUIRED": 10,
+            "cash_flow_stability:MISSING_DISTINCT_QUARTER_CHAIN": 2,
+            "cash_flow_stability:VALID": 88,
+            "earnings_stability:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "earnings_stability:VALID": 89,
+            "free_cash_flow_margin:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "free_cash_flow_margin:OUTLIER_POLICY_FAILED": 1,
+            "free_cash_flow_margin:VALID": 88,
+            "operating_margin:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "operating_margin:OUTLIER_POLICY_FAILED": 1,
+            "operating_margin:VALID": 88,
+            "return_on_invested_capital:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "return_on_invested_capital:PRETAX_INCOME_NONPOSITIVE": 8,
+            "return_on_invested_capital:TAX_RATE_OUTLIER": 12,
+            "return_on_invested_capital:VALID": 69
+          },
+          "predictorSetHash": "5BABBE5C3AA8281F1A9427284D60BC2B310A606745ABA0FDF63216F340E042EC"
+        },
+        {
+          "decisionDate": "2022-05-18",
+          "dateType": "PRIMARY_RANDOM",
+          "targetCounts": {
+            "VALID": 81,
+            "MISSING": 9,
+            "SPECIALIZED_MODEL_REQUIRED": 10,
+            "INSUFFICIENT_DATA": 0
+          },
+          "operandCounts": {
+            "return_on_invested_capital": {
+              "VALID": 81,
+              "MISSING": 9
+            },
+            "operating_margin": {
+              "VALID": 88,
+              "MISSING": 2
+            },
+            "free_cash_flow_margin": {
+              "VALID": 88,
+              "MISSING": 2
+            },
+            "earnings_stability": {
+              "VALID": 89,
+              "MISSING": 1
+            },
+            "cash_flow_stability": {
+              "VALID": 89,
+              "MISSING": 1
+            }
+          },
+          "reasonCounts": {
+            "SPECIALIZED_MODEL_REQUIRED": 10,
+            "cash_flow_stability:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "cash_flow_stability:VALID": 89,
+            "earnings_stability:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "earnings_stability:VALID": 89,
+            "free_cash_flow_margin:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "free_cash_flow_margin:OUTLIER_POLICY_FAILED": 1,
+            "free_cash_flow_margin:VALID": 88,
+            "operating_margin:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "operating_margin:OUTLIER_POLICY_FAILED": 1,
+            "operating_margin:VALID": 88,
+            "return_on_invested_capital:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "return_on_invested_capital:PRETAX_INCOME_NONPOSITIVE": 5,
+            "return_on_invested_capital:TAX_RATE_OUTLIER": 3,
+            "return_on_invested_capital:VALID": 81
+          },
+          "predictorSetHash": "DE9EA7A4294AF54465BEDF13DB53B692A1A2C8593626A1E5DACA20692624B134"
+        },
+        {
+          "decisionDate": "2023-05-18",
+          "dateType": "PRIMARY_RANDOM",
+          "targetCounts": {
+            "VALID": 76,
+            "MISSING": 14,
+            "SPECIALIZED_MODEL_REQUIRED": 10,
+            "INSUFFICIENT_DATA": 0
+          },
+          "operandCounts": {
+            "return_on_invested_capital": {
+              "VALID": 76,
+              "MISSING": 14
+            },
+            "operating_margin": {
+              "VALID": 89,
+              "MISSING": 1
+            },
+            "free_cash_flow_margin": {
+              "VALID": 89,
+              "MISSING": 1
+            },
+            "earnings_stability": {
+              "VALID": 89,
+              "MISSING": 1
+            },
+            "cash_flow_stability": {
+              "VALID": 89,
+              "MISSING": 1
+            }
+          },
+          "reasonCounts": {
+            "SPECIALIZED_MODEL_REQUIRED": 10,
+            "cash_flow_stability:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "cash_flow_stability:VALID": 89,
+            "earnings_stability:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "earnings_stability:VALID": 89,
+            "free_cash_flow_margin:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "free_cash_flow_margin:VALID": 89,
+            "operating_margin:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "operating_margin:VALID": 89,
+            "return_on_invested_capital:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "return_on_invested_capital:OUTLIER_POLICY_FAILED": 2,
+            "return_on_invested_capital:PRETAX_INCOME_NONPOSITIVE": 6,
+            "return_on_invested_capital:TAX_RATE_OUTLIER": 5,
+            "return_on_invested_capital:VALID": 76
+          },
+          "predictorSetHash": "3B02E07AF75ED05A7BDC23F3284EBD671CF84431F155CFE802051654AAA06040"
+        },
+        {
+          "decisionDate": "2018-09-20",
+          "dateType": "STRESS_DIAGNOSTIC",
+          "targetCounts": {
+            "VALID": 50,
+            "MISSING": 40,
+            "SPECIALIZED_MODEL_REQUIRED": 10,
+            "INSUFFICIENT_DATA": 0
+          },
+          "operandCounts": {
+            "return_on_invested_capital": {
+              "VALID": 50,
+              "MISSING": 40
+            },
+            "operating_margin": {
+              "VALID": 87,
+              "MISSING": 3
+            },
+            "free_cash_flow_margin": {
+              "VALID": 87,
+              "MISSING": 3
+            },
+            "earnings_stability": {
+              "VALID": 87,
+              "MISSING": 3
+            },
+            "cash_flow_stability": {
+              "VALID": 87,
+              "MISSING": 3
+            }
+          },
+          "reasonCounts": {
+            "SPECIALIZED_MODEL_REQUIRED": 10,
+            "cash_flow_stability:MISSING_DISTINCT_QUARTER_CHAIN": 3,
+            "cash_flow_stability:VALID": 87,
+            "earnings_stability:MISSING_DISTINCT_QUARTER_CHAIN": 3,
+            "earnings_stability:VALID": 87,
+            "free_cash_flow_margin:MISSING_DISTINCT_QUARTER_CHAIN": 3,
+            "free_cash_flow_margin:VALID": 87,
+            "operating_margin:MISSING_DISTINCT_QUARTER_CHAIN": 3,
+            "operating_margin:VALID": 87,
+            "return_on_invested_capital:BALANCE_PARENT_ALIGNMENT_MISSING": 3,
+            "return_on_invested_capital:INVESTED_CAPITAL_NONPOSITIVE": 1,
+            "return_on_invested_capital:MISSING_DISTINCT_QUARTER_CHAIN": 3,
+            "return_on_invested_capital:PRETAX_INCOME_NONPOSITIVE": 2,
+            "return_on_invested_capital:TAX_RATE_OUTLIER": 31,
+            "return_on_invested_capital:VALID": 50
+          },
+          "predictorSetHash": "DAE2BE8AF7EBFE33B1469010E090F2BD86D879D7F1B048CD18B938F6127B2939"
+        },
+        {
+          "decisionDate": "2020-02-19",
+          "dateType": "STRESS_DIAGNOSTIC",
+          "targetCounts": {
+            "VALID": 73,
+            "MISSING": 17,
+            "SPECIALIZED_MODEL_REQUIRED": 10,
+            "INSUFFICIENT_DATA": 0
+          },
+          "operandCounts": {
+            "return_on_invested_capital": {
+              "VALID": 73,
+              "MISSING": 17
+            },
+            "operating_margin": {
+              "VALID": 89,
+              "MISSING": 1
+            },
+            "free_cash_flow_margin": {
+              "VALID": 88,
+              "MISSING": 2
+            },
+            "earnings_stability": {
+              "VALID": 88,
+              "MISSING": 2
+            },
+            "cash_flow_stability": {
+              "VALID": 88,
+              "MISSING": 2
+            }
+          },
+          "reasonCounts": {
+            "SPECIALIZED_MODEL_REQUIRED": 10,
+            "cash_flow_stability:MISSING_DISTINCT_QUARTER_CHAIN": 2,
+            "cash_flow_stability:VALID": 88,
+            "earnings_stability:MISSING_DISTINCT_QUARTER_CHAIN": 2,
+            "earnings_stability:VALID": 88,
+            "free_cash_flow_margin:MISSING_DISTINCT_QUARTER_CHAIN": 2,
+            "free_cash_flow_margin:VALID": 88,
+            "operating_margin:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "operating_margin:VALID": 89,
+            "return_on_invested_capital:BALANCE_PARENT_ALIGNMENT_MISSING": 4,
+            "return_on_invested_capital:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "return_on_invested_capital:PRETAX_INCOME_NONPOSITIVE": 4,
+            "return_on_invested_capital:TAX_RATE_OUTLIER": 8,
+            "return_on_invested_capital:VALID": 73
+          },
+          "predictorSetHash": "6F2D2E41F3E5963989C7A975CBAF03ADB7F1EC8002493ED126F718CA9BD86F17"
+        },
+        {
+          "decisionDate": "2022-01-03",
+          "dateType": "STRESS_DIAGNOSTIC",
+          "targetCounts": {
+            "VALID": 74,
+            "MISSING": 16,
+            "SPECIALIZED_MODEL_REQUIRED": 10,
+            "INSUFFICIENT_DATA": 0
+          },
+          "operandCounts": {
+            "return_on_invested_capital": {
+              "VALID": 74,
+              "MISSING": 16
+            },
+            "operating_margin": {
+              "VALID": 88,
+              "MISSING": 2
+            },
+            "free_cash_flow_margin": {
+              "VALID": 88,
+              "MISSING": 2
+            },
+            "earnings_stability": {
+              "VALID": 89,
+              "MISSING": 1
+            },
+            "cash_flow_stability": {
+              "VALID": 88,
+              "MISSING": 2
+            }
+          },
+          "reasonCounts": {
+            "SPECIALIZED_MODEL_REQUIRED": 10,
+            "cash_flow_stability:MISSING_DISTINCT_QUARTER_CHAIN": 2,
+            "cash_flow_stability:VALID": 88,
+            "earnings_stability:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "earnings_stability:VALID": 89,
+            "free_cash_flow_margin:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "free_cash_flow_margin:OUTLIER_POLICY_FAILED": 1,
+            "free_cash_flow_margin:VALID": 88,
+            "operating_margin:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "operating_margin:OUTLIER_POLICY_FAILED": 1,
+            "operating_margin:VALID": 88,
+            "return_on_invested_capital:MISSING_DISTINCT_QUARTER_CHAIN": 1,
+            "return_on_invested_capital:PRETAX_INCOME_NONPOSITIVE": 6,
+            "return_on_invested_capital:TAX_RATE_OUTLIER": 9,
+            "return_on_invested_capital:VALID": 74
+          },
+          "predictorSetHash": "9C65FC885FD25FD5DEA7D204F6B4D5A28610291D3B8F6D3812275F9547B3EAE0"
+        }
+      ],
+      "contentHash": "46C055838B2C82D33170E78B87CB68231D1FF472740686AF405B33D5B7D76AF1"
+    },
+    {
+      "phase": "OFFLINE216",
+      "securityCount": 216,
+      "matrix": [
+        {
+          "decisionDate": "2015-05-07",
+          "dateType": "PRIMARY_RANDOM",
+          "targetCounts": {
+            "VALID": 165,
+            "MISSING": 33,
+            "SPECIALIZED_MODEL_REQUIRED": 18,
+            "INSUFFICIENT_DATA": 0
+          },
+          "operandCounts": {
+            "return_on_invested_capital": {
+              "VALID": 165,
+              "MISSING": 33
+            },
+            "operating_margin": {
+              "VALID": 185,
+              "MISSING": 13
+            },
+            "free_cash_flow_margin": {
+              "VALID": 185,
+              "MISSING": 13
+            },
+            "earnings_stability": {
+              "VALID": 183,
+              "MISSING": 15
+            },
+            "cash_flow_stability": {
+              "VALID": 183,
+              "MISSING": 15
+            }
+          },
+          "reasonCounts": {
+            "SPECIALIZED_MODEL_REQUIRED": 18,
+            "cash_flow_stability:MISSING_DISTINCT_QUARTER_CHAIN": 15,
+            "cash_flow_stability:VALID": 183,
+            "earnings_stability:MISSING_DISTINCT_QUARTER_CHAIN": 15,
+            "earnings_stability:VALID": 183,
+            "free_cash_flow_margin:MISSING_DISTINCT_QUARTER_CHAIN": 13,
+            "free_cash_flow_margin:VALID": 185,
+            "operating_margin:MISSING_DISTINCT_QUARTER_CHAIN": 13,
+            "operating_margin:VALID": 185,
+            "return_on_invested_capital:BALANCE_PARENT_ALIGNMENT_MISSING": 6,
+            "return_on_invested_capital:MISSING_DISTINCT_QUARTER_CHAIN": 13,
+            "return_on_invested_capital:PRETAX_INCOME_NONPOSITIVE": 10,
+            "return_on_invested_capital:TAX_RATE_OUTLIER": 4,
+            "return_on_invested_capital:VALID": 165
+          },
+          "predictorSetHash": "FFB7B205EF7328FC92759878A0BF87F48E66C2AFA0FE5F7C09C26BAEE54834A6"
+        },
+        {
+          "decisionDate": "2016-05-19",
+          "dateType": "PRIMARY_RANDOM",
+          "targetCounts": {
+            "VALID": 154,
+            "MISSING": 44,
+            "SPECIALIZED_MODEL_REQUIRED": 18,
+            "INSUFFICIENT_DATA": 0
+          },
+          "operandCounts": {
+            "return_on_invested_capital": {
+              "VALID": 154,
+              "MISSING": 44
+            },
+            "operating_margin": {
+              "VALID": 188,
+              "MISSING": 10
+            },
+            "free_cash_flow_margin": {
+              "VALID": 188,
+              "MISSING": 10
+            },
+            "earnings_stability": {
+              "VALID": 185,
+              "MISSING": 13
+            },
+            "cash_flow_stability": {
+              "VALID": 185,
+              "MISSING": 13
+            }
+          },
+          "reasonCounts": {
+            "SPECIALIZED_MODEL_REQUIRED": 18,
+            "cash_flow_stability:MISSING_DISTINCT_QUARTER_CHAIN": 13,
+            "cash_flow_stability:VALID": 185,
+            "earnings_stability:MISSING_DISTINCT_QUARTER_CHAIN": 13,
+            "earnings_stability:VALID": 185,
+            "free_cash_flow_margin:MISSING_DISTINCT_QUARTER_CHAIN": 10,
+            "free_cash_flow_margin:VALID": 188,
+            "operating_margin:MISSING_DISTINCT_QUARTER_CHAIN": 10,
+            "operating_margin:VALID": 188,
+            "return_on_invested_capital:BALANCE_PARENT_ALIGNMENT_MISSING": 6,
+            "return_on_invested_capital:MISSING_DISTINCT_QUARTER_CHAIN": 10,
+            "return_on_invested_capital:PRETAX_INCOME_NONPOSITIVE": 14,
+            "return_on_invested_capital:TAX_RATE_OUTLIER": 14,
+            "return_on_invested_capital:VALID": 154
+          },
+          "predictorSetHash": "F582E81532C1FC177424D5690A3E42F5E3217BE00174DE1C114C5A36B234F5AF"
+        },
+        {
+          "decisionDate": "2017-06-30",
+          "dateType": "PRIMARY_RANDOM",
+          "targetCounts": {
+            "VALID": 163,
+            "MISSING": 35,
+            "SPECIALIZED_MODEL_REQUIRED": 18,
+            "INSUFFICIENT_DATA": 0
+          },
+          "operandCounts": {
+            "return_on_invested_capital": {
+              "VALID": 163,
+              "MISSING": 35
+            },
+            "operating_margin": {
+              "VALID": 188,
+              "MISSING": 10
+            },
+            "free_cash_flow_margin": {
+              "VALID": 188,
+              "MISSING": 10
+            },
+            "earnings_stability": {
+              "VALID": 188,
+              "MISSING": 10
+            },
+            "cash_flow_stability": {
+              "VALID": 188,
+              "MISSING": 10
+            }
+          },
+          "reasonCounts": {
+            "SPECIALIZED_MODEL_REQUIRED": 18,
+            "cash_flow_stability:MISSING_DISTINCT_QUARTER_CHAIN": 10,
+            "cash_flow_stability:VALID": 188,
+            "earnings_stability:MISSING_DISTINCT_QUARTER_CHAIN": 10,
+            "earnings_stability:VALID": 188,
+            "free_cash_flow_margin:MISSING_DISTINCT_QUARTER_CHAIN": 10,
+            "free_cash_flow_margin:VALID": 188,
+            "operating_margin:MISSING_DISTINCT_QUARTER_CHAIN": 10,
+            "operating_margin:VALID": 188,
+            "return_on_invested_capital:BALANCE_PARENT_ALIGNMENT_MISSING": 5,
+            "return_on_invested_capital:MISSING_DISTINCT_QUARTER_CHAIN": 10,
+            "return_on_invested_capital:PRETAX_INCOME_NONPOSITIVE": 10,
+            "return_on_invested_capital:TAX_RATE_OUTLIER": 10,
+            "return_on_invested_capital:VALID": 163
+          },
+          "predictorSetHash": "B8C987CBB2D6DB5010B9ABB31BA189CE2007658995DB0EB5314B6A09AA1A40F9"
+        },
+        {
+          "decisionDate": "2018-04-09",
+          "dateType": "PRIMARY_RANDOM",
+          "targetCounts": {
+            "VALID": 107,
+            "MISSING": 91,
+            "SPECIALIZED_MODEL_REQUIRED": 18,
+            "INSUFFICIENT_DATA": 0
+          },
+          "operandCounts": {
+            "return_on_invested_capital": {
+              "VALID": 107,
+              "MISSING": 91
+            },
+            "operating_margin": {
+              "VALID": 188,
+              "MISSING": 10
+            },
+            "free_cash_flow_margin": {
+              "VALID": 188,
+              "MISSING": 10
+            },
+            "earnings_stability": {
+              "VALID": 188,
+              "MISSING": 10
+            },
+            "cash_flow_stability": {
+              "VALID": 188,
+              "MISSING": 10
+            }
+          },
+          "reasonCounts": {
+            "SPECIALIZED_MODEL_REQUIRED": 18,
+            "cash_flow_stability:MISSING_DISTINCT_QUARTER_CHAIN": 10,
+            "cash_flow_stability:VALID": 188,
+            "earnings_stability:MISSING_DISTINCT_QUARTER_CHAIN": 10,
+            "earnings_stability:VALID": 188,
+            "free_cash_flow_margin:MISSING_DISTINCT_QUARTER_CHAIN": 10,
+            "free_cash_flow_margin:VALID": 188,
+            "operating_margin:MISSING_DISTINCT_QUARTER_CHAIN": 10,
+            "operating_margin:VALID": 188,
+            "return_on_invested_capital:BALANCE_PARENT_ALIGNMENT_MISSING": 3,
+            "return_on_invested_capital:MISSING_DISTINCT_QUARTER_CHAIN": 10,
+            "return_on_invested_capital:OUTLIER_POLICY_FAILED": 1,
+            "return_on_invested_capital:PRETAX_INCOME_NONPOSITIVE": 8,
+            "return_on_invested_capital:TAX_RATE_OUTLIER": 69,
+            "return_on_invested_capital:VALID": 107
+          },
+          "predictorSetHash": "43344435F83F007EDE3C662E3627E813E2286D73159D60EDF5F350554106E8A2"
+        },
+        {
+          "decisionDate": "2019-06-21",
+          "dateType": "PRIMARY_RANDOM",
+          "targetCounts": {
+            "VALID": 159,
+            "MISSING": 39,
+            "SPECIALIZED_MODEL_REQUIRED": 18,
+            "INSUFFICIENT_DATA": 0
+          },
+          "operandCounts": {
+            "return_on_invested_capital": {
+              "VALID": 160,
+              "MISSING": 38
+            },
+            "operating_margin": {
+              "VALID": 191,
+              "MISSING": 7
+            },
+            "free_cash_flow_margin": {
+              "VALID": 191,
+              "MISSING": 7
+            },
+            "earnings_stability": {
+              "VALID": 188,
+              "MISSING": 10
+            },
+            "cash_flow_stability": {
+              "VALID": 188,
+              "MISSING": 10
+            }
+          },
+          "reasonCounts": {
+            "SPECIALIZED_MODEL_REQUIRED": 18,
+            "cash_flow_stability:MISSING_DISTINCT_QUARTER_CHAIN": 10,
+            "cash_flow_stability:VALID": 188,
+            "earnings_stability:MISSING_DISTINCT_QUARTER_CHAIN": 10,
+            "earnings_stability:VALID": 188,
+            "free_cash_flow_margin:MISSING_DISTINCT_QUARTER_CHAIN": 7,
+            "free_cash_flow_margin:VALID": 191,
+            "operating_margin:MISSING_DISTINCT_QUARTER_CHAIN": 7,
+            "operating_margin:VALID": 191,
+            "return_on_invested_capital:BALANCE_PARENT_ALIGNMENT_MISSING": 3,
+            "return_on_invested_capital:MISSING_DISTINCT_QUARTER_CHAIN": 7,
+            "return_on_invested_capital:PRETAX_INCOME_NONPOSITIVE": 14,
+            "return_on_invested_capital:TAX_RATE_OUTLIER": 14,
+            "return_on_invested_capital:VALID": 160
+          },
+          "predictorSetHash": "E34E51C8C67E51EFA41D2B1770CDFF28EBB7C179C1C87113A92D029459E3722A"
+        },
+        {
+          "decisionDate": "2020-04-20",
+          "dateType": "PRIMARY_RANDOM",
+          "targetCounts": {
+            "VALID": 151,
+            "MISSING": 47,
+            "SPECIALIZED_MODEL_REQUIRED": 18,
+            "INSUFFICIENT_DATA": 0
+          },
+          "operandCounts": {
+            "return_on_invested_capital": {
+              "VALID": 151,
+              "MISSING": 47
+            },
+            "operating_margin": {
+              "VALID": 193,
+              "MISSING": 5
+            },
+            "free_cash_flow_margin": {
+              "VALID": 192,
+              "MISSING": 6
+            },
+            "earnings_stability": {
+              "VALID": 191,
+              "MISSING": 7
+            },
+            "cash_flow_stability": {
+              "VALID": 191,
+              "MISSING": 7
+            }
+          },
+          "reasonCounts": {
+            "SPECIALIZED_MODEL_REQUIRED": 18,
+            "cash_flow_stability:MISSING_DISTINCT_QUARTER_CHAIN": 7,
+            "cash_flow_stability:VALID": 191,
+            "earnings_stability:MISSING_DISTINCT_QUARTER_CHAIN": 7,
+            "earnings_stability:VALID": 191,
+            "free_cash_flow_margin:MISSING_DISTINCT_QUARTER_CHAIN": 6,
+            "free_cash_flow_margin:VALID": 192,
+            "operating_margin:MISSING_DISTINCT_QUARTER_CHAIN": 5,
+            "operating_margin:VALID": 193,
+            "return_on_invested_capital:BALANCE_PARENT_ALIGNMENT_MISSING": 8,
+            "return_on_invested_capital:MISSING_DISTINCT_QUARTER_CHAIN": 5,
+            "return_on_invested_capital:PRETAX_INCOME_NONPOSITIVE": 14,
+            "return_on_invested_capital:TAX_RATE_OUTLIER": 20,
+            "return_on_invested_capital:VALID": 151
+          },
+          "predictorSetHash": "DD3EA51920709D293A1AFD8A0628BE0BCB8203AF61A3CA9EC9B3D553943CFC8E"
+        },
+        {
+          "decisionDate": "2021-06-02",
+          "dateType": "PRIMARY_RANDOM",
+          "targetCounts": {
+            "VALID": 154,
+            "MISSING": 44,
+            "SPECIALIZED_MODEL_REQUIRED": 18,
+            "INSUFFICIENT_DATA": 0
+          },
+          "operandCounts": {
+            "return_on_invested_capital": {
+              "VALID": 154,
+              "MISSING": 44
+            },
+            "operating_margin": {
+              "VALID": 190,
+              "MISSING": 8
+            },
+            "free_cash_flow_margin": {
+              "VALID": 191,
+              "MISSING": 7
+            },
+            "earnings_stability": {
+              "VALID": 193,
+              "MISSING": 5
+            },
+            "cash_flow_stability": {
+              "VALID": 192,
+              "MISSING": 6
+            }
+          },
+          "reasonCounts": {
+            "SPECIALIZED_MODEL_REQUIRED": 18,
+            "cash_flow_stability:MISSING_DISTINCT_QUARTER_CHAIN": 6,
+            "cash_flow_stability:VALID": 192,
+            "earnings_stability:MISSING_DISTINCT_QUARTER_CHAIN": 5,
+            "earnings_stability:VALID": 193,
+            "free_cash_flow_margin:MISSING_DISTINCT_QUARTER_CHAIN": 5,
+            "free_cash_flow_margin:OUTLIER_POLICY_FAILED": 2,
+            "free_cash_flow_margin:VALID": 191,
+            "operating_margin:MISSING_DISTINCT_QUARTER_CHAIN": 5,
+            "operating_margin:OUTLIER_POLICY_FAILED": 3,
+            "operating_margin:VALID": 190,
+            "return_on_invested_capital:MISSING_DISTINCT_QUARTER_CHAIN": 5,
+            "return_on_invested_capital:PRETAX_INCOME_NONPOSITIVE": 17,
+            "return_on_invested_capital:TAX_RATE_OUTLIER": 22,
+            "return_on_invested_capital:VALID": 154
+          },
+          "predictorSetHash": "C59B412C040C80B17C091F329AC17BF187064795324DD7159453F31ABF2F85CB"
+        },
+        {
+          "decisionDate": "2022-05-18",
+          "dateType": "PRIMARY_RANDOM",
+          "targetCounts": {
+            "VALID": 169,
+            "MISSING": 29,
+            "SPECIALIZED_MODEL_REQUIRED": 18,
+            "INSUFFICIENT_DATA": 0
+          },
+          "operandCounts": {
+            "return_on_invested_capital": {
+              "VALID": 170,
+              "MISSING": 28
+            },
+            "operating_margin": {
+              "VALID": 194,
+              "MISSING": 4
+            },
+            "free_cash_flow_margin": {
+              "VALID": 193,
+              "MISSING": 5
+            },
+            "earnings_stability": {
+              "VALID": 193,
+              "MISSING": 5
+            },
+            "cash_flow_stability": {
+              "VALID": 193,
+              "MISSING": 5
+            }
+          },
+          "reasonCounts": {
+            "SPECIALIZED_MODEL_REQUIRED": 18,
+            "cash_flow_stability:MISSING_DISTINCT_QUARTER_CHAIN": 5,
+            "cash_flow_stability:VALID": 193,
+            "earnings_stability:MISSING_DISTINCT_QUARTER_CHAIN": 5,
+            "earnings_stability:VALID": 193,
+            "free_cash_flow_margin:MISSING_DISTINCT_QUARTER_CHAIN": 4,
+            "free_cash_flow_margin:OUTLIER_POLICY_FAILED": 1,
+            "free_cash_flow_margin:VALID": 193,
+            "operating_margin:MISSING_DISTINCT_QUARTER_CHAIN": 3,
+            "operating_margin:OUTLIER_POLICY_FAILED": 1,
+            "operating_margin:VALID": 194,
+            "return_on_invested_capital:BALANCE_PARENT_ALIGNMENT_MISSING": 1,
+            "return_on_invested_capital:MISSING_DISTINCT_QUARTER_CHAIN": 3,
+            "return_on_invested_capital:PRETAX_INCOME_NONPOSITIVE": 9,
+            "return_on_invested_capital:TAX_RATE_OUTLIER": 15,
+            "return_on_invested_capital:VALID": 170
+          },
+          "predictorSetHash": "959D880DD4A985EE7262112FB4190809D93A4867FF1BAF06A4999D90FEDFFE53"
+        },
+        {
+          "decisionDate": "2023-05-18",
+          "dateType": "PRIMARY_RANDOM",
+          "targetCounts": {
+            "VALID": 164,
+            "MISSING": 34,
+            "SPECIALIZED_MODEL_REQUIRED": 18,
+            "INSUFFICIENT_DATA": 0
+          },
+          "operandCounts": {
+            "return_on_invested_capital": {
+              "VALID": 166,
+              "MISSING": 32
+            },
+            "operating_margin": {
+              "VALID": 196,
+              "MISSING": 2
+            },
+            "free_cash_flow_margin": {
+              "VALID": 196,
+              "MISSING": 2
+            },
+            "earnings_stability": {
+              "VALID": 195,
+              "MISSING": 3
+            },
+            "cash_flow_stability": {
+              "VALID": 194,
+              "MISSING": 4
+            }
+          },
+          "reasonCounts": {
+            "SPECIALIZED_MODEL_REQUIRED": 18,
+            "cash_flow_stability:MISSING_DISTINCT_QUARTER_CHAIN": 4,
+            "cash_flow_stability:VALID": 194,
+            "earnings_stability:MISSING_DISTINCT_QUARTER_CHAIN": 3,
+            "earnings_stability:VALID": 195,
+            "free_cash_flow_margin:MISSING_DISTINCT_QUARTER_CHAIN": 2,
+            "free_cash_flow_margin:VALID": 196,
+            "operating_margin:MISSING_DISTINCT_QUARTER_CHAIN": 2,
+            "operating_margin:VALID": 196,
+            "return_on_invested_capital:MISSING_DISTINCT_QUARTER_CHAIN": 2,
+            "return_on_invested_capital:OUTLIER_POLICY_FAILED": 2,
+            "return_on_invested_capital:PRETAX_INCOME_NONPOSITIVE": 13,
+            "return_on_invested_capital:TAX_RATE_OUTLIER": 15,
+            "return_on_invested_capital:VALID": 166
+          },
+          "predictorSetHash": "61716B2EA48D44BC21B1C9537913790F024B06205BF2D17E7F05397C510FD3CC"
+        },
+        {
+          "decisionDate": "2018-09-20",
+          "dateType": "STRESS_DIAGNOSTIC",
+          "targetCounts": {
+            "VALID": 105,
+            "MISSING": 93,
+            "SPECIALIZED_MODEL_REQUIRED": 18,
+            "INSUFFICIENT_DATA": 0
+          },
+          "operandCounts": {
+            "return_on_invested_capital": {
+              "VALID": 105,
+              "MISSING": 93
+            },
+            "operating_margin": {
+              "VALID": 188,
+              "MISSING": 10
+            },
+            "free_cash_flow_margin": {
+              "VALID": 188,
+              "MISSING": 10
+            },
+            "earnings_stability": {
+              "VALID": 188,
+              "MISSING": 10
+            },
+            "cash_flow_stability": {
+              "VALID": 188,
+              "MISSING": 10
+            }
+          },
+          "reasonCounts": {
+            "SPECIALIZED_MODEL_REQUIRED": 18,
+            "cash_flow_stability:MISSING_DISTINCT_QUARTER_CHAIN": 10,
+            "cash_flow_stability:VALID": 188,
+            "earnings_stability:MISSING_DISTINCT_QUARTER_CHAIN": 10,
+            "earnings_stability:VALID": 188,
+            "free_cash_flow_margin:MISSING_DISTINCT_QUARTER_CHAIN": 10,
+            "free_cash_flow_margin:VALID": 188,
+            "operating_margin:MISSING_DISTINCT_QUARTER_CHAIN": 10,
+            "operating_margin:VALID": 188,
+            "return_on_invested_capital:BALANCE_PARENT_ALIGNMENT_MISSING": 5,
+            "return_on_invested_capital:INVESTED_CAPITAL_NONPOSITIVE": 1,
+            "return_on_invested_capital:MISSING_DISTINCT_QUARTER_CHAIN": 10,
+            "return_on_invested_capital:PRETAX_INCOME_NONPOSITIVE": 9,
+            "return_on_invested_capital:TAX_RATE_OUTLIER": 68,
+            "return_on_invested_capital:VALID": 105
+          },
+          "predictorSetHash": "AA89F8658860A6A9CD9B146BE4E36BB2DDDB3528B65F524A19D8CB9A11EAAF84"
+        },
+        {
+          "decisionDate": "2020-02-19",
+          "dateType": "STRESS_DIAGNOSTIC",
+          "targetCounts": {
+            "VALID": 154,
+            "MISSING": 44,
+            "SPECIALIZED_MODEL_REQUIRED": 18,
+            "INSUFFICIENT_DATA": 0
+          },
+          "operandCounts": {
+            "return_on_invested_capital": {
+              "VALID": 154,
+              "MISSING": 44
+            },
+            "operating_margin": {
+              "VALID": 193,
+              "MISSING": 5
+            },
+            "free_cash_flow_margin": {
+              "VALID": 192,
+              "MISSING": 6
+            },
+            "earnings_stability": {
+              "VALID": 190,
+              "MISSING": 8
+            },
+            "cash_flow_stability": {
+              "VALID": 190,
+              "MISSING": 8
+            }
+          },
+          "reasonCounts": {
+            "SPECIALIZED_MODEL_REQUIRED": 18,
+            "cash_flow_stability:MISSING_DISTINCT_QUARTER_CHAIN": 8,
+            "cash_flow_stability:VALID": 190,
+            "earnings_stability:MISSING_DISTINCT_QUARTER_CHAIN": 8,
+            "earnings_stability:VALID": 190,
+            "free_cash_flow_margin:MISSING_DISTINCT_QUARTER_CHAIN": 6,
+            "free_cash_flow_margin:VALID": 192,
+            "operating_margin:MISSING_DISTINCT_QUARTER_CHAIN": 5,
+            "operating_margin:VALID": 193,
+            "return_on_invested_capital:BALANCE_PARENT_ALIGNMENT_MISSING": 9,
+            "return_on_invested_capital:MISSING_DISTINCT_QUARTER_CHAIN": 5,
+            "return_on_invested_capital:PRETAX_INCOME_NONPOSITIVE": 16,
+            "return_on_invested_capital:TAX_RATE_OUTLIER": 14,
+            "return_on_invested_capital:VALID": 154
+          },
+          "predictorSetHash": "7BE74989618A4B2B496267A691739E44EEC314E0157EE809CE3B9B4FF4E67F30"
+        },
+        {
+          "decisionDate": "2022-01-03",
+          "dateType": "STRESS_DIAGNOSTIC",
+          "targetCounts": {
+            "VALID": 159,
+            "MISSING": 39,
+            "SPECIALIZED_MODEL_REQUIRED": 18,
+            "INSUFFICIENT_DATA": 0
+          },
+          "operandCounts": {
+            "return_on_invested_capital": {
+              "VALID": 159,
+              "MISSING": 39
+            },
+            "operating_margin": {
+              "VALID": 194,
+              "MISSING": 4
+            },
+            "free_cash_flow_margin": {
+              "VALID": 193,
+              "MISSING": 5
+            },
+            "earnings_stability": {
+              "VALID": 193,
+              "MISSING": 5
+            },
+            "cash_flow_stability": {
+              "VALID": 192,
+              "MISSING": 6
+            }
+          },
+          "reasonCounts": {
+            "SPECIALIZED_MODEL_REQUIRED": 18,
+            "cash_flow_stability:MISSING_DISTINCT_QUARTER_CHAIN": 6,
+            "cash_flow_stability:VALID": 192,
+            "earnings_stability:MISSING_DISTINCT_QUARTER_CHAIN": 5,
+            "earnings_stability:VALID": 193,
+            "free_cash_flow_margin:MISSING_DISTINCT_QUARTER_CHAIN": 4,
+            "free_cash_flow_margin:OUTLIER_POLICY_FAILED": 1,
+            "free_cash_flow_margin:VALID": 193,
+            "operating_margin:MISSING_DISTINCT_QUARTER_CHAIN": 3,
+            "operating_margin:OUTLIER_POLICY_FAILED": 1,
+            "operating_margin:VALID": 194,
+            "return_on_invested_capital:BALANCE_PARENT_ALIGNMENT_MISSING": 2,
+            "return_on_invested_capital:MISSING_DISTINCT_QUARTER_CHAIN": 3,
+            "return_on_invested_capital:PRETAX_INCOME_NONPOSITIVE": 13,
+            "return_on_invested_capital:TAX_RATE_OUTLIER": 21,
+            "return_on_invested_capital:VALID": 159
+          },
+          "predictorSetHash": "56D8C9A85721A8FD570C05C29957C24C351D227D7095EA5D4BF83562E8353700"
+        }
+      ],
+      "contentHash": "B826574C07CF01FC435B73AC25FE2839D5267365B87DE03CE1F127C7312E3553"
+    }
+  ],
+  "minimumEligiblePerDate": 105,
+  "predictorGate": "PASSED",
+  "predictorCheckpoint": {
+    "schemaVersion": "FV-STAGE7C5-PREDICTOR-CHECKPOINT-v1.0.0",
+    "recordCount": 1804,
+    "contentHash": "D9BF09661416214C1FF9788D41AC9E1FD6505FB72E02C091B762DA4F98CCA712",
+    "outcomesReadBeforeSeal": false
+  },
+  "outcomesRead": false,
+  "networkRequests": 0,
+  "databaseRequests": 0,
+  "providerValuesIncluded": false,
+  "limitations": [
+    "NO_SEC_EQUIVALENCE",
+    "NOT_STRICT_PIT",
+    "CURRENT_REVISIONS"
+  ],
+  "contentHash": "848ED7DE1A55F3EBE56B6DAB4E5BF8E347C303BF803A0FAC1F096FDA7E09DB4C"
+}

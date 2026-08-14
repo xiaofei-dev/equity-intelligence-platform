@@ -1,0 +1,53 @@
+{
+  "contractVersion": "internal-current-fundamental-value-result-v1.0.0",
+  "assessmentId": "48c10755-be38-55da-b154-1be736dc3cbc",
+  "assessmentContentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "identity": {
+    "securityId": "10000000-0000-4000-8000-000000000010",
+    "companyId": "10000000-0000-4000-8000-000000000011",
+    "instrumentId": "10000000-0000-4000-8000-000000000012",
+    "shareClassId": "10000000-0000-4000-8000-000000000013",
+    "listingId": "10000000-0000-4000-8000-000000000014",
+    "tickerAssignmentId": "10000000-0000-4000-8000-000000000015",
+    "ticker": "TEST",
+    "mic": "XNYS",
+    "currency": "USD"
+  },
+  "decisionCutoff": "2026-08-11T21:00:00Z",
+  "priceSessionDate": "2026-08-11",
+  "latestFundamentalPeriodEnd": "2026-06-30",
+  "evidenceTrack": "EODHD_PROVIDER_NORMALIZED_CURRENT_REVISION_APPROXIMATION",
+  "claimCeiling": "DEVELOPMENT_OBSERVED_CURRENT_REVISION_APPROXIMATION",
+  "modelEvidenceLabel": "NOT_VALIDATED",
+  "versions": {
+    "producerVersion": "FV-CURRENT-REVISION-PRODUCER-v1.0.0",
+    "policyVersion": "FV-CURRENT-INVESTMENT-POLICY-v1.0.0",
+    "modelVersion": "FUNDAMENTAL-VALUE-v1.0.0",
+    "strategyVersion": "LONG-TERM-CORE-v1.0.0",
+    "formulaVersion": "fundamental-value-formulas-v1.1.0",
+    "aggregationVersion": "FUNDAMENTAL-VALUE-WEIGHTED-MEDIAN-QUANTILE-v1.0.0",
+    "riskPolicyVersion": "LONG-TERM-CORE-RISK-CAP-TIERS-v1.0.0",
+    "assumptionPolicyVersion": "fundamental-value-assumptions-v1.1.0"
+  },
+  "referencePrice": {"state": "VALID", "value": "100", "reasonCode": null},
+  "companyQuality": {"state": "VALID", "score": "76.91", "reasonCodes": []},
+  "financialResilience": {"state": "VALID", "score": "71.25", "reasonCodes": []},
+  "earningsAndCashFlowQuality": {"state": "VALID", "score": "67.86", "reasonCodes": []},
+  "capitalAllocationQuality": {"state": "VALID", "score": "85", "reasonCodes": []},
+  "downsideRisk": {"state": "VALID", "score": "22.19", "reasonCodes": []},
+  "valuations": [
+    {"method": "FCFF_DCF", "state": "VALID", "low": "80", "central": "110", "high": "140", "reasonCodes": [], "terminalValueShare": "0.65"},
+    {"method": "NORMALIZED_OWNER_EARNINGS", "state": "VALID", "low": "90", "central": "120", "high": "150", "reasonCodes": [], "terminalValueShare": null},
+    {"method": "EARNINGS_POWER", "state": "VALID", "low": "85", "central": "115", "high": "145", "reasonCodes": [], "terminalValueShare": null},
+    {"method": "COMPARABLE_CROSS_CHECK", "state": "VALID", "low": "95", "central": "125", "high": "155", "reasonCodes": [], "terminalValueShare": null}
+  ],
+  "fairValue": {"state": "VALID", "low": "80", "central": "120", "high": "155", "reasonCodes": []},
+  "marginOfSafety": {"state": "VALID", "low": "-0.2", "central": "0.2", "high": "0.55", "reasonCodes": []},
+  "expectedReturn": {"state": "VALID", "low": "-0.04", "central": "0.12", "high": "0.24", "reasonCodes": []},
+  "riskCap": {"ceiling": "0.02", "bindingReasons": ["MODEL_EVIDENCE_CEILING"]},
+  "investmentView": {"state": "VALID", "category": "ATTRACTIVE_FOR_FURTHER_RESEARCH", "reasonCodes": ["POSITIVE_LONG_TERM_VALUE_EVIDENCE"]},
+  "deterministicActionAuthorized": false,
+  "deterministicRankingAuthorized": false,
+  "finalPortfolioWeightAuthorized": false,
+  "automaticBrokerageExecutionAuthorized": false
+}

@@ -1,5 +1,45 @@
 # Equity Intelligence Platform
 
+## Unified Portfolio and Risk Context
+
+Task 4 now provides a human-controlled `/portfolio` workspace over an immutable
+V28 risk context. The view keeps `LONG_TERM_CORE` and `QUANT_TRADING` separate,
+binds the calculation to V12 account snapshots and a versioned constraint
+policy, preserves missing valuations, and shows cash, liabilities,
+concentration, and risk reasons. Spring owns the public workflow, FastAPI owns
+the stateless calculation, and Next.js reads Spring only. Human reviews are
+immutable; final weights, orders, brokerage execution, and LLM decision
+authority remain prohibited. See
+[Unified Portfolio and Risk Context v1](docs/unified-portfolio-risk-context-v1.md).
+
+## Quantitative Trading
+
+The independent Quantitative Trading sleeve has a deterministic Python engine,
+event-driven portfolio simulator, and frozen historical-validation boundary.
+The first `MOMENTUM_CONTINUATION` strategy is reproducible but rejected for
+production: its development-only current-survivor replay produced 1.13% CAGR
+versus 13.68% for SPY. Its evidence label remains `NOT_VALIDATED`.
+
+A distinct post-outcome `DUAL_MOMENTUM_TREND` v1.1 successor completed one
+controlled development replay and was not directionally supportive against
+SPY, so its evidence label remains `NOT_VALIDATED`. The Python service now has
+a provider-neutral V22 read/assembly boundary for exact 253-session histories,
+durable identity, completed-session authority, and fail-closed common-stock/SPY
+applicability. V27, FastAPI, Spring Boot, and Next.js now provide an immutable
+research-signal product slice with candidate/hold/exit/no-signal states and
+entry/stop context. The public path is GET-only and prohibits final weights,
+orders, brokerage instructions, AI authority, and guaranteed-return claims.
+Portfolio execution and production validation claims remain closed. See
+[Quantitative Trading System v1](docs/quant-trading-system-v1.md).
+
+Quant v2 implements a separately versioned regime-filtered mean-reversion
+engine, trade simulator, and one-pass historical runner. Its controlled replay
+was not directionally supportive: USD 100,000 became USD 107,516.24 at 0.63%
+CAGR versus USD 434,189.17 and 13.53% CAGR for SPY. The result is sealed
+`NOT_VALIDATED` with no same-outcome retuning. It is retained as reproducible
+research code and is intentionally not promoted into the public decision path.
+See [Quant v2 methodology](docs/quant-trading-v2-methodology-2026-08-13.md).
+
 Equity Intelligence Platform is a decision-support system for systematic equity research and portfolio construction. It combines deterministic quantitative screening, evidence-based AI research, explicit portfolio rules, and continuous performance evaluation.
 
 The platform is not intended to guarantee returns, replace human judgment, or execute trades automatically. Its purpose is to improve research consistency, reduce emotional decision-making, and make every recommendation explainable and reproducible.
@@ -71,6 +111,9 @@ Performance tracking and strategy evaluation
 - [System Architecture](docs/architecture.md)
 - [Dual-System Architecture Contract v1](docs/dual-system-architecture-contract-v1.md)
 - [Unified Market Data and Evidence Foundation v1](docs/unified-market-data-evidence-foundation-v1.md)
+- [Fundamental Value Investment System v1](docs/fundamental-value-investment-system-v1.md)
+- [Fundamental Value v1 Contract](docs/fundamental-value-contract-v1.md)
+- [Fundamental Value Stage 4 Acceptance](docs/fundamental-value-investment-system-v1-stage-4-acceptance-2026-07-31.md)
 - [Database Deployment v1](docs/database-deployment-v1.md)
 - [Local Development](docs/development.md)
 - [Investment Methodology](docs/investment-methodology.md)
@@ -136,10 +179,19 @@ and Ruff, and all three typed Python/PostgreSQL integration tests passed on a
 fresh disposable PostgreSQL 17 database migrated from V1 to V22. This is
 bounded test evidence, not a business-database deployment or provider run.
 
-V23 is deferred for the MVP. Governed raw-payload deletion remains
-unimplemented because V22 lacks retention-policy, deadline/jurisdiction,
-legal-hold, disposition-event, proof, and chain-cardinality state. No V23
-migration or deletion operation has been created.
+Task 2 Stage 1 now freezes the Fundamental Value Investment System v1 contract
+for mature nonfinancial companies and reserves V23 for its narrowly scoped
+append-only persistence successor. V23 will not contain raw-retention,
+deletion, or legal-hold governance. Governed raw-payload deletion remains
+unimplemented; any future approved retention successor must use the next
+available migration version after V23.
+
+Stages 2 and 3 add the pure deterministic core and strict V22 evidence
+assembly. Stage 4 adds append-only V23 persistence for both honest non-usable
+assemblies and future complete deterministic results, including ordered
+relational evidence parents and typed hash/core replay. Current real
+mature-company evidence remains incomplete and the model remains
+`NOT_VALIDATED`; the V23 synthetic valid fixture proves storage mechanics only.
 
 The current analytics foundation includes:
 

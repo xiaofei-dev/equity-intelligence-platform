@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "FV-STAGE7C9-CONFIRMATION-FINAL-v1.0.0",
+  "terminalDisposition": "MIXED_NOT_VALIDATED",
+  "evidenceRuling": "DEVELOPMENT_OBSERVED_CURRENT_REVISION_APPROXIMATION",
+  "productionModelEvidenceLabel": "NOT_VALIDATED",
+  "finalRetrospectiveIteration": true,
+  "notUntouchedHoldout": true,
+  "bindings": {
+    "policyHash": "11A639CA376DE3C1205F6F22EF312210E5A8620D549431168A7CCA67C5419D73",
+    "predictorSealHash": "E110C20287CB1B9E2260E9DAA33C2F2A8B5CD290F11E20EB733B918F61F595DD",
+    "outcomeAccessIntentHash": "641B9463500E26274C7DEC28C01ACD8B79957CA899F501DD2F0EA18AF36E7DE5",
+    "terminalRegistryHash": "77BD6811C5041E381C9D484806464DEFE642CDBA0D60A8071BF03D12DD7951C1",
+    "outcomeResultHash": "E30E1CEFA08A2DA4DC21087ED7B813B012BFA24022E72860A48F580B796D4431",
+    "calendarHash": "7FE1CA16970AE0346C67120DD4F32BA3BEF039276B9800757D15D3744189AA2C",
+    "receiptHash": "B74761883F9395F1334B3F78983DB4237DF0F3F245F449EFFDC73F98FBB738AD"
+  },
+  "population": {
+    "identityCount": 191,
+    "label": "CONTROLLED_OVERLAP_CURRENT_UNIVERSE_RETROSPECTIVE",
+    "predictorRecordCount": 1385,
+    "terminalRowCount": 5157,
+    "usableOutcomeCount": 4140
+  },
+  "primary756": {
+    "eligibleDates": 9,
+    "minimumRequired": 7,
+    "completePairsByDate": [161, 152, 157, 111, 154, 149, 160, 168, 168],
+    "medianDeterministicOrdinalRankCorrelation": "0.1106596936469248061279988015",
+    "positiveCorrelationDates": 9,
+    "medianHighMinusLowNetAnnualized": "0.060978842290715540886715434",
+    "positiveHighMinusLowDates": 8,
+    "medianHighSpyNetAnnualizedExcess": "0.065812729797562813136668695",
+    "highSpyWinDates": 9,
+    "minimumLeaveOneDateOutMedianHighSpyExcess": "0.063832490416227911705397963",
+    "medianHighGrossMddDeteriorationVsSpy": "-0.0084550284454705353370514928",
+    "worstHighGrossMddDeteriorationVsSpy": "0.0210436282442709914807865933",
+    "strictHighMiddleLowMonotonicDates": 2
+  },
+  "horizonDiagnostics": {
+    "252": {"eligibleDates": 9, "medianCorrelation": "0.08800695941063011887655442881", "medianHighLow": "0.099837074592792398936420163", "medianHighSpyExcess": "0.084137109118672956302497650"},
+    "504": {"eligibleDates": 9, "medianCorrelation": "0.1121273935645193130223070343", "medianHighLow": "0.060118283666879230900863920", "medianHighSpyExcess": "0.049285268645118542757974755"},
+    "756": {"eligibleDates": 9, "medianCorrelation": "0.1106596936469248061279988015", "medianHighLow": "0.060978842290715540886715434", "medianHighSpyExcess": "0.065812729797562813136668695"}
+  },
+  "frozenThresholdResults": {
+    "completeDates": true,
+    "medianCorrelationAbove005": true,
+    "atLeastSixPositiveCorrelationDates": true,
+    "medianHighLowAbove002": true,
+    "medianHighSpyExcessAbove001": true,
+    "atLeastSixHighSpyWins": true,
+    "leaveOneDateOutNonnegative": true,
+    "highMddDeteriorationWithin005": true
+  },
+  "diagnosticLimitations": {
+    "sector": "NOT_OBSERVED_CURRENT_CLASSIFICATION_MAPPING_NOT_BOUND",
+    "stress": "C8_PRIOR_DESCRIPTIVE_ONLY_NOT_C9_ACCEPTANCE_EVIDENCE",
+    "portfolioMonotonicity": "STRICT_HIGH_MIDDLE_LOW_ORDER_ONLY_2_OF_9_PRIMARY_DATES",
+    "survivorship": "CURRENT_UNIVERSE_RETROSPECTIVE",
+    "availability": "CURRENT_REVISION_APPROXIMATION",
+    "targets": "COMPANY_QUALITY_ONLY"
+  },
+  "executionDisclosure": {
+    "networkRequests": 0,
+    "singleIntentPreserved": true,
+    "firstLocalAttempt": "FAIL_CLOSED_BEFORE_RESULT_ARTIFACT_DUE_TO_INVALID_CONTIGUOUS_USABLE_RANK_ASSERTION",
+    "resume": "SAME_SEALED_INPUTS_AFTER_REMOVING_ONLY_THE_CONTRADICTORY_RERANK_ASSERTION",
+    "mappingFormulaThresholdChangesAfterIntent": false,
+    "outcomeResultRerunForTuning": false
+  },
+  "prohibitedClaims": [
+    "UNTOUCHED_HOLDOUT",
+    "STRICT_PIT",
+    "BACKTEST_SUPPORTED",
+    "FORWARD_SUPPORTED",
+    "PRODUCTION_EVIDENCE_ELIGIBILITY",
+    "COMPLETE_FUNDAMENTAL_VALUE_MODEL_VALIDATION"
+  ],
+  "stage8State": "ELIGIBLE_FOR_MIGRATION_FREE_READINESS_CONTRACT_ONLY",
+  "contentHash": "785988E194E28E0F8681064911CD9C8EA86164D5998D48C7DFA19DAB72B6456F"
+}

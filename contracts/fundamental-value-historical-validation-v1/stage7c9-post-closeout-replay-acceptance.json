@@ -1,0 +1,158 @@
+{
+  "schemaVersion": "FV-STAGE7C9-POST-CLOSEOUT-REPLAY-ACCEPTANCE-v1.0.0",
+  "state": "ACCEPTED_ENGINEERING_REPRODUCIBILITY_ONLY",
+  "postOutcomeEngineeringAcceptance": true,
+  "evidenceLabelChangeAllowed": false,
+  "c9ArtifactsRemainImmutable": true,
+  "bindings": {
+    "policyHash": "11A639CA376DE3C1205F6F22EF312210E5A8620D549431168A7CCA67C5419D73",
+    "predictorSealHash": "E110C20287CB1B9E2260E9DAA33C2F2A8B5CD290F11E20EB733B918F61F595DD",
+    "outcomeIntentHash": "641B9463500E26274C7DEC28C01ACD8B79957CA899F501DD2F0EA18AF36E7DE5",
+    "terminalRegistryHash": "77BD6811C5041E381C9D484806464DEFE642CDBA0D60A8071BF03D12DD7951C1",
+    "outcomeResultHash": "E30E1CEFA08A2DA4DC21087ED7B813B012BFA24022E72860A48F580B796D4431",
+    "finalInterpretationHash": "785988E194E28E0F8681064911CD9C8EA86164D5998D48C7DFA19DAB72B6456F",
+    "stage8aReadinessHash": "C10DCE1CDF46F4EF0A90B227E39230874DB2DFA7EDD49349859890F7A9800F10",
+    "recomputedSummaryHash": "A72F47A580392BCE2D62E365B5BA9DCB6E331DF4168D1C22CE50353317383E80"
+  },
+  "retainedSource": {
+    "confirmationVersion": "FV-STAGE7C9-CONFIRMATION-v1.0.0",
+    "arithmeticVersion": "FV-STAGE7C9-DECIMAL-ARITHMETIC-v1.0.0",
+    "confirmationSourceSha256": "44B5E137135BAF96416CB1AAA53945230DC4F4762C784A9EBB1601B091E9BC1C",
+    "runnerSourceSha256": "FC713CAC43DF15D5499C5598D311A96883F93D9246C3424EB62CDDDF6692BCD4",
+    "acceptanceEvaluatorVersion": "FV-STAGE7C9-POST-CLOSEOUT-REPLAY-ACCEPTANCE-v1.0.0",
+    "acceptanceEvaluatorSourceSha256": "5C53042C8142661C8516D4A12AEDDA10E4624D4F38321F4527CA572A001F9130",
+    "focusedTestSourceSha256": "F575065BA901743ED1ECFAC4814533102371FA0057AACCE9969529488DD5B42F"
+  },
+  "dependencySeal": {
+    "canonicalHashModuleSha256": "12C3A1F5F5C9715D3B351C4946002A98F284473E86B76F7205930E71CC9B866E",
+    "annualizationModuleSha256": "5B9FBE557762171A7D2580CD19D7D230AD684BFF1EEF6E529F3E9CAFCC174993",
+    "providerNativeProducerModuleSha256": "CEF84DBC51DBCDD9746AA26E9AFDEC4190F98899AD9ACD8ED951C47B6C50D017",
+    "providerCoverageModuleSha256": "83CAFE33E2A92997FED46806C49E776E19217A438C9BA918D61C77846549B759",
+    "providerPreflightModuleSha256": "E0137E2F0589CA88D6EF25D2AD36FBE0A7CA095EFECE89BE984A17D16818F1AC"
+  },
+  "runtimeSeal": {
+    "pythonImplementation": "cpython",
+    "pythonVersion": "3.14.2",
+    "pythonCacheTag": "cpython-314",
+    "decimalModule": "decimal",
+    "decimalVersion": "1.70",
+    "libmpdecVersion": "4.0.0"
+  },
+  "originalIntentRuntimeLimitation": {
+    "codeDependencyHashesBoundBeforeOutcome": false,
+    "pythonRuntimeBoundBeforeOutcome": false,
+    "decimalRuntimeBoundBeforeOutcome": false,
+    "originalPreOutcomeProvenance": "FAIL_PARTIAL",
+    "currentPostCloseoutReplayProvenance": "PASS_ENGINEERING_REPRODUCIBILITY_ONLY",
+    "evidenceUpgradeAllowed": false
+  },
+  "decimalContext": {
+    "precision": 28,
+    "rounding": "ROUND_HALF_EVEN",
+    "scope": "INTERNAL_LOCAL_CONTEXT_FOR_COMPLETE_RUNNER_COST_AND_RANK_ARITHMETIC",
+    "callerContextMutationAllowed": false,
+    "inputDomain": "ORDINARY_FINITE_DECIMAL"
+  },
+  "costFunction": {
+    "participation": "orderNotional / ADTV",
+    "impactBps": "min(50, 25 * sqrt(participation))",
+    "roundTripBps": "2 + 2 * (1 + impactBps)",
+    "rate": "roundTripBps / 10000",
+    "netTotalReturn": "grossTotalReturn - rate"
+  },
+  "ordinalCorrelation": {
+    "predictorOrder": "RAW_SCORE_DESC_SECURITY_ID_ASC",
+    "returnOrder": "RAW_NET_RETURN_DESC_SECURITY_ID_ASC",
+    "correlation": "PEARSON_OF_DETERMINISTIC_COMPLETE_ORDINAL_VECTORS",
+    "minimumPairs": 100,
+    "rawPredictorVarianceRequired": "NONZERO",
+    "rawReturnVarianceRequired": "NONZERO",
+    "nonvaryingState": "NOT_OBSERVED",
+    "identityTieBreakCannotCreateRawVariance": true
+  },
+  "explicitAcceptanceMatrix": {
+    "eligiblePrimaryDates": {"comparator": ">=", "threshold": 7},
+    "completePairsPerDate": {"comparator": ">=", "threshold": 100},
+    "completePairCoveragePerDate": {"comparator": ">=", "threshold": "0.90"},
+    "highAndLowUsablePerDate": {"comparator": ">=", "threshold": 20},
+    "highAndLowCoveragePerDate": {"comparator": ">=", "threshold": "0.90"},
+    "medianOrdinalCorrelation": {"comparator": ">", "threshold": "0.05"},
+    "positiveCorrelationDates": {"comparator": ">=", "threshold": 6},
+    "medianHighMinusLowNetAnnualized": {"comparator": ">", "threshold": "0.02"},
+    "medianHighMinusSpyNetAnnualized": {"comparator": ">", "threshold": "0.01"},
+    "highMinusSpyWinningDates": {"comparator": ">=", "threshold": 6},
+    "minimumLeaveOneOutMedianHighSpyExcess": {"comparator": ">=", "threshold": "0"},
+    "medianTrueMddDeterioration": {"comparator": "<=", "threshold": "0.05"},
+    "strictHighMiddleLowMonotonicity": "DIAGNOSTIC_NOT_PASS_GATE"
+  },
+  "policyIndirectionAssessment": {
+    "c9PolicyUnchangedC8TextSufficientAlone": false,
+    "repair": "THIS_APPEND_ONLY_ARTIFACT_BINDS_THE_COMPLETE_NUMERIC_MATRIX",
+    "thresholdTuningAfterOutcome": false
+  },
+  "replayAcceptance": {
+    "outerDecimalPrecisionTested": 50,
+    "registryExactObjectEquality": true,
+    "registryContentHash": "77BD6811C5041E381C9D484806464DEFE642CDBA0D60A8071BF03D12DD7951C1",
+    "resultExactObjectEquality": true,
+    "resultContentHash": "E30E1CEFA08A2DA4DC21087ED7B813B012BFA24022E72860A48F580B796D4431",
+    "terminalRowCount": 5157,
+    "aggregateRowCount": 27,
+    "chainCount": 1,
+    "idempotentExactReplay": true,
+    "conflictingReplayRejected": true,
+    "filesOverwrittenByReplayTest": false
+  },
+  "summaryAcceptance": {
+    "primaryMechanicalThresholdsPassed": true,
+    "strictHighMiddleLowMonotonicDates": 2,
+    "stressState": "NOT_EVALUATED_NO_C9_STRESS_NODES",
+    "sectorState": "NOT_OBSERVED_CURRENT_CLASSIFICATION_MAPPING_NOT_BOUND",
+    "terminalDispositionUnchanged": "MIXED_NOT_VALIDATED",
+    "modelEvidenceLabelUnchanged": "NOT_VALIDATED"
+  },
+  "mddSemantics": {
+    "immutableStoredField": "medianHighGrossMddDeteriorationVsSpy",
+    "immutableStoredFieldActualMeaning": "HIGH_GROSS_MDD_MINUS_SPY_GROSS_MDD",
+    "immutableStoredValue": "-0.0084550284454705353370514928",
+    "storedFieldLabelSemanticallyMisleading": true,
+    "trueDeteriorationFormula": "SPY_GROSS_MDD_MINUS_HIGH_GROSS_MDD",
+    "trueMedianDeterioration": "0.0084550284454705353370514928",
+    "immutableStoredWorstField": "worstHighGrossMddDeteriorationVsSpy",
+    "immutableStoredWorstActualMeaning": "MAX_OF_HIGH_GROSS_MDD_MINUS_SPY_GROSS_MDD",
+    "immutableStoredWorstValue": "0.0210436282442709914807865933",
+    "immutableStoredWorstLabelSemanticallyMisleading": true,
+    "trueWorstDeteriorationFormula": "MAX_OF_SPY_GROSS_MDD_MINUS_HIGH_GROSS_MDD",
+    "trueWorstDeterioration": "0.0393620160475133778955018306",
+    "trueWorstDeteriorationPasses005": true,
+    "thresholdComparator": "<=",
+    "threshold": "0.05",
+    "passes": true
+  },
+  "nonOverlappingAnchorDiagnostic": {
+    "policy": "CLOSED_INTERVAL_GREEDY_DECISION_DATE_ASC_ENTRY_GT_PRIOR_EXIT_MAX_3",
+    "diagnosticOnly": true,
+    "selected": [
+      {"decisionDate": "2015-11-12", "entrySession": "2015-11-13", "exitSession": "2018-11-14"},
+      {"decisionDate": "2019-11-25", "entrySession": "2019-11-26", "exitSession": "2022-11-28"},
+      {"decisionDate": "2023-01-09", "entrySession": "2023-01-10", "exitSession": "2026-01-15"}
+    ],
+    "medianHighSpyNetAnnualizedExcess": "0.043902442709926437058510032"
+  },
+  "downstreamResealVerification": {
+    "preResealRegistryArtifactPreserved": false,
+    "preResealResultArtifactPreserved": false,
+    "c9ExecutionJournalPreserved": false,
+    "numericValuesIndependentlyProvenUnchangedAcrossReseal": "NOT_INDEPENDENTLY_VERIFIABLE_FROM_PRESERVED_ARTIFACTS",
+    "currentFinalChainExactReplay": true
+  },
+  "prohibitedConsequences": [
+    "EVIDENCE_LABEL_UPGRADE",
+    "BACKTEST_SUPPORTED",
+    "FORWARD_SUPPORTED",
+    "OUTCOME_RECOMPUTATION_OR_TUNING",
+    "REAL_STAGE8_ENROLLMENT",
+    "PRODUCTION_AUTHORIZATION"
+  ],
+  "contentHash": "97048A8497F44740EDD3C072AABD3DE86A26D82181462FB620174B8E217BFF6B"
+}

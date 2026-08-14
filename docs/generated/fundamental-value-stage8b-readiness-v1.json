@@ -1,0 +1,114 @@
+{
+  "schemaVersion": "fv-cq-forward-enrollment-readiness-v1.0.0",
+  "status": "BLOCKED_BY_CURRENT_EVIDENCE_AND_CHRONOLOGY",
+  "claimScope": "COMPANY_QUALITY_ONLY",
+  "evidenceLabel": "NOT_VALIDATED",
+  "evidenceStratum": "CURRENT_REVISION_APPROXIMATION",
+  "populationScope": "CURRENT_SURVIVOR_DEVELOPMENT_POPULATION",
+  "calendar": {
+    "contractVersion": "FV-STAGE7C7-SPY-OBSERVED-CALENDAR-v1.0.0",
+    "contentHash": "sha256:7fe1ca16970ae0346c67120dd4f32ba3bef039276b9800757d15d3744189aa2c",
+    "lastCompletedSession": "2026-07-28",
+    "currentThroughEnrollmentCutoff": false
+  },
+  "controlledEvidence": {
+    "latestArtifactCount": 216,
+    "currentQcReadyCount": 190,
+    "currentUqReadyCount": 0,
+    "cutoff": "2026-07-28T23:59:59Z",
+    "contractualIngestedAtPresentCount": 0,
+    "durableSecurityIdPresentCount": 0,
+    "filesystemMtimeAcceptedAsChronology": false,
+    "tickerOnlyIdentityAccepted": false
+  },
+  "frozenEnrollmentPopulation": {
+    "memberCount": 191,
+    "populationContentHash": "sha256:b29306ce3b1a047c074b68fda07149fff72f7b2ecd2bc0d78aad7b42692656c7",
+    "structurallyProjectableIdentityCount": 191,
+    "quarantinedIsinCusipConflictCount": 54,
+    "maximumCleanIdentityCount": 137,
+    "durableV22IdentityProjectionComplete": false,
+    "identityControls": [
+      "GOOG_AND_GOOGL_DISTINCT_SHARE_CLASS_AND_LISTING",
+      "FOX_AND_FOXA_DISTINCT_SHARE_CLASS_AND_LISTING",
+      "MSFT_LEGACY_PUBLIC_ID_MUST_BE_ADOPTED_AND_MARKED"
+    ]
+  },
+  "calendarAudit": {
+    "scheduledSessionProvenByLocalCodeAndTzdata": "2026-07-31",
+    "nextScheduledOpen": "2026-08-03",
+    "completedSessionAuthorityPresent": false,
+    "scheduleOrWallClockAcceptedAsCompletion": false
+  },
+  "reasons": [
+    "COMPLETED_SESSION_CALENDAR_NOT_CURRENT",
+    "CONTRACTUAL_INGESTED_AT_MISSING",
+    "DURABLE_SECURITY_IDENTITY_MISSING",
+    "IMMEDIATE_NEXT_ENTRY_SESSION_UNPROVEN",
+    "ACCEPTED_CURRENT_PRODUCER_PROVENANCE_MISSING"
+  ],
+  "realEnrollmentWritten": false,
+  "outcomesAccessed": false,
+  "networkAuthorized": false,
+  "engineeringAcceptance": {
+    "typedPostgresIntegration": true,
+    "testOnlyMemberCount": 191,
+    "testOnlyMicDistribution": {"XNYS": 122, "XNAS": 69},
+    "testOnlyDecisionSessionCount": 2,
+    "testOnlyPlannedEntryCount": 2,
+    "plannedEntryState": "SCHEDULED_NOT_COMPLETED",
+    "singularSessionFallbackPresent": false,
+    "testOnlyUsableCount": 110,
+    "parentCountPerUsableMember": 63,
+    "totalParentRows": 6930,
+    "maturityRows": 3,
+    "outcomeRowCount": 0,
+    "v22UnsupportedFieldsReinterpreted": false,
+    "focusedPythonTestsPassed": 33,
+    "typedPostgresTestsPassed": 23,
+    "aggregateChildDeferredRevalidation": true,
+    "aggregateChildTriggerCount": 7,
+    "sealCreatorTransactionIdentity": "SERVER_STAMPED_XID8",
+    "callerWritableValidationMarkerPresent": false,
+    "concurrentExtraReasonAndEvidenceRejected": true,
+    "maximumAbsoluteSourceParentValue": "1e100",
+    "maximumSourceParentFractionalDigits": 100,
+    "minimumNonzeroCanonicalSourceParentMagnitude": "1e-100",
+    "decimalAdmissionAndRankingOuterContextIndependent": true,
+    "uuidWireType": "EXACT_PYTHON_UUID_INSTANCE",
+    "semanticWriterPositiveCommitPassed": true,
+    "semanticWriterRawManifestAccess": "SELECT_ONLY",
+    "normalizedParentRedundantMicPresent": false,
+    "fundamentalValueRegressionTestsPassed": 400,
+    "migrationMatrixPassed": true,
+    "v23ToV24PreservationPassed": true,
+    "v18ToV19RefusalUnchanged": true
+  },
+  "futurePreflight": {
+    "status": "BLOCKED_BEFORE_REQUEST_MATRIX",
+    "retryCount": 0,
+    "unknownOutcomeReplayAllowed": false,
+    "phases": [
+      {
+        "phase": "CURRENT_COMPLETED_SESSION_CALENDAR",
+        "provider": "YAHOO_WRAPPER",
+        "endpointTemplate": "/v8/finance/chart/{transportSymbol}",
+        "requiredLogicalSymbols": ["SPY"],
+        "physicalRequestCeiling": 1,
+        "plannedPhysicalRequests": 0,
+        "blocker": "CURRENT_RANGE_AND_CUTOFF_NOT_SEALED"
+      },
+      {
+        "phase": "CURRENT_COMPANY_QUALITY_EVIDENCE",
+        "provider": "EODHD",
+        "endpointTemplate": "/api/fundamentals/{transportSymbol}",
+        "physicalRequestCeiling": 191,
+        "plannedPhysicalRequests": 0,
+        "blocker": "DURABLE_IDENTITY_AND_EXACT_SYMBOL_MATRIX_NOT_SEALED"
+      }
+    ],
+    "maximumPhysicalRequests": 192,
+    "hardRule": "No request identity is executable until the durable population, exact aliases, endpoint paths, weights, leases, journals, and quota reserve are sealed and separately approved."
+  },
+  "stage8aContentHash": "sha256:c10dce1cdf46f4ef0a90b227e39230874db2dfa7edd49349859890f7a9800f10"
+}

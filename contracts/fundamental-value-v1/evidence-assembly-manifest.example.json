@@ -1,0 +1,73 @@
+{
+  "fixtureVersion": "fundamental-value-assembly-manifest-fixture-v1.0.0",
+  "manifest": {
+    "manifestVersion": "fundamental-value-assembly-manifest-v1.0.0",
+    "state": "NOT_APPLICABLE",
+    "reasonCodes": [
+      "APPLICABILITY_SPECIALIZED_MODEL_REQUIRED"
+    ],
+    "companyType": "BANK",
+    "applicability": "SPECIALIZED_MODEL_REQUIRED",
+    "security": {
+      "securityId": "11111111-1111-4111-8111-111111111111",
+      "companyId": "22222222-2222-4222-8222-222222222222",
+      "instrumentId": "33333333-3333-4333-8333-333333333333",
+      "shareClassId": "44444444-4444-4444-8444-444444444444",
+      "listingId": "55555555-5555-4555-8555-555555555555",
+      "tickerAssignmentId": "66666666-6666-4666-8666-666666666666",
+      "ticker": "NBN",
+      "mic": "XNYS",
+      "currency": "USD"
+    },
+    "routing": {
+      "routingId": "20000000-0000-4000-8000-000000000001",
+      "routingContentHash": "sha256:32418dad9b919d8a390ffcdc154d62162e76cf02eb1e39f8fab4bea234d7bb6c",
+      "routingRevision": 1,
+      "classificationEvidenceId": "10000000-0000-4000-8000-000000000001",
+      "classificationEvidence": {
+        "operandCode": "company_type",
+        "requestId": "0efacd38-ebce-5ceb-96c2-addc7438b10c",
+        "requestContentHash": "sha256:0723922fd1f4648959d6d929c693ac33047dc6e5b47ca394b932036b646d5d04",
+        "resultContentHash": "sha256:7c59808c08a6db3f5a058ec788f28bc77fb84b9547df9c966a3f8e3aba4a4f1d",
+        "selectorPolicyVersion": "fundamental-value-company-type-selection-v1.0.0",
+        "selectorVersion": "deterministic-evidence-selector-v1.0.0",
+        "state": "VALID",
+        "reasonCode": "SELECTED_BY_VERSIONED_PROVIDER_FALLBACK",
+        "evidenceId": "10000000-0000-4000-8000-000000000001",
+        "sourceContentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "normalizedRecordHash": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+        "sourceRevision": 2,
+        "effectiveAt": "2026-07-29T20:00:00Z",
+        "availableAt": "2026-07-29T20:01:00Z",
+        "ingestedAt": "2026-07-29T20:04:00Z",
+        "freshnessPolicyVersion": "classification-current-v1.0.0",
+        "normalizationVersion": "canonical-classification-v1.0.0",
+        "providerSchemaVersion": "provider-schema-v3",
+        "adapterVersion": "provider-neutral-adapter-v1.0.0",
+        "tolerancePolicyVersion": null,
+        "derivationVersion": null
+      }
+    },
+    "timing": {
+      "completedSessionDate": "2026-07-29",
+      "decisionCutoff": "2026-07-29T20:05:00Z",
+      "sealedIngestionCutoff": "2026-07-29T20:07:00Z"
+    },
+    "projectionYears": 5,
+    "versions": {
+      "evidenceContractVersion": "unified-market-data-evidence-foundation-v1.0.0",
+      "selectorVersion": "deterministic-evidence-selector-v1.0.0",
+      "applicabilityRoutingVersion": "fundamental-value-applicability-v1.0.0",
+      "modelVersion": "FUNDAMENTAL-VALUE-v1.0.0",
+      "strategyVersion": "LONG-TERM-CORE-v1.0.0",
+      "formulaVersion": "fundamental-value-formulas-v1.1.0",
+      "assumptionPolicyVersion": "fundamental-value-assumptions-v1.1.0",
+      "aggregationVersion": "FUNDAMENTAL-VALUE-WEIGHTED-MEDIAN-QUANTILE-v1.0.0",
+      "riskPolicyVersion": "LONG-TERM-CORE-RISK-CAP-TIERS-v1.0.0",
+      "assemblyVersion": "fundamental-value-v22-assembly-v1.0.0"
+    },
+    "operands": [],
+    "coreInvocationAuthorized": false
+  },
+  "manifestContentHash": "sha256:0dd9f7c67c390b2ef9b0ea13a531a338d6fa1980909a317c300e8c9af15f365b"
+}

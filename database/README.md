@@ -3,7 +3,7 @@
 PostgreSQL migrations live in `migrations/` and are packaged into the Spring
 Boot application. Flyway applies them during backend startup.
 
-The repository migration source head is V22. The last shared operational
+The repository migration source head is V28. The last shared operational
 application baseline remains V17 until a separately controlled release. The
 managed-database topology, credential
 separation, migration release procedure, backups, and recovery targets are
@@ -34,6 +34,17 @@ coverage states, backtests, and reusable company evidence reviews.
 
 Python may write analytics-owned data and results. Java owns all user-facing
 account, holding, and decision state.
+
+`V27__create_quant_research_decision_v1.sql` adds the append-only public-safe
+Quant v1.1 research projection. It stores no provider payloads and explicitly
+denies final portfolio weights, order quantities, brokerage instructions, LLM
+signal authority, and guaranteed-return claims.
+
+`V28__create_unified_portfolio_risk_context_v1.sql` adds the append-only
+user-owned portfolio context, exact V12 account-snapshot and constraint-policy
+bindings, position and sleeve projections, deterministic risk reasons, and
+immutable human reviews. It preserves V21 as a legacy lane and never grants
+weight, order, brokerage, or LLM authority.
 
 `V12__create_user_and_portfolio_context.sql` adds future-safe application
 users and external identities, immutable account and liability snapshots,
@@ -106,6 +117,23 @@ Cross-schema changes require an explicit contract and migration.
 - `V22`: add the append-only Unified Market Data and Evidence Foundation v1
   identity, calendar, lineage, canonical evidence, selector, and
   applicability contracts
+- `V23`: add append-only Fundamental Value v1 assembly, ordered operand
+  evidence-parent seals, deterministic assessment components, and relational
+  completeness seals.
+  V23 does not own raw retention, deletion, legal holds, portfolio weights,
+  orders, or brokerage actions.
+- `V24`: add an isolated, development-only company-quality Forward enrollment
+  contract with V22 evidence links, a complete terminal cohort and immutable
+  seal, and empty 252/504/756-session maturity rows. It seeds no enrollment and
+  preserves `NOT_VALIDATED`.
+- `V25`: add the exact three-security Fundamental Value identity authority
+  used by the current-evidence registration boundary. It does not authorize an
+  investment assessment or a portfolio action.
+- `V26`: add append-only current Fundamental Value assessment persistence,
+  an explicitly provisioned narrow persistence/publication authority, complete
+  source/operand provenance, server-owned chronology, and immutable seals.
+  It preserves `NOT_VALIDATED` and all action, ranking, final-weight, brokerage,
+  and evidence-upgrade prohibitions.
 
 Migration files are append-only after they have been applied to a shared
 environment. Corrections require a new migration rather than editing deployed
@@ -131,6 +159,14 @@ migrations. The Python service writes analytics-owned observations and
 results. Java may read approved market-data projections, but consumes ratings
 through the versioned internal HTTP contract rather than rating-table SQL.
 
+V23 is narrower: ordinary `analytics_writer` members have no Fundamental Value
+table DML. A deployment credential for the trusted Python persistence
+repository must receive the dedicated `analytics_fundamental_value_writer_v1`
+role. PostgreSQL enforces relational seals, cardinality, identity, finite
+numeric domains, and append-only behavior; the Python repository is the
+semantic boundary that replays the complete Stage 2 formula before write and
+on readback.
+
 ## Schema Acceptance
 
 Run all migrations against PostgreSQL 17, then execute:
@@ -145,9 +181,12 @@ legacy price backfill, append-only guards, role isolation, missing-value
 behavior, and the two-cutoff point-in-time selection rule.
 
 The CI-compatible runner creates isolated clean and populated upgrade-path
-databases through V22, preserves the V19 refusal behavior, verifies V18-V21
+databases through V26, preserves the V19 refusal behavior, verifies V18-V25
 row/hash preservation, executes the base and advanced V22 relational safety
-matrices, and removes every test database afterward:
+matrices plus the V23 Fundamental Value, V24 narrow Forward-enrollment,
+V25 identity-authority, and V26 current-assessment
+schema matrices, and removes every test
+database afterward:
 
 ```bash
 sh database/tests/run-migration-tests.sh

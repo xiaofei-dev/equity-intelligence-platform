@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "QUANT-TRADING-HISTORICAL-EXECUTION-ADDENDUM-v1.1.8",
+  "predecessorAddendumVersion": "QUANT-TRADING-HISTORICAL-EXECUTION-ADDENDUM-v1.1.7",
+  "predecessorAddendumHash": "F2C5D937018AFB80D80477F3FAD02833DD4B7EE509A62D5D9BC5564767A95563",
+  "successorExecutorVersion": "QUANT-TRADING-HISTORICAL-EXECUTOR-v1.1.8",
+  "successorResultVersion": "QUANT-TRADING-HISTORICAL-RESULT-v1.1.8",
+  "successorTerminalVersion": "QUANT-TRADING-HISTORICAL-TERMINAL-REGISTRY-v1.1.8",
+  "failedRun": {
+    "runId": "QUANT-V11-CONTROLLED-20260812-007",
+    "state": "FAILED_PRE_POST_ACCESS_SEAL",
+    "failedReason": "payload_contract_validation_hash_must_be_an_uppercase_SHA-256",
+    "preparationIntentArtifactHash": "BBF7D0332EA08F450B04B655AD98459AA63050F53F2FD7F208CC1272DD6FA24A",
+    "preparationIntentEventHash": "E060A5D7974A8A4C74AB29FF3E23E1C4122C328576BCCCE414938AE3A9F541CE",
+    "preparedSealArtifactHash": "CB1D2F843463F97597F822525605FDFAF448E9D80635C5484DF236BC6A4BED47",
+    "preparedSealEventHash": "89F3F534111D47CBC09958BEFE14D36CDA8DC7F27AB5315C797526FCAF7E97C1",
+    "outcomeAccessIntentArtifactHash": "43FC746A67119B874E6332EA647533B4B11C16D12651778EB53ECD0DBA5D386D",
+    "outcomeAccessIntentEventHash": "7716775EB57CDDD5769C2D7C4E6E67AA00064D9960CDB794277469BDE763137A",
+    "executionIntentArtifactHash": "3CD0F93325F4D4E4A30DF388622C4330859C256AC712F460FCB5E0E0F47E130C",
+    "executionIntentEventHash": "6604189A57407A6509D3FAEE62447E0BA5AACE19B3B69B63269375C205037646",
+    "failedTerminalArtifactHash": "374E6E1041EAD1DCD6B18DB2DF6008E386FCCE918A585709B0079723EE5E7026",
+    "failedTerminalEventHash": "3525714AF68930742A9CBB0FE9A8669EF5F5D5C43E0E41328FDB676DB6161595",
+    "eventFileSha256": [
+      "B0AA7A04C219350FDDD0FA61E688F742A3D7BAE49F994C77A9664E2F1085DF77",
+      "BCD3F8361E22558F7DBD0050F00FC6F6B5579F1BE6AC880B3BDCE2F9F4C38B23",
+      "02C4E36C4C5CF4775461135E10A91C0B5045B82F7B0ED09B505A343EA76E8CA8",
+      "57A878BC76DF39DB86ED55D47BDC57D21484C9CF24EF5F635995D5B4F5228860",
+      "7C1891DAB210A7FBA24505FC772AF7AEC1CC24A9E7A3BAEF273F59FBADC212E6"
+    ],
+    "postAccessInputSealCreated": false,
+    "outputArtifactsCreated": false,
+    "performanceEvaluated": false,
+    "retryAllowed": false
+  },
+  "compatibilityDelta": {
+    "validatorContentReferenceFormat": "sha256:<lowercase-64-hex>",
+    "postAccessSealDigestFormat": "<uppercase-64-hex>",
+    "typedValidationReplayRequiredBeforeConversion": true,
+    "exactEquivalentDigestRequired": true,
+    "allImmediatePostSealDigestArgumentsAudited": true,
+    "payloadBytesAndCanonicalContentHashUnchanged": true,
+    "v117ExecutionDenominatorRulesUnchanged": true,
+    "formulaRankingCostAndAcceptanceRulesUnchanged": true
+  },
+  "claimBoundary": {
+    "failedRuns001Through007Preserved": true,
+    "modelEvidenceLabel": "NOT_VALIDATED",
+    "evidenceUpgradeAllowed": false,
+    "newImmutableRunRequired": true
+  },
+  "canonicalContentHash": "D58278CFB1070382275BC58B940C4CF904D9DC05F50EA65976D9476C77EBA7A2"
+}

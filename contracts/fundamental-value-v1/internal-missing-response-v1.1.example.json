@@ -1,0 +1,32 @@
+{
+  "contractVersion": "internal-fundamental-value-result-v1.1.0",
+  "assemblyId": "10000000-0000-4000-8000-000000000001",
+  "assessmentId": null,
+  "identity": {
+    "securityId": "10000000-0000-4000-8000-000000000010",
+    "companyId": "10000000-0000-4000-8000-000000000011",
+    "instrumentId": "10000000-0000-4000-8000-000000000012",
+    "shareClassId": "10000000-0000-4000-8000-000000000013",
+    "listingId": "10000000-0000-4000-8000-000000000014",
+    "tickerAssignmentId": "10000000-0000-4000-8000-000000000015",
+    "ticker": "TEST",
+    "mic": "XNYS",
+    "currency": "USD",
+    "completedSessionDate": "2026-07-29"
+  },
+  "state": "MISSING",
+  "applicability": "APPLICABLE",
+  "companyType": "MATURE_OPERATING_COMPANY",
+  "reasonCodes": ["REQUIRED_OPERAND_MISSING"],
+  "coreInvocationAuthorized": false,
+  "manifestContentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "inputSealContentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "decisionCutoff": "2026-07-29T20:05:00Z",
+  "sealedIngestionCutoff": "2026-07-29T20:07:00Z",
+  "modelEvidenceLabel": null,
+  "claimCeiling": null,
+  "riskCapCeiling": null,
+  "deterministicAssessment": null,
+  "finalPortfolioWeightAuthorized": false,
+  "automaticBrokerageExecutionAuthorized": false
+}

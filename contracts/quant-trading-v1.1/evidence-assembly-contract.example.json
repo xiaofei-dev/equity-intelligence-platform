@@ -1,0 +1,61 @@
+{
+  "contractVersion": "quant-trading-v22-assembly-v1.1.0",
+  "modelVersion": "QUANT-TRADING-v1.1.0",
+  "strategyVersion": "DUAL-MOMENTUM-TREND-v1.1.0",
+  "modelEvidenceLabel": "NOT_VALIDATED",
+  "inputBoundary": {
+    "evidenceContractVersion": "unified-market-data-evidence-foundation-v1.0.0",
+    "selectorVersion": "deterministic-evidence-selector-v1.0.0",
+    "requiredHistorySessions": 253,
+    "minimumCrossSection": 20,
+    "exactExpectedDenominatorRequired": true,
+    "immutableRequestIdTuplesRequired": true,
+    "decisionAndSealedIngestionCutoffsBound": true
+  },
+  "priceEvidence": {
+    "domain": "DAILY_PRICE",
+    "fieldCode": "CLOSE_PRICE",
+    "policyVersion": "daily-price-selection-v1.0.0",
+    "requiredLayer": "NORMALIZED_OBSERVATION",
+    "requiredStrictnessClass": "STRICT_IDENTITY_AND_CHRONOLOGY",
+    "requiredClaimClass": "CURRENT_ONLY",
+    "requiredNormalizationVersion": "canonical-equity-v1.0.0",
+    "requiredFreshnessPolicyVersion": "daily-price-completed-session-v1.0.0",
+    "requiredAdjustmentMode": "TOTAL_RETURN_ADJUSTED",
+    "requiredCanonicalFields": [
+      "sessionDate",
+      "open",
+      "high",
+      "low",
+      "close",
+      "volume"
+    ]
+  },
+  "identityAndApplicability": {
+    "registryVersion": "security-identity-registry-v1.0.0",
+    "securityRequirement": "ACTIVE_USD_COMMON_STOCK",
+    "marketRequirement": "ACTIVE_USD_SPY_ETF_ARCX",
+    "tickerAssignmentMustCoverEachSession": true,
+    "identityAndCalendarRecordedBySealedCutoff": true,
+    "missingAuthorityEffect": "INSUFFICIENT_EVIDENCE",
+    "unsupportedInstrumentEffect": "NOT_APPLICABLE"
+  },
+  "outputBoundary": {
+    "manifestExcludesPriceValues": true,
+    "missingMembersRemainInDenominator": true,
+    "invalidStaleOrExcludedSelectorResultRaisesIntegrityFailure": true,
+    "lateIdentityAuthorityIsAnExplicitEmptyHistory": true,
+    "missingOrNotApplicableMemberUsesEmptyHistory": true,
+    "marketMustBeValid": true,
+    "providerFetchAllowed": false,
+    "historicalOutcomeAccessAllowed": false,
+    "automaticBrokerageExecutionAuthorized": false,
+    "llmSignalOrWeightAuthority": false
+  },
+  "knownLimitations": [
+    "V22_DOES_NOT_YET_PROVIDE_QUANT_EVENT_OR_LIFECYCLE_INTERVAL_PROOFS",
+    "ASSEMBLY_AUTHORIZES_ONLY_THE_DETERMINISTIC_RESEARCH_SIGNAL_CORE",
+    "PORTFOLIO_SIMULATION_AND_LIVE_ORDER_WORKFLOWS_REMAIN_UNAUTHORIZED"
+  ],
+  "contentHash": "sha256:fb0108137eefa55b8eabf38e6bef8ccbfe7f0e6c0d035e4a3cb3481b8e08c880"
+}

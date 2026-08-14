@@ -1,0 +1,7 @@
+{
+  "contractVersion": "internal-fundamental-value-command-v1.0.0",
+  "routingId": "10000000-0000-4000-8000-000000000002",
+  "classificationRequestId": "10000000-0000-4000-8000-000000000003",
+  "operandRequestIds": [],
+  "projectionYears": 5
+}

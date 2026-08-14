@@ -1,0 +1,135 @@
+{
+  "createRequest": {
+    "accountSnapshotIds": [
+      "00000000-0000-4000-8000-000000000007"
+    ],
+    "constraintPolicyVersionId": "00000000-0000-4000-8000-000000000006",
+    "riskInput": {
+      "contractVersion": "unified-portfolio-risk-input-v1.0.0",
+      "asOfTime": "2026-08-13T00:00:00Z",
+      "baseCurrency": "USD",
+      "cashValue": "20000",
+      "liabilityValue": "0",
+      "positions": [
+        {
+          "securityId": "00000000-0000-4000-8000-000000000101",
+          "ticker": "AAPL",
+          "sleeve": "LONG_TERM_CORE",
+          "sectorCode": "45",
+          "marketValue": "80000",
+          "dataState": "VALID"
+        }
+      ],
+      "sleeveEvidence": [
+        {
+          "sleeve": "LONG_TERM_CORE",
+          "modelVersion": "FUNDAMENTAL-VALUE-v1.0.0",
+          "evidenceLabel": "NOT_VALIDATED",
+          "researchUseAllowed": true,
+          "referenceId": "fv",
+          "referenceHash": "sha256:1111111111111111111111111111111111111111111111111111111111111111"
+        },
+        {
+          "sleeve": "QUANT_TRADING",
+          "modelVersion": "QUANT-TRADING-v1.1.0",
+          "evidenceLabel": "NOT_VALIDATED",
+          "researchUseAllowed": true,
+          "referenceId": "quant",
+          "referenceHash": "sha256:1111111111111111111111111111111111111111111111111111111111111111"
+        }
+      ],
+      "constraints": {
+        "maximumPositionWeight": "0.4",
+        "maximumSectorWeight": "0.6",
+        "minimumCashWeight": "0.1",
+        "maximumLeverageRatio": "0"
+      }
+    }
+  },
+  "contextResponse": {
+    "contextId": "00000000-0000-4000-8000-000000000004",
+    "portfolioId": "00000000-0000-4000-8000-000000000003",
+    "recordedAt": "2026-08-13T00:00:01Z",
+    "review": null,
+    "riskContext": {
+      "resultVersion": "unified-portfolio-risk-result-v1.0.0",
+      "calculationVersion": "UNIFIED-PORTFOLIO-RISK-CALCULATION-v1.0.0",
+      "asOfTime": "2026-08-13T00:00:00+00:00",
+      "baseCurrency": "USD",
+      "state": "VALID",
+      "totals": {
+        "cashValue": "20000",
+        "investedValue": "80000",
+        "assetValue": "100000",
+        "liabilityValue": "0",
+        "netPortfolioValue": "100000",
+        "cashWeight": "0.2",
+        "leverageRatio": "0"
+      },
+      "positions": [
+        {
+          "securityId": "00000000-0000-4000-8000-000000000101",
+          "ticker": "AAPL",
+          "sleeve": "LONG_TERM_CORE",
+          "sectorCode": "45",
+          "dataState": "VALID",
+          "marketValue": "80000",
+          "assetWeight": "0.8"
+        }
+      ],
+      "sectors": [
+        {
+          "sectorCode": "45",
+          "marketValue": "80000",
+          "assetWeight": "0.8"
+        }
+      ],
+      "sleeves": [
+        {
+          "sleeve": "LONG_TERM_CORE",
+          "marketValue": "80000",
+          "assetWeight": "0.8",
+          "positionCount": 1,
+          "modelVersion": "FUNDAMENTAL-VALUE-v1.0.0",
+          "modelEvidenceLabel": "NOT_VALIDATED",
+          "researchUseAllowed": true,
+          "evidenceReferenceId": "fv",
+          "evidenceReferenceHash": "sha256:1111111111111111111111111111111111111111111111111111111111111111"
+        },
+        {
+          "sleeve": "QUANT_TRADING",
+          "marketValue": "0",
+          "assetWeight": "0",
+          "positionCount": 0,
+          "modelVersion": "QUANT-TRADING-v1.1.0",
+          "modelEvidenceLabel": "NOT_VALIDATED",
+          "researchUseAllowed": true,
+          "evidenceReferenceId": "quant",
+          "evidenceReferenceHash": "sha256:1111111111111111111111111111111111111111111111111111111111111111"
+        }
+      ],
+      "constraints": {
+        "maximumPositionWeight": "0.4",
+        "maximumSectorWeight": "0.6",
+        "minimumCashWeight": "0.1",
+        "maximumLeverageRatio": "0"
+      },
+      "risk": {
+        "status": "VIOLATED",
+        "reasonCodes": [
+          "MAXIMUM_POSITION_WEIGHT_EXCEEDED",
+          "MAXIMUM_SECTOR_WEIGHT_EXCEEDED"
+        ],
+        "constraintVersion": "UNIFIED-PORTFOLIO-CONSTRAINTS-v1.0.0"
+      },
+      "authority": {
+        "finalWeightAuthority": false,
+        "orderAuthority": false,
+        "automaticBrokerageExecution": false,
+        "llmDecisionAuthority": false,
+        "humanDecisionRequired": true
+      },
+      "contentHash": "sha256:423d524776f2c8ede1209e553f2ae3ff18d2f0d174ea2c4f16e38f15a74ba6ab"
+    }
+  }
+}

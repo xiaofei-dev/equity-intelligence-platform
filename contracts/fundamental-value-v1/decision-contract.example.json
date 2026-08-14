@@ -1,0 +1,83 @@
+{
+  "contractVersion": "fundamental-value-investment-system-v1.0.0",
+  "modelVersion": "FUNDAMENTAL-VALUE-v1.0.0",
+  "strategyVersion": "LONG-TERM-CORE-v1.0.0",
+  "market": "US_LISTED_EQUITIES",
+  "sleeve": "LONG_TERM_CORE",
+  "companyType": "MATURE_OPERATING_COMPANY",
+  "applicability": "APPLICABLE",
+  "quantitativeTradingInputAllowed": false,
+  "requiredOutputStates": [
+    "VALID",
+    "MISSING",
+    "STALE",
+    "INVALID",
+    "NOT_APPLICABLE",
+    "EXCLUDED"
+  ],
+  "valuationMethods": [
+    {"method": "FCFF_DCF", "role": "PRIMARY", "maximumAggregationWeight": "0.35"},
+    {"method": "NORMALIZED_OWNER_EARNINGS", "role": "PRIMARY", "maximumAggregationWeight": "0.30"},
+    {"method": "EARNINGS_POWER", "role": "PRIMARY", "maximumAggregationWeight": "0.25"},
+    {"method": "COMPARABLE_CROSS_CHECK", "role": "CROSS_CHECK_ONLY", "maximumAggregationWeight": "0.10"}
+  ],
+  "aggregationPolicy": {
+    "version": "FUNDAMENTAL-VALUE-WEIGHTED-MEDIAN-QUANTILE-v1.0.0",
+    "centralEstimator": "WEIGHTED_MEDIAN",
+    "rangeEstimator": "ORDERED_WEIGHTED_QUANTILES",
+    "lowQuantile": "0.25",
+    "highQuantile": "0.75",
+    "unrestrictedMinMaxAllowed": false
+  },
+  "missingAdvancedEvidencePolicy": {
+    "missingNeverBecomesZero": true,
+    "defaultEffect": "LOWER_CLAIM_CEILING_AND_RISK_CAP",
+    "materialLeverageEffect": "BLOCK_VALUATION"
+  },
+  "riskCapPolicy": {
+    "version": "LONG-TERM-CORE-RISK-CAP-TIERS-v1.0.0",
+    "allowedCeilings": ["0", "0.01", "0.02", "0.03", "0.05"],
+    "finalPortfolioWeightAllowed": false,
+    "humanDecisionRequired": true
+  },
+  "outputBoundaries": {
+    "companyQualitySeparateFromSecurityAttractiveness": true,
+    "fairValueSeparateFromReferencePrice": true,
+    "expectedReturnSeparateFromDownsideRisk": true,
+    "deterministicSeparateFromAiNarrative": true,
+    "automaticBrokerageExecutionAllowed": false
+  },
+  "aiNarrativeBoundary": {
+    "mayFillMissingEvidence": false,
+    "mayAffectDeterministicFields": false,
+    "mayAffectRanking": false,
+    "mayAffectRiskCap": false,
+    "maySetWeightsOrTrades": false
+  },
+  "validationGovernance": {
+    "initialModelEvidenceLabel": "NOT_VALIDATED",
+    "historicalGateMayConcludeNotValidated": true,
+    "prospectiveAfterHistoricalAcceptanceOnly": true,
+    "observedOutcomesMayChangeFrozenMethodology": false
+  },
+  "persistenceBoundary": {
+    "successorMigration": "V23",
+    "appendOnly": true,
+    "reinterpretPriorMigrations": false,
+    "rawRetentionGovernanceIncluded": false,
+    "deletionIncluded": false,
+    "legalHoldIncluded": false,
+    "nextRawGovernanceMigration": "NEXT_AVAILABLE_AFTER_V23"
+  },
+  "versionSet": {
+    "evidenceContractVersion": "unified-market-data-evidence-foundation-v1.0.0",
+    "selectorVersion": "deterministic-evidence-selector-v1.0.0",
+    "applicabilityRoutingVersion": "fundamental-value-applicability-v1.0.0",
+    "formulaVersion": "fundamental-value-formulas-v1.1.0",
+    "assumptionPolicyVersion": "fundamental-value-assumptions-v1.1.0",
+    "benchmarkPolicyVersion": "long-term-core-benchmarks-v1.0.0",
+    "riskPolicyVersion": "LONG-TERM-CORE-RISK-CAP-TIERS-v1.0.0",
+    "validationGovernanceVersion": "MODEL-VALIDATION-GOVERNANCE-v1.1.0"
+  },
+  "contractContentHash": "sha256:042286da1c14af568c53fd05c4002a78763393a4ddb5e3235a8eacfb6da34a17"
+}

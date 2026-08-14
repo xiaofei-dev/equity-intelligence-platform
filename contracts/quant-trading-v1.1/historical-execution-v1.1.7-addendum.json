@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "QUANT-TRADING-HISTORICAL-EXECUTION-ADDENDUM-v1.1.7",
+  "predecessorAddendumVersion": "QUANT-TRADING-HISTORICAL-EXECUTION-ADDENDUM-v1.1.6",
+  "predecessorAddendumHash": "7DC449B2B1CB0B5CB170E0C29644ECCCA2764684888DA6AA092582224216F98E",
+  "successorExecutorVersion": "QUANT-TRADING-HISTORICAL-EXECUTOR-v1.1.7",
+  "successorResultVersion": "QUANT-TRADING-HISTORICAL-RESULT-v1.1.7",
+  "successorTerminalVersion": "QUANT-TRADING-HISTORICAL-TERMINAL-REGISTRY-v1.1.7",
+  "failedRun": {
+    "runId": "QUANT-V11-CONTROLLED-20260812-006",
+    "state": "FAILED_PRE_POST_ACCESS_SEAL",
+    "failedReason": "nontradable_session_registry_drift",
+    "executionIntentArtifactHash": "6E53AE5AAFB0954023F0496613BDAEAAE56606362EE444CF71C337E25234228B",
+    "executionIntentEventHash": "16DECC05F8C4B6B9D369B274734BBB3D2613409C273B43787BE3B90C1A7E2636",
+    "failedTerminalArtifactHash": "589F9FA63CB72FC6F7C45F4EEE6DF813688B53CF7F41BA4A7F15F369B47D6947",
+    "failedTerminalEventHash": "6CA58D54FABC31D79272DB7D43B7177CF06A4C09AAA4868F203C89B0C220CE86",
+    "eventFileSha256": [
+      "28A6ECD74AAAAE2FA888A6B790F83674E6B9259800FB93BA8992D3CE3AF57782",
+      "2591D3C0910F5D748193928E8D5E18CEBCE4F5790E474B084AACBF285CD2E764",
+      "3BF929133A221309C658D8B937FA78391F6F9EE657B4F5A8C2DD2F39B7627A4B",
+      "B040795919A702CC09CD0DB738C8C812E24B952958D3E9CB340EDE3B7D4F6C9D",
+      "2AA98D8C06B03E2DBE1D3A56CE43041683F0EEC4537016A4881B5C4662066A1E"
+    ],
+    "postAccessInputSealCreated": false,
+    "outputArtifactsCreated": false,
+    "performanceEvaluated": false,
+    "retryAllowed": false
+  },
+  "compatibilityDelta": {
+    "payloadValidationSourceCount": 203,
+    "payloadValidationPreservesDiagnosticZeroVolumeEvidence": true,
+    "executionNontradableSecurityCount": 192,
+    "executionNontradableDenominator": "191_SECURITIES_PLUS_SPY",
+    "diagnosticBenchmarkCountExcludedFromExecutionRegistry": 11,
+    "diagnosticZeroVolumeCannotLeakIntoExecutionRegistry": true,
+    "v116ProducerArithmeticAndClosureRulesUnchanged": true,
+    "formulaRankingCostAndAcceptanceRulesUnchanged": true
+  },
+  "claimBoundary": {
+    "failedRuns001Through006Preserved": true,
+    "modelEvidenceLabel": "NOT_VALIDATED",
+    "evidenceUpgradeAllowed": false,
+    "newImmutableRunRequired": true
+  },
+  "canonicalContentHash": "F2C5D937018AFB80D80477F3FAD02833DD4B7EE509A62D5D9BC5564767A95563"
+}

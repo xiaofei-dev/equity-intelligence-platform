@@ -1,0 +1,88 @@
+{
+  "contractVersion": "FV-STAGE8C-OPENFIGI-US-COMPOSITE-DIAGNOSTIC-v1.5-RESULT-v1.0.0",
+  "recordedDate": "2026-08-02",
+  "state": "ACCEPTED_ENGINEERING_DIAGNOSTIC_ONLY",
+  "methodology": {
+    "postPredecessorObservation": true,
+    "methodRepair": "POST_V1_4_US_COMPOSITE_FILTER_REPAIR",
+    "holdoutClaimed": false
+  },
+  "run": {
+    "runId": "20260802T145200Z-STAGE8C-OPENFIGI-V15-001",
+    "diagnosticContractVersion": "FV-STAGE8C-OPENFIGI-US-COMPOSITE-DIAGNOSTIC-v1.5.0",
+    "executionContractVersion": "FV-STAGE8C-OPENFIGI-US-COMPOSITE-EXECUTION-v1.0.0",
+    "planContentHash": "F7F2E728FB4B91D9FA7E9B7F63B5E38259655B7B64D798BD63BE54DCA187FB40",
+    "controllerAuthorityContentHash": "E7FDA19F3323AAFFBB05C9CD992768A6DF889F8933C301E95C14155C8A028486",
+    "authorizationContentHash": "67F11E6A628FE42FE0F55E831E730D39B51F28A8054A18509365E66E6701A378",
+    "liveExecutionContentHash": "CDF1F396BC8558D91404ED1AE301A28EF13CA325C0B34E1272DF7F584C6BB965",
+    "reviewContentHash": "E53CF93A88523B8F91F5F84AB59FD230F5335E218970B87FB77321BF1AA57747",
+    "replayVerificationContentHash": "66564E8FC3E08D3D2E15EB387534B956A85F1FF1AA40614597D11ED381A25128",
+    "diagnosticAcceptanceContentHash": "FFF937E1AB4646440946E3E9571610996B6A8809183765B578908BDCE03156A7",
+    "storageBackedAcceptanceContentHash": "35F466820289ACDF9FF427327E5B03020F6A920BFCE7A0D52BD4E472CFD4492B",
+    "checkpointReceiptSetHash": "4BE2E3926EB0EDC823CC90A937AB647F1A9F0C8C05D913E4E65DE5C767374CF9",
+    "zeroSendExecutionReplaySummaryHash": "48773954590B2AFD3E5CE699CB67002F2DC7FE82770543CBE0AA13BB84828C24"
+  },
+  "execution": {
+    "physicalRequests": 2,
+    "logicalJobs": 6,
+    "completedPhysicalRequests": 2,
+    "newPhysicalRequests": 2,
+    "replayedPhysicalRequestsDuringLiveExecution": 0,
+    "newPhysicalRequestsDuringZeroSendReplay": 0,
+    "replayedPhysicalRequestsDuringZeroSendReplay": 2,
+    "failedPhysicalRequests": 0,
+    "retryLimit": 0,
+    "automaticRetries": 0,
+    "unknownTransportOutcomes": 0,
+    "responseBodySha256": [
+      "81EE819739AF3CD6E9621C1CA832392AEC7FD6D418880EE4F7DF3208C41C266F",
+      "038300D73D8ABB2E6D3D9775078A1EFF6040CE4C8CA4CF6B1F62580EC2EC9364"
+    ],
+    "terminalEventHashes": [
+      "A3D697A6AC5F6FCBD13C474667311965D8D4AE59758B7C29626909DA5B5288F0",
+      "66B83E5C3D8ACFC389EB3B7250F50F386E1D6D1260CE252F06BCBC025122EFAA"
+    ]
+  },
+  "review": {
+    "uniquePrimary": 6,
+    "ambiguousPrimary": 0,
+    "unresolvedWarnings": 0,
+    "errors": 0,
+    "noPrimary": 0,
+    "completeConvergentPairs": 3,
+    "pairConflicts": 0
+  },
+  "decision": {
+    "code": "US_COMPOSITE_DIAGNOSTIC_COMPLETE_CONVERGENT",
+    "accepted": true,
+    "reason": "All six frozen public-identifier jobs produced one unique US-composite primary mapping and all three identifier pairs converged without warning, error, ambiguity, missing primary data, or pair conflict.",
+    "diagnosticOnly": true,
+    "durableIdentityAuthorized": false,
+    "remainderAuthorized": false,
+    "evidenceUpgradeAuthorized": false,
+    "operatingMicBindingStatus": "REQUIRES_SEC_CORROBORATION"
+  },
+  "boundaries": {
+    "rawProviderValuesStoredOutsideGit": true,
+    "sameDiagnosticNetworkRetryAuthorized": false,
+    "remainingOpenFigiAuthorizedByThisResult": false,
+    "secAuthorizedByThisResult": false,
+    "databaseWriteAuthorizedByThisResult": false,
+    "v22EvidenceWriteAuthorizedByThisResult": false,
+    "v24EnrollmentAuthorizedByThisResult": false,
+    "outcomeAccessAuthorizedByThisResult": false,
+    "modelEvidenceUpgradeAuthorizedByThisResult": false,
+    "modelEvidenceLabel": "NOT_VALIDATED"
+  },
+  "nextGate": {
+    "requiredComponents": [
+      "SEC_OPERATING_MIC_CORROBORATION",
+      "TARGET_DATABASE_IDENTITY_INVENTORY",
+      "FORWARD_PROJECTION_V2_CONTRACT",
+      "V25_IDENTITY_AUTHORITY_LEDGER"
+    ],
+    "oldProjectionV1Authorized": false,
+    "automaticProgressionAuthorized": false
+  },
+  "contentHash": "AD83ACD175AFA01D706D689EE48B93233BB8D95D6B494655B7E15337B5FDC6B7"
+}

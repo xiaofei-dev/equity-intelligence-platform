@@ -1,0 +1,51 @@
+{
+  "contentHash": "1F640795AF53241123D9A9098485E91DD56CD6EFB693CA6A41392510DAD6A7A7",
+  "decisionContractHash": "D6863767A2A3F1E4AED41D509A653A41553DC846A9C472437B888C6F675CB348",
+  "entryExitPolicyVersion": "REGIME-FILTERED-MEAN-REVERSION-ENTRY-EXIT-v2.0.0",
+  "execution": {
+    "decisionFrequency": "EVERY_COMPLETED_SPY_SESSION",
+    "initialCashUsd": "100000",
+    "lastEntryDecisionLeavesMatureSessions": 10,
+    "primaryCostPolicy": "C9-NONLINEAR-COST-v1.0.0",
+    "requiredHistory": 253,
+    "retrospectiveExecutionCount": 1,
+    "retryAfterCompletedOrFailedOutcomeAccess": 0,
+    "sensitivityCostPolicy": "FIXED-5BPS-PER-SIDE-v1.0.0"
+  },
+  "formulaVersion": "REGIME-FILTERED-MEAN-REVERSION-FORMULAS-v2.0.0",
+  "gates": {
+    "cagrVsSpy": "STRATEGY_CAGR_GTE_SPY_CAGR_MINUS_0.02",
+    "calmarVsSpy": "STRATEGY_CALMAR_GT_SPY_CALMAR",
+    "fixedCostSensitivityCagr": "FIXED_5BPS_CAGR_GT_0",
+    "maximumDrawdownVsSpy": "STRATEGY_MDD_GTE_SPY_MDD",
+    "positiveCalendarYears": "AT_LEAST_6_OF_EXACT_2016_THROUGH_2024",
+    "positiveNetCagr": "STRATEGY_CAGR_GT_0",
+    "positiveNetExpectancy": "AVERAGE_COMPLETED_TRADE_NET_PNL_GT_0",
+    "sharpeVsSpy": "STRATEGY_SHARPE_GT_SPY_SHARPE"
+  },
+  "metrics": {
+    "cagr": true,
+    "calendarYears": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+    "calmar": true,
+    "completedTrades": true,
+    "dailyNav": true,
+    "maximumDrawdown": true,
+    "netExpectancyPerTrade": true,
+    "sharpeRiskFreeZero": true
+  },
+  "modelVersion": "QUANT-TRADING-v2.0.0",
+  "population": {
+    "identity": "C5_C7_CONTROLLED_CURRENT_SURVIVOR_191",
+    "requiredCount": 191,
+    "survivorshipFree": false,
+    "untouchedHoldout": false
+  },
+  "protocolVersion": "QUANT-TRADING-HISTORICAL-VALIDATION-v2.0.0",
+  "ruling": {
+    "directionallySupportive": "AT_LEAST_6_OF_8_GATES_AND_POSITIVE_NET_EXPECTANCY",
+    "productionValidationAllowed": false,
+    "sameOutcomeRetuningAllowed": false,
+    "unsupportiveAction": "SEAL_NOT_VALIDATED_AND_STOP_WITHOUT_NEW_VERSION_ON_SAME_OUTCOME"
+  },
+  "strategyVersion": "REGIME-FILTERED-MEAN-REVERSION-v2.0.0"
+}

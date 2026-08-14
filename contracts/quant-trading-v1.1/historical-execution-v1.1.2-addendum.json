@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "QUANT-TRADING-HISTORICAL-EXECUTION-ADDENDUM-v1.1.2",
+  "predecessorProtocolVersion": "QUANT-TRADING-HISTORICAL-VALIDATION-v1.1.1",
+  "successorExecutorVersion": "QUANT-TRADING-HISTORICAL-EXECUTOR-v1.1.2",
+  "successorResultVersion": "QUANT-TRADING-HISTORICAL-RESULT-v1.1.2",
+  "successorTerminalVersion": "QUANT-TRADING-HISTORICAL-TERMINAL-REGISTRY-v1.1.2",
+  "failedRun": {
+    "runId": "QUANT-V11-CONTROLLED-20260812-001",
+    "state": "FAILED_PRE_POST_ACCESS_SEAL",
+    "failedReason": "Yahoo_payload_string_type_drift",
+    "firstFailingSymbol": "ADM",
+    "observedProviderRecordIdType": "NULL",
+    "executionIntentArtifactHash": "F8B1F13491D7C7F73D6AA3F4B21061961A9691FB2C76D1114FB438BFD69BDBE2",
+    "failedTerminalArtifactHash": "56665B855EEC3D4FA026AD5F576C1D62F870660C49758D11301BE59A68E30E4B",
+    "failedTerminalEventHash": "AFBA04C9C385E92BA007A0E4AD5800C7120E1E6F15BA60AB6621B3AF27D483C7",
+    "failedTerminalFileSha256": "90C2B020A66015B88986B2BBBA9F674C20A666F4618E316DD8457E50C8BFD8E1",
+    "payloadJsonAccessBegan": true,
+    "postAccessInputSealCreated": false,
+    "outputArtifactsCreated": false,
+    "signalsCalculated": false,
+    "ranksCalculated": false,
+    "returnsCalculated": false,
+    "pnlCalculated": false,
+    "performanceEvaluated": false,
+    "acceptanceEvaluated": false,
+    "retryAllowed": false
+  },
+  "compatibilityDelta": {
+    "field": "providerRecordId",
+    "acceptedWireTypes": [
+      "NONEMPTY_STRING",
+      "NULL"
+    ],
+    "rejectedWireTypes": [
+      "EMPTY_STRING",
+      "BOOLEAN",
+      "NUMBER",
+      "ARRAY",
+      "OBJECT"
+    ],
+    "allOtherRootKeysAndTypesUnchanged": true,
+    "adjustmentArithmeticAndChronologyUnchanged": true,
+    "formulaRankingCostAndAcceptanceRulesUnchanged": true
+  },
+  "integratedContractValidation": {
+    "sourceCount": 203,
+    "canonicalLeaseRequired": true,
+    "executionIntentRequiredBeforeRead": true,
+    "runsBeforePostAccessInputSeal": true,
+    "runsBeforePerformance": true,
+    "standalonePublicPreflightAllowed": false,
+    "signalsCalculated": false,
+    "ranksCalculated": false,
+    "returnsCalculated": false,
+    "pnlCalculated": false,
+    "performanceEvaluated": false
+  },
+  "claimBoundary": {
+    "modelEvidenceLabel": "NOT_VALIDATED",
+    "evidenceUpgradeAllowed": false,
+    "failedRunPreserved": true,
+    "sameRunRetryAllowed": false,
+    "newImmutableRunRequired": true
+  },
+  "canonicalContentHash": "D78C8E093CF334BD737FED3ACAFEFEAEFB10550EB4047762BA4B51E4AA62E19E"
+}

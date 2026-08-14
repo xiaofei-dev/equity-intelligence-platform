@@ -1,0 +1,48 @@
+{
+  "claimCeiling": "DEVELOPMENT_OBSERVED_CURRENT_REVISION_CURRENT_SURVIVOR",
+  "contentHash": "02D8410EC8FF7690C7FE30E4296C06162E708CBF5A0D9F88AEA030737B035F4D",
+  "disposition": "REJECTED_FOR_PRODUCTION_ECONOMIC_PERFORMANCE",
+  "fullPopulationResultHash": "F87E4AF65E9E2AAF73BC6ADA7142FB5C78E21D0E2D8E95771D83963C1533AB8D",
+  "limitations": [
+    "CURRENT_SURVIVOR_POPULATION",
+    "CURRENT_REVISION_PRICE_HISTORY",
+    "NO_STRICT_V22_IDENTITY",
+    "NO_STRICT_CORPORATE_ACTION_OR_TERMINAL_AUTHORITY",
+    "NO_UNTOUCHED_HOLDOUT"
+  ],
+  "modelEvidenceLabel": "NOT_VALIDATED",
+  "modelVersion": "QUANT-TRADING-v1.0.0",
+  "observed": {
+    "annualizedVolatility": "0.0751",
+    "cagr": "0.01128",
+    "closedTrades": 1243,
+    "finalNavUsd": "113808.46",
+    "initialNavUsd": "100000",
+    "maximumDrawdown": "-0.1202",
+    "severeLossRate": "0.000805",
+    "sharpeRfZero": "0.187",
+    "spyCagr": "0.13676",
+    "spyFinalNavUsd": "438691.69",
+    "spyMaximumDrawdown": "-0.3369",
+    "spySharpeRfZero": "0.823",
+    "spyTotalReturn": "3.3869169",
+    "totalCostUsd": "2867.34",
+    "totalReturn": "0.1380846",
+    "winRate": "0.3138"
+  },
+  "populationCount": 191,
+  "ruling": {
+    "brokerageExecutionAllowed": false,
+    "evidenceUpgradeAllowed": false,
+    "lowerDrawdownIsInsufficientWithoutCompetitiveReturn": true,
+    "productionPersistenceAllowed": false,
+    "publicApiAllowed": false,
+    "sameOutcomeParameterTuningAllowed": false,
+    "successorMustUseNewVersionIdentity": true,
+    "successorSameHistoryClaim": "DEVELOPMENT_ONLY_NOT_UNTOUCHED_HOLDOUT"
+  },
+  "schemaVersion": "QUANT-TRADING-V1-DISPOSITION-v1.0.0",
+  "strategyVersion": "MOMENTUM-CONTINUATION-v1.0.0",
+  "track": "YAHOO_ADJUSTED_OHLCV_CURRENT_SURVIVOR_APPROXIMATION",
+  "validationProtocolHash": "84B5DEEDF5ABE572C135E3E1CF3D4FF7ED391F93A20A82D4F3B6C1BF48F070BC"
+}

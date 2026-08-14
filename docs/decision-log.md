@@ -1,6 +1,159 @@
 # Decision Log
 
+## 2026-08-13: Implement Unified Portfolio and Risk Context v1 on V28
+
+- Reuse V12 portfolio, sealed account-snapshot, liability, and versioned
+  constraint-policy ownership instead of creating a second account system.
+- Preserve V21 `CORE`/`TACTICAL` persistence unchanged as a legacy lane; V28
+  uses only `LONG_TERM_CORE` and `QUANT_TRADING`.
+- Keep FastAPI stateless over `app.*`; Spring owns identity, policy validation,
+  public workflow, persistence, and cross-language result verification.
+- Persist the exact risk thresholds together with their V12 policy ID so a
+  historical violation remains explainable and cannot be reinterpreted by a
+  later policy.
+- Store missing valuations as explicit states, never zero. Keep the two engine
+  evidence references independent and prohibit score averaging.
+- Add immutable, idempotent human reviews while keeping final-weight, order,
+  brokerage, and LLM decision authority false.
+- Keep Quant v2 `NOT_VALIDATED` and reject any request that marks it eligible
+  for portfolio research use.
+
 This file records product and architecture decisions. New entries should be appended rather than rewriting historical decisions.
+
+## 2026-08-13: Stop Quant v2 after one unsupportive mean-reversion replay
+
+- Freeze Quant v2 as an independent `REGIME_FILTERED_MEAN_REVERSION` model;
+  do not rewrite or blend the observed v1 or v1.1 momentum systems.
+- Accept the deterministic signal, ranking, entry/exit, sizing, nonlinear-cost,
+  fixed-cost-sensitivity, and one-execution historical engineering boundaries.
+- Seal the only controlled replay as
+  `NOT_DIRECTIONALLY_SUPPORTIVE_NO_RETUNING_ON_SAME_OUTCOME`: USD 100,000 ended
+  at USD 107,516.24 with 0.63% CAGR, versus USD 434,189.17 and 13.53% CAGR for
+  SPY. Four of eight preregistered gates passed.
+- Preserve the favorable low-drawdown and positive-expectancy observations as
+  development evidence, but do not treat them as sufficient economic support.
+- Retain `NOT_VALIDATED`, prohibit same-outcome retuning, and do not promote v2
+  into V27 or the FastAPI/Spring/Next.js decision path.
+
+## 2026-08-13: Accept the Quant v1.1 provider-neutral V22 signal assembly
+
+- Keep Quant v2 deferred and productize only the frozen v1.1 research boundary.
+- Add a read-only V22 adapter for security identity, ticker intervals,
+  calendars, completed sessions, and persisted selector aggregates.
+- Require 253 exact total-return-adjusted sessions for SPY and every expected
+  member, plus an exact sorted denominator of at least 20 securities.
+- Preserve missing and not-applicable members in the denominator. Raise an
+  integrity failure for invalid, stale, excluded, future, ambiguous, or
+  drifting selector evidence; never substitute zero or a neutral signal.
+- Keep price values out of the Git-safe manifest and retain `NOT_VALIDATED`.
+- Authorize only deterministic research-signal calculation. V22 lacks governed
+  Quant event/lifecycle interval proof, so persistence, APIs, portfolio
+  execution, and brokerage remain closed.
+
+## 2026-08-12: Reject Quant Trading v1 and freeze a distinct v1.1 successor
+
+- Seal the v1 full-population result as
+  `REJECTED_FOR_PRODUCTION_ECONOMIC_PERFORMANCE` and retain `NOT_VALIDATED`.
+  USD 100,000 ended at USD 113,808.46 with 1.13% CAGR versus SPY at
+  USD 438,691.69 and 13.68% CAGR. Lower drawdown does not compensate for the
+  observed opportunity cost.
+- Prohibit in-place changes to the observed v1 thresholds, formulas, entries,
+  exits, risk sizing, and costs. Any successor requires new model, strategy,
+  formula, entry/exit, engine, and validation identities.
+- Freeze `QUANT-TRADING-v1.1.0` / `DUAL-MOMENTUM-TREND-v1.1.0` as a separate
+  economic hypothesis: positive absolute 12-1 and 6-1 momentum, security and
+  SPY trend filters, five-session cross-sectional rebalancing, next-open entry,
+  at most ten positions, no profit target, and trend/rank/ATR exits.
+- Preserve USD 100,000, 0.5% prior-close NAV risk, 10% notional cap, whole
+  shares, and C9 nonlinear entry/exit costs. Keep SPY primary and cash
+  secondary; equal-weight and sector benchmarks remain unobserved.
+- Record that v1.1 was designed after observing v1. Reusing the same history is
+  development evidence only, not an untouched holdout, strict PIT result,
+  backtest-supported label, future-return promise, or brokerage authority.
+- Freeze a provider-neutral v1.1 portfolio simulator and an outcome-blind
+  historical protocol before reading v1.1 prices or returns. Require the exact
+  127-session maturity tail, prior-20-session execution liquidity, explicit
+  untradable-SPY and active-bar failures, `COMPLETE_CASH`, exact trade pairing,
+  calendar-day metrics, and a separately re-sized fixed-5-bps replay.
+- Require a checked runner and one outcome-access intent that bind exact source
+  hashes. Pilot 25 and expansion 100 are integrity checkpoints only; the full
+  191 denominator is the sole performance evaluation.
+
+## 2026-08-12: Freeze Quantitative Trading v1 Stage 0
+
+- Adopt one independent long-only `MOMENTUM_CONTINUATION` strategy for the
+  first executable Quantitative Trading implementation.
+- Keep mean reversion in a separately versioned future strategy; do not blend
+  it into momentum continuation.
+- Form signals only after completed-session close and allow entry only in the
+  next completed session, with explicit entry, gap, stop, target, trailing,
+  invalidation, time-stop, sizing, cash, and exit-priority policies.
+- Freeze USD 100,000 simulation capital, ten concurrent positions, 0.5% NAV
+  risk per position, 10% notional cap, SPY primary benchmark, C9 nonlinear
+  costs, and 5-basis-point-per-side sensitivity.
+- Require V22 durable identities and evidence lineage. Missing event/action
+  evidence fails closed. Preserve Tactical v2.2 and legacy V21 unchanged.
+- Keep production `NOT_VALIDATED`; historical evidence is limited to
+  `DEVELOPMENT_OBSERVED_CURRENT_REVISION_CURRENT_SURVIVOR`. Stage 0 creates no
+  engine, backtest, migration, API, order, or brokerage authority.
+- Freeze deterministic daily-bar fills: next eligible scheduled-session open,
+  conservative stop-first same-bar handling, next-session trailing and
+  invalidation effects, whole-share/cost-reserved sizing, durable lifecycle
+  handling, and identical strategy/benchmark cost and terminal rules.
+
+## 2026-08-12: Implement the pure Quantitative Trading v1 Stage 1 engine
+
+- Implement only `MOMENTUM-CONTINUATION-FORMULAS-v1.0.0` in a new pure Python
+  engine. Do not reuse Tactical v2.2 scores and do not add mean reversion.
+- Require exactly 253 aligned, completed, cutoff-valid security and SPY
+  adjusted-OHLCV sessions with complete durable identity, selector, source,
+  normalized, event, corporate-action, lifecycle, and chronology bindings.
+- Freeze the exact price momentum, SPY-relative momentum, moving-average trend,
+  breakout, volume, close-location, liquidity, chase, and ATR features and
+  their explicit weights and readiness thresholds.
+- Use an isolated precision-50 `ROUND_HALF_EVEN` Decimal context. Compare the
+  unrounded score, display scores at two decimal places, and preserve full
+  canonical Decimal precision for raw features and trade-plan prices.
+- Freeze the entry range, initial stop, inclusive 2%-12% stop-distance gate,
+  two-risk-unit full-exit target, monotonic three-ATR trailing rule, breakout
+  or two-close invalidation, and 60-session time stop.
+- Preserve `NOT_VALIDATED`. Missing, stale, invalid, or ineligible evidence
+  emits no numeric result or plan. Stage 1 creates no backtest, migration, API,
+  brokerage order, automated execution, or final portfolio weight.
+
+## 2026-08-12: Separate Current Fundamental Value Assessment Authority and V26 Read Path
+
+Decision:
+
+- Keep V25 identity authority, V22 evidence selection, and V26 investment
+  assessment persistence as separate responsibilities. A V25 row with
+  `investment_assessment_authorized=false` cannot be reinterpreted as assessment
+  authorization.
+- Add a narrow append-only V26 authority for the GOOG, FOX, and MSFT current
+  Fundamental Value assessment scope. Provisioning is an explicit operation;
+  the evidence registrar and assessment repository remain read-only over
+  authority records.
+- Bind real cached inputs through exact plan, request identity, endpoint,
+  provider/schema/adapter/normalization, response Date, journal, checkpoint, and
+  raw-decoder replay before V22 registration. Do not reuse old assessment JSON.
+- Publish only immutable GET projections through Python to Spring Boot to
+  Next.js. Do not expose licensed source values or authorize ranking, portfolio
+  weights, deterministic trade action, brokerage execution, or model-evidence
+  upgrades.
+
+Status:
+
+- The result remains `NOT_VALIDATED`. Historical C9 remains mixed development
+  evidence and is not proof of future performance.
+- Final V26 PostgreSQL 17 typed and migration/upgrade/refusal acceptance passed.
+  The local business database was migrated through Flyway, explicit authorities
+  were installed, and immutable GOOG, FOX, and MSFT assessments were persisted.
+  Exact replay was idempotent, and the real FastAPI read path returned all three
+  while excluding private evidence fields.
+- Treat reproducible, leakage-resistant, economically useful relative direction
+  as the validation objective. Do not require or imply perfect future accuracy,
+  and do not tune the model merely to turn mixed historical evidence into a
+  favorable label.
 
 ## 2026-07-25: Product Positioning
 
@@ -2098,3 +2251,740 @@ checkpoints, usage events, or terminal V16 tasks/runs.
   Tactical manifests under separately named value-free paths.
 - Require a separate commercial license review before any external product
   displays market data or derived analytics.
+
+## 2026-07-31: Freeze Fundamental Value Investment System v1
+
+- Scope the generic `FUNDAMENTAL-VALUE-v1.0.0` model to mature nonfinancial
+  United States listed operating companies. Specialized, benchmark, and
+  insufficient-history cases fail closed without generic fallback; NBN is an
+  explicit bank regression case.
+- Freeze FCFF DCF, normalized Owner Earnings, and Earnings Power as primary
+  methods. Comparable valuation remains a non-controlling cross-check.
+- Aggregate eligible methods with a preregistered weighted median and ordered
+  weighted quantiles. Prohibit unrestricted minimum/maximum envelopes and
+  method dominance.
+- Preserve missing advanced evidence explicitly. It lowers the claim ceiling
+  and risk cap and blocks valuation when missing refinancing evidence is
+  material.
+- Limit the model to 0, 1, 2, 3, or 5 percent `LONG_TERM_CORE` cap ceilings.
+  The result is never a final portfolio weight and requires a human decision.
+- Reserve append-only V23 for Fundamental Value persistence without
+  reinterpreting V1-V22 or V21 lane semantics. Exclude raw retention, deletion,
+  and legal-hold governance; any future approved raw-governance migration uses
+  the next available version after V23.
+- Require separately accepted historical time-slice validation before
+  prospective Forward DQV readiness. Permit an honest `NOT_VALIDATED` result.
+- Keep AI narrative-only, Quantitative Trading independent, the repository at
+  No License, and all provider, cloud, deployment, push, and brokerage actions
+  outside this stage.
+
+## 2026-07-31: Repair Fundamental Value Stage 2 domain and dimension gaps
+
+- Bind `fundamental-value-formulas-v1.1.0` and
+  `fundamental-value-assumptions-v1.1.0` to fail-closed economic domains.
+- Require every explicit and terminal growth scenario to exceed negative one
+  before arithmetic, and convert Decimal/domain failures into explicit
+  component-level `INVALID` results.
+- Require nonnegative gross cash, debt, depreciation and amortization, and
+  capital expenditures while retaining signed change in working capital.
+- Implement the frozen separate capital-allocation-quality dimension over
+  typed incremental ROIC, acquisition-discipline, and shareholder-distribution
+  coverage evidence states. Stage 3 records the currently unsupported V22
+  evidence responsibilities as explicit missing inputs.
+- Propagate non-valid capital-allocation evidence without neutralization and
+  allow its score to preserve or lower, never raise, the discrete risk cap.
+- Keep the repaired core price-independent, `NOT_VALIDATED`, migration-free,
+  network-free, and isolated from providers, AI, Quantitative Trading, public
+  APIs, portfolio weights, and brokerage authority.
+- Bind the normative decision fixture to the same formula and assumption-policy
+  v1.1.0 constants as the pure core, and require a canonical parity regression
+  so future shared-contract drift fails closed.
+
+## 2026-07-31: Bind Fundamental Value assembly to sealed V22 evidence
+
+- Accept only repository-rehydrated V22 selector aggregates and content-hashed
+  applicability routing; never accept caller-provided metric values.
+- Reverify selector request IDs/hashes, result hashes/replay, selected evidence
+  IDs/source hashes/normalized hashes/revisions, full durable identity,
+  calendar/session, cutoffs, states, conflicts, semantics, and versions before
+  reading an operand.
+- Route company type before operand assembly. Banks including NBN and every
+  specialized, benchmark, or insufficient-evidence case remain unable to enter
+  the mature-company generic path.
+- Emit a deterministic Git-safe manifest containing identity, chronology,
+  state/reason, evidence IDs/hashes/revisions, provider-schema/adapter lineage,
+  the validated projection horizon, and model versions. Exclude canonical and
+  licensed values, provider-native fields, raw payload/storage references,
+  scores, ranks, weights, and actions.
+- Do not broaden V22 persistence semantics to create missing Fundamental Value
+  evidence. When the accepted V22 canonical domains cannot support an operand,
+  emit an explicit missing derivation/policy-evidence requirement and prohibit
+  core invocation.
+- Keep V23, public/internal APIs, UI, AI narrative, Quantitative Trading,
+  brokerage, provider execution, and deployment outside Stage 3.
+
+## 2026-07-31: Repair Fundamental Value Stage 3 runtime trust boundaries
+
+- Validate the projection horizon as an exact non-Boolean integer from three
+  through ten years and bind it into every result and manifest hash.
+- Require an exact immutable tuple of typed canonical selector-request IDs;
+  reject mutable collections, wrong members, and noncanonical durable IDs.
+- Validate every operand's selector domain, field, policy, layer, evidence
+  class, normalization, and domain constraints before propagating any
+  non-VALID state.
+- Treat the repository Protocol as a trusted-adapter seam. Production evidence
+  provenance comes from `EvidenceFoundationRepository`, whose PostgreSQL
+  readback recomputes request/result/routing hashes and selector replay.
+- Prove the boundary on a disposable V22 database, including successful exact
+  readback, tampered-hash and missing-ID refusal, a direct cash operand, and an
+  NBN bank route that exits before generic operand loading.
+- Define provider-neutrality narrowly: provider-native fields, formulas,
+  licensed values, raw payloads, and storage references are excluded from the
+  engine and Git-safe manifest, while provider-schema and adapter versions
+  remain required audit lineage.
+
+## 2026-07-31: Add append-only Fundamental Value V23 persistence
+
+- Use V23 only for `analytics.*` Fundamental Value assembly and deterministic
+  assessment persistence. Do not reinterpret V1-V22, V21 lane semantics, or
+  Spring-owned `app.*` responsibilities.
+- Persist non-usable Stage 3 outcomes as first-class sealed records without
+  numeric substitution or assessment children. Require the canonical ordered
+  34-operand set for applicable mature companies and zero generic operands for
+  specialized, not-applicable, and insufficient-evidence routes.
+- Add an ordered relational operand-to-evidence parent set because derived
+  operands may depend on multiple canonical evidence records. Bind durable
+  IDs, hashes, revisions, chronology, exact direct-selector seals, and complete
+  child cardinality rather than relying on JSON provenance.
+- Rehydrate typed assemblies and assessments and recompute manifests, inputs,
+  result hashes, version bindings, and deterministic core arithmetic. Permit
+  exact idempotent replay only; reject conflicting identity reuse, incomplete
+  seals, changed arithmetic, update, and delete.
+- Treat complete synthetic valid fixtures as persistence-mechanics evidence
+  only. They do not close the real V22 mature-company operand blocker, validate
+  the investment model, or authorize ranking, final portfolio weights,
+  brokerage, AI decisions, or provider execution.
+- Keep raw retention, deletion, jurisdiction, deadline, legal hold, and
+  disposition governance outside V23. Any later approved responsibility uses
+  the next available append-only migration.
+
+## 2026-07-31: Harden the V23 private value and semantic-writer boundary
+
+- Keep the Stage 3 Git-safe manifest free of licensed values, and add a private
+  deterministic seal over exact operand Decimal values or non-valid reasons,
+  ordered evidence parents, output-contract versions/hashes, complete versions,
+  durable identity, session, and cutoffs. Use this seal in assembly identity.
+- Replay daily-price and direct-fundamental values against the selected V22
+  canonical record. Require preregistered derivation/policy-evidence output
+  bindings over ordered parents; arbitrary valid evidence is not a derived
+  output.
+- Freeze applicable mature assemblies at the exact 34-operand, 31-required and
+  3-optional tuple, with core authorization equivalent to complete valid typed
+  inputs. Specialized routes have zero generic operands.
+- Freeze V23 assessments to `NOT_VALIDATED`, exact claim ceilings, and no more
+  than 2 percent risk cap; limited advanced evidence is at most 1 percent and
+  material refinancing uncertainty is zero.
+- Scope revision identity and locking to the complete security/listing/share-
+  class identity. Bind assessment identity to assembly identity so unchanged
+  arithmetic may be republished under a distinct evidence-only revision.
+- Canonicalize evidence timestamps to UTC instants and reject non-finite
+  persisted numerics. PostgreSQL enforces relational structure and sealing;
+  only the dedicated Fundamental Value writer may write V23, while the trusted
+  Python repository performs exact Stage 2 formula replay.
+## 2026-07-31 - Fundamental Value V23 producer governance repair
+
+- Retract the earlier Stage 4 PASS candidate pending independent acceptance.
+- Remove fabricated derived and policy parent-set economics. V23 and Python
+  seed an empty production producer registry, so unsupported operands remain
+  explicitly `MISSING` and no real assessment exists.
+- Require any future production producer to arrive through an append-only
+  governed contract plus a matching executable evaluator with exact ordered
+  roles, semantics, currency, periods, chronology, and output replay.
+- Permit only explicit `TEST_ONLY` executable contracts in disposable
+  acceptance databases and injected test registries. Application writer roles
+  cannot register or approve them.
+- Preserve the private value seal, exact 31-required/3-optional authority,
+  `NOT_VALIDATED` claim/risk limits, identity-scoped revision locking, and
+  trusted Python arithmetic replay boundary.
+- Require producer validation inside direct PostgreSQL backend load as well as
+  repository load and backend insert. Empty-production-registry callers cannot
+  rehydrate a disposable test-only-derived record.
+
+## 2026-07-31: Publish Fundamental Value v1 through an ID-only service boundary
+
+- Accept only durable V22 routing, classification-request, and operand-request
+  IDs plus the frozen projection horizon at the internal FastAPI command.
+- Derive security identity, completed session, cutoffs, evidence seals, and
+  versions from the accepted V22/V23 repositories; caller-supplied values and
+  results are forbidden.
+- Return non-usable and specialized outcomes as explicit domain results, and
+  reserve HTTP errors for malformed contracts, missing IDs, persistence
+  conflicts, and service failures.
+- Keep Spring Boot as workflow and public-contract owner through a strict
+  client. Java does not reproduce formulas or query `analytics.*` tables.
+- Treat Stage 5 as offline engineering readiness only. Real mature-company
+  coverage remains missing and model evidence remains `NOT_VALIDATED`.
+
+## 2026-07-31: Harden the Fundamental Value Stage 5 wire boundary
+
+- Require raw `projectionYears` to be an integral JSON number from 3 through
+  10 and every durable ID to be an exact canonical lowercase hyphenated UUID.
+  Python internal malformed requests remain 422; Spring public malformed
+  requests follow the established 400 policy.
+- Map exact missing durable references to sanitized 404 responses, immutable
+  or durable evidence-integrity conflicts to 409, and invalid analytics
+  success bodies to a sanitized Spring 502. Do not expose database, provider,
+  or raw upstream detail.
+- Freeze state/reason parity: a `VALID` assembly has no reasons and each
+  non-`VALID` assembly has stable nonempty reasons. Spring validates the exact
+  Stage 3 routing outcome matrix, including specialized companies, benchmarks,
+  and insufficient-history routes.
+- Serialize every deterministic Decimal as the same finite ordinary base-10
+  text used by Python hashes and V23 replay. Spring rejects exponent-form wire
+  decimals and enforces the frozen FCFF terminal-value-share maximum of 0.80.
+- Namespace only test policy identities whose contents vary between synthetic
+  test seeds. Frozen production selector versions and V22 uniqueness remain
+  unchanged, and the same disposable database must support sequential reruns.
+- Keep Stage 5 as an implemented candidate pending master final acceptance.
+  This hardening does not create a usable real-company assessment or an
+  investment-validation claim.
+
+## 2026-07-31: Add the Spring-only Fundamental Value workspace
+
+- Add `/research/fundamental-value` as immutable decision readback by assembly
+  ID. Next.js calls only the Spring public API and has no direct Python,
+  PostgreSQL, provider, or internal analytics route.
+- Advance only the current readback result to
+  `internal-fundamental-value-result-v1.1.0`; retain the v1.0 command and the
+  Stage 5 v1.0 fixtures as immutable historical acceptance evidence. Do not
+  change formulas, V22/V23 semantics, or persisted economics.
+- Carry the complete durable security identity, ticker assignment, ticker,
+  MIC, identity currency, and completed session in result v1.1. Require Python,
+  Spring, and Next.js to reject a returned assembly ID that differs from the
+  requested assembly ID.
+- Re-derive each usable assessment ID as UUIDv5 over the frozen assessment
+  persistence version, assembly ID, and assessment content hash at the Python,
+  Spring, and TypeScript boundaries. Reject a completed-session date later than
+  the decision cutoff.
+- Decode the public result with a strict TypeScript contract that preserves
+  canonical IDs, explicit states, applicability, reasons, sealed timestamps,
+  hashes, versions, and forbidden portfolio/brokerage authority.
+- Replay the canonical assessment hash and reject unknown fields, coercion,
+  alternate zero spellings, exponent decimals, invalid cutoff grammar or
+  chronology, blank nested reasons, frozen condition drift, and claim,
+  risk-cap, authority, or version drift.
+- Bind the quality, resilience, conservative margin-of-safety, downside-risk,
+  and central margin-of-safety condition observations to their corresponding
+  exposed source values, and recompute each condition's `satisfied` state.
+- Present usable valuation ranges and dimensions only when Spring supplies a
+  sealed deterministic assessment. Present missing, specialized,
+  not-applicable, and insufficient-evidence results without zero or neutral
+  substitution.
+- Show durable security and listing identity plus completed-session provenance,
+  bind annualized expected return to the projection horizon, keep nested reasons
+  visible, and format percentages without JavaScript Number conversion.
+- Label the risk cap as a `LONG_TERM_CORE` ceiling rather than a final weight,
+  keep `NOT_VALIDATED` visible, and include no guaranteed-return, autonomous
+  trade, or brokerage language.
+- Keep AI narrative absent. The workspace states that AI cannot alter the
+  deterministic assessment, eligibility, valuation, ranking, cap, weight, or
+  action.
+
+## 2026-07-31: Accept the Fundamental Value Stage 6 workspace
+
+- Accept Stage 6 after the offline Java 21 and Spring Boot 4.1.0 master runtime
+  passed the 71-case focused Fundamental Value suite and the complete 138-case
+  Spring suite with zero failures, errors, or skips. Maven reported
+  `BUILD SUCCESS` in 21.963 seconds.
+- Record the focused composition as 32 analytics-client, one architecture,
+  three contract, eight controller, and 27 service cases. This includes exact
+  durable-identity projection, malformed-identity refusal, all frozen-version
+  value/omission mutations, and every root/nested authority toggle or omission.
+- Mark Fundamental Value Stages 1 through 6 master accepted as offline
+  engineering readiness. Preserve `NOT_VALIDATED`, the empty production
+  producer registry, the mature-company V22 operand-coverage blocker, and the
+  absence of any final-weight, brokerage, provider, deployment, or investment
+  authority.
+
+## 2026-08-01: Reject the Fundamental Value Stage 7 evidence interpretation
+
+- Preserve C1-C8 execution, policy, intent, result, and final artifacts
+  immutably, including the completed 203-request Yahoo acquisition and the
+  favorable observed aggregates.
+- Reject the Stage 7 evidence interpretation because the sealed predictor rank
+  runs highest-to-lowest while the sealed return rank runs lowest-to-highest,
+  making the positive rank-IC interpretation directionally inconsistent.
+- Record the additional reproducibility blockers: no checked deterministic C8
+  calculation runner, no complete per-security/date/horizon terminal registry,
+  and no hash-bound participation-to-impact function in the C8 policy.
+- Set the validation outcome to `BLOCKED_BY_PROTOCOL_DEFECT`, keep the model
+  `NOT_VALIDATED`, prohibit post-outcome sign reversal or same-outcome tuning,
+  and require a newly preregistered successor with a fresh validation boundary.
+- Keep Stage 8 closed. The governing audit disposition canonical hash is
+  `8C0610A47178CE54993E93B5926BDC94D05FF59E29A7B38B662AEC4E66C54385`.
+
+## 2026-08-01: Close Stage 7 after the C9 protocol-repair confirmation
+
+- Preserve C1-C8 unchanged and run one separately versioned C9 confirmation on
+  nine presealed dates not calculated in C8.
+- Correct only the deterministic ordinal-rank direction and add a checked
+  runner, complete terminal registry, and hash-bound square-root cost function.
+- Record that all frozen market-first numeric thresholds passed while strict
+  high/middle/low ordering appeared on only 2/9 dates; set the terminal
+  disposition to `MIXED_NOT_VALIDATED`.
+- Keep the evidence ceiling at
+  `DEVELOPMENT_OBSERVED_CURRENT_REVISION_APPROXIMATION`, the production model at
+  `NOT_VALIDATED`, and prohibit any further retrospective iteration.
+- Permit only migration-free Stage 8A readiness/preregistration work; do not
+  enroll a real decision or claim forward support.
+
+## 2026-08-01: Accept post-closeout C9 engineering replay reproducibility
+
+- Preserve every currently immutable C9 artifact and do not recompute outcomes.
+  Because pre-reseal registry/result artifacts and a C9 execution journal were
+  not retained, cross-reseal numeric identity is
+  `NOT_INDEPENDENTLY_VERIFIABLE_FROM_PRESERVED_ARTIFACTS`.
+- Freeze the checked runner to an internal Decimal precision of 28 with
+  `ROUND_HALF_EVEN`, independent of the caller's Decimal context.
+- Require nonzero raw predictor and return variance before deterministic ordinal
+  tie-breaking can produce an observed correlation.
+- Record that the C9 policy's `UNCHANGED_C8` indirection is insufficient alone;
+  bind the full exact threshold matrix in the append-only acceptance identity.
+- Accept exact read-only replay of the 5,157-row registry and 27-row result under
+  an intentionally different outer precision, plus exact final-summary and
+  explicit-threshold evaluation.
+- Treat this as engineering reproducibility only. Keep C9
+  `MIXED_NOT_VALIDATED`, keep the model `NOT_VALIDATED`, and keep Stage 8A
+  readiness-only.
+- Bind all direct local replay calculation/provenance dependencies plus the
+  CPython and Decimal/libmpdec runtime in the post-closeout identity. Record the
+  original pre-outcome provenance as `FAIL_PARTIAL`; only current post-closeout
+  engineering replay provenance may pass.
+- Preserve both misleading immutable MDD field names, and append correctly
+  signed median and worst deterioration diagnostics. The true worst
+  deterioration is 3.94 percentage points and remains within the 5-point cap.
+## 2026-08-01: Add narrow company-quality Forward enrollment readiness
+
+- Decision: add append-only V24 readiness tables for a development-only,
+  `NOT_VALIDATED` `COMPANY_QUALITY` prospective contract because V18-V23 cannot
+  represent its population, predictor rows, and 252/504/756-session maturity
+  schedule without reinterpretation or fabrication.
+- Keep the real enrollment blocked. The controlled calendar ends on 2026-07-28,
+  and current inputs lack contractual ingestion timestamps and durable security
+  identities. Do not backdate C9 or use filesystem times and ticker-only identity.
+- Keep network authorization false. A future current-calendar and evidence
+  request matrix requires separate approval after exact identities, paths,
+  weights, budgets, leases, journals, and checkpoints are sealed.
+- Freeze V24 without singular decision-session or entry fields. The exact 191-row
+  population uses 122 `XNYS` and 69 `XNAS` members, two matching completed-session
+  children, and two separate `SCHEDULED_NOT_COMPLETED` planned-entry children.
+  This engineering structure does not authorize a real enrollment.
+- Grant the V24 semantic writer only the V22 raw-manifest `SELECT` privilege
+  required by its security-invoker deferred validator. Preserve DML denial on
+  raw manifests, normalized parents, and parent-role metadata, and prove a full
+  role-switched enrollment commit in disposable PostgreSQL.
+- Remove the redundant provider-normalized-parent `listing_mic` column. Durable
+  listing ownership already determines the listing, and the enrollment member
+  owns the independently validated MIC/session binding; a second unbound MIC
+  claim would permit false audit metadata.
+- Harden the V24 producer replay with exact common four-quarter factor periods,
+  C5-compatible at-or-before ROIC balance boundaries, and nonnegative CAPEX on every
+  parent row. Preserve the independent eight-quarter stability chains.
+- Make every V24 hash/chronology date and timestamp finite, require ordered period
+  bounds, and constrain admitted variable hash atoms to an injective delimiter-free
+  grammar. Bind SQL producer arithmetic to the Python precision-28 half-even producer
+  context while preserving the unchanged Stage 2 precision-50 scoring boundary.
+- Accept the disposable runtime only on the exact 191-member fixture: 110 usable,
+  81 explicit `MISSING`, 63 ordered parents per usable member, and 6,930 parent rows.
+- Require exact lowercase SHA-256 grammar for every Python hash-bound reference,
+  normalize timestamps to UTC before the whole-second check, and reject
+  fractional-offset collisions before sealing.
+- Canonicalize every V24 hash-bound PostgreSQL date as finite ISO `YYYY-MM-DD`.
+  Prove a complete deferred-validator commit under `DateStyle='SQL, DMY'`, followed
+  by exact typed readback and idempotent replay.
+- Bound every V24 date and UTC instant to the shared Python/PostgreSQL AD range
+  0001 through 9999 and reject BC, year-10000, nonfinite, fractional-second, and
+  fractional-offset values before hashing or persistence.
+- Make the initial-only revision contract explicit (`revision=1`, no predecessor),
+  require evidence cutoff to equal decision cutoff, bind planned-entry dates to
+  scheduled open/close UTC dates, reject whitespace-only hash atoms, and require
+  unique terminal reason codes per member.
+- Define hash-atom blankness with the identical six-character ASCII whitespace
+  set in Python and PostgreSQL, bind every Python V24 string to its exact SQL
+  character limit before hashing, require all eight CAPEX parents to be
+  nonnegative, and require completed-session recording not to precede completion.
+- Reject NUL at the Python hash-atom boundary because PostgreSQL text cannot
+  represent it, without imposing broader Unicode restrictions. Bind each source
+  revision to the positive PostgreSQL `INTEGER` range before evidence hashing.
+- Mirror only schema-proven per-enrollment uniqueness for member identity,
+  decision-session identity, V22 selections, and provider-normalized parents;
+  preserve permitted shared issuer hierarchy and lineage/hash reuse. Require
+  exact Python integer/boolean wire types and PostgreSQL `NUMERIC` digit limits
+  before any V24 value is hashed or persisted.
+- Require exact Python `UUID` instances for every UUID-bearing V24 wire field so
+  PostgreSQL canonicalization cannot change previously hashed identifiers.
+  Bound every source-parent value to `abs(value) <= 1e100`, preserving the
+  economic formulas while keeping all replay intermediates inside PostgreSQL
+  `NUMERIC` and the sealed Decimal arithmetic domain.
+- Bound canonical source-parent fractional scale to 100 digits, admitting zero
+  and nonzero magnitudes no smaller than `1e-100`. Use context-free Decimal
+  magnitude and negation/order operations so ambient precision cannot bypass
+  admission or change best-first predictor ranking.
+- Queue deferred aggregate replay from all seven V24 child tables. Stamp each
+  seal with a trigger-owned full `xid8`: creating-transaction children remain
+  covered by the single header replay, while every later child transaction must
+  recompute and match the immutable seal. Reject caller-GUC bypasses and deny
+  semantic-writer mutation of concurrency provenance.
+
+## 2026-08-02: Preserve the failed OpenFIGI canary and add a narrow successor alias contract
+
+- Preserve the acquisition v1.2 production canary as terminal. It planned four
+  OpenFIGI requests and 18 logical jobs, sent three requests, completed two,
+  retained one HTTP 200 response-backed `FAILED` checkpoint, and did not send
+  the fourth request. Retry remained zero and no transport outcome was unknown.
+- Record the exact failure as a platform parser defect: OpenFIGI returned the
+  valid raw share-class ticker `BF/B` for the frozen platform ticker `BF-B`.
+  Do not classify this as authentication, rate-limit, provider-schema, or
+  warning failure, and do not rewrite the old `FAILED` event as completed.
+- Advance the Stage 8C acquisition, parser registry, parser, identity
+  adjudication, canary review, and canary acceptance contracts append-only.
+  Keep the projection top-level version and UUID namespace unchanged.
+- Preserve raw provider tickers in wire and hash lineage. Allow comparison only
+  when the raw ticker exactly equals the expected platform ticker, or replacing
+  exactly one slash between uppercase alphanumeric share-class components with
+  one hyphen exactly reproduces that already-bound expected ticker. Reject
+  unbound aliases, multiple slashes, trimming, case folding, and dot rewriting.
+- Require a new run ID, plan, preflight, authorization, and explicit network
+  approval before a successor canary. Keep the remaining OpenFIGI phase, SEC,
+  Yahoo, EODHD, evidence writes, V24 enrollment, portfolio actions, and label
+  promotion closed.
+- Preserve the original failure record even though it names the earlier
+  identity-adjudication successor. Bind the exact current successor versions in
+  a separate hash-sealed addendum.
+- Treat the ISIN and CUSIP raw provider ticker as part of paired identity
+  convergence even when each job independently maps to the same platform
+  ticker. Require zero paired conflicts for canary acceptance.
+- Rebuild the complete canary review from immutable checkpoints both when
+  sealing acceptance and before dispatching any later acquisition request.
+  Self-resealed review or acceptance objects are structural records, not I/O
+  authority.
+- Execute the separately approved v1.3 canary as exactly four OpenFIGI POSTs
+  and 18 logical jobs with retry zero. Record four completed requests, no
+  transport failure, no unknown outcome, five unique primary mappings,
+  thirteen unresolved provider warnings, and zero paired raw-ticker conflicts.
+- Reject that canary as `CANARY_REJECTED_13_UNRESOLVED`. Do not retry the same
+  plan or authorize the remainder. Preserve that both `BF-B` jobs succeeded
+  with raw `BF/B`, while every `XNAS` job was unresolved, as successor-design
+  evidence rather than weakening the complete-pair acceptance rule.
+
+## 2026-08-02: Reject the OpenFIGI v1.4 diagnostic without identity promotion
+
+- Execute the independently frozen v1.4 diagnostic as two OpenFIGI POSTs and
+  ten public-identifier jobs. Record two new HTTP 200 completions, retry zero,
+  no failed request, and no unknown transport outcome.
+- Reopen both private response checkpoints without sending another request.
+  Bind the exact plan, authorization, response-body, terminal-event, review,
+  receipt-set, diagnostic-decision, and storage-backed-decision hashes.
+- Record four unique primary mappings, six ambiguous primary mappings, zero
+  warnings/errors/no-primary results, two complete convergent pairs, and zero
+  pair conflicts. Do not expose provider response values in Git.
+- Reject the result as `DIAGNOSTIC_REJECTED_GATE_NOT_MET`. Preserve the frozen
+  requirement for ten unique mappings and five complete convergent pairs; do
+  not reinterpret ambiguity as identity evidence.
+- Keep the result diagnostic-only. It authorizes no durable identity, remainder
+  request set, evidence write, outcome access, or V24 enrollment. Operating-MIC
+  ownership still requires SEC corroboration.
+- Treat the user's broader future-provider authority as a separate controller
+  basis. Any next provider execution still requires a new exact plan and cannot
+  inherit authority from this rejected diagnostic result.
+
+## 2026-08-02: Accept the OpenFIGI v1.5 US-composite engineering diagnostic
+
+- Treat v1.5 as an append-only, post-v1.4 method repair rather than an
+  untouched holdout. Preserve the rejected v1.4 result and its ambiguity.
+- Execute the separately frozen v1.5 plan as exactly two OpenFIGI POSTs and six
+  public-identifier jobs. Record two new completions, retry zero, no failed
+  request, and no unknown transport outcome.
+- Reopen both completed private checkpoints without sending another request.
+  Bind the exact plan, authorization, live execution, response-body,
+  terminal-event, review, receipt-set, replay-verification,
+  diagnostic-acceptance, storage-backed-acceptance, and zero-send replay
+  summary hashes.
+- Record six unique primary mappings, zero warnings/errors/ambiguities/missing
+  primary results, three complete convergent identifier pairs, and zero pair
+  conflicts. Keep raw identifiers, FIGI values, and response bodies outside
+  Git.
+- Accept the frozen diagnostic decision as
+  `US_COMPOSITE_DIAGNOSTIC_COMPLETE_CONVERGENT`, while retaining
+  `diagnosticOnly=true`. Do not infer a durable security or listing identity,
+  an operating MIC, or a validation-label improvement from this result.
+- Keep the remaining OpenFIGI population, V22 writes, V24 enrollment, outcomes,
+  and evidence-label upgrade unauthorized by this result. Require SEC
+  operating-MIC corroboration, an exact target-database identity inventory,
+  a forward-projection-v2 contract, and a V25 identity-authority ledger before
+  any governed write. Do not reuse projection v1.
+## 2026-08-12: Add the Quant Trading v1 synthetic portfolio simulator candidate
+
+- Add a pure event-driven simulator with frozen open, intraday, and close
+  ordering, whole-share sizing, cash and slot controls, and C9 costs.
+- Bind READY Stage 1 provenance and the exact unrounded selection score; do not
+  rank candidates by the two-decimal display score.
+- Recompute execution ATR, SMA, and median dollar volume from consistent
+  adjusted histories and require explicit action and terminal-event lineage.
+- Keep equal-weight `NOT_OBSERVED` until its eligible population is sealed
+  before outcomes. Keep production multi-MIC authority for Stage 3.
+- Preserve `NOT_VALIDATED`, no automated brokerage, and no historical outcome
+  access in this engineering stage.
+# 2026-08-12: Quant Trading v1 historical validation remains NOT_VALIDATED
+
+- Froze a two-track, outcome-blind Stage 3 protocol before calculating Quant
+  Trading returns. The governed track is blocked by missing production identity,
+  action, lifecycle, halt, and terminal-event authority. The weaker Yahoo
+  adjusted-OHLCV current-survivor approximation is development evidence only.
+- Ran immutable 25, 100, and 191-security batches without tuning. The 191-name
+  result ended at USD 113,808.46 from USD 100,000 (1.13% CAGR), versus SPY at
+  USD 438,691.69 (13.68% CAGR). Strategy MDD was -12.02% versus SPY -33.69%,
+  but the return sacrifice, 31.38% win rate, and evidence limitations do not
+  validate the strategy.
+- Retain `NOT_VALIDATED`; do not optimize this frozen version against the same
+  outcomes. Any successor needs a new preregistered identity and preferably a
+  historical-membership/delisting-complete dataset or prospective evidence.
+
+## 2026-08-12: Repair Quant Trading v1.1 manifest chronology before outcome access
+
+- Preserve the unexecuted v1.1.0 protocol and its canonical hash as a
+  superseded engineering draft. Create append-only protocol v1.1.1 before any
+  v1.1 outcome access; change no formula, population, cost, threshold, or claim
+  ceiling.
+- Freeze pre-access only facts that can be known without decoding bars:
+  denominator/source identities, file and canonical content hashes, calendar
+  authority and bounds, derivation rules, calculation code/runtime, economic
+  policy, acceptance gates, one-run authority, and output paths.
+- Do not invent future value-derived schedules, raw-signal rows, ranks, or
+  terminal-input hashes. Seal both access intents before the first numeric byte,
+  then derive exact 25, 100, and 191 manifests in the same uninterrupted
+  noninteractive run and append a post-access, pre-performance input seal.
+- Allow no return, PnL, future-return comparison, benchmark-performance, or
+  acceptance calculation or inspection before that seal. State honestly that
+  decoding bytes exposes historical bars to the process; protection comes from
+  the prior source/rule freeze, immutable journal, no pause, and no retuning.
+- Keep PILOT25 and EXPANSION100 integrity-only. Permit exactly one FULL191
+  performance aggregation after the input seal. Bind all outputs and the final
+  terminal to both the execution intent and input seal; classify uncertain
+  partial durable state as non-retryable `UNKNOWN`.
+- Retain `NOT_VALIDATED`, no production or brokerage authority, and the same
+  history development-only claim ceiling under every result.
+
+## 2026-08-12: Preserve failed Quant run 001 and add decoder successor v1.1.2
+
+- Preserve `QUANT-V11-CONTROLLED-20260812-001` and its five-event terminal
+  chain. The run opened ADM payload JSON after both access intents and failed
+  because `providerRecordId` was null. It created no post-access seal, output,
+  signal, rank, return, PnL, performance, or acceptance result.
+- Do not retry or rewrite the failed run. Require a new immutable execution
+  identity for any successor attempt.
+- Add only one payload compatibility delta: accept `providerRecordId` as a
+  nonempty string or null. Reject empty strings and all other JSON types. Do not
+  change any other schema, arithmetic, chronology, formula, rank, cost, gate,
+  or claim rule.
+- Integrate an exact all-203 dual-hash decoder check after the execution intent,
+  under the same canonical execution lease, and before the post-access input
+  seal and performance. Do not expose it as a standalone pre-intent preflight.
+- Bind the successor source bytes through the existing calculation-source
+  manifest. Keep the model label `NOT_VALIDATED` and prohibit evidence upgrade.
+
+## 2026-08-12: Preserve failed Quant run 002 and add adjustment successor v1.1.3
+
+- Preserve `QUANT-V11-CONTROLLED-20260812-002` and its five-event terminal
+  chain. It opened ADM payload JSON after both access intents and failed before
+  the post-access seal with `Yahoo_source_adjustment_drift`. It produced no
+  signal, rank, return, PnL, output, performance, or acceptance result.
+- Record that the retained producer emits `sourceAutoAdjust=false` with
+  `sourceAdjustmentMode=TOTAL_RETURN_ADJUSTED` when adjusted close exists,
+  while preserving raw OHLC, adjusted OHLC, and an explicit adjustment factor.
+- Require that exact source adjustment mode in v1.1.3. Reject `UNADJUSTED` and
+  every other value. Preserve every other adjustment field, per-bar arithmetic
+  check, formula, rank, cost, threshold, and claim rule.
+- Bind the exact v1.1.3 addendum version/hash and all-203 contract-validation
+  hash into the post-access seal. Keep the runner-side dataclass and factory
+  exact-value checks so self-consistent rehashing cannot substitute another
+  addendum.
+- Do not retry or rewrite Runs 001 or 002. Require a new immutable execution
+  identity and keep `NOT_VALIDATED` without evidence upgrade.
+
+## 2026-08-12: Preserve failed Quant run 003 and add zero-volume successor v1.1.4
+
+- Preserve `QUANT-V11-CONTROLLED-20260812-003` and its failed five-event chain.
+  It stopped before the post-access seal on `Yahoo_bar_wire_type_drift` and
+  created no signal, rank, return, PnL, output, performance, or acceptance
+  value. Do not retry or reinterpret it.
+- Bind the outcome-blind controlled scan of 630,672 wire rows: 1,120
+  zero-volume rows across seven symbols, with no negative, non-integer, or
+  above-signed-int64 volume and no invalid price or adjustment factor.
+- In v1.1.4, accept only exact integer volume greater than or equal to zero.
+  Validate every wire row and all adjustment arithmetic before treating zero
+  volume as explicit `ZERO_VOLUME_NONTRADABLE_MISSING`. Exclude it from usable
+  bars, ADTV, liquidity, signals, ranks, costs, and returns.
+- Bind all wire rows through header count and date range, per-source
+  wire/usable/zero counts and excluded-date hashes, and the aggregate identity
+  `630672 = 629552 + 1120` across seven symbols. Keep the full SPY wire-session
+  calendar; never compress a zero-volume SPY date.
+- Change no formula, rank, cost, threshold, acceptance, or claim rule. Bind the
+  exact v1.1.4 addendum and payload-validation hashes, require a new immutable
+  run, and retain `NOT_VALIDATED`.
+
+## 2026-08-12: Preserve failed Quant run 004 and replay producer arithmetic exactly
+
+- Preserve `QUANT-V11-CONTROLLED-20260812-004` and its exact five-event chain.
+  It failed before the post-access seal on
+  `Yahoo_adjusted_OHLC_arithmetic_drift`, produced no output or performance
+  value, and cannot retry.
+- Bind the outcome-blind 630,672-row scan. The legacy close-product check had
+  3,100 differences of `1e-27` or `1e-26`, while exact producer replay at
+  precision 28 and `ROUND_HALF_EVEN` had zero factor, open/high/low product, or
+  adjusted-close identity discrepancy.
+- Replay each complete row in a local Decimal-28 half-even context with no
+  tolerance. Require exact factor division, open/high/low products, and close
+  identity to adjusted close. Do not depend on ambient Decimal state.
+- Preserve bounded finite positive prices/factors and every v1.1.4 zero-volume
+  missing rule. Change no strategy formula, ranking, cost, metric, threshold,
+  acceptance, or claim rule.
+- Bind the v1.1.5 addendum and payload-validation identities, require a new
+  immutable run, and retain `NOT_VALIDATED`.
+
+## 2026-08-12: Preserve failed Quant run 005 and close OHLC representation exactly
+
+- Preserve the exact Run005 five-event chain. It failed before the post-access
+  seal with no output or performance value and cannot retry.
+- Bind the outcome-blind 629,552-usable-bar diagnosis: 21 high and 16 low
+  closures, 37 rows across 15 symbols, maximum correction `1e-26`, and zero
+  residual TrendBar-domain violation after exact closure.
+- Require v1.1.5 producer replay and zero-volume exclusion first. Reject raw
+  OHLC disorder and producer-derived tactical-open envelope violations before
+  closure. Permit only direct adjusted-close escape to close exact max/min.
+- Bind complete per-record source/payload/date/field/value/correction provenance
+  and per-source and aggregate set hashes. Use no epsilon, tolerance, or
+  quantization; leave open/close and all economic rules unchanged.
+- Require a new immutable v1.1.6 run and retain `NOT_VALIDATED`.
+
+## 2026-08-12: Preserve failed Quant run 006 and correct execution denominator
+
+- Preserve Run006 and its exact five-event chain. It failed before the
+  post-access seal on `nontradable_session_registry_drift`, created no output or
+  performance value, and cannot retry.
+- Continue validating all 203 sources and retaining all typed zero-volume
+  evidence. Project execution nontradable sessions onto exactly 191 securities
+  plus SPY; exclude all 11 unused diagnostic benchmarks.
+- Require exact nontradable-registry and loaded-payload key equality in the
+  loaded execution boundary. Reject missing and extra execution identities so
+  diagnostic evidence cannot leak.
+- Change no representation, strategy, ranking, cost, threshold, acceptance, or
+  claim rule. Require a new v1.1.7 execution identity and retain
+  `NOT_VALIDATED`.
+
+## 2026-08-12: Preserve failed Quant run 007 and normalize the sealed digest wire
+
+- Preserve Run007 and its exact five-event chain. It completed typed validation
+  and terminal-input construction, then failed before the post-access seal on
+  `payload_contract_validation_hash_must_be_an_uppercase_SHA-256`. It created no
+  output or performance value and cannot retry.
+- Keep the validator's canonical `sha256:<lowercase-64-hex>` content reference.
+  At the seal boundary, accept only the typed validation result, replay its
+  content hash, decode its suffix to exactly 32 bytes, and emit those same bytes
+  as uppercase hex without hashing again.
+- Reject malformed references, untyped substitutes, and well-formed altered
+  hashes. Audit every other immediate seal digest against the runner grammar so
+  no second representation mismatch can cross the boundary.
+- Change no payload, denominator, representation, formula, ranking, cost,
+  threshold, acceptance, or claim rule. Require a new v1.1.8 execution identity
+  and retain `NOT_VALIDATED`.
+
+## 2026-08-13: Close Quant v1.1 Run008 as not directionally supportive
+
+- Preserve the exact Run008 six-event journal, post-access pre-performance
+  seal, completed terminal, and four immutable result files. Do not rerun or
+  rewrite the controlled result.
+- Accept the frozen 5-of-9 result as
+  `NOT_DIRECTIONALLY_SUPPORTIVE_NO_RETUNING_ON_SAME_OUTCOME`. Preserve the four
+  failed codes: CAGR excess versus SPY, total-return excess versus SPY, Sharpe
+  advantage versus SPY, and positive SPY-CAGR excess subperiod count.
+- Record that the primary replay grew USD 100,000 to USD 237,071.67 at 7.76%
+  CAGR, while SPY grew it to USD 437,644.04 at 13.63% CAGR. The primary's lower
+  drawdown does not override its benchmark-relative return and Sharpe failures.
+- Publish only a Git-safe aggregate result with hashes and summary metrics. Do
+  not publish raw payloads, licensed values, security rows, orders, daily paths,
+  or private storage paths.
+- Keep the evidence label `NOT_VALIDATED`. Prohibit same-outcome parameter
+  tuning, formula reinterpretation, portfolio authority, and brokerage action.
+## 2026-08-13: Ship Quant v1.1 as an immutable research-only product slice
+
+- Keep Quant v2 paused and preserve the observed v1.1 formula and historical
+  disposition without same-outcome retuning.
+- Add V27 as an append-only public-safe research-decision projection over the
+  provider-neutral V22 assembly boundary.
+- Permit deterministic candidate, hold-review, exit-review, no-signal, and
+  evidence-state display; do not interpret any classification as a trade.
+- Keep FastAPI creation internal, make Spring public access GET-only, and make
+  Next.js call Spring only.
+- Prohibit final weights, order quantities, brokerage instructions, automatic
+  execution, LLM signal authority, guaranteed returns, and evidence-label
+  upgrades in the persistence and cross-language contracts.
+# 2026-08-13 - Keep Task 5 final mutation acceptance open after V33 hardening
+
+- Add append-only V33 guards that server-normalize V31/V32 runtime timestamps to
+  whole seconds and permit an unsealed longitudinal command to perform only its
+  single validated seal transition.
+- Require one frozen cutoff for the exact-four scenario cohort. Expose all four
+  sealed economic projections before a separate human recommendation selection,
+  and bind a superseding thesis review to the latest review identifier.
+- Record the current V1-to-V33 PostgreSQL 17 matrix as passed, along with focused
+  Python, Spring, typed PostgreSQL, frontend, lint, and production-build gates.
+- Do not accept Task 5 as complete: the final fresh mutation-driven four-service
+  flow remains blocked because the historical manifest lacks a V26 assessment
+  reference and the controlled V26 seed cannot duplicate its deterministic GOOG
+  identity. Preserve fail-closed model binding rather than fabricate a reference.
+
+# 2026-08-13 - Freeze Task 5 as V29 decisions, V30 enrollment, V31 observation, and V32 longitudinal review
+
+- V12 remains authoritative for onboarding, snapshots, liabilities, and
+  constraint policies; its legacy scenario tables are not reinterpreted.
+- V28 remains the immutable current portfolio/risk context.
+- V29 will own four deterministic current scenarios, evidence bindings, a
+  recommendation for human review, and an immutable human decision.
+- V30 owns simulated evaluation enrollment. V31 is the append-only successor
+  for frozen accepted/HOLD opening ledgers, ID-only buy-and-hold observations,
+  same-calendar natural maturity, and accepted/HOLD/SPY summaries.
+- V32 requires one sealed cohort containing exactly `HOLD_CURRENT`,
+  `NEW_MONEY_ONLY`, `CONSTRAINED_REBALANCE`, and `TARGET_PORTFOLIO` before a
+  recommendation or human acceptance. It derives gross and net return,
+  HOLD/SPY comparisons, true daily-path maximum drawdown, coverage, turnover,
+  cost, and an immutable longitudinal thesis-review state.
+- Fundamental Value and Quant remain independent sleeves. Scores are not
+  blended or used as optimizer objective coefficients, `NOT_VALIDATED` cannot
+  be upgraded, and neither an LLM nor the application can create final orders.
+- Economic and evaluation policies are frozen before scenario or future price
+  results. The product must preserve missing evidence and cannot tune rules to
+  force favorable outcomes.
+# 2026-08-13: Accept Portfolio Decision Support and Evaluation v1
+
+Task 5 is accepted as a production-shaped, human-controlled simulated workflow
+through V32. Browser requests remain Spring-only; Python analytics boundaries
+require service authentication; portfolio prices, evidence, labels, and
+returns are hydrated and replayed rather than accepted from browsers. Four
+scenarios, immutable recommendations, human decisions, SPY evaluation
+enrollment, frozen HOLD comparison, and a controlled observation/maturation
+writer are implemented. The synthetic USD 100,000 acceptance does not upgrade
+model validation labels or claim future returns. See [the Task 5 acceptance
+report](portfolio-decision-support-v1-acceptance-2026-08-13.md).
+
+# 2026-08-13: Close the Task 5 fresh mutation gate on V35
+
+The prior V33 blocked gate is retained as historical evidence and superseded by
+a fresh disposable PostgreSQL 17 V1-to-V35 run. V34 freezes scale-20
+`ROUND_HALF_EVEN` ratio replay. V35 binds current valuation to V22
+`CLOSE_PRICE` with `UNADJUSTED` semantics while preserving V31 longitudinal
+total-return observations. FastAPI, Spring Boot, and Next.js completed the
+fresh exact-four comparison, recommendation selection, and immutable human
+decision workflow. Exact replay succeeded and changed same-key commands were
+refused with stable conflicts. No provider request, fabricated maturity,
+brokerage action, final weight, or evidence-label upgrade occurred.

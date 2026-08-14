@@ -1,0 +1,20 @@
+{
+  "contractVersion": "internal-fundamental-value-result-v1.0.0",
+  "assemblyId": "10000000-0000-4000-8000-000000000001",
+  "assessmentId": null,
+  "state": "MISSING",
+  "applicability": "APPLICABLE",
+  "companyType": "MATURE_OPERATING_COMPANY",
+  "reasonCodes": ["REQUIRED_OPERAND_MISSING"],
+  "coreInvocationAuthorized": false,
+  "manifestContentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "inputSealContentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "decisionCutoff": "2026-07-29T20:05:00Z",
+  "sealedIngestionCutoff": "2026-07-29T20:07:00Z",
+  "modelEvidenceLabel": null,
+  "claimCeiling": null,
+  "riskCapCeiling": null,
+  "deterministicAssessment": null,
+  "finalPortfolioWeightAuthorized": false,
+  "automaticBrokerageExecutionAuthorized": false
+}

@@ -1,0 +1,196 @@
+{
+  "contractVersion": "quant-trading-system-v1.0.0",
+  "modelVersion": "QUANT-TRADING-v1.0.0",
+  "strategyVersion": "MOMENTUM-CONTINUATION-v1.0.0",
+  "market": "US_LISTED_EQUITIES",
+  "cadence": "DAILY_COMPLETED_SESSION",
+  "sleeve": "QUANT_TRADING",
+  "direction": "LONG_ONLY",
+  "setup": "MOMENTUM_CONTINUATION",
+  "legacyBoundary": {
+    "tacticalV22Immutable": true,
+    "legacyOneWeekOneMonthThreeMonthDisplayOnly": true,
+    "reuseLegacyV21PortfolioTables": false,
+    "meanReversionIncluded": false,
+    "futureMeanReversionRequiresSuccessorStrategy": true,
+    "fundamentalValueInputAllowed": false,
+    "crossEngineScoreBlendingAllowed": false
+  },
+  "evidenceBoundary": {
+    "contractVersion": "unified-market-data-evidence-foundation-v1.0.0",
+    "requiredIdentifiers": ["securityId", "companyId", "instrumentId", "shareClassId", "listingId", "tickerAssignmentId"],
+    "completedSessionRequired": true,
+    "selectorIdsRequired": true,
+    "corporateActionEvidenceRequired": true,
+    "missingEventEvidenceEffect": "INELIGIBLE_FAIL_CLOSED",
+    "providerNativeFieldsAllowed": false,
+    "strictDecimalAndFiniteValues": true,
+    "utcWholeSecondTimestamps": true
+  },
+  "signalTiming": {
+    "signalAfterCompletedClose": true,
+    "entrySession": "NEXT_ELIGIBLE_SCHEDULED_SESSION_OPEN",
+    "replayRequiresEntrySessionSubsequentlySealedCompleted": true,
+    "entryValidityScheduledSessions": 1,
+    "sameSessionEntryAllowed": false,
+    "futureOrIncompleteSessionAllowed": false
+  },
+  "tradePlan": {
+    "entryRangeRequired": true,
+    "entryFillPolicy": {
+      "openInsideRange": "FILL_AT_OPEN",
+      "openAboveRangeHigh": "SKIP_AND_REMAIN_CASH",
+      "openBelowInitialStop": "SKIP_AND_REMAIN_CASH",
+      "openBelowRangeLowButAboveStop": "LIMIT_TOUCH_REQUIRED",
+      "limitTouchCondition": "SESSION_HIGH_AT_OR_ABOVE_ENTRY_RANGE_LOW",
+      "limitTouchFill": "ENTRY_RANGE_LOW",
+      "noTouch": "SKIP_AND_REMAIN_CASH",
+      "rangeBoundsInclusive": true
+    },
+    "initialStopRequired": true,
+    "targetsRequired": true,
+    "trailingStopRequired": true,
+    "invalidationRequired": true,
+    "tradePlanFeasibility": {
+      "entryRange": "entryRangeLow<=entryRangeHigh",
+      "priceGeometry": "FOR_EVERY_ENTRY_FILL:0<initialStop<fill<=entryRangeHigh<firstTarget",
+      "targets": "NONEMPTY_STRICTLY_ASCENDING",
+      "activeLongTrailingStop": "MONOTONIC_NONDECREASING_AND_STRICTLY_BELOW_CURRENT_EXECUTABLE_REFERENCE_BEFORE_NEXT_SESSION",
+      "invalidPlanEffect": "INELIGIBLE_FAIL_CLOSED"
+    },
+    "maximumHoldingSessions": 60,
+    "exitExecutionPolicy": {
+      "gapThroughStopFill": "SESSION_OPEN",
+      "gapThroughTargetFill": "SESSION_OPEN",
+      "ordinaryStopTouchFill": "ACTIVE_STOP_PRICE",
+      "ordinaryTargetTouchFill": "FIRST_TARGET_PRICE",
+      "sameBarStopAndTarget": "STOP_FIRST",
+      "openPhasePriority": ["PENDING_INVALIDATION", "GAP_THROUGH_STOP", "GAP_THROUGH_TARGET"],
+      "intradayPhasePriority": ["STOP", "TARGET"],
+      "closePhasePriority": ["TIME_STOP_ON_60TH_SESSION", "CALCULATE_TRAILING_STOP", "EVALUATE_INVALIDATION"],
+      "targetDisposition": "FULL_EXIT_AT_FIRST_TARGET",
+      "openInsideRangeEntryDayExitEvaluation": "INTRADAY_STOP_FIRST_THEN_TARGET",
+      "reclaimLimitEntryDayExitEvaluation": {
+        "entryCondition": "SESSION_HIGH_AT_OR_ABOVE_ENTRY_RANGE_LOW",
+        "stopCondition": "SESSION_LOW_AT_OR_BELOW_INITIAL_STOP",
+        "stopFill": "INITIAL_STOP_PRICE",
+        "targetCondition": "SESSION_HIGH_AT_OR_ABOVE_FIRST_TARGET",
+        "targetFill": "FIRST_TARGET_PRICE",
+        "sameBarPriority": "STOP_FIRST",
+        "otherwise": "HOLD_TO_NEXT_ELIGIBLE_SESSION"
+      },
+      "trailingStopCalculation": "AFTER_COMPLETED_CLOSE",
+      "trailingStopEffective": "NEXT_ELIGIBLE_SCHEDULED_SESSION",
+      "invalidationEvaluation": "AFTER_COMPLETED_CLOSE",
+      "invalidationFill": "NEXT_ELIGIBLE_SCHEDULED_SESSION_OPEN",
+      "timeStopFill": "CLOSE_OF_60TH_COMPLETED_HOLDING_SESSION"
+    },
+    "positionSizing": {
+      "method": "STOP_DISTANCE_RISK_SIZING",
+      "navObservation": "PRIOR_COMPLETED_SESSION_CLOSE",
+      "navRiskPerPosition": "0.005",
+      "notionalCap": "0.10",
+      "shareRounding": "FLOOR_TO_WHOLE_SHARES",
+      "estimatedEntryAndExitCostsReserved": true,
+      "shareLimitOrder": ["STOP_RISK", "NOTIONAL_CAP", "AVAILABLE_CASH_AFTER_COST_RESERVE"],
+      "riskBudgetIncludesEntryAndEstimatedExitCosts": true,
+      "initialShareCandidate": "floor(min(nav*0.005/(entryPrice-initialStop),nav*0.10/entryPrice,availableCash/entryPrice))",
+      "estimatedExitNotional": "initialStop*wholeShares",
+      "estimatedExitLiquidity": "SAME_ENTRY_DECISION_PRIOR_20_SESSION_ADTV",
+      "costSolver": "DECREMENT_ONE_SHARE_UNTIL_RISK_AND_CASH_INEQUALITIES_PASS",
+      "riskInequality": "shares*(entryPrice-initialStop)+entryCost+estimatedExitCost<=nav*0.005",
+      "cashInequality": "shares*entryPrice+entryCost+estimatedExitCost<=availableCash",
+      "decimalContext": "PRECISION_50_ROUND_HALF_EVEN_LOCAL_CONTEXT",
+      "decimalRounding": "ROUND_HALF_EVEN_FOR_RATES_FLOOR_ONLY_FOR_SHARES",
+      "minimumOfAllShareLimitsWins": true
+    },
+    "candidateSelection": {
+      "priority": ["MOMENTUM_SCORE_DESC", "SECURITY_ID_ASC"],
+      "maximumNewPositionsLimitedByOpenSlots": true,
+      "slotReleasedOnlyAfterExitFill": true,
+      "rejectedOrUnfilledCapitalRemainsCash": true
+    },
+    "cashRequiredWhenNoEligibleSetup": true,
+    "marketDataAndLifecyclePolicy": {
+      "priceMode": "SPLIT_AND_DIVIDEND_ADJUSTED_OHLCV",
+      "separateDividendOrSplitCashFlowApplied": false,
+      "tickerAndListingChangesFollowDurableIdentity": true,
+      "haltOrSuspensionFillAssumed": false,
+      "missingHaltOrSuspensionEvidenceEffect": "INVALID",
+      "acquisitionTreatment": "LAST_TRADABLE_SESSION_OR_EXPLICIT_CASH_OR_STOCK_CONSIDERATION",
+      "delistingTreatment": "EXPLICIT_TERMINAL_CASH_VALUE_REQUIRED",
+      "bankruptcyTreatment": "EXPLICIT_TERMINAL_CASH_VALUE_REQUIRED",
+      "missingTerminalEvidenceEffect": "INVALID"
+    }
+  },
+  "portfolioSimulation": {
+    "initialCashUsd": "100000",
+    "maximumConcurrentPositions": 10,
+    "leverageAllowed": false,
+    "shortingAllowed": false,
+    "optionsAllowed": false,
+    "automaticBrokerageExecutionAllowed": false
+  },
+  "benchmarkPolicy": {
+    "primary": "SPY",
+    "supplemental": ["CASH", "EQUAL_WEIGHT"],
+    "sector": "DIAGNOSTIC_UNTIL_DATED_MAPPING",
+    "cashAnnualRate": "0",
+    "calendar": "SAME_COMPLETED_SESSION_CALENDAR_AS_STRATEGY",
+    "spyConstruction": "BUY_AND_HOLD_ADJUSTED_OHLCV_WITH_IDENTICAL_COST_AND_TERMINAL_RULES",
+    "equalWeightConstruction": "ELIGIBLE_POPULATION_EQUAL_WEIGHT",
+    "equalWeightRebalance": "EACH_SIGNAL_DECISION_DATE",
+    "equalWeightCosts": "IDENTICAL_COST_AND_LIQUIDITY_POLICY",
+    "terminalTreatment": "IDENTICAL_TO_STRATEGY"
+  },
+  "costPolicy": {
+    "version": "C9-NONLINEAR-COST-v1.0.0",
+    "primary": {
+      "participation": "orderNotional/averageDailyDollarVolume",
+      "impactBps": "min(50,25*sqrt(participation))",
+      "perSideBps": "1+impactBps",
+      "sideRate": "perSideBps/10000",
+      "sideCostUsd": "orderNotional*sideRate",
+      "totalCostUsd": "entrySideCostUsd+exitSideCostUsd",
+      "totalCostRate": "entryCostRate+exitCostRate",
+      "netReturn": "grossReturn-entryCostRate-exitCostRate",
+      "entryOrderNotional": "ENTRY_FILL_PRICE*WHOLE_SHARES",
+      "exitOrderNotional": "EXIT_FILL_PRICE*WHOLE_SHARES",
+      "averageDailyDollarVolume": "PRIOR_20_COMPLETED_SESSIONS_MEDIAN_DOLLAR_VOLUME",
+      "estimatedExitCostLiquidity": "ENTRY_DECISION_PRIOR_20_COMPLETED_SESSIONS_MEDIAN_DOLLAR_VOLUME",
+      "actualExitCostLiquidity": "PRIOR_20_COMPLETED_SESSIONS_BEFORE_EXIT_MEDIAN_DOLLAR_VOLUME",
+      "decimalContext": "PRECISION_50_ROUND_HALF_EVEN_LOCAL_CONTEXT",
+      "monetaryQuantization": "NONE_CANONICAL_DECIMAL",
+      "sideSpecificInputsRequired": true,
+      "missingLiquidityEffect": "INELIGIBLE"
+    },
+    "sensitivity": {"perSideBps": "5"}
+  },
+  "diagnosticHorizons": [5, 20, 60],
+  "validationGovernance": {
+    "initialModelEvidenceLabel": "NOT_VALIDATED",
+    "historicalEvidenceLabel": "DEVELOPMENT_OBSERVED_CURRENT_REVISION_CURRENT_SURVIVOR",
+    "diagnosticHorizonsMayValidateModel": false,
+    "historicalResultsGuaranteeFutureReturns": false,
+    "observedOutcomesMayChangeFrozenMethodology": false,
+    "perfectPredictionRequired": false
+  },
+  "automationBoundary": {
+    "createsBrokerageOrders": false,
+    "executesTrades": false,
+    "setsFinalPortfolioWeights": false,
+    "llmMayAffectSignalsOrTrades": false,
+    "humanDecisionRequired": true
+  },
+  "versionSet": {
+    "evidenceContractVersion": "unified-market-data-evidence-foundation-v1.0.0",
+    "calendarVersion": "US-EQUITIES-XNYS-XNAS-DAILY-v1.0.0",
+    "signalFormulaVersion": "MOMENTUM-CONTINUATION-FORMULAS-v1.0.0",
+    "entryExitPolicyVersion": "MOMENTUM-CONTINUATION-ENTRY-EXIT-v1.0.0",
+    "riskPolicyVersion": "QUANT-TRADING-RISK-v1.0.0",
+    "benchmarkPolicyVersion": "QUANT-TRADING-BENCHMARKS-v1.0.0",
+    "costPolicyVersion": "C9-NONLINEAR-COST-v1.0.0",
+    "validationGovernanceVersion": "QUANT-TRADING-VALIDATION-v1.0.0"
+  },
+  "contractContentHash": "sha256:54444dfa62bd08c0a3108d89332fc5b0536e97c7b734561c6f8235450dfec0bc"
+}

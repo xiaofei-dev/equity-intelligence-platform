@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "FV-STAGE8A-READINESS-PREREGISTRATION-v1.0.0",
+  "state": "READINESS_ONLY_NOT_ENROLLED",
+  "modelEvidenceLabel": "NOT_VALIDATED",
+  "historicalEvidenceCeiling": "DEVELOPMENT_OBSERVED_CURRENT_REVISION_APPROXIMATION",
+  "stage7FinalHash": "785988E194E28E0F8681064911CD9C8EA86164D5998D48C7DFA19DAB72B6456F",
+  "prospectiveRankConvention": {
+    "predictor": "RANK_1_HIGHEST_COMPANY_QUALITY_SECURITY_ID_ASC_TIE",
+    "realizedReturn": "RANK_1_HIGHEST_NET_ANNUALIZED_RETURN_SECURITY_ID_ASC_TIE",
+    "association": "PEARSON_COMPLETE_DETERMINISTIC_ORDINAL_VECTORS",
+    "positiveMeaning": "ALIGNED"
+  },
+  "futureHorizonsCompletedSessions": [252, 504, 756],
+  "primaryHorizonCompletedSessions": 756,
+  "chronology": {
+    "decisionSnapshotBeforeOutcome": true,
+    "outcomeAvailabilityAtEnrollment": "UNMATURED",
+    "futureOutcomeFabricationAllowed": false
+  },
+  "scope": {
+    "migrationRequired": false,
+    "businessDatabaseWriteAllowed": false,
+    "realEnrollmentAllowed": false,
+    "providerCallAllowed": false,
+    "portfolioWeightAllowed": false,
+    "brokerageExecutionAllowed": false
+  },
+  "incompatibleContracts": [
+    "V18_V20_66_SECURITY_DUAL_MODEL_FIVE_HORIZON_SIX_BENCHMARK"
+  ],
+  "nextGate": "SEPARATE_MASTER_ACCEPTANCE_FOR_REAL_FORWARD_ENROLLMENT",
+  "contentHash": "C10DCE1CDF46F4EF0A90B227E39230874DB2DFA7EDD49349859890F7A9800F10"
+}

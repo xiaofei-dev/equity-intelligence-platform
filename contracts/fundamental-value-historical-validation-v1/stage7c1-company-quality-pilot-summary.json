@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "FV-STAGE7C1-COMPANY-QUALITY-PILOT-v1.0.0",
+  "status": "STOPPED_BELOW_MINIMUM_COVERAGE",
+  "outcomesRead": false,
+  "networkRequests": 0,
+  "databaseRequests": 0,
+  "controlled100SecIntersectionCount": 100,
+  "controlled100SecBuiltTimelineCount": 100,
+  "intersectionContentHash": "35F707A6D4D9E064CE1407B451D5B9E1CCBF1CF6BD038C2673FA418C7C685628",
+  "calendarHash": "518B444025C390B336F689220F77DFCCA81ED687E211EC175324E5F2CD214D22",
+  "decisionDates": [
+    "2015-05-07", "2016-05-19", "2017-06-30", "2018-04-09",
+    "2019-06-21", "2020-04-20", "2021-06-02", "2022-05-18",
+    "2023-05-18"
+  ],
+  "producerRegistryHashes": {
+    "return_on_invested_capital": "97A16621F03AB617191764CC7A4C5819510C9D51502126895BA8473F906763FF",
+    "operating_margin": "7804AEFACA9915146822E0B899F6C2E8E0C9E4EE1BEC66AC4562D22527D55369",
+    "free_cash_flow_margin": "655C05126B320CE862A66C08E9D70CDA498274199A354C5E7F5AA30A60C56B18",
+    "earnings_stability": "C7B26B9A90C449223F99568854DB3F2CD28F16680AEE1BA1919982B812DA28E1",
+    "cash_flow_stability": "ADC64DF0D3689FD81C586001ADA134750273EA90176B1A351EE802B58D6464EF"
+  },
+  "strictPitPhases": [
+    {
+      "phase": "PILOT25",
+      "securityCount": 25,
+      "securitySetHash": "53CA90469EC1E95BAE569911F1BDD8AC02BEDCE51804536ABB2E419845EAB200",
+      "matrixContentHash": "31ECB2B36CCB04570AA53DE16E5CAF432565AD9F476EE20AE70B3E24ADD5DF46",
+      "allDates": {
+        "operandValidCounts": {
+          "return_on_invested_capital": 0,
+          "operating_margin": 0,
+          "free_cash_flow_margin": 0,
+          "earnings_stability": 0,
+          "cash_flow_stability": 0
+        },
+        "companyQualityValidCount": 0,
+        "invalidPerOperandByDate": [0, 0, 0, 0, 1, 2, 2, 3, 3],
+        "primaryReasons": ["MISSING_ALIGNED_PERIODS", "REVISION_AMBIGUITY"]
+      }
+    },
+    {
+      "phase": "CONTROLLED100",
+      "securityCount": 100,
+      "securitySetHash": "00AB847C348FE51B9DE1DC46BCA00FEFBBF7ABA5DB862B1DEC417B58697DEDA5",
+      "matrixContentHash": "C9C8D558DD35602261C02CA52EC0F95844764B355485BAD69230EC5B6C1C0B75",
+      "dateRows": [
+        {"decisionDate": "2015-05-07", "invalidPerOperand": 0, "missingPerOperand": 100, "roicValid": 0, "operatingMarginValid": 0, "fcfMarginValid": 0, "earningsStabilityValid": 0, "cashFlowStabilityValid": 0, "companyQualityValid": 0},
+        {"decisionDate": "2016-05-19", "invalidPerOperand": 0, "missingPerOperand": 100, "roicValid": 0, "operatingMarginValid": 0, "fcfMarginValid": 0, "earningsStabilityValid": 0, "cashFlowStabilityValid": 0, "companyQualityValid": 0},
+        {"decisionDate": "2017-06-30", "invalidPerOperand": 0, "missingPerOperand": 100, "roicValid": 0, "operatingMarginValid": 0, "fcfMarginValid": 0, "earningsStabilityValid": 0, "cashFlowStabilityValid": 0, "companyQualityValid": 0},
+        {"decisionDate": "2018-04-09", "invalidPerOperand": 1, "missingPerOperand": 99, "roicValid": 0, "operatingMarginValid": 0, "fcfMarginValid": 0, "earningsStabilityValid": 0, "cashFlowStabilityValid": 0, "companyQualityValid": 0},
+        {"decisionDate": "2019-06-21", "invalidPerOperand": 10, "missingPerOperand": 90, "roicValid": 0, "operatingMarginValid": 1, "fcfMarginValid": 0, "earningsStabilityValid": 0, "cashFlowStabilityValid": 0, "companyQualityValid": 0},
+        {"decisionDate": "2020-04-20", "invalidPerOperand": 12, "missingPerOperand": 88, "roicValid": 0, "operatingMarginValid": 1, "fcfMarginValid": 0, "earningsStabilityValid": 0, "cashFlowStabilityValid": 0, "companyQualityValid": 0},
+        {"decisionDate": "2021-06-02", "invalidPerOperand": 13, "missingPerOperand": 87, "roicValid": 0, "operatingMarginValid": 2, "fcfMarginValid": 0, "earningsStabilityValid": 0, "cashFlowStabilityValid": 0, "companyQualityValid": 0},
+        {"decisionDate": "2022-05-18", "invalidPerOperand": 15, "missingPerOperand": 85, "roicValid": 0, "operatingMarginValid": 2, "fcfMarginValid": 0, "earningsStabilityValid": 0, "cashFlowStabilityValid": 0, "companyQualityValid": 0},
+        {"decisionDate": "2023-05-18", "invalidPerOperand": 15, "missingPerOperand": 85, "roicValid": 0, "operatingMarginValid": 2, "fcfMarginValid": 0, "earningsStabilityValid": 0, "cashFlowStabilityValid": 0, "companyQualityValid": 0}
+      ],
+      "reasonCodes": ["MISSING_ALIGNED_PERIODS", "REVISION_AMBIGUITY", "TAX_RATE_OUTLIER"]
+    }
+  ],
+  "currentRevisionApproximation": {
+    "allDatesUsableCount": 0,
+    "state": "NOT_RUN",
+    "reason": "CURRENT_REVISION_APPROXIMATION_PRODUCER_NOT_IMPLEMENTED"
+  },
+  "offline216Replay": {
+    "state": "NOT_RUN_CONTROLLED100_BELOW_MINIMUM",
+    "builtTimelineCount": 216,
+    "minimumRequiredUsablePerDate": 100,
+    "controlled100MinimumUsablePerDate": 0,
+    "reason": "Controlled100 failed the frozen minimum before the 216 replay gate."
+  },
+  "otherTargets": {
+    "SECURITY_ATTRACTIVENESS_MARGIN_OF_SAFETY": "BLOCKED_VALUATION_POLICY",
+    "EXPECTED_RETURN": "BLOCKED_VALUATION_POLICY",
+    "DOWNSIDE_RISK": "BLOCKED_POLICY_RISK_EVIDENCE"
+  },
+  "parentCoverageAudit": {
+    "depreciation_and_amortization": "PARENT_COVERAGE_UNPROVEN",
+    "cash_dividends_paid": "PARENT_COVERAGE_UNPROVEN",
+    "share_repurchases": "PARENT_COVERAGE_UNPROVEN"
+  },
+  "claimCeiling": "DEVELOPMENT_OBSERVED_TARGET_COMPONENT_ONLY",
+  "fullInMemoryResultHash": "EFE7EB90CD66E3C8711D09FF4BC86B2F3DDA2B626BD7B76F3658625BDAFD8F68",
+  "compactInMemoryArtifactHash": "C67DD27E2CBE3964A8E3E0248FBEE3295D0705E6B68DBB29069C8380C021005C",
+  "summaryContentHash": "7A0447EB495B241F02677584B6563E3C9FC2E6D71569107EC4575E230394AF89"
+}

@@ -1,0 +1,79 @@
+{
+  "contractVersion": "FV-STAGE8C-OPENFIGI-CANARY-v1.3-RESULT-v1.0.0",
+  "recordedDate": "2026-08-02",
+  "state": "REJECTED_UNRESOLVED_IDENTIFIER_MAPPING",
+  "run": {
+    "runId": "20260802T124156Z-STAGE8C-OPENFIGI-V13-002",
+    "acquisitionContractVersion": "FV-STAGE8C-CURRENT-EVIDENCE-ACQUISITION-v1.3.0",
+    "planContentHash": "0B05F1896B9F43D3C13918A0CA8E6D377FADF6F08F75B44F62EBA4048BA88D57",
+    "authorizationContentHash": "653B77CFF237DEE95A38518D6EF8B8CFF359A60CA1F893D0549D7254CAC78252",
+    "originalExecutionSummaryContentHash": "6F78270780403CDF1987F25894F0D246F5D7AC08D956028C26F0AACBE43D7864",
+    "replaySummaryContentHash": "BB8C91CF407CBF1CE41D0321066A03D0C97B812FB299125FC0F65A75F187BFE4",
+    "reviewContentHash": "F22507C252B7491ECD52338E5996A8DA794E79D924C79B7BC50C86704F400B68",
+    "rejectionContentHash": "06DC77D89DE5D413540D5D37AAC7CACE7F59A5583C8E96892EF96CCC27895C6B"
+  },
+  "execution": {
+    "physicalRequests": 4,
+    "logicalJobs": 18,
+    "completedPhysicalRequests": 4,
+    "failedPhysicalRequests": 0,
+    "retryLimit": 0,
+    "automaticRetries": 0,
+    "unknownTransportOutcomes": 0,
+    "httpAuthenticationFailures": 0,
+    "httpRateLimitFailures": 0,
+    "providerSchemaFailures": 0
+  },
+  "review": {
+    "uniquePrimary": 5,
+    "ambiguousPrimary": 0,
+    "unresolved": 13,
+    "noPrimary": 0,
+    "rawPairConflicts": 0,
+    "providerWarning": "No identifier found.",
+    "xnysUniquePrimary": 5,
+    "xnysUnresolved": 1,
+    "xnasUniquePrimary": 0,
+    "xnasUnresolved": 12,
+    "resolvedJobSymbols": [
+      "ADM",
+      "ALLE",
+      "BF-B"
+    ],
+    "unresolvedJobSymbols": [
+      "ALLE",
+      "FOX",
+      "FOXA",
+      "GOOG",
+      "GOOGL",
+      "HON",
+      "MSFT"
+    ],
+    "bfBAliasObservation": {
+      "providerTicker": "BF/B",
+      "platformTicker": "BF-B",
+      "isinUniquePrimary": true,
+      "cusipUniquePrimary": true,
+      "pairedProviderIdentityConverged": true
+    }
+  },
+  "decision": {
+    "code": "CANARY_REJECTED_13_UNRESOLVED",
+    "accepted": false,
+    "reason": "The frozen canary requires complete, unambiguous paired identity coverage. Thirteen logical jobs remained unresolved.",
+    "networkExpansionAllowed": false,
+    "samePlanRetryAllowed": false,
+    "newSuccessorContractRequired": true
+  },
+  "boundaries": {
+    "remainingOpenFigiAuthorized": false,
+    "secAuthorized": false,
+    "yahooAuthorized": false,
+    "eodhdAuthorized": false,
+    "databaseWriteAuthorized": false,
+    "v24EnrollmentAuthorized": false,
+    "outcomeAccessAuthorized": false,
+    "modelEvidenceLabel": "NOT_VALIDATED"
+  },
+  "contentHash": "8F054E4C63897FCD6217B48507FDDB52EF805AC35D7E12F0ACEC7909199F5B99"
+}

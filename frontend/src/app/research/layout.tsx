@@ -27,6 +27,24 @@ export default function ResearchLayout({
           </Link>
           <nav aria-label="Research navigation" className="flex items-center gap-2">
             <Link
+              href="/portfolio"
+              className="rounded-full px-3 py-1.5 text-xs font-semibold text-emerald-300 transition hover:bg-slate-900 hover:text-emerald-200"
+            >
+              Portfolio
+            </Link>
+            <Link
+              href="/research/quant-trading"
+              className="rounded-full px-3 py-1.5 text-xs font-semibold text-slate-500 transition hover:bg-slate-900 hover:text-violet-200"
+            >
+              Quant trading
+            </Link>
+            <Link
+              href="/research/fundamental-value"
+              className="rounded-full px-3 py-1.5 text-xs font-semibold text-slate-500 transition hover:bg-slate-900 hover:text-cyan-200"
+            >
+              Fundamental value
+            </Link>
+            <Link
               href="/research"
               className="rounded-full bg-slate-800 px-3 py-1.5 text-xs font-semibold text-slate-200 transition hover:bg-slate-700"
             >
