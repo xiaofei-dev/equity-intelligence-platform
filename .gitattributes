@@ -3,3 +3,7 @@
 *.bat text eol=crlf
 *.cmd text eol=crlf
 *.sh text eol=lf
+
+# These append-only historical artifacts were sealed from exact CRLF bytes.
+contracts/fundamental-value-historical-validation-v1/stage7c4-quarterly-semantics-support-gate.json text eol=crlf
+contracts/fundamental-value-historical-validation-v1/stage7c5-provider-native-company-quality-coverage.json text eol=crlf

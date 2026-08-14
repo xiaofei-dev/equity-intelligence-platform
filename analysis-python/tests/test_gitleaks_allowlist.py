@@ -22,7 +22,87 @@ EXPECTED_FALSE_POSITIVE_FINGERPRINTS = [
         "analysis-python/tests/test_daily_refresh_postgres_v16.py:"
         "generic-api-key:243"
     ),
+    (
+        "5d11468e2c72b420ab9a077aa3d844735cec3206:"
+        "analysis-python/tests/test_fundamental_value_forward_enrollment_v24.py:"
+        "generic-api-key:218"
+    ),
+    (
+        "5d11468e2c72b420ab9a077aa3d844735cec3206:"
+        "backend-java/src/test/java/com/xiaofei/equity/portfolio/"
+        "PortfolioEvaluationObservationControllerTests.java:generic-api-key:37"
+    ),
+    (
+        "5d11468e2c72b420ab9a077aa3d844735cec3206:"
+        "backend-java/src/test/java/com/xiaofei/equity/portfolio/"
+        "PortfolioEvaluationObservationControllerTests.java:generic-api-key:44"
+    ),
+    (
+        "5d11468e2c72b420ab9a077aa3d844735cec3206:"
+        "contracts/fundamental-value-historical-validation-v1/"
+        "stage7c8-outcome-result.json:generic-api-key:4"
+    ),
+    (
+        "5d11468e2c72b420ab9a077aa3d844735cec3206:"
+        "contracts/fundamental-value-historical-validation-v1/"
+        "stage7c9-confirmation-final.json:generic-api-key:11"
+    ),
+    (
+        "5d11468e2c72b420ab9a077aa3d844735cec3206:"
+        "contracts/quant-trading-v2/controlled-result-summary.example.json:"
+        "generic-api-key:11"
+    ),
+    (
+        "5d11468e2c72b420ab9a077aa3d844735cec3206:"
+        "contracts/quant-trading-v1.1/"
+        "historical-execution-v1.1.8-controlled-result.json:generic-api-key:67"
+    ),
+    (
+        "5d11468e2c72b420ab9a077aa3d844735cec3206:"
+        "contracts/quant-trading-v1.1/"
+        "historical-execution-v1.1.8-addendum.json:generic-api-key:16"
+    ),
+    (
+        "5d11468e2c72b420ab9a077aa3d844735cec3206:"
+        "contracts/quant-trading-v1.1/"
+        "historical-execution-v1.1.8-addendum.json:generic-api-key:17"
+    ),
+    (
+        "5d11468e2c72b420ab9a077aa3d844735cec3206:"
+        "docs/fundamental-value-historical-validation-stage-7-acceptance-"
+        "2026-08-01.md:generic-api-key:47"
+    ),
 ]
+
+EXPECTED_FALSE_POSITIVE_PATHS = {
+    "analysis-python/tests/test_daily_refresh_postgres_v16.py",
+    "analysis-python/tests/test_fundamental_value_forward_enrollment_v24.py",
+    (
+        "backend-java/src/test/java/com/xiaofei/equity/portfolio/"
+        "PortfolioEvaluationObservationControllerTests.java"
+    ),
+    (
+        "contracts/fundamental-value-historical-validation-v1/"
+        "stage7c8-outcome-result.json"
+    ),
+    (
+        "contracts/fundamental-value-historical-validation-v1/"
+        "stage7c9-confirmation-final.json"
+    ),
+    "contracts/quant-trading-v2/controlled-result-summary.example.json",
+    (
+        "contracts/quant-trading-v1.1/"
+        "historical-execution-v1.1.8-controlled-result.json"
+    ),
+    (
+        "contracts/quant-trading-v1.1/"
+        "historical-execution-v1.1.8-addendum.json"
+    ),
+    "docs/fundamental-value-historical-validation-stage-7-acceptance-2026-08-01.md",
+}
+FINGERPRINT_PATTERN = re.compile(
+    r"^[0-9a-f]{40}:(.+):generic-api-key:([1-9][0-9]*)$"
+)
 
 
 def _strings(
@@ -93,8 +173,9 @@ def test_historical_false_positive_fingerprints_are_exact_and_file_scoped() -> N
     fingerprints = (ROOT / ".gitleaksignore").read_text(encoding="utf-8").splitlines()
 
     assert fingerprints == EXPECTED_FALSE_POSITIVE_FINGERPRINTS
-    assert all(
-        ":analysis-python/tests/test_daily_refresh_postgres_v16.py:"
-        "generic-api-key:" in fingerprint
-        for fingerprint in fingerprints
+    assert len(fingerprints) == len(set(fingerprints))
+    matches = [FINGERPRINT_PATTERN.fullmatch(fingerprint) for fingerprint in fingerprints]
+    assert all(match is not None for match in matches)
+    assert {match.group(1) for match in matches if match is not None} == (
+        EXPECTED_FALSE_POSITIVE_PATHS
     )

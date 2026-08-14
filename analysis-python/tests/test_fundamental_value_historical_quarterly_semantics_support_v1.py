@@ -49,7 +49,7 @@ def test_supplied_hash_is_bound_but_visual_quote_mismatch_blocks_read() -> None:
 
 def test_evidence_hash_drift_fails(tmp_path: Path) -> None:
     altered = tmp_path / "evidence.png"
-    altered.write_bytes(SCREENSHOT.read_bytes() + b"altered")
+    altered.write_bytes(b"synthetic non-matching evidence")
     with pytest.raises(SupportEvidenceError, match="HASH_DRIFT"):
         seal_support_evidence(altered)
 

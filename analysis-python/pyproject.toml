@@ -27,6 +27,9 @@ packages = ["src/equity_analysis"]
 [tool.pytest.ini_options]
 pythonpath = ["src"]
 testpaths = ["tests"]
+markers = [
+    "controlled_artifact: requires private or licensed validation evidence excluded from Git",
+]
 
 [tool.ruff]
 line-length = 100

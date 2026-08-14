@@ -2988,3 +2988,13 @@ fresh exact-four comparison, recommendation selection, and immutable human
 decision workflow. Exact replay succeeded and changed same-key commands were
 refused with stable conflicts. No provider request, fabricated maturity,
 brokerage action, final weight, or evidence-label upgrade occurred.
+
+# 2026-08-13: Separate public analytics CI from controlled artifact acceptance
+
+Hosted CI must execute every Git-safe contract, formula, chronology, tamper,
+and canonical-hash check without downloading licensed caches or local evidence
+images. Tests that replay excluded controlled artifacts are marked explicitly
+and skip only when those inputs are absent; `--require-controlled-artifacts`
+turns any such absence into a hard failure for private acceptance runs. Frozen
+historical runtime and CRLF byte identities remain unchanged, and portability
+diagnostics cannot upgrade model evidence labels.

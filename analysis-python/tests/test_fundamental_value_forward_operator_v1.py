@@ -3,6 +3,7 @@ from __future__ import annotations
 import hashlib
 import json
 import time
+from collections.abc import Callable
 from dataclasses import replace
 from datetime import UTC, date, datetime
 from decimal import Decimal
@@ -1004,6 +1005,7 @@ def _canary_boundary(
     rows: tuple[projection.IdentityManifestRow, ...] | None,
     storage: Path,
     clock: acquisition_fixture.FakeClock | None = None,
+    wall_clock: Callable[[], float] = time.time,
 ) -> tuple[
     acquisition.PhaseAuthorization,
     acquisition.ExecutionSummary,
@@ -1029,6 +1031,7 @@ def _canary_boundary(
         transport=transport,
         clock=clock,
         sleeper=clock.sleep,
+        wall_clock=wall_clock,
     )
     review = acquisition.build_openfigi_canary_review(
         plan,
@@ -1571,12 +1574,16 @@ def test_full_forward_operator_chain_requires_exact_projection_and_v24_readback(
     )
     storage = acquisition_fixture._storage(tmp_path)
     clock = acquisition_fixture.FakeClock()
+
+    def bridge_wall_clock() -> float:
+        return BRIDGE_DECISION_CUTOFF.timestamp() - 3600
+
     (
         canary_authorization,
         canary_summary,
         canary_review,
         canary_acceptance,
-    ) = _canary_boundary(plan, provisional_rows, storage, clock)
+    ) = _canary_boundary(plan, provisional_rows, storage, clock, bridge_wall_clock)
     transport = _BridgeTransport(plan, provisional_rows, clock)
     identity_authorization = acquisition.create_phase_authorization(
         plan,
@@ -1594,6 +1601,7 @@ def test_full_forward_operator_chain_requires_exact_projection_and_v24_readback(
         canary_acceptance=canary_acceptance,
         clock=clock,
         sleeper=clock.sleep,
+        wall_clock=bridge_wall_clock,
     )
     schedule_verifier = _schedule_verifier()
     existing_security_public_ids = {
@@ -1754,6 +1762,7 @@ def test_full_forward_operator_chain_requires_exact_projection_and_v24_readback(
         canary_acceptance=canary_acceptance,
         clock=clock,
         sleeper=clock.sleep,
+        wall_clock=bridge_wall_clock,
     )
     authority = projection.ProjectionAuthorityVerifier.from_verified_acquisition(
         plan,
